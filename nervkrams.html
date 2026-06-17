@@ -22,10 +22,9 @@
             <input type="file" id="fileInput" accept="image/*" multiple hidden />
           </label>
           <ul id="fileList" class="file-list"></ul>
-          <input type="text" id="problem" placeholder="Was ist das Problem?" required />
-          <input type="text" id="ort" placeholder="Wo passiert das?" required />
-          <input type="text" id="grund" placeholder="Warum nervt es dich?" required />
-          <input type="text" id="kontakt" placeholder="Wie können wir dich erreichen?" />
+          <input type="text" id="problem" placeholder="Was nervt dich?" required />
+          <input type="text" id="ort" placeholder="Wo nervt es dich?" required />
+          <input type="email" id="kontakt" placeholder="Deine E-Mail-Adresse" />
           <div id="nervkramsError" class="error-msg" hidden></div>
           <button type="submit"><span class="btn-label">Absenden</span></button>
         </form>
@@ -119,10 +118,9 @@
 
       const problem = document.getElementById('problem').value.trim();
       const ort = document.getElementById('ort').value.trim();
-      const grund = document.getElementById('grund').value.trim();
       const kontakt = document.getElementById('kontakt').value.trim();
 
-      if (!problem || !ort || !grund) {
+      if (!problem || !ort) {
         nervkramsError.textContent = 'Bitte füll die Pflichtfelder aus.';
         nervkramsError.hidden = false;
         return;
@@ -160,7 +158,7 @@
 
       const { error } = await supabaseClient
         .from('nervkrams_reports')
-        .insert({ problem, ort, grund, kontakt: kontakt || null, file_urls: fileUrls.length ? fileUrls : null });
+        .insert({ problem, ort, kontakt: kontakt || null, file_urls: fileUrls.length ? fileUrls : null });
 
       if (error) {
         nervkramsError.textContent = 'Etwas ist schiefgelaufen. Versuch es nochmal.';
