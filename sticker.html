@@ -32,9 +32,9 @@
         </form>
         <div id="successSticker" class="success-state" hidden>
           <div class="success-icon">✓</div>
-          <p>Deine 10 Sticker sind in 1–2 Wochen bei dir!</p>
-          <p>Dein Bestellcode ist <strong id="orderCode">#00000</strong>.</p>
-          <p>Wenn du deine Bestellung stornieren oder deine Daten löschen lassen möchtest, kontaktier uns bitte und gib deinen Code an.</p>
+          <h2>Danke!</h2>
+          <p>Bitte bestätige deine Bestellung per E-Mail!</p>
+          <p>Deine 10 gratis Sticker werden dann innerhalb 1–2 Wochen bei dir sein!</p>
           <p class="follow-heading">Folge uns für mehr auf</p>
           <div class="social-row">
             <a href="https://www.facebook.com/BerlinVolt/?locale=de_DE" target="_blank" rel="noopener" aria-label="Facebook"><img src="logosSM/facebook.svg" alt="Facebook" /></a>
@@ -47,20 +47,30 @@
     </div>
   </main>
 
+  <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
   <footer>
     <a href="https://voltdeutschland.org/berlin/impressum" target="_blank" rel="noopener">Impressum</a>
     <a href="https://voltdeutschland.org/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
     <a href="https://voltdeutschland.org/berlin/transparenz" target="_blank" rel="noopener">Transparenz</a>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
     const SUPABASE_URL = 'https://ugxzkzydoajexjgwcqtq.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVneHprenlkb2FqZXhqZ3djcXRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyNTM5MTksImV4cCI6MjA5NTgyOTkxOX0.pgO_pJ0ksQiGp5mYiLtz6E8uxD78MmWbXrufJA669_U';
-    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const SUBMIT_URL = `${SUPABASE_URL}/functions/v1/sticker-submit`;
 
     const stickerForm = document.getElementById('stickerForm');
     const errorMsg = document.getElementById('errorMsg');
+
+    const toast = document.getElementById('toast');
+    let toastTimer;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
+    }
 
     stickerForm.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -85,25 +95,43 @@
       }
 
       const submitBtn = stickerForm.querySelector('button[type="submit"]');
+      const submitLabel = submitBtn.querySelector('.btn-label');
+      const originalLabel = submitLabel.textContent;
       submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+      submitLabel.textContent = 'Wird gesendet …';
 
-      const bestell_id = Math.floor(10000 + Math.random() * 90000);
+      try {
+        const res = await fetch(SUBMIT_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          },
+          body: JSON.stringify({ email, name, strasse, plz, stadt, consent }),
+        });
 
-      const { error } = await supabaseClient
-        .from('sticker_requests')
-        .insert({ email, name, strasse, plz, stadt, consent, bestell_id });
+        if (res.status === 409) {
+          errorMsg.textContent = 'Diese E-Mail-Adresse hat bereits Sticker angefordert. Schau in dein Postfach.';
+          errorMsg.hidden = false;
+          return;
+        }
 
-      if (error) {
-        errorMsg.textContent = 'Etwas ist schiefgelaufen. Versuch es nochmal.';
-        errorMsg.hidden = false;
+        if (!res.ok) {
+          showToast('Etwas ist schiefgelaufen. Versuch es nochmal.');
+          return;
+        }
+
+        document.getElementById('stickerTagline').hidden = true;
+        stickerForm.hidden = true;
+        document.getElementById('successSticker').hidden = false;
+      } catch (err) {
+        showToast('Netzwerkfehler. Bitte prüf deine Verbindung und versuch es nochmal.');
+      } finally {
         submitBtn.disabled = false;
-        return;
+        submitBtn.removeAttribute('aria-busy');
+        submitLabel.textContent = originalLabel;
       }
-
-      document.getElementById('orderCode').textContent = '#' + bestell_id;
-      document.getElementById('stickerTagline').hidden = true;
-      stickerForm.hidden = true;
-      document.getElementById('successSticker').hidden = false;
     });
   </script>
 </body>
