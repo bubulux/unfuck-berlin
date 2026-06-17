@@ -492,7 +492,7 @@ button[type="button"]:not(.file-remove):disabled {
   font-weight: 800;
 }
 
-.success-state .follow-heading {
+.success-state p.follow-heading {
   color: var(--text);
   font-weight: 800;
   margin-top: 36px;
