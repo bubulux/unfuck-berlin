@@ -349,9 +349,9 @@ input[type="text"]:focus {
   justify-content: center;
 }
 
-/* Landing-Buttons: Parallelogramm wie die CTAs */
+/* Landing-Buttons: gerade Boxen */
 button.btn-landing {
-  transform: skewY(-3deg);
+  transform: none;
   box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
   min-width: 200px;
   padding: 12px 24px;
@@ -359,13 +359,17 @@ button.btn-landing {
 }
 
 button.btn-landing:hover {
-  transform: skewY(-3deg) scale(1.03) translateY(-2px);
+  transform: scale(1.03) translateY(-2px);
   box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
 }
 
 button.btn-landing:active {
-  transform: skewY(-3deg) scale(0.98);
+  transform: scale(0.98);
   box-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
+
+button.btn-landing .btn-label {
+  transform: none;
 }
 
 
@@ -659,7 +663,7 @@ footer a:hover {
 /* ── Landing-Buttons: immer gerade (überschreibt Mobile-Rotation) ── */
 
 button[type="button"].btn-landing {
-  transform: skewY(-3deg);
+  transform: none;
   box-shadow: 4px 4px 0px rgba(0,0,0,0.25);
   width: auto;
   min-width: 200px;
@@ -668,13 +672,17 @@ button[type="button"].btn-landing {
 }
 
 button[type="button"].btn-landing:hover {
-  transform: skewY(-3deg) scale(1.03) translateY(-2px);
+  transform: scale(1.03) translateY(-2px);
   box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
 }
 
 button[type="button"].btn-landing:active {
-  transform: skewY(-3deg) scale(0.98);
+  transform: scale(0.98);
   box-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
+
+button[type="button"].btn-landing .btn-label {
+  transform: none;
 }
 
 /* Outline-Variante (oberer Button) – am Ende für Specificity */
