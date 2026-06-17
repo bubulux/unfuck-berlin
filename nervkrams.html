@@ -136,48 +136,52 @@
       }
 
       const submitBtn = nervkramsForm.querySelector('button[type="submit"]');
-      const originalLabel = submitBtn.textContent;
+      const submitLabel = submitBtn.querySelector('.btn-label');
+      const originalLabel = submitLabel.textContent;
       submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+      submitLabel.textContent = selectedFiles.length ? 'Lädt hoch …' : 'Wird gesendet …';
 
-      // Dateien hochladen
-      const fileUrls = [];
-      if (selectedFiles.length) {
-        submitBtn.textContent = 'Lädt hoch …';
-        const stamp = Date.now();
-        for (let i = 0; i < selectedFiles.length; i++) {
-          const file = selectedFiles[i];
-          const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-          const path = `${stamp}-${i}-${safeName}`;
-          const { error: uploadError } = await supabaseClient
-            .storage
-            .from('nervkrams-uploads')
-            .upload(path, file, { cacheControl: '3600', upsert: false });
-          if (uploadError) {
-            nervkramsError.textContent = 'Datei-Upload fehlgeschlagen. Versuch es nochmal.';
-            nervkramsError.hidden = false;
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalLabel;
-            return;
+      try {
+        const fileUrls = [];
+        if (selectedFiles.length) {
+          const stamp = Date.now();
+          for (let i = 0; i < selectedFiles.length; i++) {
+            const file = selectedFiles[i];
+            const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+            const path = `${stamp}-${i}-${safeName}`;
+            const { error: uploadError } = await supabaseClient
+              .storage
+              .from('nervkrams-uploads')
+              .upload(path, file, { cacheControl: '3600', upsert: false });
+            if (uploadError) {
+              showToast('Datei-Upload fehlgeschlagen. Versuch es nochmal.');
+              return;
+            }
+            const { data } = supabaseClient.storage.from('nervkrams-uploads').getPublicUrl(path);
+            fileUrls.push(data.publicUrl);
           }
-          const { data } = supabaseClient.storage.from('nervkrams-uploads').getPublicUrl(path);
-          fileUrls.push(data.publicUrl);
+          submitLabel.textContent = 'Wird gesendet …';
         }
-        submitBtn.textContent = originalLabel;
-      }
 
-      const { error } = await supabaseClient
-        .from('nervkrams_reports')
-        .insert({ problem, ort, kontakt: kontakt || null, file_urls: fileUrls.length ? fileUrls : null });
+        const { error } = await supabaseClient
+          .from('nervkrams_reports')
+          .insert({ problem, ort, kontakt: kontakt || null, file_urls: fileUrls.length ? fileUrls : null });
 
-      if (error) {
-        nervkramsError.textContent = 'Etwas ist schiefgelaufen. Versuch es nochmal.';
-        nervkramsError.hidden = false;
+        if (error) {
+          showToast('Etwas ist schiefgelaufen. Versuch es nochmal.');
+          return;
+        }
+
+        nervkramsForm.hidden = true;
+        document.getElementById('successNervkrams').hidden = false;
+      } catch (err) {
+        showToast('Netzwerkfehler. Bitte prüf deine Verbindung und versuch es nochmal.');
+      } finally {
         submitBtn.disabled = false;
-        return;
+        submitBtn.removeAttribute('aria-busy');
+        submitLabel.textContent = originalLabel;
       }
-
-      nervkramsForm.hidden = true;
-      document.getElementById('successNervkrams').hidden = false;
     });
   </script>
 </body>
