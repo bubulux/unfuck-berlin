@@ -408,7 +408,8 @@ button[type="button"]:not(.file-remove) .btn-label {
   transform: skewY(3deg);
 }
 
-#nervkramsForm button[type="submit"] {
+#nervkramsForm button[type="submit"],
+#stickerForm button[type="submit"] {
   display: block;
   width: fit-content;
   margin: 15px auto 0;
