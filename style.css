@@ -410,6 +410,7 @@ button[type="button"]:not(.file-remove) .btn-label {
 
 #nervkramsForm button[type="submit"] {
   display: block;
+  width: fit-content;
   margin: 15px auto 0;
 }
 
