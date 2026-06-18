@@ -680,6 +680,7 @@ button[type="button"].btn-landing {
   min-width: 200px;
   padding: 12px 24px;
   font-size: 0.95rem;
+  border-radius: 6px;
 }
 
 button[type="button"].btn-landing:hover {
