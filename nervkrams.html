@@ -14,7 +14,7 @@
     <div class="content-wrapper">
       <div id="view-nervkrams">
         <a href="index.html"><img src="assets/logo.png" class="logo" alt="unf*ck berlin 0926" /></a>
-        <div class="nervkrams-intro">
+        <div class="nervkrams-intro" id="nervkramsIntro">
           <p class="nervkrams-intro__headline">
             Berlin ist eine wunderschöne Stadt.
             <span class="nervkrams-intro__accent">Außer an den Stellen, an denen sie es nicht ist.</span>
@@ -41,6 +41,13 @@
           <div class="success-icon">✓</div>
           <h2>Danke!</h2>
           <p>Wir haben deinen Nervkrams erhalten.</p>
+          <p class="follow-heading">Folge uns für mehr auf</p>
+          <div class="social-row">
+            <a href="https://www.facebook.com/BerlinVolt/?locale=de_DE" target="_blank" rel="noopener" aria-label="Facebook"><img src="logosSM/facebook.svg" alt="Facebook" /></a>
+            <a href="https://www.instagram.com/volt_berlin/" target="_blank" rel="noopener" aria-label="Instagram"><img src="logosSM/insta.svg" alt="Instagram" /></a>
+            <a href="https://twitter.com/volt_berlin" target="_blank" rel="noopener" aria-label="Twitter"><img src="logosSM/twitter.svg" alt="Twitter" /></a>
+            <a href="https://www.youtube.com/@voltdeutschland" target="_blank" rel="noopener" aria-label="YouTube"><img src="logosSM/youtube.svg" alt="YouTube" /></a>
+          </div>
         </div>
       </div>
     </div>
@@ -183,6 +190,7 @@
         }
 
         nervkramsForm.hidden = true;
+        document.getElementById('nervkramsIntro').hidden = true;
         document.getElementById('successNervkrams').hidden = false;
       } catch (err) {
         showToast('Netzwerkfehler. Bitte prüf deine Verbindung und versuch es nochmal.');
