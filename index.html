@@ -23,6 +23,24 @@
           <a href="sticker.html" class="btn-link"><button type="button" class="btn-landing"><span class="btn-label">STICKER ABGREIFEN</span></button></a>
           <a href="nervkrams.html" class="btn-link"><button type="button" class="btn-landing btn-outline"><span class="btn-label">NERVKRAMS TEILEN</span></button></a>
         </div>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div class="countdown-box">
+            <span class="countdown-num" id="cdDays">--</span>
+            <span class="countdown-unit">Tage</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cdHours">--</span>
+            <span class="countdown-unit">Std</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cdMins">--</span>
+            <span class="countdown-unit">Min</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cdSecs">--</span>
+            <span class="countdown-unit">Sek</span>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -32,5 +50,36 @@
     <a href="https://voltdeutschland.org/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
     <a href="https://voltdeutschland.org/berlin/transparenz" target="_blank" rel="noopener">Transparenz</a>
   </footer>
+
+  <script>
+    (function () {
+      const target = new Date('2026-09-20T00:00:00+02:00').getTime();
+      const days = document.getElementById('cdDays');
+      const hours = document.getElementById('cdHours');
+      const mins = document.getElementById('cdMins');
+      const secs = document.getElementById('cdSecs');
+      const pad = (n) => String(n).padStart(2, '0');
+
+      function tick() {
+        const diff = target - Date.now();
+        if (diff <= 0) {
+          days.textContent = hours.textContent = mins.textContent = secs.textContent = '00';
+          clearInterval(timer);
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        days.textContent = pad(d);
+        hours.textContent = pad(h);
+        mins.textContent = pad(m);
+        secs.textContent = pad(s);
+      }
+
+      tick();
+      const timer = setInterval(tick, 1000);
+    })();
+  </script>
 </body>
 </html>
