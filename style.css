@@ -104,6 +104,7 @@ body {
   gap: 10px;
   cursor: pointer;
   border: none;
+  border-radius: 6px;
   transition: opacity 0.15s;
 }
 
@@ -182,7 +183,7 @@ input[type="text"] {
   padding: 16px 18px;
   background: #ffffff;
   border: none;
-  border-radius: 0;
+  border-radius: 6px;
   color: var(--purple-text);
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
