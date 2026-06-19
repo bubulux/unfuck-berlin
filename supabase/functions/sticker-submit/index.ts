@@ -137,6 +137,14 @@ Deno.serve(async (req) => {
     await sendConfirmationEmail(email, name, token);
   } catch (err) {
     console.error('email send failed', err);
+    // Best-effort cleanup so the user can retry without hitting the 409 lock.
+    const { error: cleanupError } = await supabase
+      .from('sticker_requests')
+      .delete()
+      .eq('confirmation_token', token);
+    if (cleanupError) {
+      console.error('cleanup delete failed after email send failure', cleanupError);
+    }
     return json({ error: 'email_send_failed' }, 500);
   }
 

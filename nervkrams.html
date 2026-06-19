@@ -160,6 +160,7 @@
 
       try {
         const fileUrls = [];
+        let uploadFailed = false;
         if (selectedFiles.length) {
           const stamp = Date.now();
           for (let i = 0; i < selectedFiles.length; i++) {
@@ -171,8 +172,9 @@
               .from('nervkrams-uploads')
               .upload(path, file, { cacheControl: '3600', upsert: false });
             if (uploadError) {
-              showToast('Datei-Upload fehlgeschlagen. Versuch es nochmal.');
-              return;
+              console.error('upload failed', uploadError);
+              uploadFailed = true;
+              break;
             }
             const { data } = supabaseClient.storage.from('nervkrams-uploads').getPublicUrl(path);
             fileUrls.push(data.publicUrl);
@@ -187,6 +189,10 @@
         if (error) {
           showToast('Etwas ist schiefgelaufen. Versuch es nochmal.');
           return;
+        }
+
+        if (uploadFailed) {
+          showToast('Fotos konnten gerade nicht gespeichert werden – dein Hinweis ist aber angekommen.');
         }
 
         nervkramsForm.hidden = true;
