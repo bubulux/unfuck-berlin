@@ -386,11 +386,17 @@ input[type="text"]:focus {
 
 /* ── Countdown ── */
 
+.countdown-bar {
+  background: #1d0a2e;
+  padding: 28px 16px 0;
+  display: flex;
+  justify-content: center;
+}
+
 .countdown {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 40px;
 }
 
 .countdown-box {
@@ -598,6 +604,12 @@ footer {
   justify-content: center;
   gap: 24px;
   padding: 20px 16px;
+}
+
+.countdown-bar + footer {
+  background: #1d0a2e;
+  padding-top: 36px;
+  padding-bottom: 24px;
 }
 
 footer a {
