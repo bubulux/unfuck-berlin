@@ -152,7 +152,6 @@ input, select { font-family: inherit; font-size: 14px; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow-x: auto;
   box-shadow: var(--shadow);
 }
 .grid { width: 100%; border-collapse: collapse; }
@@ -170,7 +169,10 @@ input, select { font-family: inherit; font-size: 14px; }
   background: #fafbfc;
   position: sticky;
   top: 56px;
+  z-index: 1;
 }
+.grid thead th:first-child { border-top-left-radius: var(--radius); }
+.grid thead th:last-child { border-top-right-radius: var(--radius); }
 .grid tbody tr { cursor: pointer; }
 .grid tbody tr:hover { background: var(--accent-weak); }
 .grid tbody tr.is-done { background: var(--done-weak); }
