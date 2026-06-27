@@ -383,6 +383,71 @@ input, select { font-family: inherit; font-size: 14px; }
 .lightbox__prev { left: 24px; }
 .lightbox__next { right: 24px; }
 
+/* ===== Modal (print options) ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 45, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 150;
+}
+.modal__card {
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+  width: 460px;
+  max-width: 100%;
+}
+.modal__title { margin: 0 0 4px; font-size: 18px; }
+.modal__sub { margin: 0 0 20px; color: var(--muted); }
+.checkbox-row { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+.checkbox-row input { margin-top: 2px; width: 16px; height: 16px; accent-color: var(--accent); }
+.absender {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  resize: vertical;
+  margin-bottom: 18px;
+}
+.absender:focus { outline: 2px solid var(--accent-weak); border-color: var(--accent); }
+.modal__actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+
+/* ===== Print-only label sheet ===== */
+.printsheet { display: none; }
+.printsheet__grid { display: grid; gap: 4mm; }
+.label {
+  break-inside: avoid;
+  border: 1px dashed #bbb;
+  border-radius: 2mm;
+  padding: 4mm 5mm;
+  min-height: 28mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.label .p-abs {
+  font-size: 8pt;
+  color: #555;
+  white-space: pre-line;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.5mm;
+  margin-bottom: 3mm;
+  line-height: 1.2;
+}
+.label .p-name { font-weight: 700; font-size: 11pt; }
+.label .p-line { font-size: 11pt; line-height: 1.35; }
+
+@media print {
+  body.is-printing > *:not(#printSheet) { display: none !important; }
+  #printSheet { display: block; }
+  .label { border-color: #ccc; }
+  @page { size: A4; margin: 10mm; }
+}
+
 /* ===== Toast ===== */
 .toast {
   position: fixed;

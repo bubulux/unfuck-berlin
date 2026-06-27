@@ -596,4 +596,77 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowRight') cardStep(key, 1);
 });
 
+/* =====================================================================
+   PRINT ADDRESS LABELS (stickers only)
+   ===================================================================== */
+const LS = { absEnabled: 'dash.absender.enabled', absText: 'dash.absender.text', cols: 'dash.print.cols' };
+
+function openPrintModal() {
+  const n = state.stickers.filtered.length;
+  $('#printCount').textContent = `${n} address${n === 1 ? '' : 'es'} in the current selection will be printed.`;
+  // restore persisted options
+  const enabled = localStorage.getItem(LS.absEnabled) === '1';
+  $('#absEnabled').checked = enabled;
+  $('#absText').value = localStorage.getItem(LS.absText) || '';
+  $('#absText').hidden = !enabled;
+  $('#printCols').value = localStorage.getItem(LS.cols) || '3';
+  $('#printModal').hidden = false;
+}
+
+function closePrintModal() { $('#printModal').hidden = true; }
+
+$('#absEnabled').addEventListener('change', () => {
+  $('#absText').hidden = !$('#absEnabled').checked;
+  localStorage.setItem(LS.absEnabled, $('#absEnabled').checked ? '1' : '0');
+});
+$('#absText').addEventListener('input', () => localStorage.setItem(LS.absText, $('#absText').value));
+$('#printCols').addEventListener('change', () => localStorage.setItem(LS.cols, $('#printCols').value));
+
+function buildPrintSheet(cols, absText) {
+  const sheet = $('#printSheet');
+  sheet.innerHTML = '';
+  const grid = document.createElement('div');
+  grid.className = 'printsheet__grid';
+  grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+
+  state.stickers.filtered.forEach((r) => {
+    const lab = document.createElement('div');
+    lab.className = 'label';
+    if (absText) {
+      const a = document.createElement('div');
+      a.className = 'p-abs';
+      a.textContent = absText;
+      lab.appendChild(a);
+    }
+    const name = document.createElement('div');
+    name.className = 'p-name';
+    name.textContent = r.name || '';
+    const street = document.createElement('div');
+    street.className = 'p-line';
+    street.textContent = r.strasse || '';
+    const city = document.createElement('div');
+    city.className = 'p-line';
+    city.textContent = `${r.plz || ''} ${r.stadt || ''}`.trim();
+    lab.append(name, street, city);
+    grid.appendChild(lab);
+  });
+  sheet.appendChild(grid);
+}
+
+$('#stk-print').addEventListener('click', openPrintModal);
+$('#printCancel').addEventListener('click', closePrintModal);
+$('#printModal').addEventListener('click', (e) => { if (e.target.id === 'printModal') closePrintModal(); });
+
+$('#printGo').addEventListener('click', () => {
+  if (!state.stickers.filtered.length) { toast('Nothing to print in this selection.'); return; }
+  const cols = $('#printCols').value;
+  const absText = $('#absEnabled').checked ? $('#absText').value.trim() : '';
+  buildPrintSheet(cols, absText);
+  closePrintModal();
+  document.body.classList.add('is-printing');
+  window.print();
+});
+
+window.addEventListener('afterprint', () => document.body.classList.remove('is-printing'));
+
 init();
