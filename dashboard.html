@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reporter Dashboard – unf*ck berlin</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- ===== Login gate ===== -->
+  <div id="login" class="login" hidden>
+    <form id="loginForm" class="login__card" novalidate>
+      <h1 class="login__title">Reporter Dashboard</h1>
+      <p class="login__sub">Internal access only.</p>
+      <label class="field">
+        <span>Email</span>
+        <input type="email" id="loginEmail" autocomplete="username" required />
+      </label>
+      <label class="field">
+        <span>Password</span>
+        <input type="password" id="loginPassword" autocomplete="current-password" required />
+      </label>
+      <div id="loginError" class="login__error" hidden></div>
+      <button type="submit" id="loginBtn">Log in</button>
+    </form>
+  </div>
+
+  <!-- ===== App ===== -->
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <div class="topbar__brand">unf*ck berlin · Reporter</div>
+      <nav class="tabs">
+        <button class="tab is-active" data-tab="stickers">Stickers</button>
+        <button class="tab" data-tab="nervkrams">Nervkrams</button>
+      </nav>
+      <div class="topbar__right">
+        <span id="userEmail" class="topbar__user"></span>
+        <button id="logoutBtn" class="btn-ghost">Log out</button>
+      </div>
+    </header>
+
+    <!-- ============ STICKERS TAB ============ -->
+    <section class="panel" data-panel="stickers">
+      <div class="toolbar">
+        <div class="toolbar__left">
+          <input type="search" id="stk-search" class="search" placeholder="Search name, email, street, city…" />
+          <select id="stk-status" class="select">
+            <option value="all">Status: all</option>
+            <option value="open">Open</option>
+            <option value="done">Done</option>
+          </select>
+          <select id="stk-confirmed" class="select">
+            <option value="confirmed">Confirmed only</option>
+            <option value="all">Confirmed: all</option>
+            <option value="unconfirmed">Unconfirmed only</option>
+          </select>
+          <select id="stk-sort" class="select">
+            <option value="created_desc">Newest first</option>
+            <option value="created_asc">Oldest first</option>
+          </select>
+        </div>
+        <div class="toolbar__right">
+          <span id="stk-count" class="count"></span>
+          <div class="viewtoggle">
+            <button class="vt is-active" data-view="table" data-for="stickers">Table</button>
+            <button class="vt" data-view="card" data-for="stickers">Cards</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="view" data-view="table">
+        <div class="tablewrap">
+          <table class="grid" id="stk-table">
+            <thead>
+              <tr>
+                <th class="col-status">Done</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Street</th>
+                <th>PLZ</th>
+                <th>City</th>
+                <th>Confirmed</th>
+                <th>Created</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div id="stk-empty" class="empty" hidden>No matching entries.</div>
+      </div>
+
+      <div class="view" data-view="card" hidden>
+        <div class="cardnav">
+          <button class="navbtn" data-card-prev="stickers">‹ Prev</button>
+          <span class="cardnav__pos" id="stk-pos"></span>
+          <button class="navbtn" data-card-next="stickers">Next ›</button>
+        </div>
+        <div id="stk-card" class="bigcard"></div>
+      </div>
+    </section>
+
+    <!-- ============ NERVKRAMS TAB ============ -->
+    <section class="panel" data-panel="nervkrams" hidden>
+      <div class="toolbar">
+        <div class="toolbar__left">
+          <input type="search" id="nrv-search" class="search" placeholder="Search problem, location…" />
+          <select id="nrv-status" class="select">
+            <option value="all">Status: all</option>
+            <option value="open">Open</option>
+            <option value="done">Done</option>
+          </select>
+          <select id="nrv-photos" class="select">
+            <option value="all">Photos: all</option>
+            <option value="with">With photos</option>
+            <option value="without">Without photos</option>
+          </select>
+          <select id="nrv-sort" class="select">
+            <option value="created_desc">Newest first</option>
+            <option value="created_asc">Oldest first</option>
+          </select>
+        </div>
+        <div class="toolbar__right">
+          <span id="nrv-count" class="count"></span>
+          <div class="viewtoggle">
+            <button class="vt is-active" data-view="table" data-for="nervkrams">Table</button>
+            <button class="vt" data-view="card" data-for="nervkrams">Cards</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="view" data-view="table">
+        <div class="tablewrap">
+          <table class="grid" id="nrv-table">
+            <thead>
+              <tr>
+                <th class="col-status">Done</th>
+                <th>Problem</th>
+                <th>Location</th>
+                <th>Contact</th>
+                <th class="col-photos">Photos</th>
+                <th>Created</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div id="nrv-empty" class="empty" hidden>No matching entries.</div>
+      </div>
+
+      <div class="view" data-view="card" hidden>
+        <div class="cardnav">
+          <button class="navbtn" data-card-prev="nervkrams">‹ Prev</button>
+          <span class="cardnav__pos" id="nrv-pos"></span>
+          <button class="navbtn" data-card-next="nervkrams">Next ›</button>
+        </div>
+        <div id="nrv-card" class="bigcard"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Lightbox ===== -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox__close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img id="lbImg" class="lightbox__img" alt="" />
+    <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
