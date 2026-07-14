@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-14T21:15:23.228Z
+// Letzter Abruf: 2026-07-14T23:37:11.152Z
 
 export const KANDIDATEN = [
   {
