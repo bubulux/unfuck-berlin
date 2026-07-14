@@ -16,9 +16,11 @@ import Spitzenduo from "./pages/Spitzenduo";
 import UnfuckBerlin from "./pages/UnfuckBerlin";
 import BezirkSeite from "./pages/BezirkSeite";
 
+/*
 const CORRECT_HASH = "eb94aeca561a1578b7e724867671ef542d86fdb9fcf36c76d15367c36b13349a";
 const STORAGE_KEY = "volt_unlocked";
 
+/*
 async function hashInput(input) {
   const encoded = new TextEncoder().encode(input);
   const buffer = await crypto.subtle.digest("SHA-256", encoded);
@@ -111,15 +113,16 @@ function PasswordGate({ onUnlock }) {
     </div>
   );
 }
+*/
 
 export default function App() {
-  const [unlocked, setUnlocked] = useState(
-    () => sessionStorage.getItem(STORAGE_KEY) === "1"
-  );
+  // const [unlocked, setUnlocked] = useState(
+  //   () => sessionStorage.getItem(STORAGE_KEY) === "1"
+  // );
 
-  if (!unlocked) {
-    return <PasswordGate onUnlock={() => setUnlocked(true)} />;
-  }
+  // if (!unlocked) {
+  //   return <PasswordGate onUnlock={() => setUnlocked(true)} />;
+  // }
 
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
