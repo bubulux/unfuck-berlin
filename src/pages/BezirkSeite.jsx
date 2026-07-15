@@ -92,7 +92,7 @@ export default function BezirkSeite() {
         </div>
 
         <Link
-          to="https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026"
+          to="/kandidierende"
           className="mt-10 flex justify-end items-center gap-2 font-bold text-sm md:text-base hover:opacity-80 transition"
         >
           Alle Kandidierenden sehen <ArrowRight size={16} />

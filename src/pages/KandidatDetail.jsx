@@ -13,7 +13,7 @@ export default function KandidatDetail() {
     return (
       <main className="bg-white text-volt-purple min-h-[60vh] flex flex-col items-center justify-center gap-4 px-5">
         <div className="text-2xl font-bold">Kandidat:in nicht gefunden</div>
-        <Link to="https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026" className="bg-volt-lime text-volt-purple font-bold px-5 py-2.5 btn-magnet">
+        <Link to="/kandidierende" className="bg-volt-lime text-volt-purple font-bold px-5 py-2.5 btn-magnet">
           Zur Landesliste
         </Link>
       </main>

@@ -19,7 +19,7 @@ export default function TermineSection({ title = "Triff uns!", centered = true, 
           ))}
         </div>
         <Link
-          to="https://voltdeutschland.org/berlin/veranstaltungen"
+          to="/kalender"
           className="mt-8 flex justify-center items-center gap-2 font-bold text-lg text-volt-purple hover:opacity-80 transition"
         >
           Alle Termine <ArrowRight size={20} />
