@@ -1,24 +1,24 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import Home from "./pages/Home";
-import ImBezirk from "./pages/ImBezirk";
+// import ImBezirk from "./pages/ImBezirk";
 import Kandidierende from "./pages/Kandidierende";
 import KandidatDetail from "./pages/KandidatDetail";
 import Mitmachen from "./pages/Mitmachen";
-import UeberVolt from "./pages/UeberVolt";
-import Wahlprogramm from "./pages/Wahlprogramm";
+// import UeberVolt from "./pages/UeberVolt";
 import WahlInfo from "./pages/WahlInfo";
-import VoltOMat from "./pages/VoltOMat";
-import Spitzenduo from "./pages/Spitzenduo";
+// import VoltOMat from "./pages/VoltOMat";
+// import Spitzenduo from "./pages/Spitzenduo";
 import UnfuckBerlin from "./pages/UnfuckBerlin";
-import BezirkSeite from "./pages/BezirkSeite";
+// import BezirkSeite from "./pages/BezirkSeite";
 
+/*
 const CORRECT_HASH = "eb94aeca561a1578b7e724867671ef542d86fdb9fcf36c76d15367c36b13349a";
 const STORAGE_KEY = "volt_unlocked";
 
+/*
 async function hashInput(input) {
   const encoded = new TextEncoder().encode(input);
   const buffer = await crypto.subtle.digest("SHA-256", encoded);
@@ -111,38 +111,53 @@ function PasswordGate({ onUnlock }) {
     </div>
   );
 }
+*/
+
+import { DYN_SEITEN } from "./data";
+import { Page } from "./components/Page";
 
 export default function App() {
-  const [unlocked, setUnlocked] = useState(
-    () => sessionStorage.getItem(STORAGE_KEY) === "1"
-  );
+  // const [unlocked, setUnlocked] = useState(
+  //   () => sessionStorage.getItem(STORAGE_KEY) === "1"
+  // );
 
-  if (!unlocked) {
-    return <PasswordGate onUnlock={() => setUnlocked(true)} />;
-  }
+  // if (!unlocked) {
+  //   return <PasswordGate onUnlock={() => setUnlocked(true)} />;
+  // }
 
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
-      <div className="min-h-full bg-volt-purple">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/wahlprogramm" element={<Wahlprogramm />} />
-          <Route path="/im-bezirk" element={<ImBezirk />} />
-          <Route path="/bezirk/:id" element={<BezirkSeite />} />
+      <Routes>
+          {
+            DYN_SEITEN.map(page => {
+              const slug = page.slug.current
+              if (slug === 'home') {
+                return <Route path="/" element={<Page page={page} />} />
+              }
+              return <Route path={slug} element={<Page page={page} />} />
+            })
+          }
+
+          {/* <Route path="/im-bezirk" element={<ImBezirk />} /> */}
+          {/* <Route path="/bezirk/:id" element={<BezirkSeite />} /> */}
           <Route path="/kandidierende" element={<Kandidierende />} />
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />
-          <Route path="/spitzenduo" element={<Spitzenduo />} />
-          <Route path="/mitmachen" element={<Mitmachen />} />
-          <Route path="/volt-o-mat" element={<VoltOMat />} />
+          {/* <Route path="/spitzenduo" element={<Spitzenduo />} /> */}
+          <Route path="/kalender" element={<Mitmachen />} /> {/* kalender */}
+          {/* <Route path="/volt-o-mat" element={<VoltOMat />} /> */}
           <Route path="/wahl-info" element={<WahlInfo />} />
           <Route path="/unfck-berlin" element={<UnfuckBerlin />} />
-          <Route path="/ueber-volt" element={<UeberVolt />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
-        <Footer />
-      </div>
+          {/* <Route path="/ueber-volt" element={<UeberVolt />} /> */}
+
+          {
+            DYN_SEITEN
+              .filter(page => page.slug.current === 'home')
+              .map(page => {
+                return <Route path="*" element={<Page page={page} />} />
+              })
+          }
+      </Routes>
     </BrowserRouter>
   );
 }

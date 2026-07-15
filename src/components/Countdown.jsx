@@ -30,7 +30,7 @@ export default function Countdown() {
   ];
 
   return (
-    <div className="flex justify-center gap-3 md:gap-5">
+    <div className="flex justify-center gap-3 md:gap-5 mb-8">
       {boxes.map((b) => (
         <div
           key={b.label}

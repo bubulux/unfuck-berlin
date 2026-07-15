@@ -7,7 +7,7 @@ const SocialIcons = [
   { label: "LinkedIn", src: "/images/linkedin.svg", href: "https://www.linkedin.com/company/volt-deutschland/" },
 ];
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-volt-purple text-white">
       {/* WAS MEHR? — Cross-Navigation, auf jeder Seite direkt über dem Footer */}
@@ -55,8 +55,8 @@ export default function Footer() {
             <a href="https://voltdeutschland.org/berlin/spenden" target="_blank" rel="noopener noreferrer" className="hl hl-lime !m-0 text-xs md:text-sm font-bold btn-magnet">
               Spenden
             </a>
-            <a href="#" className="hl hl-lime !m-0 text-xs md:text-sm font-bold btn-magnet">
-              Newsletter
+            <a href="https://voltdeutschland.org/berlin/mitmachen" className="hl hl-lime !m-0 text-xs md:text-sm font-bold btn-magnet">
+              Mitmachen
             </a>
             <a href="https://voltdeutschland.org" target="_blank" rel="noopener noreferrer" className="hl hl-lime !m-0 text-xs md:text-sm font-bold btn-magnet">
               Volt Deutschland

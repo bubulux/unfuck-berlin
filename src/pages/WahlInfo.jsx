@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { SEITEN } from "../data";
 import { NL, CmsImg } from "../lib";
+import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer'
 
 const ERSTSTIMME_FALLBACK =
   "Mit der Erststimme wählst du eine Kandidatin oder einen Kandidaten aus deinem Wahlkreis. Diese Person vertritt deine Region im Parlament und setzt sich dort für die Interessen der Menschen vor Ort ein.\nWer die meisten Stimmen im Wahlkreis erhält, gewinnt das Direktmandat. Mit deiner Erststimme entscheidest du also, wer deine Stimme in der Politik vertreten soll.";
@@ -17,7 +19,11 @@ export default function WahlInfo() {
   const heroZeilen = s.heroZeilen || ["Erste & Zweite", "Stimme:", "Vote Volt"];
   const duoBild = s.duoBild || (SEITEN.startseite || {}).heroBild;
 
+  const isPurple = false
+
   return (
+    <div className="min-h-full bg-volt-purple">
+    <Navbar isPurple={isPurple} />
     <main className="bg-white text-volt-purple">
 
       {/* HERO */}
@@ -39,6 +45,7 @@ export default function WahlInfo() {
         </p>
 
         {/* SPITZENDUO-BILD */}
+        {/*
         <div className="relative mt-10 md:mt-14 md:mx-16">
           <CmsImg
             src={duoBild}
@@ -52,12 +59,13 @@ export default function WahlInfo() {
             {s.duoLinkText || "Spitzenduo Volt kennenlernen"} <ArrowRight size={18} />
           </Link>
         </div>
+        */}
       </section>
 
       {/* ZWEITSTIMME */}
       <section className="max-w-6xl mx-auto px-5 md:px-8 pt-14 md:pt-20">
         <h2 className="text-2xl md:text-4xl font-bold leading-tight">
-          <NL text={s.zweitstimmeTitel || "Die Zweitstimme –\nDeine Wahl für VOLT"} />
+          <NL text={s.zweitstimmeTitel || "Die Zweitstimme –\nDeine Wahl für Volt"} />
         </h2>
         <p className="mt-6 text-sm md:text-base leading-relaxed max-w-4xl">
           <NL text={s.zweitstimmeText || ZWEITSTIMME_FALLBACK} />
@@ -84,5 +92,7 @@ export default function WahlInfo() {
         </Link>
       </section>
     </main>
+    <Footer />
+    </div>
   );
 }

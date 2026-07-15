@@ -24,11 +24,11 @@ body {
     line-height: 1;
     color: #502379;
   }
-  .hl-lime { background-color: #D6FF1D; }
-  .hl-blue { background-color: #82D0F4; }
-  .hl-orange { background-color: #FDC220; }
-  .hl-turquoise { background-color: #72CAEF; }
-  .hl-green { background-color: #1BBE6F; color: #fff; }
+  .hl-lime { background-color: #D6FF1D; color: #502379; }
+  .hl-blue { background-color: #82D0F4; color: #502379; }
+  .hl-orange { background-color: #FDC220; color: #502379; }
+  .hl-green { background-color: #1BBE6F; color: #502379; }
+  .hl-pink { background-color: #FC0068; color: #fff; }
   .hl-white { background-color: #fff; color: #502379; }
 
   /* Chips */
