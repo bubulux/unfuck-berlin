@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-15T07:55:59.833Z
+// Letzter Abruf: 2026-07-15T08:16:27.169Z
 
 export const KANDIDATEN = [
   {
@@ -344,22 +344,130 @@ export const SPITZENDUO_BASE = [
 
 export const TERMINE = [
   {
-    "datum": "2026-08-12",
-    "day": "12",
-    "month": "AUG",
-    "type": "Veranstaltung",
-    "typeColor": "blue",
-    "title": "Berlin arm, aber arm…",
-    "where": "Kultur Cafe Viktoria, 18:00 Uhr"
+    "datum": "2026-07-16",
+    "day": "16",
+    "month": "JUL",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Pankow Stammtisch (Zollhaus Pankow)",
+    "where": "Berliner Str. 80, 13189 Berlin, Germany, 19:00 Uhr"
   },
   {
-    "datum": "2026-09-05",
-    "day": "05",
-    "month": "SEP",
-    "type": "Podium",
+    "datum": "2026-07-22",
+    "day": "22",
+    "month": "JUL",
+    "type": "Bezirkstreffen",
+    "typeColor": "blue",
+    "title": "Volt Reinickendorf Treffen",
+    "where": "Lucky Chinese, Alt-Tegel 29, 13507 Berlin, 18:00 Uhr"
+  },
+  {
+    "datum": "2026-07-24",
+    "day": "24",
+    "month": "JUL",
+    "type": "Veranstaltung",
     "typeColor": "orange",
-    "title": "Was wird in erste zwei Monate mit Volt passieren?",
-    "where": "Volt Büro, 19:00 Uhr"
+    "title": "FLINTA* Stammtisch",
+    "where": "Choriner Str 34, Berlin, 19:00 Uhr"
+  },
+  {
+    "datum": "2026-07-25",
+    "day": "25",
+    "month": "JUL",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Meet & Greet: Volt Berlin",
+    "where": "Choriner Str. 34, 15 Uhr"
+  },
+  {
+    "datum": "2026-07-26",
+    "day": "26",
+    "month": "JUL",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Volt Family & Friends Picnic im Volkspark Wilmersdorf",
+    "where": "Exakter Treffpunkt im Park: https://maps.app.goo.gl/1tW7G9iv9rww4WHB8, 14 uhr"
+  },
+  {
+    "datum": "2026-07-28",
+    "day": "28",
+    "month": "JUL",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "[Südost] Treffen: Neukölln/ Treptow-Köpenick",
+    "where": "Wolf Kino Weserstraße 59, Neukölln, 12045 Berlin, Deutschland, 18 uhr"
+  },
+  {
+    "datum": "2026-07-28",
+    "day": "28",
+    "month": "JUL",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": " Spandau Treffen",
+    "where": "La Bottega Da Franco, Breite Str. 56, 13597 Berlin, Deutschland, 18:30 Uhr"
+  },
+  {
+    "datum": "2026-07-30",
+    "day": "30",
+    "month": "JUL",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Volt Marzahn-Hellersdorf",
+    "where": "Rossini II, Köpenicker Str. 25, 12683 Berlin, Deutschland, 18 Uhr"
+  },
+  {
+    "datum": "2026-08-02",
+    "day": "02",
+    "month": "AUG",
+    "type": "Veranstaltung",
+    "typeColor": "pink",
+    "title": "Plakatierstart",
+    "where": "Berlin"
+  },
+  {
+    "datum": "2026-08-04",
+    "day": "04",
+    "month": "AUG",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Monatliches Volt Berlin Treffen",
+    "where": "AMRIT - Berlin Mitte, Oranienburger Str. 45, 10117 Berlin, Deutschland, 19 Uhr"
+  },
+  {
+    "datum": "2026-08-11",
+    "day": "11",
+    "month": "AUG",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Steglitz-Zehlendorf",
+    "where": "Enzianstraße 5, 12203 Berlin, Germany, 19 Uhr"
+  },
+  {
+    "datum": "2026-08-11",
+    "day": "11",
+    "month": "AUG",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Volt Lichtenberg Treffen",
+    "where": "Thanh Nam Restaurant, Alfred-Kowalke-Straße 38, 10315 Berlin, 18 Uhr"
+  },
+  {
+    "datum": "2026-08-17",
+    "day": "17",
+    "month": "AUG",
+    "type": "Bezirkstreffen",
+    "typeColor": "pink",
+    "title": "Reinickendorf Treffen",
+    "where": "18 Uhr"
+  },
+  {
+    "datum": "2026-08-28",
+    "day": "28",
+    "month": "AUG",
+    "type": "Veranstaltung",
+    "typeColor": "pink",
+    "title": "FLINTA* Stammtisch",
+    "where": "Choriner Str 34, Berlin, 19 Uhr"
   }
 ];
 

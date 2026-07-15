@@ -1,4 +1,10 @@
-const TYPE_STYLE = {
+const TYPE_STYLE_event = {
+  Bezirkstreffen: "bg-volt-pink text-white",
+  Veranstaltung: "bg-volt-blue text-volt-purple",
+  Podium: "bg-volt-orange text-volt-purple",
+};
+
+const TYPE_STYLE_color = {
   pink: "bg-volt-pink text-white",
   blue: "bg-volt-blue text-volt-purple",
   orange: "bg-volt-orange text-volt-purple",
@@ -9,7 +15,7 @@ export default function TerminCard({ termin }) {
   const t = termin;
   return (
     <div className="flex flex-col items-start">
-      <span className={`inline-block text-sm md:text-base font-bold px-4 py-1.5 md:py-2 -skew-y-1 ${TYPE_STYLE[t.typeColor] || TYPE_STYLE.blue}`}>
+      <span className={`inline-block text-sm md:text-base font-bold px-4 py-1.5 md:py-2 -skew-y-1 ${TYPE_STYLE_event[t.type] || TYPE_STYLE_color[t.typeColor] || TYPE_STYLE_color.blue}`}>
         {t.type}
       </span>
       <div className="bg-white text-volt-darkest w-full flex items-stretch gap-4 p-4 md:p-6 shadow-card">

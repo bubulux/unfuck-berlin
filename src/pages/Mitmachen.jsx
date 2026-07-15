@@ -43,6 +43,7 @@ export default function Mitmachen() {
         </p>
 
         {/* FILTER */}
+        {/*
         <div className="mt-8 flex flex-col md:flex-row md:items-center gap-3">
           <div>
             <button
@@ -68,6 +69,7 @@ export default function Mitmachen() {
             ))}
           </div>
         </div>
+        */}
 
         {/* TERMINE LISTE */}
         <div className="mt-10 md:mt-16 space-y-6 md:grid md:grid-cols-3 md:gap-6 md:space-y-0">
@@ -78,6 +80,8 @@ export default function Mitmachen() {
 
         {/* EVENT EINLADEN */}
         <p className="mt-10 md:mt-14 text-sm md:text-base leading-relaxed max-w-2xl pb-14">
+          Weitere Veranstaltungen werden während des Wahlkampfs veröffentlicht.<br />
+          <br />
           Du vermisst hier ein Event, oder würdest uns gerne auf einem Panel begrüßen?<br />
           <strong>Dann lad' uns ein!</strong> Schreib dazu eine Mail an <Link className="underline" to="mailto:presse@voltberlin.org">presse@voltberlin.org</Link>.
         </p>
