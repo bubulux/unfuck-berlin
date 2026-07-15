@@ -25,7 +25,7 @@ export function HeroVideo({ obj }) {
           <div className="block relative md:order-2 align-end">
 
             {
-              obj.youtube_link ? <iframe className="aspect-[9/16] max-h-[60vh] lg:max-h-[80vh] w-full md:w-auto md:h-[60vh] lg:h-[80vh]" src={obj.youtube_link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> : null
+              obj.youtube_link ? <iframe className="bg-transparent aspect-[9/16] max-h-[60vh] lg:max-h-[80vh] w-full md:w-auto md:h-[60vh] lg:h-[80vh]" src={obj.youtube_link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen bg-volt-purple></iframe> : null
             }
 
             {/*

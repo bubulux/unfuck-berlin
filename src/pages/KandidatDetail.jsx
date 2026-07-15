@@ -34,14 +34,12 @@ export default function KandidatDetail() {
           {vorname}<br />{nachname}
         </h1>
 
-        <div className="relative aspect-[3/4] max-w-sm mt-8 overflow-hidden">
+        <div className="relative aspect-[3/4] max-w-md mt-8 overflow-hidden">
           <CmsImg src={k.foto} alt={k.name} className="absolute inset-0 w-full h-full object-cover object-top" />
         </div>
 
-        <p className="mt-4 text-xs md:text-sm font-medium">
-          AGH Kandidat:in<br />
-          Listenplatz: {k.listenplatz}<br />
-          Alter: {k.alter}<br />
+        <p className="mt-4 text-sm md:text-base leading-relaxed max-w-2xl">
+          AGH Kandidat:in | Listenplatz: {k.listenplatz} | Alter: {k.alter}<br />
           Bezirk: {k.bezirk}
         </p>
 

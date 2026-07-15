@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-15T06:44:43.124Z
+// Letzter Abruf: 2026-07-15T07:07:34.136Z
 
 export const KANDIDATEN = [
   {
@@ -20,7 +20,7 @@ export const KANDIDATEN = [
   {
     "slug": "paul-loeper",
     "name": "Paul Loeper",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/0c3cb728e997c4ac88a42503b949bd9925d37449-400x478.jpg",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/9e53af1da3b1da5944a09503abfba93206b35caf-442x592.png",
     "listenplatz": 2,
     "alter": 36,
     "bezirk": "Pankow",
@@ -28,7 +28,7 @@ export const KANDIDATEN = [
     "themen": null,
     "herzensthema": "Ich will Berlin zu einem Leuchtturm der Hoffnung für eine innovative, gerechte und nachhaltige europäische Zukunft machen. Eine Stadt, die wächst und sich selbstbewusst als europäische Vorreiterstadt sieht.\n\n",
     "ueberMich": "Ich arbeite als Organisations- und IT‑Berater für den öffentlichen Sektor. Mein Fokus: Prozesse vereinfachen, Digitalisierung umsetzen und Projekte ins Ziel bringen.\n\nIch bin mit drei Schwestern in Hannover aufgewachsen und 2011, nach meinem Grundwehrdienst, nach Berlin gezogen. Hier habe ich Betriebswirtschaft studiert und von 2017 bis 2021 als Mitgründer das Team von Volt Europa in Deutschland aufgebaut.\n\nIch bin bei Volt, weil ich der Überzeugung bin, dass Politk Vision und grenzübergreifendes Handeln braucht. Ich will, dass Berlin beim Wohnen, bei der Digitalisierung und der Bildung europäischer Vorreiter wird.",
-    "foto2": "",
+    "foto2": "https://cdn.sanity.io/images/xzcgo5ky/production/ca1ca520921de033f7c5af5a2aefbf52850cdf9f-318x454.png",
     "berlinIst": ""
   },
   {
@@ -48,7 +48,7 @@ export const KANDIDATEN = [
   {
     "slug": "pia-voltz",
     "name": "Pia Voltz",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/080c410f2a485b923ac6f177fb1da786d288d26d-131x197.png",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/c1404b03e5dd2693d7fa25cbd29f0439400abe0c-393x524.png",
     "listenplatz": 4,
     "alter": 38,
     "bezirk": "Treptow-Köpenick",
@@ -90,7 +90,7 @@ export const KANDIDATEN = [
   {
     "slug": "rainer-seider",
     "name": "Rainer Seider",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/fa231826bff78ddcc441260bf39579eaded1d9cb-131x197.png",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/003eb8006e6e13921433213391c8a32898dd1764-393x524.png",
     "listenplatz": 7,
     "alter": 62,
     "bezirk": "Mitte",
@@ -104,7 +104,7 @@ export const KANDIDATEN = [
   {
     "slug": "cara-seeberg",
     "name": "Cara Seeberg",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/376d181827135ddb66c885937d79acea5f413281-131x197.png",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/0bc058ef1e9640fa2c0803a13201b3bcdbdfbafc-393x524.png",
     "listenplatz": 8,
     "alter": 30,
     "bezirk": "Charlottenburg-Wilmersdorf",
@@ -146,7 +146,7 @@ export const KANDIDATEN = [
   {
     "slug": "theresa-schueltken",
     "name": "Theresa Schültken",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/d0dd7dae6dadeedfa5b2875503878bf694325c8e-400x478.jpg",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/cc0ddb3b3f105b9df983f0450998d2efa447295d-131x175.png",
     "listenplatz": 10,
     "alter": 27,
     "bezirk": "Pankow",
@@ -160,7 +160,7 @@ export const KANDIDATEN = [
   {
     "slug": "christian-weisssteiner",
     "name": "Christian Weißsteiner",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/bb359cf3f449c245b9b9c4a1a23f9e0e05db171f-400x478.jpg",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/9d40f7c7fd9af13c2723e66cb594adb7a7d6c191-393x524.png",
     "listenplatz": 11,
     "alter": 44,
     "bezirk": "Charlottenburg-Wilmersdorf",
@@ -230,7 +230,7 @@ export const KANDIDATEN = [
   {
     "slug": "juliane-kalbacher",
     "name": "Juliane Kalbacher",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/9ffd6290f22817da48ecfd8c6d9865a1c0d372fa-400x478.jpg",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/876b0a97e421c7be5b5be36ddd61901ea1fc43d8-393x524.png",
     "listenplatz": 16,
     "alter": 32,
     "bezirk": "Charlottenburg-Wilmersdorf",
@@ -244,7 +244,7 @@ export const KANDIDATEN = [
   {
     "slug": "ingo-partey",
     "name": "Ingo Partey",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/f808d974c6a8db647f49df4261daafe67142d5e7-380x460.jpg",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/011ad5981d338e272a8ae153e3337f64f136c389-393x524.png",
     "listenplatz": 17,
     "alter": 60,
     "bezirk": "Steglitz-Zehlendorf",
@@ -258,7 +258,7 @@ export const KANDIDATEN = [
   {
     "slug": "danina-margit-schwarm",
     "name": "Danina Margit Schwarm",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/7e4e05480beb4a608b3f2f5f3506185e554626a0-400x478.jpg",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/85107465306d747c1e2eb9991c97bdf67e7cac12-393x524.png",
     "listenplatz": 18,
     "alter": 40,
     "bezirk": "Charlottenburg-Wilmersdorf",
@@ -272,7 +272,7 @@ export const KANDIDATEN = [
   {
     "slug": "sascha-hellwig",
     "name": "Sascha Hellwig",
-    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/f47c874a683a39e7d1792d10485f72ea1f3ae373-131x197.png",
+    "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/5ea30fea4f31ebe5d679fa667a269820c7f06726-393x524.png",
     "listenplatz": 19,
     "alter": 40,
     "bezirk": "Reinickendorf",
