@@ -3,7 +3,7 @@
 // import { NL, CmsImg } from "../lib";
 
 import { Navbar } from './Navbar'
-import { Footer } from "./Footer";
+import { Footer } from './Footer'
 
 import { HeroLinear } from './content_modules/HeroLinear'
 import { HeroVideo } from './content_modules/HeroVideo'

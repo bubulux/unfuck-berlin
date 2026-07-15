@@ -46,7 +46,7 @@ export default function Wahlprogramm() {
           <p className="mt-6 text-base md:text-lg opacity-90">
             Konkrete Lösungen für die Herausforderungen unserer Stadt. Pragmatisch, progressiv und europäisch.
           </p>
-          <Link to="/kandidierende" className="mt-5 inline-flex items-center gap-2 bg-volt-lime text-volt-purple font-bold px-4 py-2.5 btn-magnet">
+          <Link to="https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026" className="mt-5 inline-flex items-center gap-2 bg-volt-lime text-volt-purple font-bold px-4 py-2.5 btn-magnet">
             <Users size={14} /> Zu unseren Kandidierenden
           </Link>
         </div>

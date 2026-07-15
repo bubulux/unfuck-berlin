@@ -141,7 +141,7 @@ export default function App() {
 
           {/* <Route path="/im-bezirk" element={<ImBezirk />} /> */}
           {/* <Route path="/bezirk/:id" element={<BezirkSeite />} /> */}
-          <Route path="/kandidierende_old" element={<Kandidierende />} />
+          <Route path="/kandidierende" element={<Kandidierende />} />
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />
           {/* <Route path="/spitzenduo" element={<Spitzenduo />} /> */}
           <Route path="/kalender" element={<Mitmachen />} /> {/* kalender */}

@@ -23,7 +23,7 @@ export function KandisTeaser({ obj }) {
                 <NL text={ obj.kandidatenText || "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidatinnen und Kandidaten kennenlernen."} />
               </p>
               <Link
-                to="/kandidierende"
+                to="https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026"
                 className="inline-flex items-center gap-2 font-bold text-sm md:text-base mt-4 hover:text-volt-lime transition"
               >
                 { obj.kandidatenLink} <ArrowRight size={18} />
@@ -67,7 +67,7 @@ export function KandisTeaser({ obj }) {
               <NL text={ obj.kandidatenText || "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidatinnen und Kandidaten kennenlernen."} />
             </p>
             <Link
-              to="/kandidierende"
+              to="https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026"
               className="inline-flex items-center gap-2 font-bold text-sm mt-4 hover:text-volt-lime transition"
             >
               { obj.kandidatenLink} <ArrowRight size={16} />
