@@ -53,7 +53,7 @@ export default defineType({
       layout: 'dropdown',
     }),
 
-        defineField({
+    defineField({
       title: 'test kandis',
       name: 'test_kandis',
       insertMenu: {
@@ -62,7 +62,7 @@ export default defineType({
       },
       type: 'array',
       of: [
-        { type: 'kandis_grid' },
+        { type: 'kandis_auswahl' },
       ],
     }),
 
@@ -75,7 +75,7 @@ export default defineType({
       },
       type: 'array',
       of: [
-        { type: 'kandis_grid' },
+        { type: 'kandis_auswahl' },
         { type: 'hero_linear' },
         { type: 'hero_video' },
         { type: 'kalender_teaser' },

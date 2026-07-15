@@ -10,7 +10,7 @@ import html_text from './obj/html_text'
 import one_cta from './obj/one_cta'
 import wahlprogramm_teaser from './obj/wahlprogramm_teaser'
 import wahlprogramm_kapitel_teaser from './obj/wahlprogramm_kapitel_teaser'
-import kandis_grid from './obj/kandis_grid'
+import kandis_auswahl from './obj/kandis_auswahl'
 
 import seite from './seite'
 
@@ -19,7 +19,7 @@ import kandidatAgh from './kandidatAgh'
 import kandidatBvv from './kandidatBvv'
 import neuigkeit from './neuigkeit'
 import questionAnswer from './questionAnswer'
-import seiteAlleKandis from './seiteAlleKandis'
+// import seiteAlleKandis from './seiteAlleKandis'
 import seiteBezirk from './seiteBezirk'
 import seiteCountDown from './seiteCountDown'
 import seiteImBezirk from './seiteImBezirk'
@@ -43,7 +43,7 @@ export const schemaTypes = [
   one_cta,
   wahlprogramm_teaser,
   wahlprogramm_kapitel_teaser,
-  kandis_grid,
+  kandis_auswahl,
 
   seite,
 
@@ -52,7 +52,7 @@ export const schemaTypes = [
   kandidatBvv,
   neuigkeit,
   questionAnswer,
-  seiteAlleKandis,
+  // seiteAlleKandis,
   seiteBezirk,
   seiteCountDown,
   seiteImBezirk,

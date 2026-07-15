@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CmsImg } from "../../lib";
 import { KANDIDATEN } from "../../data";
 
-export function KandisGrid({ obj }) {
+export function KandisAuswahl({ obj }) {
   // const amount = obj.amount || 9
 
   return (

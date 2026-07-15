@@ -15,6 +15,7 @@ import { Headline } from './content_modules/Headline'
 import { HtmlText } from './content_modules/HtmlText'
 import { OneCta } from './content_modules/OneCta'
 import { WahlprogrammTeaser } from './content_modules/WahlprogrammTeaser'
+import { KandisAuswahl } from './content_modules/KandisAuswahl'
 
 export function Page({ page }) {
   // const slug = page.slug || '';
@@ -49,6 +50,8 @@ export function Page({ page }) {
               return <OneCta obj={obj} key={`${obj._key}_${index}`} />
             case 'wahlprogramm_teaser':
               return <WahlprogrammTeaser obj={obj} key={`${obj._key}_${index}`} />
+            case 'kandis_auswahl':
+              return <KandisAuswahl obj={obj} key={`${obj._key}_${index}`} />
             default:
               return null
           }

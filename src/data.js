@@ -47,10 +47,10 @@ export const THEMEN = [
 // "Was mehr?" Cross-Navigation (Routen) — Struktur, fix.
 export const WAS_MEHR_LINKS = [
   { label: "Wahlprogram", to: "/wahlprogramm" },
-  { label: "Kalendar", to: "/kalender" },
+  { label: "Kalendar", to: "https://voltdeutschland.org/berlin/veranstaltungen" },
   { label: "Alle Voltkandidaten", to: "/kandidierende" },
   // { label: "Sticker abgreifen", to: "/unfck-berlin#sticker" },
-  { label: "Unf*ck Berlin", to: "/unfck-berlin" },
+  // { label: "Unf*ck Berlin", to: "/unfck-berlin" },
   // { label: "Im Bezirk", to: "/im-bezirk" },
   { label: "Spenden", to: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", to: "https://voltdeutschland.org/berlin/mitmachen" },

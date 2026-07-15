@@ -1,9 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { LinkIcon } from '@sanity/icons/Link'
 
 export default defineType({
   name: 'one_cta',
   title: 'Ein Button',
   type: 'object',
+  icon: LinkIcon,
 
   preview: {
     select: {

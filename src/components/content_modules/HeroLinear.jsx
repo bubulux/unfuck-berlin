@@ -1,10 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
 const headline_themes = {
-  'green': 'hl-green',
-  'orange': 'hl-orange',
-  'yellow': 'hl-lime',
-  'blue': 'hl-blue',
+  'white': 'text-inherit',
+  'green': 'hl hl-green text-volt-purple',
+  'orange': 'hl hl-orange text-volt-purple',
+  'yellow': 'hl hl-lime text-volt-purple',
+  'blue': 'hl hl-blue text-volt-purple',
 }
 
 export function HeroLinear({ obj }) {
@@ -18,7 +19,7 @@ export function HeroLinear({ obj }) {
           <div className="relative z-10 -mt-40 md:mt-6 px-5 md:px-0 flex flex-col md:h-full">
             <h1 className="flex flex-col items-start gap-1 md:gap-2 text-[42px] md:text-5xl lg:text-6xl font-bold leading-none">
               {heroZeilen.map((z, i) => (
-                <span key={i} className={`hl ${headline_themes[obj.headline_theme] ? headline_themes[obj.headline_theme] : 'hl-lime'}`}>{z}</span>
+                <span key={i} className={`${headline_themes[obj.headline_theme] ? headline_themes[obj.headline_theme] : 'hl hl-lime'}`}>{z}</span>
               ))}
             </h1>
 
