@@ -46,7 +46,7 @@ export const THEMEN = [
 
 // "Was mehr?" Cross-Navigation (Routen) — Struktur, fix.
 export const WAS_MEHR_LINKS = [
-  { label: "Wahlprogram", to: "/wahlprogramm" },
+  { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Kalendar", to: "https://voltdeutschland.org/berlin/veranstaltungen" },
   { label: "Alle Voltkandidaten", to: "https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026" },
   // { label: "Sticker abgreifen", to: "/unfck-berlin#sticker" },
