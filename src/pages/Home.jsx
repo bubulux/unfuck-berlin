@@ -48,7 +48,7 @@ export default function Home() {
 
           {/* Text */}
           <div className="relative z-10 -mt-40 md:mt-6 px-5 md:px-0 md:order-1 flex flex-col md:h-full">
-            <h1 className="flex flex-col items-start gap-1 md:gap-2 text-[42px] md:text-5xl lg:text-6xl font-bold leading-none uppercase">
+            <h1 className="flex flex-col items-start gap-1 md:gap-2 text-[42px] md:text-5xl lg:text-6xl font-bold leading-none">
               {heroZeilen.map((z, i) => (
                 <span key={i} className="hl hl-lime">{z}</span>
               ))}

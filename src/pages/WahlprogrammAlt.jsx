@@ -79,7 +79,7 @@ export default function Wahlprogramm() {
           <h2 className="text-2xl md:text-4xl font-bold mb-3">Noch Fragen?</h2>
           <p className="text-base mb-6 opacity-90">Wir helfen dir gerne weiter. Kontaktiere uns oder komme zu einer unserer Veranstaltungen.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/mitmachen" className="bg-volt-lime text-volt-purple font-bold px-5 py-3 btn-magnet">Termin-Kalender</Link>
+            <Link to="/kalender" className="bg-volt-lime text-volt-purple font-bold px-5 py-3 btn-magnet">Termin-Kalender</Link>
             <a href="#" className="border border-white/40 font-bold px-5 py-3 btn-magnet">Kontakt aufnehmen</a>
           </div>
         </div>

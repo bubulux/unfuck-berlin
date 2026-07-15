@@ -132,16 +132,16 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/wahlprogramm" element={<Wahlprogramm />} />
-          <Route path="/im-bezirk" element={<ImBezirk />} />
-          <Route path="/bezirk/:id" element={<BezirkSeite />} />
+          {/* <Route path="/im-bezirk" element={<ImBezirk />} /> */}
+          {/* <Route path="/bezirk/:id" element={<BezirkSeite />} /> */}
           <Route path="/kandidierende" element={<Kandidierende />} />
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />
-          <Route path="/spitzenduo" element={<Spitzenduo />} />
-          <Route path="/mitmachen" element={<Mitmachen />} />
-          <Route path="/volt-o-mat" element={<VoltOMat />} />
+          {/* <Route path="/spitzenduo" element={<Spitzenduo />} /> */}
+          <Route path="/kalender" element={<Mitmachen />} /> {/* kalender */}
+          {/* <Route path="/volt-o-mat" element={<VoltOMat />} /> */}
           <Route path="/wahl-info" element={<WahlInfo />} />
           <Route path="/unfck-berlin" element={<UnfuckBerlin />} />
-          <Route path="/ueber-volt" element={<UeberVolt />} />
+          {/* <Route path="/ueber-volt" element={<UeberVolt />} /> */}
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer />

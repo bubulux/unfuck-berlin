@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 
 // Seiten mit lila Header (weisses Logo). Alles andere: weisser Header (lila Logo).
-const PURPLE_PREFIXES = ["/", "/mitmachen", "/im-bezirk", "/bezirk", "/unfck-berlin"];
+const PURPLE_PREFIXES = ["/", "/kalender", "/im-bezirk", "/bezirk", "/unfck-berlin"];
 
 function isPurple(pathname) {
   if (pathname === "/") return true;
@@ -51,7 +51,7 @@ export default function Navbar() {
           >
             Spenden
           </a>
-          <NavLink to="/mitmachen" className={linkClass}>Mitmachen</NavLink>
+          <Link to="https://voltdeutschland.org/berlin/mitmachen" className={linkClass}>Mitmachen</Link>
         </nav>
       </div>
     </header>

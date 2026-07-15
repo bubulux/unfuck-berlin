@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-14T23:37:11.152Z
+// Letzter Abruf: 2026-07-14T23:51:23.203Z
 
 export const KANDIDATEN = [
   {
@@ -386,9 +386,8 @@ export const SEITEN = {
     "heroButton": "KURZ PROGRAMM",
     "heroText": "Volt macht, was woanders funktioniert.\nEgal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.",
     "heroZeilen": [
-      "Die erste",
-      "Partei,",
-      "die."
+      "unf*ck",
+      "berlin"
     ],
     "kalenderTitel": "Triff uns!",
     "kandidatenLink": "Unsere Kandidierenden stellen sich vor",
