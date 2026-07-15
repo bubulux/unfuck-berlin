@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-15T07:07:34.136Z
+// Letzter Abruf: 2026-07-15T07:44:59.066Z
 
 export const KANDIDATEN = [
   {
@@ -14,7 +14,7 @@ export const KANDIDATEN = [
     "themen": null,
     "herzensthema": "Ich trete an für ein Berlin, das vorankommt: als fairer, innovativer Wirtschaftsstandort. Eine starke Wirtschaft schafft ein faires Berlin – mit bezahlbarem Wohnraum, gerechten Bildungschancen und einem solidarischen Miteinander.",
     "ueberMich": "Ich bin Anwältin, Gründerin, Mutter von zwei Kindern und einem afghanischen Ziehsohn. Voller Energie, Berlin gemeinsam mit euch in die Zukunft zu bringen.\n\nIch möchte, dass sich die Menschen in dieser Stadt wieder gemeinsam für Berlin begeistern. Mein Ziel ist es, Volt ins Abgeordnetenhaus zu führen und von dort aus mit mutigen Lösungen echten Fortschritt zu schaffen. Ich bin überzeugt: Mit guter Politik können wir Vertrauen in unsere Demokratie zurückgewinnen und Berlin wieder zusammenbringen.",
-    "foto2": "",
+    "foto2": "https://cdn.sanity.io/images/xzcgo5ky/production/40b225a751735fac52b45eade2e76f5a636957c4-4026x5210.jpg",
     "berlinIst": ""
   },
   {
@@ -28,7 +28,7 @@ export const KANDIDATEN = [
     "themen": null,
     "herzensthema": "Ich will Berlin zu einem Leuchtturm der Hoffnung für eine innovative, gerechte und nachhaltige europäische Zukunft machen. Eine Stadt, die wächst und sich selbstbewusst als europäische Vorreiterstadt sieht.\n\n",
     "ueberMich": "Ich arbeite als Organisations- und IT‑Berater für den öffentlichen Sektor. Mein Fokus: Prozesse vereinfachen, Digitalisierung umsetzen und Projekte ins Ziel bringen.\n\nIch bin mit drei Schwestern in Hannover aufgewachsen und 2011, nach meinem Grundwehrdienst, nach Berlin gezogen. Hier habe ich Betriebswirtschaft studiert und von 2017 bis 2021 als Mitgründer das Team von Volt Europa in Deutschland aufgebaut.\n\nIch bin bei Volt, weil ich der Überzeugung bin, dass Politk Vision und grenzübergreifendes Handeln braucht. Ich will, dass Berlin beim Wohnen, bei der Digitalisierung und der Bildung europäischer Vorreiter wird.",
-    "foto2": "https://cdn.sanity.io/images/xzcgo5ky/production/ca1ca520921de033f7c5af5a2aefbf52850cdf9f-318x454.png",
+    "foto2": "https://cdn.sanity.io/images/xzcgo5ky/production/40b225a751735fac52b45eade2e76f5a636957c4-4026x5210.jpg",
     "berlinIst": ""
   },
   {
@@ -464,7 +464,7 @@ export const SEITEN = {
     "waehlenMit16Text": "Du bist 16 oder älter? Dann kannst du dieses Jahr zum ersten Mal wählen. Das ist mehr als nur ein Kreuz auf dem Stimmzettel – es ist deine Chance, die Zukunft deiner Stadt mitzugestalten.\nOb Mieten, Bildung, öffentlicher Nahverkehr, Klima oder Freizeitangebote – die Entscheidungen der Politik betreffen deinen Alltag. Informiere dich über die Themen und Parteien, bilde dir deine eigene Meinung und geh wählen.\nDenn Berlin verändert sich nur, wenn Menschen mitentscheiden. Vielleicht beginnt das mit deiner ersten Stimme.",
     "waehlenMit16Titel": "Wählen mit 16?",
     "zweitstimmeText": "Mit der Zweitstimme entscheidest du, welche Partei wie stark im Parlament vertreten ist. Sie ist ausschlaggebend für die Sitzverteilung und bestimmt damit maßgeblich die politischen Mehrheiten.\nDu wählst also nicht eine einzelne Person, sondern die Partei, deren Ziele und Ideen dich am meisten überzeugen. Die Zweitstimme hat deshalb einen großen Einfluss darauf, welche Politik in den kommenden Jahren umgesetzt wird.",
-    "zweitstimmeTitel": "Die Zweitstimme –\nDeine Wahl für VOLT"
+    "zweitstimmeTitel": "Die Zweitstimme – Deine Wahl für Volt"
   },
   "imBezirk": {
     "heroText": "Genug geredet, jetzt wird aufgeräumt.\nSo unf*cken wir deinen Bezirk:",
@@ -703,7 +703,7 @@ export const DYN_SEITEN = [
     "page_theme": "white",
     "slug": {
       "_type": "slug",
-      "current": "kandidierende"
+      "current": "kandidierende-(not-ready)"
     }
   },
   {
@@ -856,7 +856,7 @@ export const DYN_SEITEN = [
     "page_theme": "white",
     "slug": {
       "_type": "slug",
-      "current": "wahl-info"
+      "current": "wahl-info-(not-ready)"
     }
   }
 ];

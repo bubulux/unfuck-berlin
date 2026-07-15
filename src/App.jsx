@@ -146,7 +146,7 @@ export default function App() {
           {/* <Route path="/spitzenduo" element={<Spitzenduo />} /> */}
           <Route path="/kalender" element={<Mitmachen />} /> {/* kalender */}
           {/* <Route path="/volt-o-mat" element={<VoltOMat />} /> */}
-          {/* <Route path="/wahl-info" element={<WahlInfo />} /> */}
+          <Route path="/wahl-info" element={<WahlInfo />} />
           <Route path="/unfck-berlin" element={<UnfuckBerlin />} />
           {/* <Route path="/ueber-volt" element={<UeberVolt />} /> */}
 

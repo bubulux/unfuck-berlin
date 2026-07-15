@@ -3,16 +3,21 @@ import { Link } from "react-router-dom";
 import TermineSection from "../components/TermineSection";
 import { KANDIDATEN, SEITEN } from "../data";
 import { NL, CmsImg } from "../lib";
+import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer'
 
 export default function Kandidierende() {
   const s = SEITEN.alleKandis || {};
   const titelZeilen = s.titelZeilen && s.titelZeilen.length
     ? s.titelZeilen
     : ["Gemeinsam für", "ein besseres Berlin"];
-  const [alleAnzeigen, setAlleAnzeigen] = useState(false);
-  const sichtbar = alleAnzeigen ? KANDIDATEN : KANDIDATEN.slice(0, 18);
+  const sichtbar = KANDIDATEN
+
+  const isPurple = false
 
   return (
+    <div className="min-h-full bg-volt-purple">
+    <Navbar isPurple={isPurple} />
     <main className="bg-white text-volt-purple">
 
       <section className="max-w-6xl mx-auto px-5 md:px-8 pt-12 md:pt-24 pb-14 md:pb-20">
@@ -26,7 +31,7 @@ export default function Kandidierende() {
         </p>
 
         {/* GRID: 3 Spalten mobil, 6 auf Desktop */}
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-x-4 gap-y-8 mt-12">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-x-4 gap-y-8 mt-12">
           {sichtbar.map((k) => (
             <Link key={k.slug} to={`/kandidierende/${k.slug}`} className="group">
               <div className="relative aspect-[4/5] overflow-hidden bg-volt-purple">
@@ -46,20 +51,10 @@ export default function Kandidierende() {
             </Link>
           ))}
         </div>
-
-        {!alleAnzeigen && KANDIDATEN.length > 18 && (
-          <div className="text-center mt-12">
-            <button
-              onClick={() => setAlleAnzeigen(true)}
-              className="bg-volt-purple text-white font-bold tracking-wide text-sm md:text-base px-7 py-3 rounded-md btn-magnet uppercase"
-            >
-              Weitere Kandidaten
-            </button>
-          </div>
-        )}
       </section>
 
-      <TermineSection title="Triff uns!" centered />
     </main>
+    <Footer />
+    </div>
   );
 }

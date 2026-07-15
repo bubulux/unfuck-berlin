@@ -98,7 +98,7 @@ export default function ImBezirk() {
       {/* WAHLKAMPF KALENDER */}
       <TermineSection title={s.kalenderTitel || "Wahlkampf Kalender"} />
 
-      {/* VOTE VOLT */}
+      {/* Vote Volt */}
       <section className="bg-volt-darkest relative overflow-hidden">
         <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 md:items-center">
 
