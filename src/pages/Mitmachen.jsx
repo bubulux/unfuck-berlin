@@ -2,11 +2,14 @@ import { useState } from "react";
 import { TERMINE, SEITEN } from "../data";
 import TerminCard from "../components/TerminCard";
 import { NL, CmsImg } from "../lib";
+import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer'
+import { Link } from "react-router-dom";
 
 const FILTER = [
-  { id: "Alle", cls: "bg-white text-volt-darkest" },
-  { id: "Veranstaltung", cls: "bg-volt-blue text-volt-darkest" },
-  { id: "Podium", cls: "bg-volt-orange text-volt-darkest" },
+  { id: "Alle", cls: "bg-white text-volt-purple" },
+  { id: "Veranstaltung", cls: "bg-volt-blue text-volt-purple" },
+  { id: "Podium", cls: "bg-volt-orange text-volt-purple" },
   { id: "Bezirkstreffen", cls: "bg-volt-pink text-white" },
 ];
 
@@ -20,7 +23,11 @@ export default function Mitmachen() {
 
   const sichtbar = filter === "Alle" ? TERMINE : TERMINE.filter((t) => t.type === filter);
 
+  const isPurple = true
+
   return (
+    <div className="min-h-full bg-volt-purple">
+        <Navbar isPurple={isPurple} />
     <main className="bg-volt-purple text-white">
 
       {/* HERO */}
@@ -71,22 +78,18 @@ export default function Mitmachen() {
 
         {/* EVENT EINLADEN */}
         <p className="mt-10 md:mt-14 text-sm md:text-base leading-relaxed max-w-2xl pb-14">
-          <NL
-            text={
-              s.einladungText ||
-              "Du vermisst hier ein Event, oder würdest uns gerne auf einem Panel begrüßen? Dann lad' uns ein!\nSchreib dazu eine Mail an presse@voltberlin.org"
-            }
-          />
+          Du vermisst hier ein Event, oder würdest uns gerne auf einem Panel begrüßen?<br />
+          <strong>Dann lad' uns ein!</strong> Schreib dazu eine Mail an <Link className="underline" to="mailto:presse@voltberlin.org">presse@voltberlin.org</Link>.
         </p>
       </section>
 
       {/* BIS NÄCHSTES MAL — GALERIE */}
+      {/*
       <section className="max-w-6xl mx-auto px-5 md:px-8 pb-20 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10">
           {s.carouselTitel || "bis nächstes mal…"}
         </h2>
 
-        {/* Mobile: 1 Bild — Desktop: 3 Bilder nebeneinander */}
         <div className="md:hidden">
           <CmsImg
             src={carousel[slide % carousel.length]}
@@ -139,6 +142,10 @@ export default function Mitmachen() {
           </a>
         </div>
       </section>
+      */}
+
     </main>
+    <Footer />
+        </div>
   );
 }

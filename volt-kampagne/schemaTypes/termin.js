@@ -5,6 +5,21 @@ export default defineType({
   title: 'Termin',
   type: 'document',
 
+  preview: {
+    select: {
+      titel: 'titel',
+      datum: 'datum',
+      uhrzeit: 'uhrzeit',
+    },
+    prepare(selection) {
+      const { titel, datum, uhrzeit } = selection
+      return {
+        title: titel,
+        subtitle: `${datum} ${uhrzeit}`,
+      }
+    },
+  },
+
   fields: [
     defineField({
       name: 'datum',

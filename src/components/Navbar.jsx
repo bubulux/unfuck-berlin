@@ -11,14 +11,9 @@ export function Navbar({ isPurple }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const linkClass = ({ isActive }) =>
-    isPurple
-      ? `font-bold text-xs md:text-sm transition ${isActive ? "text-volt-lime underline" : "text-white hover:text-volt-lime"}`
-      : `font-bold text-xs md:text-sm transition ${isActive ? "text-volt-dark underline" : "text-volt-purple hover:text-volt-dark"}`;
-
-  const spendenClass = isPurple
-    ? "font-bold text-xs md:text-sm text-white hover:text-volt-lime transition"
-    : "font-bold text-xs md:text-sm text-volt-purple hover:text-volt-dark transition";
+  const linkClass = isPurple
+    ? "font-bold text-xs md:text-sm transition text-white hover:text-volt-lime"
+    : "font-bold text-xs md:text-sm transition text-volt-purple hover:text-volt-dark";
 
   return (
     <header
@@ -33,14 +28,14 @@ export function Navbar({ isPurple }) {
 
         <nav className="flex items-center gap-4 md:gap-8">
           <NavLink to="/wahlprogramm" className={linkClass}>Wahlprogramm</NavLink>
-          <a
+          <Link
             href="https://voltdeutschland.org/berlin/spenden"
             target="_blank"
             rel="noopener noreferrer"
-            className={spendenClass}
+            className={linkClass}
           >
             Spenden
-          </a>
+          </Link>
           <Link to="https://voltdeutschland.org/berlin/mitmachen" className={linkClass}>Mitmachen</Link>
         </nav>
       </div>
