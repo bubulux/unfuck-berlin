@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-15T01:27:36.728Z
+// Letzter Abruf: 2026-07-15T05:53:15.164Z
 
 export const KANDIDATEN = [
   {
@@ -378,32 +378,6 @@ export const SEITEN = {
     "paulSocialLabel": "Folge Paul für weitere spannende Artiken",
     "paulTitel": "Paul\nLöper"
   },
-  "startseite": {
-    "countdownTitel": "Berlin besser machen!",
-    "erstwaehlerLink": "Wie wähle ich?",
-    "erstwaehlerText": "Aber wie? Wir erklären dir, wie das Berliner Wahl System funktioniert und was Du benötigst um die beste Wahl für das AGH und die BVV zu treffen.",
-    "heroBild": "https://cdn.sanity.io/images/xzcgo5ky/production/d67bb6f2ff8eba9470c8f7f88e2cb481b8426b2a-393x581.png",
-    "heroButton": "Wahlprogramm",
-    "heroText": "Berlin besser machen!\n\nVolt macht, was woanders funktioniert.\nEgal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.",
-    "heroZeilen": [
-      "unf*ck",
-      "berlin"
-    ],
-    "kalenderTitel": "Triff uns!",
-    "kandidatenLink": "Unsere Kandidierenden stellen sich vor",
-    "kandidatenText": "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidatinnen und Kandidaten kennenlernen.",
-    "kandidatenZeilen": [
-      "Unsere",
-      "Kandidaten"
-    ],
-    "unfckBild": null,
-    "unfckButton": "WORUM GEHT ES?",
-    "unfckText": "Hinter unf*ck Berlin steckt eine einfache Idee: Probleme verschwinden nicht, wenn man höflicher über sie spricht. Aber sie verschwinden auch nicht, wenn man nur über sie klagt.\nDeshalb ist das hier keine Protestkampagne.",
-    "unfckZeilen": [
-      "unf*ck",
-      "berlin"
-    ]
-  },
   "unfck": {
     "collage1": null,
     "grossesBild": null,
@@ -507,3 +481,202 @@ export const SEITEN = {
     "titel": "Wahlprogramm"
   }
 };
+
+export const DYN_SEITEN = [
+  {
+    "content_modules": [
+      {
+        "_key": "6339e266650e",
+        "_type": "hero_video",
+        "heroCtaHref": "/wahlprogramm",
+        "heroCtaLabel": "Wahlprogramm",
+        "heroText": "Berlin besser machen!\n\nVolt macht, was woanders funktioniert.\nEgal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.",
+        "heroZeilen": [
+          "unf*ck",
+          "berlin"
+        ],
+        "youtube_link": "https://www.youtube-nocookie.com/embed/ub8UIZ0FvRs?si=X0Tvxpz0FfcmAOaH&controls=0&autoplay=1&mute=1&loop=1"
+      },
+      {
+        "_key": "36ee659e03e8",
+        "_type": "wahlsystem_teaser",
+        "link": "Wie wähle ich?",
+        "text": "Aber wie? Wir erklären dir, wie das Berliner Wahl System funktioniert und was Du benötigst um die beste Wahl für das AGH und die BVV zu treffen.",
+        "title": "Du hast die Wahl!"
+      },
+      {
+        "_key": "1fd26cd6a80f",
+        "_type": "kalender_teaser",
+        "titel": "Triff uns!"
+      },
+      {
+        "_key": "fd3a1049dfdb",
+        "_type": "kandis_teaser",
+        "kandidatenLink": "Unsere Kandidierenden stellen sich vor",
+        "kandidatenText": "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidat:innen kennenlernen.",
+        "kandidatenZeilen": [
+          "UNSERE",
+          "Kandidierenden"
+        ]
+      }
+    ],
+    "page_theme": "purple",
+    "slug": {
+      "_type": "slug",
+      "current": "home"
+    }
+  },
+  {
+    "content_modules": [
+      {
+        "_key": "f2e5a09d818a",
+        "_type": "hero_linear",
+        "headline_theme": "blue",
+        "heroText": "Unsere Kandidierenden stehen für frische Ideen, lösungsorientierte Politik und den Mut, neue Wege zu gehen. Sie kommen aus unterschiedlichen Lebensbereichen, teilen aber ein gemeinsames Ziel: Berlin nachhaltig, gerecht und zukunftsfähig zu gestalten.\n\nLerne unser Team kennen und erfahre, welche Themen ihnen besonders am Herzen liegen. Gemeinsam mit dir arbeiten wir an einem Berlin, dass für alle funktioniert.",
+        "heroZeilen": [
+          "Gemeinsam",
+          "für unser",
+          "Berlin"
+        ]
+      },
+      {
+        "_key": "1d377a36d26a",
+        "_type": "one_cta",
+        "ctaHref": "https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026",
+        "ctaLabel": "Alle Kandidierenden"
+      }
+    ],
+    "page_theme": "white",
+    "slug": {
+      "_type": "slug",
+      "current": "kandidierende"
+    }
+  },
+  {
+    "content_modules": [
+      {
+        "_key": "b82d988cf734",
+        "_type": "hero_linear",
+        "headline_theme": "green",
+        "heroText": "<strong>Berlin ist pulsierend, aber sein Herzschlag erreicht die\nPolitik nicht.</strong>\n\nDie Folgen spüren Berliner*innen täglich: Wohnungen, die unbezahlbar sind. ­Schulen, die marode sind. Eine Verwaltung, die auf einfache Anliegen monatelang nicht reagiert. Dazu kommt das Gefühl, dass es nicht besser wird, sondern schlechter.\n\nMit unserem Wahlprogramm legen wir einen konkreten Plan vor, wie diese Stadt wieder funktioniert: <strong>pragmatisch, evidenzbasiert und europäisch.</strong>\n\nIn sieben Kapiteln zeigen wir, wie Berlin seine größten Probleme löst, von der Verwaltung über bezahlbares Wohnen bis zur Bildung. <strong>Denn Berlin braucht Politik, die die Zukunft gestaltet.</strong>",
+        "heroZeilen": [
+          "Wahlprogramm"
+        ]
+      },
+      {
+        "_key": "f0f63255a8c6",
+        "_type": "one_cta",
+        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/2026_ber_wahlprogramm.pdf",
+        "ctaLabel": "Gesamtes Wahlprogramm zur AGH-Wahl 2026"
+      },
+      {
+        "_key": "202fa8f7128e",
+        "_type": "wahlprogramm_teaser",
+        "kapitel": [
+          {
+            "_key": "468afc666541",
+            "_type": "wahlprogramm_kapitel_teaser",
+            "tags": [
+              "Verwaltung",
+              "Digitalisierung",
+              "Beteiligung"
+            ],
+            "text": "…ist die Grundlage von allem: eine digitale Verwaltung, die an Ergebnissen gemessen wird. Mit dem Once-Only-Prinzip geben Berliner:innen ihre Daten nur einmal an, mit der Genehmigungsfiktion gelten vollständige Anträge nach Fristablauf automatisch als genehmigt.",
+            "titel": "Berlin funktioniert"
+          },
+          {
+            "_key": "56b00236e63e",
+            "_type": "wahlprogramm_kapitel_teaser",
+            "tags": [
+              "Wohnen",
+              "Mobilität",
+              "lebenswerte Kieze"
+            ],
+            "text": "…heißt bezahlbares Wohnen: Flächen für 300.000 neue Wohnungen, schnellere Genehmigungen und Housing First als wirksames Mittel gegen Obdachlosigkeit. Dazu ein verlässlicher ÖPNV bis in die Außenbezirke, sichere Rad- und Gehwege und saubere Kieze.",
+            "titel": "Berlin  lebt"
+          },
+          {
+            "_key": "38cfe7ee3c4e",
+            "_type": "wahlprogramm_kapitel_teaser",
+            "tags": [
+              "Kita",
+              "Schule",
+              "Beruf"
+            ],
+            "text": "… setzt früh an: mit einer verbindlichen Vorschulphase ab fünf Jahren, Sprachtests mit vier, dem neuen Pflichtfach Lebenskompetenz und einer Ausbildungsplatzgarantie, damit die Herkunft nicht über Chancen entscheidet.",
+            "titel": "Berlin lernt"
+          },
+          {
+            "_key": "2f8f926d81bd",
+            "_type": "wahlprogramm_kapitel_teaser",
+            "tags": [
+              "Innovation",
+              "Wirtschaftskraft",
+              "Arbeitsplätze"
+            ],
+            "text": "…macht die Stadt zur Innovationshauptstadt: mit mehr Ausgründungen aus den Hochschulen, Berlin als Erstkundin für neue Technologien, schneller Fachkräfteeinwanderung und einer gemeinsamen Wirtschaftsregion mit Brandenburg.",
+            "titel": "Berlin  schafft"
+          },
+          {
+            "_key": "133f515d86d8",
+            "_type": "wahlprogramm_kapitel_teaser",
+            "tags": [
+              "Sicherheit",
+              "Gesundheit",
+              "Zusammenhalt"
+            ],
+            "text": "…verbindet wirksame Prävention, entschlossene Strafverfolgung und verlässlichen Opferschutz mit wohnortnahen Gesundheitszentren im Kiez und einer Stadt, die krisenfest wird.",
+            "titel": "Berlin  schützt"
+          },
+          {
+            "_key": "0a9ca927e949",
+            "_type": "wahlprogramm_kapitel_teaser",
+            "tags": [
+              "Zukunft",
+              "Resilienz",
+              "Natur"
+            ],
+            "text": "…begreift Klimaschutz als Investition statt Verzichtsagenda: mit einer Solaroffensive, klimaneutraler Fernwärme durch Großwärmepumpen und der Schwammstadt gegen Hitze und Starkregen.",
+            "titel": "Berlin  gewinnt"
+          },
+          {
+            "_key": "4ed1e5c5103e",
+            "_type": "wahlprogramm_kapitel_teaser",
+            "tags": [
+              "Menschen",
+              "Europa",
+              "die Welt"
+            ],
+            "text": "…macht Europa im Alltag erlebbar: mit Integration als Standortvorteil, Englisch als zweiter Servicesprache der Verwaltung und einer Kulturpolitik, die Clubs und freie Szene verlässlich absichert.",
+            "titel": "Berlin verbindet"
+          }
+        ]
+      },
+      {
+        "_key": "93b336e51703",
+        "_type": "headline",
+        "headlineZeilen": [
+          "Europäisch denken,",
+          "lokal liefern"
+        ],
+        "headline_theme": "orange"
+      },
+      {
+        "_key": "7c0a7218b6a0",
+        "_type": "html_text",
+        "html_text": "Volt ist die erste echte europäische Partei: in ganz Europa aktiv, mit einem gemeinsamen politischen Fundament. Genau das nutzen wir für Berlin. Wir experimentieren nicht auf Kosten der Berliner:innen, sondern holen Lösungen in die Stadt, die sich in Europa bereits bewährt haben. 98 Best-Practice-Beispiele aus Städten wie Helsinki, Wien, Amsterdam und Kopenhagen belegen, dass unsere Vorschläge keine Utopien sind, sondern erprobte Realität. Dabei gilt: Evidenz entscheidet, nicht Ideologie. Wir messen die Wirkung unserer Maßnahmen und passen an, was nicht die gewünschten Ergebnisse bringt."
+      },
+      {
+        "_key": "46a41eabb042",
+        "_type": "one_cta",
+        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/2026_ber_wahlprogramm.pdf",
+        "ctaLabel": "Gesamtes Wahlprogramm zur AGH-Wahl 2026"
+      }
+    ],
+    "page_theme": "white",
+    "slug": {
+      "_type": "slug",
+      "current": "wahlprogramm"
+    }
+  }
+];

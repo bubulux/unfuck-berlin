@@ -47,27 +47,6 @@ const INTRO_FALLBACK =
 const EUROPA_FALLBACK =
   "Volt ist die erste echte europäische Partei: in ganz Europa aktiv, mit einem gemeinsamen politischen Fundament. Genau das nutzen wir für Berlin. Wir experimentieren nicht auf Kosten der Berliner:innen, sondern holen Lösungen in die Stadt, die sich in Europa bereits bewährt haben. 98 Best-Practice-Beispiele aus Städten wie Helsinki, Wien, Amsterdam und Kopenhagen belegen, dass unsere Vorschläge keine Utopien sind, sondern erprobte Realität. Dabei gilt: Evidenz entscheidet, nicht Ideologie. Wir messen die Wirkung unserer Maßnahmen und passen an, was nicht die gewünschten Ergebnisse bringt.";
 
-function Kapitel({ k }) {
-  return (
-    <div className="grid grid-cols-[minmax(100px,2fr)_3fr] gap-4 md:gap-6 items-start">
-      <h3 className="text-2xl md:text-3xl font-bold leading-tight">
-        <NL text={(k.titel || "").replace(" ", "\n")} />
-      </h3>
-      <div>
-        <div className="flex flex-wrap gap-1.5 mb-3">
-          {(k.tags || []).map((tag) => (
-            <span key={tag} className="bg-volt-purple text-white text-[10px] md:text-[11px] font-bold px-2.5 py-1 -skew-y-1">
-              {tag}
-            </span>
-          ))}
-        </div>
-        <p className="text-xs md:text-sm leading-relaxed">
-          <NL text={k.text} />
-        </p>
-      </div>
-    </div>
-  );
-}
 
 export default function Wahlprogramm() {
   const s = SEITEN.wahlprogramm || {};

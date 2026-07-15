@@ -12,6 +12,7 @@ import {
   PLATZHALTER,
   PLATZHALTER_LANG,
   SEITEN,
+  DYN_SEITEN,
 } from "./content";
 
 // Berlin districts with hex grid coordinates (col, row in odd-q layout) — Struktur, fix.
@@ -73,4 +74,5 @@ export {
   PLATZHALTER,
   PLATZHALTER_LANG,
   SEITEN,
+  DYN_SEITEN,
 };
