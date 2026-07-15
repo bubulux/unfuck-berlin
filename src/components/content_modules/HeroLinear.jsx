@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
 const headline_themes = {
-  'white': 'text-inherit',
-  'green': 'hl hl-green text-volt-purple',
-  'orange': 'hl hl-orange text-volt-purple',
-  'yellow': 'hl hl-lime text-volt-purple',
-  'blue': 'hl hl-blue text-volt-purple',
+  'white': 'hl hl-white',
+  'green': 'hl hl-green',
+  'orange': 'hl hl-orange',
+  'yellow': 'hl hl-lime',
+  'blue': 'hl hl-blue',
 }
 
 export function HeroLinear({ obj }) {
