@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-14T23:51:23.203Z
+// Letzter Abruf: 2026-07-15T01:27:36.728Z
 
 export const KANDIDATEN = [
   {
@@ -383,8 +383,8 @@ export const SEITEN = {
     "erstwaehlerLink": "Wie wähle ich?",
     "erstwaehlerText": "Aber wie? Wir erklären dir, wie das Berliner Wahl System funktioniert und was Du benötigst um die beste Wahl für das AGH und die BVV zu treffen.",
     "heroBild": "https://cdn.sanity.io/images/xzcgo5ky/production/d67bb6f2ff8eba9470c8f7f88e2cb481b8426b2a-393x581.png",
-    "heroButton": "KURZ PROGRAMM",
-    "heroText": "Volt macht, was woanders funktioniert.\nEgal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.",
+    "heroButton": "Wahlprogramm",
+    "heroText": "Berlin besser machen!\n\nVolt macht, was woanders funktioniert.\nEgal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.",
     "heroZeilen": [
       "unf*ck",
       "berlin"
