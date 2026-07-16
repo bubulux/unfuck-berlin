@@ -126,12 +126,12 @@ export const MixedColors: Story = {
 
 export const WasMehr: Story = {
   args: {
-    lines: ["die erste", "partei", "die."],
+    lines: ["Was", "Mehr?"],
     variant: "titel",
     color: "neon",
     textColor: "purple",
     direction: "column",
-    align: "center",
+    align: "left",
     slant: 0.1,
     style: { fontWeight: "bold" },
     uppercase: true,
