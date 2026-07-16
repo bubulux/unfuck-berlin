@@ -1,0 +1,38 @@
+.date-badge {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.date-badge__day {
+  font-size: var(--text-titel);
+  font-weight: var(--font-weight-bold);
+}
+
+.date-badge__month {
+  font-size: var(--text-subtitel);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.date-badge--purple {
+  color: var(--color-purple);
+}
+.date-badge--white {
+  color: var(--color-white);
+}
+.date-badge--neon {
+  color: var(--color-neon);
+}
+.date-badge--yellow {
+  color: var(--color-yellow);
+}
+.date-badge--green {
+  color: var(--color-green);
+}
+.date-badge--blue {
+  color: var(--color-blue);
+}
+.date-badge--pink {
+  color: var(--color-pink);
+}

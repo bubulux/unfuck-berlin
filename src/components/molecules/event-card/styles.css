@@ -1,0 +1,26 @@
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-white);
+}
+
+/* Fixed-width date column + vertical divider, like the mockup. */
+.event-card__date {
+  flex: 0 0 auto;
+  min-width: 4.5rem;
+  padding-right: var(--space-4);
+  border-right: 2px solid rgba(80, 35, 121, 0.25);
+}
+
+.event-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.event-card__details {
+  opacity: 0.8;
+}

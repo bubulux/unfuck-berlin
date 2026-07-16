@@ -2,6 +2,8 @@ import { useLocation } from 'react-router'
 import { PageLayout } from '../../components/templates/page-layout'
 import { HeroSection } from '../../components/organisms/hero-section'
 import { CountdownSection } from '../../components/organisms/countdown-section'
+import { CalendarSection } from '../../components/organisms/calendar-section'
+import { getUpcomingCalendarItems } from '../../data/events'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
 const ELECTION_DATE = new Date(2026, 8, 20)
@@ -20,6 +22,7 @@ export function Home() {
         ctaTo="/wahlprogramm"
       />
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
+      <CalendarSection events={getUpcomingCalendarItems(3)} viewAllTo="/termine" />
     </PageLayout>
   )
 }
