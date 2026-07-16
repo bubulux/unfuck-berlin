@@ -8,6 +8,7 @@
   --color-green: #1bbe6f; /* gruen */
   --color-blue: #82d0f4; /* hellblau */
   --color-pink: #fc0068; /* pink */
+  --color-black: #111111; /* near-black text on light backgrounds */
 
   /* Semantic aliases */
   --color-bg: var(--color-purple);
