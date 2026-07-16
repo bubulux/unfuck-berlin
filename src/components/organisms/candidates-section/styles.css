@@ -1,0 +1,34 @@
+.candidates {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.candidates__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.candidates__head {
+  padding: var(--space-7) var(--content-pad) var(--space-6);
+}
+
+/* Single cluster image, edge-to-edge within the content column. */
+.candidates__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.candidates__foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--content-pad) var(--space-7);
+  text-align: center;
+}
+
+.candidates__cta {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-bold);
+}

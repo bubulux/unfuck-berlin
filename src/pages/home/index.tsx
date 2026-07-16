@@ -3,6 +3,7 @@ import { PageLayout } from '../../components/templates/page-layout'
 import { HeroSection } from '../../components/organisms/hero-section'
 import { CountdownSection } from '../../components/organisms/countdown-section'
 import { CalendarSection } from '../../components/organisms/calendar-section'
+import { CandidatesSection } from '../../components/organisms/candidates-section'
 import { getUpcomingCalendarItems } from '../../data/events'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
@@ -23,6 +24,11 @@ export function Home() {
       />
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
       <CalendarSection events={getUpcomingCalendarItems(3)} viewAllTo="/termine" />
+      <CandidatesSection
+        imageSrc="/pics/unsereKandidatenPortraitCluster.png"
+        imageAlt="Die Kandidatinnen und Kandidaten von Volt Berlin"
+        ctaTo="/kandidaten"
+      />
     </PageLayout>
   )
 }
