@@ -11,6 +11,7 @@ import { UnfuckBerlin } from './pages/unfuck-berlin'
 import { Sticker } from './pages/sticker'
 import { Confirm } from './pages/confirm'
 import { Termine } from './pages/termine'
+import { Kandidaten } from './pages/kandidaten'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/wahlsystem" element={<Wahlsystem />} />
         <Route path="/unfuck-berlin" element={<UnfuckBerlin />} />
         <Route path="/termine" element={<Termine />} />
+        <Route path="/kandidaten" element={<Kandidaten />} />
         <Route path="/sticker" element={<Sticker />} />
         <Route path="/confirm" element={<Confirm />} />
         {/* Alias: the server sends confirmation links as /confirm.html?token=… */}
