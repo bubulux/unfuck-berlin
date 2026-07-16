@@ -7,7 +7,14 @@ const meta = {
   argTypes: {
     name: {
       control: 'select',
-      options: ['arrow-right', 'arrow-left', 'chevron-right', 'chevron-left'],
+      options: [
+        'arrow-right',
+        'arrow-left',
+        'arrow-up',
+        'arrow-down',
+        'chevron-right',
+        'chevron-left',
+      ],
     },
     size: { control: 'text' },
   },
@@ -22,7 +29,16 @@ export const Single: Story = {}
 export const All: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '1rem' }}>
-      {(['arrow-right', 'arrow-left', 'chevron-right', 'chevron-left'] as const).map(
+      {(
+        [
+          'arrow-right',
+          'arrow-left',
+          'arrow-up',
+          'arrow-down',
+          'chevron-right',
+          'chevron-left',
+        ] as const
+      ).map(
         (n) => (
           <Icon key={n} name={n} size="2rem" />
         ),

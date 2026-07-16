@@ -1,6 +1,6 @@
 .was-mehr {
-  background-color: var(--color-neon);
-  color: var(--color-purple);
+  background-color: var(--color-purple);
+  color: var(--color-white);
 }
 
 .was-mehr__inner {
@@ -10,33 +10,53 @@
 }
 
 .was-mehr__title {
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-6);
 }
 
-.was-mehr__list {
-  display: grid;
-  gap: var(--space-3);
-}
-
-.was-mehr__item {
+/* Links flow inline and wrap; each link carries its own trailing dot. */
+.was-mehr__links {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-3);
-}
-
-.was-mehr__item::before {
-  content: '';
-  flex-shrink: 0;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: var(--radius-pill);
-  background-color: var(--color-purple);
-  transform: translateY(-0.1em);
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
 }
 
 .was-mehr__link {
   font-size: var(--text-subtitel);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+/* The trailing dot is part of the link (stylistic separator). */
+.was-mehr__dot {
+  margin-left: 0.4em;
+}
+
+/* Round scroll-to-top button, bottom-right. */
+.was-mehr__scroll {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-6);
+}
+
+.was-mehr__scroll-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-neon);
+  color: var(--color-purple);
+  transition: filter 0.15s ease;
+}
+
+.was-mehr__scroll-btn:hover {
+  filter: brightness(0.92);
+}
+
+.was-mehr__scroll-btn:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
 }

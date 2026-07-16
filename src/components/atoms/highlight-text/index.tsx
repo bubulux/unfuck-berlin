@@ -1,4 +1,4 @@
-import type { CSSProperties, ElementType } from "react";
+import type { CSSProperties, ElementType, HTMLAttributes } from "react";
 import { Link as RouterLink } from "react-router";
 import type { ColorToken, TextVariant } from "../text";
 import "./styles.css";
@@ -21,7 +21,7 @@ export interface HighlightSegment {
 
 export type HighlightLine = string | HighlightSegment;
 
-export interface HighlightTextProps {
+export interface HighlightTextProps extends HTMLAttributes<HTMLElement> {
   /** One box per entry. Strings inherit the component-level colors. */
   lines: HighlightLine[];
   /** Size preset. Defaults to `titel`. */
@@ -40,8 +40,6 @@ export interface HighlightTextProps {
   uppercase?: boolean;
   /** Wrapper element (use a heading tag for semantic headings). */
   as?: ElementType;
-  className?: string;
-  style?: CSSProperties;
 }
 
 function toSegment(line: HighlightLine): HighlightSegment {
@@ -60,6 +58,7 @@ export function HighlightText({
   as: Component = "div",
   className,
   style,
+  ...rest
 }: HighlightTextProps) {
   const classes = [
     "highlight",
@@ -73,7 +72,7 @@ export function HighlightText({
     .join(" ");
 
   return (
-    <Component className={classes} style={style}>
+    <Component className={classes} style={style} {...rest}>
       {lines.map((line, i) => {
         const seg = toSegment(line);
         const depth = seg.slant ?? slant;

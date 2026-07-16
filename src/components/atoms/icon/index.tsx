@@ -4,6 +4,8 @@ import './styles.css'
 export type IconName =
   | 'arrow-right'
   | 'arrow-left'
+  | 'arrow-up'
+  | 'arrow-down'
   | 'chevron-right'
   | 'chevron-left'
 
@@ -11,6 +13,8 @@ export type IconName =
 const ICON_PATHS: Record<IconName, string> = {
   'arrow-right': 'M5 12h14M13 6l6 6-6 6',
   'arrow-left': 'M19 12H5M11 6l-6 6 6 6',
+  'arrow-up': 'M12 19V5M6 11l6-6 6 6',
+  'arrow-down': 'M12 5v14M6 13l6 6 6-6',
   'chevron-right': 'M9 6l6 6-6 6',
   'chevron-left': 'M15 6l-6 6 6 6',
 }
