@@ -27,7 +27,7 @@ export interface CalendarSectionProps extends HTMLAttributes<HTMLElement> {
 
 export function CalendarSection({
   events,
-  heading = 'Kalender',
+  heading = 'Triff uns!',
   viewAllLabel = 'Alle Termine',
   viewAllTo,
   viewAllHref,

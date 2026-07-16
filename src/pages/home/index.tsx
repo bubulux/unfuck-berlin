@@ -13,7 +13,7 @@ const ELECTION_DATE = new Date(2026, 8, 20)
 export function Home() {
   const { pathname } = useLocation()
   return (
-    <PageLayout activePath={pathname}>
+    <PageLayout activePath={pathname} hideCalendar>
       <HeroSection
         videoSrc="https://www.youtube-nocookie.com/embed/ub8UIZ0FvRs"
         videoTitle="Anna und Paul"
