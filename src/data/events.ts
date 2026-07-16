@@ -93,10 +93,20 @@ export function toCalendarItem(ev: VoltEvent): CalendarEventItem {
   return { id: ev.start, day, month: s.month, title: ev.title, details }
 }
 
-/** Next `limit` events that haven't ended yet, in display shape. */
-export function getUpcomingCalendarItems(limit = 3): CalendarEventItem[] {
+/** Events that haven't ended yet (soonest first), in display shape. */
+function upcoming(): VoltEvent[] {
   const now = Date.now()
-  return UPCOMING_EVENTS.filter((ev) => new Date(ev.end ?? ev.start).getTime() >= now)
-    .slice(0, limit)
-    .map(toCalendarItem)
+  return UPCOMING_EVENTS.filter(
+    (ev) => new Date(ev.end ?? ev.start).getTime() >= now,
+  )
+}
+
+/** Next `limit` upcoming events, in display shape. */
+export function getUpcomingCalendarItems(limit = 3): CalendarEventItem[] {
+  return upcoming().slice(0, limit).map(toCalendarItem)
+}
+
+/** All upcoming events, in display shape. */
+export function getAllCalendarItems(): CalendarEventItem[] {
+  return upcoming().map(toCalendarItem)
 }

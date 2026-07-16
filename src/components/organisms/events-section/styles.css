@@ -1,0 +1,32 @@
+.events {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.events__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: var(--space-6) var(--content-pad) var(--space-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.events__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.events__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.events__note {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
