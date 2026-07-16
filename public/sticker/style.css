@@ -17,16 +17,16 @@
 
 html {
   font-size: 16px;
-  background-color: #28113D;
+  background-color: #502379;
   overscroll-behavior-y: none;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(180deg, #4E236E 0%, #28113D 100%);
+  background: #502379;
   background-attachment: fixed;
-  background-color: #4E236E;
+  background-color: #502379;
   color: var(--text);
   min-height: 100vh;
   display: flex;
