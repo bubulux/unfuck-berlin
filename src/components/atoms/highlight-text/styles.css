@@ -61,18 +61,26 @@
   font-size: var(--text-kalender);
 }
 
-/* The tilted box */
+/* The parallelogram box: skewX slants the side edges… */
 .highlight__box {
   --hl-bg: var(--color-white);
   --hl-fg: var(--color-purple);
+  --hl-skew: 8deg;
 
   display: inline-block;
   width: fit-content;
   padding: 0.1em 0.34em;
   background-color: var(--hl-bg);
+  transform: skewX(var(--hl-skew));
+  transform-origin: center;
+}
+
+/* …and the text counter-skews back, so it stays perfectly horizontal. */
+.highlight__text {
+  display: inline-block;
   color: var(--hl-fg);
   font-weight: var(--font-weight-bold);
   line-height: 1.12;
   letter-spacing: 0.01em;
-  transform-origin: center;
+  transform: skewX(calc(-1 * var(--hl-skew)));
 }

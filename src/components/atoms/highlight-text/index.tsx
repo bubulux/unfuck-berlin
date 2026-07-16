@@ -10,8 +10,9 @@ export interface HighlightSegment {
   color?: ColorToken
   /** Text color override for this segment. */
   textColor?: ColorToken
-  /** Explicit tilt in degrees for this segment (overrides the alternating default). */
-  tilt?: number
+  /** Explicit skew in degrees for this segment (overrides the alternating default).
+   * The box is skewed into a parallelogram; the text stays horizontal. */
+  skew?: number
 }
 
 export type HighlightLine = string | HighlightSegment
@@ -28,8 +29,8 @@ export interface HighlightTextProps {
   /** Stack boxes vertically (`column`) or flow them inline (`row`). */
   direction?: 'column' | 'row'
   align?: 'left' | 'center' | 'right'
-  /** Base tilt magnitude in degrees; sign alternates per box. Defaults to 3. */
-  tilt?: number
+  /** Parallelogram skew in degrees, applied uniformly to every box. Defaults to 8. */
+  skew?: number
   uppercase?: boolean
   /** Wrapper element (use a heading tag for semantic headings). */
   as?: ElementType
@@ -48,7 +49,7 @@ export function HighlightText({
   textColor = 'purple',
   direction = 'column',
   align = 'left',
-  tilt = 3,
+  skew = 8,
   uppercase = false,
   as: Component = 'div',
   className,
@@ -69,15 +70,15 @@ export function HighlightText({
     <Component className={classes} style={style}>
       {lines.map((line, i) => {
         const seg = toSegment(line)
-        const deg = seg.tilt ?? (i % 2 === 0 ? -tilt : tilt)
+        const deg = seg.skew ?? skew
         const segStyle: CSSProperties = {
           '--hl-bg': `var(--color-${seg.color ?? color})`,
           '--hl-fg': `var(--color-${seg.textColor ?? textColor})`,
-          transform: `rotate(${deg}deg)`,
+          '--hl-skew': `${deg}deg`,
         } as CSSProperties
         return (
           <span key={i} className="highlight__box" style={segStyle}>
-            {seg.text}
+            <span className="highlight__text">{seg.text}</span>
           </span>
         )
       })}

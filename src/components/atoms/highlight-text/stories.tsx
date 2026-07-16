@@ -19,7 +19,7 @@ const meta = {
     },
     direction: { control: 'inline-radio', options: ['column', 'row'] },
     align: { control: 'inline-radio', options: ['left', 'center', 'right'] },
-    tilt: { control: { type: 'range', min: 0, max: 10, step: 0.5 } },
+    skew: { control: { type: 'range', min: 0, max: 20, step: 1 } },
     uppercase: { control: 'boolean' },
   },
   args: {
@@ -29,7 +29,7 @@ const meta = {
     textColor: 'purple',
     direction: 'column',
     align: 'left',
-    tilt: 3,
+    skew: 8,
   },
 } satisfies Meta<typeof HighlightText>
 
