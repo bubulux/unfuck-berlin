@@ -1,6 +1,8 @@
 import { useLocation } from 'react-router'
 import { PageLayout } from '../../components/templates/page-layout'
 import { VotingSystemSection } from '../../components/organisms/voting-system-section'
+import { ProgramIntro } from '../../components/organisms/program-intro'
+import { Text } from '../../components/atoms/text'
 
 export function Wahlsystem() {
   const { pathname } = useLocation()
@@ -29,6 +31,28 @@ export function Wahlsystem() {
           ],
         }}
       />
+      <ProgramIntro
+        heading="Wählen mit 16?"
+        headingColor="yellow"
+        headingAlign="left"
+        ctaLabel="Wahlprogramm lang"
+        ctaColor="neon"
+        ctaTo="/wahlprogramm"
+      >
+        <Text color="purple" weight="bold">
+          Berlin gehört auch dir.
+        </Text>
+        <Text color="purple">
+          Du bist 16 oder älter? Dann kannst du dieses Jahr zum ersten Mal
+          wählen. Das ist mehr als nur ein Kreuz auf dem Stimmzettel – es ist
+          deine Chance, die Zukunft deiner Stadt mitzugestalten. Ob Mieten,
+          Bildung, öffentlicher Nahverkehr, Klima oder Freizeitangebote – die
+          Entscheidungen der Politik betreffen deinen Alltag. Informiere dich
+          über die Themen und Parteien, bilde dir deine eigene Meinung und geh
+          wählen. Denn Berlin verändert sich nur, wenn Menschen mitentscheiden.
+          Vielleicht beginnt das mit deiner ersten Stimme.
+        </Text>
+      </ProgramIntro>
     </PageLayout>
   )
 }
