@@ -7,9 +7,9 @@ export interface HeroSectionProps {
   /** YouTube embed URL (privacy: prefer the youtube-nocookie.com domain). */
   videoSrc: string
   videoTitle: string
-  /** Foreground logo (e.g. the "Die erste Partei, die…" graphic). */
-  logoSrc: string
-  logoAlt: string
+  /** Optional foreground logo (e.g. the "Die erste Partei, die…" graphic). */
+  logoSrc?: string
+  logoAlt?: string
   text: string
   ctaLabel: string
   /** CTA target — internal route… */
@@ -58,7 +58,9 @@ export function HeroSection({
       <div className="hero__overlay" aria-hidden="true" />
 
       <div className="hero__content">
-        <img className="hero__logo" src={logoSrc} alt={logoAlt} />
+        {logoSrc ? (
+          <img className="hero__logo" src={logoSrc} alt={logoAlt ?? ''} />
+        ) : null}
         <Text as="p" variant="body" color="white" align="center" className="hero__text">
           {text}
         </Text>
