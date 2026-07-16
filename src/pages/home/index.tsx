@@ -4,6 +4,7 @@ import { HeroSection } from '../../components/organisms/hero-section'
 import { CountdownSection } from '../../components/organisms/countdown-section'
 import { CalendarSection } from '../../components/organisms/calendar-section'
 import { CandidatesSection } from '../../components/organisms/candidates-section'
+import { UnfuckSection } from '../../components/organisms/unfuck-section'
 import { getUpcomingCalendarItems } from '../../data/events'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
@@ -28,6 +29,15 @@ export function Home() {
         imageSrc="/pics/unsereKandidatenPortraitCluster.png"
         imageAlt="Die Kandidatinnen und Kandidaten von Volt Berlin"
         ctaTo="/kandidaten"
+      />
+      <UnfuckSection
+        logoSrc="/logos/unfckBerlin.svg"
+        logoAlt="unf*ck berlin"
+        videoSrc="https://www.youtube-nocookie.com/embed/BwVBRkJxt-w"
+        videoTitle="15. Juli 2026"
+        text="Hinter unf*ck Berlin steckt eine einfache Idee: Probleme verschwinden nicht, wenn man höflicher über sie spricht. Aber sie verschwinden auch nicht, wenn man nur über sie klagt. Deshalb ist das hier keine Protestkampagne."
+        ctaLabel="Worum geht es?"
+        ctaTo="/unfuck-berlin"
       />
     </PageLayout>
   )
