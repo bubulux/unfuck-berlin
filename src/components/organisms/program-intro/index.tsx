@@ -55,6 +55,8 @@ export function ProgramIntro({
           <Button
             as="a"
             href={ctaHref}
+            target="_blank"
+            rel="noreferrer noopener"
             color={ctaColor}
             className="program-intro__cta"
           >

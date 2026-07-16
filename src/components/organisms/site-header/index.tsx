@@ -8,7 +8,10 @@ import './styles.css'
 
 export interface NavItem {
   label: string
-  to: string
+  /** Internal route… */
+  to?: string
+  /** …or external URL. */
+  href?: string
 }
 
 export type SiteHeaderVariant = 'purple' | 'light'
@@ -55,8 +58,9 @@ export function SiteHeader({
         <nav className="site-header__nav" aria-label="Hauptnavigation">
           {links.map((item) => (
             <Link
-              key={item.to}
+              key={item.label}
               to={item.to}
+              href={item.href}
               active={activePath === item.to}
               color={accent}
               className="site-header__link"
@@ -85,8 +89,9 @@ export function SiteHeader({
       >
         {links.map((item) => (
           <Link
-            key={item.to}
+            key={item.label}
             to={item.to}
+            href={item.href}
             active={activePath === item.to}
             color={accent}
             className="site-header__panel-link"

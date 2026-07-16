@@ -9,7 +9,7 @@ export function Wahlprogramm() {
   const { pathname } = useLocation();
   return (
     <PageLayout activePath={pathname} variant="light">
-      <ProgramIntro>
+      <ProgramIntro ctaHref="https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/2026_ber_wahlprogramm.pdf">
         <Text color="purple" weight="bold">
           Berlin ist pulsierend, aber sein Herzschlag erreicht die Politik
           nicht.

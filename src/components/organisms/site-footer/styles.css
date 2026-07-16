@@ -62,6 +62,16 @@
   gap: var(--space-1);
 }
 
+.site-footer__contact-email {
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.site-footer__contact-email:hover {
+  text-decoration: underline;
+}
+
 /* Legal row — centered on every screen size. */
 .site-footer__legal {
   display: flex;

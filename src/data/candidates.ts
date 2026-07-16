@@ -25,9 +25,8 @@ export const PAUL: Candidate = {
   ],
   followLabel: "Folge Paul",
   socials: [
-    { platform: "linkedin", href: "#" },
-    { platform: "instagram", href: "#" },
-    { platform: "x", href: "#" },
+    { platform: "linkedin", href: "https://de.linkedin.com/in/paul-loeper" },
+    { platform: "instagram", href: "https://www.instagram.com/paul.loeper.eu/" },
   ],
   blocks: [
     {
@@ -61,8 +60,8 @@ export const ANNA: Candidate = {
   ],
   followLabel: "Folge Anna",
   socials: [
-    { platform: "linkedin", href: "#" },
-    { platform: "instagram", href: "#" },
+    { platform: "linkedin", href: "https://de.linkedin.com/in/auerbachanna" },
+    { platform: "instagram", href: "https://www.instagram.com/anna.auerbach/" },
   ],
   blocks: [
     {

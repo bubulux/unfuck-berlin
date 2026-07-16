@@ -27,9 +27,9 @@ export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
 }
 
 const DEFAULT_ACTIONS: HighlightLine[] = [
-  { text: 'Spenden', to: '/spenden' },
-  { text: 'Newsletter', to: '/newsletter' },
-  { text: 'Volt Deutschland', href: 'https://voltdeutschland.org' },
+  { text: 'Spenden', href: 'https://voltdeutschland.org/berlin/spenden' },
+  { text: 'Newsletter', href: 'https://voltdeutschland.org/newsletter' },
+  { text: 'Volt Deutschland', href: 'https://voltdeutschland.org/' },
 ]
 
 const DEFAULT_CONTACTS: ContactBlock[] = [
@@ -82,9 +82,9 @@ export function SiteFooter({
               <Text as="p" variant="body" color="white">
                 {c.label}
               </Text>
-              <Text as="p" variant="body" color="white" weight="bold">
+              <a href={`mailto:${c.email}`} className="site-footer__contact-email">
                 {c.email}
-              </Text>
+              </a>
             </div>
           ))}
         </div>
