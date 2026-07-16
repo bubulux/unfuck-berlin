@@ -13,6 +13,24 @@
   opacity: 0.75;
 }
 
+/* Icon layout (only when an icon is present, so plain links stay inline). */
+.link--with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.link__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.link__icon svg {
+  width: 1em;
+  height: 1em;
+}
+
 .link:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;

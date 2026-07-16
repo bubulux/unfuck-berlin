@@ -14,6 +14,10 @@ export interface LinkProps
   active?: boolean
   /** Show underline. Defaults to false (nav-style). */
   underline?: boolean
+  /** Optional icon before the label. */
+  iconLeft?: ReactNode
+  /** Optional icon after the label (e.g. a trailing arrow). */
+  iconRight?: ReactNode
   children: ReactNode
 }
 
@@ -23,21 +27,41 @@ export function Link({
   color = 'white',
   active = false,
   underline = false,
+  iconLeft,
+  iconRight,
   className,
   children,
   target,
   rel,
   ...rest
 }: LinkProps) {
+  const hasIcon = Boolean(iconLeft || iconRight)
   const classes = [
     'link',
     `link--${color}`,
     active && 'link--active',
     underline && 'link--underline',
+    hasIcon && 'link--with-icon',
     className,
   ]
     .filter(Boolean)
     .join(' ')
+
+  const content = (
+    <>
+      {iconLeft ? (
+        <span className="link__icon" aria-hidden="true">
+          {iconLeft}
+        </span>
+      ) : null}
+      <span className="link__label">{children}</span>
+      {iconRight ? (
+        <span className="link__icon" aria-hidden="true">
+          {iconRight}
+        </span>
+      ) : null}
+    </>
+  )
 
   if (href) {
     const external = /^https?:\/\//.test(href)
@@ -49,7 +73,7 @@ export function Link({
         rel={rel ?? (external ? 'noreferrer noopener' : undefined)}
         {...rest}
       >
-        {children}
+        {content}
       </a>
     )
   }
@@ -61,7 +85,7 @@ export function Link({
       aria-current={active ? 'page' : undefined}
       {...rest}
     >
-      {children}
+      {content}
     </RouterLink>
   )
 }
