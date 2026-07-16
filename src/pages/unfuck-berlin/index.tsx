@@ -10,6 +10,7 @@ const UNFCK_IMAGES = [
   { src: '/pics/unfck/2.png', alt: 'unf*ck berlin 2' },
   { src: '/pics/unfck/3.png', alt: 'unf*ck berlin 3' },
   { src: '/pics/unfck/4.png', alt: 'unf*ck berlin 4' },
+  { src: '/pics/unfck/5.png', alt: 'unf*ck berlin 5' },
 ]
 
 export function UnfuckBerlin() {
