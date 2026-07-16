@@ -1,8 +1,15 @@
 import { useLocation } from 'react-router'
 import { PageLayout } from '../../components/templates/page-layout'
 import { EventsSection } from '../../components/organisms/events-section'
+import { CarouselSection } from '../../components/organisms/carousel-section'
 import { Text } from '../../components/atoms/text'
 import { getAllCalendarItems } from '../../data/events'
+
+const MEET_IMAGES = [
+  { src: '/pics/meets/1.png', alt: 'Meet & Greet 1' },
+  { src: '/pics/meets/2.png', alt: 'Meet & Greet 2' },
+  { src: '/pics/meets/3.png', alt: 'Meet & Greet 3' },
+]
 
 export function Termine() {
   const { pathname } = useLocation()
@@ -27,6 +34,7 @@ export function Termine() {
           </a>
         </Text>
       </EventsSection>
+      <CarouselSection images={MEET_IMAGES} />
     </PageLayout>
   )
 }
