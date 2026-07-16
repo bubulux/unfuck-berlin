@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>unfuck-berlin</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XQRK3C1X7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // send_page_view:false — page views are sent per route by the SPA
+      // tracker (src/lib/analytics.tsx), so client-side navigation is counted.
+      gtag('config', 'G-2XQRK3C1X7', { send_page_view: false });
+    </script>
   </head>
   <body>
     <div id="root"></div>
