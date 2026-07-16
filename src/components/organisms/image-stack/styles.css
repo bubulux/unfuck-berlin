@@ -1,0 +1,20 @@
+.image-stack {
+  background-color: var(--color-purple);
+}
+
+.image-stack__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-stack--gap .image-stack__inner {
+  gap: var(--space-6);
+}
+
+.image-stack__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
