@@ -1,0 +1,10 @@
+.explainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.explainer__title {
+  line-height: var(--line-snug);
+  margin-bottom: var(--space-1);
+}

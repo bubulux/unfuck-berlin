@@ -5,6 +5,7 @@ import './styles/global.css'
 import { Home } from './pages/home'
 import { Spitzenkandidaten } from './pages/spitzenkandidaten'
 import { Wahlprogramm } from './pages/wahlprogramm'
+import { Wahlsystem } from './pages/wahlsystem'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<Home />} />
         <Route path="/spitzenkandidaten" element={<Spitzenkandidaten />} />
         <Route path="/wahlprogramm" element={<Wahlprogramm />} />
+        <Route path="/wahlsystem" element={<Wahlsystem />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
