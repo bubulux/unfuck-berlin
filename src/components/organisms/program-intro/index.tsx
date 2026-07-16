@@ -6,9 +6,12 @@ import type { ColorToken } from "../../atoms/text";
 import "./styles.css";
 
 export interface ProgramIntroProps extends HTMLAttributes<HTMLElement> {
-  heading?: string;
+  /** Heading text — a single line or one entry per highlight box. */
+  heading?: string | string[];
   /** Highlight box color for the heading. */
   headingColor?: ColorToken;
+  headingAlign?: "left" | "center";
+  headingUppercase?: boolean;
   /** Body copy (paragraphs, may include inline <strong>). */
   children: ReactNode;
   ctaLabel?: string;
@@ -20,6 +23,8 @@ export interface ProgramIntroProps extends HTMLAttributes<HTMLElement> {
 export function ProgramIntro({
   heading = "Wahlprogramm",
   headingColor = "green",
+  headingAlign = "center",
+  headingUppercase = true,
   children,
   ctaLabel = "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
   ctaColor = "neon",
@@ -28,18 +33,19 @@ export function ProgramIntro({
   className,
   ...rest
 }: ProgramIntroProps) {
+  const headingLines = Array.isArray(heading) ? heading : [heading];
   const classes = ["program-intro", className].filter(Boolean).join(" ");
   return (
     <section className={classes} {...rest}>
       <div className="program-intro__inner">
         <HighlightText
           as="h1"
-          lines={[heading]}
+          lines={headingLines}
           variant="titel"
           color={headingColor}
           textColor="purple"
-          align="center"
-          uppercase
+          align={headingAlign}
+          uppercase={headingUppercase}
           className="program-intro__heading"
         />
 
