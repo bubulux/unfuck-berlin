@@ -21,7 +21,7 @@ const meta = {
     uppercase: { control: 'boolean' },
   },
   args: {
-    children: 'UnF*ck Berlin',
+    children: 'unf*ck berlin',
     variant: 'body',
   },
 } satisfies Meta<typeof Text>

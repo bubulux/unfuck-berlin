@@ -20,8 +20,7 @@ const meta = {
           nicht, wenn man höflicher über sie spricht.
         </Text>
         <Text color="white">
-          Deshalb ist das hier keine Protestkampagne. Es ist eine Einladung,
-          wieder Erwartungen an diese Stadt zu haben.
+          Es ist eine Einladung, wieder Erwartungen an diese Stadt zu haben.
         </Text>
       </>
     ),

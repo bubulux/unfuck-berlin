@@ -30,10 +30,10 @@ export function UnfuckBerlin() {
           nicht, wenn man nur über sie klagt.
         </Text>
         <Text color="white">
-          Deshalb ist das hier keine Protestkampagne. Es ist eine Einladung,
-          wieder Erwartungen an diese Stadt zu haben. Wir bringen eine mutige
-          Vision mit: faktenbasiert, lernfähig und europäisch. Wir entscheiden
-          nicht nach Lagern oder Ideologien, sondern danach, was wirkt.
+          Es ist eine Einladung, wieder Erwartungen an diese Stadt zu haben. Wir
+          bringen eine mutige Vision mit: faktenbasiert, lernfähig und
+          europäisch. Wir entscheiden nicht nach Lagern oder Ideologien, sondern
+          danach, was wirkt.
         </Text>
         <Text color="white">
           Andere Metropolen haben viele unserer Herausforderungen längst gelöst.
@@ -95,7 +95,7 @@ export function UnfuckBerlin() {
           Aber gelähmt von der gepflegten Unzuständigkeit seiner Politik und
           Verwaltung. Die Stadt bleibt weit unter ihren Möglichkeiten – und das
           Gefühl wächst, dass es nicht besser wird, sondern schlechter. Und
-          genau deshalb steht plötzlich überall in dieser Stadt: unf*ck Berlin.
+          genau deshalb steht plötzlich überall in dieser Stadt: unf*ck berlin.
           <br />
           Wir glauben: Das muss nicht so bleiben.
         </Text>
