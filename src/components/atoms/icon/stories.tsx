@@ -14,6 +14,8 @@ const meta = {
         'arrow-down',
         'chevron-right',
         'chevron-left',
+        'menu',
+        'close',
       ],
     },
     size: { control: 'text' },
@@ -37,6 +39,8 @@ export const All: Story = {
           'arrow-down',
           'chevron-right',
           'chevron-left',
+          'menu',
+          'close',
         ] as const
       ).map(
         (n) => (
