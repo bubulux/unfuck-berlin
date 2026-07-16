@@ -50,18 +50,24 @@ export function SiteFooter({
     <footer className={classes} {...rest}>
       <div className="site-footer__inner">
         <div className="site-footer__center">
+          <Text
+            as="p"
+            variant="subtitel"
+            color="white"
+            weight="bold"
+            align="center"
+            className="site-footer__movement-title"
+          >
+            Werde Teil der Bewegung
+          </Text>
+
+          <SocialRow links={socials} className="site-footer__socials" />
+
           <p className="site-footer__slogan">
             <span>Zukunft</span>
             <EuropeStars className="site-footer__stars" size="1.1em" />
             <span>Made in Europe</span>
           </p>
-
-          <div className="site-footer__movement">
-            <Text as="p" variant="body" color="white" weight="bold" align="center">
-              Werde Teil der Bewegung
-            </Text>
-            <SocialRow links={socials} className="site-footer__socials" />
-          </div>
         </div>
 
         <HighlightText

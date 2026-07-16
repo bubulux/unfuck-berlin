@@ -11,21 +11,35 @@
   gap: var(--space-7);
 }
 
-/* Center stack: slogan + "Werde Teil der Bewegung" + socials. */
+/* Center stack, top to bottom: "Werde Teil der Bewegung" → social icons →
+ * "Zukunft ✦ Made in Europe". Centered. */
 .site-footer__center {
   display: grid;
-  gap: var(--space-7);
+  justify-items: center;
+  gap: var(--space-5);
   align-content: start;
 }
 
-/* "ZUKUNFT ✦ MADE IN EUROPE" — centered, one line, emblem inline. */
+/* Social icons — enlarged and given more room so they read as the prominent
+ * call-to-action of the footer. */
+.site-footer__socials {
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.site-footer__socials .social-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+/* "ZUKUNFT ✦ MADE IN EUROPE" — sits underneath, deliberately smaller. */
 .site-footer__slogan {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 0.4em;
-  font-size: var(--text-titel);
+  font-size: var(--text-subtitel);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-snug);
   text-transform: uppercase;
@@ -34,17 +48,6 @@
 
 .site-footer__stars {
   flex-shrink: 0;
-}
-
-/* "Werde Teil der Bewegung" + social icons, stacked and centered. */
-.site-footer__movement {
-  display: grid;
-  justify-items: center;
-  gap: var(--space-4);
-}
-
-.site-footer__socials {
-  justify-content: center;
 }
 
 .site-footer__actions {
