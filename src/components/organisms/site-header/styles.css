@@ -2,6 +2,9 @@
   --header-bg: var(--color-purple);
   --header-fg: var(--color-white);
 
+  /* React to our own available width (not the viewport), so the nav collapses
+   * whenever there isn't enough room — wherever the header is placed. */
+  container-type: inline-size;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -82,7 +85,7 @@
 }
 
 /* Wide enough → inline links, no burger, no panel. */
-@media (min-width: 48rem) {
+@container (min-width: 32rem) {
   .site-header__nav {
     display: flex;
     align-items: center;

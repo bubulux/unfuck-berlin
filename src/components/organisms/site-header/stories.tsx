@@ -30,7 +30,26 @@ export const OnLight: Story = {
 }
 
 /**
- * Resize the preview below ~768px to see the links collapse into the burger
- * menu (click it to open the drop-down panel).
+ * Drag the resize handle at the bottom-right of the dashed box to change the
+ * header's available width. Below ~32rem the links collapse into the burger
+ * menu (click it to open the drop-down panel) — no need to resize the browser.
  */
-export const Responsive: Story = { args: { variant: 'purple' } }
+export const Responsive: Story = {
+  args: { variant: 'purple' },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          resize: 'horizontal',
+          overflow: 'auto',
+          width: '40rem',
+          maxWidth: '100%',
+          minWidth: '16rem',
+          outline: '2px dashed rgba(255, 255, 255, 0.4)',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
+}
