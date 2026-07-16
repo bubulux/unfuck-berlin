@@ -1,37 +1,37 @@
-import type { HTMLAttributes } from 'react'
-import { Text } from '../../atoms/text'
-import { Link } from '../../atoms/link'
-import { Icon } from '../../atoms/icon'
-import { HighlightText } from '../../atoms/highlight-text'
-import './styles.css'
+import type { HTMLAttributes } from "react";
+import { Text } from "../../atoms/text";
+import { Link } from "../../atoms/link";
+import { Icon } from "../../atoms/icon";
+import { HighlightText } from "../../atoms/highlight-text";
+import "./styles.css";
 
 export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
-  imageSrc: string
-  imageAlt: string
-  text?: string
-  ctaLabel?: string
-  ctaTo?: string
-  ctaHref?: string
+  imageSrc: string;
+  imageAlt: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaTo?: string;
+  ctaHref?: string;
 }
 
 export function CandidatesSection({
   imageSrc,
   imageAlt,
-  text = 'Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidatinnen und Kandidaten kennenlernen.',
-  ctaLabel = 'Unsere Kandidierenden stellen sich vor',
+  text = "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidatinnen und Kandidaten kennenlernen.",
+  ctaLabel = "Unsere Kandidierenden stellen sich vor",
   ctaTo,
   ctaHref,
   className,
   ...rest
 }: CandidatesSectionProps) {
-  const classes = ['candidates', className].filter(Boolean).join(' ')
+  const classes = ["candidates", className].filter(Boolean).join(" ");
   return (
     <section className={classes} {...rest}>
       <div className="candidates__inner">
         <div className="candidates__head">
           <HighlightText
             as="h2"
-            lines={['Unsere', 'Kandidaten']}
+            lines={["Unsere", "Kandidaten"]}
             variant="titel"
             color="white"
             textColor="purple"
@@ -49,7 +49,7 @@ export function CandidatesSection({
           <Link
             to={ctaTo}
             href={ctaHref}
-            color="neon"
+            color="white"
             iconRight={<Icon name="arrow-right" />}
             className="candidates__cta"
           >
@@ -58,7 +58,7 @@ export function CandidatesSection({
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default CandidatesSection
+export default CandidatesSection;
