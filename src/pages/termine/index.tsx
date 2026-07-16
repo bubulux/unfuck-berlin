@@ -19,7 +19,7 @@ export function Termine() {
         headingLines={['Termine', '& Treffen']}
         intro={[
           'Lern unsere AGH und BVV Kandidierenden kennen oder mach direkt bei Volt mit!',
-          'Wir freuen uns auf Dich auf Podien, Meet&Greets, und anderen Veranstaltungen zu begrüßen.',
+          'Wir freuen uns auf Dich auf Podien, Meet & Greets, und anderen Veranstaltungen.',
         ]}
         events={getAllCalendarItems()}
       >
