@@ -1,0 +1,15 @@
+/* Color tokens — Volt "UnF*ck Berlin"
+ * German Figma names translated to English. Single source of truth for brand colors. */
+:root {
+  --color-purple: #502379; /* volt lila */
+  --color-white: #ffffff; /* weiss */
+  --color-yellow: #fdc220; /* gelb-orange */
+  --color-neon: #d6ff1d; /* neon-gelb */
+  --color-green: #1bbe6f; /* gruen */
+  --color-blue: #82d0f4; /* hellblau */
+  --color-pink: #fc0068; /* pink */
+
+  /* Semantic aliases */
+  --color-bg: var(--color-purple);
+  --color-fg: var(--color-white);
+}

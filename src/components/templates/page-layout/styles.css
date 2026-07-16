@@ -1,0 +1,14 @@
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-purple);
+}
+
+.page-layout__main {
+  flex: 1 0 auto;
+  max-width: var(--content-max);
+  width: 100%;
+  margin-inline: auto;
+  padding: var(--space-5) var(--content-pad);
+}

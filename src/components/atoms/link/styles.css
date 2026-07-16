@@ -1,0 +1,52 @@
+.link {
+  --link-color: var(--color-white);
+
+  color: var(--link-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
+
+.link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.link--underline {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.link--active {
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.link--white {
+  --link-color: var(--color-white);
+}
+.link--purple {
+  --link-color: var(--color-purple);
+}
+.link--neon {
+  --link-color: var(--color-neon);
+}
+.link--yellow {
+  --link-color: var(--color-yellow);
+}
+.link--green {
+  --link-color: var(--color-green);
+}
+.link--blue {
+  --link-color: var(--color-blue);
+}
+.link--pink {
+  --link-color: var(--color-pink);
+}

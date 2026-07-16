@@ -1,0 +1,42 @@
+.was-mehr {
+  background-color: var(--color-neon);
+  color: var(--color-purple);
+}
+
+.was-mehr__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: var(--space-7) var(--content-pad);
+}
+
+.was-mehr__title {
+  margin-bottom: var(--space-5);
+}
+
+.was-mehr__list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.was-mehr__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.was-mehr__item::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-purple);
+  transform: translateY(-0.1em);
+}
+
+.was-mehr__link {
+  font-size: var(--text-subtitel);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}

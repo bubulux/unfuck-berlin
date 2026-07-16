@@ -1,0 +1,18 @@
+/* Global entry stylesheet. Import once (app + Storybook). */
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './reset.css';
+
+html {
+  font-family: var(--font-family);
+  font-size: 100%;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text-body);
+}

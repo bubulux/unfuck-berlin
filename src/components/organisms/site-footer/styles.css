@@ -1,0 +1,36 @@
+.site-footer {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.site-footer__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: var(--space-7) var(--content-pad) var(--space-5);
+  display: grid;
+  gap: var(--space-6);
+}
+
+.site-footer__slogan {
+  line-height: var(--line-snug);
+}
+
+.site-footer__movement {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.site-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-footer__legal-link {
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

@@ -19,4 +19,11 @@ export default defineConfig([globalIgnores(['dist']), {
   languageOptions: {
     globals: globals.browser,
   },
+  rules: {
+    // Allow components to co-export constant default data (e.g. DEFAULT_NAV).
+    'react-refresh/only-export-components': [
+      'error',
+      { allowConstantExport: true },
+    ],
+  },
 }, ...storybook.configs["flat/recommended"]])

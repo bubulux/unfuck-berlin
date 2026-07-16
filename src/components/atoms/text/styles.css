@@ -1,0 +1,72 @@
+.text {
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+/* Size presets */
+.text--titel {
+  font-size: var(--text-titel);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-tight);
+}
+
+.text--subtitel {
+  font-size: var(--text-subtitel);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+}
+
+.text--body {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-normal);
+}
+
+.text--cta {
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  letter-spacing: 0.04em;
+}
+
+.text--fussnote {
+  font-size: var(--text-fussnote);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-normal);
+}
+
+.text--kalender {
+  font-size: var(--text-kalender);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-snug);
+  letter-spacing: 0.02em;
+}
+
+/* Weight overrides */
+.text--weight-light {
+  font-weight: var(--font-weight-light);
+}
+.text--weight-regular {
+  font-weight: var(--font-weight-regular);
+}
+.text--weight-medium {
+  font-weight: var(--font-weight-medium);
+}
+.text--weight-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Alignment */
+.text--align-left {
+  text-align: left;
+}
+.text--align-center {
+  text-align: center;
+}
+.text--align-right {
+  text-align: right;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
