@@ -1,0 +1,78 @@
+.highlight {
+  display: flex;
+  font-family: var(--font-family);
+  /* Small gaps + per-box tilt create the hand-placed sticker look. */
+}
+
+/* Layout direction */
+.highlight--column {
+  flex-direction: column;
+  gap: 0.18em;
+}
+
+.highlight--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  align-items: center;
+}
+
+/* Alignment (column: cross-axis; row: main-axis) */
+.highlight--column.highlight--align-left {
+  align-items: flex-start;
+}
+.highlight--column.highlight--align-center {
+  align-items: center;
+}
+.highlight--column.highlight--align-right {
+  align-items: flex-end;
+}
+.highlight--row.highlight--align-left {
+  justify-content: flex-start;
+}
+.highlight--row.highlight--align-center {
+  justify-content: center;
+}
+.highlight--row.highlight--align-right {
+  justify-content: flex-end;
+}
+
+.highlight--uppercase {
+  text-transform: uppercase;
+}
+
+/* Size presets (drive the em-based box padding too) */
+.highlight--titel {
+  font-size: var(--text-titel);
+}
+.highlight--subtitel {
+  font-size: var(--text-subtitel);
+}
+.highlight--body {
+  font-size: var(--text-body);
+}
+.highlight--cta {
+  font-size: var(--text-cta);
+}
+.highlight--fussnote {
+  font-size: var(--text-fussnote);
+}
+.highlight--kalender {
+  font-size: var(--text-kalender);
+}
+
+/* The tilted box */
+.highlight__box {
+  --hl-bg: var(--color-white);
+  --hl-fg: var(--color-purple);
+
+  display: inline-block;
+  width: fit-content;
+  padding: 0.1em 0.34em;
+  background-color: var(--hl-bg);
+  color: var(--hl-fg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  transform-origin: center;
+}

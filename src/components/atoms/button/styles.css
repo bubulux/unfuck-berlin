@@ -8,7 +8,7 @@
   justify-content: center;
   gap: var(--space-2);
   padding: var(--space-3) var(--space-5);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-md);
   border: 2px solid var(--button-border);
   background-color: var(--button-bg);
   color: var(--button-fg);
@@ -39,7 +39,7 @@
 }
 
 .button:disabled,
-.button[aria-disabled='true'] {
+.button[aria-disabled="true"] {
   opacity: 0.5;
   cursor: not-allowed;
   filter: none;
