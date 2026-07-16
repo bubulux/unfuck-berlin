@@ -90,3 +90,19 @@
   line-height: 1.12;
   letter-spacing: 0.01em;
 }
+
+/* Link boxes get a pointer + subtle hover. */
+.highlight__box--link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+
+.highlight__box--link:hover {
+  filter: brightness(0.92);
+}
+
+.highlight__box--link:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}

@@ -61,10 +61,14 @@ export const UnfuckBerlin: Story = {
   },
 };
 
-/** Stacked neon call-to-action links. */
+/** Stacked neon call-to-action links (each box is a real link). */
 export const StackedActions: Story = {
   args: {
-    lines: ["Spenden", "Newsletter", "Volt Deutschland"],
+    lines: [
+      { text: "Spenden", to: "/spenden" },
+      { text: "Newsletter", to: "/newsletter" },
+      { text: "Volt Deutschland", href: "https://voltdeutschland.org" },
+    ],
     variant: "subtitel",
     color: "neon",
     textColor: "purple",

@@ -2,7 +2,7 @@ import type { HTMLAttributes } from 'react'
 import { Text } from '../../atoms/text'
 import { Link } from '../../atoms/link'
 import { EuropeStars } from '../../atoms/europe-stars'
-import { HighlightText } from '../../atoms/highlight-text'
+import { HighlightText, type HighlightLine } from '../../atoms/highlight-text'
 import { SocialRow, type SocialLink } from '../../molecules/social-row'
 import { SOCIAL_LINKS, LEGAL_LINKS } from '../../../config/navigation'
 import './styles.css'
@@ -21,12 +21,16 @@ export interface ContactBlock {
 export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
   socials?: SocialLink[]
   legalLinks?: FooterLink[]
-  /** Highlighted call-to-action labels (become links later). */
-  actions?: string[]
+  /** Highlighted call-to-action links. */
+  actions?: HighlightLine[]
   contacts?: ContactBlock[]
 }
 
-const DEFAULT_ACTIONS = ['Spenden', 'Newsletter', 'Volt Deutschland']
+const DEFAULT_ACTIONS: HighlightLine[] = [
+  { text: 'Spenden', to: '/spenden' },
+  { text: 'Newsletter', to: '/newsletter' },
+  { text: 'Volt Deutschland', href: 'https://voltdeutschland.org' },
+]
 
 const DEFAULT_CONTACTS: ContactBlock[] = [
   { label: 'Allgemeine Fragen und Feedback', email: 'berlin@voltdeutschland.org' },

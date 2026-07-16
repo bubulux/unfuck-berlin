@@ -1,4 +1,5 @@
 import type { CSSProperties, ElementType } from "react";
+import { Link as RouterLink } from "react-router";
 import type { ColorToken, TextVariant } from "../text";
 import "./styles.css";
 
@@ -12,6 +13,10 @@ export interface HighlightSegment {
   textColor?: ColorToken;
   /** Slant depth override for this segment (in em, relative to font size). */
   slant?: number;
+  /** Make the box an internal link (react-router). */
+  to?: string;
+  /** Make the box an external link (plain anchor, opens in a new tab). */
+  href?: string;
 }
 
 export type HighlightLine = string | HighlightSegment;
@@ -77,9 +82,38 @@ export function HighlightText({
           "--hl-fg": `var(--color-${seg.textColor ?? textColor})`,
           "--hl-slant": `${depth}em`,
         } as CSSProperties;
+        const inner = <span className="highlight__text">{seg.text}</span>;
+
+        if (seg.href) {
+          const external = /^https?:\/\//.test(seg.href);
+          return (
+            <a
+              key={i}
+              className="highlight__box highlight__box--link"
+              style={segStyle}
+              href={seg.href}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noreferrer noopener" : undefined}
+            >
+              {inner}
+            </a>
+          );
+        }
+        if (seg.to) {
+          return (
+            <RouterLink
+              key={i}
+              className="highlight__box highlight__box--link"
+              style={segStyle}
+              to={seg.to}
+            >
+              {inner}
+            </RouterLink>
+          );
+        }
         return (
           <span key={i} className="highlight__box" style={segStyle}>
-            <span className="highlight__text">{seg.text}</span>
+            {inner}
           </span>
         );
       })}
