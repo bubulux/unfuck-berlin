@@ -22,18 +22,17 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: 'Mitmachen', to: '/mitmachen' },
 ]
 
-/** Social platforms shown in the footer / social rows. */
+/** Social platforms shown in the footer / social rows (only the ones we have). */
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: 'instagram', href: '#' },
-  { platform: 'tiktok', href: '#' },
-  { platform: 'youtube', href: '#' },
-  { platform: 'linkedin', href: '#' },
-  { platform: 'x', href: '#' },
   { platform: 'facebook', href: '#' },
+  { platform: 'instagram', href: '#' },
+  { platform: 'x', href: '#' },
+  { platform: 'linkedin', href: '#' },
 ]
 
 /** Footer legal links. */
 export const LEGAL_LINKS: FooterLink[] = [
   { label: 'Impressum', to: '/impressum' },
   { label: 'Datenschutz', to: '/datenschutz' },
+  { label: 'Transparenz', to: '/transparenz' },
 ]

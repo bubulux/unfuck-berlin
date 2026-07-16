@@ -1,6 +1,8 @@
 import type { HTMLAttributes } from 'react'
 import { Text } from '../../atoms/text'
 import { Link } from '../../atoms/link'
+import { EuropeStars } from '../../atoms/europe-stars'
+import { HighlightText } from '../../atoms/highlight-text'
 import { SocialRow, type SocialLink } from '../../molecules/social-row'
 import { SOCIAL_LINKS, LEGAL_LINKS } from '../../../config/navigation'
 import './styles.css'
@@ -11,14 +13,31 @@ export interface FooterLink {
   href?: string
 }
 
+export interface ContactBlock {
+  label: string
+  email: string
+}
+
 export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
   socials?: SocialLink[]
   legalLinks?: FooterLink[]
+  /** Highlighted call-to-action labels (become links later). */
+  actions?: string[]
+  contacts?: ContactBlock[]
 }
+
+const DEFAULT_ACTIONS = ['Spenden', 'Newsletter', 'Volt Deutschland']
+
+const DEFAULT_CONTACTS: ContactBlock[] = [
+  { label: 'Allgemeine Fragen und Feedback', email: 'berlin@voltdeutschland.org' },
+  { label: 'Presse- und Medienanfragen', email: 'presse@voltberlin.org' },
+]
 
 export function SiteFooter({
   socials = SOCIAL_LINKS,
   legalLinks = LEGAL_LINKS,
+  actions = DEFAULT_ACTIONS,
+  contacts = DEFAULT_CONTACTS,
   className,
   ...rest
 }: SiteFooterProps) {
@@ -26,21 +45,44 @@ export function SiteFooter({
   return (
     <footer className={classes} {...rest}>
       <div className="site-footer__inner">
-        <Text
-          as="p"
-          variant="titel"
-          color="white"
-          uppercase
-          className="site-footer__slogan"
-        >
-          Zukunft <span aria-hidden="true">★</span> Made in Europe
-        </Text>
+        <p className="site-footer__slogan">
+          <span>Zukunft</span>
+          <EuropeStars className="site-footer__stars" size="1.1em" />
+          <span>Made in Europe</span>
+        </p>
 
         <div className="site-footer__movement">
-          <Text as="p" variant="subtitel" color="neon">
+          <Text as="p" variant="body" color="white" weight="bold" align="center">
             Werde Teil der Bewegung
           </Text>
           <SocialRow links={socials} className="site-footer__socials" />
+        </div>
+
+        <div className="site-footer__columns">
+          <HighlightText
+            className="site-footer__actions"
+            lines={actions}
+            variant="body"
+            color="neon"
+            textColor="purple"
+            slant={0.25}
+          />
+
+          <div className="site-footer__contact">
+            <Text as="p" variant="body" color="white" weight="bold">
+              Kontakt
+            </Text>
+            {contacts.map((c) => (
+              <div key={c.email} className="site-footer__contact-item">
+                <Text as="p" variant="body" color="white">
+                  {c.label}
+                </Text>
+                <Text as="p" variant="body" color="white" weight="bold">
+                  {c.email}
+                </Text>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="site-footer__legal">
@@ -55,9 +97,6 @@ export function SiteFooter({
               {link.label}
             </Link>
           ))}
-          <Text as="span" variant="fussnote" color="white">
-            © Volt Berlin
-          </Text>
         </div>
       </div>
     </footer>

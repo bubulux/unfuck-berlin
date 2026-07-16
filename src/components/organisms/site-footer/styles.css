@@ -8,16 +8,59 @@
   margin-inline: auto;
   padding: var(--space-7) var(--content-pad) var(--space-5);
   display: grid;
+  gap: var(--space-7);
+}
+
+/* "ZUKUNFT ✦ MADE IN EUROPE" — centered, one line, emblem inline. */
+.site-footer__slogan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  font-size: var(--text-titel);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.site-footer__stars {
+  flex-shrink: 0;
+}
+
+/* "Werde Teil der Bewegung" + social icons, stacked and centered. */
+.site-footer__movement {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+}
+
+.site-footer__socials {
+  justify-content: center;
+}
+
+/* Actions column + contact column. */
+.site-footer__columns {
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-6);
 }
 
-.site-footer__slogan {
-  line-height: var(--line-snug);
+.site-footer__actions {
+  flex: 0 0 auto;
 }
 
-.site-footer__movement {
+.site-footer__contact {
+  flex: 1 1 12rem;
   display: grid;
   gap: var(--space-4);
+  align-content: start;
+}
+
+.site-footer__contact-item {
+  display: grid;
+  gap: var(--space-1);
 }
 
 .site-footer__legal {
@@ -25,8 +68,6 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-4);
-  padding-top: var(--space-5);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-footer__legal-link {
