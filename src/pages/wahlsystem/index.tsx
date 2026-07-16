@@ -35,7 +35,7 @@ export function Wahlsystem() {
         heading="Wählen mit 16?"
         headingColor="yellow"
         headingAlign="left"
-        ctaLabel="Wahlprogramm lang"
+        ctaLabel="Wahlprogramm"
         ctaColor="neon"
         ctaTo="/wahlprogramm"
       >
