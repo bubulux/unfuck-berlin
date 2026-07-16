@@ -24,9 +24,9 @@
 }
 
 .site-header__inner {
-  max-width: var(--content-max);
+  max-width: var(--content-max-wide);
   margin-inline: auto;
-  padding: var(--space-3) var(--content-pad);
+  padding: var(--space-3) var(--content-pad-wide);
   display: flex;
   align-items: center;
   justify-content: space-between;

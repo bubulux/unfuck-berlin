@@ -4,9 +4,9 @@
 }
 
 .was-mehr__inner {
-  max-width: var(--content-max);
+  max-width: var(--content-max-wide);
   margin-inline: auto;
-  padding: var(--space-7) var(--content-pad);
+  padding: var(--space-7) var(--content-pad-wide);
 }
 
 .was-mehr__title {
@@ -59,4 +59,29 @@
 .was-mehr__scroll-btn:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 2px;
+}
+
+/* Wide screens: title hard-left, links expand across the middle, scroll button
+ * pinned hard-right on the same row. */
+@media (min-width: 48rem) {
+  .was-mehr__inner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5) var(--space-6);
+  }
+
+  .was-mehr__title {
+    margin-bottom: 0;
+    flex: 0 0 auto;
+  }
+
+  .was-mehr__links {
+    flex: 1 1 auto;
+  }
+
+  .was-mehr__scroll {
+    margin-top: 0;
+    margin-left: auto;
+    flex: 0 0 auto;
+  }
 }

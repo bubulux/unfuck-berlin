@@ -4,11 +4,18 @@
 }
 
 .site-footer__inner {
-  max-width: var(--content-max);
+  max-width: var(--content-max-wide);
   margin-inline: auto;
-  padding: var(--space-7) var(--content-pad) var(--space-5);
+  padding: var(--space-7) var(--content-pad-wide) var(--space-5);
   display: grid;
   gap: var(--space-7);
+}
+
+/* Center stack: slogan + "Werde Teil der Bewegung" + socials. */
+.site-footer__center {
+  display: grid;
+  gap: var(--space-7);
+  align-content: start;
 }
 
 /* "ZUKUNFT ✦ MADE IN EUROPE" — centered, one line, emblem inline. */
@@ -40,19 +47,11 @@
   justify-content: center;
 }
 
-/* Actions column + contact column. */
-.site-footer__columns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-6);
-}
-
 .site-footer__actions {
-  flex: 0 0 auto;
+  align-self: start;
 }
 
 .site-footer__contact {
-  flex: 1 1 12rem;
   display: grid;
   gap: var(--space-4);
   align-content: start;
@@ -63,10 +62,12 @@
   gap: var(--space-1);
 }
 
+/* Legal row — centered on every screen size. */
 .site-footer__legal {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: var(--space-4);
 }
 
@@ -74,4 +75,36 @@
   font-size: var(--text-fussnote);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+/* Wide screens: actions hard-left, center stack in the middle, contact block
+ * hard-right; the legal row spans the full width underneath, centered. */
+@media (min-width: 60rem) {
+  .site-footer__inner {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
+      'actions center contact'
+      'legal   legal  legal';
+    gap: var(--space-8) var(--space-7);
+    align-items: start;
+  }
+
+  .site-footer__center {
+    grid-area: center;
+  }
+
+  .site-footer__actions {
+    grid-area: actions;
+    justify-self: start;
+  }
+
+  .site-footer__contact {
+    grid-area: contact;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .site-footer__legal {
+    grid-area: legal;
+  }
 }
