@@ -1,0 +1,67 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: min(90svh, 48rem);
+  overflow: hidden;
+  background-color: #000;
+  /* Establish a size container so the video can be sized to *cover* it
+   * (iframes can't use object-fit). */
+  container-type: size;
+}
+
+/* Video layer — oversized so the 16:9 frame covers the (portrait) hero. */
+.hero__video {
+  position: absolute;
+  inset: 0;
+}
+
+.hero__video iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(100cqw, calc(100cqh * 16 / 9));
+  height: max(100cqh, calc(100cqw * 9 / 16));
+  border: 0;
+}
+
+/* Dark gradient: opaque at the bottom, fading to transparent toward the top. */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.55) 35%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  pointer-events: none;
+}
+
+/* Overlaid content sits at the bottom, centered. Only the CTA is clickable so
+ * the rest of the video (e.g. its play button) stays interactive. */
+.hero__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-7); /* 3× the previous space-4 */
+  padding: var(--space-6) var(--content-pad) var(--space-7);
+  text-align: center;
+  pointer-events: none;
+}
+
+.hero__logo {
+  width: min(18rem, 72%);
+  height: auto;
+}
+
+.hero__text {
+  max-width: 24rem;
+}
+
+.hero__cta {
+  pointer-events: auto;
+}

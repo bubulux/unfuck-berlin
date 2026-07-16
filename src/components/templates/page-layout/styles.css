@@ -5,10 +5,9 @@
   background-color: var(--color-purple);
 }
 
+/* Full-bleed: each section controls its own inner width (like the header,
+ * footer and "WAS MEHR?" block do), so heroes can span edge-to-edge. */
 .page-layout__main {
   flex: 1 0 auto;
-  max-width: var(--content-max);
   width: 100%;
-  margin-inline: auto;
-  padding: var(--space-5) var(--content-pad);
 }
