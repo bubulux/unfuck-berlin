@@ -41,6 +41,7 @@ export function CandidateDetail({
   const textColor = isLight ? 'var(--color-black)' : 'white'
   const headingColor = isLight ? 'purple' : 'neon'
   const nameColor = isLight ? 'purple' : 'white'
+  const followColor = isLight ? 'purple' : textColor
   const classes = ['candidate', `candidate--${variant}`, className]
     .filter(Boolean)
     .join(' ')
@@ -85,7 +86,7 @@ export function CandidateDetail({
         {socials.length > 0 ? (
           <div className="candidate__follow">
             {followLabel ? (
-              <Text as="p" variant="body" color={textColor} weight="bold">
+              <Text as="p" variant="body" color={followColor} weight="bold">
                 {followLabel}
               </Text>
             ) : null}

@@ -1,7 +1,6 @@
 import type { HTMLAttributes } from "react";
 import { Text } from "../../atoms/text";
 import { Link } from "../../atoms/link";
-import { Icon } from "../../atoms/icon";
 import { HighlightText } from "../../atoms/highlight-text";
 import "./styles.css";
 
@@ -50,10 +49,13 @@ export function CandidatesSection({
             to={ctaTo}
             href={ctaHref}
             color="white"
-            iconRight={<Icon name="arrow-right" />}
             className="candidates__cta"
           >
             {ctaLabel}
+            <span className="candidates__arrow" aria-hidden="true">
+              {" "}
+              →
+            </span>
           </Link>
         </div>
       </div>

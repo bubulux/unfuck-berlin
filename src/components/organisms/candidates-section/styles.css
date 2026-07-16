@@ -29,6 +29,14 @@
 }
 
 .candidates__cta {
-  font-size: var(--text-body);
+  font-size: var(--text-subtitel);
   font-weight: var(--font-weight-bold);
+}
+
+/* Inline arrow — flows with the text, so it stays at the end of the last line
+ * regardless of wrapping. Slightly larger than the label. */
+.candidates__arrow {
+  font-size: 1.25em;
+  line-height: 1;
+  white-space: nowrap;
 }
