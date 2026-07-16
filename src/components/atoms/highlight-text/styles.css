@@ -7,7 +7,7 @@
 /* Layout direction */
 .highlight--column {
   flex-direction: column;
-  gap: 0.18em;
+  gap: 0.22em;
 }
 
 .highlight--row {
@@ -61,26 +61,32 @@
   font-size: var(--text-kalender);
 }
 
-/* The parallelogram box: skewX slants the side edges… */
+/* The parallelogram is a fixed-depth clip, NOT an angle-based skew — so the
+ * slant (--hl-slant) is the same whether the box is wide or narrow, instead of
+ * blowing up on long words. Top/bottom edges rise toward the right; the sides
+ * stay perpendicular. No transform, so the text is naturally horizontal.
+ * Top/bottom padding includes the slant so the clipped edges clear the text. */
 .highlight__box {
   --hl-bg: var(--color-white);
   --hl-fg: var(--color-purple);
-  --hl-skew: 8deg;
+  --hl-slant: 0.3em;
 
   display: inline-block;
   width: fit-content;
-  padding: 0.1em 0.34em;
+  padding: calc(0.1em + var(--hl-slant)) 0.36em;
   background-color: var(--hl-bg);
-  transform: skewX(var(--hl-skew));
-  transform-origin: center;
+  clip-path: polygon(
+    0 var(--hl-slant),
+    100% 0,
+    100% calc(100% - var(--hl-slant)),
+    0 100%
+  );
 }
 
-/* …and the text counter-skews back, so it stays perfectly horizontal. */
 .highlight__text {
   display: inline-block;
   color: var(--hl-fg);
   font-weight: var(--font-weight-bold);
   line-height: 1.12;
   letter-spacing: 0.01em;
-  transform: skewX(calc(-1 * var(--hl-skew)));
 }
