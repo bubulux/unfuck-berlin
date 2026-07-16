@@ -1,6 +1,10 @@
 import { useLocation } from 'react-router'
 import { PageLayout } from '../../components/templates/page-layout'
 import { HeroSection } from '../../components/organisms/hero-section'
+import { CountdownSection } from '../../components/organisms/countdown-section'
+
+/** Election date: 20 September 2026 (month is 0-indexed). */
+const ELECTION_DATE = new Date(2026, 8, 20)
 
 export function Home() {
   const { pathname } = useLocation()
@@ -15,6 +19,7 @@ export function Home() {
         ctaLabel="Wahlprogramm kurz"
         ctaTo="/wahlprogramm"
       />
+      <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
     </PageLayout>
   )
 }
