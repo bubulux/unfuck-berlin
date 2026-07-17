@@ -8,8 +8,8 @@ const meta = {
   args: {
     videoSrc: 'https://www.youtube-nocookie.com/embed/ub8UIZ0FvRs',
     videoTitle: 'Anna und Paul',
-    logoSrc: '/logos/dieErsteParteiDie.svg',
-    logoAlt: 'Die erste Partei, die…',
+    logoSrc: '/logos/unfckBerlin.svg',
+    logoAlt: 'unf*ck berlin',
     text: 'Volt macht, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.',
     ctaLabel: 'Wahlprogramm kurz',
     ctaTo: '/wahlprogramm',

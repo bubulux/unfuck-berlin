@@ -1,67 +1,110 @@
 .hero {
-  position: relative;
-  width: 100%;
-  height: min(90svh, 48rem);
+  --hero-video-h: 60vh;
+  background-color: var(--color-purple);
+  color: var(--color-white);
   overflow: hidden;
+}
+
+/* Mobile: full-width black strip with the portrait video centered inside it
+ * (black bars fill the sides). Content is pulled up so the logo overlaps the
+ * lower part of the video. */
+.hero__media {
+  position: relative;
+  height: var(--hero-video-h);
   background-color: #000;
-  /* Establish a size container so the video can be sized to *cover* it
-   * (iframes can't use object-fit). */
-  container-type: size;
+  overflow: hidden;
 }
 
-/* Video layer — oversized so the 16:9 frame covers the (portrait) hero. */
+/* Portrait 9:16 embed (YouTube Shorts). Width is derived deterministically from
+ * the height (9/16) and the box is centered with auto margins, so the player is
+ * never wider than its box (no clipped controls). */
 .hero__video {
-  position: absolute;
-  inset: 0;
-}
-
-.hero__video iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: max(100cqw, calc(100cqh * 16 / 9));
-  height: max(100cqh, calc(100cqw * 9 / 16));
+  display: block;
+  height: var(--hero-video-h);
+  width: calc(var(--hero-video-h) * 9 / 16);
+  max-width: 100%;
+  margin-inline: auto;
   border: 0;
 }
 
-/* Dark gradient: opaque at the bottom, fading to transparent toward the top. */
-.hero__overlay {
+/* Purple fade over the bottom of the video so the headline reads on top. */
+.hero__gradient {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.55) 35%,
-    rgba(0, 0, 0, 0) 70%
-  );
+  inset-inline: 0;
+  bottom: 0;
+  height: 10rem;
+  background: linear-gradient(to top, var(--color-purple), transparent);
   pointer-events: none;
 }
 
-/* Overlaid content sits at the bottom, centered. Only the CTA is clickable so
- * the rest of the video (e.g. its play button) stays interactive. */
 .hero__content {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  z-index: 1;
+  margin-top: -8rem;
+  padding-inline: var(--content-pad);
+  padding-bottom: var(--space-6);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: var(--space-7); /* 3× the previous space-4 */
-  padding: var(--space-6) var(--content-pad) var(--space-7);
-  text-align: center;
-  pointer-events: none;
+  gap: var(--space-5);
 }
 
+/* "unf*ck berlin" headline graphic. */
 .hero__logo {
-  width: min(18rem, 72%);
+  display: block;
+  width: 5rem;
+  max-width: 70%;
   height: auto;
 }
 
 .hero__text {
-  max-width: 24rem;
+  max-width: 32rem;
 }
 
-.hero__cta {
-  pointer-events: auto;
+/* Desktop: two columns — text/headline left, portrait video right. */
+@media (min-width: 48rem) {
+  .hero__inner {
+    max-width: var(--content-max-wide);
+    margin-inline: auto;
+    padding: var(--space-8) var(--content-pad-wide) var(--space-6);
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-7);
+    align-items: stretch;
+  }
+
+  /* Desktop: no full-width black strip — just the portrait video in the right
+   * column, purple page showing around it. */
+  .hero__media {
+    order: 2;
+    height: auto;
+    background-color: transparent;
+    overflow: visible;
+  }
+
+  .hero__gradient {
+    display: none;
+  }
+
+  .hero__content {
+    order: 1;
+    margin-top: 0;
+    padding-inline: 0;
+    padding-bottom: 0;
+  }
+
+  .hero__logo {
+    width: 30rem;
+    max-width: 100%;
+  }
+
+  /* Push the body copy toward the bottom of the column, headline stays on top. */
+  .hero__text {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    --hero-video-h: 80vh;
+  }
 }
