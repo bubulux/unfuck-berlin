@@ -42,7 +42,7 @@ export const Playground: Story = {};
 export const UnsereKandidaten: Story = {
   args: {
     as: "h2",
-    lines: ["Unsere", "Kandidaten"],
+    lines: ["Unsere", "Kandidierenden"],
     variant: "titel",
     color: "white",
     textColor: "purple",

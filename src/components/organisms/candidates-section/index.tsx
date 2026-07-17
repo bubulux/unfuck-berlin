@@ -16,7 +16,7 @@ export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
 export function CandidatesSection({
   imageSrc,
   imageAlt,
-  text = "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidatinnen und Kandidaten kennenlernen.",
+  text = "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidierenden kennenlernen.",
   ctaLabel = "Unsere Kandidierenden stellen sich vor",
   ctaTo,
   ctaHref,
@@ -30,7 +30,7 @@ export function CandidatesSection({
         <div className="candidates__head">
           <HighlightText
             as="h2"
-            lines={["Unsere", "Kandidaten"]}
+            lines={["Unsere", "Kandidierenden"]}
             variant="titel"
             color="white"
             textColor="purple"

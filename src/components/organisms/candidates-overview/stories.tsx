@@ -12,7 +12,7 @@ const meta = {
     candidates: KANDIDATEN,
     children: (
       <Text color="purple">
-        Unsere Kandidatinnen und Kandidaten stehen für frische Ideen,
+        Unsere Kandidierenden stehen für frische Ideen,
         lösungsorientierte Politik und den Mut, neue Wege zu gehen.
       </Text>
     ),

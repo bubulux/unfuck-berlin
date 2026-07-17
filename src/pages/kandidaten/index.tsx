@@ -13,7 +13,7 @@ export function Kandidaten() {
         candidates={KANDIDATEN}
       >
         <Text color="purple">
-          Unsere Kandidatinnen und Kandidaten stehen für frische Ideen,
+          Unsere Kandidierenden stehen für frische Ideen,
           lösungsorientierte Politik und den Mut, neue Wege zu gehen. Sie kommen
           aus unterschiedlichen Lebensbereichen, teilen aber ein gemeinsames
           Ziel:

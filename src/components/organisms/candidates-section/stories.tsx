@@ -7,7 +7,7 @@ const meta = {
   parameters: { layout: 'fullscreen' },
   args: {
     imageSrc: '/pics/unsereKandidatenPortraitCluster.png',
-    imageAlt: 'Die Kandidatinnen und Kandidaten von Volt Berlin',
+    imageAlt: 'Die Kandidierenden von Volt Berlin',
     ctaTo: '/kandidaten',
   },
 } satisfies Meta<typeof CandidatesSection>

@@ -1,41 +1,44 @@
-import type { HTMLAttributes } from 'react'
-import { Text } from '../../atoms/text'
-import { Link } from '../../atoms/link'
-import { EuropeStars } from '../../atoms/europe-stars'
-import { HighlightText, type HighlightLine } from '../../atoms/highlight-text'
-import { SocialRow, type SocialLink } from '../../molecules/social-row'
-import { SOCIAL_LINKS, LEGAL_LINKS } from '../../../config/navigation'
-import './styles.css'
+import type { HTMLAttributes } from "react";
+import { Text } from "../../atoms/text";
+import { Link } from "../../atoms/link";
+import { EuropeStars } from "../../atoms/europe-stars";
+import { HighlightText, type HighlightLine } from "../../atoms/highlight-text";
+import { SocialRow, type SocialLink } from "../../molecules/social-row";
+import { SOCIAL_LINKS, LEGAL_LINKS } from "../../../config/navigation";
+import "./styles.css";
 
 export interface FooterLink {
-  label: string
-  to?: string
-  href?: string
+  label: string;
+  to?: string;
+  href?: string;
 }
 
 export interface ContactBlock {
-  label: string
-  email: string
+  label: string;
+  email: string;
 }
 
 export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
-  socials?: SocialLink[]
-  legalLinks?: FooterLink[]
+  socials?: SocialLink[];
+  legalLinks?: FooterLink[];
   /** Highlighted call-to-action links. */
-  actions?: HighlightLine[]
-  contacts?: ContactBlock[]
+  actions?: HighlightLine[];
+  contacts?: ContactBlock[];
 }
 
 const DEFAULT_ACTIONS: HighlightLine[] = [
-  { text: 'Spenden', href: 'https://voltdeutschland.org/berlin/spenden' },
-  { text: 'Newsletter', href: 'https://voltdeutschland.org/newsletter' },
-  { text: 'Volt Deutschland', href: 'https://voltdeutschland.org/' },
-]
+  { text: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
+  { text: "Newsletter", href: "https://voltdeutschland.org/newsletter" },
+  { text: "Sticker abgreifen", to: "/sticker" },
+];
 
 const DEFAULT_CONTACTS: ContactBlock[] = [
-  { label: 'Allgemeine Fragen und Feedback', email: 'berlin@voltdeutschland.org' },
-  { label: 'Presse- und Medienanfragen', email: 'presse@voltberlin.org' },
-]
+  {
+    label: "Allgemeine Fragen und Feedback",
+    email: "berlin@voltdeutschland.org",
+  },
+  { label: "Presse- und Medienanfragen", email: "presse@voltberlin.org" },
+];
 
 export function SiteFooter({
   socials = SOCIAL_LINKS,
@@ -45,7 +48,7 @@ export function SiteFooter({
   className,
   ...rest
 }: SiteFooterProps) {
-  const classes = ['site-footer', className].filter(Boolean).join(' ')
+  const classes = ["site-footer", className].filter(Boolean).join(" ");
   return (
     <footer className={classes} {...rest}>
       <div className="site-footer__inner">
@@ -88,7 +91,10 @@ export function SiteFooter({
               <Text as="p" variant="body" color="white">
                 {c.label}
               </Text>
-              <a href={`mailto:${c.email}`} className="site-footer__contact-email">
+              <a
+                href={`mailto:${c.email}`}
+                className="site-footer__contact-email"
+              >
                 {c.email}
               </a>
             </div>
@@ -110,7 +116,7 @@ export function SiteFooter({
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default SiteFooter
+export default SiteFooter;

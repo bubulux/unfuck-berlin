@@ -25,7 +25,7 @@ export function Home() {
       <CalendarSection events={getUpcomingCalendarItems(3)} viewAllTo="/termine" />
       <CandidatesSection
         imageSrc="/pics/unsereKandidatenPortraitCluster.png"
-        imageAlt="Die Kandidatinnen und Kandidaten von Volt Berlin"
+        imageAlt="Die Kandidierenden von Volt Berlin"
         ctaTo="/kandidaten"
       />
       <UnfuckSection
