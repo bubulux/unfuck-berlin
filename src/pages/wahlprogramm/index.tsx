@@ -9,7 +9,10 @@ export function Wahlprogramm() {
   const { pathname } = useLocation();
   return (
     <PageLayout activePath={pathname} variant="light">
-      <ProgramIntro ctaHref="https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/2026_ber_wahlprogramm.pdf">
+      <ProgramIntro
+        ctaLabel="Wahlprogramm kurz"
+        ctaHref="https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf"
+      >
         <Text color="purple" weight="bold">
           Berlin ist pulsierend, aber sein Herzschlag erreicht die Politik
           nicht.
@@ -37,6 +40,7 @@ export function Wahlprogramm() {
         headingColor="yellow"
         headingAlign="left"
         headingUppercase={false}
+        ctaHref="https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/2026_ber_wahlprogramm.pdf"
       >
         <Text color="purple">
           Volt ist die erste echte europäische Partei: in ganz Europa aktiv, mit
