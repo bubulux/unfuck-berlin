@@ -2,10 +2,8 @@ import { useLocation } from 'react-router'
 import { PageLayout } from '../../components/templates/page-layout'
 import { HeroSection } from '../../components/organisms/hero-section'
 import { CountdownSection } from '../../components/organisms/countdown-section'
-import { CalendarSection } from '../../components/organisms/calendar-section'
 import { CandidatesSection } from '../../components/organisms/candidates-section'
 import { UnfuckSection } from '../../components/organisms/unfuck-section'
-import { getUpcomingCalendarItems } from '../../data/events'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
 const ELECTION_DATE = new Date(2026, 8, 20)
@@ -13,7 +11,7 @@ const ELECTION_DATE = new Date(2026, 8, 20)
 export function Home() {
   const { pathname } = useLocation()
   return (
-    <PageLayout activePath={pathname} hideCalendar>
+    <PageLayout activePath={pathname}>
       <HeroSection
         videoSrc="https://www.youtube-nocookie.com/embed/ub8UIZ0FvRs"
         videoTitle="Anna und Paul"
@@ -24,7 +22,6 @@ export function Home() {
         ctaTo="/wahlprogramm"
       />
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
-      <CalendarSection events={getUpcomingCalendarItems(3)} viewAllTo="/termine" />
       <CandidatesSection
         leadImageSrc="/pics/wahlsystem/paul-anna-portrait.png"
         leadImageAlt="Paul Löper und Anna Auerbach"
