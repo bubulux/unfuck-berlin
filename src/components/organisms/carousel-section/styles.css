@@ -1,0 +1,9 @@
+.carousel-section {
+  background-color: var(--color-purple);
+}
+
+.carousel-section__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: 0 var(--content-pad) var(--space-7);
+}

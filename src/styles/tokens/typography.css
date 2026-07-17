@@ -1,0 +1,83 @@
+/* Typography tokens — Ubuntu (self-hosted, GDPR-safe: no third-party font requests).
+ * Fonts live in /public/fonts and are served from /fonts/*. */
+
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-LightItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Ubuntu-BoldItalic.ttf') format('truetype');
+}
+
+:root {
+  --font-family: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Type scale — base values from Figma. Fluid via clamp() so the narrow mobile
+   * frames scale up gracefully. min ≈ Figma value; max scales for larger viewports. */
+  --text-titel: clamp(2rem, 6vw, 2.75rem); /* Figma 34px */
+  --text-subtitel: clamp(1.375rem, 4vw, 1.75rem); /* Figma 24px */
+  --text-body: clamp(1rem, 2.5vw, 1.0625rem); /* ~16-17px (not in Figma set) */
+  --text-cta: 0.75rem; /* Figma 12px */
+  --text-kalender: 0.625rem; /* Figma 10px */
+  --text-fussnote: 0.6875rem; /* Figma 8px, nudged to ~11px min for legibility */
+
+  /* Line heights */
+  --line-tight: 1.05;
+  --line-snug: 1.2;
+  --line-normal: 1.5;
+}

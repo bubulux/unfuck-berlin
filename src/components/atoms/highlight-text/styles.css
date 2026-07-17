@@ -1,0 +1,108 @@
+.highlight {
+  display: flex;
+  font-family: var(--font-family);
+  /* Small gaps + per-box tilt create the hand-placed sticker look. */
+}
+
+/* Layout direction */
+.highlight--column {
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.highlight--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  align-items: center;
+}
+
+/* Alignment (column: cross-axis; row: main-axis) */
+.highlight--column.highlight--align-left {
+  align-items: flex-start;
+}
+.highlight--column.highlight--align-center {
+  align-items: center;
+}
+.highlight--column.highlight--align-right {
+  align-items: flex-end;
+}
+.highlight--row.highlight--align-left {
+  justify-content: flex-start;
+}
+.highlight--row.highlight--align-center {
+  justify-content: center;
+}
+.highlight--row.highlight--align-right {
+  justify-content: flex-end;
+}
+
+.highlight--uppercase {
+  text-transform: uppercase;
+}
+
+/* Size presets (drive the em-based box padding too) */
+.highlight--titel {
+  font-size: var(--text-titel);
+}
+.highlight--subtitel {
+  font-size: var(--text-subtitel);
+}
+.highlight--body {
+  font-size: var(--text-body);
+}
+.highlight--cta {
+  font-size: var(--text-cta);
+}
+.highlight--fussnote {
+  font-size: var(--text-fussnote);
+}
+.highlight--kalender {
+  font-size: var(--text-kalender);
+}
+
+/* The parallelogram is a fixed-depth clip, NOT an angle-based skew — so the
+ * slant (--hl-slant) is the same whether the box is wide or narrow, instead of
+ * blowing up on long words. Top/bottom edges rise toward the right; the sides
+ * stay perpendicular. No transform, so the text is naturally horizontal.
+ * Top/bottom padding includes the slant so the clipped edges clear the text. */
+.highlight__box {
+  --hl-bg: var(--color-white);
+  --hl-fg: var(--color-purple);
+  --hl-slant: 0.3em;
+
+  display: inline-block;
+  width: fit-content;
+  padding: calc(0.1em + var(--hl-slant)) 0.36em;
+  background-color: var(--hl-bg);
+  clip-path: polygon(
+    0 var(--hl-slant),
+    100% 0,
+    100% calc(100% - var(--hl-slant)),
+    0 100%
+  );
+}
+
+.highlight__text {
+  display: inline-block;
+  color: var(--hl-fg);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+}
+
+/* Link boxes get a pointer + subtle hover. */
+.highlight__box--link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: filter 0.15s ease;
+}
+
+.highlight__box--link:hover {
+  filter: brightness(0.92);
+}
+
+.highlight__box--link:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}

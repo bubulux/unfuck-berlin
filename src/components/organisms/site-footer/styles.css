@@ -1,0 +1,147 @@
+.site-footer {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.site-footer__inner {
+  max-width: var(--content-max-wide);
+  margin-inline: auto;
+  padding: var(--space-7) var(--content-pad-wide) var(--space-5);
+  display: grid;
+  gap: var(--space-7);
+}
+
+/* Center stack, top to bottom: "Werde Teil der Bewegung" → social icons.
+ * Centered. */
+.site-footer__center {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-5);
+  align-content: start;
+}
+
+/* Social icons — enlarged and given more room so they read as the prominent
+ * call-to-action of the footer. */
+.site-footer__socials {
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.site-footer__socials .social-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+/* "ZUKUNFT ✦ MADE IN EUROPE" — sits right at the bottom, below the legal row,
+ * deliberately smaller. */
+.site-footer__slogan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  font-size: var(--text-subtitel);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Rotating EU stars — spin clockwise. Disabled for users who prefer reduced
+ * motion (see the media query below). */
+@keyframes footer-stars-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.site-footer__stars {
+  flex-shrink: 0;
+  animation: footer-stars-spin 12s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer__stars {
+    animation: none;
+  }
+}
+
+.site-footer__actions {
+  align-self: start;
+}
+
+.site-footer__contact {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.site-footer__contact-item {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.site-footer__contact-email {
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.site-footer__contact-email:hover {
+  text-decoration: underline;
+}
+
+/* Closing block: legal row with the "Zukunft ✦ Made in Europe" slogan stacked
+ * tightly underneath it. */
+.site-footer__closing {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+}
+
+/* Legal row — centered on every screen size. */
+.site-footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.site-footer__legal-link {
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Wide screens: actions hard-left, center stack in the middle, contact block
+ * hard-right; the legal row spans the full width underneath, centered. */
+@media (min-width: 60rem) {
+  .site-footer__inner {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
+      'actions center  contact'
+      'closing closing closing';
+    gap: var(--space-8) var(--space-7);
+    align-items: start;
+  }
+
+  .site-footer__closing {
+    grid-area: closing;
+  }
+
+  .site-footer__center {
+    grid-area: center;
+  }
+
+  .site-footer__actions {
+    grid-area: actions;
+    justify-self: start;
+  }
+
+  .site-footer__contact {
+    grid-area: contact;
+    justify-self: end;
+    text-align: right;
+  }
+}

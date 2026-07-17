@@ -1,0 +1,24 @@
+.countdown {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.countdown__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: var(--space-7) var(--content-pad);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+}
+
+.countdown__text {
+  max-width: 30rem;
+}
+
+.countdown__cta {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-bold);
+}

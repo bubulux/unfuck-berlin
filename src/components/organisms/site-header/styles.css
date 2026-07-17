@@ -1,0 +1,102 @@
+.site-header {
+  --header-bg: var(--color-purple);
+  --header-fg: var(--color-white);
+
+  /* React to our own available width (not the viewport), so the nav collapses
+   * whenever there isn't enough room — wherever the header is placed. */
+  container-type: inline-size;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--header-bg);
+  color: var(--header-fg);
+}
+
+.site-header--purple {
+  --header-bg: var(--color-purple);
+  --header-fg: var(--color-white);
+}
+
+.site-header--light {
+  --header-bg: var(--color-white);
+  --header-fg: var(--color-purple);
+  border-bottom: 1px solid rgba(80, 35, 121, 0.12);
+}
+
+.site-header__inner {
+  max-width: var(--content-max-wide);
+  margin-inline: auto;
+  padding: var(--space-3) var(--content-pad-wide);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.site-header__logo {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.site-header__link {
+  font-size: var(--text-cta);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Burger toggle (mobile only). */
+.site-header__burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--header-fg);
+  padding: var(--space-1);
+}
+
+.site-header__burger:focus-visible {
+  outline: 2px solid var(--header-fg);
+  outline-offset: 2px;
+}
+
+/* Inline nav is hidden on small screens… */
+.site-header__nav {
+  display: none;
+}
+
+/* …the drop-down panel takes over when the burger is open. */
+.site-header__panel {
+  display: none;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--content-pad) var(--space-5);
+  background-color: var(--header-bg);
+  border-top: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.site-header--open .site-header__panel {
+  display: flex;
+}
+
+.site-header__panel-link {
+  font-size: var(--text-subtitel);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Wide enough → inline links, no burger, no panel. */
+@container (min-width: 32rem) {
+  .site-header__nav {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .site-header__burger {
+    display: none;
+  }
+
+  .site-header__panel {
+    display: none !important;
+  }
+}

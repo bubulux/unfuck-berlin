@@ -1,0 +1,91 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.carousel__viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.carousel__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Neon nav buttons, left & right, vertically centered. */
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-neon);
+  color: var(--color-purple);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: filter 0.15s ease;
+}
+
+.carousel__btn:hover {
+  filter: brightness(0.92);
+}
+
+.carousel__btn:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.carousel__btn--prev {
+  left: var(--space-3);
+}
+
+.carousel__btn--next {
+  right: var(--space-3);
+}
+
+.carousel__btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Position/indicator dots. */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.carousel__dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: background-color 0.15s ease;
+}
+
+.carousel__dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.carousel__dot.is-active {
+  background-color: var(--color-neon);
+}

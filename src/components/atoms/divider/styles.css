@@ -1,0 +1,26 @@
+.divider {
+  width: 100%;
+  height: var(--space-6);
+}
+
+.divider--purple {
+  background-color: var(--color-purple);
+}
+.divider--white {
+  background-color: var(--color-white);
+}
+.divider--neon {
+  background-color: var(--color-neon);
+}
+.divider--yellow {
+  background-color: var(--color-yellow);
+}
+.divider--green {
+  background-color: var(--color-green);
+}
+.divider--blue {
+  background-color: var(--color-blue);
+}
+.divider--pink {
+  background-color: var(--color-pink);
+}

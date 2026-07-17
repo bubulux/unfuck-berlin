@@ -1,0 +1,25 @@
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  aspect-ratio: 1 / 1;
+  min-width: 0;
+  padding: var(--space-2);
+  border: 2px solid var(--color-neon);
+  border-radius: var(--radius-md);
+  color: var(--color-neon);
+}
+
+.countdown-unit__value {
+  font-size: var(--text-titel);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.countdown-unit__label {
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.03em;
+}

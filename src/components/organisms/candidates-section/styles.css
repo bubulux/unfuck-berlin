@@ -1,0 +1,47 @@
+.candidates {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.candidates__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.candidates__head {
+  padding: var(--space-7) var(--content-pad) var(--space-6);
+}
+
+/* Lead photo (with overlaid caption link), sits above the cluster image. */
+.candidates__lead {
+  margin-bottom: var(--space-5);
+}
+
+/* Single cluster image, edge-to-edge within the content column. */
+.candidates__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.candidates__foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--content-pad) var(--space-7);
+  text-align: center;
+}
+
+.candidates__cta {
+  font-size: var(--text-subtitel);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Inline arrow — flows with the text, so it stays at the end of the last line
+ * regardless of wrapping. Slightly larger than the label. */
+.candidates__arrow {
+  font-size: 1.25em;
+  line-height: 1;
+  white-space: nowrap;
+}

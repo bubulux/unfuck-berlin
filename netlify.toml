@@ -51,3 +51,10 @@
   to   = "https://unfuck.berlin/:splat"
   status = 301
   force  = true
+
+# SPA fallback: serve the app shell for client-side routes (e.g. /confirm?token=…).
+# Existing static files (e.g. /sticker/confirm.html) are served before this rule.
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200

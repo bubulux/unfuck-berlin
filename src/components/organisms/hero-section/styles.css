@@ -1,0 +1,110 @@
+.hero {
+  --hero-video-h: 60vh;
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+/* Mobile: full-width black strip with the portrait video centered inside it
+ * (black bars fill the sides). Content is pulled up so the logo overlaps the
+ * lower part of the video. */
+.hero__media {
+  position: relative;
+  height: var(--hero-video-h);
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Portrait 9:16 embed (YouTube Shorts). Width is derived deterministically from
+ * the height (9/16) and the box is centered with auto margins, so the player is
+ * never wider than its box (no clipped controls). */
+.hero__video {
+  display: block;
+  height: var(--hero-video-h);
+  width: calc(var(--hero-video-h) * 9 / 16);
+  max-width: 100%;
+  margin-inline: auto;
+  border: 0;
+}
+
+/* Purple fade over the bottom of the video so the headline reads on top. */
+.hero__gradient {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 10rem;
+  background: linear-gradient(to top, var(--color-purple), transparent);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  margin-top: -8rem;
+  padding-inline: var(--content-pad);
+  padding-bottom: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* "unf*ck berlin" headline graphic. */
+.hero__logo {
+  display: block;
+  width: 5rem;
+  max-width: 70%;
+  height: auto;
+}
+
+.hero__text {
+  max-width: 32rem;
+}
+
+/* Desktop: two columns — text/headline left, portrait video right. */
+@media (min-width: 48rem) {
+  .hero__inner {
+    max-width: var(--content-max-wide);
+    margin-inline: auto;
+    padding: var(--space-8) var(--content-pad-wide) var(--space-6);
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-7);
+    align-items: stretch;
+  }
+
+  /* Desktop: no full-width black strip — just the portrait video in the right
+   * column, purple page showing around it. */
+  .hero__media {
+    order: 2;
+    height: auto;
+    background-color: transparent;
+    overflow: visible;
+  }
+
+  .hero__gradient {
+    display: none;
+  }
+
+  .hero__content {
+    order: 1;
+    margin-top: 0;
+    padding-inline: 0;
+    padding-bottom: 0;
+  }
+
+  .hero__logo {
+    width: 30rem;
+    max-width: 100%;
+  }
+
+  /* Push the body copy toward the bottom of the column, headline stays on top. */
+  .hero__text {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    --hero-video-h: 80vh;
+  }
+}

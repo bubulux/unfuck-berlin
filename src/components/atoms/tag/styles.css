@@ -1,0 +1,59 @@
+.tag {
+  --tag-bg: var(--color-neon);
+  --tag-fg: var(--color-purple);
+
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.tag--no-uppercase {
+  text-transform: none;
+}
+
+.tag--pill {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background-color: var(--tag-bg);
+  color: var(--tag-fg);
+}
+
+.tag--label {
+  background: none;
+  color: var(--tag-bg);
+}
+
+/* Color tokens (drives pill background / label text color) */
+.tag--neon {
+  --tag-bg: var(--color-neon);
+  --tag-fg: var(--color-purple);
+}
+.tag--yellow {
+  --tag-bg: var(--color-yellow);
+  --tag-fg: var(--color-purple);
+}
+.tag--blue {
+  --tag-bg: var(--color-blue);
+  --tag-fg: var(--color-purple);
+}
+.tag--white {
+  --tag-bg: var(--color-white);
+  --tag-fg: var(--color-purple);
+}
+.tag--purple {
+  --tag-bg: var(--color-purple);
+  --tag-fg: var(--color-white);
+}
+.tag--pink {
+  --tag-bg: var(--color-pink);
+  --tag-fg: var(--color-white);
+}
+.tag--green {
+  --tag-bg: var(--color-green);
+  --tag-fg: var(--color-white);
+}

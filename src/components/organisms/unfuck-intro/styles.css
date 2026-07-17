@@ -1,0 +1,35 @@
+.unfuck-intro {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.unfuck-intro__inner {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: var(--space-7) var(--content-pad);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.unfuck-intro__logo {
+  align-self: center;
+  display: block;
+  width: min(24rem, 92%);
+  height: auto;
+}
+
+.unfuck-intro__headline {
+  line-height: var(--line-snug);
+}
+
+.unfuck-intro__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.unfuck-intro__cta {
+  align-self: center;
+  margin-top: var(--space-2);
+}

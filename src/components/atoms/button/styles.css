@@ -1,0 +1,107 @@
+.button {
+  --button-bg: var(--color-neon);
+  --button-fg: var(--color-purple);
+  --button-border: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--button-border);
+  background-color: var(--button-bg);
+  color: var(--button-fg);
+  font-family: var(--font-family);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    filter 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.button:hover {
+  filter: brightness(0.94);
+}
+
+.button:active {
+  filter: brightness(0.88);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Sizes */
+.button--default {
+  font-size: var(--text-cta);
+}
+
+.button--cta {
+  font-size: var(--text-cta);
+  padding: var(--space-2) var(--space-4);
+}
+
+.button--full {
+  width: 100%;
+}
+
+/* Per-color foreground/background pairs (solid) */
+.button--neon {
+  --button-bg: var(--color-neon);
+  --button-fg: var(--color-purple);
+}
+.button--yellow {
+  --button-bg: var(--color-yellow);
+  --button-fg: var(--color-purple);
+}
+.button--blue {
+  --button-bg: var(--color-blue);
+  --button-fg: var(--color-purple);
+}
+.button--white {
+  --button-bg: var(--color-white);
+  --button-fg: var(--color-purple);
+}
+.button--purple {
+  --button-bg: var(--color-purple);
+  --button-fg: var(--color-white);
+}
+.button--pink {
+  --button-bg: var(--color-pink);
+  --button-fg: var(--color-white);
+}
+.button--green {
+  --button-bg: var(--color-green);
+  --button-fg: var(--color-white);
+}
+
+/* Outline variant: transparent fill, colored border + text */
+.button--outline {
+  background-color: transparent;
+  --button-border: var(--button-bg);
+  color: var(--button-bg);
+}
+.button--outline:hover {
+  filter: none;
+  background-color: var(--button-bg);
+  color: var(--button-fg);
+}
