@@ -1,0 +1,42 @@
+.media-overlay {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.media-overlay__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Dark scrim over the lower portion so the caption stays legible on any photo. */
+.media-overlay__scrim {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 55%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+}
+
+.media-overlay__caption {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: var(--space-5) var(--content-pad);
+  font-size: var(--text-subtitel);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Inline arrow — stays glued to the end of the caption text. */
+.media-overlay__arrow {
+  font-size: 1.25em;
+  line-height: 1;
+  white-space: nowrap;
+}

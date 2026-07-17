@@ -12,6 +12,11 @@
   padding: var(--space-7) var(--content-pad) var(--space-6);
 }
 
+/* Lead photo (with overlaid caption link), sits above the cluster image. */
+.candidates__lead {
+  margin-bottom: var(--space-5);
+}
+
 /* Single cluster image, edge-to-edge within the content column. */
 .candidates__image {
   display: block;

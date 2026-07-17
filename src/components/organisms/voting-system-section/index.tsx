@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from 'react'
 import { HighlightText } from '../../atoms/highlight-text'
 import { ExplainerBlock } from '../../molecules/explainer-block'
-import { MediaCaption } from '../../molecules/media-caption'
+import { MediaOverlay } from '../../molecules/media-overlay'
 
 import './styles.css'
 
@@ -48,7 +48,7 @@ export function VotingSystemSection({
 
         <ExplainerBlock title={first.title} paragraphs={first.paragraphs} />
 
-        <MediaCaption
+        <MediaOverlay
           src={media.src}
           alt={media.alt}
           captionLabel={media.captionLabel}

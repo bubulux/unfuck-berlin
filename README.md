@@ -1,3 +1,4 @@
 - GCal must be handled gracefully, solution for datasource must be found
+  --> use ICAL scraper!
 - Reponsiveness for other pages must be worked on...
 - using video js for native video serving?

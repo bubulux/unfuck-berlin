@@ -2,11 +2,18 @@ import type { HTMLAttributes } from "react";
 import { Text } from "../../atoms/text";
 import { Link } from "../../atoms/link";
 import { HighlightText } from "../../atoms/highlight-text";
+import { MediaOverlay } from "../../molecules/media-overlay";
 import "./styles.css";
 
 export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
   imageSrc: string;
   imageAlt: string;
+  /** Optional lead photo shown first, with a caption link over its bottom. */
+  leadImageSrc?: string;
+  leadImageAlt?: string;
+  leadCaptionLabel?: string;
+  leadCaptionTo?: string;
+  leadCaptionHref?: string;
   text?: string;
   ctaLabel?: string;
   ctaTo?: string;
@@ -16,6 +23,11 @@ export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
 export function CandidatesSection({
   imageSrc,
   imageAlt,
+  leadImageSrc,
+  leadImageAlt,
+  leadCaptionLabel,
+  leadCaptionTo,
+  leadCaptionHref,
   text = "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidierenden kennenlernen.",
   ctaLabel = "Unsere Kandidierenden stellen sich vor",
   ctaTo,
@@ -38,6 +50,17 @@ export function CandidatesSection({
             uppercase
           />
         </div>
+
+        {leadImageSrc ? (
+          <MediaOverlay
+            className="candidates__lead"
+            src={leadImageSrc}
+            alt={leadImageAlt ?? ""}
+            captionLabel={leadCaptionLabel}
+            captionTo={leadCaptionTo}
+            captionHref={leadCaptionHref}
+          />
+        ) : null}
 
         <img className="candidates__image" src={imageSrc} alt={imageAlt} />
 

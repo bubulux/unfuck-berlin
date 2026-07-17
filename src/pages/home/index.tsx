@@ -26,6 +26,10 @@ export function Home() {
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
       <CalendarSection events={getUpcomingCalendarItems(3)} viewAllTo="/termine" />
       <CandidatesSection
+        leadImageSrc="/pics/wahlsystem/paul-anna-portrait.png"
+        leadImageAlt="Paul Löper und Anna Auerbach"
+        leadCaptionLabel="Spitzenduo Volt kennenlernen"
+        leadCaptionTo="/spitzenkandidaten"
         imageSrc="/pics/unsereKandidatenPortraitCluster.png"
         imageAlt="Die Kandidierenden von Volt Berlin"
         ctaTo="/kandidaten"
