@@ -5,24 +5,15 @@ import { CountdownSection } from '../../components/organisms/countdown-section'
 import { CalendarSection } from '../../components/organisms/calendar-section'
 import { CandidatesSection } from '../../components/organisms/candidates-section'
 import { UnfuckSection } from '../../components/organisms/unfuck-section'
-import type { SocialLink } from '../../components/molecules/social-row'
-import { SOCIAL_LINKS } from '../../config/navigation'
 import { getUpcomingCalendarItems } from '../../data/events'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
 const ELECTION_DATE = new Date(2026, 8, 20)
 
-/** Home footer swaps X for Mastodon. */
-const HOME_SOCIALS: SocialLink[] = SOCIAL_LINKS.map((s) =>
-  s.platform === 'x'
-    ? { platform: 'mastodon', href: 'https://berlin.social/@VoltBerlin' }
-    : s,
-)
-
 export function Home() {
   const { pathname } = useLocation()
   return (
-    <PageLayout activePath={pathname} hideCalendar socials={HOME_SOCIALS}>
+    <PageLayout activePath={pathname} hideCalendar>
       <HeroSection
         videoSrc="https://www.youtube-nocookie.com/embed/ub8UIZ0FvRs"
         videoTitle="Anna und Paul"

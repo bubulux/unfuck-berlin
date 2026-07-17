@@ -26,7 +26,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { platform: 'facebook', href: 'https://www.facebook.com/BerlinVolt' },
   { platform: 'instagram', href: 'https://www.instagram.com/volt_berlin/' },
   { platform: 'linkedin', href: 'https://www.linkedin.com/company/volt-berlin/' },
-  { platform: 'x', href: 'https://x.com/Volt_Berlin' },
+  { platform: 'mastodon', href: 'https://berlin.social/@VoltBerlin' },
   { platform: 'youtube', href: 'https://www.youtube.com/@volt_berlin/shorts' },
 ]
 
