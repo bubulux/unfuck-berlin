@@ -65,12 +65,6 @@ export function SiteFooter({
           </Text>
 
           <SocialRow links={socials} className="site-footer__socials" />
-
-          <p className="site-footer__slogan">
-            <span>Zukunft</span>
-            <EuropeStars className="site-footer__stars" size="1.1em" />
-            <span>Made in Europe</span>
-          </p>
         </div>
 
         <HighlightText
@@ -101,18 +95,26 @@ export function SiteFooter({
           ))}
         </div>
 
-        <div className="site-footer__legal">
-          {legalLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.to}
-              href={link.href}
-              color="white"
-              className="site-footer__legal-link"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="site-footer__closing">
+          <div className="site-footer__legal">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.to}
+                href={link.href}
+                color="white"
+                className="site-footer__legal-link"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <p className="site-footer__slogan">
+            <span>Zukunft</span>
+            <EuropeStars className="site-footer__stars" size="1.1em" />
+            <span>Made in Europe</span>
+          </p>
         </div>
       </div>
     </footer>
