@@ -1,0 +1,169 @@
+.video-player {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: #000;
+}
+
+.video-player__el {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Dark scrim for control contrast — shown while paused and on hover. */
+.video-player__scrim {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.574);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.video-player.is-paused .video-player__scrim,
+.video-player.is-playing:hover .video-player__scrim {
+  opacity: 1;
+}
+
+/* Prominent centre play/pause button (YouTube-style). */
+.video-player__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  transition:
+    opacity 0.2s ease,
+    filter 0.15s ease;
+}
+
+.video-player__center:hover {
+  filter: brightness(0.92);
+}
+
+.video-player__center svg {
+  width: 2.6rem;
+  height: 2.6rem;
+  /* Nudge the play triangle to look optically centred. */
+  margin-left: 0.2rem;
+}
+
+.video-player.is-playing .video-player__center svg {
+  margin-left: 0;
+}
+
+/* Hide the centre button during playback; reveal it on hover. */
+.video-player.is-playing .video-player__center {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-player.is-playing:hover .video-player__center {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Bottom control bar: play/pause · scrubber · timestamp. */
+.video-player__bar {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-4) var(--space-3);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+  transition: opacity 0.2s ease;
+}
+
+/* Visible while paused; fades away during playback until hovered. */
+.video-player.is-playing .video-player__bar {
+  opacity: 0;
+}
+
+.video-player.is-playing:hover .video-player__bar {
+  opacity: 1;
+}
+
+.video-player__btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-white);
+  transition: filter 0.15s ease;
+}
+
+.video-player__btn:hover {
+  filter: brightness(1.15);
+}
+
+.video-player__btn svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.video-player__center:focus-visible,
+.video-player__btn:focus-visible,
+.video-player__scrubber:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+/* Scrubber: neon fill up to the playhead, translucent white remainder. */
+.video-player__scrubber {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 0.35rem;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    to right,
+    var(--color-purple) var(--progress, 0%),
+    var(--color-white) var(--progress, 0%)
+  );
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.video-player__scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-purple);
+  cursor: pointer;
+}
+
+.video-player__scrubber::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-purple);
+  cursor: pointer;
+}
+
+.video-player__time {
+  flex: 0 0 auto;
+  color: var(--color-white);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}

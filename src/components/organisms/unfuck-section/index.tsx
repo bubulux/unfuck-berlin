@@ -1,13 +1,17 @@
 import { Link as RouterLink } from 'react-router'
 import { Text } from '../../atoms/text'
 import { Button } from '../../atoms/button'
+import { VideoPlayer } from '../../molecules/video-player'
 import './styles.css'
 
 export interface UnfuckSectionProps {
   logoSrc: string
   logoAlt: string
+  /** Self-hosted video file (MP4/H.264). */
   videoSrc: string
   videoTitle: string
+  /** Poster shown before playback. */
+  videoPoster?: string
   /** Aspect ratio of the video, e.g. "9 / 16" (portrait) or "16 / 9". */
   videoAspect?: string
   text: string
@@ -21,6 +25,7 @@ export function UnfuckSection({
   logoAlt,
   videoSrc,
   videoTitle,
+  videoPoster,
   videoAspect = '9 / 16',
   text,
   ctaLabel,
@@ -32,15 +37,13 @@ export function UnfuckSection({
       <div className="unfuck__inner">
         <img className="unfuck__logo" src={logoSrc} alt={logoAlt} />
 
-        <div className="unfuck__video" style={{ aspectRatio: videoAspect }}>
-          <iframe
-            src={videoSrc}
-            title={videoTitle}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        </div>
+        <VideoPlayer
+          className="unfuck__video"
+          src={videoSrc}
+          poster={videoPoster}
+          title={videoTitle}
+          aspect={videoAspect}
+        />
 
         <Text as="p" variant="body" color="white" align="center" className="unfuck__text">
           {text}
