@@ -13,7 +13,8 @@ export function Home() {
   return (
     <PageLayout activePath={pathname}>
       <HeroSection
-        videoSrc="https://www.youtube-nocookie.com/embed/ub8UIZ0FvRs"
+        videoSrc="/vids/anna_paul_intro.mp4"
+        videoPoster="/vids/anna_paul_intro_poster.jpg"
         videoTitle="Anna und Paul"
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"

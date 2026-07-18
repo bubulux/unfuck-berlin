@@ -1,0 +1,67 @@
+/* Sizing is provided by the caller (e.g. .hero__video); this only positions the
+ * layers that fill that box. */
+.lazy-video {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.lazy-video__poster,
+.lazy-video__el {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cross-fade the video in over the poster once it can play. */
+.lazy-video__el {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lazy-video__el.is-ready {
+  opacity: 1;
+}
+
+.lazy-video__poster {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.lazy-video__poster.is-hidden {
+  opacity: 0;
+}
+
+/* The only control: a play/pause toggle, top-right, clear of the overlaid logo. */
+.lazy-video__toggle {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  transition: background-color 0.15s ease;
+}
+
+.lazy-video__toggle:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.lazy-video__toggle:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 2px;
+}
+
+.lazy-video__toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
