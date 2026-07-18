@@ -96,6 +96,12 @@
   opacity: 1;
 }
 
+/* Before the first play, only the centre play button shows (YouTube-style). */
+.video-player.is-idle .video-player__bar {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .video-player__btn {
   flex: 0 0 auto;
   display: inline-flex;
@@ -118,20 +124,21 @@
 
 .video-player__center:focus-visible,
 .video-player__btn:focus-visible,
-.video-player__scrubber:focus-visible {
+.video-player__scrubber:focus-visible,
+.video-player__vol:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 2px;
 }
 
-/* Scrubber: neon fill up to the playhead, translucent white remainder. */
-.video-player__scrubber {
-  flex: 1 1 auto;
+/* Sliders (scrubber + volume): lila fill up to the value, white remainder. */
+.video-player__scrubber,
+.video-player__vol {
   min-width: 0;
   height: 0.35rem;
   border-radius: var(--radius-pill);
   background: linear-gradient(
     to right,
-    var(--color-purple) var(--progress, 0%),
+    var(--color-neon) var(--progress, 0%),
     var(--color-white) var(--progress, 0%)
   );
   cursor: pointer;
@@ -139,24 +146,63 @@
   appearance: none;
 }
 
-.video-player__scrubber::-webkit-slider-thumb {
+.video-player__scrubber {
+  flex: 1 1 auto;
+}
+
+.video-player__scrubber::-webkit-slider-thumb,
+.video-player__vol::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 1rem;
   height: 1rem;
   border: 0;
   border-radius: var(--radius-pill);
-  background-color: var(--color-purple);
+  background-color: var(--color-neon);
   cursor: pointer;
 }
 
-.video-player__scrubber::-moz-range-thumb {
+.video-player__scrubber::-moz-range-thumb,
+.video-player__vol::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
   border: 0;
   border-radius: var(--radius-pill);
-  background-color: var(--color-purple);
+  background-color: var(--color-neon);
   cursor: pointer;
+}
+
+/* Volume: speaker toggle + a slider that reveals on hover (always shown on
+ * touch devices, which have no hover). */
+.video-player__volume {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.video-player__vol {
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
+  transition:
+    width 0.2s ease,
+    opacity 0.2s ease,
+    margin-left 0.2s ease;
+}
+
+.video-player__volume:hover .video-player__vol,
+.video-player__vol:focus-visible {
+  width: 3.5rem;
+  opacity: 1;
+  margin-left: var(--space-2);
+}
+
+@media (hover: none) {
+  .video-player__vol {
+    width: 3rem;
+    opacity: 1;
+    margin-left: var(--space-2);
+  }
 }
 
 .video-player__time {
