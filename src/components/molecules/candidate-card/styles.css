@@ -28,11 +28,11 @@
 .kandi-card__name {
   margin-top: var(--space-2);
   font-weight: var(--font-weight-bold);
-  font-size: var(--text-cta);
+  font-size: var(--text-body);
   line-height: 1.2;
 }
 
 .kandi-card__meta {
-  font-size: var(--text-fussnote);
-  line-height: 1.25;
+  font-size: var(--text-cta);
+  line-height: 1.3;
 }
