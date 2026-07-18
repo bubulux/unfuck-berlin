@@ -7,7 +7,7 @@ import {
 } from '../../organisms/site-footer'
 import { CalendarSection } from '../../organisms/calendar-section'
 import type { SocialLink } from '../../molecules/social-row'
-import { getUpcomingCalendarItems } from '../../../data/events'
+import { useCalendar } from '../../../context/calendar-context'
 import './styles.css'
 
 export interface PageLayoutProps {
@@ -38,6 +38,7 @@ export function PageLayout({
   hideCalendar = false,
   variant = 'purple',
 }: PageLayoutProps) {
+  const calendar = useCalendar()
   return (
     <div className={`page-layout page-layout--${variant}`}>
       <SiteHeader
@@ -47,7 +48,11 @@ export function PageLayout({
       />
       <main className="page-layout__main">{children}</main>
       {hideCalendar ? null : (
-        <CalendarSection events={getUpcomingCalendarItems(3)} viewAllTo="/termine" />
+        <CalendarSection
+          events={calendar.items.slice(0, 3)}
+          status={calendar.status}
+          viewAllTo="/termine"
+        />
       )}
       {hideWasMehr ? null : <WasMehrNav links={wasMehrLinks} />}
       <SiteFooter socials={socials} legalLinks={legalLinks} />

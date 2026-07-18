@@ -1,5 +1,6 @@
 import type { HTMLAttributes, ReactNode } from 'react'
 import { Text } from '../../atoms/text'
+import { Button } from '../../atoms/button'
 import { HighlightText } from '../../atoms/highlight-text'
 import { EventCard } from '../../molecules/event-card'
 import type { CalendarEventItem } from '../calendar-section'
@@ -10,7 +11,15 @@ export interface EventsSectionProps extends HTMLAttributes<HTMLElement> {
   /** Intro paragraphs. */
   intro?: string[]
   events: CalendarEventItem[]
+  /** Loading state of the (async) calendar data. Defaults to `ready`. */
+  status?: 'loading' | 'ready' | 'error'
   emptyLabel?: string
+  loadingLabel?: string
+  errorLabel?: string
+  /** Show a "load more" button (when there are further events to reveal). */
+  hasMore?: boolean
+  onLoadMore?: () => void
+  loadMoreLabel?: string
   /** Footer note (e.g. the "missing an event?" line). */
   children?: ReactNode
 }
@@ -19,7 +28,13 @@ export function EventsSection({
   headingLines = ['Termine', '& Treffen'],
   intro = [],
   events,
+  status = 'ready',
   emptyLabel = 'Aktuell keine anstehenden Termine.',
+  loadingLabel = 'Termine werden geladen …',
+  errorLabel = 'Termine konnten gerade nicht geladen werden. Bitte versuch es später erneut.',
+  hasMore = false,
+  onLoadMore,
+  loadMoreLabel = 'Mehr laden',
   children,
   className,
   ...rest
@@ -48,7 +63,15 @@ export function EventsSection({
           </div>
         ) : null}
 
-        {events.length > 0 ? (
+        {status === 'loading' ? (
+          <Text as="p" variant="body" color="white">
+            {loadingLabel}
+          </Text>
+        ) : status === 'error' ? (
+          <Text as="p" variant="body" color="white">
+            {errorLabel}
+          </Text>
+        ) : events.length > 0 ? (
           <div className="events__list">
             {events.map((event) => (
               <EventCard
@@ -65,6 +88,14 @@ export function EventsSection({
             {emptyLabel}
           </Text>
         )}
+
+        {status === 'ready' && hasMore && onLoadMore ? (
+          <div className="events__more">
+            <Button color="neon" onClick={onLoadMore}>
+              {loadMoreLabel}
+            </Button>
+          </div>
+        ) : null}
 
         {children ? <div className="events__note">{children}</div> : null}
       </div>

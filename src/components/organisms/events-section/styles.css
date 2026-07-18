@@ -24,6 +24,12 @@
   gap: var(--space-5);
 }
 
+.events__more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
 .events__note {
   display: flex;
   flex-direction: column;

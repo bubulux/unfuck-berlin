@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import './styles/global.css'
 import { ScrollToTop } from './lib/scroll-to-top'
 import { AnalyticsTracker } from './lib/analytics'
+import { CalendarProvider } from './context/calendar'
 import { Home } from './pages/home'
 import { Spitzenkandidaten } from './pages/spitzenkandidaten'
 import { Wahlprogramm } from './pages/wahlprogramm'
@@ -19,19 +20,21 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <ScrollToTop />
       <AnalyticsTracker />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/spitzenkandidaten" element={<Spitzenkandidaten />} />
-        <Route path="/wahlprogramm" element={<Wahlprogramm />} />
-        <Route path="/wahlsystem" element={<Wahlsystem />} />
-        <Route path="/unfuck-berlin" element={<UnfuckBerlin />} />
-        <Route path="/termine" element={<Termine />} />
-        <Route path="/kandidaten" element={<Kandidaten />} />
-        <Route path="/sticker" element={<Sticker />} />
-        <Route path="/confirm" element={<Confirm />} />
-        {/* Alias: the server sends confirmation links as /confirm.html?token=… */}
-        <Route path="/confirm.html" element={<Confirm />} />
-      </Routes>
+      <CalendarProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/spitzenkandidaten" element={<Spitzenkandidaten />} />
+          <Route path="/wahlprogramm" element={<Wahlprogramm />} />
+          <Route path="/wahlsystem" element={<Wahlsystem />} />
+          <Route path="/unfuck-berlin" element={<UnfuckBerlin />} />
+          <Route path="/termine" element={<Termine />} />
+          <Route path="/kandidaten" element={<Kandidaten />} />
+          <Route path="/sticker" element={<Sticker />} />
+          <Route path="/confirm" element={<Confirm />} />
+          {/* Alias: the server sends confirmation links as /confirm.html?token=… */}
+          <Route path="/confirm.html" element={<Confirm />} />
+        </Routes>
+      </CalendarProvider>
     </BrowserRouter>
   </StrictMode>,
 )
