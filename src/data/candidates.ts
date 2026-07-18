@@ -6,7 +6,7 @@ export interface Candidate {
   name: string;
   image: string;
   imageAlt: string;
-  subtitle: string;
+  subtitle?: string;
   meta: string[];
   followLabel: string;
   socials: SocialLink[];
@@ -18,7 +18,6 @@ export const PAUL: Candidate = {
   name: "Paul Löper",
   image: "/pics/spitzen/paulMain.png",
   imageAlt: "Paul Löper",
-  subtitle: "Kandidierende zur Wahl des AGH 2026 / Listenplatz 2",
   meta: [
     "Kandidat der Landesliste Volt Berlin",
     "Listenplatz: 2 | Alter: 36 | Bezirk: Pankow",
@@ -53,7 +52,6 @@ export const ANNA: Candidate = {
   name: "Anna Auerbach",
   image: "/pics/spitzen/annaMain.png",
   imageAlt: "Anna Auerbach",
-  subtitle: "Kandidierende zur Wahl des AGH 2026 / Listenplatz 1",
   meta: [
     "Kandidatin der Landesliste Volt Berlin",
     "Listenplatz: 1 | Alter: 44 | Bezirk: Mitte",

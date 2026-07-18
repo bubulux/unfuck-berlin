@@ -17,6 +17,13 @@
   gap: var(--space-5);
 }
 
+.candidate__media,
+.candidate__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
 .candidate__name {
   line-height: var(--line-snug);
 }
@@ -25,6 +32,18 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* Desktop: name + portrait in a sticky left column, the bio content beside it. */
+@media (min-width: 64rem) {
+  .candidate__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+    column-gap: var(--space-8);
+  }
 }
 
 .candidate__meta {
