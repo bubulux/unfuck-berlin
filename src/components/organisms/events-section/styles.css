@@ -35,4 +35,38 @@
   flex-direction: column;
   gap: var(--space-2);
   margin-top: var(--space-4);
+  text-align: center;
+}
+
+/* Links in the note (e.g. the press e-mail) read as links. */
+.events__note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Desktop: widen the section and lay events out in a row grid (cards restack
+ * themselves when a cell gets narrow — see the event-card container query).
+ * Text blocks stay at a readable width. */
+@media (min-width: 48rem) {
+  .events__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+  }
+
+  .events__intro,
+  .events__note {
+    max-width: 44rem;
+  }
+
+  .events__note {
+    margin-inline: auto;
+  }
+
+  .events__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: var(--space-5);
+  }
 }

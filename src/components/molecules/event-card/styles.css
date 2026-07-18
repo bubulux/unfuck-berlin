@@ -1,9 +1,16 @@
 .event-card {
+  /* React to the card's own width so a narrow one (e.g. in the 3-up grid)
+   * restacks instead of letting long titles overflow. */
+  container-type: inline-size;
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-white);
+}
+
+/* Wide card: date column | divider | body. */
+.event-card__layout {
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  padding: var(--space-4) var(--space-5);
-  background-color: var(--color-white);
 }
 
 /* Fixed-width date column + vertical divider, like the mockup. */
@@ -11,7 +18,28 @@
   flex: 0 0 auto;
   min-width: 4.5rem;
   padding-right: var(--space-4);
-  border-right: 2px solid rgba(80, 35, 121, 0.25);
+  border-right: 2px solid rgba(17, 17, 17, 0.25);
+}
+
+/* Narrow card: stack into two rows — date + horizontal divider on top, then
+ * the body underneath (date badge laid out inline, e.g. "20-22 JUL"). */
+@container (max-width: 22rem) {
+  .event-card__layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+
+  .event-card__date {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.4em;
+    min-width: 0;
+    padding-right: 0;
+    padding-bottom: var(--space-3);
+    border-right: none;
+    border-bottom: 2px solid rgba(17, 17, 17, 0.25);
+  }
 }
 
 .event-card__body {
@@ -21,6 +49,51 @@
   min-width: 0;
 }
 
-.event-card__details {
-  opacity: 0.8;
+/* Time & location share a layout: leading icon + text, black, on the white card. */
+.event-card__time,
+.event-card__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4em;
+  color: var(--color-black);
+  font-size: var(--text-body);
+  line-height: 1.3;
+}
+
+.event-card__time {
+  align-items: center;
+  margin-top: var(--space-1);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Long addresses/URLs break instead of overflowing the card. */
+.event-card__location > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.event-card__icon {
+  flex: 0 0 auto;
+  width: 1.1em;
+  height: 1.1em;
+}
+
+/* Nudge the pin to line up with the first line of (possibly wrapping) text. */
+.event-card__location .event-card__icon {
+  margin-top: 0.15em;
+}
+
+/* When the location is a URL (e.g. a Google Maps link) it's shown as a link. */
+.event-card__map {
+  width: fit-content;
+  font-weight: var(--font-weight-bold);
+}
+
+.event-card__map > span {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.event-card__map:hover {
+  opacity: 0.75;
 }

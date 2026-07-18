@@ -21,6 +21,9 @@
 .date-badge--white {
   color: var(--color-white);
 }
+.date-badge--black {
+  color: var(--color-black);
+}
 .date-badge--neon {
   color: var(--color-neon);
 }

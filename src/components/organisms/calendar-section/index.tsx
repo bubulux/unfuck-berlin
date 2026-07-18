@@ -12,7 +12,10 @@ export interface CalendarEventItem {
   /** Month abbreviation, e.g. "JUL". */
   month: string
   title: string
-  details?: string
+  /** Time line, e.g. "17:00–19:00 Uhr" (empty for all-day). */
+  time?: string
+  /** Venue/address line. */
+  location?: string
 }
 
 export interface CalendarSectionProps extends HTMLAttributes<HTMLElement> {
@@ -68,7 +71,8 @@ export function CalendarSection({
                 day={event.day}
                 month={event.month}
                 title={event.title}
-                details={event.details}
+                time={event.time}
+                location={event.location}
               />
             ))}
           </div>

@@ -23,3 +23,18 @@
   font-size: var(--text-body);
   font-weight: var(--font-weight-bold);
 }
+
+/* Desktop: widen the block and lay the (up to three) events out in a row. */
+@media (min-width: 48rem) {
+  .calendar__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+  }
+
+  .calendar__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: var(--space-5);
+  }
+}

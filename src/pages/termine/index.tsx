@@ -37,9 +37,7 @@ export function Termine() {
         </Text>
         <Text as="p" variant="body" color="white">
           Schreib dazu eine Mail an{" "}
-          <a href="mailto:presse@voltberlin.org" style={{ color: "inherit" }}>
-            presse@voltberlin.org
-          </a>
+          <a href="mailto:presse@voltberlin.org">presse@voltberlin.org</a>
         </Text>
       </EventsSection>
       <CarouselSection images={MEET_IMAGES} />

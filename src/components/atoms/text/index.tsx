@@ -17,6 +17,7 @@ export type ColorToken =
   | 'green'
   | 'blue'
   | 'pink'
+  | 'black'
 
 export type TextWeight = 'light' | 'regular' | 'medium' | 'bold'
 export type TextAlign = 'left' | 'center' | 'right'
@@ -29,6 +30,7 @@ const COLOR_TOKENS: readonly ColorToken[] = [
   'green',
   'blue',
   'pink',
+  'black',
 ]
 
 /** Default semantic element per variant (overridable via `as`). */

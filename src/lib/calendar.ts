@@ -166,6 +166,12 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
       ? `${s.time}–${e.time} Uhr`
       : `${s.time} Uhr`
   const location = ev.location ? ev.location.replace(/\s*\n\s*/g, ', ').trim() : ''
-  const details = [location, time].filter(Boolean).join(' · ')
-  return { id: ev.id, day, month: s.month, title: ev.title, details }
+  return {
+    id: ev.id,
+    day,
+    month: s.month,
+    title: ev.title,
+    time: time || undefined,
+    location: location || undefined,
+  }
 }

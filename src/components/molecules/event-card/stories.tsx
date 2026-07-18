@@ -16,7 +16,7 @@ const meta = {
     day: '18-19',
     month: 'JUL',
     title: 'Lesbisch-Schwules Stadtfest',
-    details: 'Motzstraßenfest',
+    location: 'Motzstraßenfest',
   },
 } satisfies Meta<typeof EventCard>
 
@@ -30,7 +30,8 @@ export const WithLocation: Story = {
     day: '22',
     month: 'JUL',
     title: 'Infoabend Volt Reinickendorf',
-    details: 'Restaurant Lucky Chinese, Alt-Tegel 27, 13507 Berlin, 18:00 Uhr',
+    location: 'Restaurant Lucky Chinese, Alt-Tegel 27, 13507 Berlin',
+    time: '18:00 Uhr',
   },
 }
 
@@ -39,6 +40,6 @@ export const WithTime: Story = {
     day: '25',
     month: 'JUL',
     title: '💜 CSD mit Volt Berlin 🏳️‍🌈',
-    details: '12:00 – 18:00 Uhr',
+    time: '12:00 – 18:00 Uhr',
   },
 }

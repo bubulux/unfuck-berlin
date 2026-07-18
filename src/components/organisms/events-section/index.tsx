@@ -79,7 +79,8 @@ export function EventsSection({
                 day={event.day}
                 month={event.month}
                 title={event.title}
-                details={event.details}
+                time={event.time}
+                location={event.location}
               />
             ))}
           </div>
