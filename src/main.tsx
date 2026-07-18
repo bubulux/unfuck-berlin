@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router'
 import './styles/global.css'
 import { ScrollToTop } from './lib/scroll-to-top'
 import { AnalyticsTracker } from './lib/analytics'
@@ -33,6 +33,8 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/confirm" element={<Confirm />} />
           {/* Alias: the server sends confirmation links as /confirm.html?token=… */}
           <Route path="/confirm.html" element={<Confirm />} />
+          {/* Unknown routes fall back to the homepage. */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </CalendarProvider>
     </BrowserRouter>
