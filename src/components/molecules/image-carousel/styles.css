@@ -6,7 +6,6 @@
 }
 
 .carousel__viewport {
-  position: relative;
   overflow: hidden;
   border-radius: var(--radius-md);
 }
@@ -17,7 +16,6 @@
 }
 
 .carousel__slide {
-  flex: 0 0 100%;
   min-width: 0;
 }
 
@@ -27,26 +25,41 @@
   height: auto;
 }
 
-/* Neon nav buttons, left & right, vertically centered. */
+/* Tablet/desktop show multiple slides — add a little breathing room between
+ * them (inner padding keeps the translate math based on whole-slide widths). */
+@media (min-width: 48rem) {
+  .carousel__slide {
+    padding-inline: var(--space-2);
+  }
+}
+
+/* Controls: prev · dots · next, together in one centered row below the photos. */
+.carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
 .carousel__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: var(--radius-pill);
   background-color: var(--color-neon);
   color: var(--color-purple);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  transition: filter 0.15s ease;
+  transition: filter 0.15s ease, opacity 0.15s ease;
 }
 
 .carousel__btn:hover {
   filter: brightness(0.92);
+}
+
+.carousel__btn:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .carousel__btn:focus-visible {
@@ -54,23 +67,14 @@
   outline-offset: 2px;
 }
 
-.carousel__btn--prev {
-  left: var(--space-3);
-}
-
-.carousel__btn--next {
-  right: var(--space-3);
-}
-
 .carousel__btn svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
-/* Position/indicator dots. */
 .carousel__dots {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: var(--space-2);
 }
 
