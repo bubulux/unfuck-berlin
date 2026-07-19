@@ -3,55 +3,42 @@ import { PageLayout } from "../../components/templates/page-layout";
 import { VotingSystemSection } from "../../components/organisms/voting-system-section";
 import { ProgramIntro } from "../../components/organisms/program-intro";
 import { Text } from "../../components/atoms/text";
+import { WAHLSYSTEM } from "../../data/wahlsystem";
 
 export function Wahlsystem() {
   const { pathname } = useLocation();
+  const { heading, first, second, mediaCaption, mit16 } = WAHLSYSTEM;
+
   return (
     <PageLayout activePath={pathname} variant="light" hideCalendar>
       <VotingSystemSection
-        headingLines={["Erste & Zweite", "Stimme:", "Vote Volt"]}
-        first={{
-          title: "Die Erststimme – Deine Wahl für eine Person",
-          paragraphs: [
-            "Mit der Erststimme wählst du eine Kandidatin oder einen Kandidaten aus deinem Wahlkreis. Diese Person vertritt deine Region im Parlament und setzt sich dort für die Interessen der Menschen vor Ort ein.",
-            "Wer die meisten Stimmen im Wahlkreis erhält, gewinnt das Direktmandat. Mit deiner Erststimme entscheidest du also, wer deine Stimme in der Politik vertreten soll.",
-          ],
-        }}
+        headingLines={heading}
+        first={first}
         media={{
           src: "/pics/wahlsystem/paul-anna-portrait.png",
           alt: "Paul Löper und Anna Auerbach",
-          captionLabel: "Spitzenduo Volt kennenlernen",
+          captionLabel: mediaCaption,
           captionTo: "/spitzenkandidaten",
         }}
-        second={{
-          title: "Die Zweitstimme – Deine Wahl für VOLT",
-          paragraphs: [
-            "Mit der Zweitstimme entscheidest du, welche Partei wie stark im Parlament vertreten ist. Sie ist ausschlaggebend für die Sitzverteilung und bestimmt damit maßgeblich die politischen Mehrheiten.",
-            "Du wählst also nicht eine einzelne Person, sondern die Partei, deren Ziele und Ideen dich am meisten überzeugen. Die Zweitstimme hat deshalb einen großen Einfluss darauf, welche Politik in den kommenden Jahren umgesetzt wird.",
-          ],
-        }}
+        second={second}
       />
       <ProgramIntro
-        heading="Wählen mit 16?"
+        wide
+        heading={mit16.heading}
         headingColor="yellow"
         headingAlign="left"
-        ctaLabel="Wahlprogramm"
+        ctaLabel={mit16.ctaLabel}
         ctaColor="neon"
         ctaTo="/wahlprogramm"
       >
         <Text color="purple" weight="bold">
-          Berlin gehört auch dir.
+          {mit16.lead}
         </Text>
-        <Text color="purple">
-          Du bist 16 oder älter? Dann kannst du dieses Jahr zum ersten Mal
-          wählen. Das ist mehr als nur ein Kreuz auf dem Stimmzettel – es ist
-          deine Chance, die Zukunft deiner Stadt mitzugestalten. Ob Mieten,
-          Bildung, öffentlicher Nahverkehr, Klima oder Freizeitangebote – die
-          Entscheidungen der Politik betreffen deinen Alltag. Informiere dich
-          über die Themen und Parteien, bilde dir deine eigene Meinung und geh
-          wählen. Denn Berlin verändert sich nur, wenn Menschen mitentscheiden.
-          Vielleicht beginnt das mit deiner ersten Stimme.
-        </Text>
+        {mit16.paragraphs.map((paragraph, i) => (
+          <Text key={i} color="purple">
+            {paragraph}
+          </Text>
+        ))}
       </ProgramIntro>
     </PageLayout>
   );

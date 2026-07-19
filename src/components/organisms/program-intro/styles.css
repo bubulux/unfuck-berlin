@@ -27,3 +27,16 @@
   margin-top: var(--space-2);
   text-align: center;
 }
+
+/* Wide variant: stretch the container left-to-right on desktop, but keep the
+ * body copy at a readable line length. */
+@media (min-width: 64rem) {
+  .program-intro--wide .program-intro__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+  }
+
+  .program-intro--wide .program-intro__body {
+    max-width: 52rem;
+  }
+}

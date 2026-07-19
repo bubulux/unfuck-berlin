@@ -15,3 +15,22 @@
 .voting__heading {
   margin-bottom: var(--space-2);
 }
+
+/* Desktop: stretch the container left-to-right, but cap the running text at a
+ * readable line length and keep the portrait from becoming oversized. */
+@media (min-width: 64rem) {
+  .voting__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+    gap: var(--space-7);
+  }
+
+  .voting .explainer {
+    max-width: 52rem;
+  }
+
+  /* Keep the portrait roughly at its mobile size (left-aligned), not stretched. */
+  .voting .media-overlay {
+    max-width: 22rem;
+  }
+}

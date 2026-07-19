@@ -23,6 +23,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const DATA_DIR = resolve(__dirname, '..', 'src', 'data')
 const OUT_WAHLPROGRAMM = resolve(DATA_DIR, 'wahlprogramm.generated.ts')
 const OUT_KANDIDATEN = resolve(DATA_DIR, 'kandidaten.generated.ts')
+const OUT_WAHLSYSTEM = resolve(DATA_DIR, 'wahlsystem.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -44,6 +45,10 @@ const withParams = (url, params) => {
 
 const clean = (s) => (s || '').trim()
 const lines = (arr) => (Array.isArray(arr) ? arr.map((z) => clean(z)).filter(Boolean) : [])
+// seiteCountDown trennt Absaetze mit einzelnem \n; in ein Array zerlegen.
+const splitLines = (s) => clean(s).split('\n').map((l) => l.trim()).filter(Boolean)
+// Titel mit \n zu einer Zeile zusammenfassen.
+const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
 
 const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]{
   content_modules[]{
@@ -59,6 +64,11 @@ const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]
 const KANDIDATEN_QUERY = `*[_type=="kandidatAgh"]|order(listenplatz asc){
   "slug": slug.current, name, listenplatz, bezirk, alter, wahlkreis,
   herzensthema, ueberMich, "foto": foto.asset->url
+}`
+
+const WAHLSYSTEM_QUERY = `*[_id=="seiteCountDown"][0]{
+  heroZeilen, erststimmeTitel, erststimmeText, zweitstimmeTitel, zweitstimmeText,
+  duoLinkText, waehlenMit16Titel, gehoertDirTitel, waehlenMit16Text, programmButton
 }`
 
 function buildWahlprogramm(res) {
@@ -128,18 +138,44 @@ function buildKandidaten(rows) {
   return list
 }
 
+function buildWahlsystem(d) {
+  if (!d) {
+    throw new Error('Dokument "seiteCountDown" nicht gefunden.')
+  }
+  return {
+    heading: lines(d.heroZeilen),
+    first: {
+      title: oneLine(d.erststimmeTitel),
+      paragraphs: splitLines(d.erststimmeText),
+    },
+    second: {
+      title: oneLine(d.zweitstimmeTitel),
+      paragraphs: splitLines(d.zweitstimmeText),
+    },
+    mediaCaption: clean(d.duoLinkText),
+    mit16: {
+      heading: clean(d.waehlenMit16Titel),
+      lead: clean(d.gehoertDirTitel),
+      paragraphs: splitLines(d.waehlenMit16Text),
+      ctaLabel: clean(d.programmButton),
+    },
+  }
+}
+
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
 // Letzter Abruf: ${new Date().toISOString()}`
 
 async function main() {
-  const [wpRes, kandiRows] = await Promise.all([
+  const [wpRes, kandiRows, wsRes] = await Promise.all([
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
+    client.fetch(WAHLSYSTEM_QUERY),
   ])
 
   const wahlprogramm = buildWahlprogramm(wpRes)
   const kandidaten = buildKandidaten(kandiRows)
+  const wahlsystem = buildWahlsystem(wsRes)
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -151,15 +187,20 @@ async function main() {
     `${header}\n\nexport const KANDIDATEN_CMS = ${JSON.stringify(kandidaten, null, 2)}\n`,
     'utf8',
   )
+  writeFileSync(
+    OUT_WAHLSYSTEM,
+    `${header}\n\nexport const WAHLSYSTEM_CMS = ${JSON.stringify(wahlsystem, null, 2)}\n`,
+    'utf8',
+  )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende.`,
+    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem.`,
   )
 }
 
 main().catch((err) => {
   console.warn('Sanity-Abruf fehlgeschlagen:', err.message)
-  if (existsSync(OUT_WAHLPROGRAMM) && existsSync(OUT_KANDIDATEN)) {
+  if (existsSync(OUT_WAHLPROGRAMM) && existsSync(OUT_KANDIDATEN) && existsSync(OUT_WAHLSYSTEM)) {
     console.warn('Behalte bestehende generierte Dateien (letzter Stand).')
     process.exit(0)
   }
