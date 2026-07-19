@@ -37,6 +37,7 @@ export function CandidatesOverview({
               image={candidate.image}
               listenplatz={candidate.listenplatz}
               bezirk={candidate.bezirk}
+              to={`/kandidierende/${candidate.slug}`}
             />
           ))}
         </div>

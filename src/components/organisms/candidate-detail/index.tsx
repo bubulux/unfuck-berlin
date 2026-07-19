@@ -1,5 +1,6 @@
 import type { HTMLAttributes } from 'react'
 import { Text } from '../../atoms/text'
+import { RichText } from '../../molecules/rich-text'
 import { SocialRow, type SocialLink } from '../../molecules/social-row'
 import './styles.css'
 
@@ -79,9 +80,7 @@ export function CandidateDetail({
                 <Text as="h2" variant="subtitel" color={headingColor}>
                   {block.heading}
                 </Text>
-                <Text as="p" variant="body" color={textColor}>
-                  {block.body}
-                </Text>
+                <RichText text={block.body} color={textColor} />
               </div>
             ))}
           </div>

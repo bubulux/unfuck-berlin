@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-19T11:09:16.597Z
+// Letzter Abruf: 2026-07-19T13:29:40.307Z
 
 export const WAHLPROGRAMM_CMS = {
   "intro": {

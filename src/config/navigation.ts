@@ -14,7 +14,7 @@ export const NAV_LINKS: NavItem[] = [
 export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Kalender", to: "/termine" },
-  { label: "Alle Voltkandidierenden", to: "/kandidaten" },
+  { label: "Alle Voltkandidierenden", to: "/kandidierende" },
   { label: "Sticker abgreifen", to: "/sticker" },
   { label: "unf*ck berlin", to: "/unfuck-berlin" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },

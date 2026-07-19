@@ -8,7 +8,7 @@ const meta = {
   args: {
     imageSrc: '/pics/unsereKandidatenPortraitCluster.png',
     imageAlt: 'Die Kandidierenden von Volt Berlin',
-    ctaTo: '/kandidaten',
+    ctaTo: '/kandidierende',
   },
 } satisfies Meta<typeof CandidatesSection>
 

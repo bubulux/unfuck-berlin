@@ -8,8 +8,8 @@ export interface RichTextProps {
    * Inline-<strong> wird als fettes <strong> gerendert.
    */
   text: string
-  /** Farbe der Absaetze. */
-  color?: ColorToken
+  /** Farbe der Absaetze (Token oder roher CSS-Farbwert). */
+  color?: ColorToken | (string & {})
   className?: string
 }
 

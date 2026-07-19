@@ -30,7 +30,7 @@ export function Home() {
         leadCaptionTo="/spitzenkandidaten"
         imageSrc="/pics/unsereKandidatenPortraitCluster.png"
         imageAlt="Die Kandidierenden von Volt Berlin"
-        ctaTo="/kandidaten"
+        ctaTo="/kandidierende"
       />
       <UnfuckSection
         logoSrc="/logos/unfckBerlin.svg"
