@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
+    "content": "node scripts/fetch-content.mjs",
+    "prebuild": "node scripts/fetch-content.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -12,6 +14,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@sanity/client": "^7.23.2",
     "ical.js": "^2.2.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",

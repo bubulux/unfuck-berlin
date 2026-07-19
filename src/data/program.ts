@@ -1,6 +1,10 @@
 import type { ProgramPillarItem } from '../components/organisms/program-section'
+import { PROGRAM_PILLARS as CMS_PILLARS } from './program.generated'
 
-export const PROGRAM_PILLARS: ProgramPillarItem[] = [
+// Fallback, falls die generierte Datei (noch) leer ist. Der Regelfall sind die
+// aus Sanity generierten Kapitel in program.generated.ts (via `npm run content`
+// / prebuild). Bei erreichbarem Sanity gewinnt immer der CMS-Inhalt.
+const FALLBACK_PILLARS: ProgramPillarItem[] = [
   {
     title: 'Berlin funktioniert',
     tags: ['Verwaltung', 'Digitalisierung', 'Beteiligung'],
@@ -22,3 +26,7 @@ export const PROGRAM_PILLARS: ProgramPillarItem[] = [
     body: '…macht die Stadt zur Innovationshauptstadt: mit mehr Ausgründungen aus den Hochschulen, Berlin als Erstkundin für neue Technologien, schneller Fachkräfteeinwanderung und einer gemeinsamen Wirtschaftsregion mit Brandenburg.',
   },
 ]
+
+export const PROGRAM_PILLARS: ProgramPillarItem[] = CMS_PILLARS.length
+  ? CMS_PILLARS
+  : FALLBACK_PILLARS
