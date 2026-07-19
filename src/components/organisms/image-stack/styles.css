@@ -18,3 +18,22 @@
   width: 100%;
   height: auto;
 }
+
+/* Desktop: the spaced gallery becomes a grid instead of a tall single column.
+ * Three across on tablet (3 + 2), five across on wide screens (one row). */
+@media (min-width: 48rem) {
+  .image-stack--gap .image-stack__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 64rem) {
+  .image-stack--gap .image-stack__inner {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
