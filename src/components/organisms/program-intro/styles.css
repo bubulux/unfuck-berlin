@@ -39,4 +39,10 @@
   .program-intro--wide .program-intro__body {
     max-width: 52rem;
   }
+
+  /* Wide variant reads left-aligned, so anchor the CTA to the left too. */
+  .program-intro--wide .program-intro__cta {
+    align-self: start;
+    text-align: left;
+  }
 }

@@ -12,8 +12,10 @@ export function Wahlprogramm() {
   return (
     <PageLayout activePath={pathname} variant="light">
       <ProgramIntro
+        wide
         heading={intro.heading}
         headingColor={mapHeadlineTheme(intro.theme, "green")}
+        headingAlign="left"
         ctaLabel={intro.ctaLabel}
         ctaHref={intro.ctaHref}
       >
@@ -23,6 +25,7 @@ export function Wahlprogramm() {
       <ProgramSection pillars={pillars} />
 
       <ProgramIntro
+        wide
         heading={europa.heading}
         headingColor={mapHeadlineTheme(europa.theme, "yellow")}
         headingAlign="left"
