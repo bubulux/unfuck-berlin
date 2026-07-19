@@ -45,21 +45,23 @@ export function UnfuckSection({
           aspect={videoAspect}
         />
 
-        <Text as="p" variant="body" color="white" align="center" className="unfuck__text">
-          {text}
-        </Text>
+        <div className="unfuck__copy">
+          <Text as="p" variant="body" color="white" className="unfuck__text">
+            {text}
+          </Text>
 
-        {ctaHref ? (
-          <Button as="a" href={ctaHref} color="neon">
-            {ctaLabel}
-          </Button>
-        ) : ctaTo ? (
-          <Button as={RouterLink} to={ctaTo} color="neon">
-            {ctaLabel}
-          </Button>
-        ) : (
-          <Button color="neon">{ctaLabel}</Button>
-        )}
+          {ctaHref ? (
+            <Button as="a" href={ctaHref} color="neon">
+              {ctaLabel}
+            </Button>
+          ) : ctaTo ? (
+            <Button as={RouterLink} to={ctaTo} color="neon">
+              {ctaLabel}
+            </Button>
+          ) : (
+            <Button color="neon">{ctaLabel}</Button>
+          )}
+        </div>
       </div>
     </section>
   )

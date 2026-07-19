@@ -26,6 +26,48 @@
   max-width: 22rem;
 }
 
+.unfuck__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
 .unfuck__text {
   max-width: 30rem;
+}
+
+/* Desktop: two columns — left holds the logo (top) and the text + CTA (bottom),
+ * the right column is taken by the (tall) video, which sets the row height. */
+@media (min-width: 64rem) {
+  .unfuck__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "logo  video"
+      "copy  video";
+    align-items: start;
+    column-gap: var(--space-8);
+    text-align: left;
+  }
+
+  .unfuck__logo {
+    grid-area: logo;
+  }
+
+  .unfuck__video {
+    grid-area: video;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .unfuck__copy {
+    grid-area: copy;
+    align-self: end;
+    align-items: start;
+    text-align: left;
+  }
 }
