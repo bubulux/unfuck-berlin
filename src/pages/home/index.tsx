@@ -17,7 +17,7 @@ export function Home() {
         videoTitle="Anna und Paul"
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"
-        text="Volt macht, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten."
+        text={<>Berlin besser machen!<br /><br />Volt bringt nach Berlin, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.</>}
         ctaLabel="Wahlprogramm"
         ctaTo="/wahlprogramm"
       />
