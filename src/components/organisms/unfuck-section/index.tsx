@@ -42,9 +42,9 @@ export function UnfuckSection({
           />
         </div>
 
-        <Text as="p" variant="body" color="white" align="center" className="unfuck__text">
+        {text && <Text as="p" variant="body" color="white" align="center" className="unfuck__text">
           {text}
-        </Text>
+        </Text>}
 
         {ctaHref ? (
           <Button as="a" href={ctaHref} color="neon">

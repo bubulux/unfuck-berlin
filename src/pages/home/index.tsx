@@ -36,7 +36,7 @@ export function Home() {
         logoAlt="unf*ck berlin"
         videoSrc="https://www.youtube-nocookie.com/embed/BwVBRkJxt-w"
         videoTitle="15. Juli 2026"
-        text="Hinter unf*ck berlin steckt eine einfache Idee: Probleme verschwinden nicht, wenn man höflicher über sie spricht. Aber sie verschwinden auch nicht, wenn man nur über sie klagt."
+        text=""
         ctaLabel="Worum geht es?"
         ctaTo="/unfuck-berlin"
       />
