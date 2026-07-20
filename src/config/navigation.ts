@@ -30,7 +30,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "https://www.linkedin.com/company/volt-berlin/",
   },
   { platform: "mastodon", href: "https://berlin.social/@VoltBerlin" },
-  { platform: "youtube", href: "https://www.youtube.com/@volt_berlin/shorts" },
+  { platform: "youtube", href: "https://www.youtube.com/@volt_berlin/" },
 ];
 
 /** Footer legal links. */

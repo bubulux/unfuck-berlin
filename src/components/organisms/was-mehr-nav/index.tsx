@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from 'react'
 import { Link } from '../../atoms/link'
 import { Icon } from '../../atoms/icon'
-import { HighlightText } from '../../atoms/highlight-text'
+// import { HighlightText } from '../../atoms/highlight-text'
 import { WAS_MEHR_LINKS } from '../../../config/navigation'
 import './styles.css'
 
@@ -35,7 +35,7 @@ export function WasMehrNav({
   return (
     <section className={classes} aria-labelledby="was-mehr-title" {...rest}>
       <div className="was-mehr__inner">
-        <HighlightText
+        {/* <HighlightText
           as="h2"
           id="was-mehr-title"
           className="was-mehr__title"
@@ -45,7 +45,7 @@ export function WasMehrNav({
           textColor="purple"
           slant={0.1}
           uppercase
-        />
+        /> */}
 
         <nav className="was-mehr__links" aria-label="Was mehr?">
           {links.map((link) => (

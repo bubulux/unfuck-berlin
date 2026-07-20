@@ -17,8 +17,8 @@ export function Home() {
         videoTitle="Anna und Paul"
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"
-        text="Volt macht, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten."
-        ctaLabel="Wahlprogramm kurz"
+        text={<>Berlin besser machen!<br /><br />Volt bringt nach Berlin, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.</>}
+        ctaLabel="Wahlprogramm"
         ctaTo="/wahlprogramm"
       />
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
@@ -36,7 +36,7 @@ export function Home() {
         logoAlt="unf*ck berlin"
         videoSrc="https://www.youtube-nocookie.com/embed/BwVBRkJxt-w"
         videoTitle="15. Juli 2026"
-        text="Hinter unf*ck berlin steckt eine einfache Idee: Probleme verschwinden nicht, wenn man höflicher über sie spricht. Aber sie verschwinden auch nicht, wenn man nur über sie klagt."
+        text=""
         ctaLabel="Worum geht es?"
         ctaTo="/unfuck-berlin"
       />

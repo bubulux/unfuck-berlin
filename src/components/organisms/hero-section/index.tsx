@@ -11,7 +11,7 @@ export interface HeroSectionProps {
    * berlin" graphic). */
   logoSrc?: string
   logoAlt?: string
-  text: string
+  text: React.ReactNode
   ctaLabel: string
   /** CTA target — internal route… */
   ctaTo?: string
@@ -69,10 +69,11 @@ export function HeroSection({
             <img className="hero__logo" src={logoSrc} alt={logoAlt ?? ''} />
           ) : null}
 
-          <Text as="p" variant="body" color="white" className="hero__text">
+          <Text as="p" variant="body" color="white" className="hero__text" >
             {text}
           </Text>
 
+          <div className="flex">
           {ctaHref ? (
             <Button as="a" href={ctaHref} color="neon" className="hero__cta">
               {ctaLabel}
@@ -86,6 +87,7 @@ export function HeroSection({
               {ctaLabel}
             </Button>
           )}
+          </div>
         </div>
       </div>
     </section>

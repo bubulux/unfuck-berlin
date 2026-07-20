@@ -27,8 +27,8 @@ export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
 }
 
 const DEFAULT_ACTIONS: HighlightLine[] = [
-  { text: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
-  { text: "Newsletter", href: "https://voltdeutschland.org/newsletter" },
+  { text: "Spenden", to: "https://voltdeutschland.org/berlin/spenden" },
+  { text: "Mitmachen", to: "https://voltdeutschland.org/berlin/mitmachen" },
   { text: "Sticker abgreifen", to: "/sticker" },
 ];
 

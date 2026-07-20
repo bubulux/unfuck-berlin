@@ -8,7 +8,7 @@ import { PROGRAM_PILLARS } from "../../data/program";
 export function Wahlprogramm() {
   const { pathname } = useLocation();
   return (
-    <PageLayout activePath={pathname} variant="light">
+    <PageLayout activePath={pathname} variant="light" hideCalendar>
       <ProgramIntro
         ctaLabel="Wahlprogramm kurz"
         ctaHref="https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf"
