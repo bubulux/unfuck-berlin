@@ -73,6 +73,7 @@ export function HeroSection({
             {text}
           </Text>
 
+          <div className="flex">
           {ctaHref ? (
             <Button as="a" href={ctaHref} color="neon" className="hero__cta">
               {ctaLabel}
@@ -86,6 +87,7 @@ export function HeroSection({
               {ctaLabel}
             </Button>
           )}
+          </div>
         </div>
       </div>
     </section>
