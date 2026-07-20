@@ -23,7 +23,7 @@ function CandidateSection({ data }: { data: Candidate }) {
 export function Spitzenkandidaten() {
   const { pathname } = useLocation()
   return (
-    <PageLayout activePath={pathname} variant="light">
+    <PageLayout activePath={pathname} variant="light" hideCalendar>
       <CandidateSection data={ANNA} />
       <Divider color="neon" />
       <CandidateSection data={PAUL} />
