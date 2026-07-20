@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from 'react'
 import { Link } from '../../atoms/link'
 import { Icon } from '../../atoms/icon'
-import { HighlightText } from '../../atoms/highlight-text'
+// import { HighlightText } from '../../atoms/highlight-text'
 import { WAS_MEHR_LINKS } from '../../../config/navigation'
 import './styles.css'
 
