@@ -25,12 +25,7 @@ export function Home() {
         ctaTo="/wahlprogramm"
       />
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
-      <CandidatesSection
-        lead={<SpitzenduoComposite />}
-        imageSrc="/pics/unsereKandidatenPortraitCluster.png"
-        imageAlt="Die Kandidierenden von Volt Berlin"
-        ctaTo="/kandidierende"
-      />
+      <CandidatesSection lead={<SpitzenduoComposite />} ctaTo="/kandidierende" />
       <UnfuckSection
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"

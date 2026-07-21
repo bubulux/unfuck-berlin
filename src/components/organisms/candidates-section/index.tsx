@@ -2,12 +2,10 @@ import type { HTMLAttributes, ReactNode } from "react";
 import { Text } from "../../atoms/text";
 import { Link } from "../../atoms/link";
 import { HighlightText } from "../../atoms/highlight-text";
+import { CandidateCluster } from "../../molecules/candidate-cluster";
 import "./styles.css";
 
 export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
-  /** Cluster image shown in the left column. */
-  imageSrc: string;
-  imageAlt: string;
   /** Right-column content (the Anna/Paul cards). */
   lead?: ReactNode;
   /** Intro paragraph in the left column. */
@@ -18,8 +16,6 @@ export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
 }
 
 export function CandidatesSection({
-  imageSrc,
-  imageAlt,
   lead,
   text = "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidat:innen kennenlernen.",
   ctaLabel = "Unsere Kandidierenden stellen sich vor",
@@ -46,7 +42,7 @@ export function CandidatesSection({
 
           <div className="candidates__cards">{lead}</div>
 
-          <img className="candidates__image" src={imageSrc} alt={imageAlt} />
+          <CandidateCluster className="candidates__cluster" />
 
           <Text as="p" variant="body" color="white" className="candidates__text">
             {text}

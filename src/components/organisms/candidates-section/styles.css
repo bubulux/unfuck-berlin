@@ -33,11 +33,8 @@
   flex-direction: column;
 }
 
-.candidates__image {
+.candidates__cluster {
   grid-area: cluster;
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .candidates__text {
@@ -89,8 +86,8 @@
     flex: 1 1 auto;
   }
 
-  /* Push the cluster image down so the left column ends near the cards. */
-  .candidates__image {
+  /* Push the cluster down so the left column ends near the cards. */
+  .candidates__cluster {
     margin-top: var(--space-2);
   }
 }

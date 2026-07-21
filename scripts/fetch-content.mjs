@@ -28,6 +28,7 @@ const OUT_VIDEOS = resolve(DATA_DIR, 'videos.generated.ts')
 const OUT_MEETS = resolve(DATA_DIR, 'meets.generated.ts')
 const OUT_UNFCK = resolve(DATA_DIR, 'unfck.generated.ts')
 const OUT_SPITZENDUO = resolve(DATA_DIR, 'spitzenduo.generated.ts')
+const OUT_CLUSTER = resolve(DATA_DIR, 'kandidaten-cluster.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -43,6 +44,21 @@ const CARD_IMG_PARAMS = 'w=480&h=600&fit=crop&crop=top&auto=format'
 const DETAIL_IMG_PARAMS = 'w=720&h=960&fit=crop&crop=top&auto=format'
 // Karussellbilder unveraendert lassen (nur ins beste Format ausliefern).
 const MEET_IMG_PARAMS = 'auto=format'
+// Cluster-Kacheln: Hochformat (3:4) der Quellbilder beibehalten – kein Zuschnitt.
+const CLUSTER_IMG_PARAMS = 'w=600&auto=format'
+
+// Feste Auswahl + Reihenfolge der 9 Kandidierenden im Home-Cluster (3x3).
+const CLUSTER_SLUGS = [
+  'rainer-seider',
+  'aiga-marie-senftleben',
+  'rafael-kaaz',
+  'ingo-partey',
+  'juliane-kalbacher',
+  'cara-seeberg',
+  'theresa-schueltken',
+  'pia-voltz',
+  'sascha-hellwig',
+]
 const withParams = (url, params) => {
   const base = (url || '').trim()
   if (!base) return ''
@@ -223,6 +239,21 @@ function buildUnfck(rows) {
   return list
 }
 
+function buildCluster(rows) {
+  const bySlug = new Map((rows || []).filter((r) => r && r.slug).map((r) => [r.slug, r]))
+  const list = CLUSTER_SLUGS.map((slug) => {
+    const r = bySlug.get(slug)
+    if (!r || !r.foto) return null
+    return { image: withParams(r.foto, CLUSTER_IMG_PARAMS), alt: clean(r.name) }
+  }).filter(Boolean)
+  if (list.length < CLUSTER_SLUGS.length) {
+    throw new Error(
+      `Cluster: ${CLUSTER_SLUGS.length - list.length} Kandidat(en) nicht gefunden (Slug/Foto).`,
+    )
+  }
+  return list
+}
+
 function buildSpitzenduo(rows, kandidaten) {
   // Foto + Name kommen aus dem spitzenduo-Dokument; der Link zeigt auf die
   // Detailseite der passenden Person im Kandidierenden-Pool (nach Reihenfolge
@@ -272,6 +303,7 @@ async function main() {
   const meets = buildMeets(meetsRes)
   const unfck = buildUnfck(unfckRes)
   const spitzenduo = buildSpitzenduo(spitzenduoRows, kandidaten)
+  const cluster = buildCluster(kandiRows)
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -308,9 +340,14 @@ async function main() {
     `${header}\n\nexport const SPITZENDUO_CMS = ${JSON.stringify(spitzenduo, null, 2)}\n`,
     'utf8',
   )
+  writeFileSync(
+    OUT_CLUSTER,
+    `${header}\n\nexport const KANDIDATEN_CLUSTER_CMS = ${JSON.stringify(cluster, null, 2)}\n`,
+    'utf8',
+  )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}).`,
+    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
   )
 }
 
@@ -323,7 +360,8 @@ main().catch((err) => {
     existsSync(OUT_VIDEOS) &&
     existsSync(OUT_MEETS) &&
     existsSync(OUT_UNFCK) &&
-    existsSync(OUT_SPITZENDUO)
+    existsSync(OUT_SPITZENDUO) &&
+    existsSync(OUT_CLUSTER)
   ) {
     console.warn('Behalte bestehende generierte Dateien (letzter Stand).')
     process.exit(0)
