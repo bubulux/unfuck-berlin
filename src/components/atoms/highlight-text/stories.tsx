@@ -65,9 +65,9 @@ export const UnfuckBerlin: Story = {
 export const StackedActions: Story = {
   args: {
     lines: [
-      { text: "Spenden", to: "/spenden" },
-      { text: "Newsletter", to: "/newsletter" },
-      { text: "Volt Deutschland", href: "https://voltdeutschland.org" },
+      { text: "Spenden", to: "https://voltdeutschland.org/berlin/spenden" },
+      { text: "Mitmachen", to: "https://voltdeutschland.org/berlin/mitmachen" },
+      { text: "Sticker abgreifen", to: "/sticker" },
     ],
     variant: "subtitel",
     color: "neon",
