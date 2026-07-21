@@ -27,6 +27,7 @@ const OUT_WAHLSYSTEM = resolve(DATA_DIR, 'wahlsystem.generated.ts')
 const OUT_VIDEOS = resolve(DATA_DIR, 'videos.generated.ts')
 const OUT_MEETS = resolve(DATA_DIR, 'meets.generated.ts')
 const OUT_UNFCK = resolve(DATA_DIR, 'unfck.generated.ts')
+const OUT_SPITZENDUO = resolve(DATA_DIR, 'spitzenduo.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -93,6 +94,12 @@ const MEETS_QUERY = `*[_type=="seiteMitmachen"][0].carouselBilder[]{ "url": asse
 // Bilder-Collage der /unfuck-berlin-Seite: kommt aus seiteUnfck.collage1
 // (im Studio pflegbar). Reihenfolge = Array-Reihenfolge im Dokument.
 const UNFCK_QUERY = `*[_id=="seiteUnfck"][0].collage1[]{ "url": asset->url }`
+
+// Spitzenduo (Anna & Paul) fuer die Kandidierenden-Karten: Foto + Name aus dem
+// spitzenduo-Dokument. Reihenfolge = Anna (1) vor Paul (2).
+const SPITZENDUO_QUERY = `*[_type=="spitzenduo"]|order(reihenfolge asc){
+  vorname, nachname, "foto": foto.asset->url
+}`
 
 function buildWahlprogramm(res) {
   const mods = res?.content_modules || []
@@ -216,18 +223,46 @@ function buildUnfck(rows) {
   return list
 }
 
+function buildSpitzenduo(rows, kandidaten) {
+  // Foto + Name kommen aus dem spitzenduo-Dokument; der Link zeigt auf die
+  // Detailseite der passenden Person im Kandidierenden-Pool (nach Reihenfolge
+  // gepaart: spitzenduo[0]/kandidaten[0] = Anna, [1] = Paul).
+  const list = (rows || [])
+    .filter((p) => p && p.foto)
+    .map((p, i) => {
+      const vorname = clean(p.vorname)
+      const nachname = clean(p.nachname)
+      const slug = kandidaten[i]?.slug || ''
+      // Rolle positionsbasiert (Anna = 1., Paul = 2.), da das CMS kein Feld dafuer hat.
+      const role = i === 0 ? 'Volt Spitzenkandidatin' : 'Volt Spitzenkandidat'
+      return {
+        vorname,
+        nachname,
+        role,
+        image: withParams(p.foto, MEET_IMG_PARAMS),
+        alt: `${vorname} ${nachname}`.trim(),
+        to: slug ? `/kandidierende/${slug}` : '',
+      }
+    })
+  if (!list.length) {
+    throw new Error('Keine spitzenduo-Dokumente mit Foto gefunden.')
+  }
+  return list
+}
+
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
 // Letzter Abruf: ${new Date().toISOString()}`
 
 async function main() {
-  const [wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes] = await Promise.all([
+  const [wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
     client.fetch(VIDEOS_QUERY),
     client.fetch(MEETS_QUERY),
     client.fetch(UNFCK_QUERY),
+    client.fetch(SPITZENDUO_QUERY),
   ])
 
   const wahlprogramm = buildWahlprogramm(wpRes)
@@ -236,6 +271,7 @@ async function main() {
   const videos = buildVideos(videosRes)
   const meets = buildMeets(meetsRes)
   const unfck = buildUnfck(unfckRes)
+  const spitzenduo = buildSpitzenduo(spitzenduoRows, kandidaten)
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -267,9 +303,14 @@ async function main() {
     `${header}\n\nexport const UNFCK_COLLAGE_CMS = ${JSON.stringify(unfck, null, 2)}\n`,
     'utf8',
   )
+  writeFileSync(
+    OUT_SPITZENDUO,
+    `${header}\n\nexport const SPITZENDUO_CMS = ${JSON.stringify(spitzenduo, null, 2)}\n`,
+    'utf8',
+  )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}).`,
+    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}).`,
   )
 }
 
@@ -281,7 +322,8 @@ main().catch((err) => {
     existsSync(OUT_WAHLSYSTEM) &&
     existsSync(OUT_VIDEOS) &&
     existsSync(OUT_MEETS) &&
-    existsSync(OUT_UNFCK)
+    existsSync(OUT_UNFCK) &&
+    existsSync(OUT_SPITZENDUO)
   ) {
     console.warn('Behalte bestehende generierte Dateien (letzter Stand).')
     process.exit(0)

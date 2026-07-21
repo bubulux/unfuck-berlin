@@ -1,0 +1,102 @@
+.spitzenduo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  width: 100%;
+  /* Fills the home right column; keeps the cards from stretching absurdly wide
+   * on the full-width wahlsystem section. */
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+/* One card = name (top) + photo (side) + "kennen lernen" (bottom). A white veil
+ * over the purple token lightens the card so it reads on both the purple home
+ * section and the white wahlsystem section. */
+.spitzenduo-card {
+  display: grid;
+  grid-template-columns: 1fr 45%;
+  align-items: stretch;
+  flex: 1 1 auto;
+  min-height: 15rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color-white);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04)),
+    var(--color-purple);
+}
+
+/* Second card mirrored: photo left, name/CTA right. */
+.spitzenduo-card--reverse {
+  grid-template-columns: 45% 1fr;
+}
+
+.spitzenduo-card__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-5);
+}
+
+.spitzenduo-card--reverse .spitzenduo-card__text {
+  order: 2;
+  text-align: right;
+}
+
+.spitzenduo-card--reverse .spitzenduo-card__media {
+  order: 1;
+}
+
+.spitzenduo-card__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.spitzenduo-card__name {
+  line-height: var(--line-snug);
+}
+
+/* Small underlined subline under the name (e.g. "Volt Spitzenkandidatin"). */
+.spitzenduo-card__role {
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.spitzenduo-card--reverse .spitzenduo-card__head {
+  align-items: flex-end;
+}
+
+.spitzenduo-card__cta {
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-bold);
+}
+
+.spitzenduo-card:hover .spitzenduo-card__cta,
+.spitzenduo-card:focus-visible .spitzenduo-card__cta {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.spitzenduo-card__arrow {
+  font-size: 1.25em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Photo fills its side of the card, anchored to the top so faces stay in frame. */
+.spitzenduo-card__media {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.spitzenduo-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}

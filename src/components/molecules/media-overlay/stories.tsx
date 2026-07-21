@@ -16,7 +16,7 @@ const meta = {
     src: '/pics/wahlsystem/paul-anna-portrait.png',
     alt: 'Paul Löper und Anna Auerbach',
     captionLabel: 'Spitzenduo Volt kennenlernen',
-    captionTo: '/spitzenkandidaten',
+    captionTo: '/kandidierende',
   },
 } satisfies Meta<typeof MediaOverlay>
 

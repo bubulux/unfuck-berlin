@@ -4,6 +4,7 @@ import { HeroSection } from '../../components/organisms/hero-section'
 import { CountdownSection } from '../../components/organisms/countdown-section'
 import { CandidatesSection } from '../../components/organisms/candidates-section'
 import { UnfuckSection } from '../../components/organisms/unfuck-section'
+import { SpitzenduoComposite } from '../../components/organisms/spitzenduo-composite'
 import { VIDEOS } from '../../data/videos'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
@@ -25,10 +26,7 @@ export function Home() {
       />
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
       <CandidatesSection
-        leadImageSrc="/pics/wahlsystem/paul-anna-portrait.png"
-        leadImageAlt="Paul Löper und Anna Auerbach"
-        leadCaptionLabel="Spitzenduo Volt kennenlernen"
-        leadCaptionTo="/spitzenkandidaten"
+        lead={<SpitzenduoComposite />}
         imageSrc="/pics/unsereKandidatenPortraitCluster.png"
         imageAlt="Die Kandidierenden von Volt Berlin"
         ctaTo="/kandidierende"

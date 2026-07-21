@@ -18,7 +18,7 @@ const meta = {
       src: '/pics/paulAnnaWahlsystem.png',
       alt: 'Paul Löper und Anna Auerbach',
       captionLabel: 'Spitzenduo Volt kennenlernen',
-      captionTo: '/spitzenkandidaten',
+      captionTo: '/kandidierende',
     },
     second: {
       title: 'Die Zweitstimme – Deine Wahl für VOLT',

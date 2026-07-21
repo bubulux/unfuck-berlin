@@ -6,7 +6,6 @@ import { ScrollToTop } from './lib/scroll-to-top'
 import { AnalyticsTracker } from './lib/analytics'
 import { CalendarProvider } from './context/calendar'
 import { Home } from './pages/home'
-import { Spitzenkandidaten } from './pages/spitzenkandidaten'
 import { Wahlprogramm } from './pages/wahlprogramm'
 import { Wahlsystem } from './pages/wahlsystem'
 import { UnfuckBerlin } from './pages/unfuck-berlin'
@@ -24,7 +23,6 @@ createRoot(document.getElementById('root')!).render(
       <CalendarProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/spitzenkandidaten" element={<Spitzenkandidaten />} />
           <Route path="/wahlprogramm" element={<Wahlprogramm />} />
           <Route path="/wahlsystem" element={<Wahlsystem />} />
           <Route path="/unfuck-berlin" element={<UnfuckBerlin />} />
