@@ -18,16 +18,36 @@
   gap: var(--space-4);
 }
 
-.events__list {
+/* Stack of month groups, each clearly separated from the next. */
+.events__groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.events__group {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
 }
 
-.events__more {
+/* Month separator: a neon sticker label + a hairline rule running to the edge. */
+.events__month {
   display: flex;
-  justify-content: center;
-  margin-top: var(--space-6);
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.events__month-rule {
+  flex: 1 1 auto;
+  height: 2px;
+  background-color: var(--color-neon);
+}
+
+.events__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
 }
 
 .events__note {

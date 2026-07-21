@@ -1,4 +1,5 @@
 import type { HTMLAttributes } from 'react'
+import type { ColorToken } from '../../atoms/text'
 import { Text } from '../../atoms/text'
 import { Link } from '../../atoms/link'
 import { Icon } from '../../atoms/icon'
@@ -16,6 +17,8 @@ export interface CalendarEventItem {
   time?: string
   /** Venue/address line. */
   location?: string
+  /** Category badge shown above the card's top-left corner. */
+  badge?: { label: string; color: ColorToken; textColor: ColorToken }
 }
 
 export interface CalendarSectionProps extends HTMLAttributes<HTMLElement> {
@@ -73,6 +76,7 @@ export function CalendarSection({
                 title={event.title}
                 time={event.time}
                 location={event.location}
+                badge={event.badge}
               />
             ))}
           </div>

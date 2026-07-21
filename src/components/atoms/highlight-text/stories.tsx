@@ -141,3 +141,15 @@ export const WasMehr: Story = {
     uppercase: true,
   },
 };
+
+export const BadgeForTermincard: Story = {
+  args: {
+    lines: ["Veranstaltungen"],
+    variant: "body",
+    color: "blue",
+    textColor: "purple",
+    direction: "column",
+    align: "left",
+    slant: 0
+  }
+};

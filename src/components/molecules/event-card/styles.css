@@ -2,8 +2,18 @@
   /* React to the card's own width so a narrow one (e.g. in the 3-up grid)
    * restacks instead of letting long titles overflow. */
   container-type: inline-size;
+  position: relative;
   padding: var(--space-4) var(--space-5);
   background-color: var(--color-white);
+}
+
+/* Category badge sits like a sticker straddling the card's top-left corner. */
+.event-card__badge {
+  position: absolute;
+  top: 0;
+  left: var(--space-4);
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 /* Wide card: date column | divider | body. */
@@ -18,7 +28,7 @@
   flex: 0 0 auto;
   min-width: 4.5rem;
   padding-right: var(--space-4);
-  border-right: 2px solid rgba(17, 17, 17, 0.25);
+  border-right: 2px solid var(--color-black);
 }
 
 /* Narrow card: stack into two rows — date + horizontal divider on top, then
@@ -38,7 +48,7 @@
     padding-right: 0;
     padding-bottom: var(--space-3);
     border-right: none;
-    border-bottom: 2px solid rgba(17, 17, 17, 0.25);
+    border-bottom: 2px solid var(--color-black);
   }
 }
 
@@ -63,7 +73,6 @@
 .event-card__time {
   align-items: center;
   margin-top: var(--space-1);
-  font-weight: var(--font-weight-bold);
 }
 
 /* Long addresses/URLs break instead of overflowing the card. */
@@ -86,7 +95,6 @@
 /* When the location is a URL (e.g. a Google Maps link) it's shown as a link. */
 .event-card__map {
   width: fit-content;
-  font-weight: var(--font-weight-bold);
 }
 
 .event-card__map > span {

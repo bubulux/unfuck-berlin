@@ -27,6 +27,8 @@ export interface CalendarItem {
   end?: Date
   title: string
   location?: string
+  /** Raw event description (used to derive the category badge). */
+  description?: string
   allDay: boolean
 }
 
@@ -108,6 +110,7 @@ export function parseCalendar(
             end: details.endDate?.toJSDate(),
             title: event.summary ?? '',
             location: event.location || undefined,
+            description: event.description || undefined,
             allDay: next.isDate,
           })
         }
@@ -123,6 +126,7 @@ export function parseCalendar(
           end,
           title: event.summary ?? '',
           location: event.location || undefined,
+          description: event.description || undefined,
           allDay: event.startDate.isDate,
         })
       }
@@ -166,6 +170,12 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
       ? `${s.time}–${e.time} Uhr`
       : `${s.time} Uhr`
   const location = ev.location ? ev.location.replace(/\s*\n\s*/g, ', ').trim() : ''
+  // A "#Bezirkstreffen" tag anywhere in the description flips the card's badge
+  // to the red "Bezirkstreffen" variant; everything else is a "Veranstaltung".
+  const isBezirk = /#Bezirkstreffen/i.test(ev.description ?? '')
+  const badge = isBezirk
+    ? { label: 'Bezirkstreffen', color: 'pink' as const, textColor: 'white' as const }
+    : { label: 'Veranstaltung', color: 'blue' as const, textColor: 'purple' as const }
   return {
     id: ev.id,
     day,
@@ -173,5 +183,6 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
     title: ev.title,
     time: time || undefined,
     location: location || undefined,
+    badge,
   }
 }

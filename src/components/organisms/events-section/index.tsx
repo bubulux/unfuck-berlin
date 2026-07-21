@@ -1,10 +1,36 @@
 import type { HTMLAttributes, ReactNode } from 'react'
 import { Text } from '../../atoms/text'
-import { Button } from '../../atoms/button'
 import { HighlightText } from '../../atoms/highlight-text'
 import { EventCard } from '../../molecules/event-card'
 import type { CalendarEventItem } from '../calendar-section'
 import './styles.css'
+
+/** Month abbreviation (as produced by the calendar lib) → full German name. */
+const MONTH_NAMES: Record<string, string> = {
+  JAN: 'Januar',
+  FEB: 'Februar',
+  MÄR: 'März',
+  APR: 'April',
+  MAI: 'Mai',
+  JUN: 'Juni',
+  JUL: 'Juli',
+  AUG: 'August',
+  SEP: 'September',
+  OKT: 'Oktober',
+  NOV: 'November',
+  DEZ: 'Dezember',
+}
+
+/** Group already-sorted events into consecutive runs of the same month. */
+function groupByMonth(events: CalendarEventItem[]) {
+  const groups: { month: string; events: CalendarEventItem[] }[] = []
+  for (const event of events) {
+    const last = groups[groups.length - 1]
+    if (last && last.month === event.month) last.events.push(event)
+    else groups.push({ month: event.month, events: [event] })
+  }
+  return groups
+}
 
 export interface EventsSectionProps extends HTMLAttributes<HTMLElement> {
   headingLines?: string[]
@@ -16,10 +42,6 @@ export interface EventsSectionProps extends HTMLAttributes<HTMLElement> {
   emptyLabel?: string
   loadingLabel?: string
   errorLabel?: string
-  /** Show a "load more" button (when there are further events to reveal). */
-  hasMore?: boolean
-  onLoadMore?: () => void
-  loadMoreLabel?: string
   /** Footer note (e.g. the "missing an event?" line). */
   children?: ReactNode
 }
@@ -32,14 +54,12 @@ export function EventsSection({
   emptyLabel = 'Aktuell keine anstehenden Termine.',
   loadingLabel = 'Termine werden geladen …',
   errorLabel = 'Termine konnten gerade nicht geladen werden. Bitte versuch es später erneut.',
-  hasMore = false,
-  onLoadMore,
-  loadMoreLabel = 'Mehr laden',
   children,
   className,
   ...rest
 }: EventsSectionProps) {
   const classes = ['events', className].filter(Boolean).join(' ')
+  const groups = groupByMonth(events)
   return (
     <section className={classes} {...rest}>
       <div className="events__inner">
@@ -72,16 +92,34 @@ export function EventsSection({
             {errorLabel}
           </Text>
         ) : events.length > 0 ? (
-          <div className="events__list">
-            {events.map((event) => (
-              <EventCard
-                key={event.id}
-                day={event.day}
-                month={event.month}
-                title={event.title}
-                time={event.time}
-                location={event.location}
-              />
+          <div className="events__groups">
+            {groups.map((group) => (
+              <div className="events__group" key={group.month}>
+                <div className="events__month">
+                  <HighlightText
+                    as="h2"
+                    lines={[MONTH_NAMES[group.month] ?? group.month]}
+                    variant="subtitel"
+                    color="neon"
+                    textColor="purple"
+                    uppercase
+                  />
+                  <span className="events__month-rule" aria-hidden="true" />
+                </div>
+                <div className="events__list">
+                  {group.events.map((event) => (
+                    <EventCard
+                      key={event.id}
+                      day={event.day}
+                      month={event.month}
+                      title={event.title}
+                      time={event.time}
+                      location={event.location}
+                      badge={event.badge}
+                    />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         ) : (
@@ -89,14 +127,6 @@ export function EventsSection({
             {emptyLabel}
           </Text>
         )}
-
-        {status === 'ready' && hasMore && onLoadMore ? (
-          <div className="events__more">
-            <Button color="neon" onClick={onLoadMore}>
-              {loadMoreLabel}
-            </Button>
-          </div>
-        ) : null}
 
         {children ? <div className="events__note">{children}</div> : null}
       </div>

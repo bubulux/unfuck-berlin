@@ -1,6 +1,8 @@
 import type { HTMLAttributes } from 'react'
 import { Text } from '../../atoms/text'
+import type { ColorToken } from '../../atoms/text'
 import { DateBadge } from '../../atoms/date-badge'
+import { HighlightText } from '../../atoms/highlight-text'
 import './styles.css'
 
 export interface EventCardProps extends HTMLAttributes<HTMLElement> {
@@ -13,6 +15,8 @@ export interface EventCardProps extends HTMLAttributes<HTMLElement> {
   time?: string
   /** Venue/address line. */
   location?: string
+  /** Category badge shown above the card's top-left corner. */
+  badge?: { label: string; color: ColorToken; textColor: ColorToken }
 }
 
 const ClockGlyph = () => (
@@ -42,8 +46,8 @@ const PinGlyph = () => (
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <path d="M12 21s6-5.686 6-10a6 6 0 1 0-12 0c0 4.314 6 10 6 10z" />
-    <circle cx="12" cy="11" r="2.2" />
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z" />
+    <circle cx="12" cy="10" r="3" />
   </svg>
 )
 
@@ -53,12 +57,25 @@ export function EventCard({
   title,
   time,
   location,
+  badge,
   className,
   ...rest
 }: EventCardProps) {
   const classes = ['event-card', className].filter(Boolean).join(' ')
   return (
     <article className={classes} {...rest}>
+      {badge ? (
+        <HighlightText
+          lines={[badge.label]}
+          variant="body"
+          color={badge.color}
+          textColor={badge.textColor}
+          direction="column"
+          align="left"
+          slant={0}
+          className="event-card__badge"
+        />
+      ) : null}
       <div className="event-card__layout">
         <DateBadge day={day} month={month} color="black" className="event-card__date" />
         <div className="event-card__body">
