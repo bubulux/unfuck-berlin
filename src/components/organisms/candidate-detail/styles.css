@@ -46,7 +46,7 @@
   /* Portrait column a third narrower; the bio column a third wider. */
   .candidate__media {
     width: 100%;
-    max-width: calc(var(--content-max) * 2 / 3);
+    max-width: calc(var(--content-max));
   }
 
   .candidate__content {
