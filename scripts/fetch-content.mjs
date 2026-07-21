@@ -26,6 +26,7 @@ const OUT_KANDIDATEN = resolve(DATA_DIR, 'kandidaten.generated.ts')
 const OUT_WAHLSYSTEM = resolve(DATA_DIR, 'wahlsystem.generated.ts')
 const OUT_VIDEOS = resolve(DATA_DIR, 'videos.generated.ts')
 const OUT_MEETS = resolve(DATA_DIR, 'meets.generated.ts')
+const OUT_UNFCK = resolve(DATA_DIR, 'unfck.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -88,6 +89,10 @@ const VIDEOS_QUERY = `{
 // Meet-&-Greet-Karussell der Termine-Seite: kommt aus dem bestehenden CMS-Feld
 // seiteMitmachen.carouselBilder (im Studio pflegbar – Bilder hinzufuegen/ordnen).
 const MEETS_QUERY = `*[_type=="seiteMitmachen"][0].carouselBilder[]{ "url": asset->url }`
+
+// Bilder-Collage der /unfuck-berlin-Seite: kommt aus seiteUnfck.collage1
+// (im Studio pflegbar). Reihenfolge = Array-Reihenfolge im Dokument.
+const UNFCK_QUERY = `*[_id=="seiteUnfck"][0].collage1[]{ "url": asset->url }`
 
 function buildWahlprogramm(res) {
   const mods = res?.content_modules || []
@@ -201,17 +206,28 @@ function buildMeets(rows) {
   return list
 }
 
+function buildUnfck(rows) {
+  const list = (rows || [])
+    .map((b, i) => ({ src: withParams(b?.url, MEET_IMG_PARAMS), alt: `unf*ck berlin ${i + 1}` }))
+    .filter((b) => b.src)
+  if (!list.length) {
+    throw new Error('Keine Collage (seiteUnfck.collage1) mit Bildern gefunden.')
+  }
+  return list
+}
+
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
 // Letzter Abruf: ${new Date().toISOString()}`
 
 async function main() {
-  const [wpRes, kandiRows, wsRes, videosRes, meetsRes] = await Promise.all([
+  const [wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes] = await Promise.all([
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
     client.fetch(VIDEOS_QUERY),
     client.fetch(MEETS_QUERY),
+    client.fetch(UNFCK_QUERY),
   ])
 
   const wahlprogramm = buildWahlprogramm(wpRes)
@@ -219,6 +235,7 @@ async function main() {
   const wahlsystem = buildWahlsystem(wsRes)
   const videos = buildVideos(videosRes)
   const meets = buildMeets(meetsRes)
+  const unfck = buildUnfck(unfckRes)
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -245,9 +262,14 @@ async function main() {
     `${header}\n\nexport const MEETS_CMS = ${JSON.stringify(meets, null, 2)}\n`,
     'utf8',
   )
+  writeFileSync(
+    OUT_UNFCK,
+    `${header}\n\nexport const UNFCK_COLLAGE_CMS = ${JSON.stringify(unfck, null, 2)}\n`,
+    'utf8',
+  )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}).`,
+    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}).`,
   )
 }
 
@@ -258,7 +280,8 @@ main().catch((err) => {
     existsSync(OUT_KANDIDATEN) &&
     existsSync(OUT_WAHLSYSTEM) &&
     existsSync(OUT_VIDEOS) &&
-    existsSync(OUT_MEETS)
+    existsSync(OUT_MEETS) &&
+    existsSync(OUT_UNFCK)
   ) {
     console.warn('Behalte bestehende generierte Dateien (letzter Stand).')
     process.exit(0)

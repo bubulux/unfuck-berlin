@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-21T19:29:46.500Z
+// Letzter Abruf: 2026-07-21T19:35:14.328Z
 
 export const VIDEOS_CMS = {
   "annaPaulIntro": {
