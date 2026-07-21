@@ -34,15 +34,24 @@
   height: auto;
 }
 
-/* Desktop: name + portrait in a sticky left column, the bio content beside it. */
+/* Desktop: keep a single, left-aligned column (name, portrait, bio stacked) at
+ * a readable width, with the freed-up space becoming whitespace on the right. */
 @media (min-width: 64rem) {
   .candidate__inner {
     max-width: var(--content-max-wide);
     padding-inline: var(--content-pad-wide);
-    display: grid;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    align-items: start;
-    column-gap: var(--space-8);
+    align-items: flex-start;
+  }
+
+  /* Portrait column a third narrower; the bio column a third wider. */
+  .candidate__media {
+    width: 100%;
+    max-width: calc(var(--content-max) * 2 / 3);
+  }
+
+  .candidate__content {
+    width: 100%;
+    max-width: calc(var(--content-max) * 4 / 3);
   }
 }
 
