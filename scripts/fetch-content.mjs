@@ -25,6 +25,7 @@ const OUT_WAHLPROGRAMM = resolve(DATA_DIR, 'wahlprogramm.generated.ts')
 const OUT_KANDIDATEN = resolve(DATA_DIR, 'kandidaten.generated.ts')
 const OUT_WAHLSYSTEM = resolve(DATA_DIR, 'wahlsystem.generated.ts')
 const OUT_VIDEOS = resolve(DATA_DIR, 'videos.generated.ts')
+const OUT_MEETS = resolve(DATA_DIR, 'meets.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -38,6 +39,8 @@ const client = createClient({
 // der einheitliche Crop. Karte: 4:5, Detailseite: 3:4 (groesser).
 const CARD_IMG_PARAMS = 'w=480&h=600&fit=crop&crop=top&auto=format'
 const DETAIL_IMG_PARAMS = 'w=720&h=960&fit=crop&crop=top&auto=format'
+// Karussellbilder unveraendert lassen (nur ins beste Format ausliefern).
+const MEET_IMG_PARAMS = 'auto=format'
 const withParams = (url, params) => {
   const base = (url || '').trim()
   if (!base) return ''
@@ -81,6 +84,10 @@ const VIDEOS_QUERY = `{
   "revealSrc": *[_type=="sanity.fileAsset" && originalFilename=="20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"][0].url,
   "revealPoster": *[_type=="sanity.imageAsset" && originalFilename=="unfck_reveal_poster.jpg"][0].url
 }`
+
+// Meet-&-Greet-Karussell der Termine-Seite: kommt aus dem bestehenden CMS-Feld
+// seiteMitmachen.carouselBilder (im Studio pflegbar – Bilder hinzufuegen/ordnen).
+const MEETS_QUERY = `*[_type=="seiteMitmachen"][0].carouselBilder[]{ "url": asset->url }`
 
 function buildWahlprogramm(res) {
   const mods = res?.content_modules || []
@@ -184,22 +191,34 @@ function buildVideos(d) {
   return out
 }
 
+function buildMeets(rows) {
+  const list = (rows || [])
+    .map((b, i) => ({ src: withParams(b?.url, MEET_IMG_PARAMS), alt: `Meet & Greet ${i + 1}` }))
+    .filter((b) => b.src)
+  if (!list.length) {
+    throw new Error('Kein Karussell (seiteMitmachen.carouselBilder) mit Bildern gefunden.')
+  }
+  return list
+}
+
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
 // Letzter Abruf: ${new Date().toISOString()}`
 
 async function main() {
-  const [wpRes, kandiRows, wsRes, videosRes] = await Promise.all([
+  const [wpRes, kandiRows, wsRes, videosRes, meetsRes] = await Promise.all([
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
     client.fetch(VIDEOS_QUERY),
+    client.fetch(MEETS_QUERY),
   ])
 
   const wahlprogramm = buildWahlprogramm(wpRes)
   const kandidaten = buildKandidaten(kandiRows)
   const wahlsystem = buildWahlsystem(wsRes)
   const videos = buildVideos(videosRes)
+  const meets = buildMeets(meetsRes)
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -221,9 +240,14 @@ async function main() {
     `${header}\n\nexport const VIDEOS_CMS = ${JSON.stringify(videos, null, 2)}\n`,
     'utf8',
   )
+  writeFileSync(
+    OUT_MEETS,
+    `${header}\n\nexport const MEETS_CMS = ${JSON.stringify(meets, null, 2)}\n`,
+    'utf8',
+  )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos.`,
+    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}).`,
   )
 }
 
@@ -233,7 +257,8 @@ main().catch((err) => {
     existsSync(OUT_WAHLPROGRAMM) &&
     existsSync(OUT_KANDIDATEN) &&
     existsSync(OUT_WAHLSYSTEM) &&
-    existsSync(OUT_VIDEOS)
+    existsSync(OUT_VIDEOS) &&
+    existsSync(OUT_MEETS)
   ) {
     console.warn('Behalte bestehende generierte Dateien (letzter Stand).')
     process.exit(0)

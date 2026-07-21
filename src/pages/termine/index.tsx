@@ -4,12 +4,7 @@ import { EventsSection } from "../../components/organisms/events-section";
 import { CarouselSection } from "../../components/organisms/carousel-section";
 import { Text } from "../../components/atoms/text";
 import { useCalendar } from "../../context/calendar-context";
-
-const MEET_IMAGES = [
-  { src: "/pics/meets/1.png", alt: "Meet & Greet 1" },
-  { src: "/pics/meets/2.png", alt: "Meet & Greet 2" },
-  { src: "/pics/meets/3.png", alt: "Meet & Greet 3" },
-];
+import { MEETS } from "../../data/meets";
 
 export function Termine() {
   const { pathname } = useLocation();
@@ -41,7 +36,7 @@ export function Termine() {
           <a href="mailto:presse@voltberlin.org">presse@voltberlin.org</a>
         </Text>
       </EventsSection>
-      <CarouselSection images={MEET_IMAGES} />
+      <CarouselSection images={MEETS} />
     </PageLayout>
   );
 }
