@@ -4,6 +4,7 @@ import { HeroSection } from '../../components/organisms/hero-section'
 import { CountdownSection } from '../../components/organisms/countdown-section'
 import { CandidatesSection } from '../../components/organisms/candidates-section'
 import { UnfuckSection } from '../../components/organisms/unfuck-section'
+import { VIDEOS } from '../../data/videos'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
 const ELECTION_DATE = new Date(2026, 8, 20)
@@ -13,8 +14,8 @@ export function Home() {
   return (
     <PageLayout activePath={pathname}>
       <HeroSection
-        videoSrc="/vids/anna_paul_intro.mp4"
-        videoPoster="/vids/anna_paul_intro_poster.jpg"
+        videoSrc={VIDEOS.annaPaulIntro.src}
+        videoPoster={VIDEOS.annaPaulIntro.poster}
         videoTitle="Anna und Paul"
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"
@@ -35,8 +36,8 @@ export function Home() {
       <UnfuckSection
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"
-        videoSrc="/vids/20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"
-        videoPoster="/vids/unfck_reveal_poster.jpg"
+        videoSrc={VIDEOS.reveal.src}
+        videoPoster={VIDEOS.reveal.poster}
         videoTitle="15. Juli 2026"
         text=""
         ctaLabel="Worum geht es?"

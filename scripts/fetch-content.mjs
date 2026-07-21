@@ -24,6 +24,7 @@ const DATA_DIR = resolve(__dirname, '..', 'src', 'data')
 const OUT_WAHLPROGRAMM = resolve(DATA_DIR, 'wahlprogramm.generated.ts')
 const OUT_KANDIDATEN = resolve(DATA_DIR, 'kandidaten.generated.ts')
 const OUT_WAHLSYSTEM = resolve(DATA_DIR, 'wahlsystem.generated.ts')
+const OUT_VIDEOS = resolve(DATA_DIR, 'videos.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -69,6 +70,16 @@ const KANDIDATEN_QUERY = `*[_type=="kandidatAgh"]|order(listenplatz asc){
 const WAHLSYSTEM_QUERY = `*[_id=="seiteCountDown"][0]{
   heroZeilen, erststimmeTitel, erststimmeText, zweitstimmeTitel, zweitstimmeText,
   duoLinkText, waehlenMit16Titel, gehoertDirTitel, waehlenMit16Text, programmButton
+}`
+
+// Videos liegen als Assets in der Sanity-Bibliothek (kein Schema-Feld noetig) und
+// werden ueber den originalFilename referenziert. So kann Volt die Datei im Studio
+// austauschen, ohne dass sich Code aendern muss.
+const VIDEOS_QUERY = `{
+  "annaPaulSrc": *[_type=="sanity.fileAsset" && originalFilename=="anna_paul_intro.mp4"][0].url,
+  "annaPaulPoster": *[_type=="sanity.imageAsset" && originalFilename=="anna_paul_intro_poster.jpg"][0].url,
+  "revealSrc": *[_type=="sanity.fileAsset" && originalFilename=="20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"][0].url,
+  "revealPoster": *[_type=="sanity.imageAsset" && originalFilename=="unfck_reveal_poster.jpg"][0].url
 }`
 
 function buildWahlprogramm(res) {
@@ -162,20 +173,33 @@ function buildWahlsystem(d) {
   }
 }
 
+function buildVideos(d) {
+  const out = {
+    annaPaulIntro: { src: clean(d?.annaPaulSrc), poster: clean(d?.annaPaulPoster) },
+    reveal: { src: clean(d?.revealSrc), poster: clean(d?.revealPoster) },
+  }
+  if (!out.annaPaulIntro.src || !out.reveal.src) {
+    throw new Error('Video-Assets in Sanity nicht gefunden (per originalFilename).')
+  }
+  return out
+}
+
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
 // Letzter Abruf: ${new Date().toISOString()}`
 
 async function main() {
-  const [wpRes, kandiRows, wsRes] = await Promise.all([
+  const [wpRes, kandiRows, wsRes, videosRes] = await Promise.all([
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
+    client.fetch(VIDEOS_QUERY),
   ])
 
   const wahlprogramm = buildWahlprogramm(wpRes)
   const kandidaten = buildKandidaten(kandiRows)
   const wahlsystem = buildWahlsystem(wsRes)
+  const videos = buildVideos(videosRes)
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -192,15 +216,25 @@ async function main() {
     `${header}\n\nexport const WAHLSYSTEM_CMS = ${JSON.stringify(wahlsystem, null, 2)}\n`,
     'utf8',
   )
+  writeFileSync(
+    OUT_VIDEOS,
+    `${header}\n\nexport const VIDEOS_CMS = ${JSON.stringify(videos, null, 2)}\n`,
+    'utf8',
+  )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem.`,
+    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos.`,
   )
 }
 
 main().catch((err) => {
   console.warn('Sanity-Abruf fehlgeschlagen:', err.message)
-  if (existsSync(OUT_WAHLPROGRAMM) && existsSync(OUT_KANDIDATEN) && existsSync(OUT_WAHLSYSTEM)) {
+  if (
+    existsSync(OUT_WAHLPROGRAMM) &&
+    existsSync(OUT_KANDIDATEN) &&
+    existsSync(OUT_WAHLSYSTEM) &&
+    existsSync(OUT_VIDEOS)
+  ) {
     console.warn('Behalte bestehende generierte Dateien (letzter Stand).')
     process.exit(0)
   }

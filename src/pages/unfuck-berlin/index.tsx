@@ -4,6 +4,7 @@ import { UnfuckIntro } from '../../components/organisms/unfuck-intro'
 import { VideoSection } from '../../components/organisms/video-section'
 import { ImageStack } from '../../components/organisms/image-stack'
 import { Text } from '../../components/atoms/text'
+import { VIDEOS } from '../../data/videos'
 
 const UNFCK_IMAGES = [
   { src: '/pics/unfck/1.png', alt: 'unf*ck berlin 1' },
@@ -46,8 +47,8 @@ export function UnfuckBerlin() {
       </UnfuckIntro>
 
       <VideoSection
-        videoSrc="/vids/20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"
-        videoPoster="/vids/unfck_reveal_poster.jpg"
+        videoSrc={VIDEOS.reveal.src}
+        videoPoster={VIDEOS.reveal.poster}
         videoTitle="15. Juli 2026"
         videoAspect="9 / 16"
       />
