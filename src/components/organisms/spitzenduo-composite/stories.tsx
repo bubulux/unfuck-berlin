@@ -9,6 +9,7 @@ const DEMO = [
     role: 'Volt Spitzenkandidatin',
     image: '/pics/spitzen/annaMain.png',
     alt: 'Anna Auerbach',
+    bg: '#5b3381',
     to: '/kandidierende/anna-auerbach',
   },
   {
@@ -17,6 +18,7 @@ const DEMO = [
     role: 'Volt Spitzenkandidat',
     image: '/pics/spitzen/paulMain.png',
     alt: 'Paul Löper',
+    bg: '#382255',
     to: '/kandidierende/paul-loeper',
   },
 ]

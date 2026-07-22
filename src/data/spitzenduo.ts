@@ -7,6 +7,8 @@ export interface SpitzenPerson {
   role: string
   image: string
   alt: string
+  /** Kartenhintergrund/Verlaufsfarbe, passend zum Foto (vom Kunden gepickt). */
+  bg: string
   /** Link zur Detailseite der Person (Kandidierenden-Pool). */
   to: string
 }
@@ -23,6 +25,7 @@ const FALLBACK: SpitzenPerson[] = [
     role: 'Volt Spitzenkandidatin',
     image: '/pics/spitzen/annaMain.png',
     alt: 'Anna Auerbach',
+    bg: '#5b3381',
     to: '/kandidierende/anna-auerbach',
   },
   {
@@ -31,6 +34,7 @@ const FALLBACK: SpitzenPerson[] = [
     role: 'Volt Spitzenkandidat',
     image: '/pics/spitzen/paulMain.png',
     alt: 'Paul Löper',
+    bg: '#382255',
     to: '/kandidierende/paul-loeper',
   },
 ]

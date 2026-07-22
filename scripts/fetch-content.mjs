@@ -264,14 +264,17 @@ function buildSpitzenduo(rows, kandidaten) {
       const vorname = clean(p.vorname)
       const nachname = clean(p.nachname)
       const slug = kandidaten[i]?.slug || ''
-      // Rolle positionsbasiert (Anna = 1., Paul = 2.), da das CMS kein Feld dafuer hat.
+      // Rolle + Kartenfarbe positionsbasiert (Anna = 1., Paul = 2.), da das CMS
+      // keine Felder dafuer hat. Farben vom Kunden zum Foto gepickt.
       const role = i === 0 ? 'Volt Spitzenkandidatin' : 'Volt Spitzenkandidat'
+      const bg = i === 0 ? '#5b3381' : '#382255'
       return {
         vorname,
         nachname,
         role,
         image: withParams(p.foto, MEET_IMG_PARAMS),
         alt: `${vorname} ${nachname}`.trim(),
+        bg,
         to: slug ? `/kandidierende/${slug}` : '',
       }
     })

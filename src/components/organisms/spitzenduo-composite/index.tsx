@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from 'react'
+import type { CSSProperties, HTMLAttributes } from 'react'
 import { Link as RouterLink } from 'react-router'
 import { Text } from '../../atoms/text'
 import { SPITZENDUO, type SpitzenPerson } from '../../../data/spitzenduo'
@@ -27,8 +27,11 @@ export function SpitzenduoComposite({
           key={person.to || `${person.vorname}-${i}`}
           to={person.to}
           className={`spitzenduo-card${i % 2 === 1 ? ' spitzenduo-card--reverse' : ''}`}
+          style={{ '--card-bg': person.bg } as CSSProperties}
           aria-label={`${person.alt} kennen lernen`}
         >
+          <img className="spitzenduo-card__img" src={person.image} alt={person.alt} />
+
           <div className="spitzenduo-card__text">
             <div className="spitzenduo-card__head">
               <Text
@@ -53,10 +56,6 @@ export function SpitzenduoComposite({
                 →
               </span>
             </span>
-          </div>
-
-          <div className="spitzenduo-card__media">
-            <img className="spitzenduo-card__img" src={person.image} alt={person.alt} />
           </div>
         </RouterLink>
       ))}
