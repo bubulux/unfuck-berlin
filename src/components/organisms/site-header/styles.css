@@ -85,7 +85,7 @@
 }
 
 /* Wide enough → inline links, no burger, no panel. */
-@container (min-width: 32rem) {
+@container (min-width: 48rem) {
   .site-header__nav {
     display: flex;
     align-items: center;

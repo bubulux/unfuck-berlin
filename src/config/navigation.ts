@@ -5,6 +5,7 @@ import type { SocialLink } from "../components/molecules/social-row";
 
 /** Primary header navigation. */
 export const NAV_LINKS: NavItem[] = [
+  { label: "Sticker abgreifen", href: "/sticker" },
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
@@ -12,13 +13,13 @@ export const NAV_LINKS: NavItem[] = [
 
 /** Recurring "WAS MEHR?" cross-navigation block. */
 export const WAS_MEHR_LINKS: WasMehrLink[] = [
-  { label: "Wahlprogramm", to: "/wahlprogramm" },
-  { label: "Kalender", to: "/termine" },
-  { label: "Alle Voltkandidierenden", to: "/kandidierende" },
   { label: "Sticker abgreifen", to: "/sticker" },
-  { label: "unf*ck berlin", to: "/unfuck-berlin" },
+  { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
+  { label: "Kalender", to: "/termine" },
+  { label: "Alle Voltkandidierenden", to: "/kandidierende" },
+  { label: "unf*ck berlin", to: "/unfuck-berlin" },
 ];
 
 /** Social platforms shown in the footer / social rows. */
