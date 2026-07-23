@@ -15,7 +15,7 @@ export function Wahlsystem() {
       <VotingSystemSection
         headingLines={heading}
         first={first}
-        mediaNode={<SpitzenduoComposite />}
+        mediaNode={<SpitzenduoComposite className="flex flex-row" />}
         second={second}
       />
       <ProgramIntro

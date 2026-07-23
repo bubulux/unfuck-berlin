@@ -3,6 +3,7 @@ import { Link as RouterLink } from 'react-router'
 import { Text } from '../../atoms/text'
 import { SPITZENDUO, type SpitzenPerson } from '../../../data/spitzenduo'
 import './styles.css'
+import { cn } from '../../../lib/cn'
 
 export interface SpitzenduoCompositeProps extends HTMLAttributes<HTMLElement> {
   /** Personen (Default: Anna & Paul aus dem spitzenduo-CMS). */
@@ -19,7 +20,7 @@ export function SpitzenduoComposite({
   className,
   ...rest
 }: SpitzenduoCompositeProps) {
-  const classes = ['spitzenduo', className].filter(Boolean).join(' ')
+  const classes = cn('spitzenduo flex flex-col', className)
   return (
     <div className={classes} {...rest}>
       {people.map((person, i) => (
@@ -30,7 +31,7 @@ export function SpitzenduoComposite({
           style={{ '--card-bg': person.bg } as CSSProperties}
           aria-label={`${person.alt} kennen lernen`}
         >
-          <img className="spitzenduo-card__img" src={person.image} alt={person.alt} />
+          <img className="spitzenduo-card__img w-full h-full object-cover" src={person.image} alt={person.alt} />
 
           <div className="spitzenduo-card__text">
             <div className="spitzenduo-card__head">

@@ -1,11 +1,20 @@
-.spitzenduo {
+.flex {
   display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
   flex-direction: column;
+}
+
+.spitzenduo {
+  flex-wrap: wrap;
   gap: var(--space-5);
   width: 100%;
   /* Fills the home right column; keeps the cards from stretching absurdly wide
    * on the full-width wahlsystem section. */
-  max-width: 44rem;
+  /* max-width: 44rem; */
   margin-inline: auto;
 }
 
@@ -16,7 +25,8 @@
   position: relative;
   display: flex;
   flex: 1 1 auto;
-  min-height: 15rem;
+  min-height: 20rem;
+  min-width: 15rem;
   overflow: hidden;
   text-decoration: none;
   color: var(--color-white);
@@ -30,7 +40,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: right center;
   z-index: 0;
 }
@@ -43,7 +53,7 @@
 .spitzenduo-card__text {
   position: relative;
   z-index: 2;
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

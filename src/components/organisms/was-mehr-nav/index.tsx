@@ -43,7 +43,6 @@ export function WasMehrNav({
           variant="titel"
           color="neon"
           textColor="purple"
-          slant={0.1}
           uppercase
         /> */}
 

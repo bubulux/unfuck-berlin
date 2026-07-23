@@ -68,6 +68,7 @@
 
 .site-footer__actions {
   align-self: start;
+  gap: 4px;
 }
 
 .site-footer__contact {

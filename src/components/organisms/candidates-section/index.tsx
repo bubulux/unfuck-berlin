@@ -17,7 +17,7 @@ export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
 
 export function CandidatesSection({
   lead,
-  text = "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidat:innen kennenlernen.",
+  text = "Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus der Praxis.",
   ctaLabel = "Unsere Kandidierenden stellen sich vor",
   ctaTo,
   ctaHref,

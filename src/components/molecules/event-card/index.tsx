@@ -72,7 +72,6 @@ export function EventCard({
           textColor={badge.textColor}
           direction="column"
           align="left"
-          slant={0}
           className="event-card__badge"
         />
       ) : null}

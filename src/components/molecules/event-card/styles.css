@@ -12,8 +12,14 @@
   position: absolute;
   top: 0;
   left: var(--space-4);
-  transform: translateY(-50%);
+  transform: translateY(-80%);
   z-index: 1;
+}
+.event-card__badge .highlight__box {
+  transform: skewY(-2deg);
+}
+.event-card__badge .highlight__text {
+  transform: skewY(2deg);
 }
 
 /* Wide card: date column | divider | body. */
@@ -28,7 +34,7 @@
   flex: 0 0 auto;
   min-width: 4.5rem;
   padding-right: var(--space-4);
-  border-right: 2px solid var(--color-black);
+  border-right: 1px solid var(--color-black);
 }
 
 /* Narrow card: stack into two rows — date + horizontal divider on top, then
@@ -48,7 +54,7 @@
     padding-right: 0;
     padding-bottom: var(--space-3);
     border-right: none;
-    border-bottom: 2px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
   }
 }
 

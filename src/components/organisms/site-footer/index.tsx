@@ -73,7 +73,6 @@ export function SiteFooter({
           variant="body"
           color="neon"
           textColor="purple"
-          slant={0.25}
         />
 
         <div className="site-footer__contact">

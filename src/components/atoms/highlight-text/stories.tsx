@@ -19,7 +19,6 @@ const meta = {
     },
     direction: { control: "inline-radio", options: ["column", "row"] },
     align: { control: "inline-radio", options: ["left", "center", "right"] },
-    slant: { control: { type: "range", min: 0, max: 1, step: 0.05 } },
     uppercase: { control: "boolean" },
   },
   args: {
@@ -136,7 +135,6 @@ export const WasMehr: Story = {
     textColor: "purple",
     direction: "column",
     align: "left",
-    slant: 0.1,
     style: { fontWeight: "bold" },
     uppercase: true,
   },
@@ -149,7 +147,6 @@ export const BadgeForTermincard: Story = {
     color: "blue",
     textColor: "purple",
     direction: "column",
-    align: "left",
-    slant: 0
+    align: "left"
   }
 };
