@@ -17,6 +17,13 @@
   gap: var(--space-5);
 }
 
+.candidate__media,
+.candidate__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
 .candidate__name {
   line-height: var(--line-snug);
 }
@@ -25,6 +32,27 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* Desktop: keep a single, left-aligned column (name, portrait, bio stacked) at
+ * a readable width, with the freed-up space becoming whitespace on the right. */
+@media (min-width: 64rem) {
+  .candidate__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+    align-items: flex-start;
+  }
+
+  /* Portrait column a third narrower; the bio column a third wider. */
+  .candidate__media {
+    width: 100%;
+    max-width: calc(var(--content-max));
+  }
+
+  .candidate__content {
+    width: 100%;
+    max-width: calc(var(--content-max) * 4 / 3);
+  }
 }
 
 .candidate__meta {

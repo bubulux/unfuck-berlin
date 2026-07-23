@@ -6,10 +6,10 @@ const meta = {
   component: VideoSection,
   parameters: { layout: 'fullscreen' },
   args: {
-    videoSrc: 'https://www.youtube-nocookie.com/embed/BwVBRkJxt-w',
+    videoSrc: '/vids/20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4',
+    videoPoster: '/vids/unfck_reveal_poster.jpg',
     videoTitle: '15. Juli 2026',
     videoAspect: '9 / 16',
-    autoplay: false,
   },
 } satisfies Meta<typeof VideoSection>
 

@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 import { HighlightText } from '../../atoms/highlight-text'
 import { ExplainerBlock } from '../../molecules/explainer-block'
 import { MediaOverlay } from '../../molecules/media-overlay'
@@ -14,13 +14,15 @@ export interface VotingSystemSectionProps extends HTMLAttributes<HTMLElement> {
   headingLines: string[]
   first: Block
   second: Block
-  media: {
+  media?: {
     src: string
     alt: string
     captionLabel?: string
     captionTo?: string
     captionHref?: string
   }
+  /** Custom media block shown between the two explainers (takes precedence over `media`). */
+  mediaNode?: ReactNode
 }
 
 export function VotingSystemSection({
@@ -28,6 +30,7 @@ export function VotingSystemSection({
   first,
   second,
   media,
+  mediaNode,
   className,
   ...rest
 }: VotingSystemSectionProps) {
@@ -48,13 +51,17 @@ export function VotingSystemSection({
 
         <ExplainerBlock title={first.title} paragraphs={first.paragraphs} />
 
-        <MediaOverlay
-          src={media.src}
-          alt={media.alt}
-          captionLabel={media.captionLabel}
-          captionTo={media.captionTo}
-          captionHref={media.captionHref}
-        />
+        {mediaNode ? (
+          mediaNode
+        ) : media ? (
+          <MediaOverlay
+            src={media.src}
+            alt={media.alt}
+            captionLabel={media.captionLabel}
+            captionTo={media.captionTo}
+            captionHref={media.captionHref}
+          />
+        ) : null}
 
         <ExplainerBlock title={second.title} paragraphs={second.paragraphs} />
       </div>

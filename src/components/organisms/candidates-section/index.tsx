@@ -1,19 +1,14 @@
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 import { Text } from "../../atoms/text";
 import { Link } from "../../atoms/link";
 import { HighlightText } from "../../atoms/highlight-text";
-import { MediaOverlay } from "../../molecules/media-overlay";
+import { CandidateCluster } from "../../molecules/candidate-cluster";
 import "./styles.css";
 
 export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
-  imageSrc: string;
-  imageAlt: string;
-  /** Optional lead photo shown first, with a caption link over its bottom. */
-  leadImageSrc?: string;
-  leadImageAlt?: string;
-  leadCaptionLabel?: string;
-  leadCaptionTo?: string;
-  leadCaptionHref?: string;
+  /** Right-column content (the Anna/Paul cards). */
+  lead?: ReactNode;
+  /** Intro paragraph in the left column. */
   text?: string;
   ctaLabel?: string;
   ctaTo?: string;
@@ -21,13 +16,7 @@ export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
 }
 
 export function CandidatesSection({
-  imageSrc,
-  imageAlt,
-  leadImageSrc,
-  leadImageAlt,
-  leadCaptionLabel,
-  leadCaptionTo,
-  leadCaptionHref,
+  lead,
   text = "Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus der Praxis.",
   ctaLabel = "Unsere Kandidierenden stellen sich vor",
   ctaTo,
@@ -39,35 +28,26 @@ export function CandidatesSection({
   return (
     <section className={classes} {...rest}>
       <div className="candidates__inner">
-        <div className="candidates__head">
+        <div className="candidates__grid">
           <HighlightText
             as="h2"
             lines={["Unsere", "Kandidierenden"]}
             variant="titel"
             color="white"
             textColor="purple"
-            align="center"
+            align="left"
             uppercase
+            className="candidates__heading"
           />
-        </div>
 
-        {leadImageSrc ? (
-          <MediaOverlay
-            className="candidates__lead"
-            src={leadImageSrc}
-            alt={leadImageAlt ?? ""}
-            captionLabel={leadCaptionLabel}
-            captionTo={leadCaptionTo}
-            captionHref={leadCaptionHref}
-          />
-        ) : null}
+          <div className="candidates__cards">{lead}</div>
 
-        <img className="candidates__image" src={imageSrc} alt={imageAlt} />
+          <CandidateCluster className="candidates__cluster" />
 
-        <div className="candidates__foot">
-          <Text as="p" variant="body" color="white" align="center">
+          <Text as="p" variant="body" color="white" className="candidates__text">
             {text}
           </Text>
+
           <Link
             to={ctaTo}
             href={ctaHref}

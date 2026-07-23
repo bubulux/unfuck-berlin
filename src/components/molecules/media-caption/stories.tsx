@@ -16,7 +16,7 @@ const meta = {
     src: '/pics/paulAnnaWahlsystem.png',
     alt: 'Paul und Anna',
     captionLabel: 'Spitzenduo Volt kennenlernen',
-    captionTo: '/spitzenkandidaten',
+    captionTo: '/kandidierende',
   },
 } satisfies Meta<typeof MediaCaption>
 

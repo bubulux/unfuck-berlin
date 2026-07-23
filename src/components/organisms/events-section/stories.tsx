@@ -12,9 +12,9 @@ const meta = {
       'Wir freuen uns auf Dich auf Podien, Meet&Greets, und anderen Veranstaltungen zu begrüßen.',
     ],
     events: [
-      { id: '1', day: '18-19', month: 'JUL', title: 'Lesbisch-Schwules Stadtfest', details: 'Motzstraßenfest' },
-      { id: '2', day: '22', month: 'JUL', title: 'Infoabend Volt Reinickendorf', details: 'Restaurant Lucky Chinese, Alt-Tegel 27, 13507 Berlin, 18:00 Uhr' },
-      { id: '3', day: '24', month: 'JUL', title: 'FLINTA* Stammtisch', details: 'Choriner Str. 34, 13189 Berlin, 19:00 Uhr' },
+      { id: '1', day: '18-19', month: 'JUL', title: 'Lesbisch-Schwules Stadtfest', location: 'Motzstraßenfest' },
+      { id: '2', day: '22', month: 'JUL', title: 'Infoabend Volt Reinickendorf', location: 'Restaurant Lucky Chinese, Alt-Tegel 27, 13507 Berlin', time: '18:00 Uhr' },
+      { id: '3', day: '24', month: 'JUL', title: 'FLINTA* Stammtisch', location: 'Choriner Str. 34, 13189 Berlin', time: '19:00 Uhr' },
     ],
     children: (
       <Text as="p" variant="body" color="white">

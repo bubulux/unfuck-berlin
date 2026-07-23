@@ -7,3 +7,11 @@
   margin-inline: auto;
   padding: 0 var(--content-pad) var(--space-7);
 }
+
+/* Desktop: widen so the multi-slide view has room. */
+@media (min-width: 48rem) {
+  .carousel-section__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+  }
+}

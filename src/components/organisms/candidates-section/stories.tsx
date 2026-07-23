@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { MemoryRouter } from 'react-router'
 import { CandidatesSection } from './index'
 
 const meta = {
@@ -6,10 +7,15 @@ const meta = {
   component: CandidatesSection,
   parameters: { layout: 'fullscreen' },
   args: {
-    imageSrc: '/pics/unsereKandidatenPortraitCluster.png',
-    imageAlt: 'Die Kandidierenden von Volt Berlin',
-    ctaTo: '/kandidaten',
+    ctaTo: '/kandidierende',
   },
+  decorators: [
+    (Story) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 } satisfies Meta<typeof CandidatesSection>
 
 export default meta

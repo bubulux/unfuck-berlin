@@ -1,12 +1,15 @@
 import { Link as RouterLink } from 'react-router'
 import { Text } from '../../atoms/text'
 import { Button } from '../../atoms/button'
+import { LazyVideo } from '../../molecules/lazy-video'
 import './styles.css'
 
 export interface HeroSectionProps {
-  /** YouTube embed URL (privacy: prefer the youtube-nocookie.com domain). */
+  /** Self-hosted video file (MP4/H.264). */
   videoSrc: string
   videoTitle: string
+  /** Poster shown while the video lazy-loads. */
+  videoPoster?: string
   /** Optional headline logo shown over/next to the video (e.g. the "unf*ck
    * berlin" graphic). */
   logoSrc?: string
@@ -17,49 +20,28 @@ export interface HeroSectionProps {
   ctaTo?: string
   /** …or external URL. */
   ctaHref?: string
-  /** Autoplay the video (muted + looped, as browsers require). Defaults to true. */
-  autoplay?: boolean
-}
-
-/** Append autoplay params to a YouTube embed URL (muted is required for autoplay). */
-function withAutoplay(src: string): string {
-  const id = src.split('/embed/')[1]?.split(/[?&]/)[0]
-  const params = new URLSearchParams({
-    autoplay: '1',
-    mute: '1',
-    playsinline: '1',
-    controls: '0',
-  })
-  if (id) {
-    params.set('loop', '1')
-    params.set('playlist', id)
-  }
-  return `${src}${src.includes('?') ? '&' : '?'}${params.toString()}`
 }
 
 export function HeroSection({
   videoSrc,
   videoTitle,
+  videoPoster,
   logoSrc,
   logoAlt,
   text,
   ctaLabel,
   ctaTo,
   ctaHref,
-  autoplay = true,
 }: HeroSectionProps) {
-  const src = autoplay ? withAutoplay(videoSrc) : videoSrc
   return (
     <section className="hero">
       <div className="hero__inner">
         <div className="hero__media">
-          <iframe
+          <LazyVideo
             className="hero__video"
-            src={src}
+            src={videoSrc}
+            poster={videoPoster}
             title={videoTitle}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
           />
           <div className="hero__gradient" aria-hidden="true" />
         </div>

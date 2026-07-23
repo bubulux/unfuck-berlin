@@ -27,8 +27,8 @@ export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
 }
 
 const DEFAULT_ACTIONS: HighlightLine[] = [
-  { text: "Spenden", to: "https://voltdeutschland.org/berlin/spenden" },
-  { text: "Mitmachen", to: "https://voltdeutschland.org/berlin/mitmachen" },
+  { text: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
+  { text: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
   { text: "Sticker abgreifen", to: "/sticker" },
 ];
 
@@ -73,7 +73,6 @@ export function SiteFooter({
           variant="body"
           color="neon"
           textColor="purple"
-          slant={0.25}
         />
 
         <div className="site-footer__contact">

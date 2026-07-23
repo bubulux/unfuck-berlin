@@ -61,26 +61,22 @@
   font-size: var(--text-kalender);
 }
 
-/* The parallelogram is a fixed-depth clip, NOT an angle-based skew — so the
- * slant (--hl-slant) is the same whether the box is wide or narrow, instead of
- * blowing up on long words. Top/bottom edges rise toward the right; the sides
- * stay perpendicular. No transform, so the text is naturally horizontal.
- * Top/bottom padding includes the slant so the clipped edges clear the text. */
 .highlight__box {
   --hl-bg: var(--color-white);
   --hl-fg: var(--color-purple);
-  --hl-slant: 0.3em;
 
   display: inline-block;
   width: fit-content;
-  padding: calc(0.1em + var(--hl-slant)) 0.36em;
+  padding: 0em 0.2em;
   background-color: var(--hl-bg);
-  clip-path: polygon(
-    0 var(--hl-slant),
-    100% 0,
-    100% calc(100% - var(--hl-slant)),
-    0 100%
-  );
+}
+
+.highlight__box {
+  transform: skewY(-2deg);
+}
+
+.highlight__text {
+  transform: skewY(2deg);
 }
 
 .highlight__text {

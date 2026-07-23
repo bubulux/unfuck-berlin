@@ -6,42 +6,88 @@
 .candidates__inner {
   max-width: var(--content-max);
   margin-inline: auto;
+  padding: var(--space-7) var(--content-pad);
 }
 
-.candidates__head {
-  padding: var(--space-7) var(--content-pad) var(--space-6);
+/* Mobile order: heading, then the Anna/Paul cards, then the cluster photo,
+ * then the intro text, then the CTA link. */
+.candidates__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "heading"
+    "cards"
+    "cluster"
+    "text"
+    "cta";
+  gap: var(--space-5);
 }
 
-/* Lead photo (with overlaid caption link), sits above the cluster image. */
-.candidates__lead {
-  margin-bottom: var(--space-5);
+.candidates__heading {
+  grid-area: heading;
 }
 
-/* Single cluster image, edge-to-edge within the content column. */
-.candidates__image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.candidates__foot {
+.candidates__cards {
+  grid-area: cards;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-5);
-  padding: var(--space-6) var(--content-pad) var(--space-7);
-  text-align: center;
+}
+
+.candidates__cluster {
+  grid-area: cluster;
+}
+
+.candidates__text {
+  grid-area: text;
+  max-width: 34rem;
 }
 
 .candidates__cta {
-  font-size: var(--text-subtitel);
+  grid-area: cta;
+  align-self: start;
+  font-size: var(--text-body);
   font-weight: var(--font-weight-bold);
 }
 
-/* Inline arrow — flows with the text, so it stays at the end of the last line
- * regardless of wrapping. Slightly larger than the label. */
+/* Inline arrow — stays at the end of the last line regardless of wrapping. */
 .candidates__arrow {
   font-size: 1.25em;
   line-height: 1;
   white-space: nowrap;
+}
+
+/* Desktop: two columns. Left column stacks heading/text/CTA/cluster; the cards
+ * span the full height of that column on the right (so they fill the height). */
+@media (min-width: 64rem) {
+  .candidates__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+  }
+
+  .candidates__grid {
+    grid-template-columns: 5fr 7fr;
+    grid-template-areas:
+      "heading cards"
+      "text    cards"
+      "cta     cards"
+      "cluster cards";
+    column-gap: var(--space-8);
+    row-gap: var(--space-4);
+    align-content: start;
+  }
+
+  /* Cards area spans all four left rows; stretch it and let the two cards grow
+   * to share that height equally. */
+  .candidates__cards {
+    align-self: stretch;
+  }
+
+  .candidates__cards .spitzenduo {
+    flex: 1 1 auto;
+  }
+
+  /* Push the cluster down so the left column ends near the cards. */
+  .candidates__cluster {
+    margin-top: var(--space-2);
+  }
 }

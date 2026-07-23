@@ -1,20 +1,29 @@
+import { KANDIDATEN_CMS } from './kandidaten.generated'
+
 export interface Kandidat {
   name: string
   /** Slug from the source href (/kandidierende/<slug>). */
   slug: string
   listenplatz: number
   bezirk: string
-  /** Portrait image (local, /public/pics/kandis). */
+  /** Portrait image (Sanity CDN URL, oder lokaler Fallback /public/pics/kandis). */
   image: string
+  /** Detail-/Bio-Felder aus dem CMS (nur bei CMS-Quelle vorhanden). */
+  alter?: number | null
+  wahlkreis?: string
+  /** Groesserer Portrait-Crop fuer die Bio-Seite. */
+  imageDetail?: string
+  herzensthema?: string
+  ueberMich?: string
 }
 
 /**
- * Landesliste Volt Berlin, AGH-Wahl 2026.
- * Parsed from the source candidate grid. The placeholder duplicate
- * "Theresa Nachname" (also Listenplatz 9) was omitted, Bezirk names normalized,
- * and portraits downloaded locally to /public/pics/kandis/<slug>.
+ * Fallback-Liste (Landesliste Volt Berlin, AGH-Wahl 2026) mit lokalen Portraits.
+ * Der Regelfall sind die aus Sanity generierten Kandidierenden in
+ * kandidaten.generated.ts (via `npm run content` / prebuild); bei erreichbarem
+ * Sanity gewinnt immer der CMS-Inhalt.
  */
-export const KANDIDATEN: Kandidat[] = [
+const FALLBACK_KANDIDATEN: Kandidat[] = [
   { name: 'Anna Auerbach', slug: 'anna-auerbach', listenplatz: 1, bezirk: 'Mitte', image: '/pics/kandis/anna-auerbach.png' },
   { name: 'Paul Loeper', slug: 'paul-loeper', listenplatz: 2, bezirk: 'Pankow', image: '/pics/kandis/paul-loeper.png' },
   { name: 'Rafael Kaaz', slug: 'rafael-kaaz', listenplatz: 3, bezirk: 'Charlottenburg-Wilmersdorf', image: '/pics/kandis/rafael-kaaz.png' },
@@ -35,3 +44,7 @@ export const KANDIDATEN: Kandidat[] = [
   { name: 'Danina Margit Schwarm', slug: 'danina-margit-schwarm', listenplatz: 18, bezirk: 'Charlottenburg-Wilmersdorf', image: '/pics/kandis/danina-margit-schwarm.png' },
   { name: 'Sascha Hellwig', slug: 'sascha-hellwig', listenplatz: 19, bezirk: 'Reinickendorf', image: '/pics/kandis/sascha-hellwig.png' },
 ]
+
+const CMS: Kandidat[] = KANDIDATEN_CMS
+
+export const KANDIDATEN: Kandidat[] = CMS.length ? CMS : FALLBACK_KANDIDATEN

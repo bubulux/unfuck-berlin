@@ -61,27 +61,23 @@
   outline-offset: 2px;
 }
 
-/* Wide screens: title hard-left, links expand across the middle, scroll button
- * pinned hard-right on the same row. */
+/* Wide screens: "Was Mehr?" gets its own row on top; below it the links expand
+ * across the width with the scroll button pinned hard-right on the same row. */
 @media (min-width: 48rem) {
   .was-mehr__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    gap: var(--space-5) var(--space-6);
+    column-gap: var(--space-6);
+    row-gap: var(--space-6);
   }
 
   .was-mehr__title {
+    grid-column: 1 / -1;
     margin-bottom: 0;
-    flex: 0 0 auto;
-  }
-
-  .was-mehr__links {
-    flex: 1 1 auto;
   }
 
   .was-mehr__scroll {
     margin-top: 0;
-    margin-left: auto;
-    flex: 0 0 auto;
   }
 }

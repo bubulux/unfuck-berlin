@@ -4,19 +4,13 @@ import { UnfuckIntro } from '../../components/organisms/unfuck-intro'
 import { VideoSection } from '../../components/organisms/video-section'
 import { ImageStack } from '../../components/organisms/image-stack'
 import { Text } from '../../components/atoms/text'
-
-const UNFCK_IMAGES = [
-  { src: '/pics/unfck/1.png', alt: 'unf*ck berlin 1' },
-  { src: '/pics/unfck/2.png', alt: 'unf*ck berlin 2' },
-  { src: '/pics/unfck/3.png', alt: 'unf*ck berlin 3' },
-  { src: '/pics/unfck/4.png', alt: 'unf*ck berlin 4' },
-  { src: '/pics/unfck/5.png', alt: 'unf*ck berlin 5' },
-]
+import { VIDEOS } from '../../data/videos'
+import { UNFCK_COLLAGE } from '../../data/unfck'
 
 export function UnfuckBerlin() {
   const { pathname } = useLocation()
   return (
-    <PageLayout activePath={pathname} hideCalendar>
+    <PageLayout activePath={pathname}>
       <UnfuckIntro
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"
@@ -46,7 +40,8 @@ export function UnfuckBerlin() {
       </UnfuckIntro>
 
       <VideoSection
-        videoSrc="https://www.youtube-nocookie.com/embed/BwVBRkJxt-w"
+        videoSrc={VIDEOS.reveal.src}
+        videoPoster={VIDEOS.reveal.poster}
         videoTitle="15. Juli 2026"
         videoAspect="9 / 16"
       />
@@ -79,7 +74,7 @@ export function UnfuckBerlin() {
         </Text>
       </UnfuckIntro>
 
-      <ImageStack images={UNFCK_IMAGES} gap />
+      <ImageStack images={UNFCK_COLLAGE} gap />
 
       <UnfuckIntro
         headline="Berlin ist eine der aufregendsten Städte der Welt!"

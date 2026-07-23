@@ -1,0 +1,26 @@
+.cluster {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+/* Portrait tiles (3:4, matching the source photos) so nothing is cropped; the
+ * whole 3x3 grid is therefore a vertical rectangle. */
+.cluster__cell {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Very faint lila veil over the whole grid. */
+.cluster__veil {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-purple);
+  opacity: 0.2;
+  pointer-events: none;
+}

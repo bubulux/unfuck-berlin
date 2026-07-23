@@ -22,3 +22,23 @@
   gap: var(--space-6) var(--space-4);
   margin-top: var(--space-2);
 }
+
+/* Wider viewports: widen the container so the auto-fill grid packs more cards
+ * per row, and give the columns a touch more room so names stay legible. */
+@media (min-width: 48rem) {
+  .kandidaten__inner {
+    max-width: var(--content-max-wide);
+    padding-inline: var(--content-pad-wide);
+  }
+
+  .kandidaten__grid {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: var(--space-7) var(--space-5);
+  }
+}
+
+@media (min-width: 64rem) {
+  .kandidaten__grid {
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  }
+}

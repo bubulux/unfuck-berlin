@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { ProgramSection } from './index'
-import { PROGRAM_PILLARS } from '../../../data/program'
+import { PROGRAM_PILLARS } from '../../../data/wahlprogramm'
 
 const meta = {
   title: 'Organisms/ProgramSection',

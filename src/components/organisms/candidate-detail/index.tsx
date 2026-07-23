@@ -1,5 +1,6 @@
 import type { HTMLAttributes } from 'react'
 import { Text } from '../../atoms/text'
+import { RichText } from '../../molecules/rich-text'
 import { SocialRow, type SocialLink } from '../../molecules/social-row'
 import './styles.css'
 
@@ -38,7 +39,7 @@ export function CandidateDetail({
   ...rest
 }: CandidateDetailProps) {
   const isLight = variant === 'light'
-  const textColor = isLight ? 'var(--color-black)' : 'white'
+  const textColor = isLight ? 'var(--color-purple)' : 'white'
   const headingColor = isLight ? 'purple' : 'neon'
   const nameColor = isLight ? 'purple' : 'white'
   const followColor = isLight ? 'purple' : textColor
@@ -48,51 +49,53 @@ export function CandidateDetail({
   return (
     <section className={classes} {...rest}>
       <div className="candidate__inner">
-        <Text as="h1" variant="titel" color={nameColor} uppercase className="candidate__name">
-          {name}
-        </Text>
-
-        <img className="candidate__image" src={image} alt={imageAlt} />
-
-        {subtitle ? (
-          <Text as="p" variant="body" color={textColor} weight="bold">
-            {subtitle}
+        <div className="candidate__media">
+          <Text as="h1" variant="titel" color={nameColor} uppercase className="candidate__name">
+            {name}
           </Text>
-        ) : null}
 
-        {meta.length > 0 ? (
-          <div className="candidate__meta">
-            {meta.map((line) => (
-              <Text key={line} as="p" variant="body" color={textColor}>
-                {line}
-              </Text>
-            ))}
-          </div>
-        ) : null}
-
-        <div className="candidate__blocks">
-          {blocks.map((block) => (
-            <div key={block.heading} className="candidate__block">
-              <Text as="h2" variant="subtitel" color={headingColor}>
-                {block.heading}
-              </Text>
-              <Text as="p" variant="body" color={textColor}>
-                {block.body}
-              </Text>
-            </div>
-          ))}
+          <img className="candidate__image" src={image} alt={imageAlt} />
         </div>
 
-        {socials.length > 0 ? (
-          <div className="candidate__follow">
-            {followLabel ? (
-              <Text as="p" variant="body" color={followColor} weight="bold">
-                {followLabel}
-              </Text>
-            ) : null}
-            <SocialRow links={socials} />
+        <div className="candidate__content">
+          {subtitle ? (
+            <Text as="p" variant="body" color={textColor} weight="bold">
+              {subtitle}
+            </Text>
+          ) : null}
+
+          {meta.length > 0 ? (
+            <div className="candidate__meta">
+              {meta.map((line) => (
+                <Text key={line} as="p" variant="body" color={textColor}>
+                  {line}
+                </Text>
+              ))}
+            </div>
+          ) : null}
+
+          <div className="candidate__blocks">
+            {blocks.map((block) => (
+              <div key={block.heading} className="candidate__block">
+                <Text as="h2" variant="subtitel" color={headingColor}>
+                  {block.heading}
+                </Text>
+                <RichText text={block.body} color={textColor} />
+              </div>
+            ))}
           </div>
-        ) : null}
+
+          {socials.length > 0 ? (
+            <div className="candidate__follow">
+              {followLabel ? (
+                <Text as="p" variant="body" color={followColor} weight="bold">
+                  {followLabel}
+                </Text>
+              ) : null}
+              <SocialRow links={socials} />
+            </div>
+          ) : null}
+        </div>
       </div>
     </section>
   )

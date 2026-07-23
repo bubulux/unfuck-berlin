@@ -4,6 +4,18 @@
   color: var(--color-purple);
 }
 
+.kandi-card__link {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.kandi-card__link:hover .kandi-card__name,
+.kandi-card__link:focus-visible .kandi-card__name {
+  text-decoration: underline;
+}
+
 .kandi-card__frame {
   position: relative;
   aspect-ratio: 4 / 5;
@@ -28,11 +40,11 @@
 .kandi-card__name {
   margin-top: var(--space-2);
   font-weight: var(--font-weight-bold);
-  font-size: var(--text-cta);
+  font-size: var(--text-body);
   line-height: 1.2;
 }
 
 .kandi-card__meta {
-  font-size: var(--text-fussnote);
-  line-height: 1.25;
+  font-size: var(--text-cta);
+  line-height: 1.3;
 }

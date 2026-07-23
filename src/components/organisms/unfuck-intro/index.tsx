@@ -31,29 +31,33 @@ export function UnfuckIntro({
   return (
     <section className={classes} {...rest}>
       <div className="unfuck-intro__inner">
-        {logoSrc ? (
-          <img className="unfuck-intro__logo" src={logoSrc} alt={logoAlt} />
-        ) : null}
+        <div className="unfuck-intro__lead">
+          {logoSrc ? (
+            <img className="unfuck-intro__logo" src={logoSrc} alt={logoAlt} />
+          ) : null}
 
-        <Text as="h1" variant="subtitel" color="white" className="unfuck-intro__headline">
-          {headline}
-        </Text>
+          <Text as="h1" variant="subtitel" color="white" className="unfuck-intro__headline">
+            {headline}
+          </Text>
+        </div>
 
-        <div className="unfuck-intro__body">{children}</div>
+        <div className="unfuck-intro__copy">
+          <div className="unfuck-intro__body">{children}</div>
 
-        {ctaHref ? (
-          <Button as="a" href={ctaHref} color="neon" className="unfuck-intro__cta">
-            {ctaLabel}
-          </Button>
-        ) : ctaTo ? (
-          <Button as={RouterLink} to={ctaTo} color="neon" className="unfuck-intro__cta">
-            {ctaLabel}
-          </Button>
-        ) : (
-          <Button color="neon" className="unfuck-intro__cta">
-            {ctaLabel}
-          </Button>
-        )}
+          {ctaHref ? (
+            <Button as="a" href={ctaHref} color="neon" className="unfuck-intro__cta">
+              {ctaLabel}
+            </Button>
+          ) : ctaTo ? (
+            <Button as={RouterLink} to={ctaTo} color="neon" className="unfuck-intro__cta">
+              {ctaLabel}
+            </Button>
+          ) : (
+            <Button color="neon" className="unfuck-intro__cta">
+              {ctaLabel}
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   )

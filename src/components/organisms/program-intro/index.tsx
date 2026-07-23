@@ -12,6 +12,8 @@ export interface ProgramIntroProps extends HTMLAttributes<HTMLElement> {
   headingColor?: ColorToken;
   headingAlign?: "left" | "center";
   headingUppercase?: boolean;
+  /** Widen the content container on desktop (stretch left-to-right). */
+  wide?: boolean;
   /** Body copy (paragraphs, may include inline <strong>). */
   children: ReactNode;
   ctaLabel?: string;
@@ -25,6 +27,7 @@ export function ProgramIntro({
   headingColor = "green",
   headingAlign = "center",
   headingUppercase = true,
+  wide = false,
   children,
   ctaLabel = "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
   ctaColor = "neon",
@@ -34,7 +37,9 @@ export function ProgramIntro({
   ...rest
 }: ProgramIntroProps) {
   const headingLines = Array.isArray(heading) ? heading : [heading];
-  const classes = ["program-intro", className].filter(Boolean).join(" ");
+  const classes = ["program-intro", wide && "program-intro--wide", className]
+    .filter(Boolean)
+    .join(" ");
   return (
     <section className={classes} {...rest}>
       <div className="program-intro__inner">

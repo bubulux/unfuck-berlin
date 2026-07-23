@@ -68,6 +68,7 @@
 
 .site-footer__actions {
   align-self: start;
+  gap: 4px;
 }
 
 .site-footer__contact {
@@ -112,6 +113,50 @@
   font-size: var(--text-fussnote);
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+/* Very small viewports: everything stacks — center the action links and the
+ * contact block to match the rest of the centered footer. */
+@media (max-width: 29.999rem) {
+  .site-footer__actions,
+  .site-footer__contact {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+/* Tablet / larger phones: the "tons of stuff" stacks wastefully, so put the
+ * action links and the contact block on one row — actions left, contact pushed
+ * to the right. Center stack stays on top, legal row full-width below. */
+@media (min-width: 30rem) and (max-width: 59.999rem) {
+  .site-footer__inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'center  center'
+      'actions contact'
+      'closing closing';
+    column-gap: var(--space-6);
+    align-items: start;
+  }
+
+  .site-footer__center {
+    grid-area: center;
+  }
+
+  .site-footer__actions {
+    grid-area: actions;
+    justify-self: start;
+  }
+
+  .site-footer__contact {
+    grid-area: contact;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .site-footer__closing {
+    grid-area: closing;
+  }
 }
 
 /* Wide screens: actions hard-left, center stack in the middle, contact block
