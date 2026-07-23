@@ -28,12 +28,9 @@ export function Termine() {
         status={status}
       >
         <Text as="p" variant="body" color="white">
-          Du vermisst hier ein Event, oder würdest uns gerne auf einem Panel
-          begrüßen? <strong>Dann lad' uns ein!</strong>
-        </Text>
-        <Text as="p" variant="body" color="white">
-          Schreib dazu eine Mail an{" "}
-          <a href="mailto:presse@voltberlin.org">presse@voltberlin.org</a>
+          Du vermisst hier ein Event, oder würdest uns gerne auf
+          einem Panel begrüßen? <strong>Dann lad' uns ein!</strong><br />
+          Schreib dazu eine Mail an <a href="mailto:presse@voltberlin.org">presse@voltberlin.org</a>.
         </Text>
       </EventsSection>
       <CarouselSection images={MEETS} />

@@ -36,6 +36,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
+  margin-bottom: var(--space-5);
 }
 
 .events__month-rule {
@@ -47,7 +48,7 @@
 .events__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-7);
 }
 
 .events__note {
@@ -55,7 +56,7 @@
   flex-direction: column;
   gap: var(--space-2);
   margin-top: var(--space-4);
-  text-align: center;
+  text-align: left;
 }
 
 /* Links in the note (e.g. the press e-mail) read as links. */
@@ -68,25 +69,24 @@
 /* Desktop: widen the section and lay events out in a row grid (cards restack
  * themselves when a cell gets narrow — see the event-card container query).
  * Text blocks stay at a readable width. */
-@media (min-width: 48rem) {
+@media (min-width: 700px) {
   .events__inner {
     max-width: var(--content-max-wide);
     padding-inline: var(--content-pad-wide);
   }
 
-  .events__intro,
-  .events__note {
+  .events__intro {
     max-width: 44rem;
   }
 
   .events__note {
-    margin-inline: auto;
+    max-width: 28rem;
   }
 
   .events__list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: stretch;
-    gap: var(--space-5);
+    gap: var(--space-7) var(--space-5);
   }
 }
