@@ -7,7 +7,7 @@ import { KANDIDATEN } from '../../data/kandidaten'
 export function Kandidaten() {
   const { pathname } = useLocation()
   return (
-    <PageLayout activePath={pathname} variant="light" hideCalendar>
+    <PageLayout activePath={pathname} variant="light">
       <CandidatesOverview
         heading="Gemeinsam für ein besseres Berlin"
         candidates={KANDIDATEN}

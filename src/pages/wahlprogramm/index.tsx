@@ -10,7 +10,7 @@ export function Wahlprogramm() {
   const { intro, pillars, europa } = WAHLPROGRAMM;
 
   return (
-    <PageLayout activePath={pathname} variant="light" hideCalendar>
+    <PageLayout activePath={pathname} variant="light">
       <ProgramIntro
         wide
         heading={intro.heading}

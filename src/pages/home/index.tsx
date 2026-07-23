@@ -6,12 +6,16 @@ import { CandidatesSection } from '../../components/organisms/candidates-section
 import { UnfuckSection } from '../../components/organisms/unfuck-section'
 import { SpitzenduoComposite } from '../../components/organisms/spitzenduo-composite'
 import { VIDEOS } from '../../data/videos'
+import { CalendarSection } from '../../components/organisms/calendar-section'
+import { useCalendar } from '../../context/calendar-context'
 
 /** Election date: 20 September 2026 (month is 0-indexed). */
 const ELECTION_DATE = new Date(2026, 8, 20)
 
 export function Home() {
   const { pathname } = useLocation()
+  const calendar = useCalendar()
+
   return (
     <PageLayout activePath={pathname}>
       <HeroSection
@@ -26,6 +30,11 @@ export function Home() {
       />
       <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
       <CandidatesSection lead={<SpitzenduoComposite />} ctaTo="/kandidierende" />
+      <CalendarSection
+        events={calendar.items.slice(0, 3)}
+        status={calendar.status}
+        viewAllTo="/termine"
+      />
       <UnfuckSection
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"

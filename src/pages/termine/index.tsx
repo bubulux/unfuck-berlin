@@ -17,7 +17,7 @@ export function Termine() {
   const events = items.filter((_, i) => raw[i] && raw[i].start <= cutoff);
 
   return (
-    <PageLayout activePath={pathname} hideCalendar>
+    <PageLayout activePath={pathname}>
       <EventsSection
         headingLines={["Termine", "& Treffen"]}
         intro={[

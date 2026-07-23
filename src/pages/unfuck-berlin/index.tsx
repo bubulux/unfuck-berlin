@@ -10,7 +10,7 @@ import { UNFCK_COLLAGE } from '../../data/unfck'
 export function UnfuckBerlin() {
   const { pathname } = useLocation()
   return (
-    <PageLayout activePath={pathname} hideCalendar>
+    <PageLayout activePath={pathname}>
       <UnfuckIntro
         logoSrc="/logos/unfckBerlin.svg"
         logoAlt="unf*ck berlin"

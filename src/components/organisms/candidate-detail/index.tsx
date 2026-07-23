@@ -39,7 +39,7 @@ export function CandidateDetail({
   ...rest
 }: CandidateDetailProps) {
   const isLight = variant === 'light'
-  const textColor = isLight ? 'var(--color-black)' : 'white'
+  const textColor = isLight ? 'var(--color-purple)' : 'white'
   const headingColor = isLight ? 'purple' : 'neon'
   const nameColor = isLight ? 'purple' : 'white'
   const followColor = isLight ? 'purple' : textColor

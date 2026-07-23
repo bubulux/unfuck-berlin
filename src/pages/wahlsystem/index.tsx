@@ -11,7 +11,7 @@ export function Wahlsystem() {
   const { heading, first, second, mit16 } = WAHLSYSTEM;
 
   return (
-    <PageLayout activePath={pathname} variant="light" hideCalendar>
+    <PageLayout activePath={pathname} variant="light">
       <VotingSystemSection
         headingLines={heading}
         first={first}
