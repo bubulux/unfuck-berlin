@@ -14,7 +14,7 @@ const meta = {
   ],
   args: {
     src: '/pics/wahlsystem/paul-anna-portrait.png',
-    alt: 'Paul Löper und Anna Auerbach',
+    alt: 'Paul Loeper und Anna Auerbach',
     captionLabel: 'Spitzenduo Volt kennenlernen',
     captionTo: '/kandidierende',
   },

@@ -14,10 +14,10 @@ const DEMO = [
   },
   {
     vorname: 'Paul',
-    nachname: 'Löper',
+    nachname: 'Loeper',
     role: 'Volt Spitzenkandidat',
     image: '/pics/spitzen/paulMain.png',
-    alt: 'Paul Löper',
+    alt: 'Paul Loeper',
     bg: '#382255',
     to: '/kandidierende/paul-loeper',
   },

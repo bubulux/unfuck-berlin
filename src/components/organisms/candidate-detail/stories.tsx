@@ -3,9 +3,9 @@ import { MemoryRouter } from 'react-router'
 import { CandidateDetail } from './index'
 
 const DEMO = {
-  name: 'Paul Löper',
+  name: 'Paul Loeper',
   image: '/pics/spitzen/paulMain.png',
-  imageAlt: 'Paul Löper',
+  imageAlt: 'Paul Loeper',
   meta: [
     'Kandidat der Landesliste Volt Berlin',
     'Listenplatz: 2 | Alter: 36 | Bezirk: Pankow',

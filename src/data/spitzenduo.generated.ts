@@ -14,10 +14,10 @@ export const SPITZENDUO_CMS = [
   },
   {
     "vorname": "Paul",
-    "nachname": "Löper",
+    "nachname": "Loeper",
     "role": "Volt Spitzenkandidat",
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/67c959c52ae99331df3ba2ddd7650bea4866240b-1000x700.png?auto=format",
-    "alt": "Paul Löper",
+    "alt": "Paul Loeper",
     "bg": "#382255",
     "to": "/kandidierende/paul-loeper"
   }
