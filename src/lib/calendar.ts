@@ -163,11 +163,11 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
   const s = fmtParts(ev.start)
   const e = ev.end ? fmtParts(ev.end) : null
   const multiDay = e ? e.day !== s.day || e.monthIdx !== s.monthIdx : false
-  const day = multiDay ? `${s.day}-${e!.day}` : s.day
+  const day = multiDay ? `${s.day} – ${e!.day}` : s.day
   const time = ev.allDay
     ? ''
     : e && !multiDay
-      ? `${s.time}–${e.time} Uhr`
+      ? `${s.time} – ${e.time} Uhr`
       : `${s.time} Uhr`
   const location = ev.location ? ev.location.replace(/\s*\n\s*/g, ', ').trim() : ''
   // A "#Bezirkstreffen" tag anywhere in the description flips the card's badge
