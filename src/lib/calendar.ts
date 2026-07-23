@@ -172,10 +172,17 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
   const location = ev.location ? ev.location.replace(/\s*\n\s*/g, ', ').trim() : ''
   // A "#Bezirkstreffen" tag anywhere in the description flips the card's badge
   // to the red "Bezirkstreffen" variant; everything else is a "Veranstaltung".
-  const isBezirk = /#Bezirkstreffen/i.test(ev.description ?? '')
-  const badge = isBezirk
-    ? { label: 'Bezirkstreffen', color: 'pink' as const, textColor: 'white' as const }
-    : { label: 'Veranstaltung', color: 'blue' as const, textColor: 'purple' as const }
+
+  const isBezirk = /#Bezirkstreffen/i.test(ev.description ?? '') || /Bezirkstreffen/i.test(ev.title ?? '') || /Treffen/i.test(ev.title ?? '')
+  const isHighlight = /#Highlight/i.test(ev.description ?? '') || /Plakatierstart/i.test(ev.title ?? '') || /CSD/i.test(ev.title ?? '')
+
+  let badge: any = { label: 'Veranstaltung', color: 'blue' as const, textColor: 'purple' as const }
+  if (isHighlight) {
+    badge = { label: 'Highlight', color: 'yellow' as const, textColor: 'purple' as const }
+  } else if (isBezirk) {
+    badge = { label: 'Bezirkstreffen', color: 'pink' as const, textColor: 'white' as const }
+  }
+
   return {
     id: ev.id,
     day,

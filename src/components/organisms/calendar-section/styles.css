@@ -15,7 +15,11 @@
 .calendar__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-7);
+  gap: var(--space-7) var(--space-5);
+}
+
+.calendar__inner .text {
+  margin-bottom: var(--space-4);
 }
 
 .calendar__view-all {
@@ -33,8 +37,8 @@
 
   .calendar__list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: stretch;
-    gap: var(--space-7);
+    gap: var(--space-7) var(--space-5);
   }
 }
