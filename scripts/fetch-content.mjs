@@ -29,6 +29,7 @@ const OUT_MEETS = resolve(DATA_DIR, 'meets.generated.ts')
 const OUT_UNFCK = resolve(DATA_DIR, 'unfck.generated.ts')
 const OUT_SPITZENDUO = resolve(DATA_DIR, 'spitzenduo.generated.ts')
 const OUT_CLUSTER = resolve(DATA_DIR, 'kandidaten-cluster.generated.ts')
+const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -71,6 +72,12 @@ const lines = (arr) => (Array.isArray(arr) ? arr.map((z) => clean(z)).filter(Boo
 const splitLines = (s) => clean(s).split('\n').map((l) => l.trim()).filter(Boolean)
 // Titel mit \n zu einer Zeile zusammenfassen.
 const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
+
+const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
+  "slug": slug.current,
+  published_at,
+  content_modules
+}`
 
 const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]{
   content_modules[]{
@@ -116,6 +123,32 @@ const UNFCK_QUERY = `*[_id=="seiteUnfck"][0].collage1[]{ "url": asset->url }`
 const SPITZENDUO_QUERY = `*[_type=="spitzenduo"]|order(reihenfolge asc){
   vorname, nachname, "foto": foto.asset->url
 }`
+
+
+function buildNews(rows) {
+  const articles = (rows || [])
+    .filter((a) => a.slug)
+    .map((article) => {
+      const mods = article.content_modules || []
+
+      const hero =
+        mods.find((m) => m._type === 'hero_linear' || m._type === 'hero_video') || {}
+
+      return {
+        slug: clean(article.slug),
+        publishedAt: clean(article.published_at),
+        title: lines(hero.heroZeilen),
+        body: clean(hero.heroText),
+        content: mods,
+      }
+    })
+
+  if (!articles.length) {
+    throw new Error('Keine Artikel gefunden.')
+  }
+
+  return articles
+}
 
 function buildWahlprogramm(res) {
   const mods = res?.content_modules || []
@@ -289,7 +322,8 @@ const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // Letzter Abruf: ${new Date().toISOString()}`
 
 async function main() {
-  const [wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+  const [newsRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+    client.fetch(NEWS_QUERY),
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
@@ -299,6 +333,7 @@ async function main() {
     client.fetch(SPITZENDUO_QUERY),
   ])
 
+  const news = buildNews(newsRows)
   const wahlprogramm = buildWahlprogramm(wpRes)
   const kandidaten = buildKandidaten(kandiRows)
   const wahlsystem = buildWahlsystem(wsRes)
@@ -307,6 +342,12 @@ async function main() {
   const unfck = buildUnfck(unfckRes)
   const spitzenduo = buildSpitzenduo(spitzenduoRows, kandidaten)
   const cluster = buildCluster(kandiRows)
+
+  writeFileSync(
+    OUT_NEWS,
+    `${header}\n\nexport const NEWS_CMS = ${JSON.stringify(news, null, 2)}\n`,
+    'utf8',
+  )
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -350,13 +391,14 @@ async function main() {
   )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
+    `Inhalte aktualisiert: News (${news.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
   )
 }
 
 main().catch((err) => {
   console.warn('Sanity-Abruf fehlgeschlagen:', err.message)
   if (
+    existsSync(OUT_NEWS) &&
     existsSync(OUT_WAHLPROGRAMM) &&
     existsSync(OUT_KANDIDATEN) &&
     existsSync(OUT_WAHLSYSTEM) &&

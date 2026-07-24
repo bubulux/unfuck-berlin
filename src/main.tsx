@@ -14,6 +14,7 @@ import { Confirm } from './pages/confirm'
 import { Termine } from './pages/termine'
 import { Kandidaten } from './pages/kandidaten'
 import { KandidatDetail } from './pages/kandidat-detail'
+import { NewsPage } from './pages/news'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -23,6 +24,8 @@ createRoot(document.getElementById('root')!).render(
       <CalendarProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/news/*" element={<NewsPage />} />
           <Route path="/wahlprogramm" element={<Wahlprogramm />} />
           <Route path="/wahlsystem" element={<Wahlsystem />} />
           <Route path="/unfuck-berlin" element={<UnfuckBerlin />} />

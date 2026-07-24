@@ -15,20 +15,20 @@ import kandis_auswahl from './obj/kandis_auswahl'
 import seite from './seite'
 import article from './article'
 
-import bezirkThema from './bezirkThema'
+// import bezirkThema from './bezirkThema'
 import kandidatAgh from './kandidatAgh'
 import kandidatBvv from './kandidatBvv'
 // import neuigkeit from './neuigkeit'
-import questionAnswer from './questionAnswer'
+// import questionAnswer from './questionAnswer'
 // import seiteAlleKandis from './seiteAlleKandis'
 // import seiteBezirk from './seiteBezirk'
 import seiteCountDown from './seiteCountDown'
 // import seiteImBezirk from './seiteImBezirk'
 import seiteMitmachen from './seiteMitmachen'
-import seitePaulAnna from './seitePaulAnna'
+// import seitePaulAnna from './seitePaulAnna'
 import seiteUnfck from './seiteUnfck'
-import seiteVoltomat from './seiteVoltomat'
-import siteTexte from './siteTexte'
+// import seiteVoltomat from './seiteVoltomat'
+// import siteTexte from './siteTexte'
 import spitzenduo from './spitzenduo'
 // import termin from './termin'
 
@@ -49,20 +49,20 @@ export const schemaTypes = [
   seite,
   article,
 
-  bezirkThema,
+  // bezirkThema,
   kandidatAgh,
   kandidatBvv,
   // neuigkeit,
-  questionAnswer,
+  // questionAnswer,
   // seiteAlleKandis,
   // seiteBezirk,
   seiteCountDown,
   // seiteImBezirk,
   seiteMitmachen,
-  seitePaulAnna,
+  // seitePaulAnna,
   seiteUnfck,
-  seiteVoltomat,
-  siteTexte,
+  // seiteVoltomat,
+  // siteTexte,
   spitzenduo,
   // termin,
 ]
