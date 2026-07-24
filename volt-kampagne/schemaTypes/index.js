@@ -13,23 +13,24 @@ import wahlprogramm_kapitel_teaser from './obj/wahlprogramm_kapitel_teaser'
 import kandis_auswahl from './obj/kandis_auswahl'
 
 import seite from './seite'
+import article from './article'
 
 import bezirkThema from './bezirkThema'
 import kandidatAgh from './kandidatAgh'
 import kandidatBvv from './kandidatBvv'
-import neuigkeit from './neuigkeit'
+// import neuigkeit from './neuigkeit'
 import questionAnswer from './questionAnswer'
 // import seiteAlleKandis from './seiteAlleKandis'
-import seiteBezirk from './seiteBezirk'
+// import seiteBezirk from './seiteBezirk'
 import seiteCountDown from './seiteCountDown'
-import seiteImBezirk from './seiteImBezirk'
+// import seiteImBezirk from './seiteImBezirk'
 import seiteMitmachen from './seiteMitmachen'
 import seitePaulAnna from './seitePaulAnna'
 import seiteUnfck from './seiteUnfck'
 import seiteVoltomat from './seiteVoltomat'
 import siteTexte from './siteTexte'
 import spitzenduo from './spitzenduo'
-import termin from './termin'
+// import termin from './termin'
 
 export const schemaTypes = [
   wahlsystem_teaser,
@@ -46,21 +47,22 @@ export const schemaTypes = [
   kandis_auswahl,
 
   seite,
+  article,
 
   bezirkThema,
   kandidatAgh,
   kandidatBvv,
-  neuigkeit,
+  // neuigkeit,
   questionAnswer,
   // seiteAlleKandis,
-  seiteBezirk,
+  // seiteBezirk,
   seiteCountDown,
-  seiteImBezirk,
+  // seiteImBezirk,
   seiteMitmachen,
   seitePaulAnna,
   seiteUnfck,
   seiteVoltomat,
   siteTexte,
   spitzenduo,
-  termin,
+  // termin,
 ]

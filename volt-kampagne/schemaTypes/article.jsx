@@ -1,0 +1,71 @@
+import { defineField, defineType } from 'sanity'
+import { DocumentIcon } from '@sanity/icons/Document'
+
+export default defineType({
+  name: 'article',
+  title: 'Article',
+  type: 'document',
+  icon: DocumentIcon,
+
+  preview: {
+    select: {
+      slug: 'slug',
+      content_modules: 'content_modules',
+    },
+    prepare(selection) {
+      const { slug, content_modules } = selection
+
+      const hero_video = content_modules.find(({ _type }) => _type === 'hero_linear' || _type === 'hero_video')
+
+      if (hero_video) {
+        const { heroZeilen } = hero_video
+        return {
+          title: heroZeilen.join(' '),
+          subtitle: `/news/${slug.current || ''}`,
+        }
+      }
+
+      return {
+        title: '',
+        subtitle: `/news/${slug.current || ''}`,
+      }
+    },
+  },
+
+  fields: [
+    defineField({
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+    }),
+
+    defineField({
+      title: 'Date Published',
+      name: 'published_at',
+      type: 'date',
+    }),
+
+    defineField({
+      title: 'Inhalts Blöcke',
+      name: 'content_modules',
+      insertMenu: {
+        filter: true,
+        showIcons: true,
+      },
+      type: 'array',
+      of: [
+        { type: 'kandis_auswahl' },
+        { type: 'hero_linear' },
+        { type: 'hero_video' },
+        { type: 'kalender_teaser' },
+        { type: 'kandis_teaser' },
+        { type: 'wahlsystem_teaser' },
+        { type: 'unfck_teaser' },
+        { type: 'headline' },
+        { type: 'html_text' },
+        { type: 'one_cta' },
+        { type: 'wahlprogramm_teaser' },
+      ],
+    }),
+  ],
+})

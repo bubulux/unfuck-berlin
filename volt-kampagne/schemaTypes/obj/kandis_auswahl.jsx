@@ -1,4 +1,4 @@
-import { defineType } from 'sanity'
+import { defineType, defineField } from 'sanity'
 import {ThLargeIcon} from '@sanity/icons/ThLarge'
 
 export default defineType({
