@@ -112,6 +112,7 @@ export function LazyVideo({ src, poster, title, className }: LazyVideoProps) {
           className="lazy-video__toggle"
           onClick={toggle}
           aria-label={playing ? 'Video pausieren' : 'Video abspielen'}
+          {...{'data-umami-event': 'toggle-video-playing'}}
         >
           {playing ? <PauseGlyph /> : <PlayGlyph />}
         </button>
