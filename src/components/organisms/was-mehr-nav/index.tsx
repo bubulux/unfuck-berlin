@@ -54,6 +54,7 @@ export function WasMehrNav({
               href={link.href}
               color="neon"
               className="was-mehr__link"
+              {...{'data-umami-event': 'was-mehr-nav-link-click'}}
             >
               {link.label}
               <span className="was-mehr__dot" aria-hidden="true">
@@ -70,6 +71,7 @@ export function WasMehrNav({
               className="was-mehr__scroll-btn"
               aria-label="Nach oben scrollen"
               onClick={scrollToTop}
+              {...{'data-umami-event': 'scroll-to-top'}}
             >
               <Icon name="arrow-up" size="1.75rem" />
             </button>
