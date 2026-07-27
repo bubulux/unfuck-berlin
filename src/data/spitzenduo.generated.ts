@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-24T13:43:33.615Z
+// Letzter Abruf: 2026-07-27T19:57:13.563Z
 
 export const SPITZENDUO_CMS = [
   {

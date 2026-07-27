@@ -17,6 +17,7 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
+  { label: "News", to: "/news" },
   { label: "Kalender", to: "/termine" },
   { label: "Alle Voltkandidierenden", to: "/kandidierende" },
   { label: "unf*ck berlin", to: "/unfuck-berlin" },
