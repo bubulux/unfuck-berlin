@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-28T15:16:54.102Z
+// Letzter Abruf: 2026-07-28T16:06:23.095Z
 
 export const NEWS_CMS = [
   {
@@ -97,18 +97,6 @@ export const NEWS_CMS = [
         "photo": null
       },
       {
-        "_key": "01eb676083d9",
-        "_type": "photo",
-        "alt": "unf*uck berlin Schriftzug vor dem West-Berliner TV-Turm",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/fabd98e6afa557dee651026b6241a6a4ad5691c6-1880x1084.jpg"
-      },
-      {
-        "_key": "85aa9538db6e",
-        "_type": "html_content",
-        "html_content": "Volt hat sich heute als Urheberin der Guerilla-Kampagne „unf*ck Berlin“ zu erkennen gegeben. Die Partei bringt damit auf den Punkt, was viele Berliner*innen täglich erleben: Die Stadt könnte so viel besser sein – und bleibt seit Jahren an zu vielen Stellen hinter ihren Möglichkeiten. Am 20. September werden das Abgeordnetenhaus und die Bezirksverordnetenversammlungen neu gewählt. Volts Botschaft dazu ist klar: Die regierenden Parteien hatten jahrelang ihre Chance. Jetzt ist Zeit für etwas Neues.\n\nDie Berliner*innen nehmen den Ball auf und teilen auf Social Media und einer eigens eingerichteten Webseite Orte, wo die Stadt im Alltag für sie nicht funktioniert – von der Dauer-Baustelle über die bröckelnde Schule bis zu Ämtern, die Daten doppelt und dreifach abfragen. Volt ist überzeugt: Es gibt keinen Grund, dass Berlin hinter Wien, Barcelona oder Paris zurückbleibt. Was die Menschen nervt, wollen wir hören, anpacken und lösen: pragmatisch und evidenzbasiert nach dem Vorbild anderer europäischer Städte. Wie genau die Partei Berlin verbessern will, steht in ihrem Wahlprogramm:\n\nEine Verwaltung, die liefert. Verbindliche Bearbeitungsfristen nach dem Dreimal-Ja-Prinzip: Jeder vollständige Antrag wird sofort bestätigt, klar zugeordnet und innerhalb einer festen Frist entschieden – einfache Standardfälle in zehn Arbeitstagen. Nachweise müssen nur einmal eingereicht werden, nach dem Once-Only-Prinzip wie in Estland.\n\nWohnraum, der bezahlbar ist. Flächen für 300.000 neue Wohnungen, 30.000 zusätzliche Wohnungen durch die Umnutzung leerstehender Gewerbeflächen, schneller bauen durch digitale, automatisierte Genehmigungen statt jahrelanger Prüfung, günstiger bauen nach dem  Hamburg-Standard – und Housing First für wohnungslose Menschen.\n\nMobilität, die alle mitnimmt. Rufbusse und autonome Shuttles für die Außenbezirke, Vollautomatisierung der U-Bahn, bis 2030 Umbaupläne für alle noch nicht barrierefreien Stationen. Und sichere Straßen mit dem Ziel ‚Vision Zero' – kein einziger Verkehrstoter, wie es Helsinki bereits geschafft hat.\n\nBildung, die trägt. Sprachförderung ab vier Jahren, multiprofessionelle Teams an Kitas und Schulen, das neue Schulfach „Lebenskompetenz“ – von psychischer Gesundheit bis Steuern –, eine Ausbildungsplatzgarantie und ein Berliner Azubiwerk für bezahlbaren Azubi-Wohnraum und lebenslanges Lernen durch Weiterbildung.\n\nEine Wirtschaft, die Zukunft schafft. Berlin wird Ankerkundin für Startups und kauft neue Technologien als Erste ein, ein Berliner Zukunftsfonds mobilisiert Wachstumskapital für die Wachstumsphase.\n\nEine Stadt, die sauber ist. Wohnortnahe Kiez-Recycling-Punkte, rund um die Uhr geöffnet, deutlich mehr Mülleimer und häufigere Leerung an Brennpunkten, konsequente Verfolgung illegaler Müllablagerung – und ein ‚Berlin-Pay'-Belohnungssystem fürs Mitmachen, nach dem Vorbild Kopenhagens.\n\n„Berlin hat so viel Potenzial, aber es wird seit Jahren unter Wert regiert“, sagt Spitzenkandidatin Anna Auerbach. „Wohnungen, die keiner bezahlen kann, marode Schulen, Anträge, die monatelang nicht bearbeitet werden: Das ist kein Naturgesetz, das ist das Ergebnis von Politik. ‚unf*ck Berlin‘ sehen wir als Arbeitsauftrag – und wir haben den Plan dafür.“\n\n„Wir müssen dafür nichts erfinden, was es längst gibt“, fügt Spitzenkandidat Paul Loeper hinzu. „Estland hat die digitale Verwaltung, Wien das bezahlbare Wohnen, Helsinki schafft ein ganzes Jahr ohne Verkehrstote. Als paneuropäische Partei holen wir die besten Lösungen aus ganz Europa nach Berlin – und wir wissen aus eigener Regierungsarbeit, wie man sie umsetzt.“\n\nVolt ist die am schnellsten wachsende Kraft der politischen Mitte und fängt in Berlin nicht bei null an: Bei der Europawahl 2024 erreichte die Partei in der Hauptstadt 4,8 Prozent – mehr als 74.000 Stimmen, in Mitte und Friedrichshain-Kreuzberg über sieben Prozent. In vielen Kommunen wie in Frankfurt am Main und in Wiesbaden, aber auch in Portugal und Italien hat Volt bereits bewiesen, dass pragmatische, europäische Politik im Alltag funktioniert. Genau diesen Ansatz bringt die Partei jetzt nach Berlin: die besten Ideen aus ganz Europa – für eine Stadt, die es besser kann.\n\n",
-        "photo": null
-      },
-      {
         "_key": "62be0656654e",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/videos/20260715_volt_unfck_reveal_long_version_final_small.mp4",
@@ -137,6 +125,56 @@ export const NEWS_CMS = [
         "photo": null
       },
       {
+        "_key": "01eb676083d9",
+        "_type": "photo",
+        "alt": "unf*uck berlin Schriftzug vor dem West-Berliner TV-Turm",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/fabd98e6afa557dee651026b6241a6a4ad5691c6-1880x1084.jpg"
+      },
+      {
+        "_key": "85aa9538db6e",
+        "_type": "html_content",
+        "html_content": "Volt hat sich heute als Urheberin der Guerilla-Kampagne „unf*ck Berlin“ zu erkennen gegeben. Die Partei bringt damit auf den Punkt, was viele Berliner*innen täglich erleben: Die Stadt könnte so viel besser sein – und bleibt seit Jahren an zu vielen Stellen hinter ihren Möglichkeiten. Am 20. September werden das Abgeordnetenhaus und die Bezirksverordnetenversammlungen neu gewählt. Volts Botschaft dazu ist klar: Die regierenden Parteien hatten jahrelang ihre Chance. Jetzt ist Zeit für etwas Neues.\n\nDie Berliner*innen nehmen den Ball auf und teilen auf Social Media und einer eigens eingerichteten Webseite Orte, wo die Stadt im Alltag für sie nicht funktioniert – von der Dauer-Baustelle über die bröckelnde Schule bis zu Ämtern, die Daten doppelt und dreifach abfragen. Volt ist überzeugt: Es gibt keinen Grund, dass Berlin hinter Wien, Barcelona oder Paris zurückbleibt. Was die Menschen nervt, wollen wir hören, anpacken und lösen: pragmatisch und evidenzbasiert nach dem Vorbild anderer europäischer Städte. Wie genau die Partei Berlin verbessern will, steht in ihrem Wahlprogramm:\n\nEine Verwaltung, die liefert. Verbindliche Bearbeitungsfristen nach dem Dreimal-Ja-Prinzip: Jeder vollständige Antrag wird sofort bestätigt, klar zugeordnet und innerhalb einer festen Frist entschieden – einfache Standardfälle in zehn Arbeitstagen. Nachweise müssen nur einmal eingereicht werden, nach dem Once-Only-Prinzip wie in Estland.\n\nWohnraum, der bezahlbar ist. Flächen für 300.000 neue Wohnungen, 30.000 zusätzliche Wohnungen durch die Umnutzung leerstehender Gewerbeflächen, schneller bauen durch digitale, automatisierte Genehmigungen statt jahrelanger Prüfung, günstiger bauen nach dem  Hamburg-Standard – und Housing First für wohnungslose Menschen.\n\nMobilität, die alle mitnimmt. Rufbusse und autonome Shuttles für die Außenbezirke, Vollautomatisierung der U-Bahn, bis 2030 Umbaupläne für alle noch nicht barrierefreien Stationen. Und sichere Straßen mit dem Ziel ‚Vision Zero' – kein einziger Verkehrstoter, wie es Helsinki bereits geschafft hat.\n\nBildung, die trägt. Sprachförderung ab vier Jahren, multiprofessionelle Teams an Kitas und Schulen, das neue Schulfach „Lebenskompetenz“ – von psychischer Gesundheit bis Steuern –, eine Ausbildungsplatzgarantie und ein Berliner Azubiwerk für bezahlbaren Azubi-Wohnraum und lebenslanges Lernen durch Weiterbildung.\n\nEine Wirtschaft, die Zukunft schafft. Berlin wird Ankerkundin für Startups und kauft neue Technologien als Erste ein, ein Berliner Zukunftsfonds mobilisiert Wachstumskapital für die Wachstumsphase.\n\nEine Stadt, die sauber ist. Wohnortnahe Kiez-Recycling-Punkte, rund um die Uhr geöffnet, deutlich mehr Mülleimer und häufigere Leerung an Brennpunkten, konsequente Verfolgung illegaler Müllablagerung – und ein ‚Berlin-Pay'-Belohnungssystem fürs Mitmachen, nach dem Vorbild Kopenhagens.",
+        "photo": null
+      },
+      {
+        "_key": "bf59113db671",
+        "_type": "photo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/0d681ed4137e1d8a859cc08f1ec7478282b30538-1880x1084.jpg"
+      },
+      {
+        "_key": "a2b67ce77fa7",
+        "_type": "html_content",
+        "html_content": "„Berlin hat so viel Potenzial, aber es wird seit Jahren unter Wert regiert“, sagt Spitzenkandidatin Anna Auerbach. „Wohnungen, die keiner bezahlen kann, marode Schulen, Anträge, die monatelang nicht bearbeitet werden: Das ist kein Naturgesetz, das ist das Ergebnis von Politik. ‚unf*ck Berlin‘ sehen wir als Arbeitsauftrag – und wir haben den Plan dafür.“",
+        "photo": null
+      },
+      {
+        "_key": "9f4b8473ffcb",
+        "_type": "photo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/5d4448050e26fefa4b82ec55c4c9ab064022d612-1880x1084.jpg"
+      },
+      {
+        "_key": "fb1525a7a67e",
+        "_type": "html_content",
+        "html_content": "„Wir müssen dafür nichts erfinden, was es längst gibt“, fügt Spitzenkandidat Paul Loeper hinzu. „Estland hat die digitale Verwaltung, Wien das bezahlbare Wohnen, Helsinki schafft ein ganzes Jahr ohne Verkehrstote. Als paneuropäische Partei holen wir die besten Lösungen aus ganz Europa nach Berlin – und wir wissen aus eigener Regierungsarbeit, wie man sie umsetzt.“",
+        "photo": null
+      },
+      {
+        "_key": "f6ab713a6f1a",
+        "_type": "photo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/8d37a53870ba3f45e7d62275538f026a758e68e8-1880x1084.jpg"
+      },
+      {
+        "_key": "011c45c0d6f1",
+        "_type": "html_content",
+        "html_content": "Volt ist die am schnellsten wachsende Kraft der politischen Mitte und fängt in Berlin nicht bei null an: Bei der Europawahl 2024 erreichte die Partei in der Hauptstadt 4,8 Prozent – mehr als 74.000 Stimmen, in Mitte und Friedrichshain-Kreuzberg über sieben Prozent. In vielen Kommunen wie in Frankfurt am Main und in Wiesbaden, aber auch in Portugal und Italien hat Volt bereits bewiesen, dass pragmatische, europäische Politik im Alltag funktioniert. Genau diesen Ansatz bringt die Partei jetzt nach Berlin: die besten Ideen aus ganz Europa – für eine Stadt, die es besser kann.",
+        "photo": null
+      },
+      {
+        "_key": "699dde13ddb1",
+        "_type": "photo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/5731a7f8803703c602d5fe906815952265bc5909-1880x1084.jpg"
+      },
+      {
         "_key": "79de87e0535c",
         "_type": "headline",
         "headlineZeilen": [
@@ -149,6 +187,11 @@ export const NEWS_CMS = [
         "_type": "html_content",
         "html_content": "Volt – die erste paneuropäische Partei – kämpft seit 2017 grenzüberschreitend für eine innovative, nachhaltige und sozial gerechte Politik. Vom Europäischen Parlament bis in die Kommunen bringen wir bereits heute konkrete Lösungen voran. 2026 treten wir in Berlin zur Abgeordnetenhaus- und Bezirksverordnetenversammlungswahl an, um bewährte Ansätze aus ganz Europa hier entschlossen umzusetzen.",
         "photo": null
+      },
+      {
+        "_key": "2934b58f548a",
+        "_type": "photo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4be6d521b647ca2e44e987267488b03b0a327f48-1880x1084.jpg"
       }
     ]
   }

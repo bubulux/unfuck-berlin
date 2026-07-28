@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity'
-import { LinkIcon } from '@sanity/icons/Link'
 import {ConfettiIcon} from '@sanity/icons/Confetti'
+import {Stack, Heading, Text} from '@sanity/ui'
 
 export default defineType({
   name: 'hero_linear',
@@ -20,6 +20,17 @@ export default defineType({
         subtitle: heroText,
         media: <span style={{ fontSize: '1.5rem' }}>💬</span>,
       }
+    },
+  },
+  components: {
+    preview: (props) => {
+      const { title, subtitle } = props
+      return (
+        <Stack paddingX={4} paddingY={2} gap={4}>
+          <Heading as="h1" size={4}>{title}</Heading>
+          <Text muted size={1}>{subtitle}</Text>
+        </Stack>
+      )
     },
   },
 

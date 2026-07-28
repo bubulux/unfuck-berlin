@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity'
 import {TextIcon} from '@sanity/icons/Text'
+import {Stack, Heading} from '@sanity/ui'
 
 export default defineType({
   name: 'headline',
@@ -18,6 +19,16 @@ export default defineType({
         title: headlineZeilen.join(' '),
         subtitle: headline_theme ? `(${headline_theme})` : '',
       }
+    },
+  },
+  components: {
+    preview: (props) => {
+      const { title } = props
+      return (
+        <Stack paddingX={4} paddingY={2} gap={2}>
+          <Heading as="h2" size={3}>{title}</Heading>
+        </Stack>
+      )
     },
   },
 

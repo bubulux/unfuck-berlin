@@ -21,6 +21,18 @@ export default defineType({
       }
     },
   },
+  components: {
+    preview: (props) => {
+      const { title, subtitle, ...restProps } = props
+      return (
+        <Stack paddingX={4} paddingY={2} gap={4}>
+          <Heading as="h1" size={4}>{title}</Heading>
+          <Text muted size={1}>{subtitle}</Text>
+          {props.renderDefault(restProps)}
+        </Stack>
+      )
+    },
+  },
 
   fields: [
     defineField({

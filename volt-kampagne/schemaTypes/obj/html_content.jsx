@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity'
 import {BlockContentIcon} from '@sanity/icons/BlockContent'
+import {Stack, Text} from '@sanity/ui'
 
 export default defineType({
   name: 'html_content',
@@ -17,6 +18,16 @@ export default defineType({
         title: html_content,
         subtitle: '',
       }
+    },
+  },
+  components: {
+    preview: (props) => {
+      const { title } = props
+      return (
+        <Stack paddingX={4} paddingY={2} gap={2}>
+          <Text size={1}>{title}</Text>
+        </Stack>
+      )
     },
   },
 
