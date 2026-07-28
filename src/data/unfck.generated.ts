@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-28T14:06:43.498Z
+// Letzter Abruf: 2026-07-28T15:16:54.102Z
 
 export const UNFCK_COLLAGE_CMS = [
   {

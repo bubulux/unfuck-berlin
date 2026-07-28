@@ -106,8 +106,9 @@ export function NewsPage() {
               </p>
             </section>
           } else if (c._type === 'headline') {
-            return <section key={key}>
+            return (
               <HighlightText
+                key={key}
                 as="h2"
                 lines={(c as any).headlineZeilen}
                 variant="subtitel"
@@ -118,7 +119,7 @@ export function NewsPage() {
                 className="program-intro__heading"
                 // style={{ marginBottom: '16px' }}
               />
-            </section>
+            )
           } else if (c._type === 'html_content') {
             const html_content: string = c.html_content || ''
             return <section key={key} style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: html_content }} />
@@ -127,10 +128,22 @@ export function NewsPage() {
           //     <ReactMarkdown>{c.md_text}</ReactMarkdown>
           //   </section>
           } else if (c._type === 'one_cta') {
-            return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
-              <Button as="a" href={c.ctaHref} color="neon" className="unfuck-intro__cta">
+            return (
+              <Button key={key} as="a" href={c.ctaHref} color="neon" className="unfuck-intro__cta" style={{ margin: '0' }}>
                 {c.ctaLabel}
               </Button>
+            )
+          } else if (c._type === 'photo') {
+            return <section key={key}>
+              <img
+                src={c.photo}
+                alt={c.alt || ''}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                loading="lazy"
+              />
             </section>
           }
 

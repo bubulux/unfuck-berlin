@@ -71,6 +71,7 @@ export default defineType({
         { type: 'headline' },
         { type: 'html_content' },
         { type: 'one_cta' },
+        { type: 'photo' },
         // { type: 'wahlprogramm_teaser' },
       ],
     }),

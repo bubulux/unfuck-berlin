@@ -77,7 +77,10 @@ const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
   "slug": slug.current,
   is_published,
   published_at,
-  content_modules
+  content_modules[]{
+    ...,
+    "photo": photo.asset->url
+  }
 }`
 
 const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]{
