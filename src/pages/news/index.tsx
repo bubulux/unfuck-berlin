@@ -8,10 +8,14 @@ import Button from "../../components/atoms/button";
 export function NewsPage() {
   const { pathname } = useLocation();
 
-  const article_many = NEWS_CMS.filter(a => pathname.endsWith(`/${a.slug}`))
-  if (!article_many.length) {
+  const article_many = NEWS_CMS
+    .filter(a => a.is_published === true)
+    .filter(a => pathname.endsWith(`/${a.slug}`))
 
-    const NEWS_CMS_sorted = NEWS_CMS.sort((a, b) => Number(new Date(b.publishedAt || '')) - Number(new Date(a.publishedAt || '')))
+  if (!article_many.length) {
+    const NEWS_CMS_sorted = NEWS_CMS
+      .filter(a => a.is_published === true)
+      .sort((a, b) => Number(new Date(b.publishedAt || '')) - Number(new Date(a.publishedAt || '')))
 
     return (
       <PageLayout activePath={pathname} variant="light">
@@ -32,6 +36,7 @@ export function NewsPage() {
             NEWS_CMS_sorted.map((article, index) => {
               const publishedAt_date = new Date(article.publishedAt);
               const url = `/news/${article.slug}`
+
               return (
                 <section key={`${index}-${article.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '16px' }}>
                   <a href={url}>
@@ -77,10 +82,11 @@ export function NewsPage() {
 
           if (c._type === 'hero_linear') {
             const publishedAt_date = new Date(article.publishedAt);
+
             return <section key={key}>
               <HighlightText
                 as="h1"
-                lines={c.heroZeilen || []}
+                lines={c.heroZeilen}
                 variant="titel"
                 color="neon"
                 textColor="purple"

@@ -7,7 +7,8 @@
 /* Layout direction */
 .highlight--column {
   flex-direction: column;
-  gap: 0.1em;
+  /* gap: 0.1em; */
+  gap: 0.15em;
 }
 
 .highlight--row {

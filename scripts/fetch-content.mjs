@@ -75,6 +75,7 @@ const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
 
 const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
   "slug": slug.current,
+  is_published,
   published_at,
   content_modules
 }`
@@ -136,6 +137,7 @@ function buildNews(rows) {
 
       return {
         slug: clean(article.slug),
+        is_published: Boolean(article.is_published),
         publishedAt: clean(article.published_at),
         title: lines(hero.heroZeilen),
         body: clean(hero.heroText),

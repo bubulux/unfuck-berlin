@@ -2,6 +2,7 @@ import type { CSSProperties, ElementType, HTMLAttributes } from "react";
 import { Link as RouterLink } from "react-router";
 import type { ColorToken, TextVariant } from "../text";
 import "./styles.css";
+import { autoBreakHeadline } from "../../../lib/autoBreakHeadline";
 
 export type { ColorToken, TextVariant };
 
@@ -64,9 +65,12 @@ export function HighlightText({
     .filter(Boolean)
     .join(" ");
 
+  // auto split lines, if only one line is provided
+  const autoBrokenLines = lines.length === 1 ? autoBreakHeadline(lines.join(' ')) : lines
+
   return (
     <Component className={classes} style={style} {...rest}>
-      {lines.map((line, i) => {
+      {autoBrokenLines.map((line, i) => {
         const seg = toSegment(line);
         const segStyle: CSSProperties = {
           "--hl-bg": `var(--color-${seg.color ?? color})`,
