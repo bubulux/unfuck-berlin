@@ -80,7 +80,7 @@ const FALLBACK: WahlprogrammContent = {
     body: 'Volt ist die erste echte europäische Partei: in ganz Europa aktiv, mit einem gemeinsamen politischen Fundament. Genau das nutzen wir für Berlin. Wir experimentieren nicht auf Kosten der Berliner:innen, sondern holen Lösungen in die Stadt, die sich in Europa bereits bewährt haben. 98 Best-Practice-Beispiele aus Städten wie Helsinki, Wien, Amsterdam und Kopenhagen belegen, dass unsere Vorschläge keine Utopien sind, sondern erprobte Realität. Dabei gilt: Evidenz entscheidet, nicht Ideologie. Wir messen die Wirkung unserer Maßnahmen und passen an, was nicht die gewünschten Ergebnisse bringt.',
     ctaLabel: 'Gesamtes Wahlprogramm zur AGH-Wahl 2026',
     ctaHref:
-      'https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/2026_ber_wahlprogramm.pdf',
+      'https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-edited-20-7.pdf',
   },
 }
 
