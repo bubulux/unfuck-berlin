@@ -51,6 +51,7 @@ export function SiteHeader({
           aria-label="Startseite"
           color={accent}
           className="site-header__logo"
+          {...{'data-umami-event': 'header-logo-click'}}
         >
           <Logo variant={accent} height="1.75rem" />
         </Link>
@@ -64,6 +65,7 @@ export function SiteHeader({
               active={activePath === item.to}
               color={accent}
               className="site-header__link"
+              {...{'data-umami-event': 'header-nav-link-click'}}
             >
               {item.label}
             </Link>
@@ -77,6 +79,7 @@ export function SiteHeader({
           aria-expanded={open}
           aria-controls="site-header-menu"
           onClick={() => setOpen((o) => !o)}
+          {...{'data-umami-event': 'toggle-menu'}}
         >
           <Icon name={open ? 'close' : 'menu'} size="1.75rem" />
         </button>
@@ -96,6 +99,7 @@ export function SiteHeader({
             color={accent}
             className="site-header__panel-link"
             onClick={() => setOpen(false)}
+            {...{'data-umami-event': 'header-nav-link-click'}}
           >
             {item.label}
           </Link>

@@ -158,6 +158,7 @@ export function VideoPlayer({
         className="video-player__center"
         onClick={toggle}
         aria-label={playing ? 'Video pausieren' : 'Video abspielen'}
+        {...{'data-umami-event': 'toggle-video-playing'}}
       >
         {playing ? <PauseGlyph /> : <PlayGlyph />}
       </button>
@@ -168,6 +169,7 @@ export function VideoPlayer({
           className="video-player__btn"
           onClick={toggle}
           aria-label={playing ? 'Video pausieren' : 'Video abspielen'}
+            {...{'data-umami-event': 'toggle-video-playing'}}
         >
           {playing ? <PauseGlyph /> : <PlayGlyph />}
         </button>
@@ -190,6 +192,7 @@ export function VideoPlayer({
             className="video-player__btn"
             onClick={toggleMute}
             aria-label={level === 0 ? 'Ton einschalten' : 'Ton ausschalten'}
+            {...{'data-umami-event': 'toggle-video-sound'}}
           >
             {level === 0 ? <MuteGlyph /> : <VolumeGlyph />}
           </button>
