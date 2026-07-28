@@ -3,7 +3,7 @@ import { PageLayout } from "../../components/templates/page-layout";
 import { NEWS_CMS } from "../../data/news.generated";
 import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
 
 export function NewsPage() {
   const { pathname } = useLocation();
@@ -80,7 +80,7 @@ export function NewsPage() {
             return <section key={key}>
               <HighlightText
                 as="h1"
-                lines={c.heroZeilen}
+                lines={c.heroZeilen || []}
                 variant="titel"
                 color="neon"
                 textColor="purple"
@@ -114,7 +114,8 @@ export function NewsPage() {
               />
             </section>
           } else if (c._type === 'html_content') {
-            return <section key={key} style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: c.html_content }} />
+            const html_content: string = c.html_content || ''
+            return <section key={key} style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: html_content }} />
           // } else if (c._type === 'md_text') {
           //   return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
           //     <ReactMarkdown>{c.md_text}</ReactMarkdown>

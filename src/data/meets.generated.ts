@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-28T10:50:39.395Z
+// Letzter Abruf: 2026-07-28T10:54:14.029Z
 
 export const MEETS_CMS = [
   {
