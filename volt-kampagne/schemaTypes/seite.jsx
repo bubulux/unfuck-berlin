@@ -83,7 +83,7 @@ export default defineType({
         { type: 'wahlsystem_teaser' },
         { type: 'unfck_teaser' },
         { type: 'headline' },
-        { type: 'html_text' },
+        { type: 'html_content' },
         { type: 'one_cta' },
         { type: 'wahlprogramm_teaser' },
       ],

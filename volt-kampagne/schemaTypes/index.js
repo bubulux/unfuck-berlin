@@ -6,7 +6,7 @@ import hero_linear from './obj/hero_linear'
 import hero_video from './obj/hero_video'
 import unfck_teaser from './obj/unfck_teaser'
 import headline from './obj/headline'
-import html_text from './obj/html_text'
+import html_content from './obj/html_content'
 import one_cta from './obj/one_cta'
 import wahlprogramm_teaser from './obj/wahlprogramm_teaser'
 import wahlprogramm_kapitel_teaser from './obj/wahlprogramm_kapitel_teaser'
@@ -40,7 +40,7 @@ export const schemaTypes = [
   hero_video,
   unfck_teaser,
   headline,
-  html_text,
+  html_content,
   one_cta,
   wahlprogramm_teaser,
   wahlprogramm_kapitel_teaser,

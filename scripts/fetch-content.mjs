@@ -84,7 +84,7 @@ const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]
     _type,
     heroZeilen, heroText, headline_theme,
     headlineZeilen,
-    html_text,
+    html_content,
     ctaLabel, ctaHref,
     "kapitel": kapitel[]{titel, tags, text}
   }
@@ -159,7 +159,7 @@ function buildWahlprogramm(res) {
   const idxTeaser = mods.findIndex((m) => m._type === 'wahlprogramm_teaser')
   const hero = mods.find((m) => m._type === 'hero_linear') || {}
   const headline = mods.find((m) => m._type === 'headline') || {}
-  const htmlText = mods.find((m) => m._type === 'html_text') || {}
+  const htmlText = mods.find((m) => m._type === 'html_content') || {}
   const teaser = mods.find((m) => m._type === 'wahlprogramm_teaser') || {}
 
   // CTA vor dem Teaser gehoert zum Intro, CTA nach dem Teaser zum Europa-Block.
@@ -189,7 +189,7 @@ function buildWahlprogramm(res) {
     europa: {
       heading: lines(headline.headlineZeilen),
       theme: clean(headline.headline_theme),
-      body: clean(htmlText.html_text),
+      body: clean(htmlText.html_content),
       ctaLabel: clean(europaCta.ctaLabel),
       ctaHref: clean(europaCta.ctaHref),
     },

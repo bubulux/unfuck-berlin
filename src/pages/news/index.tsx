@@ -3,12 +3,16 @@ import { PageLayout } from "../../components/templates/page-layout";
 import { NEWS_CMS } from "../../data/news.generated";
 import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
+import ReactMarkdown from "react-markdown";
 
 export function NewsPage() {
   const { pathname } = useLocation();
 
   const article_many = NEWS_CMS.filter(a => pathname.endsWith(`/${a.slug}`))
   if (!article_many.length) {
+
+    const NEWS_CMS_sorted = NEWS_CMS.sort((a, b) => Number(new Date(b.publishedAt || '')) - Number(new Date(a.publishedAt || '')))
+
     return (
       <PageLayout activePath={pathname} variant="light">
         <div className="voting__inner">
@@ -25,11 +29,11 @@ export function NewsPage() {
           />
 
           {
-            NEWS_CMS.map((article, index) => {
+            NEWS_CMS_sorted.map((article, index) => {
               const publishedAt_date = new Date(article.publishedAt);
               const url = `/news/${article.slug}`
               return (
-                <section key={`${index}-${article.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <section key={`${index}-${article.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '16px' }}>
                   <a href={url}>
                     <HighlightText
                       as="h2"
@@ -40,14 +44,14 @@ export function NewsPage() {
                       align="left"
                       style={{ marginBottom: '8px' }}
                     />
-                    <strong>{publishedAt_date.toLocaleString('de-DE', {
-                      day: '2-digit',
-                      month: '2-digit',
-                      year: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    })}</strong>
-                    <p>{article.body}</p>
+                    <p style={{ width: '52rem', maxWidth: '100%' }}>
+                      <strong>{publishedAt_date.toLocaleString('de-DE', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                      })}</strong>
+                      {article.body && ` — ${article.body}`}
+                    </p>
                   </a>
                   <div>
                   <Button as="a" href={url} color="neon">
@@ -72,9 +76,7 @@ export function NewsPage() {
           const key = `${index}-${c._type}`
 
           if (c._type === 'hero_linear') {
-
             const publishedAt_date = new Date(article.publishedAt);
-
             return <section key={key}>
               <HighlightText
                 as="h1"
@@ -88,16 +90,41 @@ export function NewsPage() {
                 style={{ marginBottom: '16px' }}
               />
 
-              <strong>{publishedAt_date.toLocaleString('de-DE', {
-                day: '2-digit',
-                month: '2-digit',
-                year: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-              })}</strong>
+              <p style={{ width: '52rem', maxWidth: '100%' }}>
+                <strong>{publishedAt_date.toLocaleString('de-DE', {
+                  day: '2-digit',
+                  month: '2-digit',
+                  year: 'numeric',
+                })}</strong>
+                {article.body && ` — ${article.body}`}
+              </p>
             </section>
-          } else if (c._type === 'html_text') {
-            return <section key={key} style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: c.html_text }} />
+          } else if (c._type === 'headline') {
+            return <section key={key}>
+              <HighlightText
+                as="h2"
+                lines={(c as any).headlineZeilen}
+                variant="subtitel"
+                color="purple"
+                textColor="white"
+                align="left"
+                uppercase={false}
+                className="program-intro__heading"
+                // style={{ marginBottom: '16px' }}
+              />
+            </section>
+          } else if (c._type === 'html_content') {
+            return <section key={key} style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: c.html_content }} />
+          // } else if (c._type === 'md_text') {
+          //   return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
+          //     <ReactMarkdown>{c.md_text}</ReactMarkdown>
+          //   </section>
+          } else if (c._type === 'one_cta') {
+            return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
+              <Button as="a" href={c.ctaHref} color="neon" className="unfuck-intro__cta">
+                {c.ctaLabel}
+              </Button>
+            </section>
           }
 
           return null
