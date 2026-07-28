@@ -1,9 +1,12 @@
 import { defineField, defineType } from 'sanity'
+import { LinkIcon } from '@sanity/icons/Link'
+import {ConfettiIcon} from '@sanity/icons/Confetti'
 
 export default defineType({
   name: 'hero_linear',
-  // title: '',
+  title: 'Seiten-Kopf',
   type: 'object',
+  icon: ConfettiIcon,
 
   preview: {
     select: {

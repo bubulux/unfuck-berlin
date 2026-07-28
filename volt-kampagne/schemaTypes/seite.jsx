@@ -54,19 +54,6 @@ export default defineType({
     }),
 
     defineField({
-      title: 'test kandis',
-      name: 'test_kandis',
-      insertMenu: {
-        filter: true,
-        showIcons: true,
-      },
-      type: 'array',
-      of: [
-        { type: 'kandis_auswahl' },
-      ],
-    }),
-
-    defineField({
       title: 'Inhalts Blöcke',
       name: 'content_modules',
       insertMenu: {

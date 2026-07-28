@@ -1,9 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import {VideoIcon} from '@sanity/icons/Video'
 
 export default defineType({
   name: 'hero_video',
-  // title: '',
+  title: 'Seiten-Kopf mit Video',
   type: 'object',
+  icon: VideoIcon,
 
   preview: {
     select: {

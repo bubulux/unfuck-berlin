@@ -3,7 +3,7 @@ import { LinkIcon } from '@sanity/icons/Link'
 
 export default defineType({
   name: 'one_cta',
-  title: 'Ein Button',
+  title: 'Ein Link als Button',
   type: 'object',
   icon: LinkIcon,
 

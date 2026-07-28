@@ -1,9 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import {BlockContentIcon} from '@sanity/icons/BlockContent'
 
 export default defineType({
   name: 'html_content',
-  // title: '',
+  title: 'HTML Inhalt',
   type: 'object',
+  icon: BlockContentIcon,
 
   preview: {
     select: {
