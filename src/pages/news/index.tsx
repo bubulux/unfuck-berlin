@@ -79,8 +79,43 @@ export function NewsPage() {
   }
 
   const article = article_many[0]
+  console.log('article', article)
+
+  const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://unfuck.berlin/news/${article.slug}`
+  },
+  "headline": (article.title || []).join(' '),
+  // "image": [
+  //   "https://example.com/images/article-1200.jpg"
+  // ],
+  "datePublished": `${article.publishedAt}T00:00:00+02:00`,
+  // "dateModified": "2026-07-29T09:15:00+02:00",
+  // "author": {
+  //   "@type": "Person",
+  //   "name": "Volt Berlin"
+  // },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Volt Berlin",
+    // "logo": {
+    //   "@type": "ImageObject",
+    //   "url": "https://example.com/logo.png"
+    // }
+  },
+  "description": article.body || ''
+}
+
+
   return (
     <PageLayout activePath={pathname} variant="light">
+      <script type="application/ld+json">
+        {JSON.stringify(articleJsonLd)}
+      </script>
+
       <div className="news__wrapper">
       {
         article.content.map((c, index) => {
