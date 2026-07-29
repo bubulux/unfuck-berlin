@@ -1,9 +1,9 @@
 export function autoBreakHeadline(text: string) {
-  const fourRowsLength = Math.max(20, Math.round(text.length * 0.25)) // split into four lines, but max 20 chars per line
-  const lineSplitRegex = new RegExp(`(.{${fourRowsLength}}|.+:)\\s(?=.{5,})`, 'giu')
+  const fourRowsLength = Math.max(20, Math.ceil(text.length * 0.25)) // split into four lines, but max 20 chars per line
+  const lineSplitRegex = new RegExp(`(.{${fourRowsLength}}|.+:)([\\s-])(?=.{5,})`, 'giu')
 
   const splittedText = text
-    .replaceAll(lineSplitRegex, '$1|')
+    .replaceAll(lineSplitRegex, '$1$2|')
     .split('|')
 
   return splittedText
