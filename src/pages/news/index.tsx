@@ -113,7 +113,7 @@ export function NewsPage() {
 }
 
 
-  const theme_variant = article.theme || 'light' // 'light
+  const theme_variant = article.theme === 'purple' ? 'purple' : 'light' as const
   return (
     <PageLayout activePath={pathname} variant={theme_variant}>
       <script type="application/ld+json">
@@ -121,8 +121,21 @@ export function NewsPage() {
       </script>
 
       <div className="news__wrapper">
+        <section className="news__text_width" style={{ marginBlockEnd: '32px' }}>
+          <Link to="/news/">
+            <Button
+              size="cta"
+              variant="solid"
+              color={theme_variant === 'purple' ? 'purple' : 'white'}
+              iconLeft={<Icon size="1.5em" name="arrow-left" />}
+            >
+              Zur Artikel Übersicht
+            </Button>
+          </Link>
+        </section>
+
       {
-        article.content.map((c, index) => {
+        article.content_modules.map((c, index) => {
           const key = `${index}-${c._type}`
 
           if (c._type === 'hero_linear') {
@@ -163,8 +176,8 @@ export function NewsPage() {
                   as="h2"
                   lines={(c as any).headlineZeilen}
                   variant="subtitel"
-                  color={theme_variant === 'purple' ? 'white' : 'purple'}
-                  textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+                  color="neon"
+                  textColor="purple"
                   align="left"
                   uppercase={false}
                   className="program-intro__heading"
@@ -184,7 +197,7 @@ export function NewsPage() {
           } else if (c._type === 'one_cta') {
             return (
               <section key={key} className="news__text_width">
-                <Button as="a" href={c.ctaHref} color="neon" className="news__text_width unfuck-intro__cta" style={{ margin: '0' }}>
+                <Button as="a" href={c.ctaHref} color="neon" style={{ margin: '0', width: 'auto' }}>
                   {c.ctaLabel}
                 </Button>
               </section>
@@ -223,25 +236,33 @@ export function NewsPage() {
           className="program-intro__heading"
         />
       </section>
+      <section className="news__text_width">
+        Volt — die erste paneuropäische Partei — kämpft seit 2017 grenzüberschreitend für eine innovative, nachhaltige und sozial gerechte Politik. Vom Europäischen Parlament bis in die Kommunen bringen wir bereits heute konkrete Lösungen voran. 2026 treten wir in Berlin zur Abgeordnetenhaus- und Bezirksverordnetenversammlungswahl an, um bewährte Ansätze aus ganz Europa hier entschlossen umzusetzen.
+      </section>
+
       <section
         className="news__text_width"
-        style={{
-          whiteSpace: 'pre-wrap',
-        }}
+        style={{ marginBlock: '64px 16px' }}
       >
-        Volt – die erste paneuropäische Partei – kämpft seit 2017 grenzüberschreitend für eine innovative, nachhaltige und sozial gerechte Politik. Vom Europäischen Parlament bis in die Kommunen bringen wir bereits heute konkrete Lösungen voran. 2026 treten wir in Berlin zur Abgeordnetenhaus- und Bezirksverordnetenversammlungswahl an, um bewährte Ansätze aus ganz Europa hier entschlossen umzusetzen.
+        <HighlightText
+          as="h2"
+          lines={['Presse- und Medienanfragen']}
+          variant="subtitel"
+          color={theme_variant === 'purple' ? 'white' : 'purple'}
+          textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+          align="left"
+          uppercase={false}
+          className="program-intro__heading"
+        />
       </section>
       <section className="news__text_width">
-        <Link to="/news/">
-          <Button
-            size="cta"
-            variant="outline"
-            color={theme_variant === 'purple' ? 'white' : 'purple'}
-            iconLeft={<Icon size="1.5em" name="arrow-left" />}
-          >
-            Zur Artikel Übersicht
-          </Button>
-        </Link>
+        <p>
+          Für Presse- und Medienanfragen können Sie sich an <Link style={{ textDecoration: 'underline' }} to="mailto:presse@voltberlin.org">presse@voltberlin.org</Link> wenden. Charlene Lorenz oder das Presseteam antworten Ihnen gerne.
+        </p>
+        <br />
+        <p>
+          Allgemeine Fragen und Feedback bitte an <Link style={{ textDecoration: 'underline' }} to="mailto:berlin@voltdeutschland.org">berlin@voltdeutschland.org</Link> richten.
+        </p>
       </section>
 
       </div>

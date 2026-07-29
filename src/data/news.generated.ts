@@ -1,10 +1,11 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-29T12:36:33.484Z
+// Letzter Abruf: 2026-07-29T14:10:30.189Z
 
 export const NEWS_CMS = [
   {
     "slug": "berlin-funktioniert",
+    "theme": "",
     "is_published": false,
     "publishedAt": "2026-07-27",
     "title": [
@@ -12,7 +13,7 @@ export const NEWS_CMS = [
       "FUNKTIONIERT"
     ],
     "body": "Verwaltung,\nDigitalisierung\nund Beteiligung",
-    "content": [
+    "content_modules": [
       {
         "_key": "f229f8067524",
         "_type": "hero_linear",
@@ -40,13 +41,14 @@ export const NEWS_CMS = [
   },
   {
     "slug": "2026-csd-world-pride",
+    "theme": "",
     "is_published": true,
     "publishedAt": "2026-07-24",
     "title": [
       "Volt Berlin unterstützt Bewerbung für WorldPride 2032 und Verankerung im Koalitionsvertrag"
     ],
     "body": "Volt Berlin stellt sich klar hinter die Bewerbung des Berliner CSD e. V. um die WorldPride 2032. Die Partei unterstützt die Forderung, dass sich die künftige Koalition zu Unterstützung, Finanzierung und einer langfristigen Strategie für Berlin als Regenbogenhauptstadt verpflichtet.",
-    "content": [
+    "content_modules": [
       {
         "_key": "ade7b36f132f",
         "_type": "hero_linear",
@@ -90,13 +92,14 @@ export const NEWS_CMS = [
   },
   {
     "slug": "unfuck-berlin-reveal",
+    "theme": "purple",
     "is_published": true,
     "publishedAt": "2026-07-15",
     "title": [
       "„unf*ck Berlin“: Volt zeigt, was sich in der Stadt ändern muss – und liefert den Plan gleich mit"
     ],
     "body": "„unf*ck Berlin“ strahlt in leuchtenden Kreidelettern auf dem Vorplatz des Bahnhofs Zoo. Und nicht nur dort: Seit Wochen tauchen im ganzen Stadtgebiet Plakate und schablonierte Schriftzüge auf. Jetzt ist klar, wer dahintersteckt. Die Partei Volt spricht damit aus, was viele Berliner*innen denken: Diese Stadt kann mehr. Untermauert mit einem Wahlprogramm, das Berlin endlich voranbringen soll.",
-    "content": [
+    "content_modules": [
       {
         "_key": "d4f1e0158aa9",
         "_type": "hero_linear",
@@ -107,43 +110,34 @@ export const NEWS_CMS = [
         "photo": null
       },
       {
+        "_key": "d23ac4511c7c",
+        "_type": "html_content",
+        "html_content": "<iframe width=\"560\" height=\"315\"  style=\"width: 100%; aspect-ratio: 9 / 16; height: auto; max-height: 90vh;\" src=\"https://www.youtube-nocookie.com/embed/BwVBRkJxt-w?si=9uQSrgKldW7YoUxg&autoplay=1&mute=1&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+        "photo": null
+      },
+      {
+        "_key": "2aa56543ae42",
+        "_type": "html_content",
+        "html_content": "Volt hat sich heute als Urheberin der Guerilla-Kampagne „unf*ck Berlin“ zu erkennen gegeben. Die Partei bringt damit auf den Punkt, was viele Berliner*innen täglich erleben: Die Stadt könnte so viel besser sein – und bleibt seit Jahren an zu vielen Stellen hinter ihren Möglichkeiten. Am 20. September werden das Abgeordnetenhaus und die Bezirksverordnetenversammlungen neu gewählt. Volts Botschaft dazu ist klar: Die regierenden Parteien hatten jahrelang ihre Chance. Jetzt ist Zeit für etwas Neues.",
+        "photo": null
+      },
+      {
+        "_key": "14b2b96f7a9b",
+        "_type": "one_cta",
+        "ctaHref": "https://unfuck.berlin/sticker",
+        "ctaLabel": "Sticker abgreifen",
+        "photo": null
+      },
+      {
         "_key": "01eb676083d9",
         "_type": "photo",
         "alt": "unf*uck berlin Schriftzug vor dem West-Berliner TV-Turm",
         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/fabd98e6afa557dee651026b6241a6a4ad5691c6-1880x1084.jpg"
       },
       {
-        "_key": "62be0656654e",
-        "_type": "one_cta",
-        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/videos/20260715_volt_unfck_reveal_long_version_final_small.mp4",
-        "ctaLabel": "Bekenner-Video zum Download",
-        "photo": null
-      },
-      {
-        "_key": "345a393f4fce",
-        "_type": "one_cta",
-        "ctaHref": "https://www.instagram.com/reel/Daz_WbGJRAB",
-        "ctaLabel": "Bekenner-Video auf Instagram",
-        "photo": null
-      },
-      {
-        "_key": "a4de14e15f06",
-        "_type": "one_cta",
-        "ctaHref": "https://loops.video/v/gUivJ6_ZTp",
-        "ctaLabel": "Bekenner-Video auf Loops",
-        "photo": null
-      },
-      {
-        "_key": "c31806f08503",
-        "_type": "one_cta",
-        "ctaHref": "https://www.tiktok.com/@volt_berlin/video/7662723899313966368",
-        "ctaLabel": "Bekenner-Video auf TikTok",
-        "photo": null
-      },
-      {
         "_key": "85aa9538db6e",
         "_type": "html_content",
-        "html_content": "Volt hat sich heute als Urheberin der Guerilla-Kampagne „unf*ck Berlin“ zu erkennen gegeben. Die Partei bringt damit auf den Punkt, was viele Berliner*innen täglich erleben: Die Stadt könnte so viel besser sein – und bleibt seit Jahren an zu vielen Stellen hinter ihren Möglichkeiten. Am 20. September werden das Abgeordnetenhaus und die Bezirksverordnetenversammlungen neu gewählt. Volts Botschaft dazu ist klar: Die regierenden Parteien hatten jahrelang ihre Chance. Jetzt ist Zeit für etwas Neues.\n\nDie Berliner*innen nehmen den Ball auf und teilen auf Social Media und einer eigens eingerichteten Webseite Orte, wo die Stadt im Alltag für sie nicht funktioniert – von der Dauer-Baustelle über die bröckelnde Schule bis zu Ämtern, die Daten doppelt und dreifach abfragen. Volt ist überzeugt: Es gibt keinen Grund, dass Berlin hinter Wien, Barcelona oder Paris zurückbleibt. Was die Menschen nervt, wollen wir hören, anpacken und lösen: pragmatisch und evidenzbasiert nach dem Vorbild anderer europäischer Städte. Wie genau die Partei Berlin verbessern will, steht in ihrem Wahlprogramm:\n\nEine Verwaltung, die liefert. Verbindliche Bearbeitungsfristen nach dem Dreimal-Ja-Prinzip: Jeder vollständige Antrag wird sofort bestätigt, klar zugeordnet und innerhalb einer festen Frist entschieden – einfache Standardfälle in zehn Arbeitstagen. Nachweise müssen nur einmal eingereicht werden, nach dem Once-Only-Prinzip wie in Estland.\n\nWohnraum, der bezahlbar ist. Flächen für 300.000 neue Wohnungen, 30.000 zusätzliche Wohnungen durch die Umnutzung leerstehender Gewerbeflächen, schneller bauen durch digitale, automatisierte Genehmigungen statt jahrelanger Prüfung, günstiger bauen nach dem  Hamburg-Standard – und Housing First für wohnungslose Menschen.\n\nMobilität, die alle mitnimmt. Rufbusse und autonome Shuttles für die Außenbezirke, Vollautomatisierung der U-Bahn, bis 2030 Umbaupläne für alle noch nicht barrierefreien Stationen. Und sichere Straßen mit dem Ziel ‚Vision Zero' – kein einziger Verkehrstoter, wie es Helsinki bereits geschafft hat.\n\nBildung, die trägt. Sprachförderung ab vier Jahren, multiprofessionelle Teams an Kitas und Schulen, das neue Schulfach „Lebenskompetenz“ – von psychischer Gesundheit bis Steuern –, eine Ausbildungsplatzgarantie und ein Berliner Azubiwerk für bezahlbaren Azubi-Wohnraum und lebenslanges Lernen durch Weiterbildung.\n\nEine Wirtschaft, die Zukunft schafft. Berlin wird Ankerkundin für Startups und kauft neue Technologien als Erste ein, ein Berliner Zukunftsfonds mobilisiert Wachstumskapital für die Wachstumsphase.\n\nEine Stadt, die sauber ist. Wohnortnahe Kiez-Recycling-Punkte, rund um die Uhr geöffnet, deutlich mehr Mülleimer und häufigere Leerung an Brennpunkten, konsequente Verfolgung illegaler Müllablagerung – und ein ‚Berlin-Pay'-Belohnungssystem fürs Mitmachen, nach dem Vorbild Kopenhagens.",
+        "html_content": "Die Berliner*innen nehmen den Ball auf und teilen auf Social Media und einer eigens eingerichteten Webseite Orte, wo die Stadt im Alltag für sie nicht funktioniert – von der Dauer-Baustelle über die bröckelnde Schule bis zu Ämtern, die Daten doppelt und dreifach abfragen. Volt ist überzeugt: Es gibt keinen Grund, dass Berlin hinter Wien, Barcelona oder Paris zurückbleibt. Was die Menschen nervt, wollen wir hören, anpacken und lösen: pragmatisch und evidenzbasiert nach dem Vorbild anderer europäischer Städte. Wie genau die Partei Berlin verbessern will, steht in ihrem Wahlprogramm:\n\nEine Verwaltung, die liefert. Verbindliche Bearbeitungsfristen nach dem Dreimal-Ja-Prinzip: Jeder vollständige Antrag wird sofort bestätigt, klar zugeordnet und innerhalb einer festen Frist entschieden – einfache Standardfälle in zehn Arbeitstagen. Nachweise müssen nur einmal eingereicht werden, nach dem Once-Only-Prinzip wie in Estland.\n\nWohnraum, der bezahlbar ist. Flächen für 300.000 neue Wohnungen, 30.000 zusätzliche Wohnungen durch die Umnutzung leerstehender Gewerbeflächen, schneller bauen durch digitale, automatisierte Genehmigungen statt jahrelanger Prüfung, günstiger bauen nach dem  Hamburg-Standard – und Housing First für wohnungslose Menschen.\n\nMobilität, die alle mitnimmt. Rufbusse und autonome Shuttles für die Außenbezirke, Vollautomatisierung der U-Bahn, bis 2030 Umbaupläne für alle noch nicht barrierefreien Stationen. Und sichere Straßen mit dem Ziel ‚Vision Zero' – kein einziger Verkehrstoter, wie es Helsinki bereits geschafft hat.\n\nBildung, die trägt. Sprachförderung ab vier Jahren, multiprofessionelle Teams an Kitas und Schulen, das neue Schulfach „Lebenskompetenz“ – von psychischer Gesundheit bis Steuern –, eine Ausbildungsplatzgarantie und ein Berliner Azubiwerk für bezahlbaren Azubi-Wohnraum und lebenslanges Lernen durch Weiterbildung.\n\nEine Wirtschaft, die Zukunft schafft. Berlin wird Ankerkundin für Startups und kauft neue Technologien als Erste ein, ein Berliner Zukunftsfonds mobilisiert Wachstumskapital für die Wachstumsphase.\n\nEine Stadt, die sauber ist. Wohnortnahe Kiez-Recycling-Punkte, rund um die Uhr geöffnet, deutlich mehr Mülleimer und häufigere Leerung an Brennpunkten, konsequente Verfolgung illegaler Müllablagerung – und ein ‚Berlin-Pay'-Belohnungssystem fürs Mitmachen, nach dem Vorbild Kopenhagens.",
         "photo": null
       },
       {
@@ -188,18 +182,47 @@ export const NEWS_CMS = [
         "_key": "2934b58f548a",
         "_type": "photo",
         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4be6d521b647ca2e44e987267488b03b0a327f48-1880x1084.jpg"
+      },
+      {
+        "_key": "62be0656654e",
+        "_type": "one_cta",
+        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/videos/20260715_volt_unfck_reveal_long_version_final_small.mp4",
+        "ctaLabel": "Bekenner-Video zum Download",
+        "photo": null
+      },
+      {
+        "_key": "345a393f4fce",
+        "_type": "one_cta",
+        "ctaHref": "https://www.instagram.com/reel/Daz_WbGJRAB",
+        "ctaLabel": "Bekenner-Video auf Instagram",
+        "photo": null
+      },
+      {
+        "_key": "c31806f08503",
+        "_type": "one_cta",
+        "ctaHref": "https://www.tiktok.com/@volt_berlin/video/7662723899313966368",
+        "ctaLabel": "Bekenner-Video auf TikTok",
+        "photo": null
+      },
+      {
+        "_key": "a4de14e15f06",
+        "_type": "one_cta",
+        "ctaHref": "https://loops.video/v/gUivJ6_ZTp",
+        "ctaLabel": "Bekenner-Video auf Loops",
+        "photo": null
       }
     ]
   },
   {
     "slug": "11000-unterschriften",
+    "theme": "",
     "is_published": true,
     "publishedAt": "2026-07-09",
     "title": [
       "11.000 Unterschriften: Volt tritt in Berlin in allen 78 Wahlkreisen an"
     ],
     "body": "Als erste der derzeit nicht im Abgeordnetenhaus vertretenen Parteien erfüllt Volt Berlin die Voraussetzungen für den Antritt am 20. September – in allen 78 Wahlkreisen.",
-    "content": [
+    "content_modules": [
       {
         "_key": "bf61a70de0f8",
         "_type": "hero_linear",
@@ -237,6 +260,79 @@ export const NEWS_CMS = [
         "_key": "9e98bc3283db",
         "_type": "html_content",
         "html_content": "Eine Übersicht aller Direktkandidierenden finden Sie <a href=\"https://voltdeutschland.org/berlin/direktkandidierende-agh-2026\">hier.</a>",
+        "photo": null
+      }
+    ]
+  },
+  {
+    "slug": "volt-berlin-waehlt-landesliste-2026",
+    "theme": "",
+    "is_published": true,
+    "publishedAt": "2026-01-24",
+    "title": [
+      "Mit starkem Spitzenduo: Volt Berlin stellt Landesliste für 2026 auf"
+    ],
+    "body": "Volt Berlin hat am Wochenende über die Kandidierendenliste für die diesjährige Wahl des Berliner Abgeordnetenhauses in Berlin abgestimmt. Anna Auerbach konnte sich mit ihren Kernthemen Soziale Gerechtigkeit, Berlin als starker, innovativer Wirtschaftsstandort und digitale, effiziente und bürgernahe Verwaltung durchsetzen. Auf Platz zwei und drei folgen ihr Paul Loeper und Rafael Kaaz.",
+    "content_modules": [
+      {
+        "_key": "6dd5c11f9675",
+        "_type": "hero_linear",
+        "heroText": "Volt Berlin hat am Wochenende über die Kandidierendenliste für die diesjährige Wahl des Berliner Abgeordnetenhauses in Berlin abgestimmt. Anna Auerbach konnte sich mit ihren Kernthemen Soziale Gerechtigkeit, Berlin als starker, innovativer Wirtschaftsstandort und digitale, effiziente und bürgernahe Verwaltung durchsetzen. Auf Platz zwei und drei folgen ihr Paul Loeper und Rafael Kaaz.",
+        "heroZeilen": [
+          "Mit starkem Spitzenduo: Volt Berlin stellt Landesliste für 2026 auf"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "f5986e4e9a13",
+        "_type": "photo",
+        "alt": "Anna und Paul kurz nach der Listenaufstellung.",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/5f776a2cf2c98f8f9b4f27e7223875d78d79e25b-1880x1084.jpg"
+      },
+      {
+        "_key": "8b6aa8a332d4",
+        "_type": "html_content",
+        "html_content": "In ihrer Rede sagte die Spitzenkandidatin Anna Auerbach:\n\n<blockquote>\nDiese Stadt hat enormes Potenzial, aber sie bleibt unter ihren Möglichkeiten. Ich will ein Berlin, das soziale Sicherheit mit wirtschaftlicher Stärke verbindet und in dem Behörden nicht bremsen, sondern ermöglichen. Eine moderne, digitale Verwaltung ist kein Luxus, sondern die Grundlage für Vertrauen in den Staat.\n</blockquote>\n\nZur diesjährigen <strong>Abgeordnetenhauswahl</strong> tritt Volt Berlin mit dem Ziel an, im Stadtstaat erstmals die Fünf-Prozent-Hürde zu überwinden. Bei der <strong>Europawahl 2024</strong> erreichte Volt in Berlin bereits <strong>4,8 Prozent</strong> der Stimmen. Darüber hinaus strebt Volt an, in allen Berliner Bezirken mindestens drei Prozent der Stimmen zu erzielen und somit auch auf Ebene der <strong>Bezirksverordnetenversammlungen</strong> engagiert vertreten zu sein.\n\nMit der gewählten Liste von 19 Personen startet Volt Berlin personell stark aufgestellt in den Wahlkampf zur Berliner Abgeordnetenhauswahl am 20. September.\n\nDie Liste der Kandidierenden:\n1. Anna Auerbach\n2. Paul Loeper\n3. Rafael Kaaz\n4. Pia Voltz\n5. Jakob Johannes Welker\n6. Aiga Marie Senftleben\n7. Rainer Seider\n8. Cara Seeberg\n9. Andrija Šarić\n10. Theresa Schültken\n11. Christian Weißsteiner\n12. Susanne Maria Zels\n13. Martin Hergert\n14. Rahel Demant\n15. Alexander Paulski\n16. Juliane Kalbacher\n17. Ingo Partey\n18. Danina Margit Schwarm\n19. Sascha Hellwig",
+        "photo": null
+      },
+      {
+        "_key": "b3d844fdd055",
+        "_type": "one_cta",
+        "ctaHref": "https://unfuck.berlin/kandidierende",
+        "ctaLabel": "Erfahre mehr über unsere Kandidierenden…",
+        "photo": null
+      }
+    ]
+  },
+  {
+    "slug": "volt-berlin-erster-bvv-antrag",
+    "theme": "",
+    "is_published": true,
+    "publishedAt": "2025-06-16",
+    "title": [
+      "Volt Berlin bringt ersten Antrag in die BVV Treptow-Köpenick ein"
+    ],
+    "body": "Gemeinsam mit der Einzelverordneten Pia Voltz fordert Volt eine digitale Pflanzenliste, die Bürgerinnen und Bürgern bei der naturnahen Bepflanzung von Balkonen, Kleingärten und Baumscheiben unterstützt.",
+    "content_modules": [
+      {
+        "_key": "b10bcf7c7750",
+        "_type": "hero_linear",
+        "heroText": "Gemeinsam mit der Einzelverordneten Pia Voltz fordert Volt eine digitale Pflanzenliste, die Bürgerinnen und Bürgern bei der naturnahen Bepflanzung von Balkonen, Kleingärten und Baumscheiben unterstützt.",
+        "heroZeilen": [
+          "Volt Berlin bringt ersten Antrag in die BVV Treptow-Köpenick ein"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "a3b9bfe61bc4",
+        "_type": "photo",
+        "alt": "Pia Voltz mit Antragstext",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4e6bfc353a41a5b725c87f75eeb0e0cd2729e4d7-1880x1084.jpg"
+      },
+      {
+        "_key": "8972c4380a2d",
+        "_type": "html_content",
+        "html_content": "Gemeinsam mit Pia Voltz hat der Berliner Landesverband von Volt seinen ersten Antrag in die BVV Treptow-Köpenick eingebracht. Ziel ist die Erstellung einer interaktiven Pflanzenliste, die trockenheitsresistente, standortgerechte und insektenfreundliche Arten empfiehlt. So sollen Bewohner*innen unkompliziert zum klima- und biodiversitätsfreundlichen Begrünen ihrer Umgebung motiviert werden. Gestützt wird der Antrag auch von der Fraktion der Grünen.\n\n“Viele Menschen im Bezirk wollen sich für Klima und Artenvielfalt engagieren – wir geben ihnen mit diesem Antrag ein einfaches, praktisches Werkzeug an die Hand. Eine verständliche Pflanzenliste schafft Orientierung und macht es leichter, selbst aktiv zu werden.” - Pia Voltz, Einzelverordnete in der BVV Treptow-Köpenick\n\nStadtgrün kühlt, speichert Wasser und steigert die Lebensqualität – zentrale Faktoren für eine klimaresiliente Zukunft. Und der Antrag zeigt auch, dass konstruktive Politik auch aus der außerparlamentarischen Opposition heraus gelingen kann.\n\n„Kommunalpolitik braucht Mut zur Zusammenarbeit und Gestaltung – genau das bringt Volt mit. Wir wollen zeigen, dass Politik auch anders geht: gemeinsam, pragmatisch und lösungsorientiert.“ - Victoria Borrell-Alvarez, Vorstandsvorsitzende von Volt Berlin.\n\nDer Antrag wird nun im Ausschuss für Stadtentwicklung, Bauen, Umwelt und Naturschutz beraten. Mit Blick auf die BVV- und Abgeordnetenhauswahlen 2026 unterstreicht Volt Berlin damit seine Bereitschaft, Verantwortung zu übernehmen und neue Wege in der Lokalpolitik zu gehen.",
         "photo": null
       }
     ]

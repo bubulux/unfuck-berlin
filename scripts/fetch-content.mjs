@@ -74,9 +74,8 @@ const splitLines = (s) => clean(s).split('\n').map((l) => l.trim()).filter(Boole
 const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
 
 const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
+  ...,
   "slug": slug.current,
-  is_published,
-  published_at,
   content_modules[]{
     ...,
     "photo": photo.asset->url
@@ -133,24 +132,19 @@ function buildNews(rows) {
   const articles = (rows || [])
     .filter((a) => a.slug)
     .map((article) => {
-      const mods = article.content_modules || []
-
-      const hero =
-        mods.find((m) => m._type === 'hero_linear' || m._type === 'hero_video') || {}
+      const content_modules = article.content_modules || []
+      const hero_module = content_modules.find((m) => m._type === 'hero_linear') || {}
 
       return {
         slug: clean(article.slug),
+        theme: clean(article.theme),
         is_published: Boolean(article.is_published),
         publishedAt: clean(article.published_at),
-        title: lines(hero.heroZeilen),
-        body: clean(hero.heroText),
-        content: mods,
+        title: lines(hero_module.heroZeilen),
+        body: clean(hero_module.heroText),
+        content_modules,
       }
     })
-
-  if (!articles.length) {
-    throw new Error('Keine Artikel gefunden.')
-  }
 
   return articles
 }
