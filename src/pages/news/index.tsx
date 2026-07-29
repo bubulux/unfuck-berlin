@@ -1,8 +1,9 @@
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router";
 import { PageLayout } from "../../components/templates/page-layout";
 import { NEWS_CMS } from "../../data/news.generated";
 import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
+import { Icon } from "../../components/atoms/icon";
 // import ReactMarkdown from "react-markdown";
 
 import './styles.css'
@@ -30,8 +31,8 @@ export function NewsPage() {
             textColor="white"
             align="left"
             uppercase={false}
-            className="program-intro__heading"
-            style={{ marginBottom: '16px' }}
+            className="news__text_width program-intro__heading"
+            style={{ marginBottom: '64px' }}
           />
 
           {
@@ -43,9 +44,12 @@ export function NewsPage() {
                 <section
                   key={`${index}-${article.slug}`}
                   className="news__text_width"
-                  style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '16px' }}
+                  style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}
                 >
-                  <a href={url}>
+                  <a
+                    href={url}
+                    style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+                  >
                     <HighlightText
                       as="h2"
                       lines={article.title}
@@ -65,9 +69,9 @@ export function NewsPage() {
                     </p>
                   </a>
                   <div>
-                  <Button as="a" href={url} color="neon">
-                    weiter lesen…
-                  </Button>
+                    <Button as="a" size="cta" href={url} color="purple">
+                      weiter lesen…
+                    </Button>
                   </div>
                 </section>
               )
@@ -79,7 +83,6 @@ export function NewsPage() {
   }
 
   const article = article_many[0]
-  console.log('article', article)
 
   const articleJsonLd = {
   "@context": "https://schema.org",
@@ -110,8 +113,9 @@ export function NewsPage() {
 }
 
 
+  const theme_variant = article.theme || 'light' // 'light
   return (
-    <PageLayout activePath={pathname} variant="light">
+    <PageLayout activePath={pathname} variant={theme_variant}>
       <script type="application/ld+json">
         {JSON.stringify(articleJsonLd)}
       </script>
@@ -137,7 +141,7 @@ export function NewsPage() {
                 align="left"
                 uppercase={false}
                 className="program-intro__heading"
-                style={{ marginBottom: '16px' }}
+                style={{ marginBottom: '32px' }}
               />
 
               <p style={{ width: 'var(--content-max)', maxWidth: '100%' }}>
@@ -150,19 +154,22 @@ export function NewsPage() {
               </p>
             </section>
           } else if (c._type === 'headline') {
-            return (
-              <HighlightText
+            return (<section
                 key={key}
-                as="h2"
-                lines={(c as any).headlineZeilen}
-                variant="subtitel"
-                color="purple"
-                textColor="white"
-                align="left"
-                uppercase={false}
-                className="news__text_width program-intro__heading"
-                // style={{ marginBottom: '16px' }}
-              />
+                className="news__text_width"
+                style={{ paddingBlock: '64px 16px' }}
+              >
+                <HighlightText
+                  as="h2"
+                  lines={(c as any).headlineZeilen}
+                  variant="subtitel"
+                  color={theme_variant === 'purple' ? 'white' : 'purple'}
+                  textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+                  align="left"
+                  uppercase={false}
+                  className="program-intro__heading"
+                />
+              </section>
             )
           } else if (c._type === 'html_content') {
             const html_content: string = c.html_content || ''
@@ -176,12 +183,14 @@ export function NewsPage() {
           //   </section>
           } else if (c._type === 'one_cta') {
             return (
-              <Button key={key} as="a" href={c.ctaHref} color="neon" className="news__text_width unfuck-intro__cta" style={{ margin: '0' }}>
-                {c.ctaLabel}
-              </Button>
+              <section key={key} className="news__text_width">
+                <Button as="a" href={c.ctaHref} color="neon" className="news__text_width unfuck-intro__cta" style={{ margin: '0' }}>
+                  {c.ctaLabel}
+                </Button>
+              </section>
             )
           } else if (c._type === 'photo') {
-            return <section key={key} style={{ paddingBlock: '64px' }}>
+            return <section key={key} style={{ marginBlock: '64px' }}>
               <img
                 src={c.photo}
                 alt={c.alt || ''}
@@ -197,6 +206,43 @@ export function NewsPage() {
           return null
         })
       }
+
+
+      <section
+        className="news__text_width"
+        style={{ marginBlock: '64px 16px' }}
+      >
+        <HighlightText
+          as="h2"
+          lines={['Über Volt']}
+          variant="subtitel"
+          color={theme_variant === 'purple' ? 'white' : 'purple'}
+          textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+          align="left"
+          uppercase={false}
+          className="program-intro__heading"
+        />
+      </section>
+      <section
+        className="news__text_width"
+        style={{
+          whiteSpace: 'pre-wrap',
+        }}
+      >
+        Volt – die erste paneuropäische Partei – kämpft seit 2017 grenzüberschreitend für eine innovative, nachhaltige und sozial gerechte Politik. Vom Europäischen Parlament bis in die Kommunen bringen wir bereits heute konkrete Lösungen voran. 2026 treten wir in Berlin zur Abgeordnetenhaus- und Bezirksverordnetenversammlungswahl an, um bewährte Ansätze aus ganz Europa hier entschlossen umzusetzen.
+      </section>
+      <section className="news__text_width">
+        <Link to="/news/">
+          <Button
+            size="cta"
+            variant="outline"
+            color={theme_variant === 'purple' ? 'white' : 'purple'}
+            iconLeft={<Icon size="1.5em" name="arrow-left" />}
+          >
+            Zur Artikel Übersicht
+          </Button>
+        </Link>
+      </section>
 
       </div>
     </PageLayout>

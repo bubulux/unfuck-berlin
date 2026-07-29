@@ -18,6 +18,11 @@
   align-items: center;
 }
 
+.highlight__line {
+  width: 100%;
+  transform: skewY(-2deg);
+}
+
 /* Alignment (column: cross-axis; row: main-axis) */
 .highlight--column.highlight--align-left {
   align-items: flex-start;
@@ -72,9 +77,9 @@
   background-color: var(--hl-bg);
 }
 
-.highlight__box {
+/* .highlight__box {
   transform: skewY(-2deg);
-}
+} */
 
 .highlight__text {
   transform: skewY(2deg);

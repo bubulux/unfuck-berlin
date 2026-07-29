@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-29T11:46:17.835Z
+// Letzter Abruf: 2026-07-29T12:36:33.484Z
 
 export const NEWS_CMS = [
   {
@@ -107,6 +107,12 @@ export const NEWS_CMS = [
         "photo": null
       },
       {
+        "_key": "01eb676083d9",
+        "_type": "photo",
+        "alt": "unf*uck berlin Schriftzug vor dem West-Berliner TV-Turm",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/fabd98e6afa557dee651026b6241a6a4ad5691c6-1880x1084.jpg"
+      },
+      {
         "_key": "62be0656654e",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/videos/20260715_volt_unfck_reveal_long_version_final_small.mp4",
@@ -133,12 +139,6 @@ export const NEWS_CMS = [
         "ctaHref": "https://www.tiktok.com/@volt_berlin/video/7662723899313966368",
         "ctaLabel": "Bekenner-Video auf TikTok",
         "photo": null
-      },
-      {
-        "_key": "01eb676083d9",
-        "_type": "photo",
-        "alt": "unf*uck berlin Schriftzug vor dem West-Berliner TV-Turm",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/fabd98e6afa557dee651026b6241a6a4ad5691c6-1880x1084.jpg"
       },
       {
         "_key": "85aa9538db6e",
@@ -183,20 +183,6 @@ export const NEWS_CMS = [
         "_key": "699dde13ddb1",
         "_type": "photo",
         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/5731a7f8803703c602d5fe906815952265bc5909-1880x1084.jpg"
-      },
-      {
-        "_key": "79de87e0535c",
-        "_type": "headline",
-        "headlineZeilen": [
-          "Über Volt"
-        ],
-        "photo": null
-      },
-      {
-        "_key": "b109e4cdd301",
-        "_type": "html_content",
-        "html_content": "Volt – die erste paneuropäische Partei – kämpft seit 2017 grenzüberschreitend für eine innovative, nachhaltige und sozial gerechte Politik. Vom Europäischen Parlament bis in die Kommunen bringen wir bereits heute konkrete Lösungen voran. 2026 treten wir in Berlin zur Abgeordnetenhaus- und Bezirksverordnetenversammlungswahl an, um bewährte Ansätze aus ganz Europa hier entschlossen umzusetzen.",
-        "photo": null
       },
       {
         "_key": "2934b58f548a",

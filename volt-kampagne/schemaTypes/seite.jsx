@@ -41,7 +41,7 @@ export default defineType({
 
     defineField({
       title: 'Seiten Farbschema',
-      name: 'page_theme',
+      name: 'theme',
       type: 'string',
       options: {
         list: [

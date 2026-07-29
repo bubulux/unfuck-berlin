@@ -53,6 +53,20 @@ export default defineType({
     }),
 
     defineField({
+      title: 'Seiten Farbschema',
+      name: 'theme',
+      type: 'string',
+      options: {
+        list: [
+          { title: '🟣 Purple Background', value: 'purple' },
+          { title: '⚪️ White Background', value: 'white' },
+        ],
+        layout: 'dropdown',
+      },
+      layout: 'dropdown',
+    }),
+
+    defineField({
       title: 'Inhalts Blöcke',
       name: 'content_modules',
       insertMenu: {

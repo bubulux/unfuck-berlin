@@ -110,7 +110,14 @@ export function HighlightText({
             {inner}
           </span>
         );
-      })}
+      }).map(line => {
+        if (!line) {
+          return null
+        }
+        return <div className="highlight__line">{line}</div>
+      })
+      
+      }
     </Component>
   );
 }
