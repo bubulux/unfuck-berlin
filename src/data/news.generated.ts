@@ -8,8 +8,8 @@ export const NEWS_CMS = [
     "is_published": false,
     "publishedAt": "2026-07-27",
     "title": [
-      "BERLIN",
-      "FUNKTIONIERT"
+      "Berlin",
+      "funktioniert"
     ],
     "body": "Verwaltung,\nDigitalisierung\nund Beteiligung",
     "content_modules": [
@@ -18,8 +18,8 @@ export const NEWS_CMS = [
         "_type": "hero_linear",
         "heroText": "Verwaltung,\nDigitalisierung\nund Beteiligung",
         "heroZeilen": [
-          "BERLIN",
-          "FUNKTIONIERT"
+          "Berlin",
+          "funktioniert"
         ],
         "photo": null
       },
@@ -32,7 +32,7 @@ export const NEWS_CMS = [
       {
         "_key": "c16548502e3f",
         "_type": "one_cta",
-        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-edited-20-7.pdf",
+        "ctaHref": "/wahlprogramm",
         "ctaLabel": "Unser Wahlprogramm zur AGH-Wahl 2026",
         "photo": null
       }
@@ -85,6 +85,84 @@ export const NEWS_CMS = [
         "_key": "2fb8d5661451",
         "_type": "html_content",
         "html_content": "Volt Berlin fordert im Programm für die Abgeordnetenhauswahl am 20. September die konsequente Umsetzung der Berliner Landesstrategie für queere Sicherheit und gegen Queerfeindlichkeit, den Ausbau regionaler Anlaufstellen für Betroﬀene anti-queerer Gewalt sowie eine stärkere queere Präsenz im öﬀentlichen Raum, etwa durch Gedenkorte und die gezielte Förderung von Veranstaltungen anlässlich des Pride Month in allen zwölf Bezirken.",
+        "photo": null
+      }
+    ]
+  },
+  {
+    "slug": "wahlsystem",
+    "theme": "",
+    "is_published": true,
+    "publishedAt": "2026-07-16",
+    "title": [
+      "Erste &",
+      "Zweite Stimme:",
+      "Vote Volt"
+    ],
+    "body": "",
+    "content_modules": [
+      {
+        "_key": "5877e7d21a34",
+        "_type": "hero_linear",
+        "heroZeilen": [
+          "Erste &",
+          "Zweite Stimme:",
+          "Vote Volt"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "4488daab87cb",
+        "_type": "headline",
+        "headlineZeilen": [
+          "Die Erststimme – Deine Wahl für eine Person"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "3eecef3c3f30",
+        "_type": "html_content",
+        "html_content": "Mit der Erststimme wählst du eine Kandidatin oder einen Kandidaten aus deinem Wahlkreis. Diese Person vertritt deine Region im Parlament und setzt sich dort für die Interessen der Menschen vor Ort ein.\n\nWer die meisten Stimmen im Wahlkreis erhält, gewinnt das Direktmandat. Mit deiner Erststimme entscheidest du also, wer deine Stimme in der Politik vertreten soll.",
+        "photo": null
+      },
+      {
+        "_key": "b8aa2dd61b43",
+        "_type": "headline",
+        "headlineZeilen": [
+          "Die Zweitstimme – Deine Wahl für Volt"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "a5ee1d028a7e",
+        "_type": "html_content",
+        "html_content": "Mit der Zweitstimme entscheidest du, welche Partei wie stark im Parlament vertreten ist. Sie ist ausschlaggebend für die Sitzverteilung und bestimmt damit maßgeblich die politischen Mehrheiten.\n\nDu wählst also nicht eine einzelne Person, sondern die Partei, deren Ziele und Ideen dich am meisten überzeugen. Die Zweitstimme hat deshalb einen großen Einfluss darauf, welche Politik in den kommenden Jahren umgesetzt wird.",
+        "photo": null
+      },
+      {
+        "_key": "90a6ebc02a92",
+        "_type": "headline",
+        "headlineZeilen": [
+          "Wählen mit 16?"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "5f12ba967900",
+        "_type": "html_content",
+        "html_content": "<strong>Berlin gehört auch dir.</strong>\n\nDu bist 16 oder älter? Dann kannst du dieses Jahr zum ersten Mal wählen. Das ist mehr als nur ein Kreuz auf dem Stimmzettel – es ist deine Chance, die Zukunft deiner Stadt mitzugestalten.\n\nOb Mieten, Bildung, öffentlicher Nahverkehr, Klima oder Freizeitangebote – die Entscheidungen der Politik betreffen deinen Alltag. Informiere dich über die Themen und Parteien, bilde dir deine eigene Meinung und geh wählen.\n\nDenn Berlin verändert sich nur, wenn Menschen mitentscheiden. Vielleicht beginnt das mit deiner ersten Stimme.",
+        "photo": null
+      },
+      {
+        "_key": "a5eb018165f4",
+        "_type": "photo",
+        "photo": null
+      },
+      {
+        "_key": "137ccf43d3e3",
+        "_type": "one_cta",
+        "ctaHref": "/wahlprogramm",
+        "ctaLabel": "Wahlprogramm lesen",
         "photo": null
       }
     ]
