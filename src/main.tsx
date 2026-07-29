@@ -7,8 +7,7 @@ import { AnalyticsTracker } from './lib/analytics'
 import { CalendarProvider } from './context/calendar'
 import { Home } from './pages/home'
 import { Wahlprogramm } from './pages/wahlprogramm'
-import { Wahlsystem } from './pages/wahlsystem'
-import { UnfuckBerlin } from './pages/unfuck-berlin'
+// import { Wahlsystem } from './pages/wahlsystem'
 import { Sticker } from './pages/sticker'
 import { Confirm } from './pages/confirm'
 import { Termine } from './pages/termine'
@@ -27,8 +26,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/*" element={<NewsPage />} />
           <Route path="/wahlprogramm" element={<Wahlprogramm />} />
-          <Route path="/wahlsystem" element={<Wahlsystem />} />
-          <Route path="/unfuck-berlin" element={<UnfuckBerlin />} />
+          {/* <Route path="/wahlsystem" element={<Wahlsystem />} />*/}
           <Route path="/termine" element={<Termine />} />
           <Route path="/kandidierende" element={<Kandidaten />} />
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />

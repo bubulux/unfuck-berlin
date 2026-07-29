@@ -20,7 +20,7 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "News", to: "/news" },
   { label: "Kalender", to: "/termine" },
   { label: "Alle Voltkandidierenden", to: "/kandidierende" },
-  { label: "unf*ck berlin", to: "/unfuck-berlin" },
+  { label: "unf*ck berlin", to: "/news/unfuck-berlin-reveal" },
 ];
 
 /** Social platforms shown in the footer / social rows. */

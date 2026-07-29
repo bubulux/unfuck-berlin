@@ -6,9 +6,7 @@ export interface VideoAsset {
 }
 
 export interface VideosContent {
-  /** Anna & Paul intro (Home hero). */
   annaPaulIntro: VideoAsset
-  /** "unf*ck berlin" reveal (Home teaser + /unfuck-berlin). */
   reveal: VideoAsset
 }
 

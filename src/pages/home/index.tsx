@@ -43,7 +43,7 @@ export function Home() {
         videoTitle="15. Juli 2026"
         text=""
         ctaLabel="Worum geht es?"
-        ctaTo="/unfuck-berlin"
+        ctaTo="/news/unfuck-berlin-reveal"
       />
     </PageLayout>
   )
