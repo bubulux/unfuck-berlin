@@ -147,7 +147,7 @@ export function NewsPage() {
             >
               <HighlightText
                 as="h1"
-                lines={c.heroZeilen}
+                lines={c.heroZeilen || []}
                 variant="titel"
                 color="neon"
                 textColor="purple"
@@ -203,6 +203,9 @@ export function NewsPage() {
               </section>
             )
           } else if (c._type === 'photo') {
+            if (!c.photo) {
+              return null
+            }
             return <section key={key} style={{ marginBlock: '64px' }}>
               <img
                 src={c.photo}
