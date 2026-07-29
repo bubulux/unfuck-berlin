@@ -24,6 +24,15 @@
   /* Wide layout — for sections that expand on larger screens. The cap only
    * kicks in past ~1200px (below that the content fills the viewport); the pad
    * grows fluidly from 16px on mobile to 64px, creating the side margins. */
+  --content-max-semi-wide: 52rem;
+  /* 1200px */
+  --content-pad-semi-wide: clamp(var(--space-4), 5vw, var(--space-8));
+  /* 16 → 64px */
+
+
+  /* Wide layout — for sections that expand on larger screens. The cap only
+   * kicks in past ~1200px (below that the content fills the viewport); the pad
+   * grows fluidly from 16px on mobile to 64px, creating the side margins. */
   --content-max-wide: 75rem; /* 1200px */
   --content-pad-wide: clamp(var(--space-4), 5vw, var(--space-8)); /* 16 → 64px */
 }

@@ -21,7 +21,7 @@ export function NewsPage() {
 
     return (
       <PageLayout activePath={pathname} variant="light">
-        <div className="news__inner">
+        <div className="news__wrapper">
           <HighlightText
             as="h1"
             lines={['News']}
@@ -40,7 +40,11 @@ export function NewsPage() {
               const url = `/news/${article.slug}`
 
               return (
-                <section key={`${index}-${article.slug}`} style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '16px' }}>
+                <section
+                  key={`${index}-${article.slug}`}
+                  className="news__text_width"
+                  style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '16px' }}
+                >
                   <a href={url}>
                     <HighlightText
                       as="h2"
@@ -77,7 +81,7 @@ export function NewsPage() {
   const article = article_many[0]
   return (
     <PageLayout activePath={pathname} variant="light">
-      <div className="news__inner">
+      <div className="news__wrapper">
       {
         article.content.map((c, index) => {
           const key = `${index}-${c._type}`
@@ -85,7 +89,10 @@ export function NewsPage() {
           if (c._type === 'hero_linear') {
             const publishedAt_date = new Date(article.publishedAt);
 
-            return <section key={key}>
+            return <section
+              key={key}
+              className="news__text_width"
+            >
               <HighlightText
                 as="h1"
                 lines={c.heroZeilen}
@@ -118,25 +125,28 @@ export function NewsPage() {
                 textColor="white"
                 align="left"
                 uppercase={false}
-                className="program-intro__heading"
+                className="news__text_width program-intro__heading"
                 // style={{ marginBottom: '16px' }}
               />
             )
           } else if (c._type === 'html_content') {
             const html_content: string = c.html_content || ''
-            return <section key={key} style={{ whiteSpace: 'pre-wrap', width: 'var(--content-max)' }} dangerouslySetInnerHTML={{ __html: html_content }} />
+            return <section key={key} className="news__text_width" style={{
+              whiteSpace: 'pre-wrap',
+              // width: 'var(--content-max)',
+            }} dangerouslySetInnerHTML={{ __html: html_content }} />
           // } else if (c._type === 'md_text') {
           //   return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
           //     <ReactMarkdown>{c.md_text}</ReactMarkdown>
           //   </section>
           } else if (c._type === 'one_cta') {
             return (
-              <Button key={key} as="a" href={c.ctaHref} color="neon" className="unfuck-intro__cta" style={{ margin: '0' }}>
+              <Button key={key} as="a" href={c.ctaHref} color="neon" className="news__text_width unfuck-intro__cta" style={{ margin: '0' }}>
                 {c.ctaLabel}
               </Button>
             )
           } else if (c._type === 'photo') {
-            return <section key={key}>
+            return <section key={key} style={{ paddingBlock: '64px' }}>
               <img
                 src={c.photo}
                 alt={c.alt || ''}
