@@ -10,7 +10,7 @@
 
 .spitzenduo {
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-7);
   width: 100%;
   /* Fills the home right column; keeps the cards from stretching absurdly wide
    * on the full-width wahlsystem section. */

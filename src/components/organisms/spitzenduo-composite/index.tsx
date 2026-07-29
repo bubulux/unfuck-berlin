@@ -20,7 +20,7 @@ export function SpitzenduoComposite({
   className,
   ...rest
 }: SpitzenduoCompositeProps) {
-  const classes = cn('spitzenduo flex flex-col', className)
+  const classes = cn('spitzenduo', className)
   return (
     <div className={classes} {...rest}>
       {people.map((person, i) => (
