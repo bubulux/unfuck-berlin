@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-28T16:06:23.095Z
+// Letzter Abruf: 2026-07-29T09:07:37.265Z
 
 export const NEWS_CMS = [
   {
@@ -45,12 +45,18 @@ export const NEWS_CMS = [
     "title": [
       "Volt Berlin unterstützt Bewerbung für WorldPride 2032 und Verankerung im Koalitionsvertrag"
     ],
-    "body": "Wir stehen hinter der Forderung des Berliner CSD.",
+    "body": "Volt Berlin stellt sich klar hinter die Bewerbung des Berliner CSD e. V. um die WorldPride 2032. Die Partei unterstützt die Forderung, dass sich die künftige Koalition zu Unterstützung, Finanzierung und einer langfristigen Strategie für Berlin als Regenbogenhauptstadt verpflichtet.",
     "content": [
+      {
+        "_key": "f6b8f46d6816",
+        "_type": "photo",
+        "alt": "Pride Flagge mit Volt Logo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/e10d7c1865ff6f0130e019a2ba8ce47e4275b194-1880x1084.jpg"
+      },
       {
         "_key": "ade7b36f132f",
         "_type": "hero_linear",
-        "heroText": "Wir stehen hinter der Forderung des Berliner CSD.\n\n",
+        "heroText": "Volt Berlin stellt sich klar hinter die Bewerbung des Berliner CSD e. V. um die WorldPride 2032. Die Partei unterstützt die Forderung, dass sich die künftige Koalition zu Unterstützung, Finanzierung und einer langfristigen Strategie für Berlin als Regenbogenhauptstadt verpflichtet.",
         "heroZeilen": [
           "Volt Berlin unterstützt Bewerbung für WorldPride 2032 und Verankerung im Koalitionsvertrag"
         ],
@@ -59,21 +65,25 @@ export const NEWS_CMS = [
       {
         "_key": "64a3a57900dd",
         "_type": "html_content",
-        "html_content": "<strong>Volt Berlin stellt sich klar hinter die Bewerbung des Berliner CSD e. V. um die WorldPride 2032. Die Partei unterstützt die Forderung, dass sich die künftige Koalition zu Unterstützung, Finanzierung und einer langfristigen Strategie für Berlin als Regenbogenhauptstadt verpflichtet.</strong>\n\nDiese Haltung teilt Volt Berlin auch mit der heute veröﬀentlichten gemeinsamen Erklärung der queeren Parteiorganisationen von CDU, SPD, Bündnis 90/Die Grünen, DIE LINKE und FDP: Sie sprechen sich dafür aus, die Bewerbung im kommenden Jahr finanziell zu fördern, und fordern eine verbindliche Finanzierungszusage für die Ausrichtung der WorldPride 2032.\n\n„Eine Stadt, die sich Regenbogenhauptstadt nennt, muss das auch finanziell und politisch absichern. Die WorldPride 2032 ist eine Chance für Berlin, die wir nicht verstreichen lassen dürfen“, sagt Anna Auerbach, Spitzenkandidatin von Volt Berlin. „Wir setzen uns dafür ein, dass die Unterstützung der Bewerbung und ihre verbindliche Finanzierung Teil des nächsten Koalitionsvertrags werden.“\n\n„Zusammenarbeit über Parteigrenzen hinweg ist hier genau das, was es braucht“, sagt Paul Loeper, Spitzenkandidat von Volt Berlin. „Wenn sich fünf Parteiorganisationen über ihre politischen Diﬀerenzen hinweg einig sind, muss das auch für die Koalitionsverhandlungen gelten. Aus diesem gemeinsamen Signal muss verbindliche Politik werden.“\n\nVolt Berlin fordert im Programm für die Abgeordnetenhauswahl am 20. September die konsequente Umsetzung der Berliner Landesstrategie für queere Sicherheit und gegen Queerfeindlichkeit, den Ausbau regionaler Anlaufstellen für Betroﬀene anti-queerer Gewalt sowie eine stärkere queere Präsenz im öﬀentlichen Raum, etwa durch Gedenkorte und die gezielte Förderung von Veranstaltungen anlässlich des Pride Month in allen zwölf Bezirken.",
+        "html_content": "Diese Haltung teilt Volt Berlin auch mit der heute veröﬀentlichten gemeinsamen Erklärung der queeren Parteiorganisationen von CDU, SPD, Bündnis 90/Die Grünen, DIE LINKE und FDP: Sie sprechen sich dafür aus, die Bewerbung im kommenden Jahr finanziell zu fördern, und fordern eine verbindliche Finanzierungszusage für die Ausrichtung der WorldPride 2032.",
         "photo": null
       },
       {
-        "_key": "3b7a9f7dcdc5",
-        "_type": "headline",
-        "headlineZeilen": [
-          "Über Volt"
-        ],
-        "photo": null
-      },
-      {
-        "_key": "37018e61fc99",
+        "_key": "8d6ff4b678a8",
         "_type": "html_content",
-        "html_content": "Volt – die erste paneuropäische Partei – kämpft seit 2017 grenzüberschreitend für eine innovative, nachhaltige und sozial gerechte Politik. Vom Europäischen Parlament bis in die Kommunen bringen wir bereits heute konkrete Lösungen voran. 2026 treten wir in Berlin zur Abgeordnetenhaus- und Bezirksverordnetenversammlungswahl an, um bewährte Ansätze aus ganz Europa hier entschlossen umzusetzen.",
+        "html_content": "„Eine Stadt, die sich Regenbogenhauptstadt nennt, muss das auch finanziell und politisch absichern. Die WorldPride 2032 ist eine Chance für Berlin, die wir nicht verstreichen lassen dürfen“, sagt Anna Auerbach, Spitzenkandidatin von Volt Berlin. „Wir setzen uns dafür ein, dass die Unterstützung der Bewerbung und ihre verbindliche Finanzierung Teil des nächsten Koalitionsvertrags werden.“",
+        "photo": null
+      },
+      {
+        "_key": "68a1a4c5df8f",
+        "_type": "html_content",
+        "html_content": "„Zusammenarbeit über Parteigrenzen hinweg ist hier genau das, was es braucht“, sagt Paul Loeper, Spitzenkandidat von Volt Berlin. „Wenn sich fünf Parteiorganisationen über ihre politischen Diﬀerenzen hinweg einig sind, muss das auch für die Koalitionsverhandlungen gelten. Aus diesem gemeinsamen Signal muss verbindliche Politik werden.“",
+        "photo": null
+      },
+      {
+        "_key": "2fb8d5661451",
+        "_type": "html_content",
+        "html_content": "Volt Berlin fordert im Programm für die Abgeordnetenhauswahl am 20. September die konsequente Umsetzung der Berliner Landesstrategie für queere Sicherheit und gegen Queerfeindlichkeit, den Ausbau regionaler Anlaufstellen für Betroﬀene anti-queerer Gewalt sowie eine stärkere queere Präsenz im öﬀentlichen Raum, etwa durch Gedenkorte und die gezielte Förderung von Veranstaltungen anlässlich des Pride Month in allen zwölf Bezirken.",
         "photo": null
       }
     ]
@@ -192,6 +202,56 @@ export const NEWS_CMS = [
         "_key": "2934b58f548a",
         "_type": "photo",
         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4be6d521b647ca2e44e987267488b03b0a327f48-1880x1084.jpg"
+      }
+    ]
+  },
+  {
+    "slug": "11000-unterschriften",
+    "is_published": true,
+    "publishedAt": "2026-07-09",
+    "title": [
+      "11.000 Unterschriften: Volt tritt in Berlin in allen 78 Wahlkreisen an"
+    ],
+    "body": "Als erste der derzeit nicht im Abgeordnetenhaus vertretenen Parteien erfüllt Volt Berlin die Voraussetzungen für den Antritt am 20. September – in allen 78 Wahlkreisen.",
+    "content": [
+      {
+        "_key": "bf61a70de0f8",
+        "_type": "hero_linear",
+        "heroText": "Als erste der derzeit nicht im Abgeordnetenhaus vertretenen Parteien erfüllt Volt Berlin die Voraussetzungen für den Antritt am 20. September – in allen 78 Wahlkreisen.",
+        "heroZeilen": [
+          "11.000 Unterschriften: Volt tritt in Berlin in allen 78 Wahlkreisen an"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "9c43fbf08eb4",
+        "_type": "html_content",
+        "html_content": "Volt tritt am 20. September zur Wahl des Abgeordnetenhauses und der Bezirksverordnetenversammlungen an – mit Direktkandidat*innen in allen 78 Wahlkreisen und Listen für die BVVen aller zwölf Bezirke. Als erste der derzeit nicht im Abgeordnetenhaus vertretenen Parteien hat Volt Berlin dafür alle erforderlichen Unterstützungsunterschriften gesammelt.",
+        "photo": null
+      },
+      {
+        "_key": "8a23a42317f7",
+        "_type": "html_content",
+        "html_content": "Hunderte Volt-Mitglieder waren an Haustüren, auf Wochenmärkten und auf der Straße im Einsatz, um mit den Menschen direkt vor Ort ins Gespräch zu kommen. Der Erfolg zeigt, wie tief Volt inzwischen in der Berliner Stadtgesellschaft verankert ist.",
+        "photo": null
+      },
+      {
+        "_key": "c14c34b53bd0",
+        "_type": "html_content",
+        "html_content": "<blockquote>„Jetzt geht es los. Und wir treten überall an. 11.000 Berliner*innen haben uns mit ihrer Unterschrift den Weg auf die Stimmzettel geebnet”, sagt Anna Auerbach, Spitzenkandidatin von Volt Berlin. „Dafür sind wir dankbar. Es zeigt: Die Menschen wissen, dass Berlin es besser kann, und sie wollen Veränderung. Nun beginnt der Wahlkampf um die Inhalte.”</blockquote>",
+        "photo": null
+      },
+      {
+        "_key": "49e1c645fa5e",
+        "_type": "html_content",
+        "html_content": "Die Frist für die Einreichung der Wahlvorschläge endet am 14. Juli um 18 Uhr. Über die Zulassung entscheiden die Bezirkswahlausschüsse am 22. Juli, der Landeswahlausschuss am 24. Juli über die Landesliste. Volt Berlin hat alle Unterlagen bereits eingereicht.",
+        "photo": null
+      },
+      {
+        "_key": "9e98bc3283db",
+        "_type": "html_content",
+        "html_content": "Eine Übersicht aller Direktkandidierenden finden Sie <a href=\"https://voltdeutschland.org/berlin/direktkandidierende-agh-2026\">hier.</a>",
+        "photo": null
       }
     ]
   }

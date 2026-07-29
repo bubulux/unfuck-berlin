@@ -5,6 +5,8 @@ import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
 // import ReactMarkdown from "react-markdown";
 
+import './styles.css'
+
 export function NewsPage() {
   const { pathname } = useLocation();
 
@@ -19,7 +21,7 @@ export function NewsPage() {
 
     return (
       <PageLayout activePath={pathname} variant="light">
-        <div className="voting__inner">
+        <div className="news__inner">
           <HighlightText
             as="h1"
             lines={['News']}
@@ -75,7 +77,7 @@ export function NewsPage() {
   const article = article_many[0]
   return (
     <PageLayout activePath={pathname} variant="light">
-      <div className="voting__inner">
+      <div className="news__inner">
       {
         article.content.map((c, index) => {
           const key = `${index}-${c._type}`
@@ -96,7 +98,7 @@ export function NewsPage() {
                 style={{ marginBottom: '16px' }}
               />
 
-              <p style={{ width: '52rem', maxWidth: '100%' }}>
+              <p style={{ width: 'var(--content-max)', maxWidth: '100%' }}>
                 <strong>{publishedAt_date.toLocaleString('de-DE', {
                   day: '2-digit',
                   month: '2-digit',
@@ -122,7 +124,7 @@ export function NewsPage() {
             )
           } else if (c._type === 'html_content') {
             const html_content: string = c.html_content || ''
-            return <section key={key} style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: html_content }} />
+            return <section key={key} style={{ whiteSpace: 'pre-wrap', width: 'var(--content-max)' }} dangerouslySetInnerHTML={{ __html: html_content }} />
           // } else if (c._type === 'md_text') {
           //   return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
           //     <ReactMarkdown>{c.md_text}</ReactMarkdown>

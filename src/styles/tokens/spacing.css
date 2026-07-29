@@ -18,7 +18,7 @@
   --radius-pill: 999px;
 
   /* Layout */
-  --content-max: 480px; /* mobile-frame content width */
+  --content-max: 520px; /* mobile-frame content width */
   --content-pad: var(--space-4);
 
   /* Wide layout — for sections that expand on larger screens. The cap only
