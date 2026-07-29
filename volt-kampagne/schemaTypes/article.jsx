@@ -87,6 +87,7 @@ export default defineType({
         { type: 'one_cta' },
         { type: 'photo' },
         // { type: 'wahlprogramm_teaser' },
+        { type: 'spitzenduo_teaser' },
       ],
     }),
   ],

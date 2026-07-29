@@ -28,7 +28,7 @@ export function Home() {
         ctaLabel="Wahlprogramm"
         ctaTo="/wahlprogramm"
       />
-      <CountdownSection target={ELECTION_DATE} ctaTo="/wahlsystem" />
+      <CountdownSection target={ELECTION_DATE} ctaTo="/news/wahlsystem" />
       <CandidatesSection lead={<SpitzenduoComposite />} ctaTo="/kandidierende" />
       <CalendarSection
         events={calendar.items.slice(0, 3)}

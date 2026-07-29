@@ -7,6 +7,7 @@ import { Icon } from "../../components/atoms/icon";
 // import ReactMarkdown from "react-markdown";
 
 import './styles.css'
+import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
 
 export function NewsPage() {
   const { pathname } = useLocation();
@@ -32,7 +33,7 @@ export function NewsPage() {
             align="left"
             uppercase={false}
             className="news__text_width program-intro__heading"
-            style={{ marginBottom: '64px' }}
+            style={{ marginBottom: 'var(--gap-big)' }}
           />
 
           {
@@ -170,7 +171,7 @@ export function NewsPage() {
             return (<section
                 key={key}
                 className="news__text_width"
-                style={{ paddingBlock: '64px 16px' }}
+                style={{ marginBlock: 'var(--gap-big) 16px' }}
               >
                 <HighlightText
                   as="h2"
@@ -180,7 +181,6 @@ export function NewsPage() {
                   textColor="purple"
                   align="left"
                   uppercase={false}
-                  className="program-intro__heading"
                 />
               </section>
             )
@@ -206,7 +206,7 @@ export function NewsPage() {
             if (!c.photo) {
               return null
             }
-            return <section key={key} style={{ marginBlock: '64px' }}>
+            return <section key={key} style={{ marginBlock: 'var(--gap-big)' }}>
               <img
                 src={c.photo}
                 alt={c.alt || ''}
@@ -217,6 +217,10 @@ export function NewsPage() {
                 loading="lazy"
               />
             </section>
+          } else if (c._type === 'spitzenduo_teaser') {
+            return <section key={key} style={{ marginBlock: 'var(--gap-big) var(--gap-small)' }}>
+              <SpitzenduoComposite className="flex flex-row" />
+            </section>
           }
 
           return null
@@ -226,7 +230,7 @@ export function NewsPage() {
 
       <section
         className="news__text_width"
-        style={{ marginBlock: '64px 16px' }}
+        style={{ marginBlock: 'var(--gap-big) 16px' }}
       >
         <HighlightText
           as="h2"
@@ -245,7 +249,7 @@ export function NewsPage() {
 
       <section
         className="news__text_width"
-        style={{ marginBlock: '64px 16px' }}
+        style={{ marginBlock: 'var(--gap-big) 16px' }}
       >
         <HighlightText
           as="h2"

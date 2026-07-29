@@ -12,6 +12,7 @@ import wahlprogramm_teaser from './obj/wahlprogramm_teaser'
 import wahlprogramm_kapitel_teaser from './obj/wahlprogramm_kapitel_teaser'
 import kandis_auswahl from './obj/kandis_auswahl'
 import photo from './obj/photo'
+import spitzenduo_teaser from './obj/spitzenduo_teaser'
 
 import seite from './seite'
 import article from './article'
@@ -47,6 +48,7 @@ export const schemaTypes = [
   wahlprogramm_kapitel_teaser,
   kandis_auswahl,
   photo,
+  spitzenduo_teaser,
 
   seite,
   article,

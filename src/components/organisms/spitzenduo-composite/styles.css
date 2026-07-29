@@ -10,13 +10,14 @@
 
 .spitzenduo {
   flex-wrap: wrap;
-  gap: var(--space-5);
+  gap: var(--space-4);
   width: 100%;
   /* Fills the home right column; keeps the cards from stretching absurdly wide
    * on the full-width wahlsystem section. */
   /* max-width: 44rem; */
   margin-inline: auto;
 }
+
 
 /* One card = the card's own background colour + the landscape photo (which
  * already fades into that same colour) shown in full, with the name/role/CTA as

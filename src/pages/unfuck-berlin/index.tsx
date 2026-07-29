@@ -79,7 +79,7 @@ export function UnfuckBerlin() {
       <UnfuckIntro
         headline="Berlin ist eine der aufregendsten Städte der Welt!"
         ctaLabel="Erste & Zweite Stimme: Volt"
-        ctaTo="/wahlsystem"
+        ctaTo="/news/wahlsystem"
       >
         <Text color="white">
           Und trotzdem warten wir monatelang auf Briefe vom Amt. Auf Busse, die

@@ -140,6 +140,11 @@ export const NEWS_CMS = [
         "photo": null
       },
       {
+        "_key": "5adcde88574c",
+        "_type": "spitzenduo_teaser",
+        "photo": null
+      },
+      {
         "_key": "90a6ebc02a92",
         "_type": "headline",
         "headlineZeilen": [
@@ -151,11 +156,6 @@ export const NEWS_CMS = [
         "_key": "5f12ba967900",
         "_type": "html_content",
         "html_content": "<strong>Berlin gehört auch dir.</strong>\n\nDu bist 16 oder älter? Dann kannst du dieses Jahr zum ersten Mal wählen. Das ist mehr als nur ein Kreuz auf dem Stimmzettel – es ist deine Chance, die Zukunft deiner Stadt mitzugestalten.\n\nOb Mieten, Bildung, öffentlicher Nahverkehr, Klima oder Freizeitangebote – die Entscheidungen der Politik betreffen deinen Alltag. Informiere dich über die Themen und Parteien, bilde dir deine eigene Meinung und geh wählen.\n\nDenn Berlin verändert sich nur, wenn Menschen mitentscheiden. Vielleicht beginnt das mit deiner ersten Stimme.",
-        "photo": null
-      },
-      {
-        "_key": "a5eb018165f4",
-        "_type": "photo",
         "photo": null
       },
       {
