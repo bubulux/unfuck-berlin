@@ -110,11 +110,11 @@ export function HighlightText({
             {inner}
           </span>
         );
-      }).map(line => {
+      }).map((line, index) => {
         if (!line) {
           return null
         }
-        return <div className="highlight__line">{line}</div>
+        return <div key={`${index}-${line}`} className="highlight__line">{line}</div>
       })
       
       }
