@@ -1,6 +1,5 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-29T14:10:30.189Z
 
 export const WAHLSYSTEM_CMS = {
   "heading": [

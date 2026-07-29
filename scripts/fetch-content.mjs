@@ -317,8 +317,8 @@ function buildSpitzenduo(rows, kandidaten) {
 }
 
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
-// NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: ${new Date().toISOString()}`
+// NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.`
+// // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {
   const [newsRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
