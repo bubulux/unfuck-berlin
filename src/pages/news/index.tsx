@@ -5,12 +5,18 @@ import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
 import { Icon } from "../../components/atoms/icon";
 // import ReactMarkdown from "react-markdown";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
 
 export function NewsPage() {
   const { pathname } = useLocation();
+  const isSmallDevice = useMediaQuery("only screen and (max-width : 500px)");
+  const isMediumDevice = useMediaQuery("only screen and (min-width : 500px) and (max-width : 900px)");
+
+  const autoBreakSize_cramped = isSmallDevice ? 0.15 : isMediumDevice ? 0.20 : 0.25
+  const autoBreakSize_roomy = isSmallDevice ? 0.2 : isMediumDevice ? 0.25 : 0.33
 
   const article_many = NEWS_CMS
     .filter(a => a.is_published === true)
@@ -53,6 +59,7 @@ export function NewsPage() {
                   >
                     <HighlightText
                       as="h2"
+                      autoBreakSize={autoBreakSize_roomy}
                       lines={article.title}
                       variant="subtitel"
                       color="neon"
@@ -148,6 +155,7 @@ export function NewsPage() {
             >
               <HighlightText
                 as="h1"
+                autoBreakSize={autoBreakSize_cramped}
                 lines={c.heroZeilen || []}
                 variant="titel"
                 color="neon"
@@ -175,6 +183,7 @@ export function NewsPage() {
               >
                 <HighlightText
                   as="h2"
+                  autoBreakSize={autoBreakSize_roomy}
                   lines={(c as any).headlineZeilen}
                   variant="subtitel"
                   color="neon"
@@ -253,6 +262,7 @@ export function NewsPage() {
       >
         <HighlightText
           as="h2"
+          autoBreakSize={autoBreakSize_roomy}
           lines={['Presse- und Medienanfragen']}
           variant="subtitel"
           color={theme_variant === 'purple' ? 'white' : 'purple'}

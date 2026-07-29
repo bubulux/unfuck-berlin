@@ -21,6 +21,7 @@ export interface HighlightSegment {
 export type HighlightLine = string | HighlightSegment;
 
 export interface HighlightTextProps extends HTMLAttributes<HTMLElement> {
+  autoBreakSize?: number;
   /** One box per entry. Strings inherit the component-level colors. */
   lines: HighlightLine[];
   /** Size preset. Defaults to `titel`. */
@@ -42,6 +43,7 @@ function toSegment(line: HighlightLine): HighlightSegment {
 }
 
 export function HighlightText({
+  autoBreakSize = 0.25,
   lines,
   variant = "titel",
   color = "white",
@@ -66,7 +68,7 @@ export function HighlightText({
     .join(" ");
 
   // auto split lines, if only one line is provided
-  const autoBrokenLines = lines.length === 1 ? autoBreakHeadline(lines.join(' ')) : lines
+  const autoBrokenLines = lines.length === 1 ? autoBreakHeadline({ text: lines.join(' '), size: autoBreakSize }) : lines
 
   return (
     <Component className={classes} style={style} {...rest}>
