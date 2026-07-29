@@ -1,6 +1,6 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-29T09:07:37.265Z
+// Letzter Abruf: 2026-07-29T11:46:17.835Z
 
 export const NEWS_CMS = [
   {
@@ -48,12 +48,6 @@ export const NEWS_CMS = [
     "body": "Volt Berlin stellt sich klar hinter die Bewerbung des Berliner CSD e. V. um die WorldPride 2032. Die Partei unterstützt die Forderung, dass sich die künftige Koalition zu Unterstützung, Finanzierung und einer langfristigen Strategie für Berlin als Regenbogenhauptstadt verpflichtet.",
     "content": [
       {
-        "_key": "f6b8f46d6816",
-        "_type": "photo",
-        "alt": "Pride Flagge mit Volt Logo",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/e10d7c1865ff6f0130e019a2ba8ce47e4275b194-1880x1084.jpg"
-      },
-      {
         "_key": "ade7b36f132f",
         "_type": "hero_linear",
         "heroText": "Volt Berlin stellt sich klar hinter die Bewerbung des Berliner CSD e. V. um die WorldPride 2032. Die Partei unterstützt die Forderung, dass sich die künftige Koalition zu Unterstützung, Finanzierung und einer langfristigen Strategie für Berlin als Regenbogenhauptstadt verpflichtet.",
@@ -61,6 +55,12 @@ export const NEWS_CMS = [
           "Volt Berlin unterstützt Bewerbung für WorldPride 2032 und Verankerung im Koalitionsvertrag"
         ],
         "photo": null
+      },
+      {
+        "_key": "f6b8f46d6816",
+        "_type": "photo",
+        "alt": "Pride Flagge mit Volt Logo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/e10d7c1865ff6f0130e019a2ba8ce47e4275b194-1880x1084.jpg"
       },
       {
         "_key": "64a3a57900dd",
