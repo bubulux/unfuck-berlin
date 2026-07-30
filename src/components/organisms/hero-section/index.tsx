@@ -42,6 +42,7 @@ export function HeroSection({
             src={videoSrc}
             poster={videoPoster}
             title={videoTitle}
+            prio={true}
           />
           <div className="hero__gradient" aria-hidden="true" />
         </div>

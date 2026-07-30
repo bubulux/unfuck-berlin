@@ -9,6 +9,7 @@ export interface LazyVideoProps {
   /** Accessible title for the video. */
   title?: string
   className?: string
+  prio?: boolean
 }
 
 const PlayGlyph = () => (
@@ -29,7 +30,7 @@ const PauseGlyph = () => (
  * keeps the layout intact. Native controls are hidden — a single overlay button
  * toggles play/pause.
  */
-export function LazyVideo({ src, poster, title, className }: LazyVideoProps) {
+export function LazyVideo({ src, poster, title, className, prio = false }: LazyVideoProps) {
   const rootRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   // Without IntersectionObserver support, load eagerly.
@@ -85,6 +86,7 @@ export function LazyVideo({ src, poster, title, className }: LazyVideoProps) {
           src={poster}
           alt=""
           aria-hidden="true"
+          fetch-priority={prio ? 'high' : 'low'}
         />
       ) : null}
 
@@ -103,6 +105,7 @@ export function LazyVideo({ src, poster, title, className }: LazyVideoProps) {
           onCanPlay={() => setReady(true)}
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
+          fetch-priority={prio ? 'high' : 'low'}
         />
       ) : null}
 
