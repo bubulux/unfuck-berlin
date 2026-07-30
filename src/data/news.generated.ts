@@ -36,7 +36,7 @@ export const NEWS_CMS = [
       {
         "_key": "70874ce41ca4",
         "_type": "html_content",
-        "html_content": "Wir sind die größte kleine Partei! 👟 Hinter uns liegt ein echter Marathon: Nach tausenden Gesprächen und etlichen Stunden auf der Straße haben wir 11.000 Unterschriften gesammelt.\n\nDas heißt: Volt tritt in Berlin in allen 78 Wahlkreisen an! 🔥 Als erste Partei, die bisher nicht im Abgeordnetenhaus sitzt, haben wir das geschafft.\nDie Berlinerinnen und Berliner haben Bock auf frischen Wind, ehrliche und pragmatische Politik. Unser Wille, Berlin zu unf*cken und in die Parlamente einzuziehen, ist ungebändigt! 🐻\nWir wissen, wie schwer die Herausforderung ist, aber es braucht neue Impulse mehr denn je.\n\nSo kannst du mitmachen:\n• Triff uns beim Straßenwahlkampf & teile deine Ideen mit uns.\n• Hilf uns beim Plakatieren! Die perfekte Gelegenheit, Volt kennenzulernen.\n\nAb dem 2. August um Mittag geht es los! Meld dich über das Formular in der Bio an. Genauere Infos findest du dort.\n\nAm 20.09. haben wir die Wahl. Setzen wir gemeinsam ein Zeichen für Berlin! 💜",
+        "html_content": "Wir sind die größte kleine Partei! 👟 Hinter uns liegt ein echter Marathon: Nach tausenden Gesprächen und etlichen Stunden auf der Straße haben wir 11.000 Unterschriften gesammelt.\n\nDas heißt: Volt tritt in Berlin in allen 78 Wahlkreisen an! 🔥 Als erste Partei, die bisher nicht im Abgeordnetenhaus sitzt, haben wir das geschafft.\nDie Berlinerinnen und Berliner haben Bock auf frischen Wind, ehrliche und pragmatische Politik. Unser Wille, Berlin zu unf*cken und in die Parlamente einzuziehen, ist ungebändigt! 🐻\nWir wissen, wie schwer die Herausforderung ist, aber es braucht neue Impulse mehr denn je.\n\nSo kannst du mitmachen:\n• Triff uns beim Straßenwahlkampf & teile deine Ideen mit uns.\n• Hilf uns beim Plakatieren! Die perfekte Gelegenheit, Volt kennenzulernen.\n\nAb dem 2. August um Mittag geht es los! Meld dich über <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSe0KIETh9W7UODbBxtupBTD0sfl3mW4jLpj7e6JE5XYjXz0HQ/viewform\">dieses Formular</a> an. Genauere Infos findest du dort.\n\nAm 20.09. haben wir die Wahl. Setzen wir gemeinsam ein Zeichen für Berlin! 💜",
         "photo": null
       },
       {
@@ -80,6 +80,51 @@ export const NEWS_CMS = [
         "ctaHref": "/wahlprogramm",
         "ctaLabel": "Unser Wahlprogramm zur AGH-Wahl 2026",
         "photo": null
+      }
+    ]
+  },
+  {
+    "slug": "angriff-auf-queere-community",
+    "theme": "white",
+    "is_published": true,
+    "publishedAt": "2026-07-26",
+    "title": [
+      "Zum Angriff auf die queere Community beim CSD"
+    ],
+    "body": "",
+    "content_modules": [
+      {
+        "_key": "e6a8f2ae599a",
+        "_type": "hero_linear",
+        "heroZeilen": [
+          "Zum Angriff auf die queere Community beim CSD"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "81203301b2d2",
+        "_type": "html_content",
+        "html_content": "Wir sind alle tief betroffen und erschüttert von dem feigen Angriff auf die queere Community und unsere offene Gesellschaft. Wir trauern um die verstorbene Frau und denken an die Verletzten und alle Betroffenen. Wir danken den Einsatzkräften.\n\nBerlin steht wie keine andere Stadt für Freiheit: Wir werden noch vehementer, lauter und geeinter unsere Freiheit zu leben und zu lieben verteidigen.\n\nDer gestrige Berliner CSD war der größte jemals. Der Anschlag unterstreicht nur, wie wichtig die Präsenz aller ist.\n\nWir verurteilen Hass und Gewalt. Queerfeindlichkeit, Islamismus, Extremismus und jede Form von Menschenfeindlichkeit müssen klar benannt und bekämpft werden. Der queeren Community gilt unsere uneingeschränkte Solidarität. 🏳️‍🌈",
+        "photo": null
+      },
+      {
+        "_key": "d3f9284d8f4a",
+        "_type": "headline",
+        "headlineZeilen": [
+          "English Version"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "841330a5c99e",
+        "_type": "html_content",
+        "html_content": "We are shocked by this cowardly attack on the LGBTQ+ community and our open society. We mourn the woman who lost her life and stand with everyone affected. Thank you to the emergency responders.\n\nBerlin stands for freedom like no other city. We will defend our freedom to live and love—louder, stronger, and together.\n\nYesterdays CSD Parade was the biggest ever, and it is more needed today than ever for us to show up for each other.\n\nWe condemn hatred and violence. Anti-LGBTQ+ hatred, Islamist extremism, and every form of extremism and dehumanization must be confronted. The LGBTQ+ community has our full solidarity. 🏳️‍🌈",
+        "photo": null
+      },
+      {
+        "_key": "e5d2db1b7d6e",
+        "_type": "photo",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/d0cd39b2a48c815e2be5ef29cc8e3d531934a8a4-1080x1339.jpg"
       }
     ]
   },

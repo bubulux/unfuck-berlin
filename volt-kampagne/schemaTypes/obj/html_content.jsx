@@ -25,7 +25,7 @@ export default defineType({
       const { title } = props
       return (
         <Stack paddingX={4} paddingY={2} gap={2}>
-          <Text size={1}>{title.slice(0, 300)}{title.length > 300 ? '…' : ''}</Text>
+          <Text size={1}>{(title || '').slice(0, 300)}{(title || '').length > 300 ? '…' : ''}</Text>
         </Stack>
       )
     },
