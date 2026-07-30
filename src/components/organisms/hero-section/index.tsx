@@ -48,7 +48,7 @@ export function HeroSection({
 
         <div className="hero__content">
           {logoSrc ? (
-            <img className="hero__logo" src={logoSrc} alt={logoAlt ?? ''} />
+            <img className="hero__logo" src={logoSrc} alt={logoAlt ?? ''} fetch-priority="high" />
           ) : null}
 
           <Text as="p" variant="body" color="white" className="hero__text" >
