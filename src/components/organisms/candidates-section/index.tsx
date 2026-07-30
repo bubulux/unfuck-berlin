@@ -35,7 +35,7 @@ function ElectionProgramCard(){
             </span>
           </Link>
 
-          <a href="/wahlprogramm" className="candidates__cluster" {...{'data-umami-event': 'wahlprogram-teaser-image-click'}}>
+          <a href="/wahlprogramm" className="candidates__cluster" {...{'data-umami-event': 'wahlprogram-teaser-image-click'}} aria-label="Wahlprogramm lesen">
             <img className="electionProgramFirstPageImg" src="/wahlprogramm-page-one.jpg" style={{ width: '100%', height: 'auto' }} />
             <div className="electionProgramFirstPage" />
           </a>

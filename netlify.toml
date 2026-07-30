@@ -54,11 +54,11 @@
 
 # Calendar proxy: fetch the public Volt Berlin Google Calendar ICS server-side
 # and serve it same-origin, so the browser fetch isn't CORS-blocked.
-[[redirects]]
-  from = "/api/volt-calendar"
-  to   = "https://calendar.google.com/calendar/ical/volteuropa.org_3qtptk1l0mfg76gq9nfqq1h4mg%40group.calendar.google.com/public/basic.ics"
-  status = 200
-  force  = true
+# [[redirects]]
+#   from = "/api/volt-calendar"
+#   to   = "https://calendar.google.com/calendar/ical/volteuropa.org_3qtptk1l0mfg76gq9nfqq1h4mg%40group.calendar.google.com/public/basic.ics"
+#   status = 200
+#   force  = true
 
 # SPA fallback: serve the app shell for client-side routes (e.g. /confirm?token=…).
 # Existing static files (e.g. /sticker/confirm.html) are served before this rule.

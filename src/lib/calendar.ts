@@ -1,15 +1,14 @@
 import ICAL from 'ical.js'
 import type { CalendarEventItem } from '../components/organisms/calendar-section'
+import volt_berlin_public_calendar_ics from '../data/volt-berlin-public-calendar.generated.ics?raw'
 
 /**
  * Live calendar of Volt Berlin events, read from the public Google Calendar
  * ICS feed at load time (see the CalendarProvider).
  *
- * The feed is served same-origin through /api/volt-calendar — a rewrite that
- * proxies Google (Netlify in production, the Vite dev server locally) so the
- * browser fetch isn't blocked by CORS.
+ * The feed is served same-origin through /api/volt-berlin-public-calendar.ics — a cached copy from the Google Calendar, so the we only download when rebuilding and it wont be blocked by CORS or slow, cause of the request.
  */
-export const CALENDAR_ENDPOINT = '/api/volt-calendar'
+// const CALENDAR_ENDPOINT = '/api/volt-berlin-public-calendar.ics'
 
 /** How far ahead recurring events are expanded, and a per-event safety cap. */
 const HORIZON_MONTHS = 4
@@ -138,12 +137,14 @@ export function parseCalendar(
 }
 
 /** Fetch the calendar feed (same-origin proxy) and parse it. */
-export async function fetchCalendar(signal?: AbortSignal): Promise<CalendarItem[]> {
-  const res = await fetch(CALENDAR_ENDPOINT, { signal })
-  if (!res.ok) {
-    throw new Error(`Calendar request failed (${res.status})`)
-  }
-  return parseCalendar(await res.text())
+export async function fetchCalendar(_signal?: AbortSignal): Promise<CalendarItem[]> {
+  return parseCalendar(volt_berlin_public_calendar_ics)
+
+  // const res = await fetch(CALENDAR_ENDPOINT, { signal })
+  // if (!res.ok) {
+  //   throw new Error(`Calendar request failed (${res.status})`)
+  // }
+  // return parseCalendar(await res.text())
 }
 
 function fmtParts(d: Date) {

@@ -84,12 +84,12 @@ export const NEWS_CMS = [
     ]
   },
   {
-    "slug": "angriff-auf-queere-community",
+    "slug": "trauer-nach-angriff-auf-queere-community",
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-07-26",
     "title": [
-      "Zum Angriff auf die queere Community beim CSD"
+      "Trauer nach Angriff auf die queere Community beim CSD Berlin"
     ],
     "body": "",
     "content_modules": [
@@ -97,7 +97,7 @@ export const NEWS_CMS = [
         "_key": "e6a8f2ae599a",
         "_type": "hero_linear",
         "heroZeilen": [
-          "Zum Angriff auf die queere Community beim CSD"
+          "Trauer nach Angriff auf die queere Community beim CSD Berlin"
         ],
         "photo": null
       },
@@ -426,7 +426,7 @@ export const NEWS_CMS = [
       {
         "_key": "9e98bc3283db",
         "_type": "html_content",
-        "html_content": "Eine Übersicht aller Direktkandidierenden finden Sie <a href=\"https://voltdeutschland.org/berlin/direktkandidierende-agh-2026\">hier.</a>",
+        "html_content": "Eine Übersicht aller Direktkandidierenden finden Sie <a href=\"https://voltdeutschland.org/berlin/direktkandidierende-agh-2026\">hier</a>.",
         "photo": null
       }
     ]
