@@ -4,20 +4,6 @@
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/fonts/Ubuntu-Light.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: italic;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/fonts/Ubuntu-LightItalic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url('/fonts/Ubuntu-Regular.ttf') format('truetype');
@@ -28,20 +14,6 @@
   font-weight: 400;
   font-display: swap;
   src: url('/fonts/Ubuntu-Italic.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Ubuntu-Medium.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Ubuntu';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Ubuntu-MediumItalic.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Ubuntu';
@@ -62,9 +34,7 @@
   --font-family: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   /* Font weights */
-  --font-weight-light: 300;
   --font-weight-regular: 400;
-  --font-weight-medium: 500;
   --font-weight-bold: 700;
 
   /* Type scale — base values from Figma. Fluid via clamp() so the narrow mobile
