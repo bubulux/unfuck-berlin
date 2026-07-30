@@ -15,12 +15,6 @@
   transform: translateY(-105%);
   z-index: 1;
 }
-.event-card__badge .highlight__box {
-  transform: skewY(-2deg);
-}
-.event-card__badge .highlight__text {
-  transform: skewY(2deg);
-}
 
 /* Wide card: date column | divider | body. */
 .event-card__layout {

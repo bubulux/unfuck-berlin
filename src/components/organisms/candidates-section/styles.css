@@ -1,30 +1,42 @@
 .candidates {
   background-color: var(--color-purple);
   color: var(--color-white);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+
+  margin-inline: auto;
+  max-width: var(--content-max-wide);
+  padding: var(--content-pad-wide);
 }
 
 .candidates__inner {
   max-width: var(--content-max);
   margin-inline: auto;
-  padding: var(--space-7) var(--content-pad);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
 }
 
 /* Mobile order: heading, then the Anna/Paul cards, then the cluster photo,
  * then the intro text, then the CTA link. */
 .candidates__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-template-areas:
     "heading"
-    "cards"
-    "cluster"
     "text"
-    "cta";
-  gap: var(--space-5);
+    "cta"
+    "cluster";
+  gap: var(--space-4);
+  align-content: start;
 }
 
 .candidates__heading {
   grid-area: heading;
+  margin-bottom: 16px;
 }
 
 .candidates__cards {
@@ -35,6 +47,8 @@
 
 .candidates__cluster {
   grid-area: cluster;
+  display: flex;
+  align-items: flex-end;
 }
 
 .candidates__text {
@@ -47,6 +61,7 @@
   align-self: start;
   font-size: var(--text-body);
   font-weight: var(--font-weight-bold);
+  margin-bottom: 16px;
 }
 
 /* Inline arrow — stays at the end of the last line regardless of wrapping. */
@@ -59,20 +74,24 @@
 /* Desktop: two columns. Left column stacks heading/text/CTA/cluster; the cards
  * span the full height of that column on the right (so they fill the height). */
 @media (min-width: 64rem) {
+  .candidates {
+    gap: var(--space-7);
+  }
+
   .candidates__inner {
+    grid-template-columns: 1fr 1fr;
     max-width: var(--content-max-wide);
-    padding-inline: var(--content-pad-wide);
   }
 
   .candidates__grid {
-    grid-template-columns: 5fr 7fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr;
     grid-template-areas:
-      "heading cards"
-      "text    cards"
-      "cta     cards"
-      "cluster cards";
-    column-gap: var(--space-8);
-    row-gap: var(--space-4);
+      "heading"
+      "text"
+      "cta"
+      "cluster";
+    gap: var(--space-4) var(--space-2);
     align-content: start;
   }
 
@@ -82,12 +101,38 @@
     align-self: stretch;
   }
 
-  .candidates__cards .spitzenduo {
-    flex: 1 1 auto;
-  }
-
   /* Push the cluster down so the left column ends near the cards. */
   .candidates__cluster {
     margin-top: var(--space-2);
   }
+}
+
+.candidates__cluster {position: relative;
+}
+.electionProgramFirstPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.electionProgramFirstPage:before {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--color-white);
+  transform: translateY(-3%) translateX(-3%) rotate(-2deg);
+  transition: all 0.2s ease;
+}
+.electionProgramFirstPage:hover:before {
+  background: var(--color-neon);
+  transform: translateY(-4%) translateX(-4%) rotate(-2deg);
+}
+.electionProgramFirstPageImg{
+  z-index: 9;
+  pointer-events: none;
 }

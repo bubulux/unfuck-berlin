@@ -23,7 +23,7 @@ export function CandidateCluster({
       {images.slice(0, 9).map((img, i) => (
         <img key={i} className="cluster__cell" src={img.image} alt={img.alt} />
       ))}
-      <span className="cluster__veil" aria-hidden="true" />
+      {/*<span className="cluster__veil" aria-hidden="true" />*/}
     </div>
   )
 }

@@ -1,6 +1,5 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: 2026-07-22T09:56:20.838Z
 
 export const KANDIDATEN_CMS = [
   {

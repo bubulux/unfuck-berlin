@@ -29,6 +29,7 @@ const OUT_MEETS = resolve(DATA_DIR, 'meets.generated.ts')
 const OUT_UNFCK = resolve(DATA_DIR, 'unfck.generated.ts')
 const OUT_SPITZENDUO = resolve(DATA_DIR, 'spitzenduo.generated.ts')
 const OUT_CLUSTER = resolve(DATA_DIR, 'kandidaten-cluster.generated.ts')
+const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -72,12 +73,21 @@ const splitLines = (s) => clean(s).split('\n').map((l) => l.trim()).filter(Boole
 // Titel mit \n zu einer Zeile zusammenfassen.
 const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
 
+const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
+  ...,
+  "slug": slug.current,
+  content_modules[]{
+    ...,
+    "photo": photo.asset->url
+  }
+}`
+
 const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]{
   content_modules[]{
     _type,
     heroZeilen, heroText, headline_theme,
     headlineZeilen,
-    html_text,
+    html_content,
     ctaLabel, ctaHref,
     "kapitel": kapitel[]{titel, tags, text}
   }
@@ -117,6 +127,28 @@ const SPITZENDUO_QUERY = `*[_type=="spitzenduo"]|order(reihenfolge asc){
   vorname, nachname, "foto": foto.asset->url
 }`
 
+
+function buildNews(rows) {
+  const articles = (rows || [])
+    .filter((a) => a.slug)
+    .map((article) => {
+      const content_modules = article.content_modules || []
+      const hero_module = content_modules.find((m) => m._type === 'hero_linear') || {}
+
+      return {
+        slug: clean(article.slug),
+        theme: clean(article.theme),
+        is_published: Boolean(article.is_published),
+        publishedAt: clean(article.published_at),
+        title: lines(hero_module.heroZeilen),
+        body: clean(hero_module.heroText),
+        content_modules,
+      }
+    })
+
+  return articles
+}
+
 function buildWahlprogramm(res) {
   const mods = res?.content_modules || []
   if (!mods.length) {
@@ -126,7 +158,7 @@ function buildWahlprogramm(res) {
   const idxTeaser = mods.findIndex((m) => m._type === 'wahlprogramm_teaser')
   const hero = mods.find((m) => m._type === 'hero_linear') || {}
   const headline = mods.find((m) => m._type === 'headline') || {}
-  const htmlText = mods.find((m) => m._type === 'html_text') || {}
+  const htmlText = mods.find((m) => m._type === 'html_content') || {}
   const teaser = mods.find((m) => m._type === 'wahlprogramm_teaser') || {}
 
   // CTA vor dem Teaser gehoert zum Intro, CTA nach dem Teaser zum Europa-Block.
@@ -156,7 +188,7 @@ function buildWahlprogramm(res) {
     europa: {
       heading: lines(headline.headlineZeilen),
       theme: clean(headline.headline_theme),
-      body: clean(htmlText.html_text),
+      body: clean(htmlText.html_content),
       ctaLabel: clean(europaCta.ctaLabel),
       ctaHref: clean(europaCta.ctaHref),
     },
@@ -285,11 +317,12 @@ function buildSpitzenduo(rows, kandidaten) {
 }
 
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
-// NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
-// Letzter Abruf: ${new Date().toISOString()}`
+// NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.`
+// // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {
-  const [wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+  const [newsRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+    client.fetch(NEWS_QUERY),
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
@@ -299,6 +332,7 @@ async function main() {
     client.fetch(SPITZENDUO_QUERY),
   ])
 
+  const news = buildNews(newsRows)
   const wahlprogramm = buildWahlprogramm(wpRes)
   const kandidaten = buildKandidaten(kandiRows)
   const wahlsystem = buildWahlsystem(wsRes)
@@ -307,6 +341,12 @@ async function main() {
   const unfck = buildUnfck(unfckRes)
   const spitzenduo = buildSpitzenduo(spitzenduoRows, kandidaten)
   const cluster = buildCluster(kandiRows)
+
+  writeFileSync(
+    OUT_NEWS,
+    `${header}\n\nexport const NEWS_CMS = ${JSON.stringify(news, null, 2)}\n`,
+    'utf8',
+  )
 
   writeFileSync(
     OUT_WAHLPROGRAMM,
@@ -350,13 +390,14 @@ async function main() {
   )
 
   console.log(
-    `Inhalte aktualisiert: Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
+    `Inhalte aktualisiert: News (${news.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
   )
 }
 
 main().catch((err) => {
   console.warn('Sanity-Abruf fehlgeschlagen:', err.message)
   if (
+    existsSync(OUT_NEWS) &&
     existsSync(OUT_WAHLPROGRAMM) &&
     existsSync(OUT_KANDIDATEN) &&
     existsSync(OUT_WAHLSYSTEM) &&

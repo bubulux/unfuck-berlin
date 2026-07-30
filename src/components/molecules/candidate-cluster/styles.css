@@ -2,18 +2,23 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: clamp(4px, 2vw, 16px);
   width: 100%;
 }
 
 /* Portrait tiles (3:4, matching the source photos) so nothing is cropped; the
  * whole 3x3 grid is therefore a vertical rectangle. */
 .cluster__cell {
+  z-index: 8;
   display: block;
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center top;
+}
+.cluster__cell:hover {
+  transform: rotate(2deg);
+  z-index: 9;
 }
 
 /* Very faint lila veil over the whole grid. */

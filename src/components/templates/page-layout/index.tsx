@@ -33,7 +33,10 @@ export function PageLayout({
   variant = 'purple',
 }: PageLayoutProps) {
   return (
-    <div className={`page-layout page-layout--${variant}`}>
+    <div
+      className={`page-layout page-layout--${variant}`}
+      style={{color: variant === 'light' ? 'var(--color-purple)' : 'var(--color-white)'}}
+    >
       <SiteHeader
         links={navLinks}
         activePath={activePath}

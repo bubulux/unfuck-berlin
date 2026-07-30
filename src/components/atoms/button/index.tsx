@@ -16,6 +16,7 @@ type ButtonOwnProps = {
   size?: ButtonSize
   fullWidth?: boolean
   /** Optional element after the label, e.g. an arrow icon. */
+  iconLeft?: ReactNode
   iconRight?: ReactNode
   children: ReactNode
 }
@@ -31,6 +32,7 @@ export function Button<C extends ElementType = 'button'>({
   variant = 'solid',
   size = 'default',
   fullWidth = false,
+  iconLeft,
   iconRight,
   className,
   children,
@@ -55,6 +57,7 @@ export function Button<C extends ElementType = 'button'>({
 
   return (
     <Component className={classes} {...extraProps} {...rest}>
+      {iconLeft ? <span className="button__icon">{iconLeft}</span> : null}
       <span className="button__label">{children}</span>
       {iconRight ? <span className="button__icon">{iconRight}</span> : null}
     </Component>

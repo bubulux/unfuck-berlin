@@ -1,33 +1,48 @@
-import type { HTMLAttributes, ReactNode } from "react";
 import { Text } from "../../atoms/text";
 import { Link } from "../../atoms/link";
 import { HighlightText } from "../../atoms/highlight-text";
 import { CandidateCluster } from "../../molecules/candidate-cluster";
 import "./styles.css";
+import SpitzenduoComposite from "../spitzenduo-composite";
 
-export interface CandidatesSectionProps extends HTMLAttributes<HTMLElement> {
-  /** Right-column content (the Anna/Paul cards). */
-  lead?: ReactNode;
-  /** Intro paragraph in the left column. */
-  text?: string;
-  ctaLabel?: string;
-  ctaTo?: string;
-  ctaHref?: string;
+function ElectionProgramCard(){
+  return <div className="candidates__grid">
+    <HighlightText
+            as="h2"
+            lines={["Wahlprogramm"]}
+            variant="titel"
+            color="white"
+            textColor="purple"
+            align="left"
+            uppercase
+            className="candidates__heading"
+          />
+
+          <Text as="p" variant="body" color="white" className="candidates__text">
+            Volt Berlin ist die neue sozial-liberale Mitte. Mit unserem Wahlprogramm legen wir einen konkreten Plan vor, wie diese Stadt wieder funktioniert: pragmatisch, evidenzbasiert und europäisch.
+          </Text>
+
+          <Link
+            href="/wahlprogramm"
+            color="white"
+            className="candidates__cta"
+          >
+            Wahlprogramm lesen
+            <span className="candidates__arrow" aria-hidden="true">
+              {" "}
+              →
+            </span>
+          </Link>
+
+          <a href="/wahlprogramm" className="candidates__cluster">
+            <img className="electionProgramFirstPageImg" src="/wahlprogramm-page-one.jpg" style={{ width: '100%', height: 'auto' }} />
+            <div className="electionProgramFirstPage" />
+          </a>
+  </div>
 }
 
-export function CandidatesSection({
-  lead,
-  text = "Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus der Praxis.",
-  ctaLabel = "Unsere Kandidierenden stellen sich vor",
-  ctaTo,
-  ctaHref,
-  className,
-  ...rest
-}: CandidatesSectionProps) {
-  const classes = ["candidates", className].filter(Boolean).join(" ");
+export function CandidatesCard() {
   return (
-    <section className={classes} {...rest}>
-      <div className="candidates__inner">
         <div className="candidates__grid">
           <HighlightText
             as="h2"
@@ -40,30 +55,39 @@ export function CandidatesSection({
             className="candidates__heading"
           />
 
-          <div className="candidates__cards">{lead}</div>
-
-          <CandidateCluster className="candidates__cluster" />
-
           <Text as="p" variant="body" color="white" className="candidates__text">
-            {text}
+            Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus der Praxis.
           </Text>
 
           <Link
-            to={ctaTo}
-            href={ctaHref}
+            href="/kandidierende"
             color="white"
             className="candidates__cta"
           >
-            {ctaLabel}
+            Unsere Kandidierenden stellen sich vor
             <span className="candidates__arrow" aria-hidden="true">
               {" "}
               →
             </span>
           </Link>
+
+          <div className="candidates__cluster">
+            <CandidateCluster  />
+          </div>
         </div>
+  );
+}
+
+export function CandidatesAndElectionProgamSection() {
+  return (
+    <section className="candidates">
+      <div className="candidates__inner">
+        <ElectionProgramCard />
+        <CandidatesCard />
       </div>
+      <SpitzenduoComposite className="candidates__inner" />
     </section>
   );
 }
 
-export default CandidatesSection;
+export default CandidatesAndElectionProgamSection;

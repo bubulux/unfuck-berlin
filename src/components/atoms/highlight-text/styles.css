@@ -7,7 +7,8 @@
 /* Layout direction */
 .highlight--column {
   flex-direction: column;
-  gap: 0.1em;
+  /* gap: 0.1em; */
+  gap: 0.15em;
 }
 
 .highlight--row {
@@ -15,6 +16,11 @@
   flex-wrap: wrap;
   gap: 0.45em;
   align-items: center;
+}
+
+.highlight__line {
+  width: 100%;
+  transform: skewY(-2deg);
 }
 
 /* Alignment (column: cross-axis; row: main-axis) */
@@ -71,9 +77,9 @@
   background-color: var(--hl-bg);
 }
 
-.highlight__box {
+/* .highlight__box {
   transform: skewY(-2deg);
-}
+} */
 
 .highlight__text {
   transform: skewY(2deg);

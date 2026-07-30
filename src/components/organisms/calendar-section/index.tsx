@@ -1,10 +1,11 @@
 import type { HTMLAttributes } from 'react'
 import type { ColorToken } from '../../atoms/text'
 import { Text } from '../../atoms/text'
-import { Link } from '../../atoms/link'
 import { Icon } from '../../atoms/icon'
 import { EventCard } from '../../molecules/event-card'
 import './styles.css'
+import HighlightText from '../../atoms/highlight-text'
+import Button from '../../atoms/button'
 
 export interface CalendarEventItem {
   id: string
@@ -54,9 +55,35 @@ export function CalendarSection({
   return (
     <section className={classes} {...rest}>
       <div className="calendar__inner">
-        <Text as="h2" variant="titel" color="purple" align="center">
-          {heading}
-        </Text>
+        <a
+          href={viewAllTo}
+          style={{
+            marginBottom: '32px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
+            flexWrap: 'wrap',
+            width: '100%',
+          }}
+        >
+            <HighlightText
+              as="h2"
+              lines={[heading]}
+              variant="titel"
+              color="purple"
+              textColor="white"
+              align="left"
+            />
+
+            <Button
+            className="moreEventsButtonDesktop"
+              color="neon"
+              variant="solid"
+              size="default"
+              iconRight={<Icon name="arrow-right" />}>
+              {viewAllLabel}
+            </Button>
+        </a>
 
         {status === 'loading' ? (
           <Text as="p" variant="body" color="purple" align="center">
@@ -86,15 +113,15 @@ export function CalendarSection({
           </Text>
         )}
 
-        <Link
-          to={viewAllTo}
-          href={viewAllHref}
-          color="purple"
-          iconRight={<Icon name="arrow-right" />}
-          className="calendar__view-all"
-        >
-          {viewAllLabel}
-        </Link>
+
+            <Button
+            className="moreEventsButtonMobile"
+              color="neon"
+              variant="solid"
+              size="default"
+              iconRight={<Icon name="arrow-right" />}>
+              {viewAllLabel}
+            </Button>
       </div>
     </section>
   )
