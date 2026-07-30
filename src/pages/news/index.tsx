@@ -130,7 +130,7 @@ export function NewsPage() {
 
       <div className="news__wrapper">
         <section className="news__text_width" style={{ marginBlockEnd: '32px' }}>
-          <Link to="/news/">
+          <Link to="/news">
             <Button
               size="cta"
               variant="solid"
