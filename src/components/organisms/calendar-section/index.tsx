@@ -65,6 +65,7 @@ export function CalendarSection({
             flexWrap: 'wrap',
             width: '100%',
           }}
+          {...{'data-umami-event': 'calendar-cta-click'}}
         >
             <HighlightText
               as="h2"
@@ -114,14 +115,16 @@ export function CalendarSection({
         )}
 
 
-            <Button
-            className="moreEventsButtonMobile"
-              color="neon"
-              variant="solid"
-              size="default"
-              iconRight={<Icon name="arrow-right" />}>
-              {viewAllLabel}
-            </Button>
+        <Button
+          className="moreEventsButtonMobile"
+          color="neon"
+          variant="solid"
+          size="default"
+          iconRight={<Icon name="arrow-right" />}
+          {...{'data-umami-event': 'calendar-mobile-cta-click'}}
+        >
+          {viewAllLabel}
+        </Button>
       </div>
     </section>
   )

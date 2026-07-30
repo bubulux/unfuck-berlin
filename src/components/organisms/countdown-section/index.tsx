@@ -51,6 +51,7 @@ export function CountdownSection({
           color="white"
           iconRight={<Icon name="arrow-right" />}
           className="countdown__cta"
+          {...{'data-umami-event': 'countdown-cta-click'}}
         >
           {ctaLabel}
         </Link>

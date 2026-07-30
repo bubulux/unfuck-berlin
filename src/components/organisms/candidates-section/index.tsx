@@ -26,6 +26,7 @@ function ElectionProgramCard(){
             href="/wahlprogramm"
             color="white"
             className="candidates__cta"
+            {...{'data-umami-event': 'wahlprogram-teaser-cta-click'}}
           >
             Wahlprogramm lesen
             <span className="candidates__arrow" aria-hidden="true">
@@ -34,7 +35,7 @@ function ElectionProgramCard(){
             </span>
           </Link>
 
-          <a href="/wahlprogramm" className="candidates__cluster">
+          <a href="/wahlprogramm" className="candidates__cluster" {...{'data-umami-event': 'wahlprogram-teaser-image-click'}}>
             <img className="electionProgramFirstPageImg" src="/wahlprogramm-page-one.jpg" style={{ width: '100%', height: 'auto' }} />
             <div className="electionProgramFirstPage" />
           </a>
@@ -63,6 +64,7 @@ export function CandidatesCard() {
             href="/kandidierende"
             color="white"
             className="candidates__cta"
+            {...{'data-umami-event': 'candidate-teaser-cta-click'}}
           >
             Unsere Kandidierenden stellen sich vor
             <span className="candidates__arrow" aria-hidden="true">

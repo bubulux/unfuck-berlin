@@ -57,15 +57,21 @@ export function HeroSection({
 
           <div className="flex">
           {ctaHref ? (
-            <Button as="a" href={ctaHref} color="neon" className="hero__cta">
+            <Button as="a" href={ctaHref} color="neon" className="hero__cta"
+              {...{'data-umami-event': 'hero-cta-click'}}
+            >
               {ctaLabel}
             </Button>
           ) : ctaTo ? (
-            <Button as={RouterLink} to={ctaTo} color="neon" className="hero__cta">
+            <Button as={RouterLink} to={ctaTo} color="neon" className="hero__cta"
+              {...{'data-umami-event': 'hero-cta-click'}}
+            >
               {ctaLabel}
             </Button>
           ) : (
-            <Button color="neon" className="hero__cta">
+            <Button color="neon" className="hero__cta"
+              {...{'data-umami-event': 'hero-cta-click'}}
+            >
               {ctaLabel}
             </Button>
           )}
