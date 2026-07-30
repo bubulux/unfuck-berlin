@@ -28,10 +28,25 @@
   flex: 1 1 auto;
   min-height: 20rem;
   min-width: 15rem;
-  overflow: hidden;
   text-decoration: none;
   color: var(--color-white);
   background-color: var(--card-bg, var(--color-purple));
+}
+.spitzenduo-card:before {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--color-white);
+  transform: scale(1) translateY(-5%) translateX(-2%) rotate(-2deg);
+  transition: all 0.2s ease;
+}
+.spitzenduo-card:hover:before {
+  background: var(--color-neon);
+  transform: scale(1) translateY(-7%) translateX(-3%) rotate(-2deg);
 }
 
 /* Full photo, anchored to the side it "belongs" to; the matching background

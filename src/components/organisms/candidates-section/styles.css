@@ -36,6 +36,7 @@
 
 .candidates__heading {
   grid-area: heading;
+  margin-bottom: 16px;
 }
 
 .candidates__cards {
@@ -60,6 +61,7 @@
   align-self: start;
   font-size: var(--text-body);
   font-weight: var(--font-weight-bold);
+  margin-bottom: 16px;
 }
 
 /* Inline arrow — stays at the end of the last line regardless of wrapping. */
@@ -103,4 +105,34 @@
   .candidates__cluster {
     margin-top: var(--space-2);
   }
+}
+
+.candidates__cluster {position: relative;
+}
+.electionProgramFirstPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.electionProgramFirstPage:before {
+  content: '';
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--color-white);
+  transform: translateY(-3%) translateX(-3%) rotate(-2deg);
+  transition: all 0.2s ease;
+}
+.electionProgramFirstPage:hover:before {
+  background: var(--color-neon);
+  transform: translateY(-4%) translateX(-4%) rotate(-2deg);
+}
+.electionProgramFirstPageImg{
+  z-index: 9;
+  pointer-events: none;
 }

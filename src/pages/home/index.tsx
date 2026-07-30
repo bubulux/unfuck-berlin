@@ -3,8 +3,6 @@ import { PageLayout } from '../../components/templates/page-layout'
 import { HeroSection } from '../../components/organisms/hero-section'
 import { CountdownSection } from '../../components/organisms/countdown-section'
 import { CandidatesAndElectionProgamSection } from '../../components/organisms/candidates-section'
-import { UnfuckSection } from '../../components/organisms/unfuck-section'
-import { SpitzenduoComposite } from '../../components/organisms/spitzenduo-composite'
 import { VIDEOS } from '../../data/videos'
 import { CalendarSection } from '../../components/organisms/calendar-section'
 import { useCalendar } from '../../context/calendar-context'
@@ -34,16 +32,6 @@ export function Home() {
         events={calendar.items.slice(0, 3)}
         status={calendar.status}
         viewAllTo="/termine"
-      />
-      <UnfuckSection
-        logoSrc="/logos/unfckBerlin.svg"
-        logoAlt="unf*ck berlin"
-        videoSrc={VIDEOS.reveal.src}
-        videoPoster={VIDEOS.reveal.poster}
-        videoTitle="15. Juli 2026"
-        text=""
-        ctaLabel="Worum geht es?"
-        ctaTo="/news/unfuck-berlin-reveal"
       />
     </PageLayout>
   )

@@ -9,7 +9,7 @@ function ElectionProgramCard(){
   return <div className="candidates__grid">
     <HighlightText
             as="h2"
-            lines={["Unser", "Wahlprogramm"]}
+            lines={["Wahlprogramm"]}
             variant="titel"
             color="white"
             textColor="purple"
@@ -34,9 +34,10 @@ function ElectionProgramCard(){
             </span>
           </Link>
 
-          <div className="candidates__cluster">
-            <img src="/wahlprogram_first_page.png" style={{ width: '100%', height: 'auto' }} />
-          </div>
+          <a href="/wahlprogramm" className="candidates__cluster">
+            <img className="electionProgramFirstPageImg" src="/wahlprogramm-page-one.jpg" style={{ width: '100%', height: 'auto' }} />
+            <div className="electionProgramFirstPage" />
+          </a>
   </div>
 }
 
@@ -81,8 +82,8 @@ export function CandidatesAndElectionProgamSection() {
   return (
     <section className="candidates">
       <div className="candidates__inner">
-        <CandidatesCard />
         <ElectionProgramCard />
+        <CandidatesCard />
       </div>
       <SpitzenduoComposite className="candidates__inner" />
     </section>
