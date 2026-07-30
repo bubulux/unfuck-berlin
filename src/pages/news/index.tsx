@@ -146,6 +146,8 @@ export function NewsPage() {
         article.content_modules.map((c, index) => {
           const key = `${index}-${c._type}`
 
+          const c_as_any = (c as any)
+
           if (c._type === 'hero_linear') {
             const publishedAt_date = new Date(article.publishedAt);
 
@@ -206,8 +208,8 @@ export function NewsPage() {
           } else if (c._type === 'one_cta') {
             return (
               <section key={key} className="news__text_width">
-                <Button as="a" href={c.ctaHref} color="neon" style={{ margin: '0', width: 'auto' }}>
-                  {c.ctaLabel}
+                <Button as="a" href={c_as_any.ctaHref} color="neon" style={{ margin: '0', width: 'auto' }}>
+                  {c_as_any.ctaLabel}
                 </Button>
               </section>
             )
@@ -218,7 +220,7 @@ export function NewsPage() {
             return <section key={key} style={{ marginBlock: 'var(--gap-big)' }}>
               <img
                 src={c.photo}
-                alt={c.alt || ''}
+                alt={c_as_any.alt || ''}
                 style={{
                   width: '100%',
                   height: 'auto',
