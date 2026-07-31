@@ -115,16 +115,20 @@ export function CalendarSection({
         )}
 
 
-        <Button
-          className="moreEventsButtonMobile"
-          color="neon"
-          variant="solid"
-          size="default"
-          iconRight={<Icon name="arrow-right" />}
+        <a
+          href={viewAllTo}
           {...{'data-umami-event': 'calendar-mobile-cta-click'}}
+          className="moreEventsButtonMobile"
         >
-          {viewAllLabel}
-        </Button>
+          <Button
+            color="neon"
+            variant="solid"
+            size="default"
+            iconRight={<Icon name="arrow-right" />}
+          >
+            {viewAllLabel}
+          </Button>
+        </a>
       </div>
     </section>
   )
