@@ -246,12 +246,11 @@ export const PAGES_CMS = [
     "title": [
       "Aktuelle Links"
     ],
-    "body": "Hier findest du eine wichtige oder aktuelle Links.",
+    "body": "",
     "content_modules": [
       {
         "_key": "a089a5b43ad6",
         "_type": "hero_linear",
-        "heroText": "Hier findest du eine wichtige oder aktuelle Links.",
         "heroZeilen": [
           "Aktuelle Links"
         ],
@@ -272,9 +271,11 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "b7099965c00f",
-        "_type": "html_content",
-        "html_content": "<hr />",
+        "_key": "a0414d359c06",
+        "_type": "headline",
+        "headlineZeilen": [
+          "Links zu Social-Media-Beiträgen"
+        ],
         "photo": null
       },
       {
@@ -285,13 +286,6 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "29e45a793223",
-        "_type": "one_cta",
-        "ctaHref": "https://volt-tools.github.io/berlin-uu/",
-        "ctaLabel": "Wahlkreistool 🏙️",
-        "photo": null
-      },
-      {
         "_key": "50ba1b48a657",
         "_type": "one_cta",
         "ctaHref": "https://forms.gle/Hu7kQdxW1HSs7sQA8",
@@ -299,23 +293,11 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "cf1c9af481b5",
-        "_type": "one_cta",
-        "ctaHref": "https://luma.com/dm12wmos?utm_source=volt",
-        "ctaLabel": "Online discussion w/ Internationals 🎟️",
-        "photo": null
-      },
-      {
-        "_key": "355414ae0a94",
-        "_type": "one_cta",
-        "ctaHref": "https://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/umwelt-und-naturschutzamt/naturschutz/artikel.1612633.php",
-        "ctaLabel": "Pflanzenliste für Biodiversität und Klimaresilienz 🌱",
-        "photo": null
-      },
-      {
-        "_key": "4780b451d92e",
-        "_type": "html_content",
-        "html_content": "<hr />",
+        "_key": "94377d36fc5a",
+        "_type": "headline",
+        "headlineZeilen": [
+          "Mehr über Volt Berlin"
+        ],
         "photo": null
       },
       {
@@ -340,9 +322,11 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "74d618300d53",
-        "_type": "html_content",
-        "html_content": "<hr />",
+        "_key": "c02e38c42b78",
+        "_type": "headline",
+        "headlineZeilen": [
+          "Folg uns auf…"
+        ],
         "photo": null
       },
       {
