@@ -30,6 +30,7 @@ const OUT_UNFCK = resolve(DATA_DIR, 'unfck.generated.ts')
 const OUT_SPITZENDUO = resolve(DATA_DIR, 'spitzenduo.generated.ts')
 const OUT_CLUSTER = resolve(DATA_DIR, 'kandidaten-cluster.generated.ts')
 const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
+const OUT_PAGES = resolve(DATA_DIR, 'pages.generated.ts')
 
 const client = createClient({
   projectId: 'xzcgo5ky',
@@ -74,6 +75,15 @@ const splitLines = (s) => clean(s).split('\n').map((l) => l.trim()).filter(Boole
 const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
 
 const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
+  ...,
+  "slug": slug.current,
+  content_modules[]{
+    ...,
+    "photo": photo.asset->url
+  }
+}`
+
+const PAGES_QUERY = `*[_type=="seite"]|order(slug desc){
   ...,
   "slug": slug.current,
   content_modules[]{
@@ -140,6 +150,27 @@ function buildNews(rows) {
         theme: clean(article.theme),
         is_published: Boolean(article.is_published),
         publishedAt: clean(article.published_at),
+        title: lines(hero_module.heroZeilen),
+        body: clean(hero_module.heroText),
+        content_modules,
+      }
+    })
+
+  return articles
+}
+
+function buildPages(rows) {
+  const articles = (rows || [])
+    .filter((a) => a.slug)
+    .map((article) => {
+      const content_modules = article.content_modules || []
+      const hero_module = content_modules.find((m) => m._type === 'hero_linear') || {}
+
+      return {
+        slug: clean(article.slug),
+        theme: clean(article.theme),
+        // is_published: Boolean(article.is_published),
+        // publishedAt: clean(article.published_at),
         title: lines(hero_module.heroZeilen),
         body: clean(hero_module.heroText),
         content_modules,
@@ -321,8 +352,9 @@ const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {
-  const [newsRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+  const [newsRows, pagesRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
     client.fetch(NEWS_QUERY),
+    client.fetch(PAGES_QUERY),
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
@@ -333,6 +365,7 @@ async function main() {
   ])
 
   const news = buildNews(newsRows)
+  const pages = buildPages(pagesRows)
   const wahlprogramm = buildWahlprogramm(wpRes)
   const kandidaten = buildKandidaten(kandiRows)
   const wahlsystem = buildWahlsystem(wsRes)
@@ -345,6 +378,12 @@ async function main() {
   writeFileSync(
     OUT_NEWS,
     `${header}\n\nexport const NEWS_CMS = ${JSON.stringify(news, null, 2)}\n`,
+    'utf8',
+  )
+
+  writeFileSync(
+    OUT_PAGES,
+    `${header}\n\nexport const PAGES_CMS = ${JSON.stringify(pages, null, 2)}\n`,
     'utf8',
   )
 
@@ -390,7 +429,7 @@ async function main() {
   )
 
   console.log(
-    `Inhalte aktualisiert: News (${news.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
+    `Inhalte aktualisiert: News (${news.length}), Pages (${pages.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
   )
 }
 
@@ -398,6 +437,7 @@ main().catch((err) => {
   console.warn('Sanity-Abruf fehlgeschlagen:', err.message)
   if (
     existsSync(OUT_NEWS) &&
+    existsSync(OUT_PAGES) &&
     existsSync(OUT_WAHLPROGRAMM) &&
     existsSync(OUT_KANDIDATEN) &&
     existsSync(OUT_WAHLSYSTEM) &&
