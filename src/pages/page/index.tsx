@@ -1,9 +1,9 @@
-import { Link, Navigate, useLocation } from "react-router";
+import { Navigate, useLocation } from "react-router";
 import { PageLayout } from "../../components/templates/page-layout";
 import { PAGES_CMS } from "../../data/pages.generated";
 import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
-import { Icon } from "../../components/atoms/icon";
+// import { Icon } from "../../components/atoms/icon";
 // import ReactMarkdown from "react-markdown";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
@@ -202,7 +202,7 @@ export function PagePage() {
               </section>
             )
           } else if (c._type === 'html_content') {
-            const html_content: string = c.html_content || ''
+            const html_content: string = c_as_any.html_content || ''
             return <section key={key} className="pages__text_width" style={{
               whiteSpace: 'pre-wrap',
               // width: 'var(--content-max)',
