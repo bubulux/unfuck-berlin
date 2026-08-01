@@ -169,7 +169,7 @@ function buildPages(rows) {
       return {
         slug: clean(article.slug),
         theme: clean(article.theme),
-        // is_published: Boolean(article.is_published),
+        is_published: Boolean(article.is_published),
         // publishedAt: clean(article.published_at),
         title: lines(hero_module.heroZeilen),
         body: clean(hero_module.heroText),

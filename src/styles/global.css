@@ -16,3 +16,12 @@ body {
   font-weight: var(--font-weight-regular);
   font-size: var(--text-body);
 }
+
+hr {
+  color: inherit;
+  margin: 16px 0;
+  height: 4px;
+  background: currentColor;
+  border: 0;
+  transform: skewY(-2deg);
+}

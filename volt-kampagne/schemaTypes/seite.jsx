@@ -40,6 +40,13 @@ export default defineType({
     }),
 
     defineField({
+      title: 'Is Published',
+      name: 'is_published',
+      type: 'boolean',
+      layout: 'switch',
+    }),
+
+    defineField({
       title: 'Seiten Farbschema',
       name: 'theme',
       type: 'string',

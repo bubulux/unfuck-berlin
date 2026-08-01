@@ -14,6 +14,7 @@ import { Termine } from './pages/termine'
 import { Kandidaten } from './pages/kandidaten'
 import { KandidatDetail } from './pages/kandidat-detail'
 import { NewsPage } from './pages/news'
+import { PagePage } from './pages/page'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -37,7 +38,9 @@ createRoot(document.getElementById('root')!).render(
           {/* Alias: the server sends confirmation links as /confirm.html?token=… */}
           <Route path="/confirm.html" element={<Confirm />} />
           {/* Unknown routes fall back to the homepage. */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+
+          <Route path="/*" element={<PagePage />} />
+          {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
         </Routes>
       </CalendarProvider>
     </BrowserRouter>
