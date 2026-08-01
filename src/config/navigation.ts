@@ -43,4 +43,8 @@ export const LEGAL_LINKS: FooterLink[] = [
     label: "Transparenz",
     href: "https://voltdeutschland.org/berlin/transparenz",
   },
+  {
+    label: "Made with love…",
+    href: "https://unfuck.berlin/made_with_love",
+  },
 ];

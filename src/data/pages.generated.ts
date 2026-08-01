@@ -217,6 +217,32 @@ export const PAGES_CMS = [
     ]
   },
   {
+    "slug": "made_with_love",
+    "theme": "purple",
+    "is_published": true,
+    "title": [
+      "Made with love…"
+    ],
+    "body": "Unsere Kampagnen Webseite \"unfuck.berlin\" wurde durch Mitwirken vieler Menschen ermöglicht. Hier nennen wir einige um unseren Dank auszurücken. Im Hintergrund haben noch mehr Ehrenamtliche und Mitarbeiter geholfen.",
+    "content_modules": [
+      {
+        "_key": "c65d9fde03c1",
+        "_type": "hero_linear",
+        "heroText": "Unsere Kampagnen Webseite \"unfuck.berlin\" wurde durch Mitwirken vieler Menschen ermöglicht. Hier nennen wir einige um unseren Dank auszurücken. Im Hintergrund haben noch mehr Ehrenamtliche und Mitarbeiter geholfen.",
+        "heroZeilen": [
+          "Made with love…"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "9e50f3bf3eb8",
+        "_type": "html_content",
+        "html_content": "Entwicklung:\nBalthasar Beyer\nSamuil Berenzon\n\nDesign:\nFaranak Schneider\n\nFotografie:\n\nUnvollständige Liste weitere Mitwirkender:\n",
+        "photo": null
+      }
+    ]
+  },
+  {
     "slug": "kalender",
     "theme": "",
     "is_published": false,
@@ -279,6 +305,13 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "a4c243c28d31",
+        "_type": "one_cta",
+        "ctaHref": "https://docs.google.com/forms/d/e/1FAIpQLSe0KIETh9W7UODbBxtupBTD0sfl3mW4jLpj7e6JE5XYjXz0HQ/viewform",
+        "ctaLabel": "Mitmachen beim Plakatieren",
+        "photo": null
+      },
+      {
         "_key": "8bbb45fb2e9b",
         "_type": "one_cta",
         "ctaHref": "https://bvv-treptow-koepenick.berlin.de/pi-r/vo040_r.asp",
@@ -304,7 +337,7 @@ export const PAGES_CMS = [
         "_key": "a1d2d5cae3b1",
         "_type": "one_cta",
         "ctaHref": "https://portal.voltdeutschland.org/de/join",
-        "ctaLabel": "Mitmachen / Mitglied werden",
+        "ctaLabel": "Mitmachen / Mitglied werden!",
         "photo": null
       },
       {
