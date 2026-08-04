@@ -17,14 +17,13 @@ export default defineType({
 
   preview: {
     select: {
-      slug: 'slug',
       name: 'name',
     },
     prepare(selection) {
-      const { slug, name } = selection
+      const { name } = selection
       return {
-        title: name || '',
-        subtitle: `/person/${slug?.current || '???'}`,
+        title: name || '???',
+        subtitle: '',
       }
     },
   },
@@ -34,14 +33,6 @@ export default defineType({
       name: 'name',
       type: 'string',
       validation: Rule => Rule.required(),
-    }),
-
-    defineField({
-      name: 'slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-      },
     }),
 
     defineField({

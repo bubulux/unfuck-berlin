@@ -30,7 +30,7 @@ export default defineType({
       const { slug, name, foto } = selection
       return {
         title: name || '',
-        subtitle: `/person/${slug?.current || '???'}`,
+        subtitle: `/kandidierende/${slug?.current || '???'}`,
         media: foto,
       }
     },
