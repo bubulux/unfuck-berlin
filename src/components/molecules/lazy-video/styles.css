@@ -35,12 +35,19 @@
   opacity: 0;
 }
 
-/* The only control: a play/pause toggle, top-right, clear of the overlaid logo. */
-.lazy-video__toggle {
+.lazy-video__buttons {
   position: absolute;
   top: var(--space-3);
   right: var(--space-3);
   z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+/* The only control: a play/pause toggle, top-right, clear of the overlaid logo. */
+.lazy-video__toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;

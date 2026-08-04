@@ -23,14 +23,15 @@ export default defineType({
   },
   components: {
     preview: (props) => {
-      const { title, subtitle, ...restProps } = props
-      return (
-        <Stack paddingX={4} paddingY={2} gap={4}>
-          <Heading as="h1" size={4}>{title}</Heading>
-          <Text muted size={1}>{subtitle}</Text>
-          {props.renderDefault(restProps)}
-        </Stack>
-      )
+      return props.renderDefault(props)
+      // const { title, subtitle, ...restProps } = props
+      // return (
+      //   <Stack paddingX={4} paddingY={2} gap={4}>
+      //     <Heading as="h1" size={4}>{title}</Heading>
+      //     <Text muted size={1}>{subtitle}</Text>
+      //     {props.renderDefault(restProps)}
+      //   </Stack>
+      // )
     },
   },
 
@@ -46,6 +47,22 @@ export default defineType({
       type: 'text',
     }),
 
+    defineField({
+      name: 'video_file',
+      title: 'Video',
+      type: 'file',
+      options: {
+        accept: 'video/*'
+      }
+    }),
+    defineField({
+      name: 'video_coverphoto',
+      title: 'Video Coverphoto',
+      type: 'file',
+      options: {
+        accept: 'image/*'
+      }
+    }),
     defineField({
       name: 'youtube_link',
       type: 'url',
