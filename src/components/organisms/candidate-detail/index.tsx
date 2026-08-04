@@ -3,6 +3,9 @@ import { Text } from '../../atoms/text'
 import { RichText } from '../../molecules/rich-text'
 import { SocialRow, type SocialLink } from '../../molecules/social-row'
 import './styles.css'
+import { Link } from 'react-router'
+import Button from '../../atoms/button'
+import Icon from '../../atoms/icon'
 
 export interface CandidateBlock {
   heading: string
@@ -49,6 +52,19 @@ export function CandidateDetail({
   return (
     <section className={classes} {...rest}>
       <div className="candidate__inner">
+        <section className="candidate__content" style={{ marginBlockEnd: '32px' }}>
+          <Link to="/kandidierende">
+            <Button
+              size="cta"
+              variant="solid"
+              color={variant === 'purple' ? 'purple' : 'white'}
+              iconLeft={<Icon size="1.5em" name="arrow-left" />}
+            >
+              Zur Kandidierenden Übersicht
+            </Button>
+          </Link>
+        </section>
+
         <div className="candidate__media">
           <Text as="h1" variant="titel" color={nameColor} uppercase className="candidate__name">
             {name}
@@ -74,17 +90,6 @@ export function CandidateDetail({
             </div>
           ) : null}
 
-          <div className="candidate__blocks">
-            {blocks.map((block) => (
-              <div key={block.heading} className="candidate__block">
-                <Text as="h2" variant="subtitel" color={headingColor}>
-                  {block.heading}
-                </Text>
-                <RichText text={block.body} color={textColor} />
-              </div>
-            ))}
-          </div>
-
           {socials.length > 0 ? (
             <div className="candidate__follow">
               {followLabel ? (
@@ -95,6 +100,17 @@ export function CandidateDetail({
               <SocialRow links={socials} />
             </div>
           ) : null}
+
+          <div className="candidate__blocks">
+            {blocks.map((block) => (
+              <div key={block.heading} className="candidate__block">
+                <Text as="h2" variant="subtitel" color={headingColor}>
+                  {block.heading}
+                </Text>
+                <RichText text={block.body} color={textColor} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -25,12 +25,6 @@ export const KANDIDATEN_CMS = [
         "_type": "one_cta",
         "ctaHref": "https://www.linkedin.com/in/auerbachanna/",
         "ctaLabel": "linkedin"
-      },
-      {
-        "_key": "5e3d70bc9869",
-        "_type": "one_cta",
-        "ctaHref": "http://localhost:5173/kandidierende/anna-auerbach",
-        "ctaLabel": "testing"
       }
     ]
   },
