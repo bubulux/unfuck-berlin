@@ -16,6 +16,7 @@ import spitzenduo_teaser from './obj/spitzenduo_teaser'
 
 import seite from './seite'
 import article from './article'
+import region from './region'
 
 // import bezirkThema from './bezirkThema'
 import kandidatAgh from './kandidatAgh'
@@ -52,6 +53,7 @@ export const schemaTypes = [
 
   seite,
   article,
+  region,
 
   // bezirkThema,
   kandidatAgh,
