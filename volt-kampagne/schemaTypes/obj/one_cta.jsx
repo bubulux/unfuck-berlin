@@ -41,10 +41,12 @@ export default defineType({
 
   fields: [
     defineField({
+      title: 'Beschriftung',
       name: 'ctaLabel',
       type: 'string',
     }),
     defineField({
+      title: 'Url',
       name: 'ctaHref',
       type: 'string',
     }),

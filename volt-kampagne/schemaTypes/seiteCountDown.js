@@ -1,9 +1,12 @@
 import { defineField, defineType } from 'sanity'
+import { DotIcon } from '@sanity/icons/Dot'
 
 export default defineType({
   name: 'seiteCountDown',
   title: 'Countdown',
   type: 'document',
+  icon: DotIcon,
+
   fields: [
     defineField({ name: 'heroZeilen', type: 'array', of: [{ type: 'string' }] }),
 

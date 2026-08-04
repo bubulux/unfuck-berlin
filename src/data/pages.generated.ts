@@ -223,12 +223,12 @@ export const PAGES_CMS = [
     "title": [
       "Made with love…"
     ],
-    "body": "Unsere Kampagnen Webseite \"unfuck.berlin\" wurde durch Mitwirken vieler Menschen ermöglicht. Hier nennen wir einige um unseren Dank auszurücken. Im Hintergrund haben noch mehr Ehrenamtliche und Mitarbeiter geholfen.",
+    "body": "Unsere Kampagnen Webseite \"unfuck.berlin\" wurde durch Mitwirken vieler Menschen ermöglicht. Hier nennen wir einige um unseren Dank auszurücken.",
     "content_modules": [
       {
         "_key": "c65d9fde03c1",
         "_type": "hero_linear",
-        "heroText": "Unsere Kampagnen Webseite \"unfuck.berlin\" wurde durch Mitwirken vieler Menschen ermöglicht. Hier nennen wir einige um unseren Dank auszurücken. Im Hintergrund haben noch mehr Ehrenamtliche und Mitarbeiter geholfen.",
+        "heroText": "Unsere Kampagnen Webseite \"unfuck.berlin\" wurde durch Mitwirken vieler Menschen ermöglicht. Hier nennen wir einige um unseren Dank auszurücken.",
         "heroZeilen": [
           "Made with love…"
         ],
@@ -237,7 +237,7 @@ export const PAGES_CMS = [
       {
         "_key": "9e50f3bf3eb8",
         "_type": "html_content",
-        "html_content": "Entwicklung:\nBalthasar Beyer\nSamuil Berenzon\n\nDesign:\nFaranak Schneider\n\nFotografie:\n\nUnvollständige Liste weitere Mitwirkender:\n",
+        "html_content": "Entwicklung:\nBalthasar Beyer\nSamuil Berenzon\n\nWeb-Design:\nFaranak Schneider\n\nFotografie:\nKatja Henschel\nEvelin Frerk\nMaximillian Große-Wortmann\nJoshua Heitzler\n\nIm Hintergrund haben noch mehr Ehrenamtliche und Mitarbeiter geholfen.",
         "photo": null
       }
     ]

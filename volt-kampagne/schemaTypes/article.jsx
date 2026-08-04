@@ -1,11 +1,11 @@
 import { defineField, defineType } from 'sanity'
-import { DocumentIcon } from '@sanity/icons/Document'
+import {EnvelopeIcon} from '@sanity/icons/Envelope'
 
 export default defineType({
   name: 'article',
   title: 'Article',
   type: 'document',
-  icon: DocumentIcon,
+  icon: EnvelopeIcon,
 
   preview: {
     select: {

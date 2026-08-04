@@ -1,11 +1,11 @@
 import { defineField, defineType } from 'sanity'
-import {DocumentTextIcon} from '@sanity/icons/DocumentText'
+import {EarthAmericasIcon} from '@sanity/icons/EarthAmericas'
 
 export default defineType({
-  name: 'seite',
-  title: 'Seite',
+  name: 'region',
+  title: 'Region / Bezirk',
   type: 'document',
-  icon: DocumentTextIcon,
+  icon: EarthAmericasIcon,
 
   preview: {
     select: {
@@ -21,13 +21,13 @@ export default defineType({
         const { heroZeilen } = hero_video
         return {
           title: heroZeilen.join(' '),
-          subtitle: `/${slug.current || ''}`,
+          subtitle: `/bezirk/${slug.current || ''}`,
         }
       }
 
       return {
         title: '',
-        subtitle: `/${slug.current || ''}`,
+        subtitle: `/bezirk/${slug.current || ''}`,
       }
     },
   },
@@ -47,17 +47,22 @@ export default defineType({
     }),
 
     defineField({
-      title: 'Seiten Farbschema',
-      name: 'theme',
-      type: 'string',
-      options: {
-        list: [
-          { title: '🟣 Purple Background', value: 'purple' },
-          { title: '⚪️ White Background', value: 'white' },
-        ],
-        layout: 'dropdown',
+      title: 'Date Published',
+      name: 'published_at',
+      type: 'date',
+    }),
+
+    defineField({
+      title: 'Kandidierende',
+      name: 'candidates',
+      insertMenu: {
+        filter: true,
+        showIcons: true,
       },
-      layout: 'dropdown',
+      type: 'array',
+      of: [
+        { type: 'kandidatBvv' },
+      ],
     }),
 
     defineField({

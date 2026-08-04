@@ -25,14 +25,14 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
 
 /** Social platforms shown in the footer / social rows. */
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "facebook", href: "https://www.facebook.com/BerlinVolt" },
-  { platform: "instagram", href: "https://www.instagram.com/volt_berlin/" },
+  { ctaLabel: "facebook", ctaHref: "https://www.facebook.com/BerlinVolt" },
+  { ctaLabel: "instagram", ctaHref: "https://www.instagram.com/volt_berlin/" },
   {
-    platform: "linkedin",
-    href: "https://www.linkedin.com/company/volt-berlin/",
+    ctaLabel: "linkedin",
+    ctaHref: "https://www.linkedin.com/company/volt-berlin/",
   },
-  { platform: "mastodon", href: "https://berlin.social/@VoltBerlin" },
-  { platform: "youtube", href: "https://www.youtube.com/@volt_berlin/" },
+  { ctaLabel: "mastodon", ctaHref: "https://berlin.social/@VoltBerlin" },
+  { ctaLabel: "youtube", ctaHref: "https://www.youtube.com/@volt_berlin/" },
 ];
 
 /** Footer legal links. */

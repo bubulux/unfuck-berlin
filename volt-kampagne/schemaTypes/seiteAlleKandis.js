@@ -1,9 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { DotIcon } from '@sanity/icons/Dot'
 
 export default defineType({
   name: 'seiteAlleKandis',
   title: 'Alle Kandidierenden',
   type: 'document',
+  icon: DotIcon,
 
   preview: {
     select: {

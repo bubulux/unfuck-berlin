@@ -104,8 +104,9 @@ const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]
 }`
 
 const KANDIDATEN_QUERY = `*[_type=="kandidatAgh"]|order(listenplatz asc){
-  "slug": slug.current, name, listenplatz, bezirk, alter, wahlkreis,
-  herzensthema, ueberMich, "foto": foto.asset->url
+  ...,
+  "slug": slug.current,
+  "foto": foto.asset->url
 }`
 
 const WAHLSYSTEM_QUERY = `*[_id=="seiteCountDown"][0]{
@@ -240,6 +241,7 @@ function buildKandidaten(rows) {
       imageDetail: withParams(k.foto, DETAIL_IMG_PARAMS),
       herzensthema: clean(k.herzensthema),
       ueberMich: clean(k.ueberMich),
+      socials: k.socials,
     }))
   if (!list.length) {
     throw new Error('Keine kandidatAgh-Dokumente gefunden.')

@@ -16,12 +16,12 @@ export interface VideosContent {
  */
 const FALLBACK: VideosContent = {
   annaPaulIntro: {
-    src: '/vids/anna_paul_intro.mp4',
-    poster: '/vids/anna_paul_intro_poster.jpg',
+    src: '',
+    poster: '',
   },
   reveal: {
-    src: '/vids/20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4',
-    poster: '/vids/unfck_reveal_poster.jpg',
+    src: '',
+    poster: '',
   },
 }
 

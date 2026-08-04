@@ -45,6 +45,8 @@ export function KandidatDetail() {
   if (kandidat.ueberMich)
     blocks.push({ heading: "Über mich", body: kandidat.ueberMich });
 
+  const socials = kandidat.socials
+
   return (
     <PageLayout activePath={pathname} variant="light">
       <CandidateDetail
@@ -54,6 +56,7 @@ export function KandidatDetail() {
         imageAlt={kandidat.name}
         meta={meta}
         blocks={blocks}
+        socials={socials}
       />
     </PageLayout>
   );

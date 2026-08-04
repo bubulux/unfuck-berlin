@@ -10,11 +10,7 @@ export interface MeetImage {
  * Build fehlschlaegt. Im Normalfall gewinnt das CMS-Karussell
  * (seiteMitmachen.carouselBilder).
  */
-const FALLBACK: MeetImage[] = [
-  { src: '/pics/meets/1.png', alt: 'Meet & Greet 1' },
-  { src: '/pics/meets/2.png', alt: 'Meet & Greet 2' },
-  { src: '/pics/meets/3.png', alt: 'Meet & Greet 3' },
-]
+const FALLBACK: MeetImage[] = []
 
 const CMS = MEETS_CMS as MeetImage[]
 

@@ -12,7 +12,27 @@ export const KANDIDATEN_CMS = [
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/f4e9a2cba7c4fd555c27cf01c861ab7f16e2b8d4-750x1000.jpg?w=480&h=600&fit=crop&crop=top&auto=format",
     "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/f4e9a2cba7c4fd555c27cf01c861ab7f16e2b8d4-750x1000.jpg?w=720&h=960&fit=crop&crop=top&auto=format",
     "herzensthema": "Ich trete an für ein Berlin, das vorankommt: als fairer, innovativer Wirtschaftsstandort. Eine starke Wirtschaft schafft ein faires Berlin – mit bezahlbarem Wohnraum, gerechten Bildungschancen und einem solidarischen Miteinander.",
-    "ueberMich": "Ich bin Anwältin, Gründerin, Mutter von zwei Kindern und einem afghanischen Ziehsohn. Voller Energie, Berlin gemeinsam mit euch in die Zukunft zu bringen.\n\nIch möchte, dass sich die Menschen in dieser Stadt wieder gemeinsam für Berlin begeistern. Mein Ziel ist es, Volt ins Abgeordnetenhaus zu führen und von dort aus mit mutigen Lösungen echten Fortschritt zu schaffen. Ich bin überzeugt: Mit guter Politik können wir Vertrauen in unsere Demokratie zurückgewinnen und Berlin wieder zusammenbringen."
+    "ueberMich": "Ich bin Anwältin, Gründerin, Mutter von zwei Kindern und einem afghanischen Ziehsohn. Voller Energie, Berlin gemeinsam mit euch in die Zukunft zu bringen.\n\nIch möchte, dass sich die Menschen in dieser Stadt wieder gemeinsam für Berlin begeistern. Mein Ziel ist es, Volt ins Abgeordnetenhaus zu führen und von dort aus mit mutigen Lösungen echten Fortschritt zu schaffen. Ich bin überzeugt: Mit guter Politik können wir Vertrauen in unsere Demokratie zurückgewinnen und Berlin wieder zusammenbringen.",
+    "socials": [
+      {
+        "_key": "75305ac97b1d",
+        "_type": "one_cta",
+        "ctaHref": "https://www.instagram.com/anna.auerbach/",
+        "ctaLabel": "instagram"
+      },
+      {
+        "_key": "0b5d1833bbb5",
+        "_type": "one_cta",
+        "ctaHref": "https://www.linkedin.com/in/auerbachanna/",
+        "ctaLabel": "linkedin"
+      },
+      {
+        "_key": "5e3d70bc9869",
+        "_type": "one_cta",
+        "ctaHref": "http://localhost:5173/kandidierende/anna-auerbach",
+        "ctaLabel": "testing"
+      }
+    ]
   },
   {
     "name": "Paul Loeper",

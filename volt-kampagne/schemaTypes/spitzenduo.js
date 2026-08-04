@@ -1,9 +1,11 @@
 import { defineField, defineType } from 'sanity'
+import { DotIcon } from '@sanity/icons/Dot'
 
 export default defineType({
   name: 'spitzenduo',
   title: 'Spitzenduo',
   type: 'document',
+  icon: DotIcon,
 
   fields: [
     defineField({
