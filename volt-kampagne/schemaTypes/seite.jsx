@@ -71,7 +71,7 @@ export default defineType({
       of: [
         // { type: 'kandis_auswahl' },
         { type: 'hero_linear' },
-        // { type: 'hero_video' },
+        { type: 'hero_video' },
         // { type: 'kalender_teaser' },
         // { type: 'kandis_teaser' },
         // { type: 'wahlsystem_teaser' },
