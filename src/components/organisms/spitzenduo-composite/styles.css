@@ -95,7 +95,7 @@
 
 .spitzenduo-card__role {
   font-size: var(--text-cta);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
 }
 
 .spitzenduo-card__cta {

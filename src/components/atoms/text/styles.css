@@ -37,7 +37,7 @@
 
 .text--kalender {
   font-size: var(--text-kalender);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   line-height: var(--line-snug);
   letter-spacing: 0.02em;
 }
