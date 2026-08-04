@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import './styles.css'
 
 export interface LazyVideoProps {
@@ -24,6 +24,14 @@ const PauseGlyph = () => (
   </svg>
 )
 
+const MuteGlyph = () => (
+  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M784-43 681-148q-22 13-53 25t-59 16v-101q8-2 20-6.5t20-8.5L497-336v245L248-341H78v-276h147L39-810l68-68 746 766-69 69Zm37-242-71-73q13-28 21.5-58.5T780-479q0-95-60-169.5T569-751v-101q135 24 222 130t87 243q0 52-15 100.5T821-285ZM676-433 569-542v-105q51 23 84 68t33 100q0 12-2 23.5t-8 22.5ZM497-617 375-744l122-123v250Z"/></svg>
+)
+
+const UnmuteGlyph = () => (
+  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M572-107v-102q93-25 151.5-100.5T782-480q0-95-59.5-169.5T572-752v-102q134 26 220.5 131T879-481q0 136-86 242.5T572-107ZM81-343v-276h169l250-250v776L250-343H81Zm491 30v-335q51 24 83 68t32 99q0 56-32 100t-83 68Z"/></svg>
+)
+
 /**
  * A lazily-loaded, autoplaying (muted, looped) video. The file is only fetched
  * once the element nears the viewport; until the first frame is ready a poster
@@ -39,6 +47,7 @@ export function LazyVideo({ src, poster, title, className, prio = false }: LazyV
   )
   const [ready, setReady] = useState(false)
   const [playing, setPlaying] = useState(true)
+  const [muted, setMuted] = useState(false)
 
   // Defer loading the video until it's about to enter the viewport.
   useEffect(() => {
@@ -77,6 +86,22 @@ export function LazyVideo({ src, poster, title, className, prio = false }: LazyV
     }
   }
 
+  const toggleMuted = () => {
+    const v = videoRef.current
+    if (!v) return
+    if (v.muted || v.volume === 0) {
+      v.muted = false
+      v.volume = 1
+    } else {
+      v.muted = true
+      v.volume = 0
+    }
+
+    setMuted(muted => {
+      return muted ? false : true
+    })
+  }
+
   const classes = ['lazy-video', className].filter(Boolean).join(' ')
   return (
     <div ref={rootRef} className={classes}>
@@ -110,6 +135,7 @@ export function LazyVideo({ src, poster, title, className, prio = false }: LazyV
       ) : null}
 
       {ready ? (
+        <div className="lazy-video__buttons">
         <button
           type="button"
           className="lazy-video__toggle"
@@ -119,6 +145,16 @@ export function LazyVideo({ src, poster, title, className, prio = false }: LazyV
         >
           {playing ? <PauseGlyph /> : <PlayGlyph />}
         </button>
+        <button
+          type="button"
+          className="lazy-video__toggle"
+          onClick={toggleMuted}
+          aria-label={muted ? 'Ton einschalten' : 'Ton ausschalten'}
+          {...{'data-umami-event': 'toggle-video-muted'}}
+        >
+          {muted ? <UnmuteGlyph /> : <MuteGlyph />}
+        </button>
+        </div>
       ) : null}
     </div>
   )

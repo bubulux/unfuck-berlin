@@ -4,7 +4,7 @@
 export const PAGES_CMS = [
   {
     "slug": "home",
-    "theme": "",
+    "theme": "purple",
     "is_published": false,
     "title": [],
     "body": "",
@@ -12,15 +12,24 @@ export const PAGES_CMS = [
       {
         "_key": "6339e266650e",
         "_type": "hero_video",
-        "heroCtaHref": "/wahlprogramm",
-        "heroCtaLabel": "Wahlprogramm",
-        "heroText": "Berlin besser machen!\n\nVolt macht, was woanders funktioniert.\nEgal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.",
         "heroZeilen": [
-          "unf*ck",
-          "berlin"
+          "unf*ck berlin"
         ],
         "photo": null,
-        "youtube_link": "https://www.youtube-nocookie.com/embed/ub8UIZ0FvRs?si=X0Tvxpz0FfcmAOaH&controls=0&autoplay=1&mute=1&loop=1"
+        "video_coverphoto": {
+          "_type": "file",
+          "asset": {
+            "_ref": "file-b4bdcc2d981958cafcff58c875a04f47b89d20c9-png",
+            "_type": "reference"
+          }
+        },
+        "video_file": {
+          "_type": "file",
+          "asset": {
+            "_ref": "file-0b3cc15d2852e041d3eb18d88e05dddc8dfcbe4f-mov",
+            "_type": "reference"
+          }
+        }
       },
       {
         "_key": "36ee659e03e8",
@@ -244,7 +253,7 @@ export const PAGES_CMS = [
   },
   {
     "slug": "kalender",
-    "theme": "",
+    "theme": "purple",
     "is_published": false,
     "title": [
       "Termine",

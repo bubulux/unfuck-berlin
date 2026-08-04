@@ -38,7 +38,21 @@ export const KANDIDATEN_CMS = [
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/a33f99f8a0fd3a0712d051a01e0ccc656b37e365-750x1000.png?w=480&h=600&fit=crop&crop=top&auto=format",
     "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/a33f99f8a0fd3a0712d051a01e0ccc656b37e365-750x1000.png?w=720&h=960&fit=crop&crop=top&auto=format",
     "herzensthema": "Ich will Berlin zu einem Leuchtturm der Hoffnung für eine innovative, gerechte und nachhaltige europäische Zukunft machen. Eine Stadt, die wächst und sich selbstbewusst als europäische Vorreiterstadt sieht.",
-    "ueberMich": "Ich arbeite als Organisations- und IT‑Berater für den öffentlichen Sektor. Mein Fokus: Prozesse vereinfachen, Digitalisierung umsetzen und Projekte ins Ziel bringen.\n\nIch bin mit drei Schwestern in Hannover aufgewachsen und 2011, nach meinem Grundwehrdienst, nach Berlin gezogen. Hier habe ich Betriebswirtschaft studiert und von 2017 bis 2021 als Mitgründer das Team von Volt Europa in Deutschland aufgebaut.\n\nIch bin bei Volt, weil ich der Überzeugung bin, dass Politk Vision und grenzübergreifendes Handeln braucht. Ich will, dass Berlin beim Wohnen, bei der Digitalisierung und der Bildung europäischer Vorreiter wird."
+    "ueberMich": "Ich arbeite als Organisations- und IT‑Berater für den öffentlichen Sektor. Mein Fokus: Prozesse vereinfachen, Digitalisierung umsetzen und Projekte ins Ziel bringen.\n\nIch bin mit drei Schwestern in Hannover aufgewachsen und 2011, nach meinem Grundwehrdienst, nach Berlin gezogen. Hier habe ich Betriebswirtschaft studiert und von 2017 bis 2021 als Mitgründer das Team von Volt Europa in Deutschland aufgebaut.\n\nIch bin bei Volt, weil ich der Überzeugung bin, dass Politk Vision und grenzübergreifendes Handeln braucht. Ich will, dass Berlin beim Wohnen, bei der Digitalisierung und der Bildung europäischer Vorreiter wird.",
+    "socials": [
+      {
+        "_key": "daea9162ca4f",
+        "_type": "one_cta",
+        "ctaHref": "https://www.instagram.com/paul.loeper.eu/",
+        "ctaLabel": "instagram"
+      },
+      {
+        "_key": "0be449019026",
+        "_type": "one_cta",
+        "ctaHref": "https://www.linkedin.com/in/paul-loeper/",
+        "ctaLabel": "linkedin"
+      }
+    ]
   },
   {
     "name": "Rafael Kaaz",
