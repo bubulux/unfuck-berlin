@@ -13,6 +13,7 @@ Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus de
 [Unsere Kandidierenden stellen sich vor](https://unfuck.berlin/kandidierende)
 
 ## Sitemap
+[Sitemap.xml für Suchmaschienen und AI-Bots](https://unfuck.berlin/sitemap.xml)
 [Startseite / unf*ck berlin](https://unfuck.berlin/)
 [Sticker abgreifen](https://unfuck.berlin/sticker)
 [Wahlprogramm](https://unfuck.berlin/wahlprogramm)
