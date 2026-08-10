@@ -60,7 +60,7 @@ export const PAGES_CMS = [
   },
   {
     "slug": "kandidierende-(not-ready)",
-    "theme": "",
+    "theme": "white",
     "is_published": false,
     "title": [
       "Gemeinsam",
@@ -86,6 +86,33 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/berlin/menschen/kandidierende-agh-liste-2026",
         "ctaLabel": "Alle Kandidierenden",
+        "photo": null
+      }
+    ]
+  },
+  {
+    "slug": "nervkrams",
+    "theme": "purple",
+    "is_published": true,
+    "title": [
+      "Nervkrams"
+    ],
+    "body": "Ihr habt uns unterschiedliche Nervkrams Momente aus Berlin geschickt: fehlende Radwege, zu viel Müll, und viele weitere Themen. Einige davon werden wir euch auf SocialMedia vorstellen und direkt versuchen zu unfucken. Folgt uns für mehr auf Instagram.",
+    "content_modules": [
+      {
+        "_key": "edf966ec5d66",
+        "_type": "hero_linear",
+        "heroText": "Ihr habt uns unterschiedliche Nervkrams Momente aus Berlin geschickt: fehlende Radwege, zu viel Müll, und viele weitere Themen. Einige davon werden wir euch auf SocialMedia vorstellen und direkt versuchen zu unfucken. Folgt uns für mehr auf Instagram.",
+        "heroZeilen": [
+          "Nervkrams"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "32350a5ddf44",
+        "_type": "one_cta",
+        "ctaHref": "https://www.instagram.com/volt_berlin/",
+        "ctaLabel": "Instagram @volt_berlin",
         "photo": null
       }
     ]

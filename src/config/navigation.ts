@@ -22,6 +22,7 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "unf*ck berlin", to: "/news/unfuck-berlin-reveal" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
+  { label: "VoltBerlin.org", href: "https://voltdeutschland.org/berlin/de" },
 ];
 
 /** Social platforms shown in the footer / social rows. */
