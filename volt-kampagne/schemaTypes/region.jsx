@@ -80,6 +80,7 @@ export default defineType({
         // { type: 'wahlsystem_teaser' },
         // { type: 'unfck_teaser' },
         { type: 'headline' },
+        { type: 'md_content' },
         { type: 'html_content' },
         { type: 'one_cta' },
         { type: 'photo' },

@@ -6,6 +6,8 @@ import Button from "../../components/atoms/button";
 import { Icon } from "../../components/atoms/icon";
 // import ReactMarkdown from "react-markdown";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { marked } from 'marked'
+
 
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
@@ -196,15 +198,18 @@ export function NewsPage() {
               </section>
             )
           } else if (c._type === 'html_content') {
-            const html_content: string = c.html_content || ''
+            const html_content: string = c_as_any.html_content || ''
             return <section key={key} className="news__text_width" style={{
               whiteSpace: 'pre-wrap',
               // width: 'var(--content-max)',
             }} dangerouslySetInnerHTML={{ __html: html_content }} />
-          // } else if (c._type === 'md_text') {
-          //   return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
-          //     <ReactMarkdown>{c.md_text}</ReactMarkdown>
-          //   </section>
+          } else if (c._type === 'md_content') {
+            const md_content: string = c_as_any.md_content || ''
+            const html_content = marked(md_content)
+
+            return <section key={key} className="news__text_width markdown_wrapper" style={{
+              // width: 'var(--content-max)',
+            }} dangerouslySetInnerHTML={{ __html: html_content }} />
           } else if (c._type === 'one_cta') {
             return (
               <section key={key} className="news__text_width">
