@@ -79,7 +79,10 @@ const REGIONS_QUERY = `*[_type=="region"]|order(name desc){
   ...,
   "slug": slug.current,
   "candidates": candidates_ref[]{
-    _type == "reference" => @->,
+    _type == "reference" => @-> {
+      ...,
+      "foto": foto.asset->url
+    }
   }
 }`
 
@@ -155,6 +158,18 @@ function buildRegions(rows) {
       // const hero_module = content_modules.find((m) => m._type === 'hero_linear') || {}
 
       console.log('region', JSON.stringify(region, null, 2))
+
+      const candidates = region.candidates.map(c => {
+        return {
+          ...c,
+          image: withParams(c.foto, CARD_IMG_PARAMS),
+          imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
+        }
+      })
+
+
+      console.log('candidates', JSON.stringify(candidates, null, 2))
+
       return {
         name: clean(region.name),
         slug: clean(region.slug),
@@ -162,7 +177,13 @@ function buildRegions(rows) {
         // is_published: Boolean(region.is_published),
         // publishedAt: clean(region.published_at),
         title: clean(region.name),
-        candidates: region.candidates,
+        candidates: region.candidates.map(c => {
+          return {
+            ...c,
+            image: withParams(c.foto, CARD_IMG_PARAMS),
+            imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
+          }
+        }),
         body: '', // clean(hero_module.heroText),
         // content_modules,
       }

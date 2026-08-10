@@ -18,6 +18,9 @@ export function RegionsPage() {
   const autoBreakSize_cramped = isSmallDevice ? 0.15 : isMediumDevice ? 0.20 : 0.25
   const autoBreakSize_roomy = isSmallDevice ? 0.2 : isMediumDevice ? 0.25 : 0.33
 
+
+  console.log('REGIONS_CMS', REGIONS_CMS)
+
   const region_many = REGIONS_CMS
     // .filter(a => a.is_published === true)
     .filter(a => pathname.endsWith(`/${a.slug}`))
@@ -27,6 +30,7 @@ export function RegionsPage() {
       // .filter(a => a.is_published === true)
       // .sort((a, b) => b.name || '' - a.name || '')
 
+      console.log('region_many', region_many)
     return (
       <PageLayout activePath={pathname} variant="light">
         <div className="news__wrapper">
@@ -68,6 +72,9 @@ export function RegionsPage() {
                       style={{ marginBottom: '8px' }}
                     />
                   </a>
+                  <p>
+                    {region.candidates.map(c => c.name).join(', ')}
+                  </p>
                   <div>
                     <Button as="a" size="cta" href={url} color="purple">
                       zum Bezirk…
@@ -83,6 +90,8 @@ export function RegionsPage() {
   }
 
   const region = region_many[0]
+
+  console.log('region', region)
 
   const regionJsonLd = {
   "@context": "https://schema.org",
@@ -112,12 +121,7 @@ export function RegionsPage() {
   "description": region.body || ''
 }
 
-  const content_modules = [
-    {
-      _type: 'hero_linear',
-      heroZeilen: [region.title],
-    }
-  ]
+  const content_modules = []
 
   const theme_variant: 'light' | 'purple' = 'light' as 'light' | 'purple' // region.theme === 'purple' ? 'purple' : 'light' as const
   return (
@@ -140,12 +144,75 @@ export function RegionsPage() {
           </Link>
         </section>
 
+        <HighlightText
+          as="h1"
+          lines={[region.title]}
+          variant="titel"
+          color="neon"
+          textColor="purple"
+          align="left"
+          uppercase={false}
+          className="news__text_width program-intro__heading"
+          style={{ marginBottom: 'var(--gap-big)' }}
+        />
+
+        <section className="news__text_width" style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '2rem',
+          marginBottom: 'var(--gap-big)'
+        }}>
+          <HighlightText
+            as="h2"
+            lines={['Einige Kandidierende im Bezirk']}
+            variant="subtitel"
+            color="purple"
+            textColor="white"
+            align="left"
+            uppercase={false}
+            className="program-intro__heading"
+          />
+
+        {
+          region.candidates.map((candidate, index) => {
+            console.log('candidate', candidate)
+            const name = candidate.name
+            const wahlkreis = candidate.wahlkreis
+            const schwerpunkte = candidate.schwerpunkte
+
+            return <div key={`${name}-${index}`} style={{
+              display: 'flex',
+              gap: '1rem',
+            }}>
+              <div style={{
+                width: '128px',
+                height: '128px',
+                backgroundImage: `url(${candidate.image})`,
+                backgroundPosition: 'center center',
+                backgroundSize: 'cover',
+                backgroundColor: 'var(--color-purple)',
+              }} />
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.25rem',
+                justifyContent: 'center',
+              }}>
+                <strong>{name}</strong>
+                <span>{wahlkreis}</span>
+                <span>{schwerpunkte}</span>
+              </div>
+            </div>
+          })
+        }
+        </section>
+
               {
                 content_modules.map((c, index) => {
                   const key = `${index}-${c._type}`
-        
+
                   const c_as_any = (c as any)
-        
+
                   if (c._type === 'hero_linear') {
                     return <section
                       key={key}
