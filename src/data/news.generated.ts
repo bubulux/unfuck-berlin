@@ -5,7 +5,7 @@ export const NEWS_CMS = [
   {
     "slug": "mini-manifesto-en",
     "theme": "white",
-    "is_published": false,
+    "is_published": true,
     "publishedAt": "2026-08-10",
     "title": [
       "unf*ck Berlin (English)"

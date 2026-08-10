@@ -9,6 +9,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
+import { marked } from "marked";
 
 export function PagePage() {
   const { pathname } = useLocation();
@@ -17,8 +18,6 @@ export function PagePage() {
 
   const autoBreakSize_cramped = isSmallDevice ? 0.15 : isMediumDevice ? 0.20 : 0.25
   const autoBreakSize_roomy = isSmallDevice ? 0.2 : isMediumDevice ? 0.25 : 0.33
-
-  console.log('PAGES_CMS', PAGES_CMS)
 
   const page_many = PAGES_CMS
     .filter(a => a.is_published === true)
@@ -207,11 +206,13 @@ export function PagePage() {
               whiteSpace: 'pre-wrap',
               // width: 'var(--content-max)',
             }} dangerouslySetInnerHTML={{ __html: html_content }} />
-          // } else if (c._type === 'md_text') {
-          //   return <section key={key} style={{ whiteSpace: 'pre-wrap' }}>
-          //     <ReactMarkdown>{c.md_text}</ReactMarkdown>
-          //   </section>
-          } else if (c._type === 'one_cta') {
+        } else if (c._type === 'md_content') {
+          const md_content: string = c_as_any.md_content || ''
+          const html_content = marked(md_content)
+          return <section key={key} className="news__text_width markdown_wrapper" style={{
+            // width: 'var(--content-max)',
+          }} dangerouslySetInnerHTML={{ __html: html_content }} />
+        } else if (c._type === 'one_cta') {
             return (
               <section key={key} className="pages__text_width">
                 <Button as="a" href={c_as_any.ctaHref} color="neon" style={{ margin: '0', width: 'auto' }}>
