@@ -100,8 +100,8 @@ section.markdown_wrapper h4 {
 
 .news__wrapper blockquote {
   font-style: italic;
-  background: var(--color-purple);
-  color: var(--color-white);
+  background: var(--color-neon);
+  color: var(--color-purple);
   padding: 2rem;
   margin-inline: -2rem;
   /* font-size: 0; */
