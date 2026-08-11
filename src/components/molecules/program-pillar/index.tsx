@@ -37,7 +37,8 @@ export function ProgramPillar({
             {title}
           </Text>
           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-            {tags.map(line => <HighlightText
+            {tags.map((line, index) => <HighlightText
+              key={`${line}-${index}`}
               lines={[line]}
               variant="body"
               direction="row"
