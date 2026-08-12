@@ -316,7 +316,7 @@ export function RegionsPage() {
         }}>
           <HighlightText
             as="h2"
-            lines={['AGH-Direktkandidierende']}
+            lines={['BVV-Spitzenduo']}
             variant="subtitel"
             color={theme_variant === 'light' ? 'purple' : 'white'}
             textColor={theme_variant === 'light' ? 'white' : 'purple'}
