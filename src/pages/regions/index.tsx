@@ -318,8 +318,8 @@ export function RegionsPage() {
             as="h2"
             lines={['AGH-Direktkandidierende']}
             variant="subtitel"
-            color="purple"
-            textColor="white"
+            color={theme_variant === 'light' ? 'purple' : 'white'}
+            textColor={theme_variant === 'light' ? 'white' : 'purple'}
             align="left"
             uppercase={false}
             className="program-intro__heading"
