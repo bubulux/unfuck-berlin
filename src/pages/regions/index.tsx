@@ -284,12 +284,12 @@ export function RegionsPage() {
                       </section>
                     )
             } else if (c._type === 'photo') {
-                    if (!c.photo) {
+                    if (!c_as_any.photo) {
                       return null
                     }
                     return <section key={key} style={{ marginBlock: 'var(--gap-big)' }}>
                       <img
-                        src={c.photo}
+                        src={c_as_any.photo}
                         alt={c_as_any.alt || ''}
                         style={{
                           width: '100%',

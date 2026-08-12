@@ -1,5 +1,4 @@
 import type { HTMLAttributes, ReactNode } from 'react'
-import { Text } from '../../atoms/text'
 import { CandidateCard } from '../../molecules/candidate-card'
 import type { Kandidat } from '../../../data/kandidaten'
 import './styles.css'

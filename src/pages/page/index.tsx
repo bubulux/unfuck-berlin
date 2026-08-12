@@ -13,7 +13,6 @@ import { marked } from "marked";
 import ProgramSection from "../../components/organisms/program-section";
 import { WAHLPROGRAMM } from "../../data/wahlprogramm";
 
-
 export function PagePage() {
   const { pathname } = useLocation();
   const isSmallDevice = useMediaQuery("only screen and (max-width : 500px)");
