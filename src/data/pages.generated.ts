@@ -120,27 +120,39 @@ export const PAGES_CMS = [
   {
     "slug": "wahlprogramm",
     "theme": "white",
-    "is_published": false,
+    "is_published": true,
     "title": [
       "Wahlprogramm"
     ],
-    "body": "<strong>Berlin ist pulsierend, aber sein Herzschlag erreicht die\nPolitik nicht.</strong>\n\nDie Folgen spüren Berliner*innen täglich: Wohnungen, die unbezahlbar sind. ­Schulen, die marode sind. Eine Verwaltung, die auf einfache Anliegen monatelang nicht reagiert. Dazu kommt das Gefühl, dass es nicht besser wird, sondern schlechter.\n\nMit unserem Wahlprogramm legen wir einen konkreten Plan vor, wie diese Stadt wieder funktioniert: <strong>pragmatisch, evidenzbasiert und europäisch.</strong>\n\nIn sieben Kapiteln zeigen wir, wie Berlin seine größten Probleme löst, von der Verwaltung über bezahlbares Wohnen bis zur Bildung. <strong>Denn Berlin braucht Politik, die die Zukunft gestaltet.</strong>",
+    "body": "",
     "content_modules": [
       {
         "_key": "b82d988cf734",
         "_type": "hero_linear",
         "headline_theme": "green",
-        "heroText": "<strong>Berlin ist pulsierend, aber sein Herzschlag erreicht die\nPolitik nicht.</strong>\n\nDie Folgen spüren Berliner*innen täglich: Wohnungen, die unbezahlbar sind. ­Schulen, die marode sind. Eine Verwaltung, die auf einfache Anliegen monatelang nicht reagiert. Dazu kommt das Gefühl, dass es nicht besser wird, sondern schlechter.\n\nMit unserem Wahlprogramm legen wir einen konkreten Plan vor, wie diese Stadt wieder funktioniert: <strong>pragmatisch, evidenzbasiert und europäisch.</strong>\n\nIn sieben Kapiteln zeigen wir, wie Berlin seine größten Probleme löst, von der Verwaltung über bezahlbares Wohnen bis zur Bildung. <strong>Denn Berlin braucht Politik, die die Zukunft gestaltet.</strong>",
         "heroZeilen": [
           "Wahlprogramm"
         ],
         "photo": null
       },
       {
+        "_key": "20883a0783ee",
+        "_type": "md_content",
+        "md_content": "**Berlin ist pulsierend, aber sein Herzschlag erreicht die\nPolitik nicht.**\n\nDie Folgen spüren Berliner*innen täglich: Wohnungen, die unbezahlbar sind. ­Schulen, die marode sind. Eine Verwaltung, die auf einfache Anliegen monatelang nicht reagiert. Dazu kommt das Gefühl, dass es nicht besser wird, sondern schlechter.\n\nMit unserem Wahlprogramm legen wir einen konkreten Plan vor, wie diese Stadt wieder funktioniert: **pragmatisch, evidenzbasiert und europäisch.**\n\nIn sieben Kapiteln zeigen wir, wie Berlin seine größten Probleme löst, von der Verwaltung über bezahlbares Wohnen bis zur Bildung. **Denn Berlin braucht Politik, die die Zukunft gestaltet.**",
+        "photo": null
+      },
+      {
         "_key": "f0f63255a8c6",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf",
-        "ctaLabel": "Wahlprogramm Kurz",
+        "ctaLabel": "Kurzwahlprogramm (Deutsch)",
+        "photo": null
+      },
+      {
+        "_key": "a62333bd8986",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-en",
+        "ctaLabel": "Mini Manifesto (English)",
         "photo": null
       },
       {

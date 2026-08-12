@@ -51,7 +51,7 @@ export default defineType({
     // }),
 
     defineField({
-      title: 'BVV Kandidierende',
+      title: 'AGH-Direktkandidierende',
       name: 'candidates_ref',
       type: 'array',
       of: [
@@ -62,7 +62,6 @@ export default defineType({
       ],
     }),
 
-    /*
     defineField({
       title: 'Inhalts Blöcke',
       name: 'content_modules',
@@ -88,6 +87,5 @@ export default defineType({
         { type: 'spitzenduo_teaser' },
       ],
     }),
-    */
   ],
 })

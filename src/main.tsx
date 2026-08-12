@@ -29,7 +29,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/bezirke/*" element={<RegionsPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/*" element={<NewsPage />} />
-          <Route path="/wahlprogramm" element={<Wahlprogramm />} />
+          {/* <Route path="/wahlprogramm" element={<Wahlprogramm />} /> */}
           <Route path="/termine" element={<Termine />} />
           <Route path="/kandidierende" element={<Kandidaten />} />
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />

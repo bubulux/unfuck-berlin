@@ -38,3 +38,7 @@
     gap: var(--space-4);
   }
 }
+
+a.region_link:hover path {
+  fill: var(--color-neon);
+}

@@ -154,21 +154,8 @@ function buildRegions(rows) {
   const regions = (rows || [])
     .filter((a) => a.slug)
     .map((region) => {
-      // const content_modules = region.content_modules || []
+      const content_modules = region.content_modules || []
       // const hero_module = content_modules.find((m) => m._type === 'hero_linear') || {}
-
-      console.log('region', JSON.stringify(region, null, 2))
-
-      const candidates = region.candidates.map(c => {
-        return {
-          ...c,
-          image: withParams(c.foto, CARD_IMG_PARAMS),
-          imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
-        }
-      })
-
-
-      console.log('candidates', JSON.stringify(candidates, null, 2))
 
       return {
         name: clean(region.name),
@@ -185,7 +172,7 @@ function buildRegions(rows) {
           }
         }),
         body: '', // clean(hero_module.heroText),
-        // content_modules,
+        content_modules,
       }
     })
 

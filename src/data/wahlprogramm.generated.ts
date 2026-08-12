@@ -7,8 +7,8 @@ export const WAHLPROGRAMM_CMS = {
       "Wahlprogramm"
     ],
     "theme": "green",
-    "body": "<strong>Berlin ist pulsierend, aber sein Herzschlag erreicht die\nPolitik nicht.</strong>\n\nDie Folgen spüren Berliner*innen täglich: Wohnungen, die unbezahlbar sind. ­Schulen, die marode sind. Eine Verwaltung, die auf einfache Anliegen monatelang nicht reagiert. Dazu kommt das Gefühl, dass es nicht besser wird, sondern schlechter.\n\nMit unserem Wahlprogramm legen wir einen konkreten Plan vor, wie diese Stadt wieder funktioniert: <strong>pragmatisch, evidenzbasiert und europäisch.</strong>\n\nIn sieben Kapiteln zeigen wir, wie Berlin seine größten Probleme löst, von der Verwaltung über bezahlbares Wohnen bis zur Bildung. <strong>Denn Berlin braucht Politik, die die Zukunft gestaltet.</strong>",
-    "ctaLabel": "Wahlprogramm Kurz",
+    "body": "",
+    "ctaLabel": "Kurzwahlprogramm (Deutsch)",
     "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf"
   },
   "pillars": [

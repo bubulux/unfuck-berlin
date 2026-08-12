@@ -3,7 +3,7 @@ import { UserIcon } from '@sanity/icons/User'
 
 export default defineType({
   name: 'kandidatBvv',
-  title: 'BVV Kandidat',
+  title: 'Kandidierende (Less-Info)',
   type: 'document',
   icon: UserIcon,
 
