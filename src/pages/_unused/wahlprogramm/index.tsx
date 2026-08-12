@@ -1,10 +1,10 @@
 import { useLocation } from "react-router";
-import { PageLayout } from "../../components/templates/page-layout";
-import { ProgramIntro } from "../../components/organisms/program-intro";
-import { ProgramSection } from "../../components/organisms/program-section";
-import { RichText } from "../../components/molecules/rich-text";
-import { WAHLPROGRAMM, mapHeadlineTheme } from "../../data/wahlprogramm";
-import Button from "../../components/atoms/button";
+import { PageLayout } from "../../../components/templates/page-layout";
+import { ProgramIntro } from "../../../components/organisms/program-intro";
+import { ProgramSection } from "../../../components/organisms/program-section";
+import { RichText } from "../../../components/molecules/rich-text";
+import { WAHLPROGRAMM, mapHeadlineTheme } from "../../../data/wahlprogramm";
+import Button from "../../../components/atoms/button";
 
 export function Wahlprogramm() {
   const { pathname } = useLocation();
