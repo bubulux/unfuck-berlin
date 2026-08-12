@@ -145,14 +145,70 @@ export const PAGES_CMS = [
         "_key": "f0f63255a8c6",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf",
-        "ctaLabel": "Kurzwahlprogramm (Deutsch)",
+        "ctaLabel": "Kurzwahlprogramm als PDF",
+        "photo": null
+      },
+      {
+        "_key": "f39cc5aba8b0",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-de",
+        "ctaLabel": "Kurzwahlprogramm zur Wahl des Abgeordnetenhauses von Berlin 2026",
         "photo": null
       },
       {
         "_key": "a62333bd8986",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-en",
-        "ctaLabel": "Mini Manifesto (English)",
+        "ctaLabel": "Mini Manifesto for the 2026 Berlin House of Representatives Election",
+        "photo": null
+      },
+      {
+        "_key": "4f403a7e1ad3",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-es",
+        "ctaLabel": "Programa electoral breve para las elecciones de 2026 Cámara de Representantes de Berlín",
+        "photo": null
+      },
+      {
+        "_key": "60ef49cb163c",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-nl",
+        "ctaLabel": "Verkort verkiezingsprogramma voor de verkiezingen van het Berlijnse Huis van Afgevaardigden 2026",
+        "photo": null
+      },
+      {
+        "_key": "bb8299768afe",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-pl",
+        "ctaLabel": "Skrócony program wyborczy na wybory do Izby Deputowanych Berlina 2026",
+        "photo": null
+      },
+      {
+        "_key": "9b98cb48523f",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-it",
+        "ctaLabel": "Programma elettorale breve per le elezioni della Camera dei Rappresentanti di Berlino 2026",
+        "photo": null
+      },
+      {
+        "_key": "ed4372037a71",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-ro",
+        "ctaLabel": "Program electoral pe scurt pentru alegerile din 2026 pentru Camera Reprezentanților din Berlin",
+        "photo": null
+      },
+      {
+        "_key": "fcfb521583ff",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-ua",
+        "ctaLabel": "Коротка виборча програма до виборів у Палату депутатів Берліна 2026",
+        "photo": null
+      },
+      {
+        "_key": "288422427947",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-ru",
+        "ctaLabel": "Краткая предвыборная программа для выборов 2026 года Палата представителей Берлина",
         "photo": null
       },
       {

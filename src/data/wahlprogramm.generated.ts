@@ -8,7 +8,7 @@ export const WAHLPROGRAMM_CMS = {
     ],
     "theme": "green",
     "body": "",
-    "ctaLabel": "Kurzwahlprogramm (Deutsch)",
+    "ctaLabel": "Kurzwahlprogramm als PDF",
     "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf"
   },
   "pillars": [
