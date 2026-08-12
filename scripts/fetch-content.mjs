@@ -29,6 +29,7 @@ const OUT_MEETS = resolve(DATA_DIR, 'meets.generated.ts')
 const OUT_UNFCK = resolve(DATA_DIR, 'unfck.generated.ts')
 const OUT_SPITZENDUO = resolve(DATA_DIR, 'spitzenduo.generated.ts')
 const OUT_CLUSTER = resolve(DATA_DIR, 'kandidaten-cluster.generated.ts')
+const OUT_REGIONS = resolve(DATA_DIR, 'regions.generated.ts')
 const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
 const OUT_PAGES = resolve(DATA_DIR, 'pages.generated.ts')
 
@@ -73,6 +74,17 @@ const lines = (arr) => (Array.isArray(arr) ? arr.map((z) => clean(z)).filter(Boo
 const splitLines = (s) => clean(s).split('\n').map((l) => l.trim()).filter(Boolean)
 // Titel mit \n zu einer Zeile zusammenfassen.
 const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
+
+const REGIONS_QUERY = `*[_type=="region"]|order(name desc){
+  ...,
+  "slug": slug.current,
+  "candidates": candidates_ref[]{
+    _type == "reference" => @-> {
+      ...,
+      "foto": foto.asset->url
+    }
+  }
+}`
 
 const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
   ...,
@@ -138,6 +150,34 @@ const SPITZENDUO_QUERY = `*[_type=="spitzenduo"]|order(reihenfolge asc){
   vorname, nachname, "foto": foto.asset->url
 }`
 
+function buildRegions(rows) {
+  const regions = (rows || [])
+    .filter((a) => a.slug)
+    .map((region) => {
+      const content_modules = region.content_modules || []
+      // const hero_module = content_modules.find((m) => m._type === 'hero_linear') || {}
+
+      return {
+        name: clean(region.name),
+        slug: clean(region.slug),
+        // theme: clean(region.theme),
+        // is_published: Boolean(region.is_published),
+        // publishedAt: clean(region.published_at),
+        title: clean(region.name),
+        candidates: region.candidates.map(c => {
+          return {
+            ...c,
+            image: withParams(c.foto, CARD_IMG_PARAMS),
+            imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
+          }
+        }),
+        body: '', // clean(hero_module.heroText),
+        content_modules,
+      }
+    })
+
+  return regions
+}
 
 function buildNews(rows) {
   const articles = (rows || [])
@@ -354,7 +394,8 @@ const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {
-  const [newsRows, pagesRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+  const [regionsRows, newsRows, pagesRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+    client.fetch(REGIONS_QUERY),
     client.fetch(NEWS_QUERY),
     client.fetch(PAGES_QUERY),
     client.fetch(WAHLPROGRAMM_QUERY),
@@ -366,6 +407,7 @@ async function main() {
     client.fetch(SPITZENDUO_QUERY),
   ])
 
+  const regions = buildRegions(regionsRows)
   const news = buildNews(newsRows)
   const pages = buildPages(pagesRows)
   const wahlprogramm = buildWahlprogramm(wpRes)
@@ -376,6 +418,12 @@ async function main() {
   const unfck = buildUnfck(unfckRes)
   const spitzenduo = buildSpitzenduo(spitzenduoRows, kandidaten)
   const cluster = buildCluster(kandiRows)
+
+  writeFileSync(
+    OUT_REGIONS,
+    `${header}\n\nexport const REGIONS_CMS = ${JSON.stringify(regions, null, 2)}\n`,
+    'utf8',
+  )
 
   writeFileSync(
     OUT_NEWS,
@@ -431,13 +479,14 @@ async function main() {
   )
 
   console.log(
-    `Inhalte aktualisiert: News (${news.length}), Pages (${pages.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
+    `Inhalte aktualisiert: Bezirke (${regions.length}), News (${news.length}), Pages (${pages.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
   )
 }
 
 main().catch((err) => {
   console.warn('Sanity-Abruf fehlgeschlagen:', err.message)
   if (
+    existsSync(OUT_REGIONS) &&
     existsSync(OUT_NEWS) &&
     existsSync(OUT_PAGES) &&
     existsSync(OUT_WAHLPROGRAMM) &&

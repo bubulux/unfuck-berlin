@@ -10,6 +10,8 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
 import { marked } from "marked";
+import ProgramSection from "../../components/organisms/program-section";
+import { WAHLPROGRAMM } from "../../data/wahlprogramm";
 
 export function PagePage() {
   const { pathname } = useLocation();
@@ -206,13 +208,13 @@ export function PagePage() {
               whiteSpace: 'pre-wrap',
               // width: 'var(--content-max)',
             }} dangerouslySetInnerHTML={{ __html: html_content }} />
-        } else if (c._type === 'md_content') {
+          } else if (c._type === 'md_content') {
           const md_content: string = c_as_any.md_content || ''
           const html_content = marked(md_content)
           return <section key={key} className="news__text_width markdown_wrapper" style={{
             // width: 'var(--content-max)',
           }} dangerouslySetInnerHTML={{ __html: html_content }} />
-        } else if (c._type === 'one_cta') {
+          } else if (c._type === 'one_cta') {
             return (
               <section key={key} className="pages__text_width">
                 <Button as="a" href={c_as_any.ctaHref} color="neon" style={{ margin: '0', width: 'auto' }}>
@@ -238,6 +240,11 @@ export function PagePage() {
           } else if (c._type === 'spitzenduo_teaser') {
             return <section key={key} style={{ marginBlock: 'var(--gap-big) var(--gap-small)' }}>
               <SpitzenduoComposite className="flex flex-row" />
+            </section>
+          } else if (c._type === 'wahlprogramm_teaser') {
+            const { pillars } = WAHLPROGRAMM;
+            return <section key={key} style={{ marginBlock: 'var(--gap-big) var(--gap-small)' }}>
+              <ProgramSection pillars={pillars} />
             </section>
           }
 

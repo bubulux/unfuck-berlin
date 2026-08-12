@@ -29,7 +29,7 @@ export function ProgramIntro({
   headingUppercase = true,
   wide = false,
   children,
-  ctaLabel = "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
+  ctaLabel,
   ctaColor = "neon",
   ctaTo,
   ctaHref,
@@ -56,7 +56,7 @@ export function ProgramIntro({
 
         <div className="program-intro__body">{children}</div>
 
-        {ctaHref ? (
+        {ctaHref && ctaLabel ? (
           <Button
             as="a"
             href={ctaHref}
@@ -67,7 +67,7 @@ export function ProgramIntro({
           >
             {ctaLabel}
           </Button>
-        ) : ctaTo ? (
+        ) : ctaTo && ctaLabel ? (
           <Button
             as={RouterLink}
             to={ctaTo}
@@ -76,11 +76,7 @@ export function ProgramIntro({
           >
             {ctaLabel}
           </Button>
-        ) : (
-          <Button color={ctaColor} className="program-intro__cta">
-            {ctaLabel}
-          </Button>
-        )}
+        ) : null}
       </div>
     </section>
   );

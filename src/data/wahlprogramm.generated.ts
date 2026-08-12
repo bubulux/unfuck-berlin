@@ -7,8 +7,8 @@ export const WAHLPROGRAMM_CMS = {
       "Wahlprogramm"
     ],
     "theme": "green",
-    "body": "<strong>Berlin ist pulsierend, aber sein Herzschlag erreicht die\nPolitik nicht.</strong>\n\nDie Folgen spüren Berliner*innen täglich: Wohnungen, die unbezahlbar sind. ­Schulen, die marode sind. Eine Verwaltung, die auf einfache Anliegen monatelang nicht reagiert. Dazu kommt das Gefühl, dass es nicht besser wird, sondern schlechter.\n\nMit unserem Wahlprogramm legen wir einen konkreten Plan vor, wie diese Stadt wieder funktioniert: <strong>pragmatisch, evidenzbasiert und europäisch.</strong>\n\nIn sieben Kapiteln zeigen wir, wie Berlin seine größten Probleme löst, von der Verwaltung über bezahlbares Wohnen bis zur Bildung. <strong>Denn Berlin braucht Politik, die die Zukunft gestaltet.</strong>",
-    "ctaLabel": "Wahlprogramm Kurz",
+    "body": "",
+    "ctaLabel": "Kurzwahlprogramm (Deutsch)",
     "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf"
   },
   "pillars": [
@@ -83,7 +83,7 @@ export const WAHLPROGRAMM_CMS = {
     ],
     "theme": "orange",
     "body": "Volt ist die erste echte europäische Partei: in ganz Europa aktiv, mit einem gemeinsamen politischen Fundament. Genau das nutzen wir für Berlin. Wir experimentieren nicht auf Kosten der Berliner:innen, sondern holen Lösungen in die Stadt, die sich in Europa bereits bewährt haben. 98 Best-Practice-Beispiele aus Städten wie Helsinki, Wien, Amsterdam und Kopenhagen belegen, dass unsere Vorschläge keine Utopien sind, sondern erprobte Realität. Dabei gilt: Evidenz entscheidet, nicht Ideologie. Wir messen die Wirkung unserer Maßnahmen und passen an, was nicht die gewünschten Ergebnisse bringt.",
-    "ctaLabel": "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
-    "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-edited-20-7.pdf"
+    "ctaLabel": "Wahlprogramme für die Bezirke",
+    "ctaHref": "/bezirke"
   }
 }

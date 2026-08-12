@@ -3,65 +3,62 @@ import {EarthAmericasIcon} from '@sanity/icons/EarthAmericas'
 
 export default defineType({
   name: 'region',
-  title: 'Region / Bezirk',
+  title: 'Bezirk',
   type: 'document',
   icon: EarthAmericasIcon,
 
   preview: {
     select: {
       slug: 'slug',
-      content_modules: 'content_modules',
+      name: 'name',
     },
     prepare(selection) {
-      const { slug, content_modules } = selection
-
-      const hero_video = content_modules.find(({ _type }) => _type === 'hero_linear' || _type === 'hero_video')
-
-      if (hero_video) {
-        const { heroZeilen } = hero_video
-        return {
-          title: heroZeilen.join(' '),
-          subtitle: `/bezirk/${slug.current || ''}`,
-        }
-      }
-
+      const { slug, name } = selection
       return {
-        title: '',
-        subtitle: `/bezirk/${slug.current || ''}`,
+        title: name || '',
+        subtitle: `/bezirke/${slug.current || ''}`,
       }
     },
   },
 
   fields: [
     defineField({
+      name: 'name',
+      type: 'string',
+      validation: Rule => Rule.required(),
+    }),
+
+    defineField({
       title: 'Slug',
       name: 'slug',
       type: 'slug',
-    }),
-
-    defineField({
-      title: 'Is Published',
-      name: 'is_published',
-      type: 'boolean',
-      layout: 'switch',
-    }),
-
-    defineField({
-      title: 'Date Published',
-      name: 'published_at',
-      type: 'date',
-    }),
-
-    defineField({
-      title: 'Kandidierende',
-      name: 'candidates',
-      insertMenu: {
-        filter: true,
-        showIcons: true,
+      options: {
+        source: 'name',
       },
+    }),
+
+    // defineField({
+    //   title: 'Is Published',
+    //   name: 'is_published',
+    //   type: 'boolean',
+    //   layout: 'switch',
+    // }),
+
+    // defineField({
+    //   title: 'Date Published',
+    //   name: 'published_at',
+    //   type: 'date',
+    // }),
+
+    defineField({
+      title: 'AGH-Direktkandidierende',
+      name: 'candidates_ref',
       type: 'array',
       of: [
-        { type: 'kandidatBvv' },
+        {
+          type: 'reference',
+          to: [{type: 'kandidatBvv'}],
+        },
       ],
     }),
 

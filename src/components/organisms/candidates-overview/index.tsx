@@ -1,8 +1,8 @@
 import type { HTMLAttributes, ReactNode } from 'react'
-import { Text } from '../../atoms/text'
 import { CandidateCard } from '../../molecules/candidate-card'
 import type { Kandidat } from '../../../data/kandidaten'
 import './styles.css'
+import HighlightText from '../../atoms/highlight-text'
 
 export interface CandidatesOverviewProps extends HTMLAttributes<HTMLElement> {
   heading: string
@@ -23,9 +23,18 @@ export function CandidatesOverview({
   return (
     <section className={classes} {...rest}>
       <div className="kandidaten__inner">
-        <Text as="h1" variant="titel" color="purple" uppercase className="kandidaten__heading">
-          {heading}
-        </Text>
+        <HighlightText
+          as="h1"
+          // autoBreakSize={autoBreakSize_cramped}
+          lines={[heading]}
+          variant="titel"
+          color="purple"
+          textColor="white"
+          align="left"
+          uppercase={false}
+          className="kandidaten__heading"
+          style={{ marginBlockEnd: '1rem' }}
+        />
 
         {children ? <div className="kandidaten__intro">{children}</div> : null}
 

@@ -1,11 +1,11 @@
 import { useLocation } from 'react-router'
-import { PageLayout } from '../../components/templates/page-layout'
-import { UnfuckIntro } from '../../components/organisms/unfuck-intro'
-import { VideoSection } from '../../components/organisms/video-section'
-import { ImageStack } from '../../components/organisms/image-stack'
-import { Text } from '../../components/atoms/text'
-import { VIDEOS } from '../../data/videos'
-import { UNFCK_COLLAGE } from '../../data/unfck'
+import { PageLayout } from '../../../components/templates/page-layout'
+import { UnfuckIntro } from '../../../components/organisms/unfuck-intro'
+import { VideoSection } from '../../../components/organisms/video-section'
+import { ImageStack } from '../../../components/organisms/image-stack'
+import { Text } from '../../../components/atoms/text'
+import { VIDEOS } from '../../../data/videos'
+import { UNFCK_COLLAGE } from '../../../data/unfck'
 
 export function UnfuckBerlin() {
   const { pathname } = useLocation()

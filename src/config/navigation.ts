@@ -16,6 +16,7 @@ export const NAV_LINKS: NavItem[] = [
 export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "Sticker abgreifen", to: "/sticker" },
   { label: "Wahlprogramm", to: "/wahlprogramm" },
+  { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
   { label: "Kalender", to: "/termine" },
   { label: "Alle Voltkandidierenden", to: "/kandidierende" },
