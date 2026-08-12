@@ -338,13 +338,22 @@ export function RegionsPage() {
               gap: '1rem',
             }}>
               <div style={{
-                width: '128px',
-                height: '128px',
+                // width: '128px',
+                // height: '128px',
                 backgroundImage: `url(${candidate.image})`,
                 backgroundPosition: 'center center',
                 backgroundSize: 'cover',
-                backgroundColor: 'currentColor',
-              }} />
+                // backgroundColor: 'currentColor',
+
+                width: '64px',
+                height: '64px',
+                borderRadius: '100px',
+                backgroundColor: 'tranzparent',
+                fontSize: '128px',
+                textAlign: 'center',
+                lineHeight: '96px',
+                fontWeight: 'bold',
+              }}>*</div>
               <div style={{
                 display: 'flex',
                 flexDirection: 'column',
