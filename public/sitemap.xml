@@ -10,11 +10,11 @@
     <loc>https://unfuck.berlin/wahlprogramm</loc>
   </url>
   <url>
-    <loc>https://unfuck.berlin/news</loc>
-  </url>
-  <url>
     <loc>https://unfuck.berlin/termine</loc>
   </url>
+
+
+
   <url>
     <loc>https://unfuck.berlin/kandidierende</loc>
   </url>
@@ -75,6 +75,12 @@
   <url>
     <loc>https://unfuck.berlin/kandidierende/sascha-hellwig</loc>
   </url>
+
+
+
+  <url>
+    <loc>https://unfuck.berlin/news</loc>
+  </url>
   <url>
     <loc>https://unfuck.berlin/news/volt-berlin-erster-bvv-antrag</loc>
   </url>
@@ -98,5 +104,52 @@
   </url>
   <url>
     <loc>https://unfuck.berlin/news/hilf-plakatieren</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/news/bildung-auf-die-eins</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/news/mini-manifesto-en</loc>
+  </url>
+
+
+  <url>
+    <loc>https://unfuck.berlin/bezirke/</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/charlottenburg-wilmersdorf</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/friedrichshain-kreuzberg</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/lichtenberg</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/marzahn-hellersdorf</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/mitte</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/neukoelln</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/pankow</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/reinickendorf</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/spandau</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/steglitz-zehlendorf</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/tempelhof-schoeneberg</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/bezirke/treptow-koepenick</loc>
   </url>
 </urlset>
