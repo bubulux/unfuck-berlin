@@ -261,6 +261,13 @@ export const PAGES_CMS = [
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-edited-20-7.pdf",
         "ctaLabel": "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
         "photo": null
+      },
+      {
+        "_key": "3f309529c4a5",
+        "_type": "one_cta",
+        "ctaHref": "/bezirke",
+        "ctaLabel": "Wahlprogramme für die Bezirke",
+        "photo": null
       }
     ]
   },
