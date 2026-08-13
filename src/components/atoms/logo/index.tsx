@@ -20,7 +20,7 @@ const SRC: Record<LogoVariant, string> = {
 export function Logo({
   variant = 'white',
   height = '1.5rem',
-  alt = 'Volt',
+  alt = 'Volt Berlin',
   className,
   style,
   ...rest

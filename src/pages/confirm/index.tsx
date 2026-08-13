@@ -14,7 +14,7 @@ export function Confirm() {
   const { search } = useLocation()
   return (
     <iframe
-      title="Bestellung bestätigen – unf*ck berlin"
+      title="Bestellung bestätigen – unf*ck berlin – Volt Berlin"
       src={`/sticker/confirm.html${search}`}
       style={FRAME_STYLE}
     />

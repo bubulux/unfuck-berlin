@@ -250,7 +250,7 @@ export function NewsPage() {
       >
         <HighlightText
           as="h2"
-          lines={['Über Volt']}
+          lines={['Über Volt in Berlin']}
           variant="subtitel"
           color={theme_variant === 'purple' ? 'white' : 'purple'}
           textColor={theme_variant === 'purple' ? 'purple' : 'white'}

@@ -1,6 +1,6 @@
-# unf*ck berlin
+# unf*ck berlin – Volt Berlin
 Berlin besser machen!
-Volt bringt nach Berlin, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.
+Volt Berlin bringt nach Berlin, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten.
 
 ## Unsere Kandidierenden
 Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus der Praxis.
@@ -8,7 +8,7 @@ Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus de
 
 ## Sitemap
 [Sitemap.xml für Suchmaschienen und AI-Bots](https://unfuck.berlin/sitemap.xml)
-[Startseite / unf*ck berlin](https://unfuck.berlin/)
+[Startseite / unf*ck berlin / Volt Berlin](https://unfuck.berlin/)
 [Sticker abgreifen](https://unfuck.berlin/sticker)
 [Wahlprogramm](https://unfuck.berlin/wahlprogramm)
 [News](https://unfuck.berlin/news)
@@ -44,7 +44,7 @@ Das ist nicht normal. Das sollten wir nicht akzeptieren. Und das müssen wir nic
 
 Andere Städte haben dieselben Probleme bereits gelöst. In Tallinn erledigt man Behördengänge in Minuten online. In Wien gibt es bezahlbaren Wohnraum, weil man ihn gebaut hat. In Kopenhagen funktioniert die U-Bahn-Infrastruktur, weil man sie klug finanziert hat. Es ist keine Frage des Ob, sondern des Wie. Und das Wie kennen wir.
 
-Volt will. Und Volt kann. Und Volt macht. Wir verwalten nicht die Gegenwart, wir bauen die Zukunft. 
+Volt Berlin will. Und Volt Berlin kann. Und Volt Berlin macht. Wir verwalten nicht die Gegenwart, wir bauen die Zukunft. 
 Faktenbasiert, pragmatisch, europäisch. Wir entscheiden nach Evidenz, nicht nach Ideologie. 
 Wir messen die Wirkung unserer Politik und passen an, was nicht funktioniert.
 

@@ -21,7 +21,7 @@ export function Termine() {
       <EventsSection
         headingLines={["Termine", "& Treffen"]}
         intro={[
-          "Lern unsere AGH und BVV Kandidierenden kennen oder mach direkt bei Volt mit!",
+          "Lern unsere AGH und BVV Kandidierenden kennen oder mach direkt bei Volt Berlin mit!",
           "Wir freuen uns auf Dich auf Podien, Meet & Greets, und anderen Veranstaltungen.",
         ]}
         events={events}

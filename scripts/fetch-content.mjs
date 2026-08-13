@@ -390,7 +390,7 @@ function buildSpitzenduo(rows, kandidaten) {
 }
 
 const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
-// NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.`
+// NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.`
 // // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {

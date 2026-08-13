@@ -1,5 +1,5 @@
 // AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
-// NICHT manuell editieren – Aenderungen macht Volt im Sanity Studio.
+// NICHT manuell editieren – Änderungen macht Volt im Sanity Studio.
 
 export const PAGES_CMS = [
   {
@@ -314,7 +314,7 @@ export const PAGES_CMS = [
       {
         "_key": "46a41eabb042",
         "_type": "one_cta",
-        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-edited-20-7.pdf",
+        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-(last_edited_5-8-2026).pdf",
         "ctaLabel": "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
         "photo": null
       },

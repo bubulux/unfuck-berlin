@@ -10,7 +10,7 @@ const FRAME_STYLE = {
 export function Sticker() {
   return (
     <iframe
-      title="Sticker abgreifen – unf*ck berlin"
+      title="Sticker abgreifen – unf*ck berlin – Volt Berlin"
       src="/sticker/sticker.html"
       style={FRAME_STYLE}
     />
