@@ -33,6 +33,19 @@ export function Home() {
         status={calendar.status}
         viewAllTo="/termine"
       />
+
+      <iframe src="https://www.juicer.io/api/feeds/volt_berlin-a7d9b9f9-b05f-49ef-9288-05b9dd2caa93/iframe" frameBorder="0" style={{
+        display: 'block',
+        margin: '0 auto',
+        width: 'var(--content-max-wide)',
+        maxWidth: '100%',
+        height: '1000px',
+        paddingInline: 'var(--content-pad-wide)',
+        paddingBlock: '64px',
+      }} title="volt_berlin - Juicer social media feed"></iframe>
+
+      {/* <script type="text/javascript" src="https://www.juicer.io/embed/volt_berlin-a7d9b9f9-b05f-49ef-9288-05b9dd2caa93/embed-code.js" async defer /> */}
+
     </PageLayout>
   )
 }
