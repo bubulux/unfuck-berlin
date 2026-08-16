@@ -346,9 +346,14 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "e13c14ee1d23",
+        "_type": "md_content",
+        "md_content": "## Entwicklung:\n- [Balthasar Beyer](https://webdesign-isar.de)\n- Samuil Berenzon\n\n## Web-Design:\n- Faranak Schneider\n\n## Fotografie:\n- [Katja Henschel](https://www.katjahentschel.com/)\n- [Evelin Frerk](http://www.evelinfrerk.de/)\n- Maximillian Große-Wortmann\n- [Joshua Heitzler](https://hadronsounds.com/en/)\n\nIm Hintergrund haben noch mehr Ehrenamtliche und Mitarbeiter geholfen.",
+        "photo": null
+      },
+      {
         "_key": "9e50f3bf3eb8",
         "_type": "html_content",
-        "html_content": "Entwicklung:\nBalthasar Beyer\nSamuil Berenzon\n\nWeb-Design:\nFaranak Schneider\n\nFotografie:\nKatja Henschel\nEvelin Frerk\nMaximillian Große-Wortmann\nJoshua Heitzler\n\nIm Hintergrund haben noch mehr Ehrenamtliche und Mitarbeiter geholfen.",
         "photo": null
       }
     ]

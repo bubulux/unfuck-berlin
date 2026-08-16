@@ -32,6 +32,19 @@ export interface CalendarItem {
 }
 
 /**
+ * All-day (VALUE=DATE) DTEND values are exclusive per the iCalendar spec —
+ * a single-day all-day event has DTEND set to the *next* day. Normalize
+ * that here so downstream code (multi-day detection, "is this still
+ * upcoming" checks) works with an inclusive end date instead.
+ */
+function normalizeAllDayEnd(end: Date | undefined, isAllDay: boolean): Date | undefined {
+  if (!end || !isAllDay) return end
+  const d = new Date(end)
+  d.setDate(d.getDate() - 1)
+  return d
+}
+
+/**
  * Parse an ICS string into future calendar items (soonest first). Recurring
  * events are expanded (up to the horizon); everything before the start of
  * `reference`'s day is dropped.
@@ -75,6 +88,8 @@ export function parseCalendar(
     overridesByUid.set(uid, list)
   }
 
+  const masterUids = new Set(masters.map((v) => v.getFirstPropertyValue('uid') as string))
+
   const items: CalendarItem[] = []
   const seen = new Set<string>()
   const add = (item: CalendarItem) => {
@@ -98,26 +113,37 @@ export function parseCalendar(
       let next = iterator.next()
       let count = 0
       while (next && count < MAX_OCCURRENCES_PER_EVENT) {
-        const start = next.toJSDate()
+        // `next` is only the *originally scheduled* recurrence-id slot.
+        // Resolve it through getOccurrenceDetails() so an overridden
+        // occurrence (moved date, changed location/title/all-day-ness)
+        // reflects the actual exception data instead of the master's.
+        const details = event.getOccurrenceDetails(next)
+        const start = details.startDate.toJSDate()
         if (start > horizon) break
         if (start >= startOfToday) {
           count++
-          const details = event.getOccurrenceDetails(next)
+          const isAllDay = details.startDate.isDate
+          const rawEnd = details.endDate?.toJSDate()
           add({
-            id: `${event.uid}::${start.toISOString()}`,
+            // Keep the id tied to the original recurrence slot (`next`),
+            // not the possibly-overridden `start`, so a given occurrence
+            // keeps a stable id even if it gets moved/edited later.
+            id: `${event.uid}::${next.toJSDate().toISOString()}`,
             start,
-            end: details.endDate?.toJSDate(),
-            title: event.summary ?? '',
-            location: event.location || undefined,
-            description: event.description || undefined,
-            allDay: next.isDate,
+            end: normalizeAllDayEnd(rawEnd, isAllDay),
+            title: details.item.summary ?? '',
+            location: details.item.location || undefined,
+            description: details.item.description || undefined,
+            allDay: isAllDay,
           })
         }
         next = iterator.next()
       }
     } else {
+      const isAllDay = event.startDate.isDate
       const start = event.startDate.toJSDate()
-      const end = event.endDate ? event.endDate.toJSDate() : undefined
+      const rawEnd = event.endDate ? event.endDate.toJSDate() : undefined
+      const end = normalizeAllDayEnd(rawEnd, isAllDay)
       if ((end ?? start) >= startOfToday) {
         add({
           id: event.uid || start.toISOString(),
@@ -126,9 +152,34 @@ export function parseCalendar(
           title: event.summary ?? '',
           location: event.location || undefined,
           description: event.description || undefined,
-          allDay: event.startDate.isDate,
+          allDay: isAllDay,
         })
       }
+    }
+  }
+
+  // Standalone exceptions whose master VEVENT is missing from the feed
+  // (rare, but some exports produce this) would otherwise silently vanish
+  // since the loop above only walks `masters`. Surface them as one-off
+  // events instead of dropping them.
+  for (const ov of overrides) {
+    const uid = ov.getFirstPropertyValue('uid') as string
+    if (masterUids.has(uid)) continue
+    const event = new ICAL.Event(ov)
+    const isAllDay = event.startDate.isDate
+    const start = event.startDate.toJSDate()
+    const rawEnd = event.endDate ? event.endDate.toJSDate() : undefined
+    const end = normalizeAllDayEnd(rawEnd, isAllDay)
+    if ((end ?? start) >= startOfToday && start <= horizon) {
+      add({
+        id: `${uid}::${start.toISOString()}`,
+        start,
+        end,
+        title: event.summary ?? '',
+        location: event.location || undefined,
+        description: event.description || undefined,
+        allDay: isAllDay,
+      })
     }
   }
 
