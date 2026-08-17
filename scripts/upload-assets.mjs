@@ -54,7 +54,6 @@ async function main() {
       filename,
       contentType: asset.contentType,
     })
-    console.log(`${asset.kind.padEnd(5)} ${filename}\n      _id: ${res._id}\n      url: ${res.url}`)
   }
 }
 

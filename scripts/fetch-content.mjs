@@ -31,6 +31,7 @@ const OUT_SPITZENDUO = resolve(DATA_DIR, 'spitzenduo.generated.ts')
 const OUT_CLUSTER = resolve(DATA_DIR, 'kandidaten-cluster.generated.ts')
 const OUT_REGIONS = resolve(DATA_DIR, 'regions.generated.ts')
 const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
+const OUT_PRESS = resolve(DATA_DIR, 'press.generated.ts')
 const OUT_PAGES = resolve(DATA_DIR, 'pages.generated.ts')
 
 const client = createClient({
@@ -97,6 +98,12 @@ const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
     "photo": photo.asset->url,
     "foto_originalFilename": photo.asset->originalFilename,
   }
+}`
+
+const PRESS_QUERY = `*[_type=="press"]|order(published_at desc){
+  ...,
+  "screenshot": screenshot.asset->url,
+  "screenshot_originalFilename": screenshot.asset->originalFilename,
 }`
 
 const PAGES_QUERY = `*[_type=="seite"]|order(slug desc){
@@ -208,6 +215,7 @@ function buildNews(rows) {
     .map((article) => {
       const content_modules = article.content_modules || []
       const hero_module = content_modules.find((m) => m._type === 'hero_linear') || {}
+      const photo_module = content_modules.find((m) => m._type === 'photo')
 
       return {
         slug: clean(article.slug),
@@ -217,10 +225,36 @@ function buildNews(rows) {
         title: lines(hero_module.heroZeilen),
         body: clean(hero_module.heroText),
         content_modules,
+
+        ...(photo_module ? {
+          image_originalFilename: photo_module.photo.foto_originalFilename || '',
+          image: withParams(photo_module.photo, CARD_IMG_PARAMS),
+          imageDetail: withParams(photo_module.photo, DETAIL_IMG_PARAMS),
+        }: {
+          image_originalFilename: null,
+          image: null,
+          imageDetail: null,
+        })
       }
     })
 
   return articles
+}
+
+function buildPress(rows) {
+  const press = (rows || [])
+    .map((press) => {
+      return {
+        ...press,
+        is_published: Boolean(press.is_published),
+        publishedAt: clean(press.published_at),
+        screenshot_originalFilename: press.screenshot_originalFilename || '',
+        screenshot: withParams(press.screenshot, CARD_IMG_PARAMS),
+        screenshotDetail: withParams(press.screenshot, DETAIL_IMG_PARAMS),
+      }
+    })
+
+  return press
 }
 
 function buildPages(rows) {
@@ -437,8 +471,9 @@ const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {
-  const [regionsRows, newsRows, pagesRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+  const [regionsRows, pressRows, newsRows, pagesRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
     client.fetch(REGIONS_QUERY),
+    client.fetch(PRESS_QUERY),
     client.fetch(NEWS_QUERY),
     client.fetch(PAGES_QUERY),
     client.fetch(WAHLPROGRAMM_QUERY),
@@ -451,6 +486,7 @@ async function main() {
   ])
 
   const regions = buildRegions(regionsRows)
+  const press = buildPress(pressRows)
   const news = buildNews(newsRows)
   const pages = buildPages(pagesRows)
   const wahlprogramm = buildWahlprogramm(wpRes)
@@ -465,6 +501,12 @@ async function main() {
   writeFileSync(
     OUT_REGIONS,
     `${header}\n\nexport const REGIONS_CMS = ${JSON.stringify(regions, null, 2)}\n`,
+    'utf8',
+  )
+
+  writeFileSync(
+    OUT_PRESS,
+    `${header}\n\nexport const PRESS_CMS = ${JSON.stringify(press, null, 2)}\n`,
     'utf8',
   )
 
@@ -521,8 +563,8 @@ async function main() {
     'utf8',
   )
 
-  console.log(
-    `Inhalte aktualisiert: Bezirke (${regions.length}), News (${news.length}), Pages (${pages.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
+  console.info(
+    `Inhalte aktualisiert: Bezirke (${regions.length}), Press (${press.length}), News (${news.length}), Pages (${pages.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
   )
 }
 
@@ -530,6 +572,7 @@ main().catch((err) => {
   console.warn('Sanity-Abruf fehlgeschlagen:', err.message)
   if (
     existsSync(OUT_REGIONS) &&
+    existsSync(OUT_PRESS) &&
     existsSync(OUT_NEWS) &&
     existsSync(OUT_PAGES) &&
     existsSync(OUT_WAHLPROGRAMM) &&

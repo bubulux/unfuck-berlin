@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router";
 import { PageLayout } from "../../components/templates/page-layout";
 import { NEWS_CMS } from "../../data/news.generated";
+import { PRESS_CMS } from "../../data/press.generated";
 import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
 import { Icon } from "../../components/atoms/icon";
@@ -11,6 +12,16 @@ import { marked } from 'marked'
 
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
+
+// function getFirstPhoto () {
+//   {
+//         "_key": "a3b9bfe61bc4",
+//         "_type": "photo",
+//         "alt": "Pia Voltz mit Antragstext",
+//         "foto_originalFilename": "pressemitteilung-bvv-trekoe-2025-06-16.jpg",
+//         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4e6bfc353a41a5b725c87f75eeb0e0cd2729e4d7-1880x1084.jpg"
+//       },
+// }
 
 export function NewsPage() {
   const { pathname } = useLocation();
@@ -25,13 +36,17 @@ export function NewsPage() {
     .filter(a => pathname.endsWith(`/${a.slug}`))
 
   if (!article_many.length) {
-    const NEWS_CMS_sorted = NEWS_CMS
-      .filter(a => a.is_published === true)
-      .sort((a, b) => Number(new Date(b.publishedAt || '')) - Number(new Date(a.publishedAt || '')))
+
+    const PRESS_AND_NEWS_SORTED = [
+      ...(PRESS_CMS.map(data => ({ type: 'press', data }))),
+      ...(NEWS_CMS.map(data => ({ type: 'article', data }))),
+    ]
+      .filter(a => a.data.is_published === true)
+      .sort((a, b) => Number(new Date(b.data.publishedAt || '')) - Number(new Date(a.data.publishedAt || '')))
 
     return (
       <PageLayout activePath={pathname} variant="light">
-        <div className="news__wrapper">
+        <div className="news__wrapper article_list">
           <HighlightText
             as="h1"
             lines={['News']}
@@ -45,46 +60,120 @@ export function NewsPage() {
           />
 
           {
-            NEWS_CMS_sorted.map((article, index) => {
-              const publishedAt_date = new Date(article.publishedAt);
-              const url = `/news/${article.slug}`
+            PRESS_AND_NEWS_SORTED.map((item, index) => {
+              if (item.type === 'press') {
+                const press: any = item.data
+                const publishedAt_date = new Date(press.publishedAt);
+                const url = press.url
 
-              return (
-                <section
-                  key={`${index}-${article.slug}`}
-                  className="news__text_width"
-                  style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px' }}
-                >
-                  <a
-                    href={url}
-                    style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+                return (
+                  <section
+                    key={`${index}-${press.url}`}
+                    className="news__text_width pressAndNewsItemSection"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '16px',
+                      marginBottom: '32px',
+                      '--img-shadow-color': '#ccc',
+                    } as React.CSSProperties}
                   >
-                    <HighlightText
-                      as="h2"
-                      autoBreakSize={autoBreakSize_roomy}
-                      lines={article.title}
-                      variant="subtitel"
-                      color="neon"
-                      textColor="purple"
-                      align="left"
-                      style={{ marginBottom: '8px' }}
-                    />
-                    <p style={{ width: '52rem', maxWidth: '100%' }}>
-                      <strong>{publishedAt_date.toLocaleString('de-DE', {
-                        day: '2-digit',
-                        month: '2-digit',
-                        year: 'numeric',
-                      })}</strong>
-                      {article.body && ` — ${article.body}`}
-                    </p>
-                  </a>
-                  <div>
-                    <Button as="a" size="cta" href={url} color="purple">
-                      weiter lesen…
-                    </Button>
-                  </div>
-                </section>
-              )
+                    <a
+                      href={url}
+                      style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+                    >
+                      <div className="headlineAndImage">
+                        {press.screenshot && (<div className="teaserImageInHeadingWrapper"><img src={press.screenshot} /></div>)}
+
+                        <HighlightText
+                          className={`headline ${press.screenshot ? 'hasImage' : ''}`}
+                          as="h2"
+                          autoBreakSize={autoBreakSize_roomy}
+                          lines={[press.title]}
+                          variant="body"
+                          color="purple"
+                          textColor="white"
+                          align="left"
+                          style={{
+                            marginBlockEnd: '8px',
+                          }}
+                        />
+                      </div>
+                      <p style={{ width: '52rem', maxWidth: '100%' }}>
+                        <strong>{publishedAt_date.toLocaleString('de-DE', {
+                          day: '2-digit',
+                          month: '2-digit',
+                          year: 'numeric',
+                        })}</strong> — <em>{url}</em>
+                      </p>
+                    </a>
+                    <div>
+                      <Button as="a" size="cta" variant="outline" href={url} color="purple">
+                        Artikel lesen…
+                      </Button>
+                    </div>
+                  </section>
+                )
+              }
+              if (item.type === 'article') {
+                const article: any = item.data
+
+                const publishedAt_date = new Date(article.publishedAt);
+                const url = `/news/${article.slug}`
+
+                return (
+                  <section
+                    key={`${index}-${article.slug}`}
+                    className="news__text_width pressAndNewsItemSection"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '16px',
+                      marginBottom: '32px',
+                      '--img-shadow-color': 'var(--color-purple)',
+                    } as React.CSSProperties}
+                  >
+                    <a
+                      href={url}
+                      style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+                    >
+                      <div className="headlineAndImage">
+                        {article.image && (<div className="teaserImageInHeadingWrapper"><img src={article.image} /></div>)}
+
+                      <HighlightText
+                        className={`headline ${article.image ? 'hasImage' : ''}`}
+                        as="h2"
+                        autoBreakSize={autoBreakSize_roomy}
+                        lines={article.title}
+                        variant="subtitel"
+                        color="neon"
+                        textColor="purple"
+                        align="left"
+                        style={{
+                          marginBlockEnd: '8px',
+                        }}
+                      />
+                      </div>
+
+                      <p style={{ width: '52rem', maxWidth: '100%' }}>
+                        <strong>{publishedAt_date.toLocaleString('de-DE', {
+                          day: '2-digit',
+                          month: '2-digit',
+                          year: 'numeric',
+                        })}</strong>
+                        {article.body && ` — ${article.body}`}
+                      </p>
+                    </a>
+                    <div>
+                      <Button as="a" size="cta" variant="outline" href={url} color="purple">
+                        weiter lesen…
+                      </Button>
+                    </div>
+                  </section>
+                )
+              }
+
+              return null
             })
           }
         </div>
