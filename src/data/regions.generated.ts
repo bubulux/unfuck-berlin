@@ -560,6 +560,12 @@ export const REGIONS_CMS = [
         "_key": "865cfc8a3de3",
         "_type": "md_content",
         "md_content": "Neukölln lebt von seiner Vielfalt, kein Kiez ist wie der andere. Für Dich ist es einfach zuhause, vom Reuterkiez über Britz bis nach Rudow. Hier ist unser Plan dafür.\n\n- **Bezahlbares Wohnen ohne Feldbebauung:** Mehr Wohnraum durch Nachverdichtung, schnellere Genehmigungen, die Aktivierung von Leerstand und weniger illegale Ferienwohnungen. Das Tempelhofer Feld bleibt als Erholungsort erhalten und wird besser vor Extremhitze geschützt.\n- **Nahverkehr:** Die M41 ist chronisch überlastet, wir bauen sie zur Straßenbahn aus. Damit ihr schnell und entspannt durch die Sonnenallee kommt, ohne im Stau zu stehen. Und wir bringen die M10-Verlängerung bis zum Hermannplatz voran.\n- **Schulen:** Schulen, die verwahrlosen, weil das Geld für die Reinigung und Instandsetzung fehlt, sind kein Randproblem, sondern Alltag. Wir sorgen für verlässliche Mittel, damit Sauberkeit an Schulen kein Luxus bleibt und Kinder Lernorte haben, zu denen sie gerne kommen.\n- **Müll:** Genug von „Neukölln bleibt dreckig!\" Das ändern wir mit mehr Mülleimern, Sperrmüllpunkten in jedem Kiez und einer Kiez-Norm, die Sauberkeit statt Wegwerfen zum Standard macht.\n- **Sicher und entspannt unterwegs:** Mit barrierefreien Fußwegen, sicheren Überwegen, geschützten Radspuren, abgeschliffenem Kopfsteinpflaster und Parkraumbewirtschaftung im Schillerkiez sowie rund um das Vivantes Klinikum Neukölln, für weniger Parkplatzsuchverkehr und weniger Stress für Anwohnende."
+      },
+      {
+        "_key": "44cf61676e53",
+        "_type": "one_cta",
+        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_neukoln.pdf",
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
