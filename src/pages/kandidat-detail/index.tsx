@@ -52,8 +52,15 @@ export function KandidatDetail() {
       <CandidateDetail
         variant="light"
         name={kandidat.name}
+
         image={kandidat.imageDetail || kandidat.image}
         imageAlt={kandidat.name}
+        foto_originalFilename={kandidat.foto_originalFilename}
+
+        image_2={kandidat.imageDetail_2}
+        imageAlt_2={kandidat.name}
+        foto_originalFilename_2={kandidat.foto_originalFilename_2}
+
         meta={meta}
         blocks={blocks}
         socials={socials}

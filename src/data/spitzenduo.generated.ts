@@ -6,7 +6,8 @@ export const SPITZENDUO_CMS = [
     "vorname": "Anna",
     "nachname": "Auerbach",
     "role": "Volt Spitzenkandidatin",
-    "image": "https://cdn.sanity.io/images/xzcgo5ky/production/4954e6ea179dbb75e08570d6c5dd9363345c5aa4-1000x700.png?auto=format",
+    "foto_originalFilename": "Anna-Teaser.png",
+    "image": "https://cdn.sanity.io/images/xzcgo5ky/production/4954e6ea179dbb75e08570d6c5dd9363345c5aa4-1000x700.png?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=10",
     "alt": "Anna Auerbach",
     "bg": "#5b3381",
     "to": "/kandidierende/anna-auerbach"
@@ -15,7 +16,8 @@ export const SPITZENDUO_CMS = [
     "vorname": "Paul",
     "nachname": "Loeper",
     "role": "Volt Spitzenkandidat",
-    "image": "https://cdn.sanity.io/images/xzcgo5ky/production/67c959c52ae99331df3ba2ddd7650bea4866240b-1000x700.png?auto=format",
+    "foto_originalFilename": "Paul-Teaser.png",
+    "image": "https://cdn.sanity.io/images/xzcgo5ky/production/67c959c52ae99331df3ba2ddd7650bea4866240b-1000x700.png?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=10",
     "alt": "Paul Loeper",
     "bg": "#382255",
     "to": "/kandidierende/paul-loeper"

@@ -10,26 +10,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:08:35Z",
         "_id": "b89e86a4-15ca-4fd3-b1fb-337ae4e604c5",
-        "_rev": "ZIuquwn7xL9POL93TtmfVF",
+        "_rev": "gSD2EG7QiN9E3Tu6nMnTrJ",
+        "_system": {
+          "base": {
+            "id": "b89e86a4-15ca-4fd3-b1fb-337ae4e604c5",
+            "rev": "ZIuquwn7xL9POL93TtmfVF"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:08:46Z",
+        "_updatedAt": "2026-08-17T16:21:55Z",
         "bezirk": "09 Treptow-Köpenick",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-1f232cf1c9d7eca5a366d82267992c71037967d2-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f232cf1c9d7eca5a366d82267992c71037967d2-1920x2885.jpg",
+        "foto_originalFilename": "PIA_VOLTZ_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "PIA_VOLTZ_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Pia Voltz",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f232cf1c9d7eca5a366d82267992c71037967d2-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f232cf1c9d7eca5a366d82267992c71037967d2-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:08:52Z",
         "_id": "2acf5c60-42c6-462c-bfda-ab7b52e540f3",
-        "_rev": "84yru1YmbtjxTzqq0jMGXk",
+        "_rev": "TZSo9XvhWf3aAVsIk7Qw0b",
+        "_system": {
+          "base": {
+            "id": "2acf5c60-42c6-462c-bfda-ab7b52e540f3",
+            "rev": "84yru1YmbtjxTzqq0jMGXk"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:09:09Z",
+        "_updatedAt": "2026-08-17T16:21:41Z",
         "bezirk": "09 Treptow-Köpenick",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6280656fc935c097635b778e929f97c9dff34b9e-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6280656fc935c097635b778e929f97c9dff34b9e-1920x2885.jpg",
+        "foto_originalFilename": "HENDRIK_SCHÄFER_PORTRAIT_4x5_BERLIN2026 Kopie_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "HENDRIK_SCHÄFER_FULL_BODY_BERLIN2026 Kopie_©Evelin_Frerk.jpg",
         "name": "Hendrik Schaefer",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6280656fc935c097635b778e929f97c9dff34b9e-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6280656fc935c097635b778e929f97c9dff34b9e-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -56,26 +92,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:59:07Z",
         "_id": "996bc165-dfb2-4d01-ab72-49e889e7d632",
-        "_rev": "84yru1YmbtjxTzqq0jLX40",
+        "_rev": "56Aw9PqdKBoWxRYUC03N1f",
+        "_system": {
+          "base": {
+            "id": "996bc165-dfb2-4d01-ab72-49e889e7d632",
+            "rev": "84yru1YmbtjxTzqq0jLX40"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T09:59:19Z",
+        "_updatedAt": "2026-08-17T16:23:42Z",
         "bezirk": "07 Tempelhof-Schöneberg",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-788e63b1954e9e495d8e917f6e3bcb85baeb6416-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/788e63b1954e9e495d8e917f6e3bcb85baeb6416-1920x2885.jpg",
+        "foto_originalFilename": "NIKLAS_KÜHNE_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "NIKLAS_KÜHNE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Niklas Kühne",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/788e63b1954e9e495d8e917f6e3bcb85baeb6416-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/788e63b1954e9e495d8e917f6e3bcb85baeb6416-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T09:59:24Z",
         "_id": "83cb1643-fec6-40ad-a7ab-aebf25b7a453",
-        "_rev": "84yru1YmbtjxTzqq0jLYLM",
+        "_rev": "gSD2EG7QiN9E3Tu6nMnhKc",
+        "_system": {
+          "base": {
+            "id": "83cb1643-fec6-40ad-a7ab-aebf25b7a453",
+            "rev": "84yru1YmbtjxTzqq0jLYLM"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T09:59:32Z",
+        "_updatedAt": "2026-08-17T16:23:28Z",
         "bezirk": "07 Tempelhof-Schöneberg",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-5274086384e13f361bf746f07e8fbf1a5972b479-1920x2879-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/5274086384e13f361bf746f07e8fbf1a5972b479-1920x2879.jpg",
+        "foto_originalFilename": "RAHEL_DEMANT_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_originalFilename_2": "RAHEL_DEMANT_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Rahel Demant",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/5274086384e13f361bf746f07e8fbf1a5972b479-1920x2879.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/5274086384e13f361bf746f07e8fbf1a5972b479-1920x2879.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -102,26 +174,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:05:59Z",
         "_id": "b48868f9-727f-4b1c-80ab-f1a2d31295f5",
-        "_rev": "ZIuquwn7xL9POL93TtmTZP",
+        "_rev": "TZSo9XvhWf3aAVsIk7R16b",
+        "_system": {
+          "base": {
+            "id": "b48868f9-727f-4b1c-80ab-f1a2d31295f5",
+            "rev": "ZIuquwn7xL9POL93TtmTZP"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:06:14Z",
+        "_updatedAt": "2026-08-17T16:22:20Z",
         "bezirk": "06 Steglitz-Zehlendorf",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-55e4b47d4bbb2c7a977df81bd247ad75d90ef4d1-2732x4096-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/55e4b47d4bbb2c7a977df81bd247ad75d90ef4d1-2732x4096.jpg",
+        "foto_originalFilename": "SUSANN_KÄMMER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_originalFilename_2": "SUSANN_KÄMMER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Susann Kämmer",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/55e4b47d4bbb2c7a977df81bd247ad75d90ef4d1-2732x4096.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/55e4b47d4bbb2c7a977df81bd247ad75d90ef4d1-2732x4096.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:05:44Z",
         "_id": "a5d4e987-42ce-4f59-a3c9-66b9712355f1",
-        "_rev": "84yru1YmbtjxTzqq0jM5PM",
+        "_rev": "gSD2EG7QiN9E3Tu6nMnbf9",
+        "_system": {
+          "base": {
+            "id": "a5d4e987-42ce-4f59-a3c9-66b9712355f1",
+            "rev": "84yru1YmbtjxTzqq0jM5PM"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:05:53Z",
+        "_updatedAt": "2026-08-17T16:22:32Z",
         "bezirk": "06 Steglitz-Zehlendorf",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-54a95033245c4888612e787b90e1cbc19b8edb54-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/54a95033245c4888612e787b90e1cbc19b8edb54-1920x2885.jpg",
+        "foto_originalFilename": "INGO_PARTEY_PORTRAIT_BERLIN2026 Kopie_©Evelin_Frerk-2.jpg",
+        "foto_originalFilename_2": "INGO_PARTEY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Ingo Partey",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/54a95033245c4888612e787b90e1cbc19b8edb54-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/54a95033245c4888612e787b90e1cbc19b8edb54-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -148,26 +256,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:16:14Z",
         "_id": "a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
-        "_rev": "ZIuquwn7xL9POL93TtnHA5",
+        "_rev": "TZSo9XvhWf3aAVsIk7QbD7",
+        "_system": {
+          "base": {
+            "id": "a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
+            "rev": "ZIuquwn7xL9POL93TtnHA5"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:16:23Z",
+        "_updatedAt": "2026-08-17T16:19:40Z",
         "bezirk": "05 Spandau",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-ffefb12b587b52e1ed9c3193251bae2b6376d47c-3840x5770-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/ffefb12b587b52e1ed9c3193251bae2b6376d47c-3840x5770.jpg",
+        "foto_originalFilename": "HELMUT_SCHARFENORT_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "HELMUT_SCHARFENORT_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Helmut Scharfenort",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/ffefb12b587b52e1ed9c3193251bae2b6376d47c-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/ffefb12b587b52e1ed9c3193251bae2b6376d47c-3840x5770.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:16:29Z",
         "_id": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
-        "_rev": "U74tcxucQVTMOGRTVgmJF3",
+        "_rev": "TZSo9XvhWf3aAVsIk7RwZF",
+        "_system": {
+          "base": {
+            "id": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
+            "rev": "U74tcxucQVTMOGRTVgmJF3"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:16:38Z",
+        "_updatedAt": "2026-08-17T16:33:56Z",
         "bezirk": "05 Spandau",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg",
+        "foto_originalFilename": "DANINA_SCHWARM_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "DANINA_SCHWARM_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Danina Schwarm",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -199,21 +343,44 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:10:55Z",
         "bezirk": "12 Reinickendorf",
         "foto": null,
+        "foto_2": null,
+        "foto_originalFilename": "",
+        "foto_originalFilename_2": "",
         "name": "Antonia Marx",
         "image": "",
-        "imageDetail": ""
+        "imageDetail": "",
+        "image_2": "",
+        "imageDetail_2": ""
       },
       {
         "_createdAt": "2026-08-12T10:11:01Z",
         "_id": "7c4fcae9-9af6-4135-8f44-d492408f3f5a",
-        "_rev": "84yru1YmbtjxTzqq0jMLr4",
+        "_rev": "TZSo9XvhWf3aAVsIk7QsE9",
+        "_system": {
+          "base": {
+            "id": "7c4fcae9-9af6-4135-8f44-d492408f3f5a",
+            "rev": "84yru1YmbtjxTzqq0jMLr4"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:11:14Z",
+        "_updatedAt": "2026-08-17T16:21:12Z",
         "bezirk": "12 Reinickendorf",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-74dbc37e2bc7943107a77e5e5b73d531d41fc9a0-2533x3797-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/74dbc37e2bc7943107a77e5e5b73d531d41fc9a0-2533x3797.jpg",
+        "foto_originalFilename": "CHRISTOPH_GERLINGER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_originalFilename_2": "CHRISTOPH_GERLINGER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Christoph Gerlinger",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/74dbc37e2bc7943107a77e5e5b73d531d41fc9a0-2533x3797.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/74dbc37e2bc7943107a77e5e5b73d531d41fc9a0-2533x3797.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -240,26 +407,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:27:17Z",
         "_id": "e2e1bb5f-abfc-49db-ad4c-d5b06269dcee",
-        "_rev": "ZIuquwn7xL9POL93Ttiujx",
+        "_rev": "TZSo9XvhWf3aAVsIk7RHIf",
+        "_system": {
+          "base": {
+            "id": "e2e1bb5f-abfc-49db-ad4c-d5b06269dcee",
+            "rev": "ZIuquwn7xL9POL93Ttiujx"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T09:27:29Z",
+        "_updatedAt": "2026-08-17T16:25:04Z",
         "bezirk": "03 Pankow",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-b60f1b32a827ed3e981a08c4d81a2eaa9bda3026-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b60f1b32a827ed3e981a08c4d81a2eaa9bda3026-1920x2885.jpg",
+        "foto_originalFilename": "DOMENIC_BAY_PORTRAIT_BERLIN2026 Kopie_©Evelin_Frerk-2.jpg",
+        "foto_originalFilename_2": "DOMENIC_BAY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Domenic Bay",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b60f1b32a827ed3e981a08c4d81a2eaa9bda3026-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b60f1b32a827ed3e981a08c4d81a2eaa9bda3026-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T09:27:39Z",
         "_id": "5581e00e-ced0-4d7e-81c9-4a7f39840d1c",
-        "_rev": "ZIuquwn7xL9POL93Ttixut",
+        "_rev": "56Aw9PqdKBoWxRYUC03PKX",
+        "_system": {
+          "base": {
+            "id": "5581e00e-ced0-4d7e-81c9-4a7f39840d1c",
+            "rev": "ZIuquwn7xL9POL93Ttixut"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T09:27:48Z",
+        "_updatedAt": "2026-08-17T16:24:30Z",
         "bezirk": "03 Pankow",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-124f94d4b5a11cad0dd1870254ca8dbbab2f2171-3840x5770-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/124f94d4b5a11cad0dd1870254ca8dbbab2f2171-3840x5770.jpg",
+        "foto_originalFilename": "THERESA_SCHÜLTKEN_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "THERESA_SCHÜLTKEN_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Theresa Schültken",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/124f94d4b5a11cad0dd1870254ca8dbbab2f2171-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/124f94d4b5a11cad0dd1870254ca8dbbab2f2171-3840x5770.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -286,26 +489,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:18:09Z",
         "_id": "0f9863d1-6f2f-4717-8764-94970db1caa2",
-        "_rev": "U74tcxucQVTMOGRTVgmQQh",
+        "_rev": "TZSo9XvhWf3aAVsIk7QQRR",
+        "_system": {
+          "base": {
+            "id": "0f9863d1-6f2f-4717-8764-94970db1caa2",
+            "rev": "U74tcxucQVTMOGRTVgmQQh"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:18:21Z",
+        "_updatedAt": "2026-08-17T16:15:27Z",
         "bezirk": "08 Neukölln",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-9eeb81880827487e782a9d71ac3809722c624698-2685x4026-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/9eeb81880827487e782a9d71ac3809722c624698-2685x4026.jpg",
+        "foto_originalFilename": "NIKOLAI_SCHIRMER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_originalFilename_2": "NIKOLAI_SCHIRMER_FULL_BODY_V2_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Nikolai Schirmer",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/9eeb81880827487e782a9d71ac3809722c624698-2685x4026.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/9eeb81880827487e782a9d71ac3809722c624698-2685x4026.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:18:27Z",
         "_id": "203d8ffb-ebd4-41fb-83b6-42cbe2faaf94",
-        "_rev": "U74tcxucQVTMOGRTVgmRfd",
+        "_rev": "TZSo9XvhWf3aAVsIk7Bih7",
+        "_system": {
+          "base": {
+            "id": "203d8ffb-ebd4-41fb-83b6-42cbe2faaf94",
+            "rev": "U74tcxucQVTMOGRTVgmRfd"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:18:36Z",
+        "_updatedAt": "2026-08-17T14:20:27Z",
         "bezirk": "08 Neukölln",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-8a491cd8f16e243154a3c12a83c2ec822d600674-2693x4047-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/8a491cd8f16e243154a3c12a83c2ec822d600674-2693x4047.jpg",
+        "foto_originalFilename": "CINDY_UNEKEN_VoltBerlin_DSC3108©EVELIN_FRERK_©Evelin_Frerk-2.jpg",
+        "foto_originalFilename_2": "CINDY_UNEKEN_VoltBERLIN_DSC_3089©EVELIN_FRERK_x_©Evelin_Frerk.jpg",
         "name": "Cindy Uneken",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/8a491cd8f16e243154a3c12a83c2ec822d600674-2693x4047.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/8a491cd8f16e243154a3c12a83c2ec822d600674-2693x4047.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -332,32 +571,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-10T18:01:06Z",
         "_id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-        "_rev": "U74tcxucQVTMOGRTVfTLzB",
+        "_rev": "TZSo9XvhWf3aAVsIk7RKkj",
         "_system": {
           "base": {
             "id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-            "rev": "84yru1YmbtjxTzqq0iB6xy"
+            "rev": "U74tcxucQVTMOGRTVfTLzB"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-11T17:39:52Z",
+        "_updatedAt": "2026-08-17T16:26:01Z",
         "bezirk": "01 Mitte",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg",
+        "foto_originalFilename": "AXUMAWIT_BERHE_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Axumawit Berhe",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-11T17:40:01Z",
         "_id": "e536ec64-8805-4208-90b6-53b836bfda6a",
-        "_rev": "ZIuquwn7xL9POL93TsDZrf",
+        "_rev": "gSD2EG7QiN9E3Tu6nMnqXB",
+        "_system": {
+          "base": {
+            "id": "e536ec64-8805-4208-90b6-53b836bfda6a",
+            "rev": "ZIuquwn7xL9POL93TsDZrf"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-11T17:40:10Z",
+        "_updatedAt": "2026-08-17T16:25:41Z",
         "bezirk": "01 Mitte",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/d65ec7ffbc13fa6142f81437687c10a88bf229e3-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg",
+        "foto_originalFilename": "KALOJAN_HOFFMEISTER_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "KALOJAN_HOFFMEISTER_FULL_BODY_V2_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Kalojan Hoffmeister",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/d65ec7ffbc13fa6142f81437687c10a88bf229e3-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/d65ec7ffbc13fa6142f81437687c10a88bf229e3-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -384,26 +653,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:14:32Z",
         "_id": "41336da4-edeb-4c79-9611-705cec8d916b",
-        "_rev": "U74tcxucQVTMOGRTVgm9iF",
+        "_rev": "TZSo9XvhWf3aAVsIk7Qjaz",
+        "_system": {
+          "base": {
+            "id": "41336da4-edeb-4c79-9611-705cec8d916b",
+            "rev": "U74tcxucQVTMOGRTVgm9iF"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:14:35Z",
+        "_updatedAt": "2026-08-17T16:20:16Z",
         "bezirk": "10 Marzahn-Hellersdorf",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-1a17ff4c9a2f4ac8f13e07e242d5930f819966ec-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1a17ff4c9a2f4ac8f13e07e242d5930f819966ec-1920x2885.jpg",
+        "foto_originalFilename": "LARS_GAUDIAN_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "LARS_GAUDIAN_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Lars Gaudian",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1a17ff4c9a2f4ac8f13e07e242d5930f819966ec-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1a17ff4c9a2f4ac8f13e07e242d5930f819966ec-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:14:41Z",
         "_id": "5da43925-31ce-470e-acef-7761ef92dc6c",
-        "_rev": "ZIuquwn7xL9POL93Ttn7f3",
+        "_rev": "TZSo9XvhWf3aAVsIk7QgTJ",
+        "_system": {
+          "base": {
+            "id": "5da43925-31ce-470e-acef-7761ef92dc6c",
+            "rev": "ZIuquwn7xL9POL93Ttn7f3"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:14:53Z",
+        "_updatedAt": "2026-08-17T16:19:57Z",
         "bezirk": "10 Marzahn-Hellersdorf",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-cf8eb1d23943faa6460f5c3cf2d3c836784f2d2d-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/cf8eb1d23943faa6460f5c3cf2d3c836784f2d2d-1920x2885.jpg",
+        "foto_originalFilename": "KAMILA_OLOWIAK_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "KAMILA_OLOWIAK_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Kamila Olowiak",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/cf8eb1d23943faa6460f5c3cf2d3c836784f2d2d-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/cf8eb1d23943faa6460f5c3cf2d3c836784f2d2d-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -430,26 +735,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:12:29Z",
         "_id": "046b1231-8a64-4590-9928-f4eb8d0c690d",
-        "_rev": "U74tcxucQVTMOGRTVgm3BF",
+        "_rev": "56Aw9PqdKBoWxRYUC036gH",
+        "_system": {
+          "base": {
+            "id": "046b1231-8a64-4590-9928-f4eb8d0c690d",
+            "rev": "U74tcxucQVTMOGRTVgm3BF"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:12:41Z",
+        "_updatedAt": "2026-08-17T16:20:55Z",
         "bezirk": "11 Lichtenberg",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-d384835218be2f59f1d6127f21e129201b1e4662-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/d384835218be2f59f1d6127f21e129201b1e4662-1920x2885.jpg",
+        "foto_originalFilename": "ACHIM_JEDELSKY_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "ACHIM_JEDELSKY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Achim Jedelsky",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/d384835218be2f59f1d6127f21e129201b1e4662-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/d384835218be2f59f1d6127f21e129201b1e4662-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:12:47Z",
         "_id": "cc5e9077-d46f-4073-b22a-b54211925120",
-        "_rev": "ZIuquwn7xL9POL93TtmxaX",
+        "_rev": "56Aw9PqdKBoWxRYUC034e1",
+        "_system": {
+          "base": {
+            "id": "cc5e9077-d46f-4073-b22a-b54211925120",
+            "rev": "ZIuquwn7xL9POL93TtmxaX"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:12:54Z",
+        "_updatedAt": "2026-08-17T16:20:37Z",
         "bezirk": "11 Lichtenberg",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-2c8587dfcdf8695eff759b0926ddf91ad3119e72-3840x5770-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/2c8587dfcdf8695eff759b0926ddf91ad3119e72-3840x5770.jpg",
+        "foto_originalFilename": "MARTA_MENDEC_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "MARTA_MENDEC_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Marta Mendec",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/2c8587dfcdf8695eff759b0926ddf91ad3119e72-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/2c8587dfcdf8695eff759b0926ddf91ad3119e72-3840x5770.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -476,26 +817,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:04:05Z",
         "_id": "ab5c5a3c-1bce-4dc0-b3ec-0dd13e15e0a1",
-        "_rev": "ZIuquwn7xL9POL93TtmHIH",
+        "_rev": "56Aw9PqdKBoWxRYUC03KBZ",
+        "_system": {
+          "base": {
+            "id": "ab5c5a3c-1bce-4dc0-b3ec-0dd13e15e0a1",
+            "rev": "ZIuquwn7xL9POL93TtmHIH"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:04:11Z",
+        "_updatedAt": "2026-08-17T16:22:46Z",
         "bezirk": "02 Friedrichshain-Kreuzberg",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-b25b6baa0952da3b5847a5399f4bb76dfb4189c5-3840x5770-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b25b6baa0952da3b5847a5399f4bb76dfb4189c5-3840x5770.jpg",
+        "foto_originalFilename": "SUSANNE_ZELS_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk-2.jpg",
+        "foto_originalFilename_2": "SUSANNE_ZELS_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Susanne Zels",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b25b6baa0952da3b5847a5399f4bb76dfb4189c5-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b25b6baa0952da3b5847a5399f4bb76dfb4189c5-3840x5770.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:03:46Z",
         "_id": "e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
-        "_rev": "U74tcxucQVTMOGRTVglWM5",
+        "_rev": "gSD2EG7QiN9E3Tu6nMng51",
+        "_system": {
+          "base": {
+            "id": "e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
+            "rev": "U74tcxucQVTMOGRTVglWM5"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:03:59Z",
+        "_updatedAt": "2026-08-17T16:23:13Z",
         "bezirk": "02 Friedrichshain-Kreuzberg",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-89393a0cab3c99f8c13211edd0809454867b6094-2741x4119-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/89393a0cab3c99f8c13211edd0809454867b6094-2741x4119.jpg",
+        "foto_originalFilename": "CHRISTOPG_KÖNIG_PORTRAIT_4x5_BERLIN2026©Evelin_Frerk_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "CHRISTOPG_KÖNIG_FULL_BODY_BERLIN2026©Evelin_Frerk_©Evelin_Frerk.jpg",
         "name": "Christoph König",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/89393a0cab3c99f8c13211edd0809454867b6094-2741x4119.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/89393a0cab3c99f8c13211edd0809454867b6094-2741x4119.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
@@ -522,26 +899,62 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:56:30Z",
         "_id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
-        "_rev": "U74tcxucQVTMOGRTVgkrGV",
+        "_rev": "56Aw9PqdKBoWxRYUC03Otx",
+        "_system": {
+          "base": {
+            "id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
+            "rev": "U74tcxucQVTMOGRTVgkrGV"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T09:56:42Z",
+        "_updatedAt": "2026-08-17T16:24:19Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/30567c8c9892896751fd92ffd6205e89666a581c-4973x6218.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192.jpg",
+        "foto_originalFilename": "CARA_SEEBERG_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_originalFilename_2": "CARA_SEEBERG_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Cara Seeberg",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/30567c8c9892896751fd92ffd6205e89666a581c-4973x6218.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/30567c8c9892896751fd92ffd6205e89666a581c-4973x6218.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T09:56:49Z",
         "_id": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
-        "_rev": "84yru1YmbtjxTzqq0jLMac",
+        "_rev": "56Aw9PqdKBoWxRYUC03NzT",
+        "_system": {
+          "base": {
+            "id": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
+            "rev": "TZSo9XvhWf3aAVsIk7RCc9"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T09:56:57Z",
+        "_updatedAt": "2026-08-17T16:24:01Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
-        "foto": null,
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-c2153780eb4a3f6ca8423ad530ddd6c8fce314cb-5464x8192-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/c2153780eb4a3f6ca8423ad530ddd6c8fce314cb-5464x8192.jpg",
+        "foto_originalFilename": "CHRISTIAN_WEIßSTEINER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_originalFilename_2": "CHRISTIAN_WEIßSTEINER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Christian Weißsteiner",
-        "image": "",
-        "imageDetail": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/c2153780eb4a3f6ca8423ad530ddd6c8fce314cb-5464x8192.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/c2153780eb4a3f6ca8423ad530ddd6c8fce314cb-5464x8192.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",

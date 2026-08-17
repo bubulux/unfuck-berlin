@@ -18,12 +18,14 @@ export default defineType({
   preview: {
     select: {
       name: 'name',
+      foto: 'foto',
     },
     prepare(selection) {
-      const { name } = selection
+      const { name, foto } = selection
       return {
         title: name || '???',
         subtitle: '',
+        media: foto,
       }
     },
   },
@@ -37,6 +39,11 @@ export default defineType({
 
     defineField({
       name: 'foto',
+      type: 'image',
+    }),
+
+    defineField({
+      name: 'foto2',
       type: 'image',
     }),
 
