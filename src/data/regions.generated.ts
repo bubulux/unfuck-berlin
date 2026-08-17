@@ -286,19 +286,32 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:16:29Z",
         "_id": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
-        "_rev": "U74tcxucQVTMOGRTVgmJF3",
+        "_rev": "TZSo9XvhWf3aAVsIk7RwZF",
+        "_system": {
+          "base": {
+            "id": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
+            "rev": "U74tcxucQVTMOGRTVgmJF3"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:16:38Z",
+        "_updatedAt": "2026-08-17T16:33:56Z",
         "bezirk": "05 Spandau",
-        "foto": null,
-        "foto_2": null,
-        "foto_originalFilename": "",
-        "foto_originalFilename_2": "",
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg",
+        "foto_originalFilename": "DANINA_SCHWARM_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "DANINA_SCHWARM_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Danina Schwarm",
-        "image": "",
-        "imageDetail": "",
-        "image_2": "",
-        "imageDetail_2": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
     ],
     "body": "",
