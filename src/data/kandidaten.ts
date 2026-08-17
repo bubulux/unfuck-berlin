@@ -8,12 +8,13 @@ export interface Kandidat {
   bezirk: string
   /** Portrait image (Sanity CDN URL, oder lokaler Fallback /public/pics/kandis). */
   image: string
+  image_2?: string
   /** Detail-/Bio-Felder aus dem CMS (nur bei CMS-Quelle vorhanden). */
   alter?: number | null
   wahlkreis?: string
   /** Groesserer Portrait-Crop fuer die Bio-Seite. */
-  imageDetail?: string
-  foto_originalFilename?: string
+  imageDetail: string
+  foto_originalFilename: string
   imageDetail_2?: string
   foto_originalFilename_2?: string
   herzensthema?: string

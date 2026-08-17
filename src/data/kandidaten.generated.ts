@@ -72,7 +72,7 @@ export const KANDIDATEN_CMS = [
     "foto_originalFilename": "Rafael.png",
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9d791904ec11f08c524971ca2027dd371781a96c-750x1000.png?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
     "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9d791904ec11f08c524971ca2027dd371781a96c-750x1000.png?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
-    "foto_originalFilename_2": null,
+    "foto_originalFilename_2": "",
     "image_2": "",
     "imageDetail_2": "",
     "herzensthema": "Bildung, die begeistert.",

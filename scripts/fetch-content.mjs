@@ -183,7 +183,7 @@ function buildRegions(rows) {
         candidates: region.candidates.map(c => {
           return {
             ...c,
-            foto_originalFilename: c.foto_originalFilename,
+            foto_originalFilename: c.foto_originalFilename || '',
             image: withParams(c.foto, CARD_IMG_PARAMS),
             imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
           }
@@ -295,11 +295,11 @@ function buildKandidaten(rows) {
       alter: typeof k.alter === 'number' ? k.alter : null,
       wahlkreis: clean(k.wahlkreis),
 
-      foto_originalFilename: k.foto_originalFilename,
+      foto_originalFilename: k.foto_originalFilename || '',
       image: withParams(k.foto, CARD_IMG_PARAMS),
       imageDetail: withParams(k.foto, DETAIL_IMG_PARAMS),
 
-      foto_originalFilename_2: k.foto_originalFilename_2,
+      foto_originalFilename_2: k.foto_originalFilename_2 || '',
       image_2: withParams(k.foto_2, CARD_IMG_PARAMS),
       imageDetail_2: withParams(k.foto_2, DETAIL_IMG_PARAMS),
 
@@ -351,7 +351,7 @@ function buildVideos(d) {
 function buildMeets(rows) {
   const list = (rows || [])
     .map((b, i) => ({
-      foto_originalFilename: b.foto_originalFilename,
+      foto_originalFilename: b.foto_originalFilename || '',
       src: withParams(b?.url, MEET_IMG_PARAMS),
       alt: `Meet & Greet ${i + 1}`
     }))
@@ -365,7 +365,7 @@ function buildMeets(rows) {
 function buildUnfck(rows) {
   const list = (rows || [])
     .map((b, i) => ({
-      foto_originalFilename: b.foto_originalFilename,
+      foto_originalFilename: b.foto_originalFilename || '',
       src: withParams(b?.url, MEET_IMG_PARAMS),
       alt: `unf*ck berlin ${i + 1}`
     }))
@@ -382,7 +382,7 @@ function buildCluster(rows) {
     const r = bySlug.get(slug)
     if (!r || !r.foto) return null
     return {
-      foto_originalFilename: r.foto_originalFilename,
+      foto_originalFilename: r.foto_originalFilename || '',
       image: withParams(r.foto, CLUSTER_IMG_PARAMS),
       alt: clean(r.name)
     }
@@ -413,7 +413,7 @@ function buildSpitzenduo(rows, kandidaten) {
         vorname,
         nachname,
         role,
-        foto_originalFilename: p.foto_originalFilename,
+        foto_originalFilename: p.foto_originalFilename || '',
         image: withParams(p.foto, MEET_IMG_PARAMS),
         alt: `${vorname} ${nachname}`.trim(),
         bg,

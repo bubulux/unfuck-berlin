@@ -2,10 +2,10 @@ import type { HTMLAttributes } from 'react'
 import { Link } from 'react-router'
 
 interface PhotoCreditsBoxProps extends HTMLAttributes<HTMLElement> {
-  foto_originalFilename: string
+  foto_originalFilename?: string
 }
 
-const credits = {
+const credits: Record<string, any> = {
   'default': {
     label: 'Foto-Credits',
     url: '/made_with_love',
@@ -43,7 +43,7 @@ function getCredits({ filename }: { filename: string }) {
 }
 
 export function PhotoCreditsBox({
-  foto_originalFilename,
+  foto_originalFilename = '',
   children
 }: PhotoCreditsBoxProps) {
   return (

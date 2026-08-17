@@ -60,7 +60,7 @@ export function KandidatDetail() {
         image_2={kandidat.imageDetail_2}
         imageAlt_2={kandidat.name}
         foto_originalFilename_2={kandidat.foto_originalFilename_2}
-        
+
         meta={meta}
         blocks={blocks}
         socials={socials}

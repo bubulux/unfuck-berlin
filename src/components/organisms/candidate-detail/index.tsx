@@ -18,9 +18,9 @@ export interface CandidateDetailProps extends HTMLAttributes<HTMLElement> {
   image: string
   imageAlt: string
   foto_originalFilename: string
-  image_2: string
-  imageAlt_2: string
-  foto_originalFilename_2: string
+  image_2?: string
+  imageAlt_2?: string
+  foto_originalFilename_2?: string
   /** e.g. "Kandidierende zur Wahl des AGH 2026 / Listenplatz 2". */
   subtitle?: string
   /** Short fact lines, e.g. ["Listenplatz: 2 | Alter: 36 | Bezirk: Pankow"]. */
