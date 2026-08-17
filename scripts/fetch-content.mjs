@@ -83,6 +83,8 @@ const REGIONS_QUERY = `*[_type=="region"]|order(name desc){
       ...,
       "foto": foto.asset->url,
       "foto_originalFilename": foto.asset->originalFilename,
+      "foto_2": foto2.asset->url,
+      "foto_originalFilename_2": foto2.asset->originalFilename,
     }
   }
 }`
@@ -186,6 +188,10 @@ function buildRegions(rows) {
             foto_originalFilename: c.foto_originalFilename || '',
             image: withParams(c.foto, CARD_IMG_PARAMS),
             imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
+
+            foto_originalFilename_2: c.foto_originalFilename_2 || '',
+            image_2: withParams(c.foto_2, CARD_IMG_PARAMS),
+            imageDetail_2: withParams(c.foto_2, DETAIL_IMG_PARAMS),
           }
         }),
         body: '', // clean(hero_module.heroText),
