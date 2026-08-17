@@ -15,6 +15,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:08:46Z",
         "bezirk": "09 Treptow-Köpenick",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Pia Voltz",
         "image": "",
         "imageDetail": ""
@@ -27,6 +28,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:09:09Z",
         "bezirk": "09 Treptow-Köpenick",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Hendrik Schaefer",
         "image": "",
         "imageDetail": ""
@@ -61,6 +63,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T09:59:19Z",
         "bezirk": "07 Tempelhof-Schöneberg",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Niklas Kühne",
         "image": "",
         "imageDetail": ""
@@ -73,6 +76,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T09:59:32Z",
         "bezirk": "07 Tempelhof-Schöneberg",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Rahel Demant",
         "image": "",
         "imageDetail": ""
@@ -107,6 +111,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:06:14Z",
         "bezirk": "06 Steglitz-Zehlendorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Susann Kämmer",
         "image": "",
         "imageDetail": ""
@@ -119,6 +124,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:05:53Z",
         "bezirk": "06 Steglitz-Zehlendorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Ingo Partey",
         "image": "",
         "imageDetail": ""
@@ -153,6 +159,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:16:23Z",
         "bezirk": "05 Spandau",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Helmut Scharfenort",
         "image": "",
         "imageDetail": ""
@@ -165,6 +172,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:16:38Z",
         "bezirk": "05 Spandau",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Danina Schwarm",
         "image": "",
         "imageDetail": ""
@@ -199,6 +207,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:10:55Z",
         "bezirk": "12 Reinickendorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Antonia Marx",
         "image": "",
         "imageDetail": ""
@@ -211,6 +220,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:11:14Z",
         "bezirk": "12 Reinickendorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Christoph Gerlinger",
         "image": "",
         "imageDetail": ""
@@ -245,6 +255,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T09:27:29Z",
         "bezirk": "03 Pankow",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Domenic Bay",
         "image": "",
         "imageDetail": ""
@@ -257,6 +268,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T09:27:48Z",
         "bezirk": "03 Pankow",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Theresa Schültken",
         "image": "",
         "imageDetail": ""
@@ -291,6 +303,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:18:21Z",
         "bezirk": "08 Neukölln",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Nikolai Schirmer",
         "image": "",
         "imageDetail": ""
@@ -303,6 +316,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:18:36Z",
         "bezirk": "08 Neukölln",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Cindy Uneken",
         "image": "",
         "imageDetail": ""
@@ -343,6 +357,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-11T17:39:52Z",
         "bezirk": "01 Mitte",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Axumawit Berhe",
         "image": "",
         "imageDetail": ""
@@ -355,6 +370,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-11T17:40:10Z",
         "bezirk": "01 Mitte",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Kalojan Hoffmeister",
         "image": "",
         "imageDetail": ""
@@ -389,6 +405,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:14:35Z",
         "bezirk": "10 Marzahn-Hellersdorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Lars Gaudian",
         "image": "",
         "imageDetail": ""
@@ -401,6 +418,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:14:53Z",
         "bezirk": "10 Marzahn-Hellersdorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Kamila Olowiak",
         "image": "",
         "imageDetail": ""
@@ -435,6 +453,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:12:41Z",
         "bezirk": "11 Lichtenberg",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Achim Jedelsky",
         "image": "",
         "imageDetail": ""
@@ -447,6 +466,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:12:54Z",
         "bezirk": "11 Lichtenberg",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Marta Mendec",
         "image": "",
         "imageDetail": ""
@@ -481,6 +501,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:04:11Z",
         "bezirk": "02 Friedrichshain-Kreuzberg",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Susanne Zels",
         "image": "",
         "imageDetail": ""
@@ -493,6 +514,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T10:03:59Z",
         "bezirk": "02 Friedrichshain-Kreuzberg",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Christoph König",
         "image": "",
         "imageDetail": ""
@@ -527,6 +549,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T09:56:42Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Cara Seeberg",
         "image": "",
         "imageDetail": ""
@@ -539,6 +562,7 @@ export const REGIONS_CMS = [
         "_updatedAt": "2026-08-12T09:56:57Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
         "foto": null,
+        "foto_originalFilename": null,
         "name": "Christian Weißsteiner",
         "image": "",
         "imageDetail": ""

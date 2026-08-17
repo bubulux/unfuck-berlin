@@ -6,6 +6,7 @@ import './styles.css'
 import { Link } from 'react-router'
 import Button from '../../atoms/button'
 import Icon from '../../atoms/icon'
+import PhotoCreditsBox from '../../atoms/photo-credits-box'
 
 export interface CandidateBlock {
   heading: string
@@ -16,6 +17,10 @@ export interface CandidateDetailProps extends HTMLAttributes<HTMLElement> {
   name: string
   image: string
   imageAlt: string
+  foto_originalFilename: string
+  image_2: string
+  imageAlt_2: string
+  foto_originalFilename_2: string
   /** e.g. "Kandidierende zur Wahl des AGH 2026 / Listenplatz 2". */
   subtitle?: string
   /** Short fact lines, e.g. ["Listenplatz: 2 | Alter: 36 | Bezirk: Pankow"]. */
@@ -32,6 +37,12 @@ export function CandidateDetail({
   name,
   image,
   imageAlt,
+  foto_originalFilename,
+
+  image_2,
+  imageAlt_2,
+  foto_originalFilename_2,
+
   subtitle,
   meta = [],
   blocks,
@@ -49,6 +60,7 @@ export function CandidateDetail({
   const classes = ['candidate', `candidate--${variant}`, className]
     .filter(Boolean)
     .join(' ')
+
   return (
     <section className={classes} {...rest}>
       <div className="candidate__inner">
@@ -66,29 +78,53 @@ export function CandidateDetail({
         </section>
 
         <div className="candidate__media">
-          <Text as="h1" variant="titel" color={nameColor} uppercase className="candidate__name">
-            {name}
-          </Text>
+          <div>
+            <Text as="h1" variant="titel" color={nameColor} uppercase className="candidate__name">
+              {name}
+            </Text>
 
-          <img className="candidate__image" src={image} alt={imageAlt} />
+            <PhotoCreditsBox foto_originalFilename={foto_originalFilename}>
+              <img className="candidate__image" src={image} alt={imageAlt} />
+            </PhotoCreditsBox>
+          </div>
+
+          {((subtitle || meta.length > 0) && image_2) ? <div>
+            {subtitle && <Text as="p" variant="body" color={textColor} weight="bold">
+              {subtitle}
+            </Text>}
+
+            {meta.length > 0 && (
+              <div className="candidate__meta">
+                {meta.map((line) => (
+                  <Text key={line} as="p" variant="body" color={textColor}>
+                    {line}
+                  </Text>
+                ))}
+              </div>
+            )}
+
+            {image_2 && <PhotoCreditsBox foto_originalFilename={foto_originalFilename_2}>
+              <img className="candidate__image" src={image_2} alt={imageAlt_2} />
+            </PhotoCreditsBox>}
+          </div> : null}
         </div>
 
         <div className="candidate__content">
-          {subtitle ? (
-            <Text as="p" variant="body" color={textColor} weight="bold">
+          {((subtitle || meta.length > 0) && !image_2) ? <>
+            {subtitle && <Text as="p" variant="body" color={textColor} weight="bold">
               {subtitle}
-            </Text>
-          ) : null}
+            </Text>}
 
-          {meta.length > 0 ? (
-            <div className="candidate__meta">
-              {meta.map((line) => (
-                <Text key={line} as="p" variant="body" color={textColor}>
-                  {line}
-                </Text>
-              ))}
-            </div>
-          ) : null}
+            {meta.length > 0 && (
+              <div className="candidate__meta">
+                {meta.map((line) => (
+                  <Text key={line} as="p" variant="body" color={textColor}>
+                    {line}
+                  </Text>
+                ))}
+              </div>
+            )}
+          </> : null}
 
           {socials.length > 0 ? (
             <div className="candidate__follow">

@@ -13,6 +13,9 @@ export interface Kandidat {
   wahlkreis?: string
   /** Groesserer Portrait-Crop fuer die Bio-Seite. */
   imageDetail?: string
+  foto_originalFilename?: string
+  imageDetail_2?: string
+  foto_originalFilename_2?: string
   herzensthema?: string
   ueberMich?: string
   socials?: { ctaLabel: string, ctaHref: string }[]

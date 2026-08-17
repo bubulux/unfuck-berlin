@@ -43,12 +43,12 @@ const client = createClient({
 // Sanity-Bilder einheitlich zuschneiden (oben ausgerichtet) und automatisch ins
 // beste Format ausliefern. Quellbilder variieren stark in Groesse, daher lohnt
 // der einheitliche Crop. Karte: 4:5, Detailseite: 3:4 (groesser).
-const CARD_IMG_PARAMS = 'w=480&h=600&fit=crop&crop=top&auto=format'
-const DETAIL_IMG_PARAMS = 'w=720&h=960&fit=crop&crop=top&auto=format'
+const CARD_IMG_PARAMS = 'w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20'
+const DETAIL_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30'
 // Karussellbilder unveraendert lassen (nur ins beste Format ausliefern).
-const MEET_IMG_PARAMS = 'auto=format'
+const MEET_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=10'
 // Cluster-Kacheln: Hochformat (3:4) der Quellbilder beibehalten – kein Zuschnitt.
-const CLUSTER_IMG_PARAMS = 'w=600&auto=format'
+const CLUSTER_IMG_PARAMS = 'w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20'
 
 // Feste Auswahl + Reihenfolge der 9 Kandidierenden im Home-Cluster (3x3).
 const CLUSTER_SLUGS = [
@@ -57,9 +57,9 @@ const CLUSTER_SLUGS = [
   'rafael-kaaz',
   'ingo-partey',
   'juliane-kalbacher',
-  'cara-seeberg',
-  'theresa-schueltken',
   'pia-voltz',
+  'theresa-schueltken',
+  'cara-seeberg',
   'sascha-hellwig',
 ]
 const withParams = (url, params) => {
@@ -81,7 +81,8 @@ const REGIONS_QUERY = `*[_type=="region"]|order(name desc){
   "candidates": candidates_ref[]{
     _type == "reference" => @-> {
       ...,
-      "foto": foto.asset->url
+      "foto": foto.asset->url,
+      "foto_originalFilename": foto.asset->originalFilename,
     }
   }
 }`
@@ -91,7 +92,8 @@ const NEWS_QUERY = `*[_type=="article"]|order(published_at desc){
   "slug": slug.current,
   content_modules[]{
     ...,
-    "photo": photo.asset->url
+    "photo": photo.asset->url,
+    "foto_originalFilename": photo.asset->originalFilename,
   }
 }`
 
@@ -100,7 +102,8 @@ const PAGES_QUERY = `*[_type=="seite"]|order(slug desc){
   "slug": slug.current,
   content_modules[]{
     ...,
-    "photo": photo.asset->url
+    "photo": photo.asset->url,
+    "foto_originalFilename": foto.asset->originalFilename,
   }
 }`
 
@@ -118,7 +121,11 @@ const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]
 const KANDIDATEN_QUERY = `*[_type=="kandidatAgh"]|order(listenplatz asc){
   ...,
   "slug": slug.current,
-  "foto": foto.asset->url
+  "foto": foto.asset->url,
+  "foto_originalFilename": foto.asset->originalFilename,
+
+  "foto_2": foto2.asset->url,
+  "foto_originalFilename_2": foto2.asset->originalFilename,
 }`
 
 const WAHLSYSTEM_QUERY = `*[_id=="seiteCountDown"][0]{
@@ -138,16 +145,25 @@ const VIDEOS_QUERY = `{
 
 // Meet-&-Greet-Karussell der Termine-Seite: kommt aus dem bestehenden CMS-Feld
 // seiteMitmachen.carouselBilder (im Studio pflegbar – Bilder hinzufuegen/ordnen).
-const MEETS_QUERY = `*[_type=="seiteMitmachen"][0].carouselBilder[]{ "url": asset->url }`
+const MEETS_QUERY = `*[_type=="seiteMitmachen"][0].carouselBilder[]{
+  "url": asset->url,
+  "foto_originalFilename": asset->originalFilename,
+}`
 
 // Bilder-Collage der /unfuck-berlin-Seite: kommt aus seiteUnfck.collage1
 // (im Studio pflegbar). Reihenfolge = Array-Reihenfolge im Dokument.
-const UNFCK_QUERY = `*[_id=="seiteUnfck"][0].collage1[]{ "url": asset->url }`
+const UNFCK_QUERY = `*[_id=="seiteUnfck"][0].collage1[]{
+  "url": asset->url,
+  "foto_originalFilename": asset->originalFilename,
+}`
 
 // Spitzenduo (Anna & Paul) fuer die Kandidierenden-Karten: Foto + Name aus dem
 // spitzenduo-Dokument. Reihenfolge = Anna (1) vor Paul (2).
 const SPITZENDUO_QUERY = `*[_type=="spitzenduo"]|order(reihenfolge asc){
-  vorname, nachname, "foto": foto.asset->url
+  vorname,
+  nachname,
+  "foto": foto.asset->url,
+  "foto_originalFilename": foto.asset->originalFilename,
 }`
 
 function buildRegions(rows) {
@@ -167,6 +183,7 @@ function buildRegions(rows) {
         candidates: region.candidates.map(c => {
           return {
             ...c,
+            foto_originalFilename: c.foto_originalFilename,
             image: withParams(c.foto, CARD_IMG_PARAMS),
             imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
           }
@@ -277,8 +294,15 @@ function buildKandidaten(rows) {
       bezirk: clean(k.bezirk),
       alter: typeof k.alter === 'number' ? k.alter : null,
       wahlkreis: clean(k.wahlkreis),
+
+      foto_originalFilename: k.foto_originalFilename,
       image: withParams(k.foto, CARD_IMG_PARAMS),
       imageDetail: withParams(k.foto, DETAIL_IMG_PARAMS),
+
+      foto_originalFilename_2: k.foto_originalFilename_2,
+      image_2: withParams(k.foto_2, CARD_IMG_PARAMS),
+      imageDetail_2: withParams(k.foto_2, DETAIL_IMG_PARAMS),
+
       herzensthema: clean(k.herzensthema),
       ueberMich: clean(k.ueberMich),
       socials: k.socials,
@@ -326,7 +350,11 @@ function buildVideos(d) {
 
 function buildMeets(rows) {
   const list = (rows || [])
-    .map((b, i) => ({ src: withParams(b?.url, MEET_IMG_PARAMS), alt: `Meet & Greet ${i + 1}` }))
+    .map((b, i) => ({
+      foto_originalFilename: b.foto_originalFilename,
+      src: withParams(b?.url, MEET_IMG_PARAMS),
+      alt: `Meet & Greet ${i + 1}`
+    }))
     .filter((b) => b.src)
   if (!list.length) {
     throw new Error('Kein Karussell (seiteMitmachen.carouselBilder) mit Bildern gefunden.')
@@ -336,7 +364,11 @@ function buildMeets(rows) {
 
 function buildUnfck(rows) {
   const list = (rows || [])
-    .map((b, i) => ({ src: withParams(b?.url, MEET_IMG_PARAMS), alt: `unf*ck berlin ${i + 1}` }))
+    .map((b, i) => ({
+      foto_originalFilename: b.foto_originalFilename,
+      src: withParams(b?.url, MEET_IMG_PARAMS),
+      alt: `unf*ck berlin ${i + 1}`
+    }))
     .filter((b) => b.src)
   if (!list.length) {
     throw new Error('Keine Collage (seiteUnfck.collage1) mit Bildern gefunden.')
@@ -349,7 +381,11 @@ function buildCluster(rows) {
   const list = CLUSTER_SLUGS.map((slug) => {
     const r = bySlug.get(slug)
     if (!r || !r.foto) return null
-    return { image: withParams(r.foto, CLUSTER_IMG_PARAMS), alt: clean(r.name) }
+    return {
+      foto_originalFilename: r.foto_originalFilename,
+      image: withParams(r.foto, CLUSTER_IMG_PARAMS),
+      alt: clean(r.name)
+    }
   }).filter(Boolean)
   if (list.length < CLUSTER_SLUGS.length) {
     throw new Error(
@@ -377,6 +413,7 @@ function buildSpitzenduo(rows, kandidaten) {
         vorname,
         nachname,
         role,
+        foto_originalFilename: p.foto_originalFilename,
         image: withParams(p.foto, MEET_IMG_PARAMS),
         alt: `${vorname} ${nachname}`.trim(),
         bg,
