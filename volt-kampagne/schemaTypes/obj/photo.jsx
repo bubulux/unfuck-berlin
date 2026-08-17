@@ -65,6 +65,19 @@ export default defineType({
       name: 'photo',
       title: 'Bild',
       type: 'image',
+      options: {
+        hotspot: true
+      },
+      // fields: [
+      //   defineField({
+      //     name: 'caption',
+      //     type: 'string',
+      //   }),
+      //   defineField({
+      //     name: 'attribution',
+      //     type: 'string',
+      //   })
+      // ]
     }),
 
     defineField({

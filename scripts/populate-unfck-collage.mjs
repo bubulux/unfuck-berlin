@@ -50,11 +50,9 @@ async function main() {
       _key: `unfck-${i + 1}`,
       asset: { _type: 'reference', _ref: asset._id },
     })
-    console.log(`upload ${rel}\n      -> ${asset._id}`)
   }
 
   const res = await client.patch('seiteUnfck').set({ collage1: items }).commit()
-  console.log(`seiteUnfck.collage1 gesetzt (${items.length} Bilder), rev ${res._rev}`)
 }
 
 main().catch((err) => {
