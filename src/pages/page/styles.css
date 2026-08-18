@@ -2,7 +2,8 @@
   max-width: 100%;
   width: var(--content-max);
   margin-inline: auto;
-  padding: 128px var(--content-pad);
+  padding-inline: var(--content-pad);
+  padding-block: 32px;
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -13,6 +14,7 @@
   .pages__wrapper {
     width: var(--content-max-wide);
     padding-inline: var(--content-pad-wide);
+    padding-block: 64px;
     gap: var(--space-4);
     --gap-small: var(--space-4);
     --gap-big: 32px;
@@ -21,6 +23,7 @@
 @media (min-width: 900px) {
   .pages__wrapper {
     --gap-big: 64px;
+    padding-block: 128px;
   }
 }
 

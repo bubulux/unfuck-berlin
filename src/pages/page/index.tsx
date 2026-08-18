@@ -188,7 +188,7 @@ export function PagePage() {
                 key={key}
                 className={`pages__text_width hero_linear ${c.photo ? 'hasImage' : ''}`}
               >
-                <div className="pages__text_width" style={{ display: 'flex', flexDirection: 'column' }}>
+                <div className="pages__text_width" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-big)' }}>
                   <HighlightText
                     as="h1"
                     autoBreakSize={autoBreakSize_cramped}
@@ -199,7 +199,6 @@ export function PagePage() {
                     align="left"
                     uppercase={isEventsPage}
                     className="program-intro__heading"
-                    style={{ marginBottom: '32px' }}
                   />
 
                   {page.body && <div className="markdown_wrapper" dangerouslySetInnerHTML={{ __html: html_content }} />}
@@ -211,6 +210,7 @@ export function PagePage() {
               return <section
               key={key}
               className="pages__text_width"
+              style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-big)' }}
             >
               <HighlightText
                 as="h1"
@@ -222,7 +222,6 @@ export function PagePage() {
                 align="left"
                 uppercase={isEventsPage}
                 className="program-intro__heading"
-                style={{ marginBottom: '32px' }}
               />
 
               {page.body && <div className="markdown_wrapper" dangerouslySetInnerHTML={{ __html: html_content }} />}

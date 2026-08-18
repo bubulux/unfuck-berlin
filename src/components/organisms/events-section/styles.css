@@ -37,7 +37,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  margin-bottom: var(--space-5);
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-6);
 }
 
 .events__month-rule {
