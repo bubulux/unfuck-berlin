@@ -1,4 +1,4 @@
-import type { HTMLAttributes, ReactNode } from 'react'
+import type { HTMLAttributes } from 'react'
 import { Text } from '../../atoms/text'
 import { HighlightText } from '../../atoms/highlight-text'
 import { EventCard } from '../../molecules/event-card'
