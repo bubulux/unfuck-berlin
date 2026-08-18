@@ -12,8 +12,8 @@ export interface CountdownTimerProps {
 const DEFAULT_LABELS: [string, string, string, string] = [
   "Tage",
   "Stunden",
-  "MIN",
-  "SEK",
+  "Minuten",
+  "Sekunden",
 ];
 
 function getRemaining(targetMs: number) {

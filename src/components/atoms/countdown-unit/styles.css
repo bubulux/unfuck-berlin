@@ -7,19 +7,24 @@
   aspect-ratio: 1 / 1;
   min-width: 0;
   padding: var(--space-2);
-  border: 2px solid var(--color-neon);
-  border-radius: var(--radius-md);
-  color: var(--color-neon);
+  /* border: 2px solid var(--color-neon); */
+  /* border-radius: var(--radius-md); */
+  /* color: var(--color-neon); */
+  background: var(--color-neon);
+  color: var(--color-purple);
+  transform: skewY(-2deg);
 }
 
 .countdown-unit__value {
-  font-size: var(--text-titel);
+  font-size: calc(1.33 * var(--text-titel));
   font-weight: var(--font-weight-bold);
   line-height: 1;
+  transform: skewY(2deg);
 }
 
 .countdown-unit__label {
-  font-size: var(--text-cta);
+  font-size: calc(1.33 * var(--text-cta));
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.03em;
+  transform: skewY(2deg);
 }
