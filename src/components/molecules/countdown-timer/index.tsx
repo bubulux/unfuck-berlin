@@ -9,12 +9,19 @@ export interface CountdownTimerProps {
   labels?: [string, string, string, string];
 }
 
-const DEFAULT_LABELS: [string, string, string, string] = [
+const DEFAULT_LABELS_PLURAL: [string, string, string, string] = [
   "Tage",
   "Stunden",
   "Minuten",
   "Sekunden",
 ];
+
+// const DEFAULT_LABELS_SINGULAR: [string, string, string, string] = [
+//   "Tag",
+//   "Stunde",
+//   "Minute",
+//   "Sekunde",
+// ];
 
 function getRemaining(targetMs: number) {
   const totalSec = Math.max(0, Math.floor((targetMs - Date.now()) / 1000));
@@ -30,7 +37,7 @@ const pad2 = (n: number) => String(n).padStart(2, "0");
 
 export function CountdownTimer({
   target,
-  labels = DEFAULT_LABELS,
+  labels = DEFAULT_LABELS_PLURAL,
 }: CountdownTimerProps) {
   const targetMs = new Date(target).getTime();
   const [remaining, setRemaining] = useState(() => getRemaining(targetMs));

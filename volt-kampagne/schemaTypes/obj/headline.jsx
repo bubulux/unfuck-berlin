@@ -43,10 +43,12 @@ export default defineType({
       type: 'string',
       options: {
         list: [
+          'purple',
+          'green',
+          'pink',
           'white',
           'yellow',
           'orange',
-          'green',
           'blue',
         ]
       },
