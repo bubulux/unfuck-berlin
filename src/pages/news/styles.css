@@ -42,17 +42,17 @@
   }
 }
 
-section.markdown_wrapper > * {
+.markdown_wrapper > * {
   --margin-be: 1rem;
   margin-block-end: var(--margin-be);
 }
 
-section.markdown_wrapper h1,
-section.markdown_wrapper h2,
-section.markdown_wrapper h3,
-section.markdown_wrapper h4,
-section.markdown_wrapper h5,
-section.markdown_wrapper h6 {
+.markdown_wrapper h1,
+.markdown_wrapper h2,
+.markdown_wrapper h3,
+.markdown_wrapper h4,
+.markdown_wrapper h5,
+.markdown_wrapper h6 {
   --size-mul: 0.4;
   margin-block-start: 2rem;
 
@@ -61,19 +61,19 @@ section.markdown_wrapper h6 {
   letter-spacing: 0.01em;
   font-size: calc(var(--size-mul) * var(--text-titel));
 }
-section.markdown_wrapper h1 {
+.markdown_wrapper h1 {
   --size-mul: 1;
   margin-block-start: 5rem;
 }
-section.markdown_wrapper h2 {
+.markdown_wrapper h2 {
   --size-mul: 0.8;
   margin-block-start: 5rem;
 }
-section.markdown_wrapper h3 {
+.markdown_wrapper h3 {
   --size-mul: 0.6;
   margin-block-start: 3rem;
 }
-section.markdown_wrapper h4 {
+.markdown_wrapper h4 {
   --size-mul: 0.5;
   margin-block-start: 2rem;
 }

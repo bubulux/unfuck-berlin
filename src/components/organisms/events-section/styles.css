@@ -4,9 +4,10 @@
 }
 
 .events__inner {
-  max-width: var(--content-max);
-  margin-inline: auto;
-  padding: var(--space-6) var(--content-pad) var(--space-7);
+  width: 100%;
+  /* max-width: var(--content-max); */
+  /* margin-inline: auto; */
+  /* padding: var(--space-6) var(--content-pad) var(--space-7); */
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
@@ -36,7 +37,8 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
-  margin-bottom: var(--space-5);
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-6);
 }
 
 .events__month-rule {
@@ -70,10 +72,10 @@
  * themselves when a cell gets narrow — see the event-card container query).
  * Text blocks stay at a readable width. */
 @media (min-width: 700px) {
-  .events__inner {
+  /* .events__inner {
     max-width: var(--content-max-wide);
     padding-inline: var(--content-pad-wide);
-  }
+  } */
 
   .events__intro {
     max-width: 44rem;

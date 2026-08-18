@@ -33,28 +33,20 @@ function groupByMonth(events: CalendarEventItem[]) {
 }
 
 export interface EventsSectionProps extends HTMLAttributes<HTMLElement> {
-  headingLines?: string[]
-  /** Intro paragraphs. */
-  intro?: string[]
   events: CalendarEventItem[]
   /** Loading state of the (async) calendar data. Defaults to `ready`. */
   status?: 'loading' | 'ready' | 'error'
   emptyLabel?: string
   loadingLabel?: string
   errorLabel?: string
-  /** Footer note (e.g. the "missing an event?" line). */
-  children?: ReactNode
 }
 
 export function EventsSection({
-  headingLines = ['Termine', '& Treffen'],
-  intro = [],
   events,
   status = 'ready',
   emptyLabel = 'Aktuell keine anstehenden Termine.',
-  loadingLabel = 'Termine werden geladen …',
+  loadingLabel = 'Termine werden geladen…',
   errorLabel = 'Termine konnten gerade nicht geladen werden. Bitte versuch es später erneut.',
-  children,
   className,
   ...rest
 }: EventsSectionProps) {
@@ -63,26 +55,6 @@ export function EventsSection({
   return (
     <section className={classes} {...rest}>
       <div className="events__inner">
-        <HighlightText
-          as="h1"
-          lines={headingLines}
-          variant="titel"
-          color="blue"
-          textColor="purple"
-          align="left"
-          uppercase
-        />
-
-        {intro.length > 0 ? (
-          <div className="events__intro">
-            {intro.map((paragraph) => (
-              <Text key={paragraph} as="p" variant="body" color="white">
-                {paragraph}
-              </Text>
-            ))}
-          </div>
-        ) : null}
-
         {status === 'loading' ? (
           <Text as="p" variant="body" color="white">
             {loadingLabel}
@@ -128,7 +100,13 @@ export function EventsSection({
           </Text>
         )}
 
-        {children ? <div className="events__note">{children}</div> : null}
+        <div className="events__note">
+          <Text as="p" variant="body" color="white">
+            Du vermisst hier ein Event, oder würdest uns gerne auf
+            einem Panel begrüßen? <strong>Dann lad' uns ein!</strong><br />
+            Schreib dazu eine Mail an <a href="mailto:presse@voltberlin.org">presse@voltberlin.org</a>.
+          </Text>
+        </div>
       </div>
     </section>
   )

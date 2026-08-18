@@ -12,6 +12,7 @@
 
 .carousel__track {
   display: flex;
+  /* gap: var(--space-4); */
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -22,16 +23,18 @@
 .carousel__img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Tablet/desktop show multiple slides — add a little breathing room between
  * them (inner padding keeps the translate math based on whole-slide widths). */
-@media (min-width: 48rem) {
+/* @media (min-width: 48rem) {
   .carousel__slide {
     padding-inline: var(--space-2);
   }
-}
+} */
 
 /* Controls: prev · dots · next, together in one centered row below the photos. */
 .carousel__controls {
