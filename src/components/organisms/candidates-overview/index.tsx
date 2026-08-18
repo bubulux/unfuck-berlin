@@ -3,6 +3,7 @@ import { CandidateCard } from '../../molecules/candidate-card'
 import type { Kandidat } from '../../../data/kandidaten'
 import './styles.css'
 import HighlightText from '../../atoms/highlight-text'
+import Button from '../../atoms/button'
 
 export interface CandidatesOverviewProps extends HTMLAttributes<HTMLElement> {
   heading: string
@@ -49,6 +50,15 @@ export function CandidatesOverview({
               to={`/kandidierende/${candidate.slug}`}
             />
           ))}
+        </div>
+
+        <div style={{
+          display: 'flex',
+          gap: '8px',
+          flexWrap: 'wrap',
+        }}>
+          <Button as="a" href="https://voltdeutschland.org/berlin/direktkandidierende-agh-2026">AGH-Direktkandidierende</Button>
+          <Button as="a" href="https://voltdeutschland.org/berlin/menschen/kandidierende-bvv-listen-2026">BVV-Kandidierendenlisten</Button>
         </div>
       </div>
     </section>
