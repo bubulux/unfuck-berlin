@@ -112,7 +112,7 @@ const PAGES_QUERY = `*[_type=="seite"]|order(slug desc){
   content_modules[]{
     ...,
     "photo": photo.asset->url,
-    "foto_originalFilename": foto.asset->originalFilename,
+    "foto_originalFilename": photo.asset->originalFilename,
   }
 }`
 

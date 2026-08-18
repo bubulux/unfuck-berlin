@@ -381,26 +381,26 @@ export const PAGES_CMS = [
     ]
   },
   {
-    "slug": "kalender",
+    "slug": "termine",
     "theme": "purple",
-    "is_published": false,
+    "is_published": true,
     "title": [
       "Termine",
       "& Treffen"
     ],
-    "body": "Lern unsere AGH und BVV Kandidierenden kennen oder mach direkt bei Volt mit!\n\nWir freuen uns auf Dich auf Podien, Meet & Greets, und anderen Veranstaltungen.",
+    "body": "Lern unsere AGH und BVV Kandidierenden kennen oder mach direkt bei Volt Berlin mit!\n\nWir freuen uns auf Dich auf Podien, Meet & Greets, und anderen Veranstaltungen.",
     "content_modules": [
       {
         "_key": "a10ec908cbb6",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
+        "foto_originalFilename": "signal-2026-07-14-225041 (1).jpeg",
         "headline_theme": "blue",
-        "heroText": "Lern unsere AGH und BVV Kandidierenden kennen oder mach direkt bei Volt mit!\n\nWir freuen uns auf Dich auf Podien, Meet & Greets, und anderen Veranstaltungen.",
+        "heroText": "Lern unsere AGH und BVV Kandidierenden kennen oder mach direkt bei Volt Berlin mit!\n\nWir freuen uns auf Dich auf Podien, Meet & Greets, und anderen Veranstaltungen.",
         "heroZeilen": [
           "Termine",
           "& Treffen"
         ],
-        "photo": null
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/12dffc9e58282cb48adf173ca6d80db544368e94-2048x1536.jpg"
       }
     ]
   },
@@ -589,7 +589,7 @@ export const PAGES_CMS = [
         "_key": "007f6c9bf717",
         "_type": "photo",
         "alt": "unfuck berlin",
-        "foto_originalFilename": null,
+        "foto_originalFilename": "fabd98e6afa557dee651026b6241a6a4ad5691c6-1880x1084.jpg",
         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/5eb7300ba2cbbf2d2042b3bbdf8a588a1c962076-1880x1084.jpg"
       }
     ]

@@ -20,6 +20,7 @@ export interface PageLayoutProps {
   hideWasMehr?: boolean
   /** `purple` (default): purple page + purple header. `light`: white page + light header. */
   variant?: 'purple' | 'light'
+  style?: Record<string, any>
 }
 
 export function PageLayout({
@@ -31,11 +32,15 @@ export function PageLayout({
   legalLinks,
   hideWasMehr = false,
   variant = 'purple',
+  style,
 }: PageLayoutProps) {
   return (
     <div
       className={`page-layout page-layout--${variant}`}
-      style={{color: variant === 'light' ? 'var(--color-purple)' : 'var(--color-white)'}}
+      style={{
+        color: variant === 'light' ? 'var(--color-purple)' : 'var(--color-white)',
+        ...style,
+      }}
     >
       <SiteHeader
         links={navLinks}

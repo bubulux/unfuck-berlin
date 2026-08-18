@@ -6,12 +6,33 @@ import Button from "../../components/atoms/button";
 // import { Icon } from "../../components/atoms/icon";
 // import ReactMarkdown from "react-markdown";
 import { useMediaQuery } from "@uidotdev/usehooks";
-
+import { EventsSection } from "../../components/organisms/events-section";
+import { CarouselSection } from "../../components/organisms/carousel-section";
+import { useCalendar } from "../../context/calendar-context";
+import { MEETS } from "../../data/meets";
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
 import { marked } from "marked";
 import ProgramSection from "../../components/organisms/program-section";
 import { WAHLPROGRAMM } from "../../data/wahlprogramm";
+import { getHeadlineColors } from '../../lib/getHeadlineColors'
+
+function CustomCalendarPage() {
+  const { items, raw, status } = useCalendar();
+
+  // Show the whole run up to and including 30 September (of the soonest event's
+  // year), then stop — no pagination, everything is on the page at once.
+  const cutoffYear = raw[0]?.start.getFullYear() ?? new Date().getFullYear();
+  const cutoff = new Date(cutoffYear, 8, 30, 23, 59, 59, 999);
+  const events = items.filter((_, i) => raw[i] && raw[i].start <= cutoff);
+
+  return (
+    <>
+      <EventsSection events={events} status={status} />
+      <CarouselSection images={MEETS} />
+    </>
+  );
+}
 
 export function PagePage() {
   const { pathname } = useLocation();
@@ -126,10 +147,13 @@ export function PagePage() {
   "description": page.body || ''
 }
 
+  const isEventsPage = Boolean(pathname.endsWith('/termine'))
 
   const theme_variant = page.theme === 'purple' ? 'purple' : 'light' as const
   return (
-    <PageLayout activePath={pathname} variant={theme_variant}>
+    <PageLayout activePath={pathname} variant={theme_variant} style={
+      isEventsPage ? { '--content-max-wide': '' } : {}
+    }>
       <script type="application/ld+json">
         {JSON.stringify(pageJsonLd)}
       </script>
@@ -155,9 +179,36 @@ export function PagePage() {
           const c_as_any = (c as any)
 
           if (c._type === 'hero_linear') {
-            // const publishedAt_date = new Date(page.publishedAt);
+            const {bgColor, textColor} = getHeadlineColors(c.headline_theme)
 
-            return <section
+            const html_content = page.body ? marked(page.body) : ''
+
+            if (c.photo) {
+              return <section
+                key={key}
+                className={`pages__text_width hero_linear ${c.photo ? 'hasImage' : ''}`}
+              >
+                <div className="pages__text_width" style={{ display: 'flex', flexDirection: 'column' }}>
+                  <HighlightText
+                    as="h1"
+                    autoBreakSize={autoBreakSize_cramped}
+                    lines={c.heroZeilen || []}
+                    variant="titel"
+                    color={bgColor}
+                    textColor={textColor}
+                    align="left"
+                    uppercase={isEventsPage}
+                    className="program-intro__heading"
+                    style={{ marginBottom: '32px' }}
+                  />
+
+                  {page.body && <div className="markdown_wrapper" dangerouslySetInnerHTML={{ __html: html_content }} />}
+                </div>
+
+                {c.photo ? <img src={c.photo} className="headerimage" alt="" aria-hidden /> : null}
+              </section>
+            } else {
+              return <section
               key={key}
               className="pages__text_width"
             >
@@ -166,25 +217,19 @@ export function PagePage() {
                 autoBreakSize={autoBreakSize_cramped}
                 lines={c.heroZeilen || []}
                 variant="titel"
-                color="neon"
-                textColor="purple"
+                color={bgColor}
+                textColor={textColor}
                 align="left"
-                uppercase={false}
+                uppercase={isEventsPage}
                 className="program-intro__heading"
                 style={{ marginBottom: '32px' }}
               />
 
-              {/* <p style={{ width: 'var(--content-max)', maxWidth: '100%' }}>
-                <strong>{publishedAt_date.toLocaleString('de-DE', {
-                  day: '2-digit',
-                  month: '2-digit',
-                  year: 'numeric',
-                })}</strong>
-                {page.body && ` — ${page.body}`}
-              </p> */}
-              {page.body && <p style={{ width: 'var(--content-max)', maxWidth: '100%' }}>{page.body}</p>}
+              {page.body && <div className="markdown_wrapper" dangerouslySetInnerHTML={{ __html: html_content }} />}
             </section>
+            }
           } else if (c._type === 'headline') {
+            const {bgColor, textColor} = getHeadlineColors(c.headline_theme)
             return (<section
                 key={key}
                 className="pages__text_width"
@@ -195,8 +240,8 @@ export function PagePage() {
                   autoBreakSize={autoBreakSize_roomy}
                   lines={(c as any).headlineZeilen}
                   variant="subtitel"
-                  color="neon"
-                  textColor="purple"
+                  color={bgColor}
+                  textColor={textColor}
                   align="left"
                   uppercase={false}
                 />
@@ -211,7 +256,7 @@ export function PagePage() {
           } else if (c._type === 'md_content') {
           const md_content: string = c_as_any.md_content || ''
           const html_content = marked(md_content)
-          return <section key={key} className="news__text_width markdown_wrapper" style={{
+          return <section key={key} className="pages__text_width markdown_wrapper" style={{
             // width: 'var(--content-max)',
           }} dangerouslySetInnerHTML={{ __html: html_content }} />
           } else if (c._type === 'one_cta') {
@@ -251,6 +296,8 @@ export function PagePage() {
           return null
         })
       }
+
+      {isEventsPage ? <CustomCalendarPage /> : null}
 
       </div>
     </PageLayout>

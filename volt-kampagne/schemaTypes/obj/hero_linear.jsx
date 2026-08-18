@@ -36,6 +36,11 @@ export default defineType({
 
   fields: [
     defineField({
+      name: 'photo',
+      type: 'image',
+    }),
+
+    defineField({
       name: 'heroZeilen',
       type: 'array',
       of: [{ type: 'string' }],
