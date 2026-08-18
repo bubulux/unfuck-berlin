@@ -7,6 +7,7 @@ import type { SocialLink } from "../components/molecules/social-row";
 export const NAV_LINKS: NavItem[] = [
   { label: "Sticker abgreifen", href: "/sticker" },
   { label: "Wahlprogramm", to: "/wahlprogramm" },
+  { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
