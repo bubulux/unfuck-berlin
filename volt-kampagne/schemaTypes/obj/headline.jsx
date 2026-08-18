@@ -44,9 +44,10 @@ export default defineType({
       options: {
         list: [
           'purple',
-          'green',
+          'neon',
           'pink',
           'white',
+          'green',
           'yellow',
           'orange',
           'blue',

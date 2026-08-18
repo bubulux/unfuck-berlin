@@ -158,7 +158,7 @@ export function PagePage() {
         {JSON.stringify(pageJsonLd)}
       </script>
 
-      <div className="pages__wrapper">
+      <div className={`pages__wrapper ${isEventsPage ? 'wide' : 'semi_wide'}`}>
         {/* <section className="pages__text_width" style={{ marginBlockEnd: '32px' }}>
           <Link to="/pages">
             <Button
