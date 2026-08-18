@@ -130,7 +130,7 @@ export const PAGES_CMS = [
     "theme": "white",
     "is_published": true,
     "title": [
-      "Wahlprogramm"
+      "Wahlprogramm zur AGH-Wahl 2026"
     ],
     "body": "",
     "content_modules": [
@@ -138,9 +138,9 @@ export const PAGES_CMS = [
         "_key": "b82d988cf734",
         "_type": "hero_linear",
         "foto_originalFilename": null,
-        "headline_theme": "green",
+        "headline_theme": "purple",
         "heroZeilen": [
-          "Wahlprogramm"
+          "Wahlprogramm zur AGH-Wahl 2026"
         ],
         "photo": null
       },
@@ -152,18 +152,36 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "f0f63255a8c6",
+        "_key": "46a41eabb042",
         "_type": "one_cta",
-        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/kurzwahlprogramm-2026-final.pdf",
-        "ctaLabel": "Kurzwahlprogramm als PDF",
+        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-(last_edited_5-8-2026).pdf",
+        "ctaLabel": "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
         "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "3f309529c4a5",
+        "_type": "one_cta",
+        "ctaHref": "/bezirke",
+        "ctaLabel": "Wahlprogramme für die Bezirke",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "af393f747f44",
+        "_type": "headline",
+        "foto_originalFilename": null,
+        "headlineZeilen": [
+          "Kurzwahlprogramme"
+        ],
+        "headline_theme": "purple",
         "photo": null
       },
       {
         "_key": "f39cc5aba8b0",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-de",
-        "ctaLabel": "Kurzwahlprogramm zur Wahl des Abgeordnetenhauses von Berlin 2026",
+        "ctaLabel": "🇩🇪 Kurzwahlprogramm auf Deutsch",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -171,7 +189,7 @@ export const PAGES_CMS = [
         "_key": "a62333bd8986",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-en",
-        "ctaLabel": "Mini Manifesto for the 2026 Berlin House of Representatives Election",
+        "ctaLabel": "🇬🇧 Mini manifesto in English",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -179,7 +197,7 @@ export const PAGES_CMS = [
         "_key": "4f403a7e1ad3",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-es",
-        "ctaLabel": "Programa electoral breve para las elecciones de 2026 Cámara de Representantes de Berlín",
+        "ctaLabel": "🇪🇸 Programa electoral breve en español",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -187,7 +205,7 @@ export const PAGES_CMS = [
         "_key": "60ef49cb163c",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-nl",
-        "ctaLabel": "Verkort verkiezingsprogramma voor de verkiezingen van het Berlijnse Huis van Afgevaardigden 2026",
+        "ctaLabel": "🇳🇱 Verkort verkiezingsprogramma in het Nederlands",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -195,7 +213,7 @@ export const PAGES_CMS = [
         "_key": "bb8299768afe",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-pl",
-        "ctaLabel": "Skrócony program wyborczy na wybory do Izby Deputowanych Berlina 2026",
+        "ctaLabel": "🇵🇱 Skrócony program wyborczy po polsku",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -203,7 +221,7 @@ export const PAGES_CMS = [
         "_key": "9b98cb48523f",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-it",
-        "ctaLabel": "Programma elettorale breve per le elezioni della Camera dei Rappresentanti di Berlino 2026",
+        "ctaLabel": "🇮🇹 Programma elettorale breve in italiano",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -211,7 +229,7 @@ export const PAGES_CMS = [
         "_key": "ed4372037a71",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-ro",
-        "ctaLabel": "Program electoral pe scurt pentru alegerile din 2026 pentru Camera Reprezentanților din Berlin",
+        "ctaLabel": "🇷🇴 Program electoral pe scurt în română",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -219,7 +237,7 @@ export const PAGES_CMS = [
         "_key": "fcfb521583ff",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-ua",
-        "ctaLabel": "Коротка виборча програма до виборів у Палату депутатів Берліна 2026",
+        "ctaLabel": "🇺🇦 Коротка виборча програма українською",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -227,7 +245,7 @@ export const PAGES_CMS = [
         "_key": "288422427947",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-ru",
-        "ctaLabel": "Краткая предвыборная программа для выборов 2026 года Палата представителей Берлина",
+        "ctaLabel": "🇷🇺 Краткая предвыборная программа на русском",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -332,22 +350,6 @@ export const PAGES_CMS = [
         "_type": "html_content",
         "foto_originalFilename": null,
         "html_content": "Volt ist die erste echte europäische Partei: in ganz Europa aktiv, mit einem gemeinsamen politischen Fundament. Genau das nutzen wir für Berlin. Wir experimentieren nicht auf Kosten der Berliner:innen, sondern holen Lösungen in die Stadt, die sich in Europa bereits bewährt haben. 98 Best-Practice-Beispiele aus Städten wie Helsinki, Wien, Amsterdam und Kopenhagen belegen, dass unsere Vorschläge keine Utopien sind, sondern erprobte Realität. Dabei gilt: Evidenz entscheidet, nicht Ideologie. Wir messen die Wirkung unserer Maßnahmen und passen an, was nicht die gewünschten Ergebnisse bringt.",
-        "photo": null
-      },
-      {
-        "_key": "46a41eabb042",
-        "_type": "one_cta",
-        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/wahlprogramm-(last_edited_5-8-2026).pdf",
-        "ctaLabel": "Gesamtes Wahlprogramm zur AGH-Wahl 2026",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "3f309529c4a5",
-        "_type": "one_cta",
-        "ctaHref": "/bezirke",
-        "ctaLabel": "Wahlprogramme für die Bezirke",
-        "foto_originalFilename": null,
         "photo": null
       }
     ]

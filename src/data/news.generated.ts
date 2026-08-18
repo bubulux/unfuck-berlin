@@ -8,7 +8,7 @@ export const NEWS_CMS = [
     "is_published": false,
     "publishedAt": "2026-08-17",
     "title": [
-      "Kopf"
+      "🇫🇷 Programme électoral court en français"
     ],
     "body": "",
     "content_modules": [
@@ -17,7 +17,7 @@ export const NEWS_CMS = [
         "_type": "hero_linear",
         "foto_originalFilename": null,
         "heroZeilen": [
-          "Kopf"
+          "🇫🇷 Programme électoral court en français"
         ],
         "photo": null
       },
@@ -39,16 +39,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-12",
     "title": [
-      "Verkort verkiezingsprogramma voor de verkiezingen van het Berlijnse Huis van Afgevaardigden 2026"
+      "🇳🇱 Verkort verkiezingsprogramma in het Nederlands"
     ],
-    "body": "",
+    "body": "Verkort verkiezingsprogramma voor de verkiezingen van het Berlijnse Huis van Afgevaardigden 2026",
     "content_modules": [
       {
         "_key": "e3bee3fe0386",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Verkort verkiezingsprogramma voor de verkiezingen van het Berlijnse Huis van Afgevaardigden 2026",
         "heroZeilen": [
-          "Verkort verkiezingsprogramma voor de verkiezingen van het Berlijnse Huis van Afgevaardigden 2026"
+          "🇳🇱 Verkort verkiezingsprogramma in het Nederlands"
         ],
         "photo": null
       },
@@ -70,16 +71,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-12",
     "title": [
-      "Коротка виборча програма до виборів у Палату депутатів Берліна 2026"
+      "🇺🇦 Коротка виборча програма українською"
     ],
-    "body": "",
+    "body": "Коротка виборча програма до виборів у Палату депутатів Берліна 2026",
     "content_modules": [
       {
         "_key": "2ceda0f78f8f",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Коротка виборча програма до виборів у Палату депутатів Берліна 2026",
         "heroZeilen": [
-          "Коротка виборча програма до виборів у Палату депутатів Берліна 2026"
+          "🇺🇦 Коротка виборча програма українською"
         ],
         "photo": null
       },
@@ -101,16 +103,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-12",
     "title": [
-      "Program electoral pe scurt pentru alegerile din 2026 pentru Camera Reprezentanților din Berlin"
+      "🇷🇴 Program electoral pe scurt în română"
     ],
-    "body": "",
+    "body": "Program electoral pe scurt pentru alegerile din 2026 pentru Camera Reprezentanților din Berlin",
     "content_modules": [
       {
         "_key": "ac5754d663bf",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Program electoral pe scurt pentru alegerile din 2026 pentru Camera Reprezentanților din Berlin",
         "heroZeilen": [
-          "Program electoral pe scurt pentru alegerile din 2026 pentru Camera Reprezentanților din Berlin"
+          "🇷🇴 Program electoral pe scurt în română"
         ],
         "photo": null
       },
@@ -132,16 +135,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-12",
     "title": [
-      "Programa electoral breve para las elecciones de 2026 Cámara de Representantes de Berlín"
+      "🇪🇸 Programa electoral breve en español"
     ],
-    "body": "",
+    "body": "Programa electoral breve para las elecciones de 2026 Cámara de Representantes de Berlín",
     "content_modules": [
       {
         "_key": "1e3e38d1168b",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Programa electoral breve para las elecciones de 2026 Cámara de Representantes de Berlín",
         "heroZeilen": [
-          "Programa electoral breve para las elecciones de 2026 Cámara de Representantes de Berlín"
+          "🇪🇸 Programa electoral breve en español"
         ],
         "photo": null
       },
@@ -163,16 +167,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-12",
     "title": [
-      "Skrócony program wyborczy na wybory do Izby Deputowanych Berlina 2026"
+      "🇵🇱 Skrócony program wyborczy po polsku"
     ],
-    "body": "",
+    "body": "Skrócony program wyborczy na wybory do Izby Deputowanych Berlina 2026",
     "content_modules": [
       {
         "_key": "7f2c575e93bc",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Skrócony program wyborczy na wybory do Izby Deputowanych Berlina 2026",
         "heroZeilen": [
-          "Skrócony program wyborczy na wybory do Izby Deputowanych Berlina 2026"
+          "🇵🇱 Skrócony program wyborczy po polsku"
         ],
         "photo": null
       },
@@ -194,16 +199,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-12",
     "title": [
-      "Краткая предвыборная программа для выборов 2026 года Палата представителей Берлина"
+      "🇷🇺 Краткая предвыборная программа на русском"
     ],
-    "body": "",
+    "body": "Краткая предвыборная программа для выборов 2026 года Палата представителей Берлина",
     "content_modules": [
       {
         "_key": "0959ba6b577a",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Краткая предвыборная программа для выборов 2026 года Палата представителей Берлина",
         "heroZeilen": [
-          "Краткая предвыборная программа для выборов 2026 года Палата представителей Берлина"
+          "🇷🇺 Краткая предвыборная программа на русском"
         ],
         "photo": null
       },
@@ -225,16 +231,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-12",
     "title": [
-      "Programma elettorale breve per le elezioni della Camera dei Rappresentanti di Berlino 2026"
+      "🇮🇹 Programma elettorale breve in italiano"
     ],
-    "body": "",
+    "body": "Programma elettorale breve per le elezioni della Camera dei Rappresentanti di Berlino 2026",
     "content_modules": [
       {
         "_key": "0cd5d830e466",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Programma elettorale breve per le elezioni della Camera dei Rappresentanti di Berlino 2026",
         "heroZeilen": [
-          "Programma elettorale breve per le elezioni della Camera dei Rappresentanti di Berlino 2026"
+          "🇮🇹 Programma elettorale breve in italiano"
         ],
         "photo": null
       },
@@ -256,16 +263,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-11",
     "title": [
-      "Mini Manifesto for the 2026 Berlin House of Representatives Election"
+      "🇬🇧 Mini manifesto in English"
     ],
-    "body": "",
+    "body": "Mini Manifesto for the 2026 Berlin House of Representatives Election",
     "content_modules": [
       {
         "_key": "093649361124",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Mini Manifesto for the 2026 Berlin House of Representatives Election",
         "heroZeilen": [
-          "Mini Manifesto for the 2026 Berlin House of Representatives Election"
+          "🇬🇧 Mini manifesto in English"
         ],
         "photo": null
       },
@@ -287,16 +295,17 @@ export const NEWS_CMS = [
     "is_published": true,
     "publishedAt": "2026-08-10",
     "title": [
-      "Kurzwahlprogramm zur Wahl des Abgeordnetenhauses von Berlin 2026"
+      "🇩🇪 Kurzwahlprogramm auf Deutsch"
     ],
-    "body": "",
+    "body": "Kurzwahlprogramm zur Wahl des Abgeordnetenhauses von Berlin 2026",
     "content_modules": [
       {
         "_key": "ef36fd08c585",
         "_type": "hero_linear",
         "foto_originalFilename": null,
+        "heroText": "Kurzwahlprogramm zur Wahl des Abgeordnetenhauses von Berlin 2026",
         "heroZeilen": [
-          "Kurzwahlprogramm zur Wahl des Abgeordnetenhauses von Berlin 2026"
+          "🇩🇪 Kurzwahlprogramm auf Deutsch"
         ],
         "photo": null
       },
