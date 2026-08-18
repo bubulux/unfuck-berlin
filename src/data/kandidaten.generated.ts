@@ -7,7 +7,7 @@ export const KANDIDATEN_CMS = [
     "slug": "anna-auerbach",
     "listenplatz": 1,
     "bezirk": "Mitte",
-    "alter": 44,
+    "alter": 45,
     "wahlkreis": "",
     "foto_originalFilename": "Anna_Berlin2026_©Katja_Henschel.jpg",
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/1e3548f2563cc7d6ee4d97314942781f07d4158f-4116x5326.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",

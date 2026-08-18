@@ -179,7 +179,7 @@ export function PagePage() {
           const c_as_any = (c as any)
 
           if (c._type === 'hero_linear') {
-            const {bgColor, textColor} = getHeadlineColors(c.headline_theme)
+            const {bgColor, textColor} = getHeadlineColors(c_as_any.headline_theme)
 
             const html_content = page.body ? marked(page.body) : ''
 
@@ -228,7 +228,7 @@ export function PagePage() {
             </section>
             }
           } else if (c._type === 'headline') {
-            const {bgColor, textColor} = getHeadlineColors(c.headline_theme)
+            const {bgColor, textColor} = getHeadlineColors(c_as_any.headline_theme)
             return (<section
                 key={key}
                 className="pages__text_width"
