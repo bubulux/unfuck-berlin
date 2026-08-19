@@ -146,7 +146,7 @@ const WAHLSYSTEM_QUERY = `*[_id=="seiteCountDown"][0]{
 // werden ueber den originalFilename referenziert. So kann Volt die Datei im Studio
 // austauschen, ohne dass sich Code aendern muss.
 const VIDEOS_QUERY = `{
-  "annaPaulSrc": *[_type=="sanity.fileAsset" && originalFilename=="20260804_VOLT_ANNA_UND_PAUL_UNFCK_BERLIN_STATEMENT_KURZVERSION_V02_720p.mov"][0].url,
+  "annaPaulSrc": *[_type=="sanity.fileAsset" && originalFilename=="unfck berlin Page Intro Video.mp4"][0].url,
   "annaPaulPoster": *[_type=="sanity.imageAsset" && originalFilename=="20260804_VOLT_ANNA_UND_PAUL_UNFCK_BERLIN_STATEMENT_KURZVERSION_V02_720p_coverphoto.jpg"][0].url,
   "revealSrc": *[_type=="sanity.fileAsset" && originalFilename=="20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"][0].url,
   "revealPoster": *[_type=="sanity.imageAsset" && originalFilename=="unfck_reveal_poster.jpg"][0].url
