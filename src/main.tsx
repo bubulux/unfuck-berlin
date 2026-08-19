@@ -25,14 +25,15 @@ createRoot(document.getElementById('root')!).render(
 
           <Route path="/bezirke" element={<RegionsPage />} />
           <Route path="/bezirke/*" element={<RegionsPage />} />
+
+          <Route path="/news/unfuck-berlin-" element={<Navigate to="/news/unfuck-berlin-reveal" replace />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/*" element={<NewsPage />} />
-          {/* <Route path="/wahlprogramm" element={<Wahlprogramm />} /> */}
-          {/* <Route path="/termine" element={<Termine />} /> */}
+
+          <Route path="/kandidaten" element={<Navigate to="/kandidierende" replace />} />
           <Route path="/kandidierende" element={<Kandidaten />} />
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />
-          {/* Alter Pfad: /kandidaten leitet dauerhaft auf die gegenderte Route um. */}
-          <Route path="/kandidaten" element={<Navigate to="/kandidierende" replace />} />
+
           <Route path="/sticker" element={<Sticker />} />
           <Route path="/confirm" element={<Confirm />} />
           {/* Alias: the server sends confirmation links as /confirm.html?token=… */}
