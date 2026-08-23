@@ -14,11 +14,14 @@ import { PAGES_CMS } from '../../src/data/pages.generated'
  *
  * Routen-Uebersicht siehe src/main.tsx.
  */
-type Route = { name: string; path: string }
+// `mask`: CSS-Selektoren, deren Bereiche im Screenshot uebermalt werden – fuer
+// nicht-deterministische Elemente (Video-Poster, tickender Countdown).
+type Route = { name: string; path: string; mask?: string[] }
 
 // Statische Seiten mit eigener Route.
 const staticRoutes: Route[] = [
-  { name: 'home', path: '/' },
+  // Home: erster Video-Container und Countdown flackern trotz Freeze -> maskieren.
+  { name: 'home', path: '/', mask: ['.hero__media', '.countdown'] },
   { name: 'kandidierende', path: '/kandidierende' },
   { name: 'news', path: '/news' },
   { name: 'bezirke', path: '/bezirke' },
@@ -109,6 +112,7 @@ for (const route of routes) {
         ),
       )
     })
-    await expect(page).toHaveScreenshot(`${route.name}.png`, { fullPage: true, timeout: 20_000 })
+    const mask = (route.mask ?? []).map((sel) => page.locator(sel))
+    await expect(page).toHaveScreenshot(`${route.name}.png`, { fullPage: true, timeout: 20_000, mask })
   })
 }
