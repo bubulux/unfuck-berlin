@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Aus Sanity/Kalender generierte Inhalte – Build-Artefakte, kein Source of Truth.
+# Werden bei jedem Build vom prebuild-Hook neu erzeugt (npm run content).
+src/data/*.generated.*
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

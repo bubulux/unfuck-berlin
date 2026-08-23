@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host",
     "content": "node scripts/fetch-calendar.mjs && node scripts/fetch-content.mjs",
+    "content:drafts": "node --env-file=.env.local scripts/fetch-calendar.mjs && node --env-file=.env.local scripts/fetch-content.mjs",
     "prebuild": "node scripts/fetch-calendar.mjs && node scripts/fetch-content.mjs",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
