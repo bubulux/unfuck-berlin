@@ -25,6 +25,9 @@ visual-update: ## Baselines der visuellen Suite neu erzeugen/aktualisieren
 visual-drafts: ## Draft-Inhalte visuell gegen die veroeffentlichte Baseline pruefen (danach published wiederhergestellt)
 	bash scripts/visual-drafts.sh
 
+visual-production: ## Suite gegen die Produktions-URL laufen lassen (kein lokaler Server)
+	PW_BASE_URL=https://unfuckberlin.netlify.app bash scripts/snapshots.sh
+
 visual-report: ## Letzten Playwright-HTML-Report oeffnen (Host, ohne Docker)
 	npx playwright show-report
 

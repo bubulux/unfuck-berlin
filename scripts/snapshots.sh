@@ -26,6 +26,7 @@ docker run --rm $TTY_FLAG \
   --user "$(id -u):$(id -g)" \
   -e HOME=/tmp \
   -e CI="${CI:-}" \
+  -e PW_BASE_URL="${PW_BASE_URL:-}" \
   -v "$PROJECT_DIR:/work" \
   -w /work \
   ${PW_DOCKER_ARGS:-} \
