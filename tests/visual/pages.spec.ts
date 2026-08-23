@@ -29,13 +29,17 @@ const staticRoutes: Route[] = [
   { name: 'confirm', path: '/confirm' },
 ]
 
+// CMS-Seiten-Slugs, die nicht als eigene Seite existieren:
+//  - "home" doppelt die Startseite (/),
+//  - "kandidierende-(not-ready)" ist ein WIP-Entwurf und leitet auf / um.
+const EXCLUDED_PAGE_SLUGS = new Set(['home', 'kandidierende-(not-ready)'])
+
 // Dynamische Seiten aus den generierten CMS-Daten.
 const dynamicRoutes: Route[] = [
   ...KANDIDATEN_CMS.map((k) => ({ name: `kandidierende-${k.slug}`, path: `/kandidierende/${k.slug}` })),
   ...NEWS_CMS.map((a) => ({ name: `news-${a.slug}`, path: `/news/${a.slug}` })),
   ...REGIONS_CMS.map((r) => ({ name: `bezirke-${r.slug}`, path: `/bezirke/${r.slug}` })),
-  // Die "home"-Seite doppelt die Startseite (/) – daher raus.
-  ...PAGES_CMS.filter((p) => p.slug && p.slug !== 'home').map((p) => ({
+  ...PAGES_CMS.filter((p) => p.slug && !EXCLUDED_PAGE_SLUGS.has(p.slug)).map((p) => ({
     name: `page-${p.slug}`,
     path: `/${p.slug}`,
   })),
