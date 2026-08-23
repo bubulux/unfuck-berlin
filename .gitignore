@@ -16,6 +16,13 @@ dist-ssr
 # Werden bei jedem Build vom prebuild-Hook neu erzeugt (npm run content).
 src/data/*.generated.*
 
+# Playwright: nur Laufzeit-Artefakte ignorieren. Die Baselines unter
+# tests/visual/**/*-snapshots/ sind die Regression-Referenz und gehoeren ins Git.
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
