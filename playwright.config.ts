@@ -21,6 +21,9 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 0,
+  // Full-Page-Aufnahme grosser Seiten (Durchscrollen + Bild-Dekodierung) braucht
+  // mehr als die 30s-Voreinstellung.
+  timeout: 60_000,
   reporter: [['list'], ['html', { open: 'never' }]],
 
   expect: {
@@ -34,16 +37,29 @@ export default defineConfig({
 
   use: {
     baseURL: BASE_URL,
-    // Feste Breite = stabiles Layout. Full-Page erfasst die gesamte Scrollhoehe.
-    viewport: { width: 1440, height: 900 },
-    deviceScaleFactor: 1,
     trace: 'off',
   },
 
+  // Jede Seite wird in Desktop- und Mobil-Breite aufgenommen. Playwright haengt
+  // den Projektnamen an den Dateinamen an (…-desktop-linux.png / …-mobile-linux.png).
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 900 } },
+      name: 'desktop',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1440, height: 900 },
+        deviceScaleFactor: 1,
+      },
+    },
+    {
+      name: 'mobile',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 390, height: 844 },
+        deviceScaleFactor: 1,
+        isMobile: true,
+        hasTouch: true,
+      },
     },
   ],
 
