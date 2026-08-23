@@ -3,8 +3,10 @@
  * TypeScript-Dateien unter src/data/. Laeuft automatisch vor jedem Build
  * (prebuild) und manuell via `npm run content`.
  *
- * Nur Lesezugriff auf das oeffentliche Dataset – kein Token noetig, nur
- * veroeffentlichte Inhalte (keine Drafts).
+ * Lesezugriff auf das Dataset. Produktion: kein Token, nur veroeffentlichte
+ * Inhalte. Netlify-Preview-/Branch-Deploys (CONTEXT != 'production'): mit
+ * SANITY_API_READ_TOKEN + perspective 'drafts' werden Entwuerfe angezeigt
+ * (siehe Client-Konfiguration unten).
  * Faellt der Abruf aus (z. B. Sanity nicht erreichbar), bleiben die zuletzt
  * eingecheckten generierten Dateien erhalten, damit der Build nie bricht.
  *
@@ -34,12 +36,36 @@ const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
 const OUT_PRESS = resolve(DATA_DIR, 'press.generated.ts')
 const OUT_PAGES = resolve(DATA_DIR, 'pages.generated.ts')
 
+// Staging-Preview: Auf Netlify-Preview-/Branch-Deploys (CONTEXT != 'production')
+// ziehen wir Entwuerfe statt nur veroeffentlichter Inhalte. Dafuer noetig:
+//  - perspective 'drafts' (liefert Draft, sonst veroeffentlichte Fassung),
+//  - ein Read-Token (Drafts sind nicht oeffentlich), gesetzt als
+//    SANITY_API_READ_TOKEN in den Netlify-Env-Vars der Preview-Kontexte.
+// Produktion bleibt unveraendert (published, kein Token). Faellt in einem
+// Preview der Token, greift der Client auf published zurueck (Drafts leer).
+const wantsDrafts = Boolean(process.env.CONTEXT) && process.env.CONTEXT !== 'production'
+const readToken = process.env.SANITY_API_READ_TOKEN
+const usePreview = wantsDrafts && Boolean(readToken)
+
+if (wantsDrafts && !readToken) {
+  console.warn(
+    'Preview-Deploy erkannt, aber SANITY_API_READ_TOKEN fehlt – baue mit veroeffentlichten Inhalten.',
+  )
+}
+
 const client = createClient({
   projectId: 'xzcgo5ky',
   dataset: 'production',
   apiVersion: '2024-01-01',
   useCdn: false,
+  ...(usePreview ? { perspective: 'drafts', token: readToken } : {}),
 })
+
+console.info(
+  usePreview
+    ? `Sanity-Perspektive: drafts (Staging-Preview, CONTEXT=${process.env.CONTEXT}).`
+    : 'Sanity-Perspektive: published.',
+)
 
 // Sanity-Bilder einheitlich zuschneiden (oben ausgerichtet) und automatisch ins
 // beste Format ausliefern. Quellbilder variieren stark in Groesse, daher lohnt
