@@ -12,9 +12,10 @@ dist
 dist-ssr
 *.local
 
-# Aus Sanity/Kalender generierte Inhalte – Build-Artefakte, kein Source of Truth.
-# Werden bei jedem Build vom prebuild-Hook neu erzeugt (npm run content).
-src/data/*.generated.*
+# HINWEIS: src/data/*.generated.* wird bewusst eingecheckt (nicht ignoriert).
+# Sie dienen als Fallback, falls Sanity oder Google Calendar beim Build nicht
+# antworten – dann greifen die Fetch-Skripte auf die letzte eingecheckte Fassung
+# zurueck und der Build/Deploy bricht nicht. Nachteil: Drift zum echten Stand.
 
 # Playwright: nur Laufzeit-Artefakte ignorieren. Die Baselines unter
 # tests/visual/**/*-snapshots/ sind die Regression-Referenz und gehoeren ins Git.
