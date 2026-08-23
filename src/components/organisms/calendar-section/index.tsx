@@ -13,6 +13,8 @@ export interface CalendarEventItem {
   day: string
   /** Month abbreviation, e.g. "JUL". */
   month: string
+  /** Raw start instant — kept for client-side filtering (by date/region). */
+  start?: Date
   title: string
   /** Time line, e.g. "17:00–19:00 Uhr" (empty for all-day). */
   time?: string

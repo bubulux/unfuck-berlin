@@ -239,6 +239,7 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
     id: ev.id,
     day,
     month: s.month,
+    start: ev.start,
     title: ev.title,
     time: time || undefined,
     location: location || undefined,

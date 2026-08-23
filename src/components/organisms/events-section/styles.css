@@ -19,6 +19,66 @@
   gap: var(--space-4);
 }
 
+/* Filter bar — mobile: each control wraps onto its own full-width row. */
+.events__filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-7);
+}
+
+.events__filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.events__filter-caption {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.events__search-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius-md);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.events__search-input::placeholder {
+  color: color-mix(in srgb, var(--color-purple) 55%, transparent);
+  font-weight: 400;
+}
+
+.events__search-input:focus-visible {
+  outline: 2px solid var(--color-neon);
+  outline-offset: 2px;
+}
+
+/* Desktop: all four controls sit on a single row, bottoms aligned. */
+@media (min-width: 700px) {
+  .events__filters {
+    flex-direction: row;
+    align-items: end;
+    gap: var(--space-4);
+  }
+
+  .events__filter {
+    flex: 1 1 0;
+  }
+
+  /* Kategorie + Bezirk take a quarter each; search fills the remaining half. */
+  .events__filter--search {
+    flex: 2 1 0;
+  }
+}
+
 /* Stack of month groups, each clearly separated from the next. */
 .events__groups {
   display: flex;
