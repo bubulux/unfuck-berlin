@@ -22,5 +22,11 @@ visual: ## Visuelle Regression im Docker gegen die Baselines pruefen
 visual-update: ## Baselines der visuellen Suite neu erzeugen/aktualisieren
 	npm run test:visual:update
 
+visual-drafts: ## Draft-Inhalte visuell gegen die veroeffentlichte Baseline pruefen (danach published wiederhergestellt)
+	bash scripts/visual-drafts.sh
+
+visual-report: ## Letzten Playwright-HTML-Report oeffnen (Host, ohne Docker)
+	npx playwright show-report
+
 visual-ui: ## Playwright UI-Mode im Docker starten -> http://localhost:8080
 	PW_DOCKER_ARGS="-p 8080:8080" bash scripts/snapshots.sh --ui --ui-host=0.0.0.0 --ui-port=8080
