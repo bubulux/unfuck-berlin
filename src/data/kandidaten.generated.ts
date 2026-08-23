@@ -16,7 +16,7 @@ export const KANDIDATEN_CMS = [
     "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b6dd6d21a55e4f4d1c813feb523dcac6be0f881b-1582x2048.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
     "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b6dd6d21a55e4f4d1c813feb523dcac6be0f881b-1582x2048.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
     "herzensthema": "Ich trete an für ein Berlin, das vorankommt: als fairer, innovativer Wirtschaftsstandort. Eine starke Wirtschaft schafft ein faires Berlin – mit bezahlbarem Wohnraum, gerechten Bildungschancen und einem solidarischen Miteinander.",
-    "ueberMich": "Ich bin Anwältin, Gründerin, Mutter von zwei Kindern und einem afghanischen Ziehsohn. Voller Energie, Berlin gemeinsam mit euch in die Zukunft zu bringen.\n\nIch möchte, dass sich die Menschen in dieser Stadt wieder gemeinsam für Berlin begeistern. Mein Ziel ist es, Volt ins Abgeordnetenhaus zu führen und von dort aus mit mutigen Lösungen echten Fortschritt zu schaffen. Ich bin überzeugt: Mit guter Politik können wir Vertrauen in unsere Demokratie zurückgewinnen und Berlin wieder zusammenbringen.",
+    "ueberMich": "Ich bin Anwältin, Gründerin, Mutter von zwei Kindern und einem persichen Ziehsohn. Voller Energie, Berlin gemeinsam mit euch in die Zukunft zu bringen.\n\nIch möchte, dass sich die Menschen in dieser Stadt wieder gemeinsam für Berlin begeistern. Mein Ziel ist es, Volt ins Abgeordnetenhaus zu führen und von dort aus mit mutigen Lösungen echten Fortschritt zu schaffen. Ich bin überzeugt: Mit guter Politik können wir Vertrauen in unsere Demokratie zurückgewinnen und Berlin wieder zusammenbringen.",
     "socials": [
       {
         "_key": "75305ac97b1d",
@@ -37,7 +37,7 @@ export const KANDIDATEN_CMS = [
     "slug": "paul-loeper",
     "listenplatz": 2,
     "bezirk": "Pankow",
-    "alter": 36,
+    "alter": 37,
     "wahlkreis": "",
     "foto_originalFilename": "Paul.png",
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/a33f99f8a0fd3a0712d051a01e0ccc656b37e365-750x1000.png?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -236,7 +236,7 @@ export const KANDIDATEN_CMS = [
     "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/5ee8218ea3020a7189d9812de9c54b6ffb23ab99-5508x8277.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
     "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/5ee8218ea3020a7189d9812de9c54b6ffb23ab99-5508x8277.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
     "herzensthema": "Berlin soll eine europäische Metropole werden. Offen, modern und handlungsfähig. Das heißt: Ämter konsequent digitalisieren, Verwaltungsleistungen auf Englisch anbieten und internationalen Berlinern endlich eine Stimme bei Wahlen geben.",
-    "ueberMich": "Ich berate freiberuflich Organisationen des privaten und öffentlichen Sektors zu Strategie und Transformation. Ich war in mehr als zehn Ländern Europas tätig.\n\nMartin ist Europäer durch und durch. Nach dem Studium an der TU Bergakademie Freiberg und der Central European University Budapest lebte er acht Jahre in Ungarn. Dort hat er auch seine ukrainische Frau kennengelernt. Seit 2019 leben sie gemeinsam in Berlin.\n\nDie Welt wandelt sich technologisch und politisch rasant. Auch Berlin braucht Veränderung durch frische Ideen. Volt bietet echte Lösungen, die anderswo bereits funktionieren. Viele Kandidaten sind Praktiker, die ihre Erfahrung aus der Wirtschaft in die Politik einbringen möchten. Langfristig treibt mich eine Vision an: ein geeintes, liberales und soziales Europa."
+    "ueberMich": "Ich berate freiberuflich Organisationen des privaten und öffentlichen Sektors zu Strategie und Transformation. Ich war bereits in mehr als zehn Ländern Europas tätig.\n\nIch bin in Sachsen aufgewachsen und habe acht Jahre in Ungarn gelebt. Seit 2019 ist Berlin meine Heimat. Hier lebe ich mit meiner Familie und engagiere mich ehrenamtlich."
   },
   {
     "name": "Rahel Demant",

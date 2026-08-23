@@ -27,7 +27,7 @@ export const PAGES_CMS = [
         "video_file": {
           "_type": "file",
           "asset": {
-            "_ref": "file-0b3cc15d2852e041d3eb18d88e05dddc8dfcbe4f-mov",
+            "_ref": "file-3ca4555e73621b1e41ac3838c008399c3f6ab08f-mp4",
             "_type": "reference"
           }
         }
@@ -190,6 +190,14 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-en",
         "ctaLabel": "🇬🇧 Mini manifesto in English",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "ac26b25f0d3c",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-fr",
+        "ctaLabel": "🇫🇷 Programme électoral court en français",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -593,40 +601,6 @@ export const PAGES_CMS = [
         "alt": "unfuck berlin",
         "foto_originalFilename": "fabd98e6afa557dee651026b6241a6a4ad5691c6-1880x1084.jpg",
         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/5eb7300ba2cbbf2d2042b3bbdf8a588a1c962076-1880x1084.jpg"
-      }
-    ]
-  },
-  {
-    "slug": "wahl-info-(not-ready)",
-    "theme": "",
-    "is_published": false,
-    "title": [
-      "Erste &",
-      "Zweite Stimme:",
-      "Vote Volt"
-    ],
-    "body": "",
-    "content_modules": [
-      {
-        "_key": "3dcb509478f9",
-        "_type": "hero_linear",
-        "foto_originalFilename": null,
-        "headline_theme": "orange",
-        "heroZeilen": [
-          "Erste &",
-          "Zweite Stimme: ",
-          "Vote Volt"
-        ],
-        "photo": null
-      },
-      {
-        "_key": "5ddb532781a8",
-        "_type": "headline",
-        "foto_originalFilename": null,
-        "headlineZeilen": [
-          "Die Erststimme – Deine Wahl für eine Person"
-        ],
-        "photo": null
       }
     ]
   }

@@ -362,19 +362,32 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:10:44Z",
         "_id": "5003f61f-c3d0-4667-af58-aa5410966d73",
-        "_rev": "U74tcxucQVTMOGRTVglwh9",
+        "_rev": "LPc3Jmv1ULU5uXF5HLBoRB",
+        "_system": {
+          "base": {
+            "id": "5003f61f-c3d0-4667-af58-aa5410966d73",
+            "rev": "U74tcxucQVTMOGRTVglwh9"
+          }
+        },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-12T10:10:55Z",
+        "_updatedAt": "2026-08-21T08:55:47Z",
         "bezirk": "12 Reinickendorf",
-        "foto": null,
-        "foto_2": null,
-        "foto_originalFilename": "",
-        "foto_originalFilename_2": "",
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/34cf580e2c1f056203e4d4fd713bd6083d8a880f-2344x2951.jpg",
+        "foto2": {
+          "_type": "image",
+          "asset": {
+            "_ref": "image-dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950-jpg",
+            "_type": "reference"
+          }
+        },
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg",
+        "foto_originalFilename": "ANTONIA_MARX_PORTRAIT_4x5Volt_BERLIN©EVELIN_FRERK .jpg",
+        "foto_originalFilename_2": "ANTONIA_MARX_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Antonia Marx",
-        "image": "",
-        "imageDetail": "",
-        "image_2": "",
-        "imageDetail_2": ""
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/34cf580e2c1f056203e4d4fd713bd6083d8a880f-2344x2951.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/34cf580e2c1f056203e4d4fd713bd6083d8a880f-2344x2951.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T10:11:01Z",
@@ -596,6 +609,12 @@ export const REGIONS_CMS = [
         "_key": "865cfc8a3de3",
         "_type": "md_content",
         "md_content": "Neukölln lebt von seiner Vielfalt, kein Kiez ist wie der andere. Für Dich ist es einfach zuhause, vom Reuterkiez über Britz bis nach Rudow. Hier ist unser Plan dafür.\n\n- **Bezahlbares Wohnen ohne Feldbebauung:** Mehr Wohnraum durch Nachverdichtung, schnellere Genehmigungen, die Aktivierung von Leerstand und weniger illegale Ferienwohnungen. Das Tempelhofer Feld bleibt als Erholungsort erhalten und wird besser vor Extremhitze geschützt.\n- **Nahverkehr:** Die M41 ist chronisch überlastet, wir bauen sie zur Straßenbahn aus. Damit ihr schnell und entspannt durch die Sonnenallee kommt, ohne im Stau zu stehen. Und wir bringen die M10-Verlängerung bis zum Hermannplatz voran.\n- **Schulen:** Schulen, die verwahrlosen, weil das Geld für die Reinigung und Instandsetzung fehlt, sind kein Randproblem, sondern Alltag. Wir sorgen für verlässliche Mittel, damit Sauberkeit an Schulen kein Luxus bleibt und Kinder Lernorte haben, zu denen sie gerne kommen.\n- **Müll:** Genug von „Neukölln bleibt dreckig!\" Das ändern wir mit mehr Mülleimern, Sperrmüllpunkten in jedem Kiez und einer Kiez-Norm, die Sauberkeit statt Wegwerfen zum Standard macht.\n- **Sicher und entspannt unterwegs:** Mit barrierefreien Fußwegen, sicheren Überwegen, geschützten Radspuren, abgeschliffenem Kopfsteinpflaster und Parkraumbewirtschaftung im Schillerkiez sowie rund um das Vivantes Klinikum Neukölln, für weniger Parkplatzsuchverkehr und weniger Stress für Anwohnende."
+      },
+      {
+        "_key": "869f9e934a88",
+        "_type": "one_cta",
+        "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_neukolln.pdf",
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },

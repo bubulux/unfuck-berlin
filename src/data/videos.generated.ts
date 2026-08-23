@@ -3,7 +3,7 @@
 
 export const VIDEOS_CMS = {
   "annaPaulIntro": {
-    "src": "https://cdn.sanity.io/files/xzcgo5ky/production/0b3cc15d2852e041d3eb18d88e05dddc8dfcbe4f.mov",
+    "src": "https://cdn.sanity.io/files/xzcgo5ky/production/3ca4555e73621b1e41ac3838c008399c3f6ab08f.mp4",
     "poster": ""
   },
   "reveal": {
