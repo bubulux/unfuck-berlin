@@ -458,6 +458,14 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "502218dfb857",
+        "_type": "one_cta",
+        "ctaHref": "https://www.wahl-o-mat.de/berlin2026/",
+        "ctaLabel": "Wahl-o-Mat",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
         "_key": "a4c243c28d31",
         "_type": "one_cta",
         "ctaHref": "https://docs.google.com/forms/d/e/1FAIpQLSe0KIETh9W7UODbBxtupBTD0sfl3mW4jLpj7e6JE5XYjXz0HQ/viewform",

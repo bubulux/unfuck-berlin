@@ -626,32 +626,25 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-10T18:01:06Z",
         "_id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-        "_rev": "TZSo9XvhWf3aAVsIk7RKkj",
+        "_rev": "OBCDQJ8hm7FfwOrWoAVBON",
         "_system": {
           "base": {
             "id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-            "rev": "U74tcxucQVTMOGRTVfTLzB"
+            "rev": "LPc3Jmv1ULU5uXF5HQUITN"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-17T16:26:01Z",
+        "_updatedAt": "2026-08-23T14:23:29Z",
         "bezirk": "01 Mitte",
-        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg",
-        "foto2": {
-          "_type": "image",
-          "asset": {
-            "_ref": "image-01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885-jpg",
-            "_type": "reference"
-          }
-        },
-        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg",
-        "foto_originalFilename": "AXUMAWIT_BERHE_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
-        "foto_originalFilename_2": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/0d0a56d06c9cfd5c0e86d8320fbaea570cb55e2b-1920x2885.jpg",
+        "foto_2": null,
+        "foto_originalFilename": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename_2": "",
         "name": "Axumawit Berhe",
-        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
-        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/0d0a56d06c9cfd5c0e86d8320fbaea570cb55e2b-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/0d0a56d06c9cfd5c0e86d8320fbaea570cb55e2b-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "",
+        "imageDetail_2": ""
       },
       {
         "_createdAt": "2026-08-11T17:40:01Z",
