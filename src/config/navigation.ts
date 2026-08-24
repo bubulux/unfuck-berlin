@@ -36,6 +36,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   { ctaLabel: "youtube", ctaHref: "https://www.youtube.com/@volt_berlin/" },
   { ctaLabel: "mastodon", ctaHref: "https://berlin.social/@VoltBerlin" },
+  {
+    ctaLabel: "whatsapp",
+    ctaHref: "https://www.whatsapp.com/channel/0029VbBwmKu90x33w7IhA00Z",
+  },
   { ctaLabel: "facebook", ctaHref: "https://www.facebook.com/BerlinVolt" },
 ];
 
