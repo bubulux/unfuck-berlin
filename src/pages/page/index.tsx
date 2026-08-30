@@ -16,6 +16,7 @@ import { marked } from "marked";
 import ProgramSection from "../../components/organisms/program-section";
 import { WAHLPROGRAMM } from "../../data/wahlprogramm";
 import { getHeadlineColors } from '../../lib/getHeadlineColors'
+import { getFullBodyText } from "../../lib/getFullBodyText";
 
 function CustomCalendarPage() {
   const { items, raw, status } = useCalendar();
@@ -119,14 +120,30 @@ export function PagePage() {
 
   const page = page_many[0]
 
+  const full_body = getFullBodyText(page.content_modules)
+
   const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://unfuck.berlin/${page.slug}`
+    "@id": `https://unfuck.berlin/${page.slug}`,
   },
+  "identifier": `https://unfuck.berlin/${page.slug}`,
+  "sameAs": `https://unfuck.berlin/${page.slug}`,
+  "url": `https://unfuck.berlin/${page.slug}`,
+
   "headline": (page.title || []).join(' '),
+  "name": (page.title || []).join(' '),
+  "alternateName": (page.title || []).join(' '),
+
+  "publisherImprint": "https://voltdeutschland.org/berlin/impressum",
+
+  // "dateCreated": `${page.publishedAt}T00:00:00+02:00`,
+  // "datePublished": `${page.publishedAt}T00:00:00+02:00`,
+  // "contentReferenceTime": `${page.publishedAt}T00:00:00+02:00`,
+  "countryOfOrigin": "Germany",
+
   // "image": [
   //   "https://example.com/images/page-1200.jpg"
   // ],
@@ -144,8 +161,11 @@ export function PagePage() {
     //   "url": "https://example.com/logo.png"
     // }
   },
-  "description": page.body || ''
-}
+  "description": page.body || '',
+  "abstract": page.body || '',
+  "articleBody": full_body,
+  "text": full_body,
+  }
 
   const isEventsPage = Boolean(pathname.endsWith('/termine'))
 

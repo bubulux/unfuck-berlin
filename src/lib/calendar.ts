@@ -240,8 +240,11 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
     day,
     month: s.month,
     title: ev.title,
+    iso_start: ev.start.toISOString(),
+    iso_end: ev.end ? ev.end.toISOString() : ev.start.toISOString(),
     time: time || undefined,
     location: location || undefined,
+    description: ev.description || '',
     badge,
   }
 }

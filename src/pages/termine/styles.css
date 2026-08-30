@@ -1,0 +1,10 @@
+.markdown_wrapper a {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: color-mix(in srgb, currentColor, transparent 40%);
+}
+.markdown_wrapper a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.1rem;
+  text-decoration-color: currentColor;
+}
