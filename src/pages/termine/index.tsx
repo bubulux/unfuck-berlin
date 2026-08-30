@@ -242,12 +242,12 @@ export function TerminePage() {
               </section>
             )
           } else if (c._type === 'photo') {
-            if (!c.photo) {
+            if (!c_as_any.photo) {
               return null
             }
             return <section key={key} style={{ marginBlock: 'var(--gap-big)' }}>
               <img
-                src={c.photo}
+                src={c_as_any.photo}
                 alt={c_as_any.alt || ''}
                 style={{
                   width: '100%',
@@ -275,8 +275,8 @@ export function TerminePage() {
           as="h2"
           lines={['Über Volt in Berlin']}
           variant="subtitel"
-          color={theme_variant === 'purple' ? 'white' : 'purple'}
-          textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+          color={theme_variant as any === 'purple' ? 'white' : 'purple'}
+          textColor={theme_variant as any === 'purple' ? 'purple' : 'white'}
           align="left"
           uppercase={false}
           className="program-intro__heading"
@@ -295,8 +295,8 @@ export function TerminePage() {
           autoBreakSize={autoBreakSize_roomy}
           lines={['Presse- und Medienanfragen']}
           variant="subtitel"
-          color={theme_variant === 'purple' ? 'white' : 'purple'}
-          textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+          color={theme_variant as any === 'purple' ? 'white' : 'purple'}
+          textColor={theme_variant as any === 'purple' ? 'purple' : 'white'}
           align="left"
           uppercase={false}
           className="program-intro__heading"

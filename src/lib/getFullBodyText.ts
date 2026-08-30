@@ -1,9 +1,9 @@
 const _new_line_ = `\n
 `
 
-export function getFullBodyText(content_modules) {
+export function getFullBodyText(content_modules: any) {
   const full_body = [
-    ...content_modules.map(c => {
+    ...content_modules.map((c: any) => {
       if (c._type === 'md_content') {
         return c.md_content
       } else if (c._type === 'html_content') {
