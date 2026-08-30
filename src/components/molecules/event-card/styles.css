@@ -5,6 +5,11 @@
   position: relative;
   padding: var(--space-4) var(--space-5);
   background-color: var(--color-white);
+  transition: all 0.1s ease-in-out;
+}
+a.event-card:hover {
+  transform: rotate(-2deg) scale(0.95);
+  opacity: 0.9;
 }
 
 /* Category badge sits like a sticker straddling the card's top-left corner. */
