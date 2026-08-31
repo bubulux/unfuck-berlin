@@ -10,6 +10,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:08:35Z",
         "_id": "b89e86a4-15ca-4fd3-b1fb-337ae4e604c5",
+        "_originalId": "b89e86a4-15ca-4fd3-b1fb-337ae4e604c5",
         "_rev": "gSD2EG7QiN9E3Tu6nMnTrJ",
         "_system": {
           "base": {
@@ -40,6 +41,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:08:52Z",
         "_id": "2acf5c60-42c6-462c-bfda-ab7b52e540f3",
+        "_originalId": "2acf5c60-42c6-462c-bfda-ab7b52e540f3",
         "_rev": "TZSo9XvhWf3aAVsIk7Qw0b",
         "_system": {
           "base": {
@@ -98,6 +100,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:59:07Z",
         "_id": "996bc165-dfb2-4d01-ab72-49e889e7d632",
+        "_originalId": "996bc165-dfb2-4d01-ab72-49e889e7d632",
         "_rev": "56Aw9PqdKBoWxRYUC03N1f",
         "_system": {
           "base": {
@@ -128,6 +131,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:59:24Z",
         "_id": "83cb1643-fec6-40ad-a7ab-aebf25b7a453",
+        "_originalId": "83cb1643-fec6-40ad-a7ab-aebf25b7a453",
         "_rev": "gSD2EG7QiN9E3Tu6nMnhKc",
         "_system": {
           "base": {
@@ -186,6 +190,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:05:59Z",
         "_id": "b48868f9-727f-4b1c-80ab-f1a2d31295f5",
+        "_originalId": "b48868f9-727f-4b1c-80ab-f1a2d31295f5",
         "_rev": "TZSo9XvhWf3aAVsIk7R16b",
         "_system": {
           "base": {
@@ -216,6 +221,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:05:44Z",
         "_id": "a5d4e987-42ce-4f59-a3c9-66b9712355f1",
+        "_originalId": "a5d4e987-42ce-4f59-a3c9-66b9712355f1",
         "_rev": "gSD2EG7QiN9E3Tu6nMnbf9",
         "_system": {
           "base": {
@@ -274,6 +280,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:16:14Z",
         "_id": "a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
+        "_originalId": "a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
         "_rev": "TZSo9XvhWf3aAVsIk7QbD7",
         "_system": {
           "base": {
@@ -304,6 +311,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:16:29Z",
         "_id": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
+        "_originalId": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
         "_rev": "TZSo9XvhWf3aAVsIk7RwZF",
         "_system": {
           "base": {
@@ -362,6 +370,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:10:44Z",
         "_id": "5003f61f-c3d0-4667-af58-aa5410966d73",
+        "_originalId": "5003f61f-c3d0-4667-af58-aa5410966d73",
         "_rev": "6kJnO6La3HnfTs1442gRTD",
         "_system": {
           "base": {
@@ -392,6 +401,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:11:01Z",
         "_id": "7c4fcae9-9af6-4135-8f44-d492408f3f5a",
+        "_originalId": "7c4fcae9-9af6-4135-8f44-d492408f3f5a",
         "_rev": "TZSo9XvhWf3aAVsIk7QsE9",
         "_system": {
           "base": {
@@ -450,6 +460,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:27:17Z",
         "_id": "e2e1bb5f-abfc-49db-ad4c-d5b06269dcee",
+        "_originalId": "e2e1bb5f-abfc-49db-ad4c-d5b06269dcee",
         "_rev": "TZSo9XvhWf3aAVsIk7RHIf",
         "_system": {
           "base": {
@@ -480,6 +491,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:27:39Z",
         "_id": "5581e00e-ced0-4d7e-81c9-4a7f39840d1c",
+        "_originalId": "5581e00e-ced0-4d7e-81c9-4a7f39840d1c",
         "_rev": "56Aw9PqdKBoWxRYUC03PKX",
         "_system": {
           "base": {
@@ -538,6 +550,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:18:09Z",
         "_id": "0f9863d1-6f2f-4717-8764-94970db1caa2",
+        "_originalId": "0f9863d1-6f2f-4717-8764-94970db1caa2",
         "_rev": "TZSo9XvhWf3aAVsIk7QQRR",
         "_system": {
           "base": {
@@ -568,6 +581,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:18:27Z",
         "_id": "203d8ffb-ebd4-41fb-83b6-42cbe2faaf94",
+        "_originalId": "203d8ffb-ebd4-41fb-83b6-42cbe2faaf94",
         "_rev": "TZSo9XvhWf3aAVsIk7Bih7",
         "_system": {
           "base": {
@@ -626,6 +640,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-10T18:01:06Z",
         "_id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
+        "_originalId": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
         "_rev": "6kJnO6La3HnfTs1442geXX",
         "_system": {
           "base": {
@@ -656,6 +671,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-11T17:40:01Z",
         "_id": "e536ec64-8805-4208-90b6-53b836bfda6a",
+        "_originalId": "e536ec64-8805-4208-90b6-53b836bfda6a",
         "_rev": "gSD2EG7QiN9E3Tu6nMnqXB",
         "_system": {
           "base": {
@@ -714,6 +730,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:14:32Z",
         "_id": "41336da4-edeb-4c79-9611-705cec8d916b",
+        "_originalId": "41336da4-edeb-4c79-9611-705cec8d916b",
         "_rev": "TZSo9XvhWf3aAVsIk7Qjaz",
         "_system": {
           "base": {
@@ -744,6 +761,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:14:41Z",
         "_id": "5da43925-31ce-470e-acef-7761ef92dc6c",
+        "_originalId": "5da43925-31ce-470e-acef-7761ef92dc6c",
         "_rev": "TZSo9XvhWf3aAVsIk7QgTJ",
         "_system": {
           "base": {
@@ -802,6 +820,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:12:29Z",
         "_id": "046b1231-8a64-4590-9928-f4eb8d0c690d",
+        "_originalId": "046b1231-8a64-4590-9928-f4eb8d0c690d",
         "_rev": "56Aw9PqdKBoWxRYUC036gH",
         "_system": {
           "base": {
@@ -832,6 +851,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:12:47Z",
         "_id": "cc5e9077-d46f-4073-b22a-b54211925120",
+        "_originalId": "cc5e9077-d46f-4073-b22a-b54211925120",
         "_rev": "56Aw9PqdKBoWxRYUC034e1",
         "_system": {
           "base": {
@@ -890,6 +910,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:04:05Z",
         "_id": "ab5c5a3c-1bce-4dc0-b3ec-0dd13e15e0a1",
+        "_originalId": "ab5c5a3c-1bce-4dc0-b3ec-0dd13e15e0a1",
         "_rev": "56Aw9PqdKBoWxRYUC03KBZ",
         "_system": {
           "base": {
@@ -920,6 +941,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:03:46Z",
         "_id": "e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
+        "_originalId": "e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
         "_rev": "gSD2EG7QiN9E3Tu6nMng51",
         "_system": {
           "base": {
@@ -978,6 +1000,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:56:30Z",
         "_id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
+        "_originalId": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
         "_rev": "56Aw9PqdKBoWxRYUC03Otx",
         "_system": {
           "base": {
@@ -1008,6 +1031,7 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T09:56:49Z",
         "_id": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
+        "_originalId": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
         "_rev": "56Aw9PqdKBoWxRYUC03NzT",
         "_system": {
           "base": {
