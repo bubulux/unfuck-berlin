@@ -12,6 +12,7 @@ import { marked } from 'marked'
 
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
+import { getFullBodyText } from "../../lib/getFullBodyText";
 
 // function getFirstPhoto () {
 //   {
@@ -183,6 +184,8 @@ export function NewsPage() {
 
   const article = article_many[0]
 
+  const full_body = getFullBodyText(article.content_modules)
+
   const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
@@ -190,16 +193,23 @@ export function NewsPage() {
     "@type": "WebPage",
     "@id": `https://unfuck.berlin/news/${article.slug}`
   },
+  "identifier": `https://unfuck.berlin/news/${article.slug}`,
+  "sameAs": `https://unfuck.berlin/news/${article.slug}`,
+  "url": `https://unfuck.berlin/news/${article.slug}`,
   "headline": (article.title || []).join(' '),
+  "name": (article.title || []).join(' '),
+  "alternateName": (article.title || []).join(' '),
   // "image": [
   //   "https://example.com/images/article-1200.jpg"
   // ],
+  "publisherImprint": "https://voltdeutschland.org/berlin/impressum",
+  "isAccessibleForFree": true,
+  "genre": "News",
+  "dateCreated": `${article.publishedAt}T00:00:00+02:00`,
   "datePublished": `${article.publishedAt}T00:00:00+02:00`,
+  "contentReferenceTime": `${article.publishedAt}T00:00:00+02:00`,
+  "countryOfOrigin": "Germany",
   // "dateModified": "2026-07-29T09:15:00+02:00",
-  // "author": {
-  //   "@type": "Person",
-  //   "name": "Volt Berlin"
-  // },
   "publisher": {
     "@type": "Organization",
     "name": "Volt Berlin",
@@ -208,7 +218,18 @@ export function NewsPage() {
     //   "url": "https://example.com/logo.png"
     // }
   },
-  "description": article.body || ''
+  "author": {
+    "@type": "Organization",
+    "name": "Volt Berlin",
+    // "logo": {
+    //   "@type": "ImageObject",
+    //   "url": "https://example.com/logo.png"
+    // }
+  },
+  "description": article.body || '',
+  "abstract": article.body || '',
+  "articleBody": full_body,
+  "text": full_body,
 }
 
 

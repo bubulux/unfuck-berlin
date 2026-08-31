@@ -4,8 +4,10 @@ import type { ColorToken } from '../../atoms/text'
 import { DateBadge } from '../../atoms/date-badge'
 import { HighlightText } from '../../atoms/highlight-text'
 import './styles.css'
+import { Link } from 'react-router'
 
 export interface EventCardProps extends HTMLAttributes<HTMLElement> {
+  event_id: string
   /** Day or day range, e.g. "22" or "18-19". */
   day: string
   /** Month abbreviation, e.g. "JUL". */
@@ -52,6 +54,7 @@ const PinGlyph = () => (
 )
 
 export function EventCard({
+  event_id,
   day,
   month,
   title,
@@ -63,7 +66,11 @@ export function EventCard({
 }: EventCardProps) {
   const classes = ['event-card', className].filter(Boolean).join(' ')
   return (
-    <article className={classes} {...rest}>
+    <Link
+      to={`/termine/${event_id}`}
+      className={classes}
+      {...rest}
+    >
       {badge ? (
         <HighlightText
           lines={[badge.label]}
@@ -107,7 +114,7 @@ export function EventCard({
           ) : null}
         </div>
       </div>
-    </article>
+    </Link>
   )
 }
 
