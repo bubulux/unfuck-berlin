@@ -6,7 +6,7 @@ export const NEWS_CMS = [
     "slug": "mini-manifesto-ar",
     "theme": "white",
     "is_published": true,
-    "publishedAt": "",
+    "publishedAt": "2026-08-28",
     "lang": "ar",
     "is_rtl": true,
     "title": [
