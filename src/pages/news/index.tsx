@@ -13,6 +13,8 @@ import { marked } from 'marked'
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
 import { getFullBodyText } from "../../lib/getFullBodyText";
+import { formatPublishedAt, publishedAtSortKey } from "../../lib/publishedAt";
+import { NewsTeaser, PressTeaser } from "../../components/molecules/article-teaser";
 
 // function getFirstPhoto () {
 //   {
@@ -23,25 +25,6 @@ import { getFullBodyText } from "../../lib/getFullBodyText";
 //         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4e6bfc353a41a5b725c87f75eeb0e0cd2729e4d7-1880x1084.jpg"
 //       },
 // }
-
-// Artikel ohne gesetztes Datum sollen kein "Invalid Date" ausgeben. Kommt aus
-// dem CMS ein leeres oder unlesbares published_at, bleibt die Datumszeile leer.
-function formatPublishedAt(value?: string): string {
-  const date = new Date(value || '')
-  if (Number.isNaN(date.getTime())) {
-    return ''
-  }
-  return date.toLocaleString('de-DE', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric',
-  })
-}
-
-function publishedAtSortKey(value?: string): number {
-  const time = new Date(value || '').getTime()
-  return Number.isNaN(time) ? 0 : time
-}
 
 export function NewsPage() {
   const { pathname } = useLocation();
@@ -85,107 +68,26 @@ export function NewsPage() {
             PRESS_AND_NEWS_SORTED.map((item, index) => {
               if (item.type === 'press') {
                 const press: any = item.data
-                const publishedAt_label = formatPublishedAt(press.publishedAt)
-                const url = press.url
 
                 return (
-                  <section
+                  <PressTeaser
                     key={`${index}-${press.url}`}
-                    className="news__text_width pressAndNewsItemSection"
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '16px',
-                      marginBottom: '32px',
-                      '--img-shadow-color': '#ccc',
-                    } as React.CSSProperties}
-                  >
-                    <a
-                      href={url}
-                      style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
-                    >
-                      <div className="headlineAndImage">
-                        {press.screenshot && (<div className="teaserImageInHeadingWrapper"><img src={press.screenshot} /></div>)}
-
-                        <HighlightText
-                          className={`headline ${press.screenshot ? 'hasImage' : ''}`}
-                          as="h2"
-                          autoBreakSize={autoBreakSize_roomy}
-                          lines={[press.title]}
-                          variant="body"
-                          color="purple"
-                          textColor="white"
-                          align="left"
-                          style={{
-                            marginBlockEnd: '8px',
-                          }}
-                        />
-                      </div>
-                      <p style={{ width: '52rem', maxWidth: '100%' }}>
-                        {publishedAt_label && <><strong>{publishedAt_label}</strong> — </>}<em>{url}</em>
-                      </p>
-                    </a>
-                    <div>
-                      <Button as="a" size="cta" variant="outline" href={url} color="purple">
-                        Artikel lesen…
-                      </Button>
-                    </div>
-                  </section>
+                    press={press}
+                    className="news__text_width"
+                    autoBreakSize={autoBreakSize_roomy}
+                  />
                 )
               }
               if (item.type === 'article') {
                 const article: any = item.data
 
-                const publishedAt_label = formatPublishedAt(article.publishedAt)
-                const url = `/news/${article.slug}`
-
                 return (
-                  <section
+                  <NewsTeaser
                     key={`${index}-${article.slug}`}
-                    className="news__text_width pressAndNewsItemSection"
-                    dir={article.is_rtl ? 'rtl' : 'ltr'}
-                    lang={article.lang || undefined}
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '16px',
-                      marginBottom: '32px',
-                      '--img-shadow-color': 'var(--color-purple)',
-                    } as React.CSSProperties}
-                  >
-                    <a
-                      href={url}
-                      style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
-                    >
-                      <div className="headlineAndImage">
-                        {article.image && (<div className="teaserImageInHeadingWrapper"><img src={article.image} /></div>)}
-
-                      <HighlightText
-                        className={`headline ${article.image ? 'hasImage' : ''}`}
-                        as="h2"
-                        autoBreakSize={autoBreakSize_roomy}
-                        lines={article.title}
-                        variant="subtitel"
-                        color="neon"
-                        textColor="purple"
-                        align="left"
-                        style={{
-                          marginBlockEnd: '8px',
-                        }}
-                      />
-                      </div>
-
-                      <p style={{ width: '52rem', maxWidth: '100%' }}>
-                        {publishedAt_label && <strong>{publishedAt_label}</strong>}
-                        {article.body && (publishedAt_label ? ` — ${article.body}` : article.body)}
-                      </p>
-                    </a>
-                    <div lang="de">
-                      <Button as="a" size="cta" variant="outline" href={url} color="purple" dir="ltr">
-                        weiter lesen…
-                      </Button>
-                    </div>
-                  </section>
+                    article={article}
+                    className="news__text_width"
+                    autoBreakSize={autoBreakSize_roomy}
+                  />
                 )
               }
 

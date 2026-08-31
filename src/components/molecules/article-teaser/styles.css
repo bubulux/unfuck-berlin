@@ -1,0 +1,58 @@
+/* Karten-Layout der Artikel-Teaser (Presse-Verlinkungen und eigene News).
+   Wird von /news und /presse gleichermassen genutzt. */
+
+/* .pressAndNewsItemSection:hover {
+  text-decoration: underline;
+} */
+.headlineAndImage {
+  position: relative;
+}
+.teaserImageInHeadingWrapper {
+  position: relative;
+  margin: -8px;
+  z-index: 0;
+  width: calc(100% + 16px);
+}
+.teaserImageInHeadingWrapper:before {
+  content: '';
+  background: var(--img-shadow-color);
+  position: absolute;
+  inset: 0;
+  transform: translate(-8px, 8px) rotate(-2deg);
+  transition: transform 0.1s ease;
+  z-index: 1;
+}
+.pressAndNewsItemSection:hover .teaserImageInHeadingWrapper:before {
+  transform: translate(-12px, 12px) rotate(-2deg);
+}
+
+.teaserImageInHeadingWrapper img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--img-shadow-color);
+}
+.teaserImageInHeadingWrapper .headline {
+  position: relative;
+  z-index: 3;
+}
+
+.headlineAndImage .headline.hasImage {
+  margin-block-start: -12px;
+}
+@media (min-width: 600px) {
+  .headlineAndImage .headline.hasImage {
+    margin-block-start: -48px;
+  }
+  .teaserImageInHeadingWrapper {
+    margin: 32px;
+    width: 80%;
+  }
+  .teaserImageInHeadingWrapper:before {
+    transform: translate(-16px, 16px) rotate(-2deg);
+  }
+  .pressAndNewsItemSection:hover .teaserImageInHeadingWrapper:before {
+    transform: translate(-24px, 24px) rotate(-2deg);
+  }
+}
