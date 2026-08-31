@@ -248,6 +248,10 @@ function buildNews(rows) {
         theme: clean(article.theme),
         is_published: Boolean(article.is_published),
         publishedAt: clean(article.published_at),
+        // Sprache + Leserichtung kommen aus dem CMS. Leeres lang = kein lang-Attribut
+        // (der Artikel erbt dann die Seitensprache), is_rtl false = Standard links-nach-rechts.
+        lang: clean(article.lang),
+        is_rtl: Boolean(article.is_rtl),
         title: lines(hero_module.heroZeilen),
         body: clean(hero_module.heroText),
         content_modules,

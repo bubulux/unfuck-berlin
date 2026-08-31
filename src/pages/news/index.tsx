@@ -24,6 +24,25 @@ import { getFullBodyText } from "../../lib/getFullBodyText";
 //       },
 // }
 
+// Artikel ohne gesetztes Datum sollen kein "Invalid Date" ausgeben. Kommt aus
+// dem CMS ein leeres oder unlesbares published_at, bleibt die Datumszeile leer.
+function formatPublishedAt(value?: string): string {
+  const date = new Date(value || '')
+  if (Number.isNaN(date.getTime())) {
+    return ''
+  }
+  return date.toLocaleString('de-DE', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  })
+}
+
+function publishedAtSortKey(value?: string): number {
+  const time = new Date(value || '').getTime()
+  return Number.isNaN(time) ? 0 : time
+}
+
 export function NewsPage() {
   const { pathname } = useLocation();
   const isSmallDevice = useMediaQuery("only screen and (max-width : 500px)");
@@ -43,7 +62,9 @@ export function NewsPage() {
       ...(NEWS_CMS.map(data => ({ type: 'article', data }))),
     ]
       .filter(a => a.data.is_published === true)
-      .sort((a, b) => Number(new Date(b.data.publishedAt || '')) - Number(new Date(a.data.publishedAt || '')))
+      // Ohne (oder mit unlesbarem) Datum wuerde der Vergleich NaN liefern und die
+      // Reihenfolge waere undefiniert – solche Eintraege wandern ans Ende.
+      .sort((a, b) => publishedAtSortKey(b.data.publishedAt) - publishedAtSortKey(a.data.publishedAt))
 
     return (
       <PageLayout activePath={pathname} variant="light">
@@ -64,7 +85,7 @@ export function NewsPage() {
             PRESS_AND_NEWS_SORTED.map((item, index) => {
               if (item.type === 'press') {
                 const press: any = item.data
-                const publishedAt_date = new Date(press.publishedAt);
+                const publishedAt_label = formatPublishedAt(press.publishedAt)
                 const url = press.url
 
                 return (
@@ -101,11 +122,7 @@ export function NewsPage() {
                         />
                       </div>
                       <p style={{ width: '52rem', maxWidth: '100%' }}>
-                        <strong>{publishedAt_date.toLocaleString('de-DE', {
-                          day: '2-digit',
-                          month: '2-digit',
-                          year: 'numeric',
-                        })}</strong> — <em>{url}</em>
+                        {publishedAt_label && <><strong>{publishedAt_label}</strong> — </>}<em>{url}</em>
                       </p>
                     </a>
                     <div>
@@ -119,13 +136,15 @@ export function NewsPage() {
               if (item.type === 'article') {
                 const article: any = item.data
 
-                const publishedAt_date = new Date(article.publishedAt);
+                const publishedAt_label = formatPublishedAt(article.publishedAt)
                 const url = `/news/${article.slug}`
 
                 return (
                   <section
                     key={`${index}-${article.slug}`}
                     className="news__text_width pressAndNewsItemSection"
+                    dir={article.is_rtl ? 'rtl' : 'ltr'}
+                    lang={article.lang || undefined}
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -157,16 +176,12 @@ export function NewsPage() {
                       </div>
 
                       <p style={{ width: '52rem', maxWidth: '100%' }}>
-                        <strong>{publishedAt_date.toLocaleString('de-DE', {
-                          day: '2-digit',
-                          month: '2-digit',
-                          year: 'numeric',
-                        })}</strong>
-                        {article.body && ` — ${article.body}`}
+                        {publishedAt_label && <strong>{publishedAt_label}</strong>}
+                        {article.body && (publishedAt_label ? ` — ${article.body}` : article.body)}
                       </p>
                     </a>
-                    <div>
-                      <Button as="a" size="cta" variant="outline" href={url} color="purple">
+                    <div lang="de">
+                      <Button as="a" size="cta" variant="outline" href={url} color="purple" dir="ltr">
                         weiter lesen…
                       </Button>
                     </div>
@@ -205,10 +220,14 @@ export function NewsPage() {
   "publisherImprint": "https://voltdeutschland.org/berlin/impressum",
   "isAccessibleForFree": true,
   "genre": "News",
-  "dateCreated": `${article.publishedAt}T00:00:00+02:00`,
-  "datePublished": `${article.publishedAt}T00:00:00+02:00`,
-  "contentReferenceTime": `${article.publishedAt}T00:00:00+02:00`,
+  // Ohne Datum wuerden hier kaputte Werte wie "T00:00:00+02:00" landen.
+  ...(article.publishedAt ? {
+    "dateCreated": `${article.publishedAt}T00:00:00+02:00`,
+    "datePublished": `${article.publishedAt}T00:00:00+02:00`,
+    "contentReferenceTime": `${article.publishedAt}T00:00:00+02:00`,
+  } : {}),
   "countryOfOrigin": "Germany",
+  "inLanguage": article.lang || 'de',
   // "dateModified": "2026-07-29T09:15:00+02:00",
   "publisher": {
     "@type": "Organization",
@@ -234,14 +253,22 @@ export function NewsPage() {
 
 
   const theme_variant = article.theme === 'purple' ? 'purple' : 'light' as const
+
+  // Artikel aus dem CMS koennen in einer anderen Sprache und Leserichtung stehen
+  // (z. B. das arabische Mini-Manifesto). dir/lang haengen am Artikel-Wrapper,
+  // nicht am ganzen Layout: Header, Footer und die deutschen Standardbloecke
+  // unten bleiben links-nach-rechts.
+  const article_dir = article.is_rtl ? 'rtl' : 'ltr'
+  const article_lang = article.lang || undefined
+
   return (
     <PageLayout activePath={pathname} variant={theme_variant}>
       <script type="application/ld+json">
         {JSON.stringify(articleJsonLd)}
       </script>
 
-      <div className="news__wrapper">
-        <section className="news__text_width" style={{ marginBlockEnd: '32px' }}>
+      <div className="news__wrapper" dir={article_dir} lang={article_lang}>
+        <section className="news__text_width" dir="ltr" lang="de" style={{ marginBlockEnd: '32px' }}>
           <Link to="/news">
             <Button
               size="cta"
@@ -261,7 +288,7 @@ export function NewsPage() {
           const c_as_any = (c as any)
 
           if (c._type === 'hero_linear') {
-            const publishedAt_date = new Date(article.publishedAt);
+            const publishedAt_label = formatPublishedAt(article.publishedAt)
 
             return <section
               key={key}
@@ -281,12 +308,8 @@ export function NewsPage() {
               />
 
               <p style={{ width: 'var(--content-max)', maxWidth: '100%' }}>
-                <strong>{publishedAt_date.toLocaleString('de-DE', {
-                  day: '2-digit',
-                  month: '2-digit',
-                  year: 'numeric',
-                })}</strong>
-                {article.body && ` — ${article.body}`}
+                {publishedAt_label && <strong>{publishedAt_label}</strong>}
+                {article.body && (publishedAt_label ? ` — ${article.body}` : article.body)}
               </p>
             </section>
           } else if (c._type === 'headline') {
@@ -354,6 +377,7 @@ export function NewsPage() {
       }
 
 
+      <div className="news__ltr_block" dir="ltr" lang="de">
       <section
         className="news__text_width"
         style={{ marginBlock: 'var(--gap-big) 16px' }}
@@ -398,6 +422,7 @@ export function NewsPage() {
           Allgemeine Fragen und Feedback bitte an <Link style={{ textDecoration: 'underline' }} to="mailto:berlin@voltdeutschland.org">berlin@voltdeutschland.org</Link> richten.
         </p>
       </section>
+      </div>
 
       </div>
     </PageLayout>
