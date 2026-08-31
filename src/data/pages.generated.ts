@@ -592,6 +592,14 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "d134a41a11e9",
+        "_type": "one_cta",
+        "ctaHref": "https://loops.video/@Volt_Berlin",
+        "ctaLabel": "Loops",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
         "_key": "540e1ea6a0b2",
         "_type": "one_cta",
         "ctaHref": "https://bsky.app/profile/voltberlin.org",
