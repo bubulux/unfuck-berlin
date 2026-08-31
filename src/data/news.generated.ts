@@ -5,10 +5,10 @@ export const NEWS_CMS = [
   {
     "slug": "mini-manifesto-ar",
     "theme": "white",
-    "is_published": false,
+    "is_published": true,
     "publishedAt": "",
-    "lang": "",
-    "is_rtl": false,
+    "lang": "ar",
+    "is_rtl": true,
     "title": [
       "🇸🇦 البرنامج الانتخابي المختصر باللغة العربية"
     ],
