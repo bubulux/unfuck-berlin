@@ -143,6 +143,8 @@ export function NewsPage() {
                   <section
                     key={`${index}-${article.slug}`}
                     className="news__text_width pressAndNewsItemSection"
+                    dir={article.is_rtl ? 'rtl' : 'ltr'}
+                    lang={article.lang || undefined}
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -161,8 +163,6 @@ export function NewsPage() {
                       <HighlightText
                         className={`headline ${article.image ? 'hasImage' : ''}`}
                         as="h2"
-                        dir={article.is_rtl ? 'rtl' : 'ltr'}
-                        lang={article.lang || undefined}
                         autoBreakSize={autoBreakSize_roomy}
                         lines={article.title}
                         variant="subtitel"
@@ -180,8 +180,8 @@ export function NewsPage() {
                         {article.body && (publishedAt_label ? ` — ${article.body}` : article.body)}
                       </p>
                     </a>
-                    <div>
-                      <Button as="a" size="cta" variant="outline" href={url} color="purple">
+                    <div lang="de">
+                      <Button as="a" size="cta" variant="outline" href={url} color="purple" dir="ltr">
                         weiter lesen…
                       </Button>
                     </div>
