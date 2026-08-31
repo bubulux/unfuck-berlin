@@ -7,6 +7,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": false,
     "publishedAt": "",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇸🇦 البرنامج الانتخابي المختصر باللغة العربية"
     ],
@@ -39,6 +41,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-28",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇭🇷 Kratki izborni program na hrvatskom"
     ],
@@ -79,6 +83,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-28",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇵🇹 Programa eleitoral resumido em português"
     ],
@@ -119,6 +125,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-28",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇨🇿 Stručný volební program v češtině"
     ],
@@ -151,6 +159,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-27",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "unf*ck berlin (in English 🇬🇧)"
     ],
@@ -191,6 +201,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-22",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Politik in unter 20 Sekunden: Das Once-Only-Prinzip"
     ],
@@ -223,6 +235,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-21",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Seit 101 Jahren dürfen Berliner*innen nicht mehr in der Spree baden."
     ],
@@ -255,6 +269,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-20",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Politik in unter 20 Sekunden: Best Practices"
     ],
@@ -287,6 +303,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-18",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇫🇷 Programme électoral court en français"
     ],
@@ -327,6 +345,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-12",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇳🇱 Verkort verkiezingsprogramma in het Nederlands"
     ],
@@ -367,6 +387,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-12",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇺🇦 Коротка виборча програма українською"
     ],
@@ -407,6 +429,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-12",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇷🇴 Program electoral pe scurt în română"
     ],
@@ -447,6 +471,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-12",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇪🇸 Programa electoral breve en español"
     ],
@@ -487,6 +513,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-12",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇵🇱 Skrócony program wyborczy po polsku"
     ],
@@ -527,6 +555,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-12",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇷🇺 Краткая предвыборная программа на русском"
     ],
@@ -567,6 +597,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-12",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇮🇹 Programma elettorale breve in italiano"
     ],
@@ -607,6 +639,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-11",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇬🇧 Mini manifesto in English"
     ],
@@ -647,6 +681,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-10",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "🇩🇪 Kurzwahlprogramm auf Deutsch"
     ],
@@ -703,6 +739,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-08-09",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Bildung auf die #1"
     ],
@@ -771,6 +809,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-07-29",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Hilf uns beim Plakatieren!"
     ],
@@ -824,6 +864,8 @@ export const NEWS_CMS = [
     "theme": "",
     "is_published": false,
     "publishedAt": "2026-07-27",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Berlin",
       "funktioniert"
@@ -866,6 +908,8 @@ export const NEWS_CMS = [
     "theme": "white",
     "is_published": true,
     "publishedAt": "2026-07-26",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Trauer nach Angriff auf die queere Community beim CSD Berlin"
     ],
@@ -919,6 +963,8 @@ export const NEWS_CMS = [
     "theme": "",
     "is_published": true,
     "publishedAt": "2026-07-24",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Volt Berlin unterstützt Bewerbung für WorldPride 2032 und Verankerung im Koalitionsvertrag"
     ],
@@ -979,6 +1025,8 @@ export const NEWS_CMS = [
     "theme": "",
     "is_published": true,
     "publishedAt": "2026-07-16",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Erste &",
       "Zweite Stimme:",
@@ -1069,6 +1117,8 @@ export const NEWS_CMS = [
     "theme": "purple",
     "is_published": true,
     "publishedAt": "2026-07-15",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "„unf*ck Berlin“: Volt zeigt, was sich in der Stadt ändern muss – und liefert den Plan gleich mit"
     ],
@@ -1213,6 +1263,8 @@ export const NEWS_CMS = [
     "theme": "",
     "is_published": true,
     "publishedAt": "2026-07-09",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "11.000 Unterschriften: Volt tritt in Berlin in allen 78 Wahlkreisen an"
     ],
@@ -1280,6 +1332,8 @@ export const NEWS_CMS = [
     "theme": "",
     "is_published": true,
     "publishedAt": "2026-01-24",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Mit starkem Spitzenduo: Volt Berlin stellt Landesliste für 2026 auf"
     ],
@@ -1327,6 +1381,8 @@ export const NEWS_CMS = [
     "theme": "",
     "is_published": true,
     "publishedAt": "2025-06-16",
+    "lang": "",
+    "is_rtl": false,
     "title": [
       "Volt Berlin bringt ersten Antrag in die BVV Treptow-Köpenick ein"
     ],

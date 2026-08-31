@@ -27,6 +27,12 @@
   }
 }
 
+/* Reine dir/lang-Huelle: die Kinder bleiben direkte Flex-Items von
+   .news__wrapper, damit Abstaende und Ausrichtung identisch bleiben. */
+.news__ltr_block {
+  display: contents;
+}
+
 .news__text_width {
   max-width: 100%;
   width: var(--content-max);
@@ -106,7 +112,7 @@
   content: "* ";
   position: absolute;
   top: -0.6rem;
-  left: 0rem;
+  inset-inline-start: 0rem;
   font-size: clamp(2rem, 5vw, 2.4rem);
   font-weight: bold;
   color: inherit;

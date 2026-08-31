@@ -144,6 +144,8 @@ export function NewsPage() {
                       <HighlightText
                         className={`headline ${article.image ? 'hasImage' : ''}`}
                         as="h2"
+                        dir={article.is_rtl ? 'rtl' : 'ltr'}
+                        lang={article.lang || undefined}
                         autoBreakSize={autoBreakSize_roomy}
                         lines={article.title}
                         variant="subtitel"
@@ -209,6 +211,7 @@ export function NewsPage() {
   "datePublished": `${article.publishedAt}T00:00:00+02:00`,
   "contentReferenceTime": `${article.publishedAt}T00:00:00+02:00`,
   "countryOfOrigin": "Germany",
+  "inLanguage": article.lang || 'de',
   // "dateModified": "2026-07-29T09:15:00+02:00",
   "publisher": {
     "@type": "Organization",
@@ -234,14 +237,22 @@ export function NewsPage() {
 
 
   const theme_variant = article.theme === 'purple' ? 'purple' : 'light' as const
+
+  // Artikel aus dem CMS koennen in einer anderen Sprache und Leserichtung stehen
+  // (z. B. das arabische Mini-Manifesto). dir/lang haengen am Artikel-Wrapper,
+  // nicht am ganzen Layout: Header, Footer und die deutschen Standardbloecke
+  // unten bleiben links-nach-rechts.
+  const article_dir = article.is_rtl ? 'rtl' : 'ltr'
+  const article_lang = article.lang || undefined
+
   return (
     <PageLayout activePath={pathname} variant={theme_variant}>
       <script type="application/ld+json">
         {JSON.stringify(articleJsonLd)}
       </script>
 
-      <div className="news__wrapper">
-        <section className="news__text_width" style={{ marginBlockEnd: '32px' }}>
+      <div className="news__wrapper" dir={article_dir} lang={article_lang}>
+        <section className="news__text_width" dir="ltr" lang="de" style={{ marginBlockEnd: '32px' }}>
           <Link to="/news">
             <Button
               size="cta"
@@ -354,6 +365,7 @@ export function NewsPage() {
       }
 
 
+      <div className="news__ltr_block" dir="ltr" lang="de">
       <section
         className="news__text_width"
         style={{ marginBlock: 'var(--gap-big) 16px' }}
@@ -398,6 +410,7 @@ export function NewsPage() {
           Allgemeine Fragen und Feedback bitte an <Link style={{ textDecoration: 'underline' }} to="mailto:berlin@voltdeutschland.org">berlin@voltdeutschland.org</Link> richten.
         </p>
       </section>
+      </div>
 
       </div>
     </PageLayout>
