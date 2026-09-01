@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
-import { fetchCalendar, toDisplayItem } from '../lib/calendar'
+import { fetchCalendarPublic, toDisplayItem } from '../lib/calendar'
 import { CalendarContext, type CalendarState } from './calendar-context'
 
 /**
@@ -19,17 +19,15 @@ export function CalendarProvider({ children }: { children: ReactNode }) {
     const controller = new AbortController()
     let active = true
 
-    fetchCalendar(controller.signal)
-      .then((raw) => {
-        if (!active) return
-        setState({ status: 'ready', raw, items: raw.map(toDisplayItem) })
-      })
-      .catch((err: unknown) => {
-        if (!active || (err instanceof DOMException && err.name === 'AbortError')) {
-          return
-        }
-        setState({ status: 'error', items: [], raw: [] })
-      })
+    try {
+      const raw = fetchCalendarPublic()
+      setState({ status: 'ready', raw, items: raw.map(toDisplayItem) })
+    } catch (err: unknown) {
+      if (!active || (err instanceof DOMException && err.name === 'AbortError')) {
+        return
+      }
+      setState({ status: 'error', items: [], raw: [] })
+    }
 
     return () => {
       active = false

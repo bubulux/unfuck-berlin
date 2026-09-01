@@ -1,6 +1,8 @@
 import ICAL from 'ical.js'
 import type { CalendarEventItem } from '../components/organisms/calendar-section'
+
 import volt_berlin_public_calendar_ics from '../data/volt-berlin-public-calendar.generated.ics?raw'
+import volt_berlin_public_calendar_ics_fallback from '../data/volt-berlin-public-calendar-FALLBACK.generated.ics?raw'
 
 /**
  * Live calendar of Volt Berlin events, read from the public Google Calendar
@@ -183,19 +185,17 @@ export function parseCalendar(
     }
   }
 
-  items.sort((a, b) => a.start.getTime() - b.start.getTime())
+  // items.sort((a, b) => a.start.getTime() - b.start.getTime())
   return items
 }
 
 /** Fetch the calendar feed (same-origin proxy) and parse it. */
-export async function fetchCalendar(_signal?: AbortSignal): Promise<CalendarItem[]> {
-  return parseCalendar(volt_berlin_public_calendar_ics)
-
-  // const res = await fetch(CALENDAR_ENDPOINT, { signal })
-  // if (!res.ok) {
-  //   throw new Error(`Calendar request failed (${res.status})`)
-  // }
-  // return parseCalendar(await res.text())
+export function fetchCalendarPublic(): CalendarItem[] {
+  return [
+    ...parseCalendar(volt_berlin_public_calendar_ics),
+    ...parseCalendar(volt_berlin_public_calendar_ics_fallback),
+  ]
+    .sort((a, b) => a.start.getTime() - b.start.getTime())
 }
 
 function fmtParts(d: Date) {
