@@ -7,8 +7,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import { marked } from 'marked'
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
-import { parseCalendar, toDisplayItem } from "../../lib/calendar";
-import volt_berlin_public_calendar_ics from '../../data/volt-berlin-public-calendar.generated.ics?raw'
+import { fetchCalendarPublic, toDisplayItem } from "../../lib/calendar";
 
 const ClockGlyph = () => (
   <svg
@@ -50,18 +49,17 @@ export function TerminePage() {
   const autoBreakSize_cramped = isSmallDevice ? 0.15 : isMediumDevice ? 0.20 : 0.25
   const autoBreakSize_roomy = isSmallDevice ? 0.2 : isMediumDevice ? 0.25 : 0.33
 
-  const events_raw = parseCalendar(volt_berlin_public_calendar_ics)
+  const events_raw = fetchCalendarPublic()
 
   // Show the whole run up to and including 30 September (of the soonest event's
   // year), then stop — no pagination, everything is on the page at once.
   const cutoffYear = events_raw[0]?.start.getFullYear() ?? new Date().getFullYear();
   const cutoff = new Date(cutoffYear, 8, 30, 23, 59, 59, 999);
   const events = events_raw
-    .filter((_, i) => events_raw[i] && events_raw[i].start <= cutoff)
+    .filter((_, i) => events_raw[i] && events_raw[i].start <= cutoff) // past events can be seen, future dates will be cut of at the end of september.
     .filter(a => pathname.endsWith(`/${a.id}`))
 
   const event = toDisplayItem(events[0])
-  console.log('event', event)
 
   const articleJsonLd = {
   "@context": "https://schema.org",
