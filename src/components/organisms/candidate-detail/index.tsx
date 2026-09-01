@@ -14,7 +14,7 @@ export interface CandidateBlock {
 }
 
 export interface CandidateDetailProps extends HTMLAttributes<HTMLElement> {
-  slug: string
+  slug?: string
   name: string
   image: string
   imageAlt: string
@@ -89,7 +89,7 @@ export function CandidateDetail({
               "@type": "Person",
               "name": name,
               "alternateName": name,
-              "identifier": slug,
+              ...(slug ? {"identifier": slug || ''} : {}),
               // "interactionStatistic": [{
               //   "@type": "InteractionCounter",
               //   "interactionType": "https://schema.org/FollowAction",
@@ -107,9 +107,9 @@ export function CandidateDetail({
               "description": meta.join(' '),
               "image": image,
               "sameAs": [
-                `https://unfuck.berlin/kandidierende/${slug}`,
+                slug ? `https://unfuck.berlin/kandidierende/${slug}` : null,
                 ...((socials || []).map(({ ctaHref }) => ctaHref))
-              ]
+              ].filter(Boolean)
             }
           })}
         </script>
