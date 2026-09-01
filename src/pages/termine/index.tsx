@@ -73,6 +73,9 @@ export function TerminePage() {
   "url": `https://unfuck.berlin/termine/${event.id}`,
   "sameAs": `https://unfuck.berlin/termine/${event.id}`,
   "identifier": event.id || '',
+
+  "eventStatus": "https://schema.org/EventScheduled",
+
   "name": event.title || '',
   "alternateName": event.title || '',
   // "image": [
@@ -81,7 +84,15 @@ export function TerminePage() {
   "doorTime": event.iso_start,
   "startDate": event.iso_start,
   "endDate": event.iso_end,
-  "location": event.location,
+  "location": {
+    "@type": "Place",
+    "name": event.location,
+    "address": {
+      "@type": "PostalAddress",
+      "name": event.location,
+    }
+  },
+
   // "dateModified": "2026-07-29T09:15:00+02:00",
   // "author": {
   //   "@type": "Person",
@@ -90,6 +101,7 @@ export function TerminePage() {
   "organizer": {
     "@type": "Organization",
     "name": "Volt Berlin",
+    "url": "https://unfuck.berlin",
     // "logo": {
     //   "@type": "ImageObject",
     //   "url": "https://example.com/logo.png"
