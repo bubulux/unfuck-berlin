@@ -78,9 +78,9 @@ export function TerminePage() {
 
   "name": event.title || '',
   "alternateName": event.title || '',
-  // "image": [
-  //   "https://example.com/images/event-1200.jpg"
-  // ],
+  "image": [
+    "https://unfuck.berlin/for_jsonld/termine.jpg"
+  ],
   "doorTime": event.iso_start,
   "startDate": event.iso_start,
   "endDate": event.iso_end,
