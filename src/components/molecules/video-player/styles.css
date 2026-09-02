@@ -56,11 +56,11 @@
   width: 2.6rem;
   height: 2.6rem;
   /* Nudge the play triangle to look optically centred. */
-  margin-left: 0.2rem;
+  margin-inline-start: 0.2rem;
 }
 
 .video-player.is-playing .video-player__center svg {
-  margin-left: 0;
+  margin-inline-start: 0;
 }
 
 /* Hide the centre button during playback; reveal it on hover. */
@@ -183,25 +183,25 @@
 .video-player__vol {
   width: 0;
   opacity: 0;
-  margin-left: 0;
+  margin-inline-start: 0;
   transition:
     width 0.2s ease,
     opacity 0.2s ease,
-    margin-left 0.2s ease;
+    margin-inline-start 0.2s ease;
 }
 
 .video-player__volume:hover .video-player__vol,
 .video-player__vol:focus-visible {
   width: 3.5rem;
   opacity: 1;
-  margin-left: var(--space-2);
+  margin-inline-start: var(--space-2);
 }
 
 @media (hover: none) {
   .video-player__vol {
     width: 3rem;
     opacity: 1;
-    margin-left: var(--space-2);
+    margin-inline-start: var(--space-2);
   }
 }
 
