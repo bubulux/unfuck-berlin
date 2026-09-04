@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { HTMLAttributes } from 'react'
 import { Text } from '../../atoms/text'
+import { Button } from '../../atoms/button'
 import { HighlightText } from '../../atoms/highlight-text'
 import { EventCard } from '../../molecules/event-card'
 import { MultiSelect } from '../../molecules/multi-select'
@@ -90,6 +91,14 @@ export function EventsSection({
 
   const groups = groupByMonth(filtered)
 
+  const hasActiveFilters =
+    categories.length > 0 || districts.length > 0 || query.trim().length > 0
+  const clearFilters = () => {
+    setCategories([])
+    setDistricts([])
+    setQuery('')
+  }
+
   return (
     <section className={classes} {...rest}>
       <div className="events__inner">
@@ -165,9 +174,16 @@ export function EventsSection({
                 ))}
               </div>
             ) : (
-              <Text as="p" variant="body" color="white">
-                {events.length > 0 ? 'Leider keine Ergebnisse…' : emptyLabel}
-              </Text>
+              <div className="events__empty">
+                <Text as="p" variant="body" color="white">
+                  {events.length > 0 ? 'Leider keine Ergebnisse…' : emptyLabel}
+                </Text>
+                {hasActiveFilters ? (
+                  <Button color="neon" variant="solid" onClick={clearFilters}>
+                    Alle Filter entfernen
+                  </Button>
+                ) : null}
+              </div>
             )}
           </>
         )}

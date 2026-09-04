@@ -113,6 +113,14 @@
   gap: var(--space-7);
 }
 
+/* Empty state: the "no results" line plus a reset-filters action. */
+.events__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
 .events__note {
   display: flex;
   flex-direction: column;
