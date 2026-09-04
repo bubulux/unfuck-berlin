@@ -22,3 +22,7 @@ npm run content:drafts   # Entwuerfe (Staging-Preview, liest .env.local)
 
 `content:drafts` liest `SANITY_API_READ_TOKEN` aus `.env.local` (gitignored) und
 zieht Sanity-Entwuerfe – dasselbe Verhalten wie Netlify-Preview-/Branch-Deploys.
+
+---
+
+Trigger Rebuild: 1
