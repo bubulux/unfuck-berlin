@@ -225,8 +225,8 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
   // A "#Bezirkstreffen" tag anywhere in the description flips the card's badge
   // to the red "Bezirkstreffen" variant; everything else is a "Veranstaltung".
 
-  const isBezirk = /#Bezirkstreffen/i.test(ev.description ?? '') || /Bezirkstreffen/i.test(ev.title ?? '') || /Treffen/i.test(ev.title ?? '')
-  const isHighlight = /#Highlight/i.test(ev.description ?? '') || /Plakatierstart/i.test(ev.title ?? '') || /CSD/i.test(ev.title ?? '') || /Volt-Bus/i.test(ev.title ?? '') || /Bustour/i.test(ev.title ?? '') || /Bus Tour/i.test(ev.title ?? '')
+  const isBezirk = /#Bezirkstreffen/i.test(ev.description ?? '') || /Bezirkstreffen/i.test(ev.title ?? '') || /Treffen/i.test(ev.title ?? '') || /Stammtisch/i.test(ev.title ?? '')
+  const isHighlight = /#Highlight/i.test(ev.description ?? '') || /Plakatierstart/i.test(ev.title ?? '') || /CSD/i.test(ev.title ?? '') || /Volt-Bus/i.test(ev.title ?? '') || /Bustour/i.test(ev.title ?? '') || /Bus Tour/i.test(ev.title ?? '') || /Housing ECI/i.test(ev.title ?? '') || /🇫🇷/i.test(ev.title ?? '')
 
   let badge: any = { label: 'Veranstaltung', color: 'blue' as const, textColor: 'purple' as const }
   if (isHighlight) {
