@@ -150,6 +150,7 @@ export function EventsSection({
                     <div className="events__list">
                       {group.events.map((event) => (
                         <EventCard
+                          event_id={event.id}
                           key={event.id}
                           day={event.day}
                           month={event.month}

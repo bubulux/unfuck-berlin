@@ -362,17 +362,17 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:10:44Z",
         "_id": "5003f61f-c3d0-4667-af58-aa5410966d73",
-        "_rev": "LPc3Jmv1ULU5uXF5HLBoRB",
+        "_rev": "6kJnO6La3HnfTs1442gRTD",
         "_system": {
           "base": {
             "id": "5003f61f-c3d0-4667-af58-aa5410966d73",
-            "rev": "U74tcxucQVTMOGRTVglwh9"
+            "rev": "LPc3Jmv1ULU5uXF5HLBoRB"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-21T08:55:47Z",
+        "_updatedAt": "2026-08-25T18:00:27Z",
         "bezirk": "12 Reinickendorf",
-        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/34cf580e2c1f056203e4d4fd713bd6083d8a880f-2344x2951.jpg",
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/e5c774a5a92b536af18765682372c888c67076a8-1609x2109.jpg",
         "foto2": {
           "_type": "image",
           "asset": {
@@ -381,11 +381,11 @@ export const REGIONS_CMS = [
           }
         },
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg",
-        "foto_originalFilename": "ANTONIA_MARX_PORTRAIT_4x5Volt_BERLIN©EVELIN_FRERK .jpg",
+        "foto_originalFilename": "ANTONIA_MARX_PORTRAIT_4x5_BERLIN2026_cropped_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "ANTONIA_MARX_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Antonia Marx",
-        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/34cf580e2c1f056203e4d4fd713bd6083d8a880f-2344x2951.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/34cf580e2c1f056203e4d4fd713bd6083d8a880f-2344x2951.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/e5c774a5a92b536af18765682372c888c67076a8-1609x2109.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/e5c774a5a92b536af18765682372c888c67076a8-1609x2109.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
@@ -626,32 +626,32 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-10T18:01:06Z",
         "_id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-        "_rev": "TZSo9XvhWf3aAVsIk7RKkj",
+        "_rev": "6kJnO6La3HnfTs1442geXX",
         "_system": {
           "base": {
             "id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-            "rev": "U74tcxucQVTMOGRTVfTLzB"
+            "rev": "OBCDQJ8hm7FfwOrWoAVBON"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-17T16:26:01Z",
+        "_updatedAt": "2026-08-25T18:01:47Z",
         "bezirk": "01 Mitte",
-        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg",
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg",
         "foto2": {
           "_type": "image",
           "asset": {
-            "_ref": "image-01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885-jpg",
+            "_ref": "image-0003a3a8909ccfe2be01a3b18bb87a87eb341583-1920x2885-jpg",
             "_type": "reference"
           }
         },
-        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg",
-        "foto_originalFilename": "AXUMAWIT_BERHE_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/0003a3a8909ccfe2be01a3b18bb87a87eb341583-1920x2885.jpg",
+        "foto_originalFilename": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_cropped_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Axumawit Berhe",
-        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/b18e31cf9e65c1552654b88b2b08a3ce61cb7327-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
-        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/01a4748e11ad8439d9ef90c7d2d2dab6cc5449f0-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/0003a3a8909ccfe2be01a3b18bb87a87eb341583-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/0003a3a8909ccfe2be01a3b18bb87a87eb341583-1920x2885.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-11T17:40:01Z",

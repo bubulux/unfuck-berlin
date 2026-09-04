@@ -14,6 +14,7 @@ export interface CandidateBlock {
 }
 
 export interface CandidateDetailProps extends HTMLAttributes<HTMLElement> {
+  slug?: string
   name: string
   image: string
   imageAlt: string
@@ -34,6 +35,7 @@ export interface CandidateDetailProps extends HTMLAttributes<HTMLElement> {
 }
 
 export function CandidateDetail({
+  slug,
   name,
   image,
   imageAlt,
@@ -77,6 +79,41 @@ export function CandidateDetail({
           </Link>
         </section>
 
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            // "dateCreated": "2024-12-23T12:34:00-05:00",
+            // "dateModified": "2024-12-26T14:53:00-05:00",
+            "mainEntity": {
+              "@type": "Person",
+              "name": name,
+              "alternateName": name,
+              ...(slug ? {"identifier": slug || ''} : {}),
+              // "interactionStatistic": [{
+              //   "@type": "InteractionCounter",
+              //   "interactionType": "https://schema.org/FollowAction",
+              //   "userInteractionCount": 1
+              // },{
+              //   "@type": "InteractionCounter",
+              //   "interactionType": "https://schema.org/LikeAction",
+              //   "userInteractionCount": 5
+              // }],
+              // "agentInteractionStatistic": {
+              //   "@type": "InteractionCounter",
+              //   "interactionType": "https://schema.org/WriteAction",
+              //   "userInteractionCount": 2346
+              // },
+              "description": meta.join(' '),
+              "image": image,
+              "sameAs": [
+                slug ? `https://unfuck.berlin/kandidierende/${slug}` : null,
+                ...((socials || []).map(({ ctaHref }) => ctaHref))
+              ].filter(Boolean)
+            }
+          })}
+        </script>
+
         <div className="candidate__media">
           <div>
             <Text as="h1" variant="titel" color={nameColor} uppercase className="candidate__name">
@@ -110,21 +147,13 @@ export function CandidateDetail({
         </div>
 
         <div className="candidate__content">
-          {((subtitle || meta.length > 0) && !image_2) ? <>
-            {subtitle && <Text as="p" variant="body" color={textColor} weight="bold">
-              {subtitle}
-            </Text>}
-
-            {meta.length > 0 && (
-              <div className="candidate__meta">
-                {meta.map((line) => (
-                  <Text key={line} as="p" variant="body" color={textColor}>
-                    {line}
-                  </Text>
-                ))}
-              </div>
-            )}
-          </> : null}
+          {(meta.length > 0 && !image_2) ? <div className="candidate__meta">
+            {meta.map((line) => (
+              <Text key={line} as="p" variant="body" color={textColor}>
+                {line}
+              </Text>
+            ))}
+          </div> : null}
 
           {socials.length > 0 ? (
             <div className="candidate__follow">

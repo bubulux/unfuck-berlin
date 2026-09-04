@@ -30,7 +30,7 @@
 
 /* The trailing dot is part of the link (stylistic separator). */
 .was-mehr__dot {
-  margin-left: 0.4em;
+  margin-inline-start: 0.4em;
 }
 
 /* Round scroll-to-top button, bottom-right. */

@@ -14,7 +14,6 @@
   </url>
 
 
-
   <url>
     <loc>https://unfuck.berlin/kandidierende</loc>
   </url>
@@ -77,7 +76,9 @@
   </url>
 
 
-
+  <url>
+    <loc>https://unfuck.berlin/presse</loc>
+  </url>
   <url>
     <loc>https://unfuck.berlin/news</loc>
   </url>
@@ -135,7 +136,21 @@
   <url>
     <loc>https://unfuck.berlin/news/mini-manifesto-ru</loc>
   </url>
-
+  <url>
+    <loc>https://unfuck.berlin/news/mini-manifesto-fr</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/news/20sec-once-only</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/news/baden-in-der-spree-101-jahre</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/news/20sec-best-practices</loc>
+  </url>
+  <url>
+    <loc>https://unfuck.berlin/news/manifesto-en</loc>
+  </url>
 
   <url>
     <loc>https://unfuck.berlin/bezirke/</loc>

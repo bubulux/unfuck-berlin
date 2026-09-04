@@ -1,32 +1,47 @@
 import { Link, useLocation } from "react-router";
 import { PageLayout } from "../../components/templates/page-layout";
-import { NEWS_CMS } from "../../data/news.generated";
-import { PRESS_CMS } from "../../data/press.generated";
 import { HighlightText } from "../../components/atoms/highlight-text";
 import Button from "../../components/atoms/button";
 import { Icon } from "../../components/atoms/icon";
-// import ReactMarkdown from "react-markdown";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { marked } from 'marked'
-
-
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
-import { getFullBodyText } from "../../lib/getFullBodyText";
-import { formatPublishedAt, publishedAtSortKey } from "../../lib/publishedAt";
-import { NewsTeaser, PressTeaser } from "../../components/molecules/article-teaser";
+import { fetchCalendarPublic, toDisplayItem } from "../../lib/calendar";
 
-// function getFirstPhoto () {
-//   {
-//         "_key": "a3b9bfe61bc4",
-//         "_type": "photo",
-//         "alt": "Pia Voltz mit Antragstext",
-//         "foto_originalFilename": "pressemitteilung-bvv-trekoe-2025-06-16.jpg",
-//         "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4e6bfc353a41a5b725c87f75eeb0e0cd2729e4d7-1880x1084.jpg"
-//       },
-// }
+const ClockGlyph = () => (
+  <svg
+    className="event-card__icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="9" />
+    <path d="M12 7.5V12l3 1.5" />
+  </svg>
+)
 
-export function NewsPage() {
+const PinGlyph = () => (
+  <svg
+    className="event-card__icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0z" />
+    <circle cx="12" cy="10" r="3" />
+  </svg>
+)
+
+export function TerminePage() {
   const { pathname } = useLocation();
   const isSmallDevice = useMediaQuery("only screen and (max-width : 500px)");
   const isMediumDevice = useMediaQuery("only screen and (min-width : 500px) and (max-width : 900px)");
@@ -34,172 +49,132 @@ export function NewsPage() {
   const autoBreakSize_cramped = isSmallDevice ? 0.15 : isMediumDevice ? 0.20 : 0.25
   const autoBreakSize_roomy = isSmallDevice ? 0.2 : isMediumDevice ? 0.25 : 0.33
 
-  const article_many = NEWS_CMS
-    .filter(a => a.is_published === true)
-    .filter(a => pathname.endsWith(`/${a.slug}`))
+  const events_raw = fetchCalendarPublic()
 
-  if (!article_many.length) {
+  // Show the whole run up to and including 30 September (of the soonest event's
+  // year), then stop — no pagination, everything is on the page at once.
+  const cutoffYear = events_raw[0]?.start.getFullYear() ?? new Date().getFullYear();
+  const cutoff = new Date(cutoffYear, 8, 30, 23, 59, 59, 999);
+  const events = events_raw
+    .filter((_, i) => events_raw[i] && events_raw[i].start <= cutoff) // past events can be seen, future dates will be cut of at the end of september.
+    .filter(a => pathname.endsWith(`/${a.id}`))
 
-    const PRESS_AND_NEWS_SORTED = [
-      ...(PRESS_CMS.map(data => ({ type: 'press', data }))),
-      ...(NEWS_CMS.map(data => ({ type: 'article', data }))),
-    ]
-      .filter(a => a.data.is_published === true)
-      // Ohne (oder mit unlesbarem) Datum wuerde der Vergleich NaN liefern und die
-      // Reihenfolge waere undefiniert – solche Eintraege wandern ans Ende.
-      .sort((a, b) => publishedAtSortKey(b.data.publishedAt) - publishedAtSortKey(a.data.publishedAt))
-
-    return (
-      <PageLayout activePath={pathname} variant="light">
-        <div className="news__wrapper article_list">
-          <HighlightText
-            as="h1"
-            lines={['News']}
-            variant="titel"
-            color="purple"
-            textColor="white"
-            align="left"
-            uppercase={false}
-            className="news__text_width program-intro__heading"
-            style={{ marginBottom: 'var(--gap-big)' }}
-          />
-
-          {
-            PRESS_AND_NEWS_SORTED.map((item, index) => {
-              if (item.type === 'press') {
-                const press: any = item.data
-
-                return (
-                  <PressTeaser
-                    key={`${index}-${press.url}`}
-                    press={press}
-                    className="news__text_width"
-                    autoBreakSize={autoBreakSize_roomy}
-                  />
-                )
-              }
-              if (item.type === 'article') {
-                const article: any = item.data
-
-                return (
-                  <NewsTeaser
-                    key={`${index}-${article.slug}`}
-                    article={article}
-                    className="news__text_width"
-                    autoBreakSize={autoBreakSize_roomy}
-                  />
-                )
-              }
-
-              return null
-            })
-          }
-        </div>
-      </PageLayout>
-    );
-  }
-
-  const article = article_many[0]
-
-  const full_body = getFullBodyText(article.content_modules)
+  const event = toDisplayItem(events[0])
 
   const articleJsonLd = {
   "@context": "https://schema.org",
-  "@type": "NewsArticle",
+  "@type": "Event",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": `https://unfuck.berlin/news/${article.slug}`
+    "@id": `https://unfuck.berlin/termine/${event.id}`
   },
-  "identifier": `https://unfuck.berlin/news/${article.slug}`,
-  "sameAs": `https://unfuck.berlin/news/${article.slug}`,
-  "url": `https://unfuck.berlin/news/${article.slug}`,
-  "headline": (article.title || []).join(' '),
-  "name": (article.title || []).join(' '),
-  "alternateName": (article.title || []).join(' '),
-  // "image": [
-  //   "https://example.com/images/article-1200.jpg"
-  // ],
-  "publisherImprint": "https://voltdeutschland.org/berlin/impressum",
-  "isAccessibleForFree": true,
-  "genre": "News",
-  // Ohne Datum wuerden hier kaputte Werte wie "T00:00:00+02:00" landen.
-  ...(article.publishedAt ? {
-    "dateCreated": `${article.publishedAt}T00:00:00+02:00`,
-    "datePublished": `${article.publishedAt}T00:00:00+02:00`,
-    "contentReferenceTime": `${article.publishedAt}T00:00:00+02:00`,
-  } : {}),
-  "countryOfOrigin": "Germany",
-  "inLanguage": article.lang || 'de',
+  "url": `https://unfuck.berlin/termine/${event.id}`,
+  "sameAs": `https://unfuck.berlin/termine/${event.id}`,
+  "identifier": event.id || '',
+
+  "eventStatus": "https://schema.org/EventScheduled",
+
+  "name": event.title || '',
+  "alternateName": event.title || '',
+  "image": [
+    "https://unfuck.berlin/for_jsonld/termine.jpg"
+  ],
+  "doorTime": event.iso_start,
+  "startDate": event.iso_start,
+  "endDate": event.iso_end,
+  "location": {
+    "@type": "Place",
+    "name": event.location,
+    "address": {
+      "@type": "PostalAddress",
+      "name": event.location,
+    }
+  },
+
   // "dateModified": "2026-07-29T09:15:00+02:00",
-  "publisher": {
+  // "author": {
+  //   "@type": "Person",
+  //   "name": "Volt Berlin"
+  // },
+  "organizer": {
     "@type": "Organization",
     "name": "Volt Berlin",
+    "url": "https://unfuck.berlin",
     // "logo": {
     //   "@type": "ImageObject",
     //   "url": "https://example.com/logo.png"
     // }
   },
-  "author": {
-    "@type": "Organization",
-    "name": "Volt Berlin",
-    // "logo": {
-    //   "@type": "ImageObject",
-    //   "url": "https://example.com/logo.png"
-    // }
-  },
-  "description": article.body || '',
-  "abstract": article.body || '',
-  "articleBody": full_body,
-  "text": full_body,
+  "description": event.description || '',
+  "abstract": event.description || '',
+  "articleBody": event.description || '',
+  "text": event.description || '',
 }
 
+  const content_modules = [
+    {
+      _type: 'hero_linear',
+      heroZeilen: [event.title],
+    },
+    {
+      _type: 'md_content',
+      md_content: event.description,
+    }
+  ]
 
-  const theme_variant = article.theme === 'purple' ? 'purple' : 'light' as const
-
-  // Artikel aus dem CMS koennen in einer anderen Sprache und Leserichtung stehen
-  // (z. B. das arabische Mini-Manifesto). dir/lang haengen am Artikel-Wrapper,
-  // nicht am ganzen Layout: Header, Footer und die deutschen Standardbloecke
-  // unten bleiben links-nach-rechts.
-  const article_dir = article.is_rtl ? 'rtl' : 'ltr'
-  const article_lang = article.lang || undefined
-
+  const theme_variant = 'light' // article.theme === 'purple' ? 'purple' : 'light' as const
   return (
     <PageLayout activePath={pathname} variant={theme_variant}>
       <script type="application/ld+json">
         {JSON.stringify(articleJsonLd)}
       </script>
 
-      <div className="news__wrapper" dir={article_dir} lang={article_lang}>
-        <section className="news__text_width" dir="ltr" lang="de" style={{ marginBlockEnd: '32px' }}>
-          <Link to="/news">
+      <div className="news__wrapper">
+        <section className="news__text_width" style={{ marginBlockEnd: '32px' }}>
+          <Link to="/termine">
             <Button
               size="cta"
               variant="solid"
-              color={theme_variant === 'purple' ? 'purple' : 'white'}
+              color={theme_variant as any === 'purple' ? 'purple' : 'white'}
               iconLeft={<Icon size="1.5em" name="arrow-left" />}
             >
-              Zur Artikel Übersicht
+              Zur Termin Übersicht
             </Button>
           </Link>
         </section>
 
       {
-        article.content_modules.map((c, index) => {
+        content_modules.map((c, index) => {
           const key = `${index}-${c._type}`
 
           const c_as_any = (c as any)
 
           if (c._type === 'hero_linear') {
-            const publishedAt_label = formatPublishedAt(article.publishedAt)
+            const location = event.location
+
+            const badge = event.badge
 
             return <section
               key={key}
               className="news__text_width"
+              style={{ position: 'relative' }}
             >
+              {badge ? (
+                <HighlightText
+                  lines={[badge.label]}
+                  variant="body"
+                  color={badge.color}
+                  textColor={badge.textColor}
+                  direction="column"
+                  align="left"
+                  style={{ marginBottom: '16px' }}
+                />
+              ) : null}
+
               <HighlightText
                 as="h1"
                 autoBreakSize={autoBreakSize_cramped}
-                lines={c.heroZeilen || []}
+                lines={c_as_any.heroZeilen || []}
                 variant="titel"
                 color="neon"
                 textColor="purple"
@@ -209,10 +184,33 @@ export function NewsPage() {
                 style={{ marginBottom: '32px' }}
               />
 
-              <p style={{ width: 'var(--content-max)', maxWidth: '100%' }}>
-                {publishedAt_label && <strong>{publishedAt_label}</strong>}
-                {article.body && (publishedAt_label ? ` — ${article.body}` : article.body)}
-              </p>
+              <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <strong style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <ClockGlyph />
+                  <span>{[`${event.day}. ${event.month}`, event.time].join(', ')}</span>
+                </strong>
+                {location ? (
+                  /^https?:\/\//i.test(location) ? (
+                    <a
+                      href={location}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <strong style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <PinGlyph />
+                        <span>Auf Karte ansehen</span>
+                      </strong>
+                    </a>
+                  ) : (
+                    <strong style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <PinGlyph />
+                      <span>{location}</span>
+                    </strong>
+                  )
+                ) : null}
+              </div>
+
+              <hr />
             </section>
           } else if (c._type === 'headline') {
             return (<section
@@ -254,12 +252,12 @@ export function NewsPage() {
               </section>
             )
           } else if (c._type === 'photo') {
-            if (!c.photo) {
+            if (!c_as_any.photo) {
               return null
             }
             return <section key={key} style={{ marginBlock: 'var(--gap-big)' }}>
               <img
-                src={c.photo}
+                src={c_as_any.photo}
                 alt={c_as_any.alt || ''}
                 style={{
                   width: '100%',
@@ -279,7 +277,6 @@ export function NewsPage() {
       }
 
 
-      <div className="news__ltr_block" dir="ltr" lang="de">
       <section
         className="news__text_width"
         style={{ marginBlock: 'var(--gap-big) 16px' }}
@@ -288,8 +285,8 @@ export function NewsPage() {
           as="h2"
           lines={['Über Volt in Berlin']}
           variant="subtitel"
-          color={theme_variant === 'purple' ? 'white' : 'purple'}
-          textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+          color={theme_variant as any === 'purple' ? 'white' : 'purple'}
+          textColor={theme_variant as any === 'purple' ? 'purple' : 'white'}
           align="left"
           uppercase={false}
           className="program-intro__heading"
@@ -308,8 +305,8 @@ export function NewsPage() {
           autoBreakSize={autoBreakSize_roomy}
           lines={['Presse- und Medienanfragen']}
           variant="subtitel"
-          color={theme_variant === 'purple' ? 'white' : 'purple'}
-          textColor={theme_variant === 'purple' ? 'purple' : 'white'}
+          color={theme_variant as any === 'purple' ? 'white' : 'purple'}
+          textColor={theme_variant as any === 'purple' ? 'purple' : 'white'}
           align="left"
           uppercase={false}
           className="program-intro__heading"
@@ -324,7 +321,6 @@ export function NewsPage() {
           Allgemeine Fragen und Feedback bitte an <Link style={{ textDecoration: 'underline' }} to="mailto:berlin@voltdeutschland.org">berlin@voltdeutschland.org</Link> richten.
         </p>
       </section>
-      </div>
 
       </div>
     </PageLayout>

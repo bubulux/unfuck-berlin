@@ -16,10 +16,13 @@ export interface CalendarEventItem {
   /** Raw start instant — kept for client-side filtering (by date/region). */
   start?: Date
   title: string
+  iso_start: string,
+  iso_end: string,
   /** Time line, e.g. "17:00–19:00 Uhr" (empty for all-day). */
   time?: string
   /** Venue/address line. */
   location?: string
+  description?: string,
   /** Category badge shown above the card's top-left corner. */
   badge?: { label: string; color: ColorToken; textColor: ColorToken }
 }
@@ -100,6 +103,7 @@ export function CalendarSection({
           <div className="calendar__list">
             {events.map((event) => (
               <EventCard
+                event_id={event.id}
                 key={event.id}
                 day={event.day}
                 month={event.month}

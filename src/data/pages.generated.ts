@@ -31,34 +31,6 @@ export const PAGES_CMS = [
             "_type": "reference"
           }
         }
-      },
-      {
-        "_key": "36ee659e03e8",
-        "_type": "wahlsystem_teaser",
-        "foto_originalFilename": null,
-        "link": "Wie wähle ich?",
-        "photo": null,
-        "text": "Aber wie? Wir erklären dir, wie das Berliner Wahl System funktioniert und was Du benötigst um die beste Wahl für das AGH und die BVV zu treffen.",
-        "title": "Du hast die Wahl!"
-      },
-      {
-        "_key": "1fd26cd6a80f",
-        "_type": "kalender_teaser",
-        "foto_originalFilename": null,
-        "photo": null,
-        "titel": "Triff uns!"
-      },
-      {
-        "_key": "fd3a1049dfdb",
-        "_type": "kandis_teaser",
-        "foto_originalFilename": null,
-        "kandidatenLink": "Unsere Kandidierenden stellen sich vor",
-        "kandidatenText": "Hinter jeder Kandidatur steht ein Mensch mit Ideen, Erfahrungen und dem Wunsch, Berlin voranzubringen. Hier kannst du unsere Kandidat:innen kennenlernen.",
-        "kandidatenZeilen": [
-          "UNSERE",
-          "Kandidierenden"
-        ],
-        "photo": null
       }
     ]
   },
@@ -160,6 +132,14 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "cd5dd53a6f41",
+        "_type": "one_cta",
+        "ctaHref": "/news/manifesto-en",
+        "ctaLabel": "🇬🇧 Full manifesto in English",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
         "_key": "3f309529c4a5",
         "_type": "one_cta",
         "ctaHref": "/bezirke",
@@ -202,10 +182,10 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "4f403a7e1ad3",
+        "_key": "bb8299768afe",
         "_type": "one_cta",
-        "ctaHref": "/news/mini-manifesto-es",
-        "ctaLabel": "🇪🇸 Programa electoral breve en español",
+        "ctaHref": "/news/mini-manifesto-pl",
+        "ctaLabel": "🇵🇱 Skrócony program wyborczy po polsku",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -218,18 +198,18 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "bb8299768afe",
-        "_type": "one_cta",
-        "ctaHref": "/news/mini-manifesto-pl",
-        "ctaLabel": "🇵🇱 Skrócony program wyborczy po polsku",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
         "_key": "9b98cb48523f",
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-it",
         "ctaLabel": "🇮🇹 Programma elettorale breve in italiano",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "4f403a7e1ad3",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-es",
+        "ctaLabel": "🇪🇸 Programa electoral breve en español",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -254,6 +234,30 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-ru",
         "ctaLabel": "🇷🇺 Краткая предвыборная программа на русском",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "3ab0bb6d36aa",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-bks",
+        "ctaLabel": "🇭🇷 Kratki izborni program na hrvatskom",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "e7ebaf6eb8ef",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-pt",
+        "ctaLabel": "🇵🇹 Programa eleitoral resumido em português",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "b9e7284f640b",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-cz",
+        "ctaLabel": "🇨🇿 Stručný volební program v češtině",
         "foto_originalFilename": null,
         "photo": null
       },
@@ -458,6 +462,14 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "502218dfb857",
+        "_type": "one_cta",
+        "ctaHref": "https://www.wahl-o-mat.de/berlin2026/",
+        "ctaLabel": "Wahl-o-Mat",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
         "_key": "a4c243c28d31",
         "_type": "one_cta",
         "ctaHref": "https://docs.google.com/forms/d/e/1FAIpQLSe0KIETh9W7UODbBxtupBTD0sfl3mW4jLpj7e6JE5XYjXz0HQ/viewform",
@@ -576,6 +588,14 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "https://berlin.social/@VoltBerlin",
         "ctaLabel": "Mastodon",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "d134a41a11e9",
+        "_type": "one_cta",
+        "ctaHref": "https://loops.video/@Volt_Berlin",
+        "ctaLabel": "Loops",
         "foto_originalFilename": null,
         "photo": null
       },

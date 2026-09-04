@@ -27,6 +27,12 @@
   }
 }
 
+/* Reine dir/lang-Huelle: die Kinder bleiben direkte Flex-Items von
+   .news__wrapper, damit Abstaende und Ausrichtung identisch bleiben. */
+.news__ltr_block {
+  display: contents;
+}
+
 .news__text_width {
   max-width: 100%;
   width: var(--content-max);
@@ -78,6 +84,17 @@
   margin-block-start: 2rem;
 }
 
+.markdown_wrapper a {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: color-mix(in srgb, currentColor, transparent 40%);
+}
+.markdown_wrapper a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.1rem;
+  text-decoration-color: currentColor;
+}
+
 
 
 .news__wrapper ul {
@@ -95,7 +112,7 @@
   content: "* ";
   position: absolute;
   top: -0.6rem;
-  left: 0rem;
+  inset-inline-start: 0rem;
   font-size: clamp(2rem, 5vw, 2.4rem);
   font-weight: bold;
   color: inherit;
@@ -115,60 +132,4 @@
   /* font-size: var(--text-body); */
 
   --img-shadow-color: var(--color-neon);
-}
-
-/* .pressAndNewsItemSection:hover {
-  text-decoration: underline;
-} */
-.headlineAndImage {
-  position: relative;
-}
-.teaserImageInHeadingWrapper {
-  position: relative;
-  margin: -8px;
-  z-index: 0;
-  width: calc(100% + 16px);
-}
-.teaserImageInHeadingWrapper:before {
-  content: '';
-  background: var(--img-shadow-color);
-  position: absolute;
-  inset: 0;
-  transform: translate(-8px, 8px) rotate(-2deg);
-  transition: transform 0.1s ease;
-  z-index: 1;
-}
-.pressAndNewsItemSection:hover .teaserImageInHeadingWrapper:before {
-  transform: translate(-12px, 12px) rotate(-2deg);
-}
-
-.teaserImageInHeadingWrapper img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--img-shadow-color);
-}
-.teaserImageInHeadingWrapper .headline {
-  position: relative;
-  z-index: 3;
-}
-
-.headlineAndImage .headline.hasImage {
-  margin-block-start: -12px;
-}
-@media (min-width: 600px) {
-  .headlineAndImage .headline.hasImage {
-    margin-block-start: -48px;
-  }
-  .teaserImageInHeadingWrapper {
-    margin: 32px;
-    width: 80%;
-  }
-  .teaserImageInHeadingWrapper:before {
-    transform: translate(-16px, 16px) rotate(-2deg);
-  }
-  .pressAndNewsItemSection:hover .teaserImageInHeadingWrapper:before {
-    transform: translate(-24px, 24px) rotate(-2deg);
-  }
 }

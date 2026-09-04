@@ -42,6 +42,29 @@ export function PageLayout({
         ...style,
       }}
     >
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://unfuck.berlin",
+          "sameAs": ["https://unfuck.berlin", "https://voltdeutschland.org/berlin", "https://voltberlin.org", "https://voltberlin.fun", "https://voltberlin.ai"],
+          "logo": "https://unfuck.berlin/volt-logo.png",
+          "name": "Volt Berlin",
+          "description": "Volt bringt nach Berlin, was woanders funktioniert. Egal, ob die Idee aus Berlin, Kopenhagen oder Warschau kommt. So einfach. So selten. Volt ist eine europaweite Bewegung und Partei. Wir setzen uns für eine gemeinsame, moderne und lösungsorientierte Politik ein.",
+          "email": "berlin@voltdeutschland.org",
+          // "telephone": "+47-99-999-9999",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Choriner Straße 34",
+            "addressLocality": "Berlin",
+            "addressCountry": "DE",
+            "addressRegion": "Berlin",
+            "postalCode": "10435"
+          },
+          // "vatID": "FR12345678901",
+          // "iso6523Code": "0199:724500PMK2A2M1SQQ228"
+        })}
+      </script>
       <SiteHeader
         links={navLinks}
         activePath={activePath}

@@ -5,6 +5,11 @@
   position: relative;
   padding: var(--space-4) var(--space-5);
   background-color: var(--color-white);
+  transition: all 0.1s ease-in-out;
+}
+a.event-card:hover {
+  transform: rotate(-2deg) scale(0.95);
+  opacity: 0.9;
 }
 
 /* Category badge sits like a sticker straddling the card's top-left corner. */
@@ -27,8 +32,8 @@
 .event-card__date {
   flex: 0 0 auto;
   min-width: 4.5rem;
-  padding-right: var(--space-4);
-  border-right: 1px solid var(--color-black);
+  padding-inline-end: var(--space-4);
+  border-inline-end: 1px solid var(--color-black);
 }
 
 /* Narrow card: stack into two rows — date + horizontal divider on top, then
@@ -45,9 +50,9 @@
     align-items: baseline;
     gap: 0.4em;
     min-width: 0;
-    padding-right: 0;
+    padding-inline-end: 0;
     padding-bottom: var(--space-3);
-    border-right: none;
+    border-inline-end: none;
     border-bottom: 1px solid var(--color-black);
   }
 }

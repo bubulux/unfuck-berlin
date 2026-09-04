@@ -9,6 +9,7 @@ export const NAV_LINKS: NavItem[] = [
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
+  { label: "In der Presse", to: "/presse" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
 ];
@@ -19,6 +20,7 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
+  { label: "In der Presse", to: "/presse" },
   { label: "Kalender", to: "/termine" },
   { label: "Alle Voltkandidierenden", to: "/kandidierende" },
   { label: "unf*ck berlin", to: "/news/unfuck-berlin-reveal" },
@@ -30,12 +32,18 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
 /** Social platforms shown in the footer / social rows. */
 export const SOCIAL_LINKS: SocialLink[] = [
   { ctaLabel: "instagram", ctaHref: "https://www.instagram.com/volt_berlin/" },
+  { ctaLabel: "tiktok", ctaHref: "https://www.tiktok.com/@volt_berlin" },
   {
     ctaLabel: "linkedin",
     ctaHref: "https://www.linkedin.com/company/volt-berlin/",
   },
   { ctaLabel: "youtube", ctaHref: "https://www.youtube.com/@volt_berlin/" },
   { ctaLabel: "mastodon", ctaHref: "https://berlin.social/@VoltBerlin" },
+  { ctaLabel: "loops", ctaHref: "https://loops.video/@Volt_Berlin" },
+  {
+    ctaLabel: "whatsapp",
+    ctaHref: "https://www.whatsapp.com/channel/0029VbBwmKu90x33w7IhA00Z",
+  },
   { ctaLabel: "facebook", ctaHref: "https://www.facebook.com/BerlinVolt" },
 ];
 

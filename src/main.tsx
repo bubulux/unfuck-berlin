@@ -11,8 +11,10 @@ import { Confirm } from './pages/confirm'
 import { Kandidaten } from './pages/kandidaten'
 import { KandidatDetail } from './pages/kandidat-detail'
 import { NewsPage } from './pages/news'
+import { PressePage } from './pages/presse'
 import { RegionsPage } from './pages/regions'
 import { PagePage } from './pages/page'
+import { TerminePage } from './pages/termine'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -30,9 +32,13 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/news" element={<NewsPage />} />
           <Route path="/news/*" element={<NewsPage />} />
 
+          <Route path="/presse" element={<PressePage />} />
+
           <Route path="/kandidaten" element={<Navigate to="/kandidierende" replace />} />
           <Route path="/kandidierende" element={<Kandidaten />} />
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />
+
+          <Route path="/termine/:slug" element={<TerminePage />} />
 
           <Route path="/sticker" element={<Sticker />} />
           <Route path="/confirm" element={<Confirm />} />

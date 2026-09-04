@@ -78,7 +78,7 @@
 }
 
 .spitzenduo-card--reverse .spitzenduo-card__text {
-  margin-left: auto;
+  margin-inline-start: auto;
   text-align: right;
   align-items: flex-end;
 }
