@@ -1,5 +1,9 @@
 .social-row {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--space-3);
+  /* Cap to the container so a long row of icons wraps onto the next line on
+   * narrow screens instead of overflowing (and breaking page responsiveness). */
+  max-width: 100%;
 }
