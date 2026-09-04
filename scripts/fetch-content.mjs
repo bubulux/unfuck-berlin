@@ -35,6 +35,7 @@ const OUT_REGIONS = resolve(DATA_DIR, 'regions.generated.ts')
 const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
 const OUT_PRESS = resolve(DATA_DIR, 'press.generated.ts')
 const OUT_PAGES = resolve(DATA_DIR, 'pages.generated.ts')
+const OUT_SUPPORTERS = resolve(DATA_DIR, 'supporters.generated.ts')
 
 // Staging-Preview: Auf Netlify-Preview-/Branch-Deploys (CONTEXT != 'production')
 // ziehen wir Entwuerfe statt nur veroeffentlichter Inhalte. Dafuer noetig:
@@ -76,6 +77,9 @@ const DETAIL_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp
 const MEET_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=10'
 // Cluster-Kacheln: Hochformat (3:4) der Quellbilder beibehalten – kein Zuschnitt.
 const CLUSTER_IMG_PARAMS = 'w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20'
+// Wall of Support: Plakate unbeschnitten lassen (Quellen mischen 4:5 und 1:1),
+// nur Breite begrenzen und ins beste Format ausliefern.
+const WALL_IMG_PARAMS = 'w=800&auto=format&sharp=10'
 
 // Feste Auswahl + Reihenfolge der 9 Kandidierenden im Home-Cluster (3x3).
 const CLUSTER_SLUGS = [
@@ -140,6 +144,16 @@ const PAGES_QUERY = `*[_type=="seite"]|order(slug desc){
     "photo": photo.asset->url,
     "foto_originalFilename": photo.asset->originalFilename,
   }
+}`
+
+// Wall of Support: Unterstützer:innen mit Plakat-Foto, Name und optionalem
+// LinkedIn-Post. Sortierung hier alphabetisch (deterministisch fuer die
+// generierte Datei) – die zufaellige Reihenfolge macht das Frontend pro Aufruf.
+const SUPPORTERS_QUERY = `*[_type=="supporter"]|order(name asc){
+  name,
+  linkedin,
+  "foto": foto.asset->url,
+  "foto_originalFilename": foto.asset->originalFilename,
 }`
 
 const WAHLPROGRAMM_QUERY = `*[_type=="seite" && slug.current=="wahlprogramm"][0]{
@@ -285,6 +299,22 @@ function buildPress(rows) {
     })
 
   return press
+}
+
+function buildSupporters(rows) {
+  // Bewusst kein Fehler bei leerer Liste: solange keine supporter-Dokumente
+  // veroeffentlicht sind, liefert die published-Perspektive 0 Treffer und der
+  // Produktions-Build soll trotzdem durchlaufen.
+  return (rows || [])
+    .filter((s) => s.name && s.foto)
+    .map((s) => ({
+      name: clean(s.name),
+      linkedin: clean(s.linkedin),
+      foto_originalFilename: s.foto_originalFilename || '',
+      image: withParams(s.foto, CARD_IMG_PARAMS),
+      imageDetail: withParams(s.foto, DETAIL_IMG_PARAMS),
+      imageWall: withParams(s.foto, WALL_IMG_PARAMS),
+    }))
 }
 
 function buildPages(rows) {
@@ -501,11 +531,12 @@ const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {
-  const [regionsRows, pressRows, newsRows, pagesRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+  const [regionsRows, pressRows, newsRows, pagesRows, supporterRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
     client.fetch(REGIONS_QUERY),
     client.fetch(PRESS_QUERY),
     client.fetch(NEWS_QUERY),
     client.fetch(PAGES_QUERY),
+    client.fetch(SUPPORTERS_QUERY),
     client.fetch(WAHLPROGRAMM_QUERY),
     client.fetch(KANDIDATEN_QUERY),
     client.fetch(WAHLSYSTEM_QUERY),
@@ -519,6 +550,7 @@ async function main() {
   const press = buildPress(pressRows)
   const news = buildNews(newsRows)
   const pages = buildPages(pagesRows)
+  const supporters = buildSupporters(supporterRows)
   const wahlprogramm = buildWahlprogramm(wpRes)
   const kandidaten = buildKandidaten(kandiRows)
   const wahlsystem = buildWahlsystem(wsRes)
@@ -549,6 +581,12 @@ async function main() {
   writeFileSync(
     OUT_PAGES,
     `${header}\n\nexport const PAGES_CMS = ${JSON.stringify(pages, null, 2)}\n`,
+    'utf8',
+  )
+
+  writeFileSync(
+    OUT_SUPPORTERS,
+    `${header}\n\nexport const SUPPORTERS_CMS = ${JSON.stringify(supporters, null, 2)}\n`,
     'utf8',
   )
 
@@ -594,7 +632,7 @@ async function main() {
   )
 
   console.info(
-    `Inhalte aktualisiert: Bezirke (${regions.length}), Press (${press.length}), News (${news.length}), Pages (${pages.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
+    `Inhalte aktualisiert: Bezirke (${regions.length}), Press (${press.length}), News (${news.length}), Pages (${pages.length}), Supporters (${supporters.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
   )
 }
 
@@ -605,6 +643,7 @@ main().catch((err) => {
     existsSync(OUT_PRESS) &&
     existsSync(OUT_NEWS) &&
     existsSync(OUT_PAGES) &&
+    existsSync(OUT_SUPPORTERS) &&
     existsSync(OUT_WAHLPROGRAMM) &&
     existsSync(OUT_KANDIDATEN) &&
     existsSync(OUT_WAHLSYSTEM) &&

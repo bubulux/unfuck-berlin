@@ -262,6 +262,47 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "cf018484e3bf",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-ar",
+        "ctaLabel": "برنامج انتخابي مختصر باللغة العربية",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "7ca803a65f80",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-fa",
+        "ctaLabel": "برنامهٔ کوتاه انتخاباتی به فارسی 🇮🇷",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "0bbcfa029f3e",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-hr",
+        "ctaLabel": "🇭🇷 Kratki izborni program na hrvatskom jeziku",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "73b3e2aad24c",
+        "_type": "headline",
+        "foto_originalFilename": null,
+        "headlineZeilen": [
+          "Positionspapiere"
+        ],
+        "photo": null
+      },
+      {
+        "_key": "d14fe933767e",
+        "_type": "one_cta",
+        "ctaHref": "/news/positionspapier-startups",
+        "ctaLabel": "Positionspapier: Startups",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
         "_key": "202fa8f7128e",
         "_type": "wahlprogramm_teaser",
         "foto_originalFilename": null,

@@ -1,0 +1,136 @@
+/* Wall of Support V3 – gegenlaeufige Endlos-Baender ueber volle Breite. */
+
+/* Nur horizontal beschneiden (kein Seiten-Scrollbalken durch die
+   max-content-Baender) – vertikal muss die Namens-Sprechblase ueber die
+   Reihe hinausragen duerfen. `overflow: hidden` davor ist der Fallback
+   fuer Browser ohne `clip` (dort bleibt die Blase wie bisher beschnitten). */
+.wall-stream {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-bottom: var(--space-8);
+  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.wall-stream__row {
+  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.wall-stream__track {
+  display: flex;
+  width: max-content;
+  animation: wall-stream-scroll var(--duration) linear infinite;
+}
+.wall-stream__row--reverse .wall-stream__track {
+  animation-direction: reverse;
+}
+/* Hover/Fokus irgendwo in der Reihe: Band anhalten. */
+.wall-stream__row:hover .wall-stream__track,
+.wall-stream__row:focus-within .wall-stream__track {
+  animation-play-state: paused;
+}
+
+/* Eine Kopie der Reihe; die Schleife verschiebt um genau eine Kopie-Laenge. */
+.wall-stream__group {
+  display: flex;
+  gap: var(--space-4);
+  padding-inline-end: var(--space-4);
+}
+
+@keyframes wall-stream-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.wall-stream__card {
+  position: relative;
+  display: block;
+  height: 180px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+@media (min-width: 700px) {
+  .wall-stream__card {
+    height: 240px;
+  }
+}
+
+.wall-stream__img {
+  display: block;
+  height: 100%;
+  width: auto;
+  border-radius: inherit;
+}
+
+/* Nachbarn leicht abdunkeln, gehovertes Plakat herausheben. */
+.wall-stream__row:hover .wall-stream__card:not(:hover) {
+  filter: brightness(0.55) saturate(0.8);
+}
+.wall-stream__card:hover,
+.wall-stream__card:focus-visible {
+  transform: scale(1.12);
+  z-index: 2;
+}
+.wall-stream__card:focus-visible {
+  outline: 3px solid var(--color-neon);
+  outline-offset: 2px;
+}
+
+/* Name als Sprechblase ueber dem Plakat. */
+.wall-stream__name {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  transform: translateX(-50%) translateY(4px);
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-neon);
+  color: var(--color-purple);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.wall-stream__name::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--color-neon);
+}
+.wall-stream__card:hover .wall-stream__name,
+.wall-stream__card:focus-visible .wall-stream__name {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Reduzierte Motion: Baender stehen still und sind manuell scrollbar. Der
+   Scroll-Container beschneidet vertikal – daher Luft nach oben fuer die
+   Sprechblase einplanen. */
+@media (prefers-reduced-motion: reduce) {
+  .wall-stream__row {
+    overflow-x: auto;
+    padding-top: var(--space-7);
+  }
+  .wall-stream__track {
+    animation: none;
+  }
+  .wall-stream__card,
+  .wall-stream__name {
+    transition: none;
+  }
+}

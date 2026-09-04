@@ -1,0 +1,85 @@
+/* Wall of Support V2 – Plakatwand (Masonry via CSS columns). */
+
+.wall-posters {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-4) 0;
+  columns: 2;
+  column-gap: var(--space-5);
+}
+@media (min-width: 700px) {
+  .wall-posters {
+    columns: 3;
+  }
+}
+@media (min-width: 1050px) {
+  .wall-posters {
+    columns: 4;
+  }
+}
+
+.wall-posters__cell {
+  break-inside: avoid;
+  padding-bottom: var(--space-6);
+}
+
+/* Polaroid-artige Karte: weisser Rand, Schatten, leicht schief an der Wand. */
+.wall-posters__card {
+  position: relative;
+  display: block;
+  background: var(--color-white);
+  padding: var(--space-2) var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 14px rgba(17, 17, 17, 0.18);
+  transform: rotate(var(--tilt));
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+/* Klebeband oben, in wechselnden Volt-Farben. */
+.wall-posters__tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 84px;
+  height: 22px;
+  background: var(--tape);
+  opacity: 0.85;
+  transform: translateX(-50%) rotate(calc(var(--tilt) * -1.5));
+  box-shadow: 0 1px 3px rgba(17, 17, 17, 0.15);
+}
+
+.wall-posters__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wall-posters__name {
+  display: block;
+  padding-top: var(--space-2);
+  color: var(--color-purple);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  font-style: italic;
+  text-align: center;
+  line-height: var(--line-snug);
+}
+
+/* Hover: Plakat richtet sich auf und tritt nach vorn. */
+.wall-posters__card:hover,
+.wall-posters__card:focus-visible {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 14px 34px rgba(17, 17, 17, 0.3);
+  z-index: 1;
+}
+.wall-posters__card:focus-visible {
+  outline: 3px solid var(--color-pink);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wall-posters__card {
+    transition: none;
+  }
+}

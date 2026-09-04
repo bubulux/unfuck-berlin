@@ -32,6 +32,7 @@ import seiteCountDown from './seiteCountDown'
 import seiteMitmachen from './seiteMitmachen'
 // import seitePaulAnna from './seitePaulAnna'
 import seiteUnfck from './seiteUnfck'
+import supporter from './supporter'
 // import seiteVoltomat from './seiteVoltomat'
 // import siteTexte from './siteTexte'
 import spitzenduo from './spitzenduo'
@@ -74,5 +75,6 @@ export const schemaTypes = [
   // seiteVoltomat,
   // siteTexte,
   spitzenduo,
+  supporter,
   // termin,
 ]
