@@ -77,6 +77,9 @@ const DETAIL_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp
 const MEET_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=10'
 // Cluster-Kacheln: Hochformat (3:4) der Quellbilder beibehalten – kein Zuschnitt.
 const CLUSTER_IMG_PARAMS = 'w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20'
+// Wall of Support: Plakate unbeschnitten lassen (Quellen mischen 4:5 und 1:1),
+// nur Breite begrenzen und ins beste Format ausliefern.
+const WALL_IMG_PARAMS = 'w=800&auto=format&sharp=10'
 
 // Feste Auswahl + Reihenfolge der 9 Kandidierenden im Home-Cluster (3x3).
 const CLUSTER_SLUGS = [
@@ -310,6 +313,7 @@ function buildSupporters(rows) {
       foto_originalFilename: s.foto_originalFilename || '',
       image: withParams(s.foto, CARD_IMG_PARAMS),
       imageDetail: withParams(s.foto, DETAIL_IMG_PARAMS),
+      imageWall: withParams(s.foto, WALL_IMG_PARAMS),
     }))
 }
 
