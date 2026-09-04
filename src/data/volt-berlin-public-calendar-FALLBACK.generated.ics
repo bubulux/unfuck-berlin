@@ -6,52 +6,9 @@ METHOD:PUBLISH
 X-WR-CALNAME:Volt Berlin (website ersatz kalender)
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260920
-DTEND;VALUE=DATE:20260921
-DTSTAMP:20260901T202314Z
-UID:1mvk5ltobs6mal1gujs91qksa4@google.com
-CREATED:20260901T202100Z
-DESCRIPTION:#Highlight
-LAST-MODIFIED:20260901T202133Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Wahl zum 20. Abgeordnetenhaus von Berlin und zu den Bezirksverordne
- tenversammlungen
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20260903T120000Z
-DTEND:20260903T140000Z
-DTSTAMP:20260901T202314Z
-UID:735b9q8aojm8sev35mq5c5hapj@google.com
-CREATED:20260901T195453Z
-DESCRIPTION:<p>Berlin hat viele Baustellen\, aber wir haben die passenden L
- ösungen. Steig in den Doppeldecker ein &amp\; erlebe Volts Lösungen vor Ort
- !</p><h2>​Unf*ck Berlin: Die Bus-Tour mit Volt Berlin</h2><p>​<strong>Anna 
- Auerbach</strong> und <strong>Paul Loeper</strong>\, die Spitzenkandidieren
- den von Volt Berlin\, fahren mit dem „unf*ck berlin“-Doppeldecker-Bus genau
-  dorthin\, wo es hakt: Zu den Orten\, die für die größten Missstände der St
- adt stehen – und für <strong>die Lösungen\, die Volt dem entgegensetzt</str
- ong>.</p><p>​Volt ist die erste echte europäische Partei: Wir holen Lösunge
- n nach Berlin\, die anderswo längst funktionieren – Verwaltung wie in Dänem
- ark\, Bildung wie in Estland und Wohnen wie in Wien. Genau das zeigt diese 
- Tour: <strong>europäisch denken\, lokal liefern</strong>.</p><p>​Die Route 
- führt entlang zentraler Orte der Stadt zu den Themen:</p><p>​- Digitalisier
- ung<br>​- Bauen &amp\; Wohnen<br>​- Wirtschaft &amp\; Bildung<br>​- Mobilit
- ät &amp\; Müll</p><p>​<strong>Hinweis:<br>Mitfahrt nach Anmeldung und Bestä
- tigung.<br></strong><strong>Bitte sei ca. 15 Minuten vor Abfahrt vor Ort am
-  Roten Rathaus.</strong></p><p>#Highlight</p>
-LAST-MODIFIED:20260901T202256Z
-LOCATION:Red City Hall\, Rathausstraße 15\, 10178 Berlin\, Germany
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Unf*ck Berlin: Die Bus-Tour mit Volt Berlin
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20260904T100000Z
 DTEND:20260904T103000Z
-DTSTAMP:20260901T202314Z
+DTSTAMP:20260904T145912Z
 UID:6uk2t0v84bf1sbbodnt5vq8r6n@google.com
 X-GOOGLE-CONFERENCE:https://meet.google.com/jca-wtzc-rfp
 CREATED:20260901T195724Z
@@ -72,9 +29,78 @@ SUMMARY:Lunch & Politics: Last-Minute Wahlfragen?
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+DTSTAMP:20260904T145912Z
+UID:1mvk5ltobs6mal1gujs91qksa4@google.com
+CREATED:20260901T202100Z
+DESCRIPTION:#Highlight
+LAST-MODIFIED:20260901T202133Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Wahl zum 20. Abgeordnetenhaus von Berlin und zu den Bezirksverordne
+ tenversammlungen
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260910T100000Z
+DTEND:20260910T103000Z
+DTSTAMP:20260904T145912Z
+UID:7k5kc83alam2luqdd39cjfai5q@google.com
+CREATED:20260901T201519Z
+DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
+  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
+ rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
+ ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
+ nd bekommt Antworten direkt vor der Wahl am 20. September.\n\nMehr Informat
+ ion: https://luma.com/w90dpmgv\n\n#Highlight
+LAST-MODIFIED:20260901T202228Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lunch & Politics: Last-Minute Election Questions?
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260903T120000Z
+DTEND:20260903T140000Z
+DTSTAMP:20260904T145912Z
+UID:735b9q8aojm8sev35mq5c5hapj@google.com
+CREATED:20260901T195453Z
+DESCRIPTION:<p>Berlin hat viele Baustellen\, aber wir haben die passenden L
+ ösungen. Steig in den Doppeldecker ein &amp\; erlebe Volts Lösungen vor Ort
+ !</p><h2>​Unf*ck Berlin: Die Bus-Tour mit Volt Berlin</h2><p>​<strong>Anna 
+ Auerbach</strong> und <strong>Paul Loeper</strong>\, die Spitzenkandidieren
+ den von Volt Berlin\, fahren mit dem „unf*ck berlin“-Doppeldecker-Bus genau
+  dorthin\, wo es hakt: Zu den Orten\, die für die größten Missstände der St
+ adt stehen – und für <strong>die Lösungen\, die Volt dem entgegensetzt</str
+ ong>.</p><p>​Volt ist die erste echte europäische Partei: Wir holen Lösunge
+ n nach Berlin\, die anderswo längst funktionieren – Verwaltung wie in Dänem
+ ark\, Bildung wie in Estland und Wohnen wie in Wien. Genau das zeigt diese 
+ Tour: <strong>europäisch denken\, lokal liefern</strong>.</p><p>​Die Route 
+ führt entlang zentraler Orte der Stadt zu den Themen:</p><p>​- Digitalisier
+ ung<br>​- Bauen &amp\; Wohnen<br>​- Wirtschaft &amp\; Bildung<br>​- Mobilit
+ ät &amp\; Müll</p><p>​<strong>Hinweis:<br>Mitfahrt nach Anmeldung und Bestä
+ tigung.<br></strong><strong>Bitte sei ca. 15 Minuten vor Abfahrt vor Ort am
+  Roten Rathaus.</strong></p><p>#Highlight</p>
+LAST-MODIFIED:20260903T090852Z
+LOCATION:Red City Hall\, Rathausstraße 15\, 10178 Berlin\, Germany
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Unf*ck Berlin: Die Bus-Tour mit Volt Berlin
+TRANSP:OPAQUE
+X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-MAPKIT-HANDLE=CAEShwII2TIaEgk
+ 7ihgbX0JKQBH/VezUAdEqQCJ2CgdHZXJtYW55EgJERRoGQmVybGluKgZCZXJsaW4yBkJlcmxpbj
+ oFMTAxNzhCC0NpdHkgQ2VudHJlUg5SYXRoYXVzc3RyYcOfZVoCMTViEVJhdGhhdXNzdHJhw59lI
+ DE1igELQ2l0eSBDZW50cmWKAQVNaXR0ZSoRUmF0aGF1c3N0cmHDn2UgMTUyEVJhdGhhdXNzdHJh
+ w59lIDE1MgtDaXR5IENlbnRyZTIMMTAxNzggQmVybGluMgdHZXJtYW55ODlAAFABWiYKJBISCTu
+ KGBtfQkpAEf9V7NQB0SpAGNkyIJbCy/jT5ZiNfpADAQ==;X-APPLE-RADIUS=70.58738911142
+ 584;X-APPLE-REFERENCEFRAME=1;X-TITLE="Red City Hall, Rathausstraße 15, 1017
+ 8 Berlin, Germany":geo:52.518527,13.408217
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20260811T151500Z
 DTEND:20260811T163000Z
-DTSTAMP:20260901T202314Z
+DTSTAMP:20260904T145912Z
 UID:5gfemqkcskpc64hohs20dq2hpr@google.com
 CREATED:20260901T201716Z
 DESCRIPTION:<p><strong>Join us for an open discussion on the BAD1 White Pap
@@ -113,27 +139,9 @@ SUMMARY:BAD1 & Anna Auerbach (Volt): Shaping the Future of Berlin's Startup
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20260910T100000Z
-DTEND:20260910T103000Z
-DTSTAMP:20260901T202314Z
-UID:7k5kc83alam2luqdd39cjfai5q@google.com
-CREATED:20260901T201519Z
-DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
-  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
- rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
- ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
- nd bekommt Antworten direkt vor der Wahl am 20. September.\n\nMehr Informat
- ion: https://luma.com/w90dpmgv\n\n#Highlight
-LAST-MODIFIED:20260901T202228Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Lunch & Politics: Last-Minute Election Questions?
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
 DTSTART:20260918T100000Z
 DTEND:20260918T103000Z
-DTSTAMP:20260901T202314Z
+DTSTAMP:20260904T145912Z
 UID:7qvcn7q3281unnac1fc0538p5q@google.com
 CREATED:20260901T201534Z
 DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
