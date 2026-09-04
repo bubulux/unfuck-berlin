@@ -167,6 +167,7 @@ export function EventsSection({
                           time={event.time}
                           location={event.location}
                           badge={event.badge}
+                          highlight={query}
                         />
                       ))}
                     </div>
