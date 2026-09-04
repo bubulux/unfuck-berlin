@@ -9,6 +9,7 @@ export const NAV_LINKS: NavItem[] = [
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
+  { label: "In der Presse", to: "/presse" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
 ];
@@ -19,6 +20,7 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
+  { label: "In der Presse", to: "/presse" },
   { label: "Kalender", to: "/termine" },
   { label: "Alle Voltkandidierenden", to: "/kandidierende" },
   { label: "unf*ck berlin", to: "/news/unfuck-berlin-reveal" },
