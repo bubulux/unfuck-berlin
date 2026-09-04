@@ -239,6 +239,7 @@ export function toDisplayItem(ev: CalendarItem): CalendarEventItem {
     id: ev.id,
     day,
     month: s.month,
+    start: ev.start,
     title: ev.title,
     iso_start: ev.start.toISOString(),
     iso_end: ev.end ? ev.end.toISOString() : ev.start.toISOString(),

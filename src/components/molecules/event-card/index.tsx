@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from 'react'
+import type { HTMLAttributes, ReactNode } from 'react'
 import { Text } from '../../atoms/text'
 import type { ColorToken } from '../../atoms/text'
 import { DateBadge } from '../../atoms/date-badge'
@@ -19,6 +19,29 @@ export interface EventCardProps extends HTMLAttributes<HTMLElement> {
   location?: string
   /** Category badge shown above the card's top-left corner. */
   badge?: { label: string; color: ColorToken; textColor: ColorToken }
+  /** When set, occurrences of this term in the title are visually marked. */
+  highlight?: string
+}
+
+/** Wrap every (case-insensitive) occurrence of `query` in `text` with <mark>. */
+function highlightMatches(text: string, query?: string): ReactNode {
+  const needle = query?.trim().toLowerCase()
+  if (!needle) return text
+  const hay = text.toLowerCase()
+  const parts: ReactNode[] = []
+  let i = 0
+  let key = 0
+  for (let idx = hay.indexOf(needle); idx !== -1; idx = hay.indexOf(needle, i)) {
+    if (idx > i) parts.push(text.slice(i, idx))
+    parts.push(
+      <mark className="event-card__mark" key={key++}>
+        {text.slice(idx, idx + needle.length)}
+      </mark>,
+    )
+    i = idx + needle.length
+  }
+  if (i < text.length) parts.push(text.slice(i))
+  return parts
 }
 
 const ClockGlyph = () => (
@@ -61,6 +84,7 @@ export function EventCard({
   time,
   location,
   badge,
+  highlight,
   className,
   ...rest
 }: EventCardProps) {
@@ -86,7 +110,7 @@ export function EventCard({
         <DateBadge day={day} month={month} color="black" className="event-card__date" />
         <div className="event-card__body">
           <Text as="h3" variant="body" color="black" weight="bold" className="event-card__title">
-            {title}
+            {highlightMatches(title, highlight)}
           </Text>
           {time ? (
             <p className="event-card__time">

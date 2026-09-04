@@ -3,9 +3,11 @@ import { defineConfig, devices } from '@playwright/test'
 /**
  * Visuelle Regression-Suite: Full-Page-Screenshots aller Seiten/Unterseiten.
  *
- * Laeuft ausschliesslich gegen den lokalen Vite-Dev-Server (baseURL unten) –
- * niemals gegen Produktion. `webServer` startet ihn bei Bedarf selbst und
- * verwendet einen bereits laufenden weiter (reuseExistingServer).
+ * Standard: laeuft gegen den lokalen Vite-Dev-Server (baseURL unten). `webServer`
+ * startet ihn bei Bedarf selbst und verwendet einen bereits laufenden weiter.
+ *
+ * Alternativ kann via PW_BASE_URL eine externe URL (z. B. Produktion) getestet
+ * werden – dann wird KEIN lokaler Server gestartet (siehe `make visual-production`).
  *
  * Ausgefuehrt wird die Suite im offiziellen Playwright-Docker-Image, damit die
  * Screenshots unabhaengig vom Host-Betriebssystem (Fonts, Antialiasing) stabil
@@ -13,7 +15,9 @@ import { defineConfig, devices } from '@playwright/test'
  * Fonts sind selbst gehostet (public/fonts) – kein externer Netzzugriff noetig.
  */
 const PORT = 5173
-const BASE_URL = `http://localhost:${PORT}`
+// Externe Ziel-URL (Produktion/Preview) via Env; sonst lokaler Dev-Server.
+const EXTERNAL_BASE_URL = process.env.PW_BASE_URL
+const BASE_URL = EXTERNAL_BASE_URL || `http://localhost:${PORT}`
 
 export default defineConfig({
   testDir: './tests/visual',
@@ -63,13 +67,16 @@ export default defineConfig({
     },
   ],
 
-  // Startet den lokalen Vite-Server im Container; nutzt einen laufenden weiter.
-  webServer: {
-    command: 'npm run dev',
-    url: BASE_URL,
-    reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
-    stdout: 'pipe',
-    stderr: 'pipe',
-  },
+  // Nur fuer lokale Laeufe: startet den Vite-Server im Container (und nutzt einen
+  // laufenden weiter). Bei externer PW_BASE_URL entfaellt das komplett.
+  webServer: EXTERNAL_BASE_URL
+    ? undefined
+    : {
+        command: 'npm run dev',
+        url: BASE_URL,
+        reuseExistingServer: !process.env.CI,
+        timeout: 120_000,
+        stdout: 'pipe',
+        stderr: 'pipe',
+      },
 })

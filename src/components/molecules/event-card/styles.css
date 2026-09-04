@@ -110,3 +110,11 @@ a.event-card:hover {
 .event-card__map:hover {
   opacity: 0.75;
 }
+
+/* Search-term hit inside the title — marker highlight, text colour kept. */
+.event-card__mark {
+  background-color: var(--color-neon);
+  color: inherit;
+  border-radius: var(--radius-sm);
+  padding: 0 0.15em;
+}
