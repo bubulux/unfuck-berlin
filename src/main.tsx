@@ -15,9 +15,7 @@ import { PressePage } from './pages/presse'
 import { RegionsPage } from './pages/regions'
 import { PagePage } from './pages/page'
 import { TerminePage } from './pages/termine'
-import { SupportersV1 } from './pages/supporters/v1'
-import { SupportersV2 } from './pages/supporters/v2'
-import { SupportersV3 } from './pages/supporters/v3'
+import { SupportersPage } from './pages/supporters'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -43,12 +41,7 @@ createRoot(document.getElementById('root')!).render(
 
           <Route path="/termine/:slug" element={<TerminePage />} />
 
-          {/* Wall of Support: drei Design-Varianten zur Abstimmung; die Nav
-              verlinkt v1, v2/v3 werden manuell zum Review geteilt. */}
-          <Route path="/supporters" element={<Navigate to="/supporters/v1" replace />} />
-          <Route path="/supporters/v1" element={<SupportersV1 />} />
-          <Route path="/supporters/v2" element={<SupportersV2 />} />
-          <Route path="/supporters/v3" element={<SupportersV3 />} />
+          <Route path="/supporters" element={<SupportersPage />} />
 
           <Route path="/sticker" element={<Sticker />} />
           <Route path="/confirm" element={<Confirm />} />

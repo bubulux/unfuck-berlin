@@ -18,12 +18,14 @@ export default defineType({
   preview: {
     select: {
       name: 'name',
+      job: 'job',
       foto: 'foto',
     },
     prepare(selection) {
-      const { name, foto } = selection
+      const { name, job, foto } = selection
       return {
         title: name || '???',
+        subtitle: job || '',
         media: foto,
       }
     },
@@ -34,6 +36,13 @@ export default defineType({
       name: 'name',
       type: 'string',
       validation: Rule => Rule.required(),
+    }),
+
+    defineField({
+      title: 'Job',
+      name: 'job',
+      type: 'string',
+      description: 'Optional: Rolle oder Beruf, erscheint unter dem Namen auf der Wall of Support.',
     }),
 
     defineField({

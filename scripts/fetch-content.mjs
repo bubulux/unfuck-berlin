@@ -151,6 +151,7 @@ const PAGES_QUERY = `*[_type=="seite"]|order(slug desc){
 // generierte Datei) – die zufaellige Reihenfolge macht das Frontend pro Aufruf.
 const SUPPORTERS_QUERY = `*[_type=="supporter"]|order(name asc){
   name,
+  job,
   linkedin,
   "foto": foto.asset->url,
   "foto_originalFilename": foto.asset->originalFilename,
@@ -309,6 +310,7 @@ function buildSupporters(rows) {
     .filter((s) => s.name && s.foto)
     .map((s) => ({
       name: clean(s.name),
+      job: clean(s.job),
       linkedin: clean(s.linkedin),
       foto_originalFilename: s.foto_originalFilename || '',
       image: withParams(s.foto, CARD_IMG_PARAMS),

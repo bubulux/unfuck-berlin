@@ -8,6 +8,8 @@ import { SUPPORTERS_CMS } from '../../data/supporters.generated'
  */
 export interface Supporter {
   name: string
+  /** Optional, im CMS pflegbar – leer, solange nicht gesetzt. */
+  job: string
   linkedin: string
   foto_originalFilename: string
   image: string
