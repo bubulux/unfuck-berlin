@@ -100,6 +100,16 @@ const withParams = (url, params) => {
 }
 
 const clean = (s) => (s || '').trim()
+// Redaktionell gepflegte Links kommen oft ohne Schema aus der Zwischenablage
+// ("linkedin.com/feed?..."). Ohne "https://" wuerde der Browser sie relativ zur
+// eigenen Domain aufloesen. Andere Schemata (javascript:, data: …) verwerfen.
+const externalHref = (s) => {
+  const v = clean(s)
+  if (!v) return ''
+  if (/^https?:\/\//i.test(v)) return v
+  if (/^[a-z][a-z0-9+.-]*:/i.test(v)) return ''
+  return `https://${v.replace(/^\/+/, '')}`
+}
 const lines = (arr) => (Array.isArray(arr) ? arr.map((z) => clean(z)).filter(Boolean) : [])
 // seiteCountDown trennt Absaetze mit einzelnem \n; in ein Array zerlegen.
 const splitLines = (s) => clean(s).split('\n').map((l) => l.trim()).filter(Boolean)
@@ -311,7 +321,7 @@ function buildSupporters(rows) {
     .map((s) => ({
       name: clean(s.name),
       job: clean(s.job),
-      linkedin: clean(s.linkedin),
+      linkedin: externalHref(s.linkedin),
       foto_originalFilename: s.foto_originalFilename || '',
       image: withParams(s.foto, CARD_IMG_PARAMS),
       imageDetail: withParams(s.foto, DETAIL_IMG_PARAMS),

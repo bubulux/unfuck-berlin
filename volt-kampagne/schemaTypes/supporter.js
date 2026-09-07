@@ -51,10 +51,16 @@ export default defineType({
       validation: Rule => Rule.required(),
     }),
 
+    // Bewusst `string` statt `url`: LinkedIn-Post-Links werden meist ohne
+    // "https://" und mit langen Tracking-Parametern kopiert, was die
+    // url-Validierung ablehnt. Der Build ergaenzt fehlendes https://.
     defineField({
       title: 'LinkedIn-Post',
       name: 'linkedin',
-      type: 'url',
+      type: 'string',
+      description:
+        'Optional: Link zum LinkedIn-Post, so einfügen wie kopiert – "https://" darf fehlen. ' +
+        'Ein Klick auf das Plakat öffnet ihn in einem neuen Tab.',
     }),
   ],
 })
