@@ -94,12 +94,15 @@
   letter-spacing: 0.02em;
 }
 
-/* Genug Platz → die kurze Link-Auswahl erscheint neben dem Logo. Der Burger
-   bleibt, weil dahinter das vollstaendige Menue liegt. */
+/* Genug Platz → die kurze Link-Auswahl erscheint rechts, direkt vor dem
+   Burger. Der Burger bleibt, weil dahinter das vollstaendige Menue liegt. */
 @container (min-width: 34rem) {
   .site-header__nav {
     display: flex;
     align-items: center;
     gap: var(--space-4);
+    /* Rechts andocken, direkt neben dem Burger – nicht mittig zwischen Logo
+       und Burger schweben. */
+    margin-inline-start: auto;
   }
 }
