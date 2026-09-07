@@ -3,7 +3,7 @@ import type { HTMLAttributes } from 'react'
 import { Logo } from '../../atoms/logo'
 import { Link } from '../../atoms/link'
 import { Icon } from '../../atoms/icon'
-import { NAV_LINKS } from '../../../config/navigation'
+import { HEADER_INLINE_LINKS, NAV_LINKS } from '../../../config/navigation'
 import './styles.css'
 
 export interface NavItem {
@@ -17,7 +17,14 @@ export interface NavItem {
 export type SiteHeaderVariant = 'purple' | 'light'
 
 export interface SiteHeaderProps extends HTMLAttributes<HTMLElement> {
+  /** Vollstaendiges Menue im Burger-Panel. */
   links?: NavItem[]
+  /**
+   * Die wenigen Links, die direkt in der Kopfzeile stehen. Absichtlich eine
+   * kurze Auswahl – der Rest bleibt dem Burger-Menue vorbehalten, damit die
+   * Zeile auf schmalen Screens nicht umbricht.
+   */
+  inlineLinks?: NavItem[]
   /** Path of the current page, to highlight the active link. */
   activePath?: string
   /** `purple`: white logo/text on purple. `light`: purple logo/text on white. */
@@ -26,6 +33,7 @@ export interface SiteHeaderProps extends HTMLAttributes<HTMLElement> {
 
 export function SiteHeader({
   links = NAV_LINKS,
+  inlineLinks = HEADER_INLINE_LINKS,
   activePath,
   variant = 'purple',
   className,
@@ -56,8 +64,8 @@ export function SiteHeader({
           <Logo variant={accent} height="1.75rem" />
         </Link>
 
-        <nav className="site-header__nav" aria-label="Hauptnavigation">
-          {links.map((item) => (
+        <nav className="site-header__nav" aria-label="Schnellzugriff">
+          {inlineLinks.map((item) => (
             <Link
               key={item.label}
               to={item.to}

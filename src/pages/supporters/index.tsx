@@ -210,7 +210,9 @@ export function SupportersPage() {
           <div
             key={r}
             className={`wall__row ${r % 2 ? 'wall__row--reverse' : ''}`}
-            style={{ '--duration': `${34 + r * 7}s` } as CSSProperties}
+            // Bewusst langsam: pro Reihe leicht unterschiedliche Dauer, damit
+            // die Baender nicht im Gleichschritt laufen.
+            style={{ '--duration': `${68 + r * 14}s` } as CSSProperties}
           >
             <div className="wall__track">
               {Array.from({ length: COPIES }, (_, copy) => (

@@ -42,9 +42,12 @@
   font-size: var(--text-cta);
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  /* Kein Umbruch mitten im Label – lieber die Zeile ganz einklappen. */
+  white-space: nowrap;
 }
 
-/* Burger toggle (mobile only). */
+/* Burger toggle: auf allen Breiten sichtbar – die Kopfzeile zeigt nur eine
+   kurze Auswahl, das vollstaendige Menue steckt im Panel. */
 .site-header__burger {
   display: inline-flex;
   align-items: center;
@@ -63,12 +66,19 @@
   display: none;
 }
 
-/* …the drop-down panel takes over when the burger is open. */
+/* …das Panel klappt bei Burger-Klick auf – auf jeder Breite. Die Links
+   fluchten mit dem Logo: Innenabstand waechst auf breiten Screens so, dass der
+   Inhalt in der Content-Spalte bleibt. */
 .site-header__panel {
   display: none;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-4);
-  padding: var(--space-4) var(--content-pad-wide) var(--space-5);
+  padding-block: var(--space-4) var(--space-5);
+  padding-inline: max(
+    var(--content-pad-wide),
+    calc((100% - var(--content-max-wide)) / 2 + var(--content-pad-wide))
+  );
   background-color: var(--header-bg);
   border-top: 1px solid rgba(128, 128, 128, 0.2);
 }
@@ -84,19 +94,12 @@
   letter-spacing: 0.02em;
 }
 
-/* Wide enough → inline links, no burger, no panel. */
-@container (min-width: 48rem) {
+/* Genug Platz → die kurze Link-Auswahl erscheint neben dem Logo. Der Burger
+   bleibt, weil dahinter das vollstaendige Menue liegt. */
+@container (min-width: 34rem) {
   .site-header__nav {
     display: flex;
     align-items: center;
     gap: var(--space-4);
-  }
-
-  .site-header__burger {
-    display: none;
-  }
-
-  .site-header__panel {
-    display: none !important;
   }
 }
