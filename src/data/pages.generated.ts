@@ -132,11 +132,25 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "92246188412b",
+        "_type": "md_content",
+        "foto_originalFilename": null,
+        "md_content": "Du möchtest etwas genau wissen? Frag unseren [Wahlprogramm-Chatbot](https://voltberlin.ai/de).",
+        "photo": null
+      },
+      {
         "_key": "cd5dd53a6f41",
         "_type": "one_cta",
         "ctaHref": "/news/manifesto-en",
         "ctaLabel": "🇬🇧 Full manifesto in English",
         "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "88815c585f73",
+        "_type": "md_content",
+        "foto_originalFilename": null,
+        "md_content": "Want to know something specific? Ask our [manifesto chatbot](https://voltberlin.ai/en).",
         "photo": null
       },
       {
@@ -286,12 +300,21 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
+        "_key": "1ecfc5550f3c",
+        "_type": "one_cta",
+        "ctaHref": "/news/mini-manifesto-tr",
+        "ctaLabel": "🇹🇷 Türkçe kısa seçim programı",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
         "_key": "73b3e2aad24c",
         "_type": "headline",
         "foto_originalFilename": null,
         "headlineZeilen": [
           "Positionspapiere"
         ],
+        "headline_theme": "purple",
         "photo": null
       },
       {
@@ -299,6 +322,14 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "/news/positionspapier-startups",
         "ctaLabel": "Positionspapier: Startups",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "4b0c55f595a8",
+        "_type": "one_cta",
+        "ctaHref": "/news/positionspapier-tempelhofer-feld",
+        "ctaLabel": "Positionspapier: Tempelhofer Feld",
         "foto_originalFilename": null,
         "photo": null
       },
