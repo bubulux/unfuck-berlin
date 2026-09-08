@@ -14,6 +14,7 @@ import wahlprogramm_kapitel_teaser from './obj/wahlprogramm_kapitel_teaser'
 import kandis_auswahl from './obj/kandis_auswahl'
 import photo from './obj/photo'
 import spitzenduo_teaser from './obj/spitzenduo_teaser'
+import video_asset from './obj/video_asset'
 
 import seite from './seite'
 import article from './article'
@@ -33,6 +34,7 @@ import seiteMitmachen from './seiteMitmachen'
 // import seitePaulAnna from './seitePaulAnna'
 import seiteUnfck from './seiteUnfck'
 import supporter from './supporter'
+import videos from './videos'
 // import seiteVoltomat from './seiteVoltomat'
 // import siteTexte from './siteTexte'
 import spitzenduo from './spitzenduo'
@@ -54,6 +56,7 @@ export const schemaTypes = [
   kandis_auswahl,
   photo,
   spitzenduo_teaser,
+  video_asset,
 
   seite,
   article,
@@ -72,6 +75,7 @@ export const schemaTypes = [
   seiteMitmachen,
   // seitePaulAnna,
   seiteUnfck,
+  videos,
   // seiteVoltomat,
   // siteTexte,
   spitzenduo,
