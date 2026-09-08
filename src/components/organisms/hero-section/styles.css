@@ -6,8 +6,8 @@
 }
 
 /* Mobile: full-width strip, 60vh tall. The portrait video fills the width and
- * is cropped vertically (object-fit: cover). Content is pulled up so the logo
- * overlaps the lower part of the video. */
+ * is cropped vertically (object-fit: cover). The content block below is pulled
+ * up only slightly, so the logo just tucks into the bottom edge of the video. */
 .hero__media {
   position: relative;
   height: var(--hero-video-h);
@@ -29,20 +29,22 @@
 
 /* The strip is wider than 9:16, so cover crops the video vertically. Take the
  * crop mostly off the bottom: that part sits under the gradient and the logo
- * anyway, while the top holds the speaker's head. 30% instead of 0 keeps a
- * little headroom above the hair and the chin above the purple fade. Poster and
- * video share the anchor so the crossfade doesn't jump. */
+ * anyway, while the top holds the speaker's head. 15% instead of 0 keeps a
+ * little headroom above the hair. Poster and video share the anchor so the
+ * crossfade doesn't jump. */
 .hero__video .lazy-video__poster,
 .hero__video .lazy-video__el {
   object-position: 50% 15%;
 }
 
-/* Purple fade over the bottom of the video so the headline reads on top. */
+/* Purple fade over the bottom edge of the video so the seam into the content
+ * block is soft. Kept short so the clip's lower third (name captions) stays
+ * readable. */
 .hero__gradient {
   position: absolute;
   inset-inline: 0;
   bottom: 0;
-  height: 10rem;
+  height: 6rem;
   background: linear-gradient(to top, var(--color-purple), transparent);
   pointer-events: none;
 }
@@ -50,7 +52,7 @@
 .hero__content {
   position: relative;
   z-index: 1;
-  margin-top: -8rem;
+  margin-top: -3rem;
   padding-inline: var(--content-pad);
   padding-bottom: var(--space-6);
   display: flex;
