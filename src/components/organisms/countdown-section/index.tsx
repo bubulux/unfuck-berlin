@@ -29,7 +29,13 @@ export function CountdownSection({
   return (
     <section className={classes} {...rest}>
       <div className="countdown__inner">
-        <Text as="h2" variant="titel" color="white" align="center">
+        <Text
+          as="h2"
+          variant="titel"
+          color="white"
+          align="center"
+          className="countdown__heading"
+        >
           {heading}
         </Text>
 
