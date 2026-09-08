@@ -5,9 +5,9 @@
   overflow: hidden;
 }
 
-/* Mobile: full-width black strip with the portrait video centered inside it
- * (black bars fill the sides). Content is pulled up so the logo overlaps the
- * lower part of the video. */
+/* Mobile: full-width strip, 60vh tall. The portrait video fills the width and
+ * is cropped vertically (object-fit: cover). Content is pulled up so the logo
+ * overlaps the lower part of the video. */
 .hero__media {
   position: relative;
   height: var(--hero-video-h);
@@ -25,6 +25,16 @@
   width: 100%;
   margin-inline: auto;
   border: 0;
+}
+
+/* The strip is wider than 9:16, so cover crops the video vertically. Take the
+ * crop mostly off the bottom: that part sits under the gradient and the logo
+ * anyway, while the top holds the speaker's head. 30% instead of 0 keeps a
+ * little headroom above the hair and the chin above the purple fade. Poster and
+ * video share the anchor so the crossfade doesn't jump. */
+.hero__video .lazy-video__poster,
+.hero__video .lazy-video__el {
+  object-position: 50% 15%;
 }
 
 /* Purple fade over the bottom of the video so the headline reads on top. */
