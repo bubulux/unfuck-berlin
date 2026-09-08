@@ -10,6 +10,7 @@ export const NAV_LINKS: NavItem[] = [
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
   { label: "In der Presse", to: "/presse" },
+  { label: "Kalender", to: "/termine" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
 ];
