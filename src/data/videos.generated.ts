@@ -3,8 +3,8 @@
 
 export const VIDEOS_CMS = {
   "annaPaulIntro": {
-    "src": "https://cdn.sanity.io/files/xzcgo5ky/production/3ca4555e73621b1e41ac3838c008399c3f6ab08f.mp4",
-    "poster": ""
+    "src": "https://cdn.sanity.io/files/xzcgo5ky/production/7f55213d02d9eb83773e3b264c8360bd08c86703.mp4",
+    "poster": "https://cdn.sanity.io/images/xzcgo5ky/production/16cb343ad2d95eed78d52912e1d7ecc3bfab5b79-1080x1920.png?w=1080&q=70&fit=max&auto=format"
   },
   "reveal": {
     "src": "https://cdn.sanity.io/files/xzcgo5ky/production/fdbaf13edd407831f58e4d70a4e60bd946fbbaa5.mp4",

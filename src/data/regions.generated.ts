@@ -656,17 +656,17 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-11T17:40:01Z",
         "_id": "e536ec64-8805-4208-90b6-53b836bfda6a",
-        "_rev": "gSD2EG7QiN9E3Tu6nMnqXB",
+        "_rev": "0Kx6dhY4cG5xUskekVJ5PA",
         "_system": {
           "base": {
             "id": "e536ec64-8805-4208-90b6-53b836bfda6a",
-            "rev": "ZIuquwn7xL9POL93TsDZrf"
+            "rev": "gSD2EG7QiN9E3Tu6nMnqXB"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-17T16:25:41Z",
+        "_updatedAt": "2026-09-03T13:24:39Z",
         "bezirk": "01 Mitte",
-        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/d65ec7ffbc13fa6142f81437687c10a88bf229e3-1920x2400.jpg",
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg",
         "foto2": {
           "_type": "image",
           "asset": {
@@ -675,11 +675,11 @@ export const REGIONS_CMS = [
           }
         },
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg",
-        "foto_originalFilename": "KALOJAN_HOFFMEISTER_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
+        "foto_originalFilename": "KALOJAN_HOFFMEISTER_FULL_BODY_V2_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "KALOJAN_HOFFMEISTER_FULL_BODY_V2_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Kalojan Hoffmeister",
-        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/d65ec7ffbc13fa6142f81437687c10a88bf229e3-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/d65ec7ffbc13fa6142f81437687c10a88bf229e3-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       }
