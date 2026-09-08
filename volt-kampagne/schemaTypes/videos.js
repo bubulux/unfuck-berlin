@@ -19,12 +19,6 @@ export default defineType({
       type: 'video_asset',
       description: 'Läuft im Seitenkopf der Startseite.',
     }),
-
-    defineField({
-      name: 'reveal',
-      title: 'Reveal-Video (Seite „Unf*ck Berlin“)',
-      type: 'video_asset',
-    }),
   ],
 
   preview: {
