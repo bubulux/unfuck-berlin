@@ -5,7 +5,7 @@ export const PAGES_CMS = [
   {
     "slug": "home",
     "theme": "purple",
-    "is_published": true,
+    "is_published": false,
     "title": [],
     "body": "",
     "content_modules": [
@@ -20,14 +20,14 @@ export const PAGES_CMS = [
         "video_coverphoto": {
           "_type": "file",
           "asset": {
-            "_ref": "file-16cb343ad2d95eed78d52912e1d7ecc3bfab5b79-png",
+            "_ref": "file-b4bdcc2d981958cafcff58c875a04f47b89d20c9-png",
             "_type": "reference"
           }
         },
         "video_file": {
           "_type": "file",
           "asset": {
-            "_ref": "file-7f55213d02d9eb83773e3b264c8360bd08c86703-mp4",
+            "_ref": "file-3ca4555e73621b1e41ac3838c008399c3f6ab08f-mp4",
             "_type": "reference"
           }
         }
@@ -132,25 +132,11 @@ export const PAGES_CMS = [
         "photo": null
       },
       {
-        "_key": "92246188412b",
-        "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Du möchtest etwas genau wissen? Frag unseren [Wahlprogramm-Chatbot](https://voltberlin.ai/de).",
-        "photo": null
-      },
-      {
         "_key": "cd5dd53a6f41",
         "_type": "one_cta",
         "ctaHref": "/news/manifesto-en",
         "ctaLabel": "🇬🇧 Full manifesto in English",
         "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "88815c585f73",
-        "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Want to know something specific? Ask our [manifesto chatbot](https://voltberlin.ai/en).",
         "photo": null
       },
       {
@@ -272,64 +258,6 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "/news/mini-manifesto-cz",
         "ctaLabel": "🇨🇿 Stručný volební program v češtině",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "cf018484e3bf",
-        "_type": "one_cta",
-        "ctaHref": "/news/mini-manifesto-ar",
-        "ctaLabel": "برنامج انتخابي مختصر باللغة العربية",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "7ca803a65f80",
-        "_type": "one_cta",
-        "ctaHref": "/news/mini-manifesto-fa",
-        "ctaLabel": "برنامهٔ کوتاه انتخاباتی به فارسی 🇮🇷",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "0bbcfa029f3e",
-        "_type": "one_cta",
-        "ctaHref": "/news/mini-manifesto-hr",
-        "ctaLabel": "🇭🇷 Kratki izborni program na hrvatskom jeziku",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "1ecfc5550f3c",
-        "_type": "one_cta",
-        "ctaHref": "/news/mini-manifesto-tr",
-        "ctaLabel": "🇹🇷 Türkçe kısa seçim programı",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "73b3e2aad24c",
-        "_type": "headline",
-        "foto_originalFilename": null,
-        "headlineZeilen": [
-          "Positionspapiere"
-        ],
-        "headline_theme": "purple",
-        "photo": null
-      },
-      {
-        "_key": "d14fe933767e",
-        "_type": "one_cta",
-        "ctaHref": "/news/positionspapier-startups",
-        "ctaLabel": "Positionspapier: Startups",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "4b0c55f595a8",
-        "_type": "one_cta",
-        "ctaHref": "/news/positionspapier-tempelhofer-feld",
-        "ctaLabel": "Positionspapier: Tempelhofer Feld",
         "foto_originalFilename": null,
         "photo": null
       },
