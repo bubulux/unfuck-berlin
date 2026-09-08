@@ -76,6 +76,10 @@ const DETAIL_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp
 const MEET_IMG_PARAMS = 'w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=10'
 // Cluster-Kacheln: Hochformat (3:4) der Quellbilder beibehalten – kein Zuschnitt.
 const CLUSTER_IMG_PARAMS = 'w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20'
+// Video-Poster: Seitenverhältnis der Quelle behalten, nur begrenzen und
+// komprimieren (fit=max skaliert nie hoch). Ein Poster lädt vor dem Video,
+// darf also nicht mehrere MB groß sein.
+const VIDEO_POSTER_PARAMS = 'w=1080&q=70&fit=max&auto=format'
 
 // Feste Auswahl + Reihenfolge der 9 Kandidierenden im Home-Cluster (3x3).
 const CLUSTER_SLUGS = [
@@ -168,14 +172,25 @@ const WAHLSYSTEM_QUERY = `*[_id=="seiteCountDown"][0]{
   duoLinkText, waehlenMit16Titel, gehoertDirTitel, waehlenMit16Text, programmButton
 }`
 
-// Videos liegen als Assets in der Sanity-Bibliothek (kein Schema-Feld noetig) und
-// werden ueber den originalFilename referenziert. So kann Volt die Datei im Studio
-// austauschen, ohne dass sich Code aendern muss.
+// Videos kommen aus dem Singleton-Dokument "videos" (Studio: Menüpunkt "Videos").
+// Dort lädt Volt Video-Datei und Thumbnail pro Platzierung hoch.
+// "legacy" ist der Übergangs-Fallback auf die alte Suche über originalFilename in
+// der Asset-Bibliothek – greift nur, solange ein Feld im Dokument leer ist.
+// Für das Intro-Poster gibt es bewusst keinen Fallback: die alte Suche lief ins
+// Leere (gesucht wurde eine .jpg, hochgeladen war eine .png als Datei-Asset),
+// das Thumbnail kommt jetzt ausschließlich aus dem Dokument.
 const VIDEOS_QUERY = `{
-  "annaPaulSrc": *[_type=="sanity.fileAsset" && originalFilename=="unfck berlin Page Intro Video.mp4"][0].url,
-  "annaPaulPoster": *[_type=="sanity.imageAsset" && originalFilename=="20260804_VOLT_ANNA_UND_PAUL_UNFCK_BERLIN_STATEMENT_KURZVERSION_V02_720p_coverphoto.jpg"][0].url,
-  "revealSrc": *[_type=="sanity.fileAsset" && originalFilename=="20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"][0].url,
-  "revealPoster": *[_type=="sanity.imageAsset" && originalFilename=="unfck_reveal_poster.jpg"][0].url
+  "doc": *[_type=="videos"][0]{
+    "annaPaulSrc": annaPaulIntro.videoDatei.asset->url,
+    "annaPaulPoster": annaPaulIntro.posterBild.asset->url,
+    "revealSrc": reveal.videoDatei.asset->url,
+    "revealPoster": reveal.posterBild.asset->url
+  },
+  "legacy": {
+    "annaPaulSrc": *[_type=="sanity.fileAsset" && originalFilename=="unfck berlin Page Intro Video.mp4"][0].url,
+    "revealSrc": *[_type=="sanity.fileAsset" && originalFilename=="20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"][0].url,
+    "revealPoster": *[_type=="sanity.imageAsset" && originalFilename=="unfck_reveal_poster.jpg"][0].url
+  }
 }`
 
 // Meet-&-Greet-Karussell der Termine-Seite: kommt aus dem bestehenden CMS-Feld
@@ -408,12 +423,22 @@ function buildWahlsystem(d) {
 }
 
 function buildVideos(d) {
+  // Dokument gewinnt, Asset-Bibliothek per Dateiname ist nur Fallback.
+  const pick = (key) => clean(d?.doc?.[key]) || clean(d?.legacy?.[key])
   const out = {
-    annaPaulIntro: { src: clean(d?.annaPaulSrc), poster: clean(d?.annaPaulPoster) },
-    reveal: { src: clean(d?.revealSrc), poster: clean(d?.revealPoster) },
+    annaPaulIntro: {
+      src: pick('annaPaulSrc'),
+      poster: withParams(pick('annaPaulPoster'), VIDEO_POSTER_PARAMS),
+    },
+    reveal: {
+      src: pick('revealSrc'),
+      poster: withParams(pick('revealPoster'), VIDEO_POSTER_PARAMS),
+    },
   }
   if (!out.annaPaulIntro.src || !out.reveal.src) {
-    throw new Error('Video-Assets in Sanity nicht gefunden (per originalFilename).')
+    throw new Error(
+      'Video-Dateien in Sanity nicht gefunden – im Studio unter "Videos" hochladen.',
+    )
   }
   return out
 }

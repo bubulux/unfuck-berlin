@@ -8,6 +8,6 @@ export const VIDEOS_CMS = {
   },
   "reveal": {
     "src": "https://cdn.sanity.io/files/xzcgo5ky/production/fdbaf13edd407831f58e4d70a4e60bd946fbbaa5.mp4",
-    "poster": "https://cdn.sanity.io/images/xzcgo5ky/production/dbd9c212c0e24e70721cd48f01b1f5fbcdc67f6b-540x960.jpg"
+    "poster": "https://cdn.sanity.io/images/xzcgo5ky/production/dbd9c212c0e24e70721cd48f01b1f5fbcdc67f6b-540x960.jpg?w=1080&q=70&fit=max&auto=format"
   }
 }

@@ -11,8 +11,9 @@ export interface VideosContent {
 }
 
 /**
- * Lokale Kopien in public/vids als Notnagel, falls der Sanity-Abruf beim Build
- * fehlschlaegt. Im Normalfall gewinnen die aus dem CMS generierten URLs.
+ * Notnagel, falls der Sanity-Abruf beim Build keine Video-Dateien liefert:
+ * leere URLs, damit die Komponenten nichts Kaputtes laden. Gepflegt werden die
+ * Videos im Sanity Studio unter "Videos" (Dokumenttyp `videos`).
  */
 const FALLBACK: VideosContent = {
   annaPaulIntro: {
