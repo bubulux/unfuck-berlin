@@ -1,0 +1,55 @@
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  cursor: pointer;
+}
+
+.checkbox__input {
+  flex-shrink: 0;
+  position: relative;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin: 0.2em 0 0;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.checkbox__input:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-purple);
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.checkbox__input:focus-visible {
+  outline: 2px solid var(--color-neon);
+  outline-offset: 2px;
+}
+
+.checkbox__text {
+  font-size: var(--text-fussnote);
+  line-height: 1.4;
+  color: inherit;
+}
+
+/* Links in der Beschriftung bleiben lesbar unterstrichen, ohne den Klick auf
+ * das Label (und damit das Umschalten der Box) auszuloesen. */
+.checkbox__text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.checkbox__text a:hover {
+  opacity: 0.85;
+}

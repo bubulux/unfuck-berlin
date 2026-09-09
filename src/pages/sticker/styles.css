@@ -1,0 +1,33 @@
+/* Schmale, zentrierte Spalte fuer Formular und Statusmeldungen. Teilen sich
+ * /sticker und /confirm – beides sind Schritte derselben Bestellung. */
+.sticker-page {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.sticker-page__inner {
+  max-width: 30rem;
+  margin-inline: auto;
+  padding: var(--space-7) var(--content-pad) var(--space-8);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gleiche Masse wie der Schriftzug im Hero auf der Startseite. */
+.sticker-page__logo {
+  width: 5rem;
+  max-width: 70%;
+  margin-inline: auto;
+  margin-bottom: var(--space-6);
+}
+
+.sticker-page__tagline {
+  margin-bottom: var(--space-5);
+}
+
+@media (min-width: 48rem) {
+  .sticker-page__logo {
+    width: 30rem;
+    max-width: 100%;
+  }
+}

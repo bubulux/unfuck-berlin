@@ -1,0 +1,37 @@
+.success-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6) 0;
+  text-align: center;
+}
+
+.success-panel__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--space-2);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-neon);
+  color: var(--color-purple);
+}
+
+.success-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 28rem;
+}
+
+.success-panel__follow {
+  margin-top: var(--space-5);
+}
+
+/* Die Icon-Reihe zentriert sich nicht von allein – .social-row ist links
+ * ausgerichtet, weil sie im Footer in einer Spalte steht. */
+.success-panel__socials {
+  justify-content: center;
+}
