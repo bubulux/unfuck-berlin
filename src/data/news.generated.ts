@@ -470,7 +470,7 @@ export const NEWS_CMS = [
         "_key": "172f8c361afb",
         "_type": "md_content",
         "foto_originalFilename": null,
-        "md_content": "Want to know something specific? Ask our [manifesto chatbot](https://voltberlin.ai/en).",
+        "md_content": "Want to know something specific? Ask our [manifesto chatbot 🤖](https://voltberlin.ai/en).",
         "photo": null
       },
       {
@@ -957,7 +957,7 @@ export const NEWS_CMS = [
         "_key": "29d3c30903bc",
         "_type": "md_content",
         "foto_originalFilename": null,
-        "md_content": "Want to know something specific? Ask our [manifesto chatbot](https://voltberlin.ai/en).",
+        "md_content": "Want to know something specific? Ask our [manifesto chatbot 🤖](https://voltberlin.ai/en).",
         "photo": null
       },
       {
@@ -1014,7 +1014,7 @@ export const NEWS_CMS = [
         "_key": "7889833501f2",
         "_type": "md_content",
         "foto_originalFilename": null,
-        "md_content": "Du möchtest etwas genau wissen? Frag unseren [Wahlprogramm-Chatbot](https://voltberlin.ai/de).",
+        "md_content": "Du möchtest etwas genau wissen? Frag unseren [Wahlprogramm-Chatbot 🤖](https://voltberlin.ai/de).",
         "photo": null
       },
       {

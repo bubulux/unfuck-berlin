@@ -157,8 +157,8 @@ export const SUPPORTERS_CMS = [
   },
   {
     "name": "Thomas Gregor Gawlitta",
-    "job": "PLATZHALTER FÜR JOB",
-    "linkedin": "https://linkedin.com/feed?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7502642363689922560&highlightedUpdateType=SHARED_BY_YOUR_PAGE&showCommentBox=true&origin=INAPP&highlightedUpdateTrackingId=j1ZslbFVTwKFfHsjneP8Eg%3D%3D&skipRedirect=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_notifications%3B1a10067c-9f6b-4b6d-a299-e1cdc336a0a7",
+    "job": "",
+    "linkedin": "",
     "foto_originalFilename": "Thomas Gregor Gawlitta.jpeg",
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9058a8c9339e0fc871bdd3e7141395323e5d86eb-1200x1200.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
     "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9058a8c9339e0fc871bdd3e7141395323e5d86eb-1200x1200.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",

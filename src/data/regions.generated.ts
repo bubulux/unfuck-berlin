@@ -1001,32 +1001,32 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:56:30Z",
         "_id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
         "_originalId": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
-        "_rev": "56Aw9PqdKBoWxRYUC03Otx",
+        "_rev": "5f2C3ii77GPTXHjxnUHvcW",
         "_system": {
           "base": {
             "id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
-            "rev": "U74tcxucQVTMOGRTVgkrGV"
+            "rev": "56Aw9PqdKBoWxRYUC03Otx"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-17T16:24:19Z",
+        "_updatedAt": "2026-09-08T16:39:38Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
-        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/30567c8c9892896751fd92ffd6205e89666a581c-4973x6218.jpg",
+        "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg",
         "foto2": {
           "_type": "image",
           "asset": {
-            "_ref": "image-6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192-jpg",
+            "_ref": "image-1f2545f827b99621dca37957aa0f67d081afb297-5464x8192-jpg",
             "_type": "reference"
           }
         },
-        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192.jpg",
-        "foto_originalFilename": "CARA_SEEBERG_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
-        "foto_originalFilename_2": "CARA_SEEBERG_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f2545f827b99621dca37957aa0f67d081afb297-5464x8192.jpg",
+        "foto_originalFilename": "CARA_SEEBERG_PORTRAIT_V2_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "foto_originalFilename_2": "CARA_SEEBERG_FULL_BODY_V2_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Cara Seeberg",
-        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/30567c8c9892896751fd92ffd6205e89666a581c-4973x6218.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/30567c8c9892896751fd92ffd6205e89666a581c-4973x6218.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
-        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6b2e27e634ecf5c734e984999e47a51bc2e590fb-5464x8192.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
+        "image": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
+        "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f2545f827b99621dca37957aa0f67d081afb297-5464x8192.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+        "imageDetail_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f2545f827b99621dca37957aa0f67d081afb297-5464x8192.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
       },
       {
         "_createdAt": "2026-08-12T09:56:49Z",

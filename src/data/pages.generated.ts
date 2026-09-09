@@ -5,7 +5,7 @@ export const PAGES_CMS = [
   {
     "slug": "home",
     "theme": "purple",
-    "is_published": false,
+    "is_published": true,
     "title": [],
     "body": "",
     "content_modules": [
@@ -20,14 +20,14 @@ export const PAGES_CMS = [
         "video_coverphoto": {
           "_type": "file",
           "asset": {
-            "_ref": "file-b4bdcc2d981958cafcff58c875a04f47b89d20c9-png",
+            "_ref": "file-16cb343ad2d95eed78d52912e1d7ecc3bfab5b79-png",
             "_type": "reference"
           }
         },
         "video_file": {
           "_type": "file",
           "asset": {
-            "_ref": "file-3ca4555e73621b1e41ac3838c008399c3f6ab08f-mp4",
+            "_ref": "file-7f55213d02d9eb83773e3b264c8360bd08c86703-mp4",
             "_type": "reference"
           }
         }
@@ -135,7 +135,7 @@ export const PAGES_CMS = [
         "_key": "92246188412b",
         "_type": "md_content",
         "foto_originalFilename": null,
-        "md_content": "Du möchtest etwas genau wissen? Frag unseren [Wahlprogramm-Chatbot](https://voltberlin.ai/de).",
+        "md_content": "Du möchtest etwas genau wissen? Frag unseren [Wahlprogramm-Chatbot 🤖](https://voltberlin.ai/de).",
         "photo": null
       },
       {
@@ -150,7 +150,7 @@ export const PAGES_CMS = [
         "_key": "88815c585f73",
         "_type": "md_content",
         "foto_originalFilename": null,
-        "md_content": "Want to know something specific? Ask our [manifesto chatbot](https://voltberlin.ai/en).",
+        "md_content": "Want to know something specific? Ask our [manifesto chatbot 🤖](https://voltberlin.ai/en).",
         "photo": null
       },
       {
@@ -521,6 +521,14 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "https://unfuck.berlin/news/unfuck-berlin-reveal",
         "ctaLabel": "Worum geht‘s bei \"unf*uck berlin\"?",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "7bf72c1bf8df",
+        "_type": "one_cta",
+        "ctaHref": "https://voltberlin.ai",
+        "ctaLabel": "Frag unseren Wahlprogramm-Chatbot 🤖",
         "foto_originalFilename": null,
         "photo": null
       },
