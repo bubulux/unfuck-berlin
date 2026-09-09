@@ -14,6 +14,7 @@ import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
 import { getFullBodyText } from "../../lib/getFullBodyText";
 import { formatPublishedAt, publishedAtSortKey } from "../../lib/publishedAt";
+import { listableNews } from "../../lib/newsListing";
 import { NewsTeaser, PressTeaser } from "../../components/molecules/article-teaser";
 
 // function getFirstPhoto () {
@@ -42,7 +43,9 @@ export function NewsPage() {
 
     const PRESS_AND_NEWS_SORTED = [
       ...(PRESS_CMS.map(data => ({ type: 'press', data }))),
-      ...(NEWS_CMS.map(data => ({ type: 'article', data }))),
+      // Mini-Manifestos und das Wahlprogramm liegen als Artikel im CMS, gehören
+      // aber auf /wahlprogramm und nicht in die News-Liste.
+      ...(listableNews(NEWS_CMS).map(data => ({ type: 'article', data }))),
     ]
       .filter(a => a.data.is_published === true)
       // Ohne (oder mit unlesbarem) Datum wuerde der Vergleich NaN liefern und die
