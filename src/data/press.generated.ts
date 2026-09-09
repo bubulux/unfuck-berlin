@@ -3,29 +3,53 @@
 
 export const PRESS_CMS = [
   {
-    "_createdAt": "2026-08-29T16:47:13Z",
-    "_id": "de6ca4da-2484-4b5a-a37f-4f433fb5c66b",
-    "_rev": "COd97NbrXIU2mBUGQlC0In",
+    "_createdAt": "2026-09-04T07:25:12Z",
+    "_id": "72424898-de2b-4065-b4db-8383a929b029",
+    "_originalId": "72424898-de2b-4065-b4db-8383a929b029",
+    "_rev": "nXfR47JxO13AdXevvuzO29",
     "_system": {
       "base": {
-        "id": "de6ca4da-2484-4b5a-a37f-4f433fb5c66b",
-        "rev": "Lf7o4tbSRFd4ey0FFC2mNa"
+        "id": "72424898-de2b-4065-b4db-8383a929b029",
+        "rev": "6EJ87NIp0Kc4fxPT5UHnRl"
       }
     },
     "_type": "press",
-    "_updatedAt": "2026-08-29T16:51:32Z",
+    "_updatedAt": "2026-09-04T07:27:11Z",
     "is_published": true,
-    "published_at": "2026-09-29T07:00:00.000Z",
+    "published_at": "2026-09-03T17:10:00.000Z",
+    "screenshot": "https://cdn.sanity.io/images/xzcgo5ky/production/f023ad3d2b805838b47976df7ae25201619319ea-1372x882.png?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+    "screenshot_originalFilename": "20260903-berliner-zeitung.png",
+    "title": "\"„Keine Lust mehr auf Altbackenes“: Warum Unternehmer mit Volt durch Berlin fahren\"",
+    "url": "https://www.berliner-zeitung.de/article/keine-lust-mehr-auf-altbackenes-warum-unternehmer-mit-volt-durch-berlin-fahren-10355954",
+    "publishedAt": "2026-09-03T17:10:00.000Z",
+    "screenshotDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/f023ad3d2b805838b47976df7ae25201619319ea-1372x882.png?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
+  },
+  {
+    "_createdAt": "2026-08-29T16:47:13Z",
+    "_id": "de6ca4da-2484-4b5a-a37f-4f433fb5c66b",
+    "_originalId": "de6ca4da-2484-4b5a-a37f-4f433fb5c66b",
+    "_rev": "0Kx6dhY4cG5xUskekVHzTn",
+    "_system": {
+      "base": {
+        "id": "de6ca4da-2484-4b5a-a37f-4f433fb5c66b",
+        "rev": "COd97NbrXIU2mBUGQlC0In"
+      }
+    },
+    "_type": "press",
+    "_updatedAt": "2026-09-03T13:01:03Z",
+    "is_published": true,
+    "published_at": "2026-08-29T07:00:00.000Z",
     "screenshot": "https://cdn.sanity.io/images/xzcgo5ky/production/90a94c8ed40ce265597b025dd3db44f4303cc059-1360x882.png?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
     "screenshot_originalFilename": "290926-berliner-morgenpost.png",
     "title": "\"Wie Volt bei der Berlin-Wahl 2026 punkten will\"",
     "url": "https://www.morgenpost.de/berlin/article412981727/wie-volt-bei-der-berlin-wahl-2026-punkten-will.html",
-    "publishedAt": "2026-09-29T07:00:00.000Z",
+    "publishedAt": "2026-08-29T07:00:00.000Z",
     "screenshotDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/90a94c8ed40ce265597b025dd3db44f4303cc059-1360x882.png?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30"
   },
   {
     "_createdAt": "2026-08-28T11:57:14Z",
     "_id": "b76c23b3-342b-41cb-976d-5199de932248",
+    "_originalId": "b76c23b3-342b-41cb-976d-5199de932248",
     "_rev": "Lf7o4tbSRFd4ey0FFC40BR",
     "_system": {
       "base": {
@@ -47,6 +71,7 @@ export const PRESS_CMS = [
   {
     "_createdAt": "2026-08-28T12:22:42Z",
     "_id": "b723ba55-7365-4c20-8c31-2ee5323a0605",
+    "_originalId": "b723ba55-7365-4c20-8c31-2ee5323a0605",
     "_rev": "Lf7o4tbSRFd4ey0FF9l1vu",
     "_type": "press",
     "_updatedAt": "2026-08-28T12:25:23Z",
@@ -62,6 +87,7 @@ export const PRESS_CMS = [
   {
     "_createdAt": "2026-08-28T12:00:35Z",
     "_id": "e4ab681a-e80d-40a9-9de8-75e0cea4bf34",
+    "_originalId": "e4ab681a-e80d-40a9-9de8-75e0cea4bf34",
     "_rev": "aU4eXYjTfI3R0EEO5MkUYy",
     "_system": {
       "base": {
@@ -83,6 +109,7 @@ export const PRESS_CMS = [
   {
     "_createdAt": "2026-08-17T18:38:41Z",
     "_id": "f4cb5e7f-0b73-4159-9bdd-834c63bc1b65",
+    "_originalId": "f4cb5e7f-0b73-4159-9bdd-834c63bc1b65",
     "_rev": "COd97NbrXIU2mBUGQiDGNg",
     "_system": {
       "base": {
@@ -104,6 +131,7 @@ export const PRESS_CMS = [
   {
     "_createdAt": "2026-08-29T16:54:07Z",
     "_id": "000d80c1-464c-40b5-be60-29c50e213a2f",
+    "_originalId": "000d80c1-464c-40b5-be60-29c50e213a2f",
     "_rev": "aU4eXYjTfI3R0EEO5MjqaO",
     "_type": "press",
     "_updatedAt": "2026-08-29T16:59:41Z",
@@ -119,6 +147,7 @@ export const PRESS_CMS = [
   {
     "_createdAt": "2026-08-17T20:24:45Z",
     "_id": "857c47dd-fb74-458b-bff5-8351f8484e9a",
+    "_originalId": "857c47dd-fb74-458b-bff5-8351f8484e9a",
     "_rev": "Lf7o4tbSRFd4ey0FFCEuvo",
     "_system": {
       "base": {
@@ -140,6 +169,7 @@ export const PRESS_CMS = [
   {
     "_createdAt": "2026-08-17T20:26:29Z",
     "_id": "2e212f6b-1826-4725-8a16-3ad6b334f22a",
+    "_originalId": "2e212f6b-1826-4725-8a16-3ad6b334f22a",
     "_rev": "gSD2EG7QiN9E3Tu6nNHL8d",
     "_system": {
       "base": {
@@ -161,6 +191,7 @@ export const PRESS_CMS = [
   {
     "_createdAt": "2026-08-28T12:27:14Z",
     "_id": "e716f0cf-6656-4dc0-b3f6-b6043af98299",
+    "_originalId": "e716f0cf-6656-4dc0-b3f6-b6043af98299",
     "_rev": "Lf7o4tbSRFd4ey0FF9lNtC",
     "_type": "press",
     "_updatedAt": "2026-08-28T12:29:56Z",

@@ -2,10 +2,10 @@
 
 ## Content aus Sanity
 
-Redaktionelle Inhalte kommen aus dem Sanity Studio (`volt-kampagne/`, Projekt
-`xzcgo5ky`), die Termine aus dem oeffentlichen Google Calendar. Beides wird vom
-`prebuild`-Hook nach `src/data/*.generated.*` geschrieben und dort auch **im Git
-eingecheckt**.
+Redaktionelle Inhalte kommen aus dem Sanity Studio (Projekt `xzcgo5ky`, liegt
+nicht mehr hier, sondern im Branch `sanity-studio`), die Termine aus dem
+oeffentlichen Google Calendar. Beides wird vom `prebuild`-Hook nach
+`src/data/*.generated.*` geschrieben und dort auch **im Git eingecheckt**.
 
 Warum eingecheckt: Die Dateien werden zur Build-Zeit importiert. Antwortet Sanity
 oder Google Calendar beim Build nicht, greifen die Fetch-Skripte auf die zuletzt

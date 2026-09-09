@@ -15,6 +15,7 @@ import { PressePage } from './pages/presse'
 import { RegionsPage } from './pages/regions'
 import { PagePage } from './pages/page'
 import { TerminePage } from './pages/termine'
+import { SupportersPage } from './pages/supporters'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -39,6 +40,8 @@ createRoot(document.getElementById('root')!).render(
           <Route path="/kandidierende/:slug" element={<KandidatDetail />} />
 
           <Route path="/termine/:slug" element={<TerminePage />} />
+
+          <Route path="/supporters" element={<SupportersPage />} />
 
           <Route path="/sticker" element={<Sticker />} />
           <Route path="/confirm" element={<Confirm />} />

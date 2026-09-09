@@ -3,13 +3,29 @@ import type { WasMehrLink } from "../components/organisms/was-mehr-nav";
 import type { FooterLink } from "../components/organisms/site-footer";
 import type { SocialLink } from "../components/molecules/social-row";
 
-/** Primary header navigation. */
+/**
+ * Vollstaendiges Menue – steckt im Burger-Menue des Headers (auf allen
+ * Bildschirmgroessen) und ist die Basis fuer die Panel-Navigation.
+ */
 export const NAV_LINKS: NavItem[] = [
   { label: "Sticker abgreifen", href: "/sticker" },
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
   { label: "In der Presse", to: "/presse" },
+  { label: "Wall of Support", to: "/supporters" },
+  { label: "Kalender", to: "/termine" },
+  { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
+  { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
+];
+
+/**
+ * Bewusst kurz gehalten: nur diese Links stehen direkt in der Kopfzeile, damit
+ * dort auch auf schmalen Screens nichts umbricht. Alles Weitere erreicht man
+ * ueber das Burger-Menue.
+ */
+export const HEADER_INLINE_LINKS: NavItem[] = [
+  { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Kalender", to: "/termine" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
@@ -22,6 +38,7 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
   { label: "In der Presse", to: "/presse" },
+  { label: "Wall of Support", to: "/supporters" },
   { label: "Kalender", to: "/termine" },
   { label: "Alle Voltkandidierenden", to: "/kandidierende" },
   { label: "unf*ck berlin", to: "/news/unfuck-berlin-reveal" },

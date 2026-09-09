@@ -38,8 +38,8 @@ export const KANDIDATEN_CLUSTER_CMS = [
     "alt": "Theresa Schültken"
   },
   {
-    "foto_originalFilename": "CARA_SEEBERG_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
-    "image": "https://cdn.sanity.io/images/xzcgo5ky/production/30567c8c9892896751fd92ffd6205e89666a581c-4973x6218.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
+    "foto_originalFilename": "CARA_SEEBERG_PORTRAIT_V2_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
+    "image": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
     "alt": "Cara Seeberg"
   },
   {
