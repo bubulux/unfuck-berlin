@@ -96,7 +96,7 @@
 
 /* Genug Platz → die kurze Link-Auswahl erscheint rechts, direkt vor dem
    Burger. Der Burger bleibt, weil dahinter das vollstaendige Menue liegt. */
-@container (min-width: 34rem) {
+@container (min-width: 37rem) {
   .site-header__nav {
     display: flex;
     align-items: center;
