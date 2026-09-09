@@ -14,6 +14,13 @@
   text-align: center;
 }
 
+/* The heading must stay on one line inside the 520px column. The global titel
+ * size reaches 3rem on desktop, too big for "Am 20.09. Volt wählen!"; cap it at
+ * 2.5rem here. Below ~667px the 6vw term wins, so mobile is unchanged. */
+.countdown .countdown__heading {
+  font-size: clamp(1.3rem, 6vw, 2.5rem);
+}
+
 .countdown__text {
   max-width: 30rem;
 }

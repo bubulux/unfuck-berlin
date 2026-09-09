@@ -17,7 +17,7 @@ export interface CountdownSectionProps extends HTMLAttributes<HTMLElement> {
 
 export function CountdownSection({
   target,
-  heading = "Du hast die Wahl",
+  heading = "Am 20.09. Volt wählen!",
   text = "", // "Aber wie? Wir erklären dir, wie das Berliner Wahl System funktioniert und was Du benötigst um die beste Wahl für das AGH und die BVV zu treffen.",
   ctaLabel = "Wie wähle ich?",
   ctaTo,
@@ -29,7 +29,13 @@ export function CountdownSection({
   return (
     <section className={classes} {...rest}>
       <div className="countdown__inner">
-        <Text as="h2" variant="titel" color="white" align="center">
+        <Text
+          as="h2"
+          variant="titel"
+          color="white"
+          align="center"
+          className="countdown__heading"
+        >
           {heading}
         </Text>
 

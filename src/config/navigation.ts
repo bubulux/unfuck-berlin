@@ -14,6 +14,7 @@ export const NAV_LINKS: NavItem[] = [
   { label: "News", to: "/news" },
   { label: "In der Presse", to: "/presse" },
   { label: "Wall of Support", to: "/supporters" },
+  { label: "Kalender", to: "/termine" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
 ];
@@ -25,6 +26,7 @@ export const NAV_LINKS: NavItem[] = [
  */
 export const HEADER_INLINE_LINKS: NavItem[] = [
   { label: "Wahlprogramm", to: "/wahlprogramm" },
+  { label: "Kalender", to: "/termine" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
 ];
