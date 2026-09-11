@@ -1,0 +1,38 @@
+.sticker-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* PLZ schmal, Stadt fuellt den Rest – wie im Legacy-Formular. */
+.sticker-form__row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.sticker-form__row .text-field__wrap:first-child {
+  flex: 0 0 35%;
+}
+
+.sticker-form__row .text-field__wrap:last-child {
+  flex: 1;
+}
+
+.sticker-form__consent {
+  margin-top: var(--space-3);
+}
+
+.sticker-form__error {
+  margin-top: var(--space-2);
+  padding: var(--space-3) 1.125rem;
+  background-color: rgba(252, 0, 104, 0.35);
+  border: 1px solid var(--color-pink);
+  color: var(--color-white);
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-bold);
+}
+
+.sticker-form__submit {
+  align-self: center;
+  margin-top: var(--space-5);
+}

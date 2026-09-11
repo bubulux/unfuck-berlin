@@ -1,0 +1,5 @@
+/* Bewusst ohne Breite: die setzt der Aufrufer (z. B. .hero__logo). */
+.unfck-logo {
+  display: block;
+  height: auto;
+}

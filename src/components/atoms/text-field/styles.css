@@ -1,0 +1,56 @@
+.text-field__wrap {
+  display: block;
+  width: 100%;
+}
+
+/* Sichtbar bleibt der Placeholder – das Label existiert nur fuer Screenreader. */
+.text-field__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-field {
+  width: 100%;
+  padding: var(--space-4) 1.125rem;
+  background-color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--color-purple);
+  font-family: var(--font-family);
+  /* Bewusst fix 1rem statt --text-body: unter 16px zoomt iOS beim Fokus rein. */
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-normal);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.text-field::placeholder {
+  color: rgba(80, 35, 121, 0.85);
+  font-weight: var(--font-weight-bold);
+  opacity: 1;
+}
+
+.text-field:focus-visible {
+  outline: 2px solid var(--color-neon);
+  outline-offset: -2px;
+}
+
+.text-field[aria-invalid='true'] {
+  outline: 2px solid var(--color-pink);
+  outline-offset: -2px;
+}
+
+@media (max-width: 37.5rem) {
+  .text-field {
+    padding: 0.875rem var(--space-4);
+  }
+}

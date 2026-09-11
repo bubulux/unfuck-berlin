@@ -10,6 +10,7 @@ export type IconName =
   | 'chevron-left'
   | 'menu'
   | 'close'
+  | 'check'
 
 /** Path data drawn on a 24×24 viewBox, stroked with currentColor. */
 const ICON_PATHS: Record<IconName, string> = {
@@ -21,6 +22,7 @@ const ICON_PATHS: Record<IconName, string> = {
   'chevron-left': 'M15 6l-6 6 6 6',
   menu: 'M4 7h16M4 12h16M4 17h16',
   close: 'M6 6l12 12M6 18L18 6',
+  check: 'M4 12.5l5.5 5.5L20 6.5',
 }
 
 export interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'name'> {
