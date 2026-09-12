@@ -54,8 +54,13 @@ export function PagePage() {
   const autoBreakSize_roomy = isSmallDevice ? 0.2 : isMediumDevice ? 0.25 : 0.33
 
   // Temporaer fuers Design-Review: schaltet die CTA-Sammlungen zwischen den
-  // drei Entwuerfen um. Faellt raus, sobald einer gewonnen hat.
-  const [ctaVariant, setCtaVariant] = useState<CtaVariant>(1)
+  // drei Entwuerfen um. Jede Gruppe haelt ihren eigenen Entwurf, damit
+  // Kurzwahlprogramme und Positionspapiere unabhaengig kombiniert werden
+  // koennen. Faellt raus, sobald je ein Entwurf gewonnen hat.
+  const [ctaVariants, setCtaVariants] = useState<Record<string, CtaVariant>>({})
+
+  const setCtaVariantFor = (groupKey: string, variant: CtaVariant) =>
+    setCtaVariants((previous) => ({ ...previous, [groupKey]: variant }))
 
   const page_many = PAGES_CMS
     .filter(a => a.is_published === true)
@@ -226,6 +231,7 @@ export function PagePage() {
           if (entry.kind === 'cta-group') {
             const { bgColor, textColor } = getHeadlineColors(entry.headlineTheme)
             const heading = entry.headlineZeilen.join(' ')
+            const variant = ctaVariants[entry.key] ?? 1
 
             return (
               <section
@@ -234,8 +240,8 @@ export function PagePage() {
                 style={{ marginBlock: 'var(--gap-big) 16px' }}
               >
                 <CtaVariantSwitcher
-                  value={ctaVariant}
-                  onChange={setCtaVariant}
+                  value={variant}
+                  onChange={(next) => setCtaVariantFor(entry.key, next)}
                   label={`Entwurf für „${heading}“`}
                 />
 
@@ -254,7 +260,7 @@ export function PagePage() {
                   <CtaCollection
                     items={entry.items}
                     kind={classifyCtaItems(entry.items)}
-                    variant={ctaVariant}
+                    variant={variant}
                   />
                 </div>
               </section>
