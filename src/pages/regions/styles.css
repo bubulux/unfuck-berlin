@@ -39,8 +39,10 @@
   }
 }
 
-a.region_link:hover path {
-  fill: var(--color-neon);
+/* Die Uebersicht laeuft ueber die volle Wrapper-Breite, nicht in der
+   schmaleren Textspalte – die Entwuerfe brauchen den Platz. */
+.regions-overview {
+  margin-block-start: var(--gap-big);
 }
 
 /* Spitzenduo: Foto, Name und Info-Text bilden auf jeder Breite einen Stapel –

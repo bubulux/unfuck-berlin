@@ -1,0 +1,188 @@
+/* Ideation 2 – "Atlas"
+   Karte und Liste laufen synchron: die Karte klebt, die Liste scrollt, der
+   Bezirk in der Blickmitte leuchtet. Mobil rutscht die Karte als flacher
+   Streifen unter den Header. */
+
+.atlas {
+  /* Platz fuer den klebenden Site-Header. */
+  --atlas-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* --- Karte ---------------------------------------------------------------- */
+
+.atlas__map-sticky {
+  position: sticky;
+  top: var(--atlas-top);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding-block: var(--space-3);
+  /* Verhindert, dass Listenzeilen unter der Karte durchscheinen. */
+  background-color: var(--color-purple);
+}
+
+.atlas__map {
+  width: 100%;
+  max-width: 18rem;
+  color: var(--color-white);
+}
+
+.atlas__map-caption {
+  margin: 0;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-neon);
+}
+
+/* --- Liste ---------------------------------------------------------------- */
+
+.atlas__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.atlas__row {
+  transition: transform 0.15s ease-in-out;
+}
+
+.atlas__row-link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.atlas__row--active .atlas__row-link {
+  background-color: var(--color-neon);
+}
+
+.atlas__row-index {
+  align-self: start;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  opacity: 0.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.atlas__row-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.atlas__row-name {
+  font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  text-wrap: balance;
+}
+
+.atlas__row-label {
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.atlas__row-duo {
+  font-size: 0.95rem;
+  line-height: var(--line-snug);
+}
+
+.atlas__row-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-block-start: var(--space-2);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --- Portraits ------------------------------------------------------------ */
+
+.atlas__row-faces {
+  display: flex;
+  align-self: start;
+  /* Die beiden Koepfe ueberlappen leicht – sie gehoeren als Duo zusammen. */
+  padding-inline-start: 0.75rem;
+}
+
+.atlas__face {
+  width: 3rem;
+  height: 3rem;
+  margin-inline-start: -0.75rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  background-color: var(--color-purple);
+}
+
+.atlas__row--active .atlas__face {
+  border-color: var(--color-neon);
+}
+
+.atlas__face--blank {
+  display: grid;
+  place-items: center;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 900px) {
+  .atlas {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+    gap: var(--space-7);
+  }
+
+  .atlas__map-sticky {
+    /* Auf Desktop steht die Karte frei in ihrer Spalte, ohne Deckfarbe. */
+    background-color: transparent;
+    padding-block: var(--space-5);
+    gap: var(--space-4);
+  }
+
+  .atlas__map {
+    max-width: none;
+  }
+
+  .atlas__map-caption {
+    font-size: var(--text-body);
+  }
+
+  .atlas__face {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .atlas__row-link {
+    padding: var(--space-5);
+    gap: var(--space-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atlas__row,
+  .atlas__row-link {
+    transition: none;
+  }
+}
