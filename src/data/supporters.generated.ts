@@ -154,14 +154,5 @@ export const SUPPORTERS_CMS = [
     "image": "https://cdn.sanity.io/images/xzcgo5ky/production/7481747063c3a4c04e18d74d781c9e02423d4467-1080x1350.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
     "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/7481747063c3a4c04e18d74d781c9e02423d4467-1080x1350.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
     "imageWall": "https://cdn.sanity.io/images/xzcgo5ky/production/7481747063c3a4c04e18d74d781c9e02423d4467-1080x1350.jpg?w=800&auto=format&sharp=10"
-  },
-  {
-    "name": "Thomas Gregor Gawlitta",
-    "job": "",
-    "linkedin": "https://lnkd.in/p/d_GkV7fG",
-    "foto_originalFilename": "Thomas Gregor Gawlitta.jpeg",
-    "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9058a8c9339e0fc871bdd3e7141395323e5d86eb-1200x1200.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
-    "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9058a8c9339e0fc871bdd3e7141395323e5d86eb-1200x1200.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
-    "imageWall": "https://cdn.sanity.io/images/xzcgo5ky/production/9058a8c9339e0fc871bdd3e7141395323e5d86eb-1200x1200.jpg?w=800&auto=format&sharp=10"
   }
 ]

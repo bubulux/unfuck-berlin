@@ -6,14 +6,14 @@ METHOD:PUBLISH
 X-WR-CALNAME:Volt Berlin (website ersatz kalender)
 X-WR-TIMEZONE:Europe/Brussels
 BEGIN:VEVENT
-DTSTART:20260914T100000Z
-DTEND:20260914T110000Z
-DTSTAMP:20260909T155927Z
-UID:34vcq6j025dkkfqlp9jviamkih@google.com
-CREATED:20260904T180053Z
+DTSTART:20260907T100000Z
+DTEND:20260907T110000Z
+DTSTAMP:20260912T095834Z
+UID:2ahn4j8vboh1s5j49835tags9n@google.com
+CREATED:20260904T180026Z
 DESCRIPTION:Ask us anything! Triff unsere Spitzenkandis Anna Auerbach und P
  aul Loeper zum Kaffee. Jeden Montag bis zur Wahl.\n\n#Highlight
-LAST-MODIFIED:20260904T180319Z
+LAST-MODIFIED:20260904T180312Z
 LOCATION:Restaurant Keyser Soze - Berlin\, Tucholskystraße 33\, 10117 Berli
  n\, Germany
 SEQUENCE:0
@@ -22,9 +22,82 @@ SUMMARY:Kaffee mit unseren Spitzenkandis!
 TRANSP:OPAQUE
 END:VEVENT
 BEGIN:VEVENT
+DTSTART:20260904T100000Z
+DTEND:20260904T103000Z
+DTSTAMP:20260912T095834Z
+UID:6uk2t0v84bf1sbbodnt5vq8r6n@google.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/jca-wtzc-rfp
+CREATED:20260901T195724Z
+DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
+  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
+ rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
+ ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
+ nd bekommt Antworten direkt vor der Wahl am 20. September.\n\nClick to join
+ : https://luma.com/join/g-3WVTAK51VYKPBvm\n\n#Highlight\n\nÜber Google Meet
+  teilnehmen: https://meet.google.com/jca-wtzc-rfp\nOder telefonisch: (DE) +
+ 49 40 8081616650 PIN: 585803584#\nWeitere Telefonnummern: https://tel.meet/
+ jca-wtzc-rfp?pin=8421427965245&hs=7\n\nWeitere Informationen zu Meet: https
+ ://support.google.com/a/users/answer/9282720
+LAST-MODIFIED:20260901T202200Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lunch & Politics: Last-Minute Wahlfragen?
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260910T100000Z
+DTEND:20260910T103000Z
+DTSTAMP:20260912T095834Z
+UID:7k5kc83alam2luqdd39cjfai5q@google.com
+CREATED:20260901T201519Z
+DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
+  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
+ rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
+ ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
+ nd bekommt Antworten direkt vor der Wahl am 20. September.\n\nMehr Informat
+ ion: https://luma.com/w90dpmgv\n\n#Highlight
+LAST-MODIFIED:20260901T202228Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lunch & Politics: Last-Minute Election Questions?
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20260921
+DTSTAMP:20260912T095834Z
+UID:1mvk5ltobs6mal1gujs91qksa4@google.com
+CREATED:20260901T202100Z
+DESCRIPTION:#Highlight
+LAST-MODIFIED:20260901T202133Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Wahl zum 20. Abgeordnetenhaus von Berlin und zu den Bezirksverordne
+ tenversammlungen
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20260918T100000Z
+DTEND:20260918T103000Z
+DTSTAMP:20260912T095834Z
+UID:7qvcn7q3281unnac1fc0538p5q@google.com
+CREATED:20260901T201534Z
+DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
+  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
+ rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
+ ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
+ nd bekommt Antworten direkt vor der Wahl am 20. September.\nMehr Informatio
+ n: https://luma.com/95vc6iop\n\n#Highlight
+LAST-MODIFIED:20260901T202243Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lunch & Politics: Last-Minute Election Questions?
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
 DTSTART:20260811T151500Z
 DTEND:20260811T163000Z
-DTSTAMP:20260909T155927Z
+DTSTAMP:20260912T095834Z
 UID:5gfemqkcskpc64hohs20dq2hpr@google.com
 CREATED:20260901T201716Z
 DESCRIPTION:<p><strong>Join us for an open discussion on the BAD1 White Pap
@@ -65,7 +138,7 @@ END:VEVENT
 BEGIN:VEVENT
 DTSTART:20260903T120000Z
 DTEND:20260903T140000Z
-DTSTAMP:20260909T155927Z
+DTSTAMP:20260912T095834Z
 UID:735b9q8aojm8sev35mq5c5hapj@google.com
 CREATED:20260901T195453Z
 DESCRIPTION:<p>Berlin hat viele Baustellen\, aber wir haben die passenden L
@@ -100,92 +173,19 @@ X-APPLE-STRUCTURED-LOCATION;VALUE=URI;X-APPLE-MAPKIT-HANDLE=CAEShwII2TIaEgk
  8 Berlin, Germany":geo:52.518527,13.408217
 END:VEVENT
 BEGIN:VEVENT
-DTSTART:20260907T100000Z
-DTEND:20260907T110000Z
-DTSTAMP:20260909T155927Z
-UID:2ahn4j8vboh1s5j49835tags9n@google.com
-CREATED:20260904T180026Z
+DTSTART:20260914T100000Z
+DTEND:20260914T110000Z
+DTSTAMP:20260912T095834Z
+UID:34vcq6j025dkkfqlp9jviamkih@google.com
+CREATED:20260904T180053Z
 DESCRIPTION:Ask us anything! Triff unsere Spitzenkandis Anna Auerbach und P
  aul Loeper zum Kaffee. Jeden Montag bis zur Wahl.\n\n#Highlight
-LAST-MODIFIED:20260904T180312Z
+LAST-MODIFIED:20260904T180319Z
 LOCATION:Restaurant Keyser Soze - Berlin\, Tucholskystraße 33\, 10117 Berli
  n\, Germany
 SEQUENCE:0
 STATUS:CONFIRMED
 SUMMARY:Kaffee mit unseren Spitzenkandis!
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260920
-DTEND;VALUE=DATE:20260921
-DTSTAMP:20260909T155927Z
-UID:1mvk5ltobs6mal1gujs91qksa4@google.com
-CREATED:20260901T202100Z
-DESCRIPTION:#Highlight
-LAST-MODIFIED:20260901T202133Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Wahl zum 20. Abgeordnetenhaus von Berlin und zu den Bezirksverordne
- tenversammlungen
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20260918T100000Z
-DTEND:20260918T103000Z
-DTSTAMP:20260909T155927Z
-UID:7qvcn7q3281unnac1fc0538p5q@google.com
-CREATED:20260901T201534Z
-DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
-  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
- rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
- ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
- nd bekommt Antworten direkt vor der Wahl am 20. September.\nMehr Informatio
- n: https://luma.com/95vc6iop\n\n#Highlight
-LAST-MODIFIED:20260901T202243Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Lunch & Politics: Last-Minute Election Questions?
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20260910T100000Z
-DTEND:20260910T103000Z
-DTSTAMP:20260909T155927Z
-UID:7k5kc83alam2luqdd39cjfai5q@google.com
-CREATED:20260901T201519Z
-DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
-  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
- rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
- ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
- nd bekommt Antworten direkt vor der Wahl am 20. September.\n\nMehr Informat
- ion: https://luma.com/w90dpmgv\n\n#Highlight
-LAST-MODIFIED:20260901T202228Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Lunch & Politics: Last-Minute Election Questions?
-TRANSP:OPAQUE
-END:VEVENT
-BEGIN:VEVENT
-DTSTART:20260904T100000Z
-DTEND:20260904T103000Z
-DTSTAMP:20260909T155927Z
-UID:6uk2t0v84bf1sbbodnt5vq8r6n@google.com
-X-GOOGLE-CONFERENCE:https://meet.google.com/jca-wtzc-rfp
-CREATED:20260901T195724Z
-DESCRIPTION:Noch Fragen vor der Wahl? Dann kommt mit uns ins Gespräch.\nBei
-  Lunch & Politics: Last Minute Questions gibt Pia Voltz einen kompakten Übe
- rblick über die wichtigsten Positionen von Volt. Danach gehört die Bühne eu
- ch: Stellt eure Fragen\, sprecht Themen an\, die euch noch beschäftigen\, u
- nd bekommt Antworten direkt vor der Wahl am 20. September.\n\nClick to join
- : https://luma.com/join/g-3WVTAK51VYKPBvm\n\n#Highlight\n\nÜber Google Meet
-  teilnehmen: https://meet.google.com/jca-wtzc-rfp\nOder telefonisch: (DE) +
- 49 40 8081616650 PIN: 585803584#\nWeitere Telefonnummern: https://tel.meet/
- jca-wtzc-rfp?pin=8421427965245&hs=7\n\nWeitere Informationen zu Meet: https
- ://support.google.com/a/users/answer/9282720
-LAST-MODIFIED:20260901T202200Z
-SEQUENCE:0
-STATUS:CONFIRMED
-SUMMARY:Lunch & Politics: Last-Minute Wahlfragen?
 TRANSP:OPAQUE
 END:VEVENT
 END:VCALENDAR
