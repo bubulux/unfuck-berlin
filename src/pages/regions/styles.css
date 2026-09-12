@@ -43,12 +43,12 @@ a.region_link:hover path {
   fill: var(--color-neon);
 }
 
-/* Spitzenduo: untereinander auf schmalen Screens, ab 600px die beiden
-   Foto-Name-Bloecke nebeneinander. */
+/* Spitzenduo: Foto, Name und Info-Text bilden auf jeder Breite einen Stapel –
+   die Bloecke stehen untereinander, nie nebeneinander. */
 .region__candidates {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
 }
 
 .region__candidate {
@@ -59,8 +59,8 @@ a.region_link:hover path {
 
 .region__candidate-photo {
   width: 100%;
-  /* Mobil nicht die volle Spaltenbreite ausreizen – sonst wirkt das Portraet
-     riesig neben dem Text. */
+  /* Gedeckelt, damit das Portraet im Stapel nicht die ganze Textspalte
+     einnimmt. */
   max-width: 20rem;
   aspect-ratio: 3 / 4;
   background-position: center center;
@@ -86,13 +86,21 @@ a.region_link:hover path {
   line-height: 1.2;
 }
 
-@media (min-width: 600px) {
-  .region__candidates {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-5);
-  }
+.region__candidate-md > * {
+  margin-block-end: var(--space-4);
+}
 
+.region__candidate-md > *:last-child {
+  margin-block-end: 0;
+}
+
+.region__candidate-md a {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+@media (min-width: 600px) {
   .region__candidate-photo {
-    max-width: 100%;
+    max-width: 26rem;
   }
 }

@@ -337,6 +337,8 @@ export function RegionsPage() {
             const wahlkreis = candidate_as_any?.wahlkreis || ''
             const schwerpunkte = candidate_as_any?.schwerpunkte || ''
 
+            const md_content: string = candidate_as_any?.md_content || ''
+
             return <div key={`${name}-${index}`} className="region__candidate">
               {
                 candidate.image ? (
@@ -351,6 +353,12 @@ export function RegionsPage() {
                 {wahlkreis && <span>{wahlkreis}</span>}
                 {schwerpunkte && <span>{schwerpunkte}</span>}
               </div>
+              {md_content && (
+                <div
+                  className="region__candidate-md"
+                  dangerouslySetInnerHTML={{ __html: marked(md_content) as string }}
+                />
+              )}
             </div>
           })
         }
