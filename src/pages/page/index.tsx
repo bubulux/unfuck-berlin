@@ -17,6 +17,16 @@ import ProgramSection from "../../components/organisms/program-section";
 import { WAHLPROGRAMM } from "../../data/wahlprogramm";
 import { getHeadlineColors } from '../../lib/getHeadlineColors'
 import { getFullBodyText } from "../../lib/getFullBodyText";
+import { useState } from "react";
+import {
+  CtaCollection,
+  CtaVariantSwitcher,
+} from "../../components/organisms/cta-collection";
+import {
+  classifyCtaItems,
+  type CtaVariant,
+} from "../../components/organisms/cta-collection/model";
+import { groupCtaRuns, type PageEntry } from "./cta-groups";
 
 function CustomCalendarPage() {
   const { items, raw, status } = useCalendar();
@@ -42,6 +52,10 @@ export function PagePage() {
 
   const autoBreakSize_cramped = isSmallDevice ? 0.15 : isMediumDevice ? 0.20 : 0.25
   const autoBreakSize_roomy = isSmallDevice ? 0.2 : isMediumDevice ? 0.25 : 0.33
+
+  // Temporaer fuers Design-Review: schaltet die CTA-Sammlungen zwischen den
+  // drei Entwuerfen um. Faellt raus, sobald einer gewonnen hat.
+  const [ctaVariant, setCtaVariant] = useState<CtaVariant>(1)
 
   const page_many = PAGES_CMS
     .filter(a => a.is_published === true)
@@ -169,6 +183,21 @@ export function PagePage() {
 
   const isEventsPage = Boolean(pathname.endsWith('/termine'))
 
+  // Vorerst nur auf /wahlprogramm – dort stehen die beiden Button-Reihen, um
+  // die es geht. Andere CMS-Seiten rendern unveraendert weiter.
+  const usesCtaGroups = page.slug === 'wahlprogramm'
+  // Die generierten Module sind eine Union aus Array-Typen (ein Eintrag je
+  // Seite), darum das Element-Typargument explizit setzen.
+  type ContentModule = (typeof page.content_modules)[number]
+  const modules: ContentModule[] = page.content_modules
+  const entries: PageEntry<ContentModule>[] = usesCtaGroups
+    ? groupCtaRuns<ContentModule>(modules)
+    : modules.map((module, index) => ({
+        kind: 'module' as const,
+        module,
+        index,
+      }))
+
   const theme_variant = page.theme === 'purple' ? 'purple' : 'light' as const
   return (
     <PageLayout activePath={pathname} variant={theme_variant} style={
@@ -193,7 +222,47 @@ export function PagePage() {
         </section> */}
 
       {
-        page.content_modules.map((c, index) => {
+        entries.map((entry) => {
+          if (entry.kind === 'cta-group') {
+            const { bgColor, textColor } = getHeadlineColors(entry.headlineTheme)
+            const heading = entry.headlineZeilen.join(' ')
+
+            return (
+              <section
+                key={entry.key}
+                className="pages__text_width"
+                style={{ marginBlock: 'var(--gap-big) 16px' }}
+              >
+                <CtaVariantSwitcher
+                  value={ctaVariant}
+                  onChange={setCtaVariant}
+                  label={`Entwurf für „${heading}“`}
+                />
+
+                <HighlightText
+                  as="h2"
+                  autoBreakSize={autoBreakSize_roomy}
+                  lines={entry.headlineZeilen}
+                  variant="subtitel"
+                  color={bgColor}
+                  textColor={textColor}
+                  align="left"
+                  uppercase={false}
+                />
+
+                <div style={{ marginBlockStart: 'var(--gap-small)' }}>
+                  <CtaCollection
+                    items={entry.items}
+                    kind={classifyCtaItems(entry.items)}
+                    variant={ctaVariant}
+                  />
+                </div>
+              </section>
+            )
+          }
+
+          const c = entry.module
+          const index = entry.index
           const key = `${index}-${c._type}`
 
           const c_as_any = (c as any)
