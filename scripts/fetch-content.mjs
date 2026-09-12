@@ -123,6 +123,11 @@ const oneLine = (s) => clean(s).replace(/\s*\n\s*/g, ' ')
 const REGIONS_QUERY = `*[_type=="region"]|order(name desc){
   ...,
   "slug": slug.current,
+  content_modules[]{
+    ...,
+    "photo": photo.asset->url,
+    "foto_originalFilename": photo.asset->originalFilename,
+  },
   "candidates": candidates_ref[]{
     _type == "reference" => @-> {
       ...,
