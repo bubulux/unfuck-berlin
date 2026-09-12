@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { HTMLAttributes } from 'react'
 import { Logo } from '../../atoms/logo'
 import { Link } from '../../atoms/link'
@@ -40,7 +40,31 @@ export function SiteHeader({
   ...rest
 }: SiteHeaderProps) {
   const [open, setOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
   const accent = variant === 'light' ? 'purple' : 'white'
+
+  useEffect(() => {
+    if (!open) return
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) {
+        setOpen(false)
+      }
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [open])
 
   const classes = [
     'site-header',
@@ -52,7 +76,7 @@ export function SiteHeader({
     .join(' ')
 
   return (
-    <header className={classes} {...rest}>
+    <header className={classes} ref={headerRef} {...rest}>
       <div className="site-header__inner">
         <Link
           to="/"
