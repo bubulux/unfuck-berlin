@@ -42,3 +42,65 @@
 a.region_link:hover path {
   fill: var(--color-neon);
 }
+
+/* Spitzenduo: Foto, Name und Info-Text bilden auf jeder Breite einen Stapel –
+   die Bloecke stehen untereinander, nie nebeneinander. */
+.region__candidates {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.region__candidate {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.region__candidate-photo {
+  width: 100%;
+  /* Gedeckelt, damit das Portraet im Stapel nicht die ganze Textspalte
+     einnimmt. */
+  max-width: 20rem;
+  aspect-ratio: 3 / 4;
+  background-position: center center;
+  background-size: cover;
+}
+
+.region__candidate-photo--placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.region__candidate-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.region__candidate-text strong {
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+
+.region__candidate-md > * {
+  margin-block-end: var(--space-4);
+}
+
+.region__candidate-md > *:last-child {
+  margin-block-end: 0;
+}
+
+.region__candidate-md a {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+@media (min-width: 600px) {
+  .region__candidate-photo {
+    max-width: 26rem;
+  }
+}

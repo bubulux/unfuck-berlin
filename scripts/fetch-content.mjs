@@ -263,6 +263,9 @@ function buildRegions(rows) {
         candidates: region.candidates.map(c => {
           return {
             ...c,
+            // Redaktioneller Info-Text; nur trimmen, die Zeilenumbrueche
+            // braucht der Markdown-Renderer im Frontend.
+            md_content: clean(c.md_content),
             foto_originalFilename: c.foto_originalFilename || '',
             image: withParams(c.foto, CARD_IMG_PARAMS),
             imageDetail: withParams(c.foto, DETAIL_IMG_PARAMS),
