@@ -75,6 +75,12 @@ export default defineType({
     }),
 
     defineField({
+      name: 'md_content',
+      title: 'Info-Text (Markdown is allowed)',
+      type: 'text',
+    }),
+
+    defineField({
       name: 'schwerpunkte',
       type: 'string',
     }),
