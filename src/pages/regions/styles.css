@@ -42,3 +42,57 @@
 a.region_link:hover path {
   fill: var(--color-neon);
 }
+
+/* Spitzenduo: untereinander auf schmalen Screens, ab 600px die beiden
+   Foto-Name-Bloecke nebeneinander. */
+.region__candidates {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.region__candidate {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.region__candidate-photo {
+  width: 100%;
+  /* Mobil nicht die volle Spaltenbreite ausreizen – sonst wirkt das Portraet
+     riesig neben dem Text. */
+  max-width: 20rem;
+  aspect-ratio: 3 / 4;
+  background-position: center center;
+  background-size: cover;
+}
+
+.region__candidate-photo--placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 8rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.region__candidate-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.region__candidate-text strong {
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+
+@media (min-width: 600px) {
+  .region__candidates {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
+  .region__candidate-photo {
+    max-width: 100%;
+  }
+}

@@ -312,6 +312,9 @@ export function RegionsPage() {
           display: 'flex',
           flexDirection: 'column',
           gap: '2rem',
+          /* Setzt das Spitzenduo deutlich vom vorangehenden Content-Modul (dem
+             Bezirksprogramm-CTA) ab. */
+          marginBlockStart: 'calc(var(--gap-big) * 1.5)',
           marginBlockEnd: 'var(--gap-small)'
         }}>
           <HighlightText
@@ -325,6 +328,7 @@ export function RegionsPage() {
             className="program-intro__heading"
           />
 
+          <div className="region__candidates">
           {
           region.candidates.map((candidate, index) => {
             const candidate_as_any = candidate as any
@@ -333,37 +337,16 @@ export function RegionsPage() {
             const wahlkreis = candidate_as_any?.wahlkreis || ''
             const schwerpunkte = candidate_as_any?.schwerpunkte || ''
 
-            return <div key={`${name}-${index}`} style={{
-              display: 'flex',
-              gap: '1rem',
-            }}>
+            return <div key={`${name}-${index}`} className="region__candidate">
               {
                 candidate.image ? (
-              <div style={{
-                width: '96px',
-                height: '128px',
-                backgroundImage: `url(${candidate.image})`,
-                backgroundPosition: 'center center',
-                backgroundSize: 'cover',
-                // backgroundColor: 'currentColor',
-              }} />)
-              : (<div style={{
-                  width: '96px',
-                  height: '96px',
-                  borderRadius: '100px',
-                  backgroundColor: 'tranzparent',
-                  fontSize: '160px',
-                  textAlign: 'center',
-                  lineHeight: '128px',
-                  fontWeight: 'bold',
-                }}>*</div>)
+              <div
+                className="region__candidate-photo"
+                style={{ backgroundImage: `url(${candidate.image})` }}
+              />)
+              : (<div className="region__candidate-photo region__candidate-photo--placeholder">*</div>)
               }
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.25rem',
-                justifyContent: 'center',
-              }}>
+              <div className="region__candidate-text">
                 <strong>{name}</strong>
                 {wahlkreis && <span>{wahlkreis}</span>}
                 {schwerpunkte && <span>{schwerpunkte}</span>}
@@ -371,6 +354,7 @@ export function RegionsPage() {
             </div>
           })
         }
+          </div>
         </section>
 
       </div>
