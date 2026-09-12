@@ -1,0 +1,189 @@
+/* Ideation 1 – "Konstellation"
+   Desktop: verkleinerte Karte in der Mitte, die Bezirkskarten liegen als Kranz
+   darum und sind per Linie mit dem Schwerpunkt ihrer Flaeche verbunden.
+   Mobil: kein Gesamtbild, sondern zwei Spalten aus Einzel-Umriss und Karte. */
+
+.konstellation {
+  --konstellation-wire: rgba(255, 255, 255, 0.45);
+}
+
+/* --- Buehne (nur Desktop) ------------------------------------------------ */
+
+.konstellation__stage {
+  display: none;
+}
+
+.konstellation__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --- Mobile Zeile: Umriss | Text ----------------------------------------- */
+
+.konstellation__row {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-3);
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.konstellation__row:hover,
+.konstellation__row:focus-visible {
+  background-color: var(--color-neon);
+}
+
+.konstellation__row-shape {
+  display: block;
+  color: var(--color-purple);
+}
+
+.konstellation__row-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+/* --- Karten-Innenleben (mobil und Desktop gemeinsam) --------------------- */
+
+.konstellation__card-name {
+  font-weight: var(--font-weight-bold);
+  font-size: 1.05rem;
+  line-height: var(--line-snug);
+  text-wrap: balance;
+}
+
+.konstellation__card-duo {
+  font-size: 0.85rem;
+  line-height: var(--line-snug);
+  opacity: 0.8;
+}
+
+.konstellation__card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-block-start: var(--space-1);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 1000px) {
+  .konstellation__list {
+    display: none;
+  }
+
+  .konstellation__stage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr) 15rem;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .konstellation__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .konstellation__map-slot {
+    /* Die Karte darf nicht die volle Spaltenbreite fressen – sonst liegen die
+       Schwerpunkte zu dicht an den Karten und die Linien werden zu Stummeln. */
+    padding-inline: var(--space-5);
+  }
+
+  .konstellation__map {
+    color: var(--color-white);
+  }
+
+  .konstellation__card {
+    position: relative;
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--color-white);
+    color: var(--color-purple);
+    /* Ueber den Linien, damit die Drahtenden unter der Karte verschwinden. */
+    z-index: 1;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+  }
+
+  .konstellation__card--right {
+    text-align: right;
+  }
+
+  .konstellation__card--active {
+    background-color: var(--color-neon);
+    transform: scale(1.03);
+  }
+
+  /* Der Umriss steckt nur fuer die mobile Zeile im Markup. */
+  .konstellation__card-shape {
+    display: none;
+  }
+
+  .konstellation__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .konstellation__card--right .konstellation__card-cta {
+    justify-content: flex-end;
+  }
+
+  /* --- Verbindungslinien ------------------------------------------------- */
+
+  .konstellation__wires {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  .konstellation__wire polyline {
+    fill: none;
+    stroke: var(--konstellation-wire);
+    stroke-width: 1;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    transition: stroke 0.15s ease-in-out, stroke-width 0.15s ease-in-out;
+  }
+
+  .konstellation__wire circle {
+    fill: var(--konstellation-wire);
+    transition: fill 0.15s ease-in-out;
+  }
+
+  .konstellation__wire--active polyline {
+    stroke: var(--color-neon);
+    stroke-width: 2;
+  }
+
+  .konstellation__wire--active circle {
+    fill: var(--color-neon);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .konstellation__card,
+  .konstellation__row,
+  .konstellation__wire polyline,
+  .konstellation__wire circle {
+    transition: none;
+  }
+
+  .konstellation__card--active {
+    transform: none;
+  }
+}

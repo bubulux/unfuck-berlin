@@ -1,0 +1,57 @@
+/* Berlin-Karte: die Flaechen erben ihre Farbe vom Kontext, damit dieselbe
+   Karte auf lila und auf hellem Grund funktioniert. */
+.berlin-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--color-white);
+  overflow: visible;
+}
+
+.berlin-map__district {
+  color: inherit;
+  cursor: pointer;
+  /* Die Flaechen sind randlos aneinandergelegt – eine duenne Trennlinie in der
+     Seitenfarbe macht die Grenzen sichtbar. */
+  stroke: var(--color-purple);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+  outline: none;
+}
+
+/* Sobald irgendein Bezirk aktiv ist, treten alle anderen zurueck. */
+.berlin-map--focused .berlin-map__district {
+  opacity: 0.35;
+}
+
+.berlin-map__district--active,
+.berlin-map--focused .berlin-map__district--active {
+  opacity: 1;
+  color: var(--color-neon);
+}
+
+.berlin-map__district:hover {
+  color: var(--color-neon);
+}
+
+/* Tastaturfokus braucht dieselbe Deutlichkeit wie der Hover. */
+.berlin-map__district:focus-visible {
+  opacity: 1;
+  color: var(--color-neon);
+  stroke: var(--color-white);
+  stroke-width: 2;
+}
+
+.district-outline {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .berlin-map__district {
+    transition: none;
+  }
+}

@@ -33,6 +33,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "PIA_VOLTZ_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "PIA_VOLTZ_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Pia Voltz",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f232cf1c9d7eca5a366d82267992c71037967d2-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -64,6 +65,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "HENDRIK_SCHÄFER_PORTRAIT_4x5_BERLIN2026 Kopie_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "HENDRIK_SCHÄFER_FULL_BODY_BERLIN2026 Kopie_©Evelin_Frerk.jpg",
         "name": "Hendrik Schaefer",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6280656fc935c097635b778e929f97c9dff34b9e-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -75,20 +77,26 @@ export const REGIONS_CMS = [
       {
         "_key": "79ede4f4c3de",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Treptow-Köpenick"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "03c382ec0baf",
         "_type": "md_content",
-        "md_content": "Von Alt-Treptow bis Schmöckwitz, von Schöneweide bis Müggelheim: In Treptow-Köpenick leben wir zwischen Wasser, Grün, Wissenschaft, Kultur, Industrie und starken Kiezen. Damit unser Bezirk lebenswert bleibt, umfasst unser Plan:\n\n- **Mobilität, die den Alltag entlastet:** Ob Elsenbrücke, Altglienicke, Müggelheim oder Schmöckwitz: Menschen müssen verlässlich durch den Bezirk und Richtung Innenstadt kommen. Wir setzen uns für zuverlässigere Busse, bessere Anschlüsse, kluge Ampelschaltungen sowie durchgängige Rad- und Fußwege ein.\n- **Wohnungsbau mit Infrastruktur:** Neue Quartiere wie Späthsfelde dürfen nicht ohne passende Infrastruktur entstehen. Wir denken deshalb Bus, Tram, Kita, Schule, Grünflächen und Nahversorgung von Anfang an mit.\n- **Wirtschaft und Zukunftsort Südost stärken:** Adlershof, Schöneweide und die HTW zeigen, wie viel Potenzial im Bezirk steckt: für Handwerk, Handel, Kultur und Gewerbe. Wir wollen Leerstand aktiv nutzen, lokale Unternehmen besser unterstützen und Wirtschaft, Ausbildung und Wissenschaft stärker vernetzen.\n- **Jugend, Bildung und Sport stärken:** Jugendfreizeiteinrichtungen, Sportflächen, Kultur- und Bildungsangebote sind keine Extras. Wir wollen sie als Grundlage für Teilhabe, Zusammenhalt und starke Kieze mit angemessenem Budget ausstatten. \n- **Wasser, Grün und sichere Wege zugänglich halten:** Müggelsee, Dahme, Spree und unsere Grünräume machen Treptow-Köpenick besonders. Wir sichern öffentliche Zugänge, stärken Barrierefreiheit und wollen Lücken im Wege- und Ufernetz schließen."
+        "foto_originalFilename": null,
+        "md_content": "Von Alt-Treptow bis Schmöckwitz, von Schöneweide bis Müggelheim: In Treptow-Köpenick leben wir zwischen Wasser, Grün, Wissenschaft, Kultur, Industrie und starken Kiezen. Damit unser Bezirk lebenswert bleibt, umfasst unser Plan:\n\n- **Mobilität, die den Alltag entlastet:** Ob Elsenbrücke, Altglienicke, Müggelheim oder Schmöckwitz: Menschen müssen verlässlich durch den Bezirk und Richtung Innenstadt kommen. Wir setzen uns für zuverlässigere Busse, bessere Anschlüsse, kluge Ampelschaltungen sowie durchgängige Rad- und Fußwege ein.\n- **Wohnungsbau mit Infrastruktur:** Neue Quartiere wie Späthsfelde dürfen nicht ohne passende Infrastruktur entstehen. Wir denken deshalb Bus, Tram, Kita, Schule, Grünflächen und Nahversorgung von Anfang an mit.\n- **Wirtschaft und Zukunftsort Südost stärken:** Adlershof, Schöneweide und die HTW zeigen, wie viel Potenzial im Bezirk steckt: für Handwerk, Handel, Kultur und Gewerbe. Wir wollen Leerstand aktiv nutzen, lokale Unternehmen besser unterstützen und Wirtschaft, Ausbildung und Wissenschaft stärker vernetzen.\n- **Jugend, Bildung und Sport stärken:** Jugendfreizeiteinrichtungen, Sportflächen, Kultur- und Bildungsangebote sind keine Extras. Wir wollen sie als Grundlage für Teilhabe, Zusammenhalt und starke Kieze mit angemessenem Budget ausstatten. \n- **Wasser, Grün und sichere Wege zugänglich halten:** Müggelsee, Dahme, Spree und unsere Grünräume machen Treptow-Köpenick besonders. Wir sichern öffentliche Zugänge, stärken Barrierefreiheit und wollen Lücken im Wege- und Ufernetz schließen.",
+        "photo": null
       },
       {
         "_key": "5e4e5b78cf1a",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_treko.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -123,6 +131,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "NIKLAS_KÜHNE_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "NIKLAS_KÜHNE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Niklas Kühne",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/788e63b1954e9e495d8e917f6e3bcb85baeb6416-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -154,6 +163,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "RAHEL_DEMANT_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "RAHEL_DEMANT_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Rahel Demant",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/5274086384e13f361bf746f07e8fbf1a5972b479-1920x2879.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -165,20 +175,26 @@ export const REGIONS_CMS = [
       {
         "_key": "c002b568a8a6",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Tempelhof-Schöneberg"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "416c0ed1d09c",
         "_type": "md_content",
-        "md_content": "Tempelhof-Schöneberg ist Regenbogenkiez und Flugfeld, Kiezkultur und ruhige Vororte, alles in einem Bezirk. Für Dich ist es einfach zu Hause: in Schöneberg, Friedenau, Tempelhof, Mariendorf, Marienfelde und Lichtenrade. Hier ist unser Plan dafür.\n\n- **Sicherer Kiez:** Angriffe auf queere Menschen im Nollendorfkiez sind keine Randnotiz, sondern ein Alarmsignal. Wir setzen uns für ein echtes Schutzkonzept ein, damit der Regenbogenkiez ein sicherer Ort bleibt.\n- **Baustellen:** Eine Baustelle, die ihr Enddatum mehrfach verschiebt, wie am U-Bahnhof Ullsteinstraße, ist kein Ausnahmefall. Wir priorisieren den Bau, statt den Verkehr zu blockieren und Fußgänger*innen und Radfahrende dauerhaft auf eine Spur zu quetschen.\n- **Leerstand:** Leerstehende Wohnungen wie in der Ansbacher Straße bleiben ungenutzt, während Wohnraum fehlt. Wir identifizieren Leerstand konsequent und sorgen dafür, dass er wieder bewohnbar wird.\n- **Sportplätze:** Zugesperrte Sportplätze hinter Zäunen sind kein Einzelfall im Bezirk, sondern die Regel. Wir öffnen sie wieder für Kinder, Jugendliche und alle, die einfach Sport treiben wollen.\n- **Bezirkspolitik:** Klingt langweilig? Wir machen sie sexy! Sie soll durch eine moderne, interaktive Plattform und regelmäßige Bürger*innenräte lebendiger und transparenter werden, um das Vertrauen in die Lokalpolitik zu stärken."
+        "foto_originalFilename": null,
+        "md_content": "Tempelhof-Schöneberg ist Regenbogenkiez und Flugfeld, Kiezkultur und ruhige Vororte, alles in einem Bezirk. Für Dich ist es einfach zu Hause: in Schöneberg, Friedenau, Tempelhof, Mariendorf, Marienfelde und Lichtenrade. Hier ist unser Plan dafür.\n\n- **Sicherer Kiez:** Angriffe auf queere Menschen im Nollendorfkiez sind keine Randnotiz, sondern ein Alarmsignal. Wir setzen uns für ein echtes Schutzkonzept ein, damit der Regenbogenkiez ein sicherer Ort bleibt.\n- **Baustellen:** Eine Baustelle, die ihr Enddatum mehrfach verschiebt, wie am U-Bahnhof Ullsteinstraße, ist kein Ausnahmefall. Wir priorisieren den Bau, statt den Verkehr zu blockieren und Fußgänger*innen und Radfahrende dauerhaft auf eine Spur zu quetschen.\n- **Leerstand:** Leerstehende Wohnungen wie in der Ansbacher Straße bleiben ungenutzt, während Wohnraum fehlt. Wir identifizieren Leerstand konsequent und sorgen dafür, dass er wieder bewohnbar wird.\n- **Sportplätze:** Zugesperrte Sportplätze hinter Zäunen sind kein Einzelfall im Bezirk, sondern die Regel. Wir öffnen sie wieder für Kinder, Jugendliche und alle, die einfach Sport treiben wollen.\n- **Bezirkspolitik:** Klingt langweilig? Wir machen sie sexy! Sie soll durch eine moderne, interaktive Plattform und regelmäßige Bürger*innenräte lebendiger und transparenter werden, um das Vertrauen in die Lokalpolitik zu stärken.",
+        "photo": null
       },
       {
         "_key": "217d2bd92496",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_tscho.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -213,6 +229,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "SUSANN_KÄMMER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "SUSANN_KÄMMER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Susann Kämmer",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/55e4b47d4bbb2c7a977df81bd247ad75d90ef4d1-2732x4096.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -244,6 +261,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "INGO_PARTEY_PORTRAIT_BERLIN2026 Kopie_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "INGO_PARTEY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Ingo Partey",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/54a95033245c4888612e787b90e1cbc19b8edb54-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -255,20 +273,26 @@ export const REGIONS_CMS = [
       {
         "_key": "30b36736efac",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Steglitz-Zehlendorf"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "0c91a45ad63f",
         "_type": "md_content",
-        "md_content": "Steglitz-Zehlendorf hat das höchste Haushaltsnettoeinkommen Berlins, und trotzdem marode Schulen und Bauruinen als Wahrzeichen. Für Dich ist es einfach zuhause, in Steglitz, Lichterfelde, Lankwitz, Zehlendorf, Dahlem, Nikolassee, Wannsee und Schlachtensee. Hier ist unser Plan dafür.\n\n- **Verwaltung, die liefert:** Fördermittel verfallen, weil Personal fehlt, um sie abzurufen. Das ist kein Geldproblem, sondern ein Organisationsproblem. Nach skandinavischem Vorbild bauen wir Hierarchien ab und schaffen eine Verwaltung, die tatsächlich handelt.\n- **Drogenhandel neben dem Spielplatz:** Offener Drogenhandel direkt neben Kinderspielplätzen, wie im Charkiw-Park, ist kein Kavaliersdelikt. Wir sorgen für koordinierte Polizeipräsenz und echte Prävention, statt beide Augen zuzudrücken.\n- **Leerstand:** Traditionsgeschäfte, die schließen, und Ketten, die abwandern, etwa rund um die Schloßstraße, sind kein Naturgesetz. Mit datenbasierten Nutzungskonzepten und kreativen Zwischennutzungen verhindern wir, dass aus Einkaufsstraßen Leerstandsmeilen werden.\n- **Sichere Schulwege:** Kinder und Bring-Verkehr auf derselben Fläche. Das ist an vielen Grundschulen tägliches Risiko statt Ausnahme. Wir richten Schulstraßen ein und setzen Tempo 30 durch, wo Schulen an Hauptstraßen liegen.\n- **Bauruinen beenden:** Ein jahrzehntelanger Streit zwischen Senat und Bezirk lässt Orte wie das Klinikgelände Heckeshorn einfach verfallen. Das ist kein Einzelfall, sondern Symptom fehlender Entscheidungsfähigkeit. Wir schaffen Strukturen, die endlich Nutzungskonzepte ermöglichen, statt Grundstücke der Natur zu überlassen."
+        "foto_originalFilename": null,
+        "md_content": "Steglitz-Zehlendorf hat das höchste Haushaltsnettoeinkommen Berlins, und trotzdem marode Schulen und Bauruinen als Wahrzeichen. Für Dich ist es einfach zuhause, in Steglitz, Lichterfelde, Lankwitz, Zehlendorf, Dahlem, Nikolassee, Wannsee und Schlachtensee. Hier ist unser Plan dafür.\n\n- **Verwaltung, die liefert:** Fördermittel verfallen, weil Personal fehlt, um sie abzurufen. Das ist kein Geldproblem, sondern ein Organisationsproblem. Nach skandinavischem Vorbild bauen wir Hierarchien ab und schaffen eine Verwaltung, die tatsächlich handelt.\n- **Drogenhandel neben dem Spielplatz:** Offener Drogenhandel direkt neben Kinderspielplätzen, wie im Charkiw-Park, ist kein Kavaliersdelikt. Wir sorgen für koordinierte Polizeipräsenz und echte Prävention, statt beide Augen zuzudrücken.\n- **Leerstand:** Traditionsgeschäfte, die schließen, und Ketten, die abwandern, etwa rund um die Schloßstraße, sind kein Naturgesetz. Mit datenbasierten Nutzungskonzepten und kreativen Zwischennutzungen verhindern wir, dass aus Einkaufsstraßen Leerstandsmeilen werden.\n- **Sichere Schulwege:** Kinder und Bring-Verkehr auf derselben Fläche. Das ist an vielen Grundschulen tägliches Risiko statt Ausnahme. Wir richten Schulstraßen ein und setzen Tempo 30 durch, wo Schulen an Hauptstraßen liegen.\n- **Bauruinen beenden:** Ein jahrzehntelanger Streit zwischen Senat und Bezirk lässt Orte wie das Klinikgelände Heckeshorn einfach verfallen. Das ist kein Einzelfall, sondern Symptom fehlender Entscheidungsfähigkeit. Wir schaffen Strukturen, die endlich Nutzungskonzepte ermöglichen, statt Grundstücke der Natur zu überlassen.",
+        "photo": null
       },
       {
         "_key": "bd6ca0a3359e",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_ste-ze.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -303,6 +327,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "HELMUT_SCHARFENORT_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "HELMUT_SCHARFENORT_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Helmut Scharfenort",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/ffefb12b587b52e1ed9c3193251bae2b6376d47c-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -334,6 +359,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "DANINA_SCHWARM_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "DANINA_SCHWARM_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Danina Schwarm",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -345,20 +371,26 @@ export const REGIONS_CMS = [
       {
         "_key": "1eb77f12866c",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Spandau"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "47d0963d94e5",
         "_type": "md_content",
-        "md_content": "Spandau ist mehr als ein Bezirk. Es ist unser Zuhause. Ob Haselhorst, Siemensstadt, Staaken, Gatow, Kladow, Hakenfelde oder Falkenhagener Feld: Wir haben einen klaren Plan.\n\n- **Nahverkehr:** Die Siemensbahn muss zu einer echten Anbindung von Siemensstadt und Gartenfeld werden. Wir setzen uns für eine verlässliche Verlängerung der U7, bessere Taktungen für Falkenhagener Feld und Staaken sowie eine smarte, flexible Anbindung von Gatow und Kladow ein.\n- **Mobilität:** 2025 wurde in Spandau kein neuer Kilometer im Vorrang- oder Ergänzungsnetz fertiggestellt. Berlinweit ein Negativrekord. Wir wollen Projekte wie am Rathausplatz und an der Heerstraße endlich auf die Straße bringen und schaffen sichere Fahrradgaragen an wichtigen Knotenpunkten.\n- **Schulen:** Spandaus Schulen brauchen dringend Modernisierung und Sanierung. Wir wollen, dass Toiletten und Fenster schneller erneuert werden und Sanierungsprojekte endlich sichtbar vorankommen.\n- **Lokale Wirtschaft:** Leerstand und Billigläden verdrängen den Einzelhandel in der Altstadt Spandau. Wir unterstützen Ansiedlungsmanagement und Zwischennutzung, damit aus leeren Schaufenstern wieder ein lebendiges Zentrum wird.\n- **Sauberkeit und Gesundheit:** Mehr Mülleimer, häufigere Reinigungen sowie die schnelle Beseitigung von Sperrmüll und Graffiti sorgen für saubere Kieze, schützen die Gesundheit und erhöhen die Lebensqualität.\n- **Finanzieller Spielraum:** Eine starke lokale Wirtschaft schafft höhere Einnahmen für Spandau. Wir setzen auf schnellere Genehmigungen, attraktive Gewerbeflächen und eine effiziente Verwaltung, damit mehr Geld in die wichtigen Aufgaben des Bezirks fließt."
+        "foto_originalFilename": null,
+        "md_content": "Spandau ist mehr als ein Bezirk. Es ist unser Zuhause. Ob Haselhorst, Siemensstadt, Staaken, Gatow, Kladow, Hakenfelde oder Falkenhagener Feld: Wir haben einen klaren Plan.\n\n- **Nahverkehr:** Die Siemensbahn muss zu einer echten Anbindung von Siemensstadt und Gartenfeld werden. Wir setzen uns für eine verlässliche Verlängerung der U7, bessere Taktungen für Falkenhagener Feld und Staaken sowie eine smarte, flexible Anbindung von Gatow und Kladow ein.\n- **Mobilität:** 2025 wurde in Spandau kein neuer Kilometer im Vorrang- oder Ergänzungsnetz fertiggestellt. Berlinweit ein Negativrekord. Wir wollen Projekte wie am Rathausplatz und an der Heerstraße endlich auf die Straße bringen und schaffen sichere Fahrradgaragen an wichtigen Knotenpunkten.\n- **Schulen:** Spandaus Schulen brauchen dringend Modernisierung und Sanierung. Wir wollen, dass Toiletten und Fenster schneller erneuert werden und Sanierungsprojekte endlich sichtbar vorankommen.\n- **Lokale Wirtschaft:** Leerstand und Billigläden verdrängen den Einzelhandel in der Altstadt Spandau. Wir unterstützen Ansiedlungsmanagement und Zwischennutzung, damit aus leeren Schaufenstern wieder ein lebendiges Zentrum wird.\n- **Sauberkeit und Gesundheit:** Mehr Mülleimer, häufigere Reinigungen sowie die schnelle Beseitigung von Sperrmüll und Graffiti sorgen für saubere Kieze, schützen die Gesundheit und erhöhen die Lebensqualität.\n- **Finanzieller Spielraum:** Eine starke lokale Wirtschaft schafft höhere Einnahmen für Spandau. Wir setzen auf schnellere Genehmigungen, attraktive Gewerbeflächen und eine effiziente Verwaltung, damit mehr Geld in die wichtigen Aufgaben des Bezirks fließt.",
+        "photo": null
       },
       {
         "_key": "8e80f994468a",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_spandau.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -393,6 +425,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "ANTONIA_MARX_PORTRAIT_4x5_BERLIN2026_cropped_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "ANTONIA_MARX_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Antonia Marx",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/e5c774a5a92b536af18765682372c888c67076a8-1609x2109.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/e5c774a5a92b536af18765682372c888c67076a8-1609x2109.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -424,6 +457,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "CHRISTOPH_GERLINGER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "CHRISTOPH_GERLINGER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Christoph Gerlinger",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/74dbc37e2bc7943107a77e5e5b73d531d41fc9a0-2533x3797.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -435,20 +469,26 @@ export const REGIONS_CMS = [
       {
         "_key": "aa741d3af520",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Reinickendorf"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "1c81169e7c88",
         "_type": "md_content",
-        "md_content": "Reinickendorf ist der vielseitige, grüne Norden Berlins, mit Industrie, Wohnvierteln, dörflichen Kiezen und großen Naherholungsgebieten. Für Dich ist es Zuhause: von Tegel bis Frohnau, von Heiligensee bis zum Märkischen Viertel. Dafür haben wir einen Plan.\n\n- **Funktionierende Verwaltung:** Monatelange Baustellen wie in der Auguste-Viktoria-Allee oder bei der Buslinie 125 zeigen fehlende Koordination. Wir schaffen ein digitales Baustellenmanagement mit verlässlichen Zeitplänen und Transparenz.\n- **Lebendige Kieze:** Mit Bürgerbudgets geben wir Anwohner*innen mehr Gestaltungseinfluss. Für saubere Kieze schaffen wir zusätzliche Mülleimer und Recyclingstellen dort, wo sie gebraucht werden.\n- **Mehr Perspektiven für Tegel:** Die Bernstorffstraße braucht ein Verkehrskonzept, der Tegeler Hafen eine Zukunft. Wir machen Straßen sicherer und entwickeln den Hafen zur Erlebnispromenade mit Gesundheitsangeboten und BVG-Fährverbindung.\n- **Mobilität für alle:** Wir bauen Tram und U-Bahn aus, schaffen sichere Radwege zwischen allen Ortsteilen und Fahrradparkhäuser an wichtigen Knotenpunkten.\n- **Schule mit Perspektive:** Frierende Kinder im Winter, überhitzte Klassenräume im Sommer. Das darf nicht der Alltag sein. Wir bauen den Sanierungsstau ab, investieren in gute Lernbedingungen und sichere Schulwege. Außerdem ermöglichen wir mehr Integrierten Sekundarschulen in Reinickendorf die eigene gymnasiale Oberstufe.\n- **Gesund älter werden:** Menschen in Reinickendorf sollen selbstbestimmt und gut versorgt im Kiez leben können. Dafür schaffen wir Barrierefreiheit, stärken Pflege- und Unterstützungsangebote, bauen die Berliner Hausbesuche aus und fördern Begegnungs- und Freizeitangebote."
+        "foto_originalFilename": null,
+        "md_content": "Reinickendorf ist der vielseitige, grüne Norden Berlins, mit Industrie, Wohnvierteln, dörflichen Kiezen und großen Naherholungsgebieten. Für Dich ist es Zuhause: von Tegel bis Frohnau, von Heiligensee bis zum Märkischen Viertel. Dafür haben wir einen Plan.\n\n- **Funktionierende Verwaltung:** Monatelange Baustellen wie in der Auguste-Viktoria-Allee oder bei der Buslinie 125 zeigen fehlende Koordination. Wir schaffen ein digitales Baustellenmanagement mit verlässlichen Zeitplänen und Transparenz.\n- **Lebendige Kieze:** Mit Bürgerbudgets geben wir Anwohner*innen mehr Gestaltungseinfluss. Für saubere Kieze schaffen wir zusätzliche Mülleimer und Recyclingstellen dort, wo sie gebraucht werden.\n- **Mehr Perspektiven für Tegel:** Die Bernstorffstraße braucht ein Verkehrskonzept, der Tegeler Hafen eine Zukunft. Wir machen Straßen sicherer und entwickeln den Hafen zur Erlebnispromenade mit Gesundheitsangeboten und BVG-Fährverbindung.\n- **Mobilität für alle:** Wir bauen Tram und U-Bahn aus, schaffen sichere Radwege zwischen allen Ortsteilen und Fahrradparkhäuser an wichtigen Knotenpunkten.\n- **Schule mit Perspektive:** Frierende Kinder im Winter, überhitzte Klassenräume im Sommer. Das darf nicht der Alltag sein. Wir bauen den Sanierungsstau ab, investieren in gute Lernbedingungen und sichere Schulwege. Außerdem ermöglichen wir mehr Integrierten Sekundarschulen in Reinickendorf die eigene gymnasiale Oberstufe.\n- **Gesund älter werden:** Menschen in Reinickendorf sollen selbstbestimmt und gut versorgt im Kiez leben können. Dafür schaffen wir Barrierefreiheit, stärken Pflege- und Unterstützungsangebote, bauen die Berliner Hausbesuche aus und fördern Begegnungs- und Freizeitangebote.",
+        "photo": null
       },
       {
         "_key": "86423e289cf8",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_reinickendorf.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -483,6 +523,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "DOMENIC_BAY_PORTRAIT_BERLIN2026 Kopie_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "DOMENIC_BAY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Domenic Bay",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b60f1b32a827ed3e981a08c4d81a2eaa9bda3026-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -514,6 +555,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "THERESA_SCHÜLTKEN_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "THERESA_SCHÜLTKEN_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Theresa Schültken",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/124f94d4b5a11cad0dd1870254ca8dbbab2f2171-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -525,20 +567,26 @@ export const REGIONS_CMS = [
       {
         "_key": "2052d316ed27",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Pankow"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "b83701f0f6e0",
         "_type": "md_content",
-        "md_content": "Pankow wächst zukünftig mehr als jeder andere Bezirk Berlins. Für Dich ist es einfach zu Hause, in Prenzlauer Berg, Weißensee, Buch, Karow, Blankenburg, Niederschönhausen, Rosenthal und Wilhelmsruh. Hier ist unser Plan dafür.\n\n- **Schulbaustellen:** Eine Schule, die seit Jahren nicht fertig wird, wie die Grundschule am Weißen See, ist kein Einzelfall. Wir sorgen für klare Fristen und echte Prioritäten im Schulbestand.\n- **Dein Geld, deine Idee:** Sitzbänke, Freizeitangebote, kleine Projekte im Kiez, wir reservieren einen Teil des Bezirkshaushalts, über den Du direkt mitbestimmst.\n- **Zeig uns, was passiert:** Wann kommt die Schönfließer Brücke? Was wird aus dem neuen Wohnquartier? Mit einem digitalen Stadtzwilling wie in Wiesbaden und einem öffentlichen Dashboard, das den Stand aller Vorhaben zeigt, wollen wir Stadtentwicklung transparent gestalten, statt Informationen nur in dicken Papierstapeln zu veröffentlichen.\n- **Die Schönhauser zurückgewinnen:** Die wichtigste Straße des Bezirks verdient mehr als Leerstand, hohe Mieten und endlose Baustellen. Wir bringen Eigentümer*innen, Gewerbe und Nachbarschaft an einen Tisch und gestalten sie gemeinsam.\n- **Ein Sportpark für alle:** Der Jahn-Sportpark soll nicht nur an Spieltagen leben. Wir kämpfen für einen Ort mit Vereinen, Familien, Freizeitsport und echter Anbindung an die Kieze drumherum, jeden Tag im Jahr."
+        "foto_originalFilename": null,
+        "md_content": "Pankow wächst zukünftig mehr als jeder andere Bezirk Berlins. Für Dich ist es einfach zu Hause, in Prenzlauer Berg, Weißensee, Buch, Karow, Blankenburg, Niederschönhausen, Rosenthal und Wilhelmsruh. Hier ist unser Plan dafür.\n\n- **Schulbaustellen:** Eine Schule, die seit Jahren nicht fertig wird, wie die Grundschule am Weißen See, ist kein Einzelfall. Wir sorgen für klare Fristen und echte Prioritäten im Schulbestand.\n- **Dein Geld, deine Idee:** Sitzbänke, Freizeitangebote, kleine Projekte im Kiez, wir reservieren einen Teil des Bezirkshaushalts, über den Du direkt mitbestimmst.\n- **Zeig uns, was passiert:** Wann kommt die Schönfließer Brücke? Was wird aus dem neuen Wohnquartier? Mit einem digitalen Stadtzwilling wie in Wiesbaden und einem öffentlichen Dashboard, das den Stand aller Vorhaben zeigt, wollen wir Stadtentwicklung transparent gestalten, statt Informationen nur in dicken Papierstapeln zu veröffentlichen.\n- **Die Schönhauser zurückgewinnen:** Die wichtigste Straße des Bezirks verdient mehr als Leerstand, hohe Mieten und endlose Baustellen. Wir bringen Eigentümer*innen, Gewerbe und Nachbarschaft an einen Tisch und gestalten sie gemeinsam.\n- **Ein Sportpark für alle:** Der Jahn-Sportpark soll nicht nur an Spieltagen leben. Wir kämpfen für einen Ort mit Vereinen, Familien, Freizeitsport und echter Anbindung an die Kieze drumherum, jeden Tag im Jahr.",
+        "photo": null
       },
       {
         "_key": "0204bb006673",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_pankow.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -573,6 +621,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "NIKOLAI_SCHIRMER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "NIKOLAI_SCHIRMER_FULL_BODY_V2_BERLIN2026_©Max_Große-Wortmann.jpg",
         "name": "Nikolai Schirmer",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/9eeb81880827487e782a9d71ac3809722c624698-2685x4026.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -604,6 +653,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "CINDY_UNEKEN_VoltBerlin_DSC3108©EVELIN_FRERK_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "CINDY_UNEKEN_VoltBERLIN_DSC_3089©EVELIN_FRERK_x_©Evelin_Frerk.jpg",
         "name": "Cindy Uneken",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/8a491cd8f16e243154a3c12a83c2ec822d600674-2693x4047.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -615,20 +665,33 @@ export const REGIONS_CMS = [
       {
         "_key": "0fbed37acd02",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Neukölln "
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "865cfc8a3de3",
         "_type": "md_content",
-        "md_content": "Neukölln lebt von seiner Vielfalt, kein Kiez ist wie der andere. Für Dich ist es einfach zuhause, vom Reuterkiez über Britz bis nach Rudow. Hier ist unser Plan dafür.\n\n- **Bezahlbares Wohnen ohne Feldbebauung:** Mehr Wohnraum durch Nachverdichtung, schnellere Genehmigungen, die Aktivierung von Leerstand und weniger illegale Ferienwohnungen. Das Tempelhofer Feld bleibt als Erholungsort erhalten und wird besser vor Extremhitze geschützt.\n- **Nahverkehr:** Die M41 ist chronisch überlastet, wir bauen sie zur Straßenbahn aus. Damit ihr schnell und entspannt durch die Sonnenallee kommt, ohne im Stau zu stehen. Und wir bringen die M10-Verlängerung bis zum Hermannplatz voran.\n- **Schulen:** Schulen, die verwahrlosen, weil das Geld für die Reinigung und Instandsetzung fehlt, sind kein Randproblem, sondern Alltag. Wir sorgen für verlässliche Mittel, damit Sauberkeit an Schulen kein Luxus bleibt und Kinder Lernorte haben, zu denen sie gerne kommen.\n- **Müll:** Genug von „Neukölln bleibt dreckig!\" Das ändern wir mit mehr Mülleimern, Sperrmüllpunkten in jedem Kiez und einer Kiez-Norm, die Sauberkeit statt Wegwerfen zum Standard macht.\n- **Sicher und entspannt unterwegs:** Mit barrierefreien Fußwegen, sicheren Überwegen, geschützten Radspuren, abgeschliffenem Kopfsteinpflaster und Parkraumbewirtschaftung im Schillerkiez sowie rund um das Vivantes Klinikum Neukölln, für weniger Parkplatzsuchverkehr und weniger Stress für Anwohnende."
+        "foto_originalFilename": null,
+        "md_content": "Neukölln lebt von seiner Vielfalt, kein Kiez ist wie der andere. Für Dich ist es einfach zuhause, vom Reuterkiez über Britz bis nach Rudow. Hier ist unser Plan dafür.\n\n- **Bezahlbares Wohnen ohne Feldbebauung:** Mehr Wohnraum durch Nachverdichtung, schnellere Genehmigungen, die Aktivierung von Leerstand und weniger illegale Ferienwohnungen. Das Tempelhofer Feld bleibt als Erholungsort erhalten und wird besser vor Extremhitze geschützt.\n- **Nahverkehr:** Die M41 ist chronisch überlastet, wir bauen sie zur Straßenbahn aus. Damit ihr schnell und entspannt durch die Sonnenallee kommt, ohne im Stau zu stehen. Und wir bringen die M10-Verlängerung bis zum Hermannplatz voran.\n- **Schulen:** Schulen, die verwahrlosen, weil das Geld für die Reinigung und Instandsetzung fehlt, sind kein Randproblem, sondern Alltag. Wir sorgen für verlässliche Mittel, damit Sauberkeit an Schulen kein Luxus bleibt und Kinder Lernorte haben, zu denen sie gerne kommen.\n- **Müll:** Genug von „Neukölln bleibt dreckig!\" Das ändern wir mit mehr Mülleimern, Sperrmüllpunkten in jedem Kiez und einer Kiez-Norm, die Sauberkeit statt Wegwerfen zum Standard macht.\n- **Sicher und entspannt unterwegs:** Mit barrierefreien Fußwegen, sicheren Überwegen, geschützten Radspuren, abgeschliffenem Kopfsteinpflaster und Parkraumbewirtschaftung im Schillerkiez sowie rund um das Vivantes Klinikum Neukölln, für weniger Parkplatzsuchverkehr und weniger Stress für Anwohnende.",
+        "photo": null
       },
       {
         "_key": "869f9e934a88",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_neukolln.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "da02abb0bfcb",
+        "_type": "photo",
+        "alt": "Volt Berlin - Unser Team für Neukölln: Karuan Asward, Max Lodel, Nikolai Schirmer, Cindy Uneken",
+        "foto_originalFilename": "Neukölln.png",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/eac56974927483efab3520f9af0a64e2da93401b-3840x2160.png"
       }
     ]
   },
@@ -663,6 +726,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_cropped_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Axumawit Berhe",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/0003a3a8909ccfe2be01a3b18bb87a87eb341583-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -671,16 +735,16 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-11T17:40:01Z",
         "_id": "e536ec64-8805-4208-90b6-53b836bfda6a",
-        "_originalId": "e536ec64-8805-4208-90b6-53b836bfda6a",
-        "_rev": "0Kx6dhY4cG5xUskekVJ5PA",
+        "_originalId": "drafts.e536ec64-8805-4208-90b6-53b836bfda6a",
+        "_rev": "507ef285-439b-4f34-bc78-8f22c03dc4c6",
         "_system": {
           "base": {
             "id": "e536ec64-8805-4208-90b6-53b836bfda6a",
-            "rev": "gSD2EG7QiN9E3Tu6nMnqXB"
+            "rev": "0Kx6dhY4cG5xUskekVJ5PA"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-03T13:24:39Z",
+        "_updatedAt": "2026-09-12T09:58:08Z",
         "bezirk": "01 Mitte",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg",
         "foto2": {
@@ -693,6 +757,7 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg",
         "foto_originalFilename": "KALOJAN_HOFFMEISTER_FULL_BODY_V2_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "KALOJAN_HOFFMEISTER_FULL_BODY_V2_BERLIN2026_©Evelin_Frerk.jpg",
+        "md_content": "*Mein Herzensthema ist soziale Gerechtigkeit, Kultur in Berlin und Kiezleben. All diese Dinge machen Berlin zu dem was es ist und es ist an der Zeit, dass wir das Beste aus uns rausholen.*\n\n*Europa war schon immer mein Herzensthema und Berlin ist meine Herzensstadt. Es kann nur besser werden, wenn man sich auch dafür einsetzt, daher habe ich mich entschlossen bei Volt mitzumachen und auch zu kandidieren. *\n\n**Beruf**\n\nIch bin Politische Beraterin beim Tagesspiegel und habe mich auf politische Kommunikation spezialisiert.\n\n**Biographie**\n\nIch bin gebürtige Berlinern - genau genommen gebürtige Charlottenburgerin - und habe viele Jahre in Europa verteilt gelebt. Dadurch konnte ich viele Einblicke gewinnen, was woanders schon funktioniert und freue mich, das in meine Heimat bringen zu können.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/caraseeberg/) und [LinkedIn](https://www.linkedin.com/in/cara-seeberg/)",
         "name": "Kalojan Hoffmeister",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -705,20 +770,33 @@ export const REGIONS_CMS = [
       {
         "_key": "8d54c7d187f9",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Mitte"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "833910abccb0",
         "_type": "md_content",
-        "md_content": "Volt, die neue Kraft der politischen Mitte, für Mitte. Pragmatisch, liberal, lösungsorientiert: Das ist unser Plan für Wedding, Moabit, Gesundbrunnen, Tiergarten, Hansaviertel und Mitte.\n\n- **Wohnen:** Steigende Mieten, Eigenbedarfskündigungen und Verdrängung sind nicht nur in Mitte und Wedding ein Problem, sondern bezirksweit. \nMit mehr Dachausbauten, zügigen Bebauungsplänen und Grundstücken für Genossenschaften sorgen wir für bezahlbaren Wohnraum.\n- **Sichere, saubere Straßen:** Kinder laufen an gefährlichen Straßen zur Schule, Müllberge bleiben liegen, offene Drogenszenen belasten die Anwohner.  Wir sorgen für mehr Tempo 30, häufigere Straßenreinigung und gezielte Hilfe für Abhängige.\n- **Smarte Mobilität:** Stau und zugeparkte Radwege bremsen Mitte aus.                Mit geschützten Radwegen und dauerhaften Lösungen, z. B. für die Friedrichstraße, sorgen wir für Verkehr, der für alle fließt.\n- **Lebendige Kieze:** Bauvorhaben ohne Rücksicht auf Anlieger, wie in der Torstraße, bedrohen die Kieze. Mit frühzeitiger Beteiligung und einfachen Genehmigungen für Gewerbe halten wie sie lebendig.\n- **Kitas und Schulen:** Manche Schulen warten seit Jahren auf dringende Sanierungen. Transparente Planung und verbindliche \nFristen sorgen für Verlässlichkeit statt Bangen."
+        "foto_originalFilename": null,
+        "md_content": "Volt, die neue Kraft der politischen Mitte, für Mitte. Pragmatisch, liberal, lösungsorientiert: Das ist unser Plan für Wedding, Moabit, Gesundbrunnen, Tiergarten, Hansaviertel und Mitte.\n\n- **Wohnen:** Steigende Mieten, Eigenbedarfskündigungen und Verdrängung sind nicht nur in Mitte und Wedding ein Problem, sondern bezirksweit. \nMit mehr Dachausbauten, zügigen Bebauungsplänen und Grundstücken für Genossenschaften sorgen wir für bezahlbaren Wohnraum.\n- **Sichere, saubere Straßen:** Kinder laufen an gefährlichen Straßen zur Schule, Müllberge bleiben liegen, offene Drogenszenen belasten die Anwohner.  Wir sorgen für mehr Tempo 30, häufigere Straßenreinigung und gezielte Hilfe für Abhängige.\n- **Smarte Mobilität:** Stau und zugeparkte Radwege bremsen Mitte aus.                Mit geschützten Radwegen und dauerhaften Lösungen, z. B. für die Friedrichstraße, sorgen wir für Verkehr, der für alle fließt.\n- **Lebendige Kieze:** Bauvorhaben ohne Rücksicht auf Anlieger, wie in der Torstraße, bedrohen die Kieze. Mit frühzeitiger Beteiligung und einfachen Genehmigungen für Gewerbe halten wie sie lebendig.\n- **Kitas und Schulen:** Manche Schulen warten seit Jahren auf dringende Sanierungen. Transparente Planung und verbindliche \nFristen sorgen für Verlässlichkeit statt Bangen.",
+        "photo": null
       },
       {
         "_key": "6db18ecde31c",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_mitte.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "280593e31a6f",
+        "_type": "photo",
+        "alt": "Volt Berlin - Unser Team für Mitte: Martin Hergert, Andrija Šarić, Axumawit Berhe, Elisabeth Stumvoll, Tom Claessens ",
+        "foto_originalFilename": "Mitte.png",
+        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/8120c34a0d1a18190bd842cd22d41c9e2f71c9ea-3840x2160.png"
       }
     ]
   },
@@ -753,6 +831,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "LARS_GAUDIAN_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "LARS_GAUDIAN_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Lars Gaudian",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1a17ff4c9a2f4ac8f13e07e242d5930f819966ec-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -784,6 +863,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "KAMILA_OLOWIAK_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "KAMILA_OLOWIAK_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Kamila Olowiak",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/cf8eb1d23943faa6460f5c3cf2d3c836784f2d2d-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -795,20 +875,26 @@ export const REGIONS_CMS = [
       {
         "_key": "db8121f0682f",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Marzahn-Hellersdorf"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "9961e215df9d",
         "_type": "md_content",
-        "md_content": "Marzahn-Hellersdorf wächst schneller als fast jeder andere Bezirk Berlins. Nur die Infrastruktur wächst nicht mit. Für Dich ist es einfach zuhause: in Marzahn, Biesdorf, Kaulsdorf, Mahlsdorf und Hellersdorf. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Eine Schnellstraße wie die TVO löst kein Stauproblem, sie verbaut nur die bessere Lösung. Wir sichern die Trasse für die S-Bahn, um die Anbindung im Bezirk zu verbessern.\n- **Schulplätze:** Im gesamten Bezirk fehlen Hunderte Schulplätze; Kinder werden querbeet durch den Bezirk eingeschult. Wir setzen auf modulare Schulbauten und verbindliche Schulwegkonzepte für jede neue Schule.\n- **Müll:** Illegale Müllablagerungen finden sich überall, doch nur jede sechste Meldung führt zu einem Verfahren. Wir entfristen die Waste-Watcher-Stellen und schöpfen die neuen Bußgeldrahmen konsequent aus.\n- **Kaulsdorfer Seen:** Ein Badeverbot, das niemand einhält, schützt weder Natur noch Menschen. Nach Pankower Vorbild schaffen wir geordnete Infrastruktur statt wegzuschauen.\n- **Alleinerziehende:** Fast jeder zweite Haushalt mit Kindern in Marzahn-Nord ist ein Ein-Eltern-Haushalt. Ohne flexible Betreuung bleibt Arbeit oft unmöglich. Wir schaffen über einen Sozialpakt ein Angebot mit Beratung, Jobcoaching und Notfall-Kinderbetreuung unter einem Dach."
+        "foto_originalFilename": null,
+        "md_content": "Marzahn-Hellersdorf wächst schneller als fast jeder andere Bezirk Berlins. Nur die Infrastruktur wächst nicht mit. Für Dich ist es einfach zuhause: in Marzahn, Biesdorf, Kaulsdorf, Mahlsdorf und Hellersdorf. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Eine Schnellstraße wie die TVO löst kein Stauproblem, sie verbaut nur die bessere Lösung. Wir sichern die Trasse für die S-Bahn, um die Anbindung im Bezirk zu verbessern.\n- **Schulplätze:** Im gesamten Bezirk fehlen Hunderte Schulplätze; Kinder werden querbeet durch den Bezirk eingeschult. Wir setzen auf modulare Schulbauten und verbindliche Schulwegkonzepte für jede neue Schule.\n- **Müll:** Illegale Müllablagerungen finden sich überall, doch nur jede sechste Meldung führt zu einem Verfahren. Wir entfristen die Waste-Watcher-Stellen und schöpfen die neuen Bußgeldrahmen konsequent aus.\n- **Kaulsdorfer Seen:** Ein Badeverbot, das niemand einhält, schützt weder Natur noch Menschen. Nach Pankower Vorbild schaffen wir geordnete Infrastruktur statt wegzuschauen.\n- **Alleinerziehende:** Fast jeder zweite Haushalt mit Kindern in Marzahn-Nord ist ein Ein-Eltern-Haushalt. Ohne flexible Betreuung bleibt Arbeit oft unmöglich. Wir schaffen über einen Sozialpakt ein Angebot mit Beratung, Jobcoaching und Notfall-Kinderbetreuung unter einem Dach.",
+        "photo": null
       },
       {
         "_key": "3103e10288ad",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_ma-he.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -843,6 +929,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "ACHIM_JEDELSKY_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "ACHIM_JEDELSKY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Achim Jedelsky",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/d384835218be2f59f1d6127f21e129201b1e4662-1920x2885.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -874,6 +961,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "MARTA_MENDEC_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "MARTA_MENDEC_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Marta Mendec",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/2c8587dfcdf8695eff759b0926ddf91ad3119e72-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -885,20 +973,26 @@ export const REGIONS_CMS = [
       {
         "_key": "beff9880bb35",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Lichtenberg"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "1de577543fb8",
         "_type": "md_content",
-        "md_content": "Lichtenberg verändert sich schneller als jeder andere Bezirk im Osten Berlins. Für Dich ist es einfach zuhause in Friedrichsfelde, Karlshorst, Lichtenberg, Falkenberg, Malchow, Wartenberg, Neu-Hohenschönhausen, Alt-Hohenschönhausen, Fennpfuhl und Rummelsburg. Hier ist unser Plan dafür.\n\n- **Einbindung von jungen Menschen:** Echte Mitbestimmung junger Menschen durch ein eigenes, von ihnen selbst verwaltetes Beteiligungs Budget, ein institutionalisiertes Anhörungsrecht der Jugendgremien in der BVV und konkrete Unterstützung beim Einbringen eigener Anliegen ins Bezirksparlament.\n- **Mobilität:** Unser Maßstab ist Vision Zero: Niemand soll im Straßenverkehr sterben. Wir wollen Tempo 30 an Gefahrenstellen, sichere Straßenbahnhaltestellen, an denen nicht riskant überholt werden kann und fräsen Kopfsteinpflaster ab, wo es das Radfahren blockiert, etwa in Karlshorst.\n- **Wohnen:** Monatelanges Warten auf eine Baugenehmigung ist Verwaltungsstau, kein Naturgesetz. Wir digitalisieren das Bauamt, mit Fast-Track für gemeinnützigen Wohnungsbau und Baugruppen. Und wir organisieren freiwilligen Wohnungstausch ohne Mietsprung und ohne Kiezwechsel.\n- **Hitze:** Plattenbauquartiere ohne Schatten werden im Sommer zur Belastung, für Ältere und kleine Kinder zuerst. Wir pflanzen Straßenbäume, schaffen Trinkbrunnen und Sonnensegel auf Spielplätzen und richten kühle öffentliche Aufenthaltsorte ein.\n- **Sauberkeit:** Müll und Hundekot machen Parks, Spielplätze und Ufer ungemütlich. Wir verbessern die Abfallinfrastruktur und reinigen häufiger, wo die Belastung am größten ist."
+        "foto_originalFilename": null,
+        "md_content": "Lichtenberg verändert sich schneller als jeder andere Bezirk im Osten Berlins. Für Dich ist es einfach zuhause in Friedrichsfelde, Karlshorst, Lichtenberg, Falkenberg, Malchow, Wartenberg, Neu-Hohenschönhausen, Alt-Hohenschönhausen, Fennpfuhl und Rummelsburg. Hier ist unser Plan dafür.\n\n- **Einbindung von jungen Menschen:** Echte Mitbestimmung junger Menschen durch ein eigenes, von ihnen selbst verwaltetes Beteiligungs Budget, ein institutionalisiertes Anhörungsrecht der Jugendgremien in der BVV und konkrete Unterstützung beim Einbringen eigener Anliegen ins Bezirksparlament.\n- **Mobilität:** Unser Maßstab ist Vision Zero: Niemand soll im Straßenverkehr sterben. Wir wollen Tempo 30 an Gefahrenstellen, sichere Straßenbahnhaltestellen, an denen nicht riskant überholt werden kann und fräsen Kopfsteinpflaster ab, wo es das Radfahren blockiert, etwa in Karlshorst.\n- **Wohnen:** Monatelanges Warten auf eine Baugenehmigung ist Verwaltungsstau, kein Naturgesetz. Wir digitalisieren das Bauamt, mit Fast-Track für gemeinnützigen Wohnungsbau und Baugruppen. Und wir organisieren freiwilligen Wohnungstausch ohne Mietsprung und ohne Kiezwechsel.\n- **Hitze:** Plattenbauquartiere ohne Schatten werden im Sommer zur Belastung, für Ältere und kleine Kinder zuerst. Wir pflanzen Straßenbäume, schaffen Trinkbrunnen und Sonnensegel auf Spielplätzen und richten kühle öffentliche Aufenthaltsorte ein.\n- **Sauberkeit:** Müll und Hundekot machen Parks, Spielplätze und Ufer ungemütlich. Wir verbessern die Abfallinfrastruktur und reinigen häufiger, wo die Belastung am größten ist.",
+        "photo": null
       },
       {
         "_key": "de6973522f3e",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_lichtenberg.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -933,6 +1027,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "SUSANNE_ZELS_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "SUSANNE_ZELS_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Susanne Zels",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b25b6baa0952da3b5847a5399f4bb76dfb4189c5-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -964,6 +1059,7 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "CHRISTOPG_KÖNIG_PORTRAIT_4x5_BERLIN2026©Evelin_Frerk_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "CHRISTOPG_KÖNIG_FULL_BODY_BERLIN2026©Evelin_Frerk_©Evelin_Frerk.jpg",
         "name": "Christoph König",
+        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/89393a0cab3c99f8c13211edd0809454867b6094-2741x4119.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -975,20 +1071,26 @@ export const REGIONS_CMS = [
       {
         "_key": "419698df2ffd",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Friedrichshain-Kreuzberg"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "383ea33d161e",
         "_type": "md_content",
-        "md_content": "Friedrichshain-Kreuzberg ist der dichteste und lebendigste Bezirk Berlins. Mit einer Energie, die kein anderer Kiez hat. Für Dich ist es einfach zuhause, in Friedrichshain und Kreuzberg. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Die M41 ist überlastet, die Verlängerung der A100 ist unnötig. Wir verlängern die M10 über den Hermannplatz und bringen die U1 bis ans Ostkreuz. Tramnetze wie in anderen europäischen Städten zeigen, wie es geht.\n- **Görlitzer Park:** Zäune lösen keine Probleme. Wir setzen auf soziale Maßnahmen und konsequente Bekämpfung der Ursachen, nicht auf Symbolpolitik, die nur verdrängt statt löst.\n- **Kulturorte:** Ein Club oder ein Kulturort wie das RAW-Gelände ist keine Verhandlungsmasse für Investoren. Mit verbindlichen Kulturflächen und langfristigen Nutzungsverträgen sichern wir Orte wie dieses, das SEZ und weitere, nach dem Vorbild von Amsterdams Kulturquartieren.\n- **Drogenpolitik:** Wegschauen am Kottbusser Tor oder am Hermannplatz löst nichts. Nach Zürcher Vorbild bauen wir Drogenkonsumräume bedarfsgerecht aus. Das hilft Betroffenen und entlastet den öffentlichen Raum gleichermaßen.\n- **Mitentscheiden:** Ob Görlitzer Park oder Bauprojekte wie die Rudolfstraße: Entscheidungen dürfen nicht über Deinen Kopf hinweg fallen. Mit Kiezbeiräten und mehrsprachigen Dialogformaten holen wir Dich mit an den Tisch."
+        "foto_originalFilename": null,
+        "md_content": "Friedrichshain-Kreuzberg ist der dichteste und lebendigste Bezirk Berlins. Mit einer Energie, die kein anderer Kiez hat. Für Dich ist es einfach zuhause, in Friedrichshain und Kreuzberg. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Die M41 ist überlastet, die Verlängerung der A100 ist unnötig. Wir verlängern die M10 über den Hermannplatz und bringen die U1 bis ans Ostkreuz. Tramnetze wie in anderen europäischen Städten zeigen, wie es geht.\n- **Görlitzer Park:** Zäune lösen keine Probleme. Wir setzen auf soziale Maßnahmen und konsequente Bekämpfung der Ursachen, nicht auf Symbolpolitik, die nur verdrängt statt löst.\n- **Kulturorte:** Ein Club oder ein Kulturort wie das RAW-Gelände ist keine Verhandlungsmasse für Investoren. Mit verbindlichen Kulturflächen und langfristigen Nutzungsverträgen sichern wir Orte wie dieses, das SEZ und weitere, nach dem Vorbild von Amsterdams Kulturquartieren.\n- **Drogenpolitik:** Wegschauen am Kottbusser Tor oder am Hermannplatz löst nichts. Nach Zürcher Vorbild bauen wir Drogenkonsumräume bedarfsgerecht aus. Das hilft Betroffenen und entlastet den öffentlichen Raum gleichermaßen.\n- **Mitentscheiden:** Ob Görlitzer Park oder Bauprojekte wie die Rudolfstraße: Entscheidungen dürfen nicht über Deinen Kopf hinweg fallen. Mit Kiezbeiräten und mehrsprachigen Dialogformaten holen wir Dich mit an den Tisch.",
+        "photo": null
       },
       {
         "_key": "7d7474e75da7",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_x-hain.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   },
@@ -1001,15 +1103,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:56:30Z",
         "_id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
         "_originalId": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
-        "_rev": "5f2C3ii77GPTXHjxnUHvcW",
+        "_rev": "VOfSO31kbJ3qiUlVmRb1KU",
         "_system": {
           "base": {
             "id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
-            "rev": "56Aw9PqdKBoWxRYUC03Otx"
+            "rev": "oqzgrKGMIxFMreVMC4DfI2"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-08T16:39:38Z",
+        "_updatedAt": "2026-09-12T09:57:41Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg",
         "foto2": {
@@ -1022,6 +1124,7 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f2545f827b99621dca37957aa0f67d081afb297-5464x8192.jpg",
         "foto_originalFilename": "CARA_SEEBERG_PORTRAIT_V2_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "CARA_SEEBERG_FULL_BODY_V2_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "md_content": "*Mein Herzensthema ist soziale Gerechtigkeit, Kultur in Berlin und Kiezleben. All diese Dinge machen Berlin zu dem was es ist und es ist an der Zeit, dass wir das Beste aus uns rausholen.*\n\n*Europa war schon immer mein Herzensthema und Berlin ist meine Herzensstadt. Es kann nur besser werden, wenn man sich auch dafür einsetzt, daher habe ich mich entschlossen bei Volt mitzumachen und auch zu kandidieren. *\n\n**Beruf**\n\nIch bin Politische Beraterin beim Tagesspiegel und habe mich auf politische Kommunikation spezialisiert.\n\n**Biographie**\n\nIch bin gebürtige Berlinern - genau genommen gebürtige Charlottenburgerin - und habe viele Jahre in Europa verteilt gelebt. Dadurch konnte ich viele Einblicke gewinnen, was woanders schon funktioniert und freue mich, das in meine Heimat bringen zu können.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/caraseeberg/) und [LinkedIn](https://www.linkedin.com/in/cara-seeberg/)",
         "name": "Cara Seeberg",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -1032,15 +1135,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:56:49Z",
         "_id": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
         "_originalId": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
-        "_rev": "56Aw9PqdKBoWxRYUC03NzT",
+        "_rev": "VOfSO31kbJ3qiUlVmRag4Q",
         "_system": {
           "base": {
             "id": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
-            "rev": "TZSo9XvhWf3aAVsIk7RCc9"
+            "rev": "VOfSO31kbJ3qiUlVmRaYd6"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-08-17T16:24:01Z",
+        "_updatedAt": "2026-09-12T09:51:46Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg",
         "foto2": {
@@ -1053,6 +1156,7 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/c2153780eb4a3f6ca8423ad530ddd6c8fce314cb-5464x8192.jpg",
         "foto_originalFilename": "CHRISTIAN_WEIßSTEINER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "CHRISTIAN_WEIßSTEINER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
+        "md_content": "*Berlin als europäische Metropole: sozial, gerecht, innovativ, sauber, grün und wirtschaftlich attraktiv. Lebenswerte Kieze: Die Stadt als Wohnzimmer, statt Auto-Diktatur. Digitale Verwaltung: effizient und nah an den Bürger*innen.*\n\n*Freiheit bedeutet für mich soziale Sicherheit, Gerechtigkeit und eine bessere Zukunft für alle. Das hält die Menschen zusammen und schafft Freude auf morgen. Genau das möchte ich in Berlin vorantreiben. Politik braucht Mut, europäischen Willen und eine Vision für die Zukunft. Volt ist für mich die richtige politische Heimat, weil wir der progressive und europäische Gegenentwurf zu Stillstand und Spaltung sind.*\n\n**Beruf**\n\nIch bin Diplom-Kaufmann und habe über ein Jahrzehnt als IT-Sales Professional und Account Manager in internationalen IT-Unternehmen die digitale Modernisierung der öffentlichen Verwaltung vorangetrieben – Wissen, das ich nun für eine effiziente, bürgernahe Berliner Verwaltung einbringe.\n\n**Biographie**\n\nIch bin überzeugter Europäer. Geboren in Hamburg, mit doppelter EU-Staatsbürgerschaft, habe ich in Hamburg und Italien Betriebswirtschaft studiert. Mit meiner bulgarischen Frau lebten wir bereits in verschiedenen Ländern Europas und Asiens – Berlin ist heute unser Herzort und Zuhause.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/christian.weisssteiner.eu/) und [LinkedIn](https://www.linkedin.com/in/christianweisssteiner/)",
         "name": "Christian Weißsteiner",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -1065,20 +1169,26 @@ export const REGIONS_CMS = [
       {
         "_key": "fae84ad7d068",
         "_type": "hero_linear",
+        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Charlottenburg-Wilmersdorf"
-        ]
+        ],
+        "photo": null
       },
       {
         "_key": "2823a19fad82",
         "_type": "md_content",
-        "md_content": "- **Bezahlbar wohnen und Wohnungslosigkeit eliminieren:** Wohnen darf kein Luxus sein. Wir schaffen mehr bezahlbare Wohnungen. Durch Housing First setzen wir auf Helfen statt Verdrängen. Nicht nur am Zoo, sondern überall dort, wo es nötig ist.\n- **Sichere, leise und gerechte Mobilität für alle:** Straßen sollen Menschen verbinden, nicht nur Autos leiten. Mehr Tempo 30, sichere Querungen, gute Radwege und Vorrang für Fuß-, Rad- und Nahverkehr machen den Kiez entspannter und barriereärmer, und das nicht nur vor Schulen.\n- **Saubere Straßen und Plätze, um die sich jemand kümmert:** Öffentlicher Raum soll gepflegt, sauber und verlässlich betreut sein. Mehr Sauberkeit, klare Zuständigkeiten und schnelle Reaktion auf Müll und Schmutz stärken das Wohlgefühl im Kiez.\n- **Gastronomie und Einzelhandel fördern:** Lebendige Straßen, gute Erreichbarkeit und schnelle Genehmigungen schaffen Raum für Cafés und kleine Betriebe. Steigende Mieten dürfen Betriebe nicht verdrängen. Wir sichern kleinteiliges, lebendiges Gewerbe, statt Ketten und Leerstand.\n- **Innovative Ideen, die im Kiez wirken:** Wir bringen Start-ups, Kreative, Hochschulen, Verwaltung und Betriebe zusammen. So entstehen konkrete Projekte, neue Chancen und zukunftsfähige Arbeitsplätze direkt vor Ort.\n- **Beteiligungsformate, mitbestimmen statt nur zuschauen:** Die Menschen im Bezirk sollen mitreden können. Kiezforen, Bürgerräte und digitale Beteiligung machen Politik näher am Alltag."
+        "foto_originalFilename": null,
+        "md_content": "- **Bezahlbar wohnen und Wohnungslosigkeit eliminieren:** Wohnen darf kein Luxus sein. Wir schaffen mehr bezahlbare Wohnungen. Durch Housing First setzen wir auf Helfen statt Verdrängen. Nicht nur am Zoo, sondern überall dort, wo es nötig ist.\n- **Sichere, leise und gerechte Mobilität für alle:** Straßen sollen Menschen verbinden, nicht nur Autos leiten. Mehr Tempo 30, sichere Querungen, gute Radwege und Vorrang für Fuß-, Rad- und Nahverkehr machen den Kiez entspannter und barriereärmer, und das nicht nur vor Schulen.\n- **Saubere Straßen und Plätze, um die sich jemand kümmert:** Öffentlicher Raum soll gepflegt, sauber und verlässlich betreut sein. Mehr Sauberkeit, klare Zuständigkeiten und schnelle Reaktion auf Müll und Schmutz stärken das Wohlgefühl im Kiez.\n- **Gastronomie und Einzelhandel fördern:** Lebendige Straßen, gute Erreichbarkeit und schnelle Genehmigungen schaffen Raum für Cafés und kleine Betriebe. Steigende Mieten dürfen Betriebe nicht verdrängen. Wir sichern kleinteiliges, lebendiges Gewerbe, statt Ketten und Leerstand.\n- **Innovative Ideen, die im Kiez wirken:** Wir bringen Start-ups, Kreative, Hochschulen, Verwaltung und Betriebe zusammen. So entstehen konkrete Projekte, neue Chancen und zukunftsfähige Arbeitsplätze direkt vor Ort.\n- **Beteiligungsformate, mitbestimmen statt nur zuschauen:** Die Menschen im Bezirk sollen mitreden können. Kiezforen, Bürgerräte und digitale Beteiligung machen Politik näher am Alltag.",
+        "photo": null
       },
       {
         "_key": "3c69de6a39e5",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_cha-wi.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
+        "foto_originalFilename": null,
+        "photo": null
       }
     ]
   }

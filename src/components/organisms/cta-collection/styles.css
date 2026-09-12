@@ -1,0 +1,456 @@
+/* Gestaltete Sammlungen anstelle der aufgereihten CTA-Buttons.
+   Die Seite /wahlprogramm steht auf Weiss – alle Entwuerfe rechnen mit
+   lila Text auf hellem Grund. */
+
+.cta-collection {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cta-collection__item {
+  min-width: 0;
+}
+
+/* Rotierende Markenfarben fuer die Sticker-Variante. */
+.cta-collection__item[data-swatch='0'] {
+  --swatch-bg: var(--color-neon);
+  --swatch-fg: var(--color-purple);
+}
+.cta-collection__item[data-swatch='1'] {
+  --swatch-bg: var(--color-blue);
+  --swatch-fg: var(--color-purple);
+}
+.cta-collection__item[data-swatch='2'] {
+  --swatch-bg: var(--color-yellow);
+  --swatch-fg: var(--color-purple);
+}
+.cta-collection__item[data-swatch='3'] {
+  --swatch-bg: var(--color-pink);
+  --swatch-fg: var(--color-white);
+}
+.cta-collection__item[data-swatch='4'] {
+  --swatch-bg: var(--color-purple);
+  --swatch-fg: var(--color-white);
+}
+
+/* ======================================================================
+   Entwurf 1 – "Karten"
+   Sprachen als gleich grosse Kacheln, Dokumente als grosse Aufrisse.
+   ====================================================================== */
+
+.cta-collection--sprachen.cta-collection--v1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: var(--space-3);
+}
+
+.cta-collection--v1 .cta-card {
+  display: grid;
+  grid-template-areas:
+    'flag arrow'
+    'name name';
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-4);
+  border: 2px solid var(--color-purple);
+  color: var(--color-purple);
+  transition: background-color 0.12s ease-in-out, transform 0.12s ease-in-out;
+}
+
+.cta-collection--v1 .cta-card:hover,
+.cta-collection--v1 .cta-card:focus-visible {
+  background-color: var(--color-neon);
+  transform: rotate(-1.5deg);
+}
+
+.cta-collection--v1 .cta-card__flag {
+  grid-area: flag;
+  font-size: 2rem;
+  line-height: 1;
+  /* Fallback-Kuerzel ("AR") statt Flagge – als Kaestchen lesbar machen. */
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.cta-collection--v1 .cta-card__name {
+  grid-area: name;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  text-wrap: balance;
+}
+
+.cta-collection--v1 .cta-card__arrow {
+  grid-area: arrow;
+  display: inline-flex;
+  opacity: 0.5;
+}
+
+.cta-collection--dokumente.cta-collection--v1 {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.cta-collection--v1 .cta-doc {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    'index eyebrow'
+    'index topic'
+    'index arrow';
+  align-items: start;
+  gap: var(--space-1) var(--space-5);
+  padding: var(--space-5);
+  border: 2px solid var(--color-purple);
+  color: var(--color-purple);
+  transition: background-color 0.12s ease-in-out, color 0.12s ease-in-out;
+}
+
+.cta-collection--v1 .cta-doc:hover,
+.cta-collection--v1 .cta-doc:focus-visible {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.cta-collection--v1 .cta-doc__index {
+  grid-area: index;
+  align-self: center;
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  opacity: 0.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.cta-collection--v1 .cta-doc__eyebrow {
+  grid-area: eyebrow;
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.cta-collection--v1 .cta-doc__topic {
+  grid-area: topic;
+  font-size: clamp(1.2rem, 3.5vw, 1.9rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  text-wrap: balance;
+}
+
+.cta-collection--v1 .cta-doc__arrow {
+  grid-area: arrow;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-block-start: var(--space-2);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 700px) {
+  .cta-collection--dokumente.cta-collection--v1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ======================================================================
+   Entwurf 2 – "Liste"
+   Kein Kasten, nur Haarlinien. Bei siebzehn Sprachen die ruhigste Loesung.
+   ====================================================================== */
+
+.cta-collection--sprachen.cta-collection--v2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 var(--space-7);
+  border-block-start: 2px solid var(--color-purple);
+}
+
+.cta-collection--v2 .cta-card {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-2);
+  border-block-end: 1px solid rgba(80, 35, 121, 0.25);
+  color: var(--color-purple);
+  transition: background-color 0.12s ease-in-out, padding-inline 0.12s ease-in-out;
+}
+
+.cta-collection--v2 .cta-card:hover,
+.cta-collection--v2 .cta-card:focus-visible {
+  background-color: var(--color-neon);
+  padding-inline: var(--space-3);
+}
+
+.cta-collection--v2 .cta-card__flag {
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: var(--font-weight-bold);
+}
+
+.cta-collection--v2 .cta-card__name {
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+}
+
+.cta-collection--v2 .cta-card__arrow {
+  display: inline-flex;
+  opacity: 0.45;
+}
+
+.cta-collection--dokumente.cta-collection--v2 {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cta-collection--v2 .cta-doc {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    'index eyebrow arrow'
+    'index topic   arrow';
+  align-items: center;
+  gap: 0 var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  /* Farbiger Balken statt Rahmen – das Dokument bekommt eine Kante. */
+  border-inline-start: 6px solid var(--color-purple);
+  background-color: rgba(80, 35, 121, 0.06);
+  color: var(--color-purple);
+  transition: background-color 0.12s ease-in-out, color 0.12s ease-in-out;
+}
+
+.cta-collection--v2 .cta-doc:hover,
+.cta-collection--v2 .cta-doc:focus-visible {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.cta-collection--v2 .cta-doc__index {
+  grid-area: index;
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  opacity: 0.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.cta-collection--v2 .cta-doc__eyebrow {
+  grid-area: eyebrow;
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.cta-collection--v2 .cta-doc__topic {
+  grid-area: topic;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+}
+
+.cta-collection--v2 .cta-doc__arrow {
+  grid-area: arrow;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .cta-collection--sprachen.cta-collection--v2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .cta-collection--sprachen.cta-collection--v2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* ======================================================================
+   Entwurf 3 – "Sticker"
+   Die Sprachen werden zu bunten Pillen, die Dokumente zu Farbflaechen.
+   ====================================================================== */
+
+.cta-collection--sprachen.cta-collection--v3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.cta-collection--v3 .cta-card {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-pill);
+  background-color: var(--swatch-bg, var(--color-neon));
+  color: var(--swatch-fg, var(--color-purple));
+  transition: transform 0.12s ease-in-out;
+}
+
+.cta-collection--v3 .cta-card:hover,
+.cta-collection--v3 .cta-card:focus-visible {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.cta-collection--v3 .cta-card__flag {
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: var(--font-weight-bold);
+}
+
+.cta-collection--v3 .cta-card__name {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+}
+
+/* Der Pfeil wuerde die Pille nur breiter machen. */
+.cta-collection--v3 .cta-card__arrow {
+  display: none;
+}
+
+.cta-collection--dokumente.cta-collection--v3 {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.cta-collection--v3 .cta-doc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  overflow: hidden;
+  min-height: 12rem;
+  padding: var(--space-5);
+  background-color: var(--swatch-bg, var(--color-purple));
+  color: var(--swatch-fg, var(--color-white));
+  transition: transform 0.12s ease-in-out;
+}
+
+.cta-collection--v3 .cta-doc:hover,
+.cta-collection--v3 .cta-doc:focus-visible {
+  transform: rotate(-1deg) scale(1.01);
+}
+
+/* Die Ziffer liegt als Wasserzeichen hinten rechts. */
+.cta-collection--v3 .cta-doc__index {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -2.5rem;
+  font-size: 9rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  opacity: 0.18;
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.cta-collection--v3 .cta-doc__eyebrow {
+  position: relative;
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.75;
+}
+
+.cta-collection--v3 .cta-doc__topic {
+  position: relative;
+  margin-block-end: auto;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-tight);
+  text-wrap: balance;
+}
+
+.cta-collection--v3 .cta-doc__arrow {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 700px) {
+  .cta-collection--dokumente.cta-collection--v3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ======================================================================
+   Temporaerer Umschalter fuers Review
+   ====================================================================== */
+
+.cta-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-block-end: var(--space-4);
+  padding: var(--space-2);
+  border: 1px dashed rgba(80, 35, 121, 0.4);
+  color: var(--color-purple);
+}
+
+.cta-switcher__hint {
+  margin-inline-end: var(--space-1);
+  padding-inline: var(--space-2);
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.cta-switcher__tab {
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.cta-switcher__tab:hover {
+  background-color: rgba(80, 35, 121, 0.1);
+}
+
+.cta-switcher__tab--active {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-collection .cta-card,
+  .cta-collection .cta-doc {
+    transition: none;
+  }
+
+  .cta-collection .cta-card:hover,
+  .cta-collection .cta-card:focus-visible,
+  .cta-collection .cta-doc:hover,
+  .cta-collection .cta-doc:focus-visible {
+    transform: none;
+  }
+}
