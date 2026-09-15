@@ -150,11 +150,24 @@
   .atlas {
     display: grid;
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    align-items: start;
+    align-items: stretch;
     gap: var(--space-7);
+    /* Beide Spalten teilen sich eine feste Hoehe: die Karte steht still, die
+       Liste bekommt daneben ihren eigenen Scrollbereich. */
+    height: min(72vh, 46rem);
+    min-height: 28rem;
+  }
+
+  .atlas__map-pane {
+    display: flex;
+    align-items: center;
+    min-height: 0;
   }
 
   .atlas__map-sticky {
+    /* Die Spalte scrollt nicht mehr – sticky hat hier nichts mehr zu tun. */
+    position: static;
+    width: 100%;
     /* Auf Desktop steht die Karte frei in ihrer Spalte, ohne Deckfarbe. */
     background-color: transparent;
     padding-block: var(--space-5);
@@ -163,6 +176,31 @@
 
   .atlas__map {
     max-width: none;
+  }
+
+  .atlas__list {
+    height: 100%;
+    /* Ohne das setzt die Grid-Zelle die Mindesthoehe auf den Inhalt und der
+       Scrollbereich entsteht nie. */
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    /* Luft fuer die Scrollbar, damit sie nicht auf den Karten klebt. */
+    padding-inline-end: var(--space-3);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-neon) rgba(255, 255, 255, 0.18);
+  }
+
+  .atlas__list::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .atlas__list::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.18);
+  }
+
+  .atlas__list::-webkit-scrollbar-thumb {
+    background-color: var(--color-neon);
   }
 
   .atlas__map-caption {

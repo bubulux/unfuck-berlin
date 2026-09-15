@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
+import { useMediaQuery } from '@uidotdev/usehooks'
 import { BerlinMap } from '../../components/molecules/berlin-map'
 import { Icon } from '../../components/atoms/icon'
 import {
@@ -8,6 +9,9 @@ import {
   type OverviewDistrict,
 } from './overview-data'
 import './overview-atlas.css'
+
+/** Muss mit dem Desktop-Breakpoint in overview-atlas.css zusammenpassen. */
+const DESKTOP_QUERY = '(min-width: 900px)'
 
 /**
  * Ideation 2 – "Atlas". Die Karte bleibt stehen, die Liste laeuft daran vorbei.
@@ -22,6 +26,11 @@ export function OverviewAtlas() {
   /** Hover schlaegt die Scroll-Position, solange die Maus auf der Karte ist. */
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null)
   const rowRefs = useRef(new Map<string, HTMLLIElement>())
+  const listRef = useRef<HTMLOListElement>(null)
+
+  // Auf Desktop scrollt die Liste in sich selbst, waehrend die Karte steht.
+  // Darunter scrollt die ganze Seite. Beides braucht einen anderen Bezugsrahmen.
+  const isDesktop = useMediaQuery(DESKTOP_QUERY)
 
   const registerRow = useCallback((slug: string) => {
     return (node: HTMLLIElement | null) => {
@@ -50,7 +59,9 @@ export function OverviewAtlas() {
         setActiveSlug(best[0])
       },
       {
-        // Nur das mittlere Zehntel des Viewports zaehlt als "gerade dran".
+        // Auf Desktop ist die Liste selbst der Rahmen, sonst das Fenster.
+        root: isDesktop ? listRef.current : null,
+        // Nur das mittlere Zehntel zaehlt als "gerade dran".
         rootMargin: '-45% 0px -45% 0px',
         threshold: [0, 0.25, 0.5, 0.75, 1],
       },
@@ -58,13 +69,29 @@ export function OverviewAtlas() {
 
     for (const [, node] of nodes) observer.observe(node)
     return () => observer.disconnect()
-  }, [districts.length])
+  }, [districts.length, isDesktop])
 
   const scrollToDistrict = (slug: string) => {
     const node = rowRefs.current.get(slug)
     if (!node) return
     setActiveSlug(slug)
-    node.scrollIntoView({ behavior: 'smooth', block: 'center' })
+
+    const list = listRef.current
+    const scrolls = list && list.scrollHeight > list.clientHeight
+    if (!scrolls) {
+      node.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      return
+    }
+
+    // scrollIntoView wuerde zusaetzlich die ganze Seite verschieben. Hier soll
+    // sich nur die Liste bewegen, also die Zielposition selbst ausrechnen –
+    // ueber die Rechtecke, damit kein offsetParent dazwischenfunkt.
+    const offset = node.getBoundingClientRect().top - list.getBoundingClientRect().top
+    const centered = list.scrollTop + offset - (list.clientHeight - node.offsetHeight) / 2
+    list.scrollTo({
+      top: Math.max(0, Math.min(centered, list.scrollHeight - list.clientHeight)),
+      behavior: 'smooth',
+    })
   }
 
   const shownSlug = hoveredSlug ?? activeSlug
@@ -86,7 +113,7 @@ export function OverviewAtlas() {
         </div>
       </div>
 
-      <ol className="atlas__list">
+      <ol className="atlas__list" ref={listRef}>
         {districts.map((district, index) => (
           <AtlasRow
             key={district.slug}
