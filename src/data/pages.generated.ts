@@ -314,7 +314,7 @@ export const PAGES_CMS = [
         "headlineZeilen": [
           "Positionspapiere"
         ],
-        "headline_theme": "purple",
+        "headline_theme": "pink",
         "photo": null
       },
       {
@@ -330,6 +330,40 @@ export const PAGES_CMS = [
         "_type": "one_cta",
         "ctaHref": "/news/positionspapier-tempelhofer-feld",
         "ctaLabel": "Positionspapier: Tempelhofer Feld",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "4ae9e7684d85",
+        "_type": "headline",
+        "foto_originalFilename": null,
+        "headlineZeilen": [
+          "Wahlprüfsteine"
+        ],
+        "headline_theme": "green",
+        "photo": null
+      },
+      {
+        "_key": "983e523a342e",
+        "_type": "one_cta",
+        "ctaHref": "/news/wahlpruefsteine-lsdv-verband-queere-vielfalt-berlin-brandenburg-ev",
+        "ctaLabel": "LSVD Verband Queere Vielfalt Berlin-Brandenburg e. V.",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "0d717384de1a",
+        "_type": "one_cta",
+        "ctaHref": "/news/wahlpruefsteine-netzwerk-fahrradfreundliches-lichtenberg-und-adfc-lichtenberg",
+        "ctaLabel": "Netzwerk Fahrradfreundliches Lichtenberg + ADFC Lichtenberg",
+        "foto_originalFilename": null,
+        "photo": null
+      },
+      {
+        "_key": "e96bd4113633",
+        "_type": "one_cta",
+        "ctaHref": "/news/wahlpruefsteine-berliner-buendnis-nachhaltige-stadtentwicklung",
+        "ctaLabel": "Berliner Bündnis Nachhaltige Stadtentwicklung",
         "foto_originalFilename": null,
         "photo": null
       },
