@@ -126,6 +126,11 @@
   display: block;
   height: 170px;
   width: auto;
+  /* Die Karte ist so breit wie ihr breitestes Kind. Bei langen Berufsangaben
+     ist das die Beschriftung, nicht das Plakat – dann soll das Plakat in der
+     Karte mittig stehen statt links zu kleben. Ist das Plakat das Breiteste,
+     rechnen die Auto-Raender ohnehin zu Null. */
+  margin-inline: auto;
   border-radius: var(--radius-sm);
 }
 @media (min-width: 700px) {
