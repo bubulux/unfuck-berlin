@@ -7,35 +7,8 @@ export interface CtaItem {
 /** Welche Sorte Liste: viele Sprachfassungen oder wenige Dokumente. */
 export type CtaCollectionKind = 'sprachen' | 'dokumente'
 
-/** Die drei Entwuerfe, zwischen denen der Umschalter wechselt. */
-export type CtaVariant = 1 | 2 | 3
-
-export const CTA_VARIANT_LABELS: Record<CtaVariant, string> = {
-  1: 'Karten',
-  2: 'Liste',
-  3: 'Sticker',
-}
-
-/**
- * Der Standard fuer alles: die Liste. Neue Gruppen im CMS – etwa die
- * Wahlpruefsteine – landen ohne Zutun hier und sehen sofort richtig aus.
- */
-export const DEFAULT_CTA_VARIANT: CtaVariant = 2
-
-/**
- * Abweichungen vom Standard. Das Team hat fuer die Sprachfassungen unter
- * "Kurzwahlprogramme" die Karten gewaehlt; alles andere bleibt Liste.
- */
-export const CHOSEN_CTA_VARIANT: Partial<Record<CtaCollectionKind, CtaVariant>> = {
-  sprachen: 1,
-}
-
-export function ctaVariantFor(kind: CtaCollectionKind): CtaVariant {
-  return CHOSEN_CTA_VARIANT[kind] ?? DEFAULT_CTA_VARIANT
-}
-
 /** Flaggen sind Paare aus Regional-Indicator-Symbolen. */
-export const FLAG_PATTERN = /[\u{1F1E6}-\u{1F1FF}]{2}/u
+const FLAG_PATTERN = /[\u{1F1E6}-\u{1F1FF}]{2}/u
 
 /**
  * Sprachfassungen erkennt man an der Flagge im Label oder am Manifesto-Link.

@@ -10,9 +10,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import './styles.css'
 import SpitzenduoComposite from "../../components/organisms/spitzenduo-composite";
 import { marked } from "marked";
-import { OverviewKonstellation } from "./overview-konstellation";
 import { OverviewAtlas } from "./overview-atlas";
-import { OverviewKacheln } from "./overview-kacheln";
 import { BEZIRKE_SEITE_CMS } from "../../data/bezirke-seite.generated";
 
 export function RegionsPage() {
@@ -28,16 +26,7 @@ export function RegionsPage() {
     .filter(a => pathname.endsWith(`/${a.slug}`))
 
   if (!region_many.length) {
-    // Das Team hat sich fuer den Atlas entschieden – der liegt jetzt auf
-    // /bezirke. Die beiden anderen Entwuerfe bleiben vorerst unter /bezirke/2
-    // und /bezirke/3 erreichbar, falls noch jemand vergleichen will.
     const { photo_unten } = BEZIRKE_SEITE_CMS
-
-    const overview = pathname.endsWith("/2")
-      ? <OverviewKonstellation />
-      : pathname.endsWith("/3")
-        ? <OverviewKacheln />
-        : <OverviewAtlas />
 
     return (
       <PageLayout activePath="/bezirke" variant="purple">
@@ -61,7 +50,7 @@ export function RegionsPage() {
           </section>
 
           <div className="regions-overview">
-            {overview}
+            <OverviewAtlas />
           </div>
 
           {/* Abschlussbild unter der ganzen Uebersicht, gepflegt im Studio

@@ -43,13 +43,6 @@
   stroke-width: 2;
 }
 
-.district-outline {
-  display: block;
-  width: 100%;
-  height: auto;
-  color: inherit;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .berlin-map__district {
     transition: none;

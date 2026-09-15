@@ -1,12 +1,10 @@
 import { Link } from 'react-router'
 import { Icon } from '../../atoms/icon'
 import {
-  ctaVariantFor,
   parseDocument,
   parseLanguage,
   type CtaCollectionKind,
   type CtaItem,
-  type CtaVariant,
 } from './model'
 import './styles.css'
 
@@ -46,8 +44,6 @@ function CtaLink({
 export interface CtaCollectionProps {
   items: CtaItem[]
   kind: CtaCollectionKind
-  /** Ohne Angabe gilt der Entwurf fuer diese Sorte, per Default die Liste. */
-  variant?: CtaVariant
 }
 
 /**
@@ -55,30 +51,18 @@ export interface CtaCollectionProps {
  * Sammlung. Drei Entwuerfe, jeweils getrennt fuer Sprachfassungen und
  * Dokumente – die beiden Sorten tragen sehr unterschiedlich viel Inhalt.
  */
-export function CtaCollection({
-  items,
-  kind,
-  variant = ctaVariantFor(kind),
-}: CtaCollectionProps) {
+export function CtaCollection({ items, kind }: CtaCollectionProps) {
   if (!items.length) return null
 
-  const classes = [
-    'cta-collection',
-    `cta-collection--${kind}`,
-    `cta-collection--v${variant}`,
-  ].join(' ')
+  const classes = ['cta-collection', `cta-collection--${kind}`].join(' ')
 
   if (kind === 'sprachen') {
     return (
       <ul className={classes}>
-        {items.map((item, index) => {
+        {items.map((item) => {
           const { flag, name, code } = parseLanguage(item)
           return (
-            <li
-              key={item.key}
-              className="cta-collection__item"
-              data-swatch={index % 5}
-            >
+            <li key={item.key} className="cta-collection__item">
               <CtaLink
                 href={item.href}
                 className="cta-card"
@@ -106,11 +90,7 @@ export function CtaCollection({
       {items.map((item, index) => {
         const { eyebrow, topic } = parseDocument(item)
         return (
-          <li
-            key={item.key}
-            className="cta-collection__item"
-            data-swatch={index % 2}
-          >
+          <li key={item.key} className="cta-collection__item">
             <CtaLink href={item.href} className="cta-doc" ariaLabel={item.label}>
               <span className="cta-doc__index" aria-hidden="true">
                 {String(index + 1).padStart(2, '0')}
