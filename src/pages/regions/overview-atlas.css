@@ -91,6 +91,8 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--line-snug);
   text-wrap: balance;
+  /* Die Doppelnamen sollen am Bindestrich umbrechen statt herauszuragen. */
+  overflow-wrap: break-word;
 }
 
 .atlas__row-label {
@@ -121,14 +123,21 @@
 .atlas__row-faces {
   display: flex;
   align-self: start;
-  /* Die beiden Koepfe ueberlappen leicht – sie gehoeren als Duo zusammen. */
-  padding-inline-start: 0.75rem;
+  /* Nicht zusammenquetschen lassen – die Portraits geben die Breite vor. */
+  flex: none;
+  /* Die beiden Koepfe ueberlappen leicht – sie gehoeren als Duo zusammen.
+     Der Versatz waechst mit dem Portraet, sonst wirkt er bei grossen
+     Bubbles wie ein Zufall. */
+  padding-inline-start: 1.5rem;
 }
 
 .atlas__face {
-  width: 3rem;
-  height: 3rem;
-  margin-inline-start: -0.75rem;
+  /* Volle Groesse ab ca. 534px Viewport. Auf schmalen Telefonen etwas
+     kleiner, sonst bleiben der Textspalte keine 90px und lange Namen wie
+     "Charlottenburg-Wilmersdorf" passen nicht mehr. */
+  width: clamp(4rem, 18vw, 6rem);
+  height: clamp(4rem, 18vw, 6rem);
+  margin-inline-start: -1.5rem;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--color-white);
@@ -228,8 +237,8 @@
   }
 
   .atlas__face {
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height: 8rem;
   }
 
   .atlas__row-link {
