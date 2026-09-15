@@ -11,15 +11,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:08:35Z",
         "_id": "b89e86a4-15ca-4fd3-b1fb-337ae4e604c5",
         "_originalId": "b89e86a4-15ca-4fd3-b1fb-337ae4e604c5",
-        "_rev": "oqzgrKGMIxFMreVMC4HqMW",
+        "_rev": "gSD2EG7QiN9E3Tu6nMnTrJ",
         "_system": {
           "base": {
             "id": "b89e86a4-15ca-4fd3-b1fb-337ae4e604c5",
-            "rev": "jITbevOCTIorBgoUCU40UK"
+            "rev": "ZIuquwn7xL9POL93TtmfVF"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:57:01Z",
+        "_updatedAt": "2026-08-17T16:21:55Z",
         "bezirk": "09 Treptow-Köpenick",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg",
         "foto2": {
@@ -32,7 +32,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f232cf1c9d7eca5a366d82267992c71037967d2-1920x2885.jpg",
         "foto_originalFilename": "PIA_VOLTZ_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "PIA_VOLTZ_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Meine Herzensthemen sind: Ein starkes Berlin als \"Hauptstadt\" Europas (v.a. Wirtschaft, Bildung, Verwaltung, Innovation)  Ein lebenswertes Berlin für alle (! - auch Tiere)  Ein sauberes, sicheres und grünes Berlin*\n\n*Ich bin 2021 als Quereinsteigerin in mein politisches Mandat gestartet und habe in den letzten Jahren durch viel „Learning by Doing“ eine echte Leidenschaft für Politik entwickelt. Meine politische Heimat habe ich bei Volt gefunden – wegen der Menschen: smart, pragmatisch, offen und lösungsorientiert. Volt steht für eine differenzierte Mitte der Gesellschaft, die wir heute dringender denn je brauchen.  Mein kurzfristiges Ziel: Volt ins Abgeordnetenhaus. Mein langfristiges Ziel: ein starkes Berlin für ein starkes Europa.*\n\n**Beruf**\n\nIn den letzten Jahren habe ich als Gründerin im Non-Profit- und For-Profit-Bereich gearbeitet. Seit 2021 habe ich zudem ein politisches Mandat. Und neben all dem bin ich auch Mutter – eine Perspektive, die meinen Blick auf Politik und gesellschaftliche Verantwortung stark prägt.\n\n**Biographie**\n\nGeboren in Bayern, viel national und international herum gekommen. Seit 2019 stolze Wahlberlinerin. Berufliche Stationen u.a. in Konzern und Beratung. Studium der Psychologie sowie MBA in General Management.   \n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/pia.voltz.volt/).",
         "name": "Pia Voltz",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/b339515a3532aacfef0265fa25368f59c281b1d8-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -43,15 +42,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:08:52Z",
         "_id": "2acf5c60-42c6-462c-bfda-ab7b52e540f3",
         "_originalId": "2acf5c60-42c6-462c-bfda-ab7b52e540f3",
-        "_rev": "VOfSO31kbJ3qiUlVmRhZqo",
+        "_rev": "TZSo9XvhWf3aAVsIk7Qw0b",
         "_system": {
           "base": {
             "id": "2acf5c60-42c6-462c-bfda-ab7b52e540f3",
-            "rev": "jITbevOCTIorBgoUCU3dmY"
+            "rev": "84yru1YmbtjxTzqq0jMGXk"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:56:54Z",
+        "_updatedAt": "2026-08-17T16:21:41Z",
         "bezirk": "09 Treptow-Köpenick",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg",
         "foto2": {
@@ -64,7 +63,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6280656fc935c097635b778e929f97c9dff34b9e-1920x2885.jpg",
         "foto_originalFilename": "HENDRIK_SCHÄFER_PORTRAIT_4x5_BERLIN2026 Kopie_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "HENDRIK_SCHÄFER_FULL_BODY_BERLIN2026 Kopie_©Evelin_Frerk.jpg",
-        "md_content": "*Ich möchte, dass Zukunft für Menschen im Alltag spürbar wird: in guten Schulen, einer verständlichen digitalen Verwaltung, konsequentem Klima- und Umweltschutz und einer Politik, die nachhaltig handelt, statt Probleme nur zu verwalten.*\n\n*Ich engagiere mich bei Volt, weil ich eine Politik will, die pragmatisch, europäisch und zukunftsorientiert denkt. Berlin hat nicht zu wenig Ideen, sondern zu oft unklare Zuständigkeiten, lange Verfahren und zu wenig Umsetzung.  Für Treptow-Köpenick setze ich mich für verlässliche Mobilität, sichere Schulwege, starke Bildungs-, Jugend- und Sportangebote, bezahlbares Wohnen mit passender Infrastruktur sowie Umwelt- und Klimaschutz ein. Digitalisierung soll Verwaltung verständlicher, schneller und transparenter machen.  Mein Ziel ist ein Bezirk, der Wachstum besser steuert, Menschen beteiligt und Fortschritt sichtbar macht. Südost kann Zukunft, wenn wir klarer planen und konsequenter umsetzen.*\n\n**Beruf**\n\nIch bin Unternehmer im technischen Handel für Schienenfahrzeugtechnik. Dabei organisiere ich die Beschaffung technischer Ersatzteile für Bahnunternehmen und trage Verantwortung für Kunden, Lieferanten, Prozesse, Finanzen, Digitalisierung und Unternehmensentwicklung.\n\n**Biographie**\n\nIch komme nicht aus einer klassischen Politiklaufbahn. Mein Weg begann in der Hotellerie: im F&B-Bereich mit Controlling, Warenwirtschaft und Einkauf. Dort lernte ich, genau hinzusehen, Prioritäten zu setzen und unter Druck ruhig zu bleiben.  Später führte mich mein Beruf in den internationalen Schiffsbetrieb. Über Monate arbeitete ich mit Menschen aus mehr als 20 Nationen und Kulturen zusammen. Diese Zeit prägte mich: klare Kommunikation, Respekt, Ausdauer und Verlässlichkeit. Vielfalt ist für mich gelebte Zusammenarbeit.  Nach meiner Weiterbildung zum staatlich geprüften Betriebswirt kamen Prozesssteuerung und Selbstständigkeit dazu. Diesen Blick bringe ich politisch ein: Verantwortung übernehmen und Lösungen organisieren, die ankommen.\n\n**Weitere Infos auf**\n[LinkedIn](https://www.linkedin.com/in/hendrikschaefer).",
         "name": "Hendrik Schaefer",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/aa03d2d083fb3110fc2c3ec6adda5bd955c7d9b8-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -77,40 +75,20 @@ export const REGIONS_CMS = [
       {
         "_key": "79ede4f4c3de",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Treptow-Köpenick"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "03c382ec0baf",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Von Alt-Treptow bis Schmöckwitz, von Schöneweide bis Müggelheim: In Treptow-Köpenick leben wir zwischen Wasser, Grün, Wissenschaft, Kultur, Industrie und starken Kiezen. Damit unser Bezirk lebenswert bleibt, umfasst unser Plan:\n\n- **Mobilität, die den Alltag entlastet:** Ob Elsenbrücke, Altglienicke, Müggelheim oder Schmöckwitz: Menschen müssen verlässlich durch den Bezirk und Richtung Innenstadt kommen. Wir setzen uns für zuverlässigere Busse, bessere Anschlüsse, kluge Ampelschaltungen sowie durchgängige Rad- und Fußwege ein.\n- **Wohnungsbau mit Infrastruktur:** Neue Quartiere wie Späthsfelde dürfen nicht ohne passende Infrastruktur entstehen. Wir denken deshalb Bus, Tram, Kita, Schule, Grünflächen und Nahversorgung von Anfang an mit.\n- **Wirtschaft und Zukunftsort Südost stärken:** Adlershof, Schöneweide und die HTW zeigen, wie viel Potenzial im Bezirk steckt: für Handwerk, Handel, Kultur und Gewerbe. Wir wollen Leerstand aktiv nutzen, lokale Unternehmen besser unterstützen und Wirtschaft, Ausbildung und Wissenschaft stärker vernetzen.\n- **Jugend, Bildung und Sport stärken:** Jugendfreizeiteinrichtungen, Sportflächen, Kultur- und Bildungsangebote sind keine Extras. Wir wollen sie als Grundlage für Teilhabe, Zusammenhalt und starke Kieze mit angemessenem Budget ausstatten. \n- **Wasser, Grün und sichere Wege zugänglich halten:** Müggelsee, Dahme, Spree und unsere Grünräume machen Treptow-Köpenick besonders. Wir sichern öffentliche Zugänge, stärken Barrierefreiheit und wollen Lücken im Wege- und Ufernetz schließen.",
-        "photo": null
+        "md_content": "Von Alt-Treptow bis Schmöckwitz, von Schöneweide bis Müggelheim: In Treptow-Köpenick leben wir zwischen Wasser, Grün, Wissenschaft, Kultur, Industrie und starken Kiezen. Damit unser Bezirk lebenswert bleibt, umfasst unser Plan:\n\n- **Mobilität, die den Alltag entlastet:** Ob Elsenbrücke, Altglienicke, Müggelheim oder Schmöckwitz: Menschen müssen verlässlich durch den Bezirk und Richtung Innenstadt kommen. Wir setzen uns für zuverlässigere Busse, bessere Anschlüsse, kluge Ampelschaltungen sowie durchgängige Rad- und Fußwege ein.\n- **Wohnungsbau mit Infrastruktur:** Neue Quartiere wie Späthsfelde dürfen nicht ohne passende Infrastruktur entstehen. Wir denken deshalb Bus, Tram, Kita, Schule, Grünflächen und Nahversorgung von Anfang an mit.\n- **Wirtschaft und Zukunftsort Südost stärken:** Adlershof, Schöneweide und die HTW zeigen, wie viel Potenzial im Bezirk steckt: für Handwerk, Handel, Kultur und Gewerbe. Wir wollen Leerstand aktiv nutzen, lokale Unternehmen besser unterstützen und Wirtschaft, Ausbildung und Wissenschaft stärker vernetzen.\n- **Jugend, Bildung und Sport stärken:** Jugendfreizeiteinrichtungen, Sportflächen, Kultur- und Bildungsangebote sind keine Extras. Wir wollen sie als Grundlage für Teilhabe, Zusammenhalt und starke Kieze mit angemessenem Budget ausstatten. \n- **Wasser, Grün und sichere Wege zugänglich halten:** Müggelsee, Dahme, Spree und unsere Grünräume machen Treptow-Köpenick besonders. Wir sichern öffentliche Zugänge, stärken Barrierefreiheit und wollen Lücken im Wege- und Ufernetz schließen."
       },
       {
         "_key": "5e4e5b78cf1a",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_treko.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "681631100435",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Treptow-Köpenick: Julia Weidner, Hendrik Schäfer, Pia Volz, Marie Louise Hägler, Julian Heyn",
-        "foto_originalFilename": "TreKÖ.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/fa52e1c8c89999f5c55c68b002d595cd03c5baac-3840x2160.png"
-      },
-      {
-        "_key": "2d65e576bbd5",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Treptow-Köpenick: Philipp Hanschke (Treptow-Köpenick 6), Hendrik Schäfer (Treptow-Köpenick 2), Pia Volz (Treptow-Köpenick 1), Marie Louise Hägler (Treptow-Köpenick 3), Julian Heyn (Treptow-Köpenick 7)",
-        "foto_originalFilename": "AGH D TreKÖ.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/c9d0cf91054c4656cb2599b35671c4bb947830b1-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -123,15 +101,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:59:07Z",
         "_id": "996bc165-dfb2-4d01-ab72-49e889e7d632",
         "_originalId": "996bc165-dfb2-4d01-ab72-49e889e7d632",
-        "_rev": "oqzgrKGMIxFMreVMC4HsCV",
+        "_rev": "56Aw9PqdKBoWxRYUC03N1f",
         "_system": {
           "base": {
             "id": "996bc165-dfb2-4d01-ab72-49e889e7d632",
-            "rev": "VOfSO31kbJ3qiUlVmRhEB7"
+            "rev": "84yru1YmbtjxTzqq0jLX40"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:57:42Z",
+        "_updatedAt": "2026-08-17T16:23:42Z",
         "bezirk": "07 Tempelhof-Schöneberg",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg",
         "foto2": {
@@ -144,7 +122,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/788e63b1954e9e495d8e917f6e3bcb85baeb6416-1920x2885.jpg",
         "foto_originalFilename": "NIKLAS_KÜHNE_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "NIKLAS_KÜHNE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Ich setze mich für die Erhaltung von Freizeitangeboten für Kinder und Jugendliche ein und möchte die Bezirkspolitik für die Menschen im Bezirk nahbarer machen.*\n\n*Ich glaube daran, dass man mit guten Ideen und Vorhaben und einer konsequenten Umsetzung die Zukunft positiv gestalten kann, das Leben für alle Menschen in Berlin verbessern kann und populistischen und extremistischen Kräften damit Nährboden und Zulauf nehmen kann. Ich möchte vor allem die Teilhabe von Kindern und Jugendlichen im verbessern, mich dafür einsetzen, dass Freizeitangebote erhalten bleiben und Politik durch offene und proaktive Kommunikation und Teilhabemöglichkeiten den Menschen näher bringen und Vertrauen stärken.*\n\n**Beruf**\n\nIch bin im Controlling für Anlagenprojekte bei der Berliner Stadtreinigung (BSR) tätig. \n\n**Biographie**\n\nIch bin in Berlin geboren, aufgewachsen und zur Schule gegangen. Ich habe an der Hochschule für Wirtschaft und Recht (HWR) Betriebswirtschaft studiert und arbeite seit 2019 bei der Berliner Stadtreinigung (BSR). 2023 bin ich Volt beigetreten und war seitdem als Bezirkslead für Temepelhof-Schöneberg tätig, anschließend Schatzmeister und mittlerweile Finance Lead von Volt Berlin.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/niklaskuehne/) und [LinkedIn](https://www.linkedin.com/in/niklas-k%C3%BChne-7b1614201/).",
         "name": "Niklas Kühne",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/251dcbe50a438efb5b49a17f553c1b2b96099dba-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -155,15 +132,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:59:24Z",
         "_id": "83cb1643-fec6-40ad-a7ab-aebf25b7a453",
         "_originalId": "83cb1643-fec6-40ad-a7ab-aebf25b7a453",
-        "_rev": "VOfSO31kbJ3qiUlVmRhd6B",
+        "_rev": "gSD2EG7QiN9E3Tu6nMnhKc",
         "_system": {
           "base": {
             "id": "83cb1643-fec6-40ad-a7ab-aebf25b7a453",
-            "rev": "VOfSO31kbJ3qiUlVmRh5qs"
+            "rev": "84yru1YmbtjxTzqq0jLYLM"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:57:48Z",
+        "_updatedAt": "2026-08-17T16:23:28Z",
         "bezirk": "07 Tempelhof-Schöneberg",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg",
         "foto2": {
@@ -176,7 +153,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/5274086384e13f361bf746f07e8fbf1a5972b479-1920x2879.jpg",
         "foto_originalFilename": "RAHEL_DEMANT_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "RAHEL_DEMANT_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
-        "md_content": "*Herzensthemen: Digitalisierung, Fachkräftemangel, Migration*\n\n*Berlin, hat ein riesiges Potenzial, aber steht sich selbst im Weg. Zu langsam, zu zerfasert, zu wenig strategisch. Ich bin bei Volt, weil Berlin eine europäische Metropole sein sollte, nicht nur Verwaltungshauptstadt mit Dauerkrise.  Meine Motivation für Berlin:  Verwaltung radikal digitalisieren.  Wohnungsbau beschleunigen statt blockieren.  Berlin als Tech- und Innovationshub stärken.  Klima- und Mobilitätspolitik pragmatisch lösen, nicht ideologisch.  Ich will, dass Berlin wieder funktioniert, und gleichzeitig Vorbild wird.*\n\n**Beruf**\n\nIch bin Gruenderin einer Akademie. Wir veranstalten Hackathons auf der ganzen Welt und unterrichten KI und XR Entwicklung.\n\n**Biographie**\n\nGeboren und aufgewachsen bin ich in Bonn, der früheren Bundeshauptstadt. Durch ein stark internationales Schulumfeld und die politische Geschichte der Stadt bin ich international gepraegt und habe dann Internationale Beziehungen mit Fokus auf Europapolitik, in Frankreich und der Schweiz studiert.  Erste Berufserfahrung habe ich bei der IHK in Montreal gesammelt. Dort habe ich gelernt, wie Deutschland im Ausland vertreten wird, wirtschaftlich, politisch und kulturell.   In Berlin habe ich 2020 eine Akademie gegründet. Wir bilden im Bereich KI und XR aus. Engagement: Gründung des Startups Unite Dinner, Regelmäßiges Fundraising für Kriegsopfer in Palästina. Politisches Engagement bei Volt Europa: WhatsApp- und LinkedIn-Lead.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/raheldemant/) und [LinkedIn](https://www.linkedin.com/in/raheldemant/).",
         "name": "Rahel Demant",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/0dbf16f38cc2e896ae341a37e7f2dd1e6efe9dab-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -189,40 +165,20 @@ export const REGIONS_CMS = [
       {
         "_key": "c002b568a8a6",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Tempelhof-Schöneberg"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "416c0ed1d09c",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Tempelhof-Schöneberg ist Regenbogenkiez und Flugfeld, Kiezkultur und ruhige Vororte, alles in einem Bezirk. Für Dich ist es einfach zu Hause: in Schöneberg, Friedenau, Tempelhof, Mariendorf, Marienfelde und Lichtenrade. Hier ist unser Plan dafür.\n\n- **Sicherer Kiez:** Angriffe auf queere Menschen im Nollendorfkiez sind keine Randnotiz, sondern ein Alarmsignal. Wir setzen uns für ein echtes Schutzkonzept ein, damit der Regenbogenkiez ein sicherer Ort bleibt.\n- **Baustellen:** Eine Baustelle, die ihr Enddatum mehrfach verschiebt, wie am U-Bahnhof Ullsteinstraße, ist kein Ausnahmefall. Wir priorisieren den Bau, statt den Verkehr zu blockieren und Fußgänger*innen und Radfahrende dauerhaft auf eine Spur zu quetschen.\n- **Leerstand:** Leerstehende Wohnungen wie in der Ansbacher Straße bleiben ungenutzt, während Wohnraum fehlt. Wir identifizieren Leerstand konsequent und sorgen dafür, dass er wieder bewohnbar wird.\n- **Sportplätze:** Zugesperrte Sportplätze hinter Zäunen sind kein Einzelfall im Bezirk, sondern die Regel. Wir öffnen sie wieder für Kinder, Jugendliche und alle, die einfach Sport treiben wollen.\n- **Bezirkspolitik:** Klingt langweilig? Wir machen sie sexy! Sie soll durch eine moderne, interaktive Plattform und regelmäßige Bürger*innenräte lebendiger und transparenter werden, um das Vertrauen in die Lokalpolitik zu stärken.",
-        "photo": null
+        "md_content": "Tempelhof-Schöneberg ist Regenbogenkiez und Flugfeld, Kiezkultur und ruhige Vororte, alles in einem Bezirk. Für Dich ist es einfach zu Hause: in Schöneberg, Friedenau, Tempelhof, Mariendorf, Marienfelde und Lichtenrade. Hier ist unser Plan dafür.\n\n- **Sicherer Kiez:** Angriffe auf queere Menschen im Nollendorfkiez sind keine Randnotiz, sondern ein Alarmsignal. Wir setzen uns für ein echtes Schutzkonzept ein, damit der Regenbogenkiez ein sicherer Ort bleibt.\n- **Baustellen:** Eine Baustelle, die ihr Enddatum mehrfach verschiebt, wie am U-Bahnhof Ullsteinstraße, ist kein Ausnahmefall. Wir priorisieren den Bau, statt den Verkehr zu blockieren und Fußgänger*innen und Radfahrende dauerhaft auf eine Spur zu quetschen.\n- **Leerstand:** Leerstehende Wohnungen wie in der Ansbacher Straße bleiben ungenutzt, während Wohnraum fehlt. Wir identifizieren Leerstand konsequent und sorgen dafür, dass er wieder bewohnbar wird.\n- **Sportplätze:** Zugesperrte Sportplätze hinter Zäunen sind kein Einzelfall im Bezirk, sondern die Regel. Wir öffnen sie wieder für Kinder, Jugendliche und alle, die einfach Sport treiben wollen.\n- **Bezirkspolitik:** Klingt langweilig? Wir machen sie sexy! Sie soll durch eine moderne, interaktive Plattform und regelmäßige Bürger*innenräte lebendiger und transparenter werden, um das Vertrauen in die Lokalpolitik zu stärken."
       },
       {
         "_key": "217d2bd92496",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_tscho.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "0ee99beac899",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Tempelhof-Schöneberg: Faranak Schneider, Anke Müller, Niklas Kühne, Laura Schmid, Jan Ehlting, Rahel Demant",
-        "foto_originalFilename": "TempelSchön.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/bd755939ddbd085b85b0ac47958c46216bc2005c-3840x2160.png"
-      },
-      {
-        "_key": "82bdafb31566",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Tempelhof-Schöneberg: Faranak Schneider (Tempelhof-Schöneberg 3), Alain Cerny (Tempelhof-Schöneberg 2), Niklas Kühne (Tempelhof-Schöneberg 5), Laura Schmid (Tempelhof-Schöneberg 4), Jan Ehlting (Tempelhof-Schöneberg 6), Sebastian Haldenwang (Tempelhof-Schöneberg 7), Rahel Demant (Tempelhof-Schöneberg 1)",
-        "foto_originalFilename": "AGH D TempelSchön.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/8b1c5afb0d014acafb3582d3d6dfdad3a25e7d03-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -235,15 +191,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:05:59Z",
         "_id": "b48868f9-727f-4b1c-80ab-f1a2d31295f5",
         "_originalId": "b48868f9-727f-4b1c-80ab-f1a2d31295f5",
-        "_rev": "oqzgrKGMIxFMreVMC4Gu1q",
+        "_rev": "TZSo9XvhWf3aAVsIk7R16b",
         "_system": {
           "base": {
             "id": "b48868f9-727f-4b1c-80ab-f1a2d31295f5",
-            "rev": "TZSo9XvhWf3aAVsIk7R16b"
+            "rev": "ZIuquwn7xL9POL93TtmTZP"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:42:17Z",
+        "_updatedAt": "2026-08-17T16:22:20Z",
         "bezirk": "06 Steglitz-Zehlendorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg",
         "foto2": {
@@ -256,7 +212,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/55e4b47d4bbb2c7a977df81bd247ad75d90ef4d1-2732x4096.jpg",
         "foto_originalFilename": "SUSANN_KÄMMER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "SUSANN_KÄMMER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
-        "md_content": "*Die Zukunft der nächsten Generationen liegt mir am Herzen. Daher setze ich mich für gute Bildung genauso ein wie für sichere Radwege und Schulstraßen. Auch bezahlbares Wohnen und Klimaschutz sind wichtige Themen für junge Familien.*\n\n*Eine Farbe für viele Farben. Das Lila von Volt ist die Farbe der politischen Mitte für mich. Konstruktive und pragmatische Lösungen aus ganz Europa anstelle von Grabenkämpfen entlang des Parteikolorits. Digitale und transparente Lösungen für schneller und effektive Prozesse ohne höheren Personaleinsatz - das ist der politische Weg, den Volt mit gestalten wird.*\n\n**Beruf**\n\nRechtsanwältin, Mediatorin, Kommunikationsberaterin, Prokuristin an einer Bildungseinrichtung, 3-fache Mutter und bald Großmutter. Ich bringe aus vielen Bereichen Wissen und Erfahrung mit.\n\n**Biographie**\n\nIch lebe in Berlin länger als in jeder anderen Stadt. Aufgewachsen in Braunschweig, bin ich nach meinem Studium der Rechtswissenschaften in Würzburg nach Berlin gezogen. Hier habe ich promoviert, Familie gegründet und meine Wahlheimat gefunden.",
         "name": "Susann Kämmer",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/2cbe433f3c1b1361ba0c80225a62763b91caac76-2485x3106.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -267,15 +222,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:05:44Z",
         "_id": "a5d4e987-42ce-4f59-a3c9-66b9712355f1",
         "_originalId": "a5d4e987-42ce-4f59-a3c9-66b9712355f1",
-        "_rev": "jITbevOCTIorBgoUCU5WTg",
+        "_rev": "gSD2EG7QiN9E3Tu6nMnbf9",
         "_system": {
           "base": {
             "id": "a5d4e987-42ce-4f59-a3c9-66b9712355f1",
-            "rev": "jITbevOCTIorBgoUCU4dKG"
+            "rev": "84yru1YmbtjxTzqq0jM5PM"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:57:12Z",
+        "_updatedAt": "2026-08-17T16:22:32Z",
         "bezirk": "06 Steglitz-Zehlendorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg",
         "foto2": {
@@ -288,7 +243,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/54a95033245c4888612e787b90e1cbc19b8edb54-1920x2885.jpg",
         "foto_originalFilename": "INGO_PARTEY_PORTRAIT_BERLIN2026 Kopie_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "INGO_PARTEY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Ich wünsche mir eine Politik, die nicht berechnend einzelne Klientelen adressiert, sondern alle Menschen in ihren individuellen Lebenssituationen.*\n\n*Unsere Demokratie ist gerade in einer schwierigen Phase. Mein Ziel ist es, mitzuhelfen, dass die Menschen wieder mehr Vertrauen in die Demokratie haben.*\n\n**Beruf**\n\nIch habe vor allem als Technologieberater, Projektmanager und zuletzt Manager in der IT-Beratung gearbeitet.\n\n**Biographie**\n\nIch bin in West-Berlin in der Zeit des Kalten Kriegs geboren und aufgewachsen. Kurz nach dem Mauerfall habe ich dann aber in einer ehemaligen kommunalen Wohnungsverwaltung der DDR im Prenzlauer Berg gearbeitet, so dass ich Berlin aus sehr vielen Perspektiven kenne.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/ingopartey) und [LinkedIn](https://www.linkedin.com/in/ingo-partey-71b26a).",
         "name": "Ingo Partey",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/ca0aec7d3ae303336ce13e5e6fc23a05665ebf8a-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -301,40 +255,20 @@ export const REGIONS_CMS = [
       {
         "_key": "30b36736efac",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Steglitz-Zehlendorf"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "0c91a45ad63f",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Steglitz-Zehlendorf hat das höchste Haushaltsnettoeinkommen Berlins, und trotzdem marode Schulen und Bauruinen als Wahrzeichen. Für Dich ist es einfach zuhause, in Steglitz, Lichterfelde, Lankwitz, Zehlendorf, Dahlem, Nikolassee, Wannsee und Schlachtensee. Hier ist unser Plan dafür.\n\n- **Verwaltung, die liefert:** Fördermittel verfallen, weil Personal fehlt, um sie abzurufen. Das ist kein Geldproblem, sondern ein Organisationsproblem. Nach skandinavischem Vorbild bauen wir Hierarchien ab und schaffen eine Verwaltung, die tatsächlich handelt.\n- **Drogenhandel neben dem Spielplatz:** Offener Drogenhandel direkt neben Kinderspielplätzen, wie im Charkiw-Park, ist kein Kavaliersdelikt. Wir sorgen für koordinierte Polizeipräsenz und echte Prävention, statt beide Augen zuzudrücken.\n- **Leerstand:** Traditionsgeschäfte, die schließen, und Ketten, die abwandern, etwa rund um die Schloßstraße, sind kein Naturgesetz. Mit datenbasierten Nutzungskonzepten und kreativen Zwischennutzungen verhindern wir, dass aus Einkaufsstraßen Leerstandsmeilen werden.\n- **Sichere Schulwege:** Kinder und Bring-Verkehr auf derselben Fläche. Das ist an vielen Grundschulen tägliches Risiko statt Ausnahme. Wir richten Schulstraßen ein und setzen Tempo 30 durch, wo Schulen an Hauptstraßen liegen.\n- **Bauruinen beenden:** Ein jahrzehntelanger Streit zwischen Senat und Bezirk lässt Orte wie das Klinikgelände Heckeshorn einfach verfallen. Das ist kein Einzelfall, sondern Symptom fehlender Entscheidungsfähigkeit. Wir schaffen Strukturen, die endlich Nutzungskonzepte ermöglichen, statt Grundstücke der Natur zu überlassen.",
-        "photo": null
+        "md_content": "Steglitz-Zehlendorf hat das höchste Haushaltsnettoeinkommen Berlins, und trotzdem marode Schulen und Bauruinen als Wahrzeichen. Für Dich ist es einfach zuhause, in Steglitz, Lichterfelde, Lankwitz, Zehlendorf, Dahlem, Nikolassee, Wannsee und Schlachtensee. Hier ist unser Plan dafür.\n\n- **Verwaltung, die liefert:** Fördermittel verfallen, weil Personal fehlt, um sie abzurufen. Das ist kein Geldproblem, sondern ein Organisationsproblem. Nach skandinavischem Vorbild bauen wir Hierarchien ab und schaffen eine Verwaltung, die tatsächlich handelt.\n- **Drogenhandel neben dem Spielplatz:** Offener Drogenhandel direkt neben Kinderspielplätzen, wie im Charkiw-Park, ist kein Kavaliersdelikt. Wir sorgen für koordinierte Polizeipräsenz und echte Prävention, statt beide Augen zuzudrücken.\n- **Leerstand:** Traditionsgeschäfte, die schließen, und Ketten, die abwandern, etwa rund um die Schloßstraße, sind kein Naturgesetz. Mit datenbasierten Nutzungskonzepten und kreativen Zwischennutzungen verhindern wir, dass aus Einkaufsstraßen Leerstandsmeilen werden.\n- **Sichere Schulwege:** Kinder und Bring-Verkehr auf derselben Fläche. Das ist an vielen Grundschulen tägliches Risiko statt Ausnahme. Wir richten Schulstraßen ein und setzen Tempo 30 durch, wo Schulen an Hauptstraßen liegen.\n- **Bauruinen beenden:** Ein jahrzehntelanger Streit zwischen Senat und Bezirk lässt Orte wie das Klinikgelände Heckeshorn einfach verfallen. Das ist kein Einzelfall, sondern Symptom fehlender Entscheidungsfähigkeit. Wir schaffen Strukturen, die endlich Nutzungskonzepte ermöglichen, statt Grundstücke der Natur zu überlassen."
       },
       {
         "_key": "bd6ca0a3359e",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_ste-ze.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "c3d91123de8b",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Steglitz-Zehlendorf: Helene Nitsche, Susann Kämmer, Ingo Partey, Ludwig von Jagow, Ole Jendis, Inga Rösler",
-        "foto_originalFilename": "Steglitz-Zehlendorf.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/fcaa76255d8d865987bbd0070474f56ed5e7d8cc-3840x2160.png"
-      },
-      {
-        "_key": "353e052d61d5",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Steglitz-Zehlendorf: Susann Kämmer (Steglitz-Zehlendorf 6), Ingo Partey (Steglitz-Zehlendorf 3), Ludwig von Jagow (Steglitz-Zehlendorf 7), Ole Jendis (Steglitz-Zehlendorf 4)",
-        "foto_originalFilename": "AGH D Steglitz-Zehlendorf & X-Berg.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/18bc50dcf16c017661e552622510cf6cb8f47531-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -346,16 +280,16 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:16:14Z",
         "_id": "a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
-        "_originalId": "drafts.a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
-        "_rev": "818a2a0c-e42f-4c85-9543-0cd4ab04846b",
+        "_originalId": "a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
+        "_rev": "TZSo9XvhWf3aAVsIk7QbD7",
         "_system": {
           "base": {
             "id": "a5947e0d-10e9-4b8b-bb3a-5edfdcccc2e1",
-            "rev": "TZSo9XvhWf3aAVsIk7QbD7"
+            "rev": "ZIuquwn7xL9POL93TtnHA5"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:27:31Z",
+        "_updatedAt": "2026-08-17T16:19:40Z",
         "bezirk": "05 Spandau",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg",
         "foto2": {
@@ -369,7 +303,6 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "HELMUT_SCHARFENORT_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "HELMUT_SCHARFENORT_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Helmut Scharfenort",
-        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/5433a702d59406e92c01eba1352ab6eadf5fe1ca-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/ffefb12b587b52e1ed9c3193251bae2b6376d47c-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -379,15 +312,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:16:29Z",
         "_id": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
         "_originalId": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
-        "_rev": "oqzgrKGMIxFMreVMC4HjM9",
+        "_rev": "TZSo9XvhWf3aAVsIk7RwZF",
         "_system": {
           "base": {
             "id": "67d4508d-8cbb-4e79-826c-f31e582a8ae2",
-            "rev": "VOfSO31kbJ3qiUlVmRcf4t"
+            "rev": "U74tcxucQVTMOGRTVgmJF3"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:54:47Z",
+        "_updatedAt": "2026-08-17T16:33:56Z",
         "bezirk": "05 Spandau",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg",
         "foto2": {
@@ -400,7 +333,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/353e31fb30452dbe6edbdf09ff95de6a46f02f7a-1920x2885.jpg",
         "foto_originalFilename": "DANINA_SCHWARM_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "DANINA_SCHWARM_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Mein Herzensthema ist Arbeit: Menschen schnell in gute Jobs bringen, damit sich Leistung lohnt und Integration gelingt. Arbeit schafft Chancen, stärkt Teilhabe und gibt Menschen echte Selbstbestimmung.*\n\n*Ich engagiere mich politisch, weil Freiheit und Menschenrechte keine Selbstverständlichkeit sind. Volt ist für mich die richtige politische Heimat, weil wir der mutige, progressive und europäische Gegenentwurf zu Stillstand und Spaltung sind. Und weil es dringend nötig ist der politischen Mitte eine positive Zukunftsvision und pragmatische Antworten anzubieten. Meine großen Ziele: -        Fachkräfte gewinnen & Integration durch Arbeit stärken: Menschen, die bereits hier sind, müssen schnell und unkompliziert in Arbeit kommen – denn Arbeit ist die beste Integrationsstrategie. Dafür stehe ich. -        Die Rahmenbedingungen für eine starke, werteorientierte Wirtschaft schaffen, die  Jobs schützt, Innovation fördert und unsere Lebensqualität sichert. -        Volt über die 5%-Hürde bringen! -        Eine neue politische Kultur prägen: Politik soll wieder mutig, ehrlich und nah an den Menschen sein – transparent, verbindlich und lösungsorientiert.*\n\n**Beruf**\n\nIch bin Geschäftsführerin einer Personalberatung. Mein Ziel ist es, Menschen und Organisationen zusammenzubringen. Wir vermitteln Fach- und Führungskräfte im Rahmen der Personalvermittlung und des Interim-Managements. Außerdem sind wir auf das Outsourcing von Recruiting spezialisiert.\n\n**Biographie**\n\nBerlinerin, Unternehmerin, Mutter – ich will ein mutiges, modernes und europäisches Berlin, das Vielfalt lebt und Zukunft gestaltet.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/danina_schwarm/) und [LinkedIn](https://www.linkedin.com/in/danina-margit-schwarm-419718128/).",
         "name": "Danina Schwarm",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/703cb6d4c2f0bb6ce86ae0eede77480d70adae18-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -413,40 +345,20 @@ export const REGIONS_CMS = [
       {
         "_key": "1eb77f12866c",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Spandau"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "47d0963d94e5",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Spandau ist mehr als ein Bezirk. Es ist unser Zuhause. Ob Haselhorst, Siemensstadt, Staaken, Gatow, Kladow, Hakenfelde oder Falkenhagener Feld: Wir haben einen klaren Plan.\n\n- **Nahverkehr:** Die Siemensbahn muss zu einer echten Anbindung von Siemensstadt und Gartenfeld werden. Wir setzen uns für eine verlässliche Verlängerung der U7, bessere Taktungen für Falkenhagener Feld und Staaken sowie eine smarte, flexible Anbindung von Gatow und Kladow ein.\n- **Mobilität:** 2025 wurde in Spandau kein neuer Kilometer im Vorrang- oder Ergänzungsnetz fertiggestellt. Berlinweit ein Negativrekord. Wir wollen Projekte wie am Rathausplatz und an der Heerstraße endlich auf die Straße bringen und schaffen sichere Fahrradgaragen an wichtigen Knotenpunkten.\n- **Schulen:** Spandaus Schulen brauchen dringend Modernisierung und Sanierung. Wir wollen, dass Toiletten und Fenster schneller erneuert werden und Sanierungsprojekte endlich sichtbar vorankommen.\n- **Lokale Wirtschaft:** Leerstand und Billigläden verdrängen den Einzelhandel in der Altstadt Spandau. Wir unterstützen Ansiedlungsmanagement und Zwischennutzung, damit aus leeren Schaufenstern wieder ein lebendiges Zentrum wird.\n- **Sauberkeit und Gesundheit:** Mehr Mülleimer, häufigere Reinigungen sowie die schnelle Beseitigung von Sperrmüll und Graffiti sorgen für saubere Kieze, schützen die Gesundheit und erhöhen die Lebensqualität.\n- **Finanzieller Spielraum:** Eine starke lokale Wirtschaft schafft höhere Einnahmen für Spandau. Wir setzen auf schnellere Genehmigungen, attraktive Gewerbeflächen und eine effiziente Verwaltung, damit mehr Geld in die wichtigen Aufgaben des Bezirks fließt.",
-        "photo": null
+        "md_content": "Spandau ist mehr als ein Bezirk. Es ist unser Zuhause. Ob Haselhorst, Siemensstadt, Staaken, Gatow, Kladow, Hakenfelde oder Falkenhagener Feld: Wir haben einen klaren Plan.\n\n- **Nahverkehr:** Die Siemensbahn muss zu einer echten Anbindung von Siemensstadt und Gartenfeld werden. Wir setzen uns für eine verlässliche Verlängerung der U7, bessere Taktungen für Falkenhagener Feld und Staaken sowie eine smarte, flexible Anbindung von Gatow und Kladow ein.\n- **Mobilität:** 2025 wurde in Spandau kein neuer Kilometer im Vorrang- oder Ergänzungsnetz fertiggestellt. Berlinweit ein Negativrekord. Wir wollen Projekte wie am Rathausplatz und an der Heerstraße endlich auf die Straße bringen und schaffen sichere Fahrradgaragen an wichtigen Knotenpunkten.\n- **Schulen:** Spandaus Schulen brauchen dringend Modernisierung und Sanierung. Wir wollen, dass Toiletten und Fenster schneller erneuert werden und Sanierungsprojekte endlich sichtbar vorankommen.\n- **Lokale Wirtschaft:** Leerstand und Billigläden verdrängen den Einzelhandel in der Altstadt Spandau. Wir unterstützen Ansiedlungsmanagement und Zwischennutzung, damit aus leeren Schaufenstern wieder ein lebendiges Zentrum wird.\n- **Sauberkeit und Gesundheit:** Mehr Mülleimer, häufigere Reinigungen sowie die schnelle Beseitigung von Sperrmüll und Graffiti sorgen für saubere Kieze, schützen die Gesundheit und erhöhen die Lebensqualität.\n- **Finanzieller Spielraum:** Eine starke lokale Wirtschaft schafft höhere Einnahmen für Spandau. Wir setzen auf schnellere Genehmigungen, attraktive Gewerbeflächen und eine effiziente Verwaltung, damit mehr Geld in die wichtigen Aufgaben des Bezirks fließt."
       },
       {
         "_key": "8e80f994468a",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_spandau.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "8b7afa2543d0",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Spandau: Helmut Scharfenort, Danina Schwarm, Marie Breinl",
-        "foto_originalFilename": "Spandau.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/f315ea91996290b1e669fde51d9e0cc64f0827ca-3840x2160.png"
-      },
-      {
-        "_key": "3c90e7e0d8b8",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Spandau: Helmut Scharfenort (Spandau 1), Danina Schwarm (Spandau 5), Marie Breinl (Spandau 4)",
-        "foto_originalFilename": "AGH D Spandau.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/892cc82ce347782ab52ed586b694cc7399982a89-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -481,7 +393,6 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "ANTONIA_MARX_PORTRAIT_4x5_BERLIN2026_cropped_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "ANTONIA_MARX_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Antonia Marx",
-        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/e5c774a5a92b536af18765682372c888c67076a8-1609x2109.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/e5c774a5a92b536af18765682372c888c67076a8-1609x2109.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/dc3240dc9beda0d210109e3e80a11a8e319cea5a-2628x3950.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -491,15 +402,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:11:01Z",
         "_id": "7c4fcae9-9af6-4135-8f44-d492408f3f5a",
         "_originalId": "7c4fcae9-9af6-4135-8f44-d492408f3f5a",
-        "_rev": "VOfSO31kbJ3qiUlVmRf6Fn",
+        "_rev": "TZSo9XvhWf3aAVsIk7QsE9",
         "_system": {
           "base": {
             "id": "7c4fcae9-9af6-4135-8f44-d492408f3f5a",
-            "rev": "TZSo9XvhWf3aAVsIk7QsE9"
+            "rev": "84yru1YmbtjxTzqq0jMLr4"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:36:17Z",
+        "_updatedAt": "2026-08-17T16:21:12Z",
         "bezirk": "12 Reinickendorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg",
         "foto2": {
@@ -512,7 +423,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/74dbc37e2bc7943107a77e5e5b73d531d41fc9a0-2533x3797.jpg",
         "foto_originalFilename": "CHRISTOPH_GERLINGER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "CHRISTOPH_GERLINGER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
-        "md_content": "*Klimaschutz ist das wichtigste Problem der Menschheit. Auch im Bezirk können wir viel bewegen!*\n\n*Machen statt meckern! Nur als vereintes Europa können wir uns auf der Welt behaupten. Und das fängt ganz konkret im Bezirk an.*\n\n**Beruf**\n\nAls Statistiker trage ich zur Entwicklung neuer Medikamente bei. \n\n**Biographie**\n\nGebürtiger Schwabe, lange in Frankreich gearbeitet, seit 30 Jahren Wahl-Reinickendorfer.",
         "name": "Christoph Gerlinger",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/3f4b332a08e96cc036d40cbba8837121936afcad-2489x3111.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -525,40 +435,20 @@ export const REGIONS_CMS = [
       {
         "_key": "aa741d3af520",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Reinickendorf"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "1c81169e7c88",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Reinickendorf ist der vielseitige, grüne Norden Berlins, mit Industrie, Wohnvierteln, dörflichen Kiezen und großen Naherholungsgebieten. Für Dich ist es Zuhause: von Tegel bis Frohnau, von Heiligensee bis zum Märkischen Viertel. Dafür haben wir einen Plan.\n\n- **Funktionierende Verwaltung:** Monatelange Baustellen wie in der Auguste-Viktoria-Allee oder bei der Buslinie 125 zeigen fehlende Koordination. Wir schaffen ein digitales Baustellenmanagement mit verlässlichen Zeitplänen und Transparenz.\n- **Lebendige Kieze:** Mit Bürgerbudgets geben wir Anwohner*innen mehr Gestaltungseinfluss. Für saubere Kieze schaffen wir zusätzliche Mülleimer und Recyclingstellen dort, wo sie gebraucht werden.\n- **Mehr Perspektiven für Tegel:** Die Bernstorffstraße braucht ein Verkehrskonzept, der Tegeler Hafen eine Zukunft. Wir machen Straßen sicherer und entwickeln den Hafen zur Erlebnispromenade mit Gesundheitsangeboten und BVG-Fährverbindung.\n- **Mobilität für alle:** Wir bauen Tram und U-Bahn aus, schaffen sichere Radwege zwischen allen Ortsteilen und Fahrradparkhäuser an wichtigen Knotenpunkten.\n- **Schule mit Perspektive:** Frierende Kinder im Winter, überhitzte Klassenräume im Sommer. Das darf nicht der Alltag sein. Wir bauen den Sanierungsstau ab, investieren in gute Lernbedingungen und sichere Schulwege. Außerdem ermöglichen wir mehr Integrierten Sekundarschulen in Reinickendorf die eigene gymnasiale Oberstufe.\n- **Gesund älter werden:** Menschen in Reinickendorf sollen selbstbestimmt und gut versorgt im Kiez leben können. Dafür schaffen wir Barrierefreiheit, stärken Pflege- und Unterstützungsangebote, bauen die Berliner Hausbesuche aus und fördern Begegnungs- und Freizeitangebote.",
-        "photo": null
+        "md_content": "Reinickendorf ist der vielseitige, grüne Norden Berlins, mit Industrie, Wohnvierteln, dörflichen Kiezen und großen Naherholungsgebieten. Für Dich ist es Zuhause: von Tegel bis Frohnau, von Heiligensee bis zum Märkischen Viertel. Dafür haben wir einen Plan.\n\n- **Funktionierende Verwaltung:** Monatelange Baustellen wie in der Auguste-Viktoria-Allee oder bei der Buslinie 125 zeigen fehlende Koordination. Wir schaffen ein digitales Baustellenmanagement mit verlässlichen Zeitplänen und Transparenz.\n- **Lebendige Kieze:** Mit Bürgerbudgets geben wir Anwohner*innen mehr Gestaltungseinfluss. Für saubere Kieze schaffen wir zusätzliche Mülleimer und Recyclingstellen dort, wo sie gebraucht werden.\n- **Mehr Perspektiven für Tegel:** Die Bernstorffstraße braucht ein Verkehrskonzept, der Tegeler Hafen eine Zukunft. Wir machen Straßen sicherer und entwickeln den Hafen zur Erlebnispromenade mit Gesundheitsangeboten und BVG-Fährverbindung.\n- **Mobilität für alle:** Wir bauen Tram und U-Bahn aus, schaffen sichere Radwege zwischen allen Ortsteilen und Fahrradparkhäuser an wichtigen Knotenpunkten.\n- **Schule mit Perspektive:** Frierende Kinder im Winter, überhitzte Klassenräume im Sommer. Das darf nicht der Alltag sein. Wir bauen den Sanierungsstau ab, investieren in gute Lernbedingungen und sichere Schulwege. Außerdem ermöglichen wir mehr Integrierten Sekundarschulen in Reinickendorf die eigene gymnasiale Oberstufe.\n- **Gesund älter werden:** Menschen in Reinickendorf sollen selbstbestimmt und gut versorgt im Kiez leben können. Dafür schaffen wir Barrierefreiheit, stärken Pflege- und Unterstützungsangebote, bauen die Berliner Hausbesuche aus und fördern Begegnungs- und Freizeitangebote."
       },
       {
         "_key": "86423e289cf8",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_reinickendorf.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "3803ad490869",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Reinickendorf: Sven Sellmer, Sascha Hellwig, Peter Brinkmann, Christoph Gerlinger, Antonia Marx, Sophia Schlette, Nina Müller",
-        "foto_originalFilename": "Reinickendorf.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/5c172894a7a460803b11536d8c585b9037250a0c-3840x2160.png"
-      },
-      {
-        "_key": "19581cb32301",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Reinickendorf: Sven Sellmer (Reinickendorf 1), Sascha Hellwig (Reinickendorf 3), Peter Brinkmann (Reinickendorf 6), Christoph Gerlinger (Reinickendorf 4), Antonia Marx (Reinickendorf 2), Nina Müller (Reinickendorf 5)",
-        "foto_originalFilename": "Reinickendorf (3).png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/ba1b5fc3cd1afe6931787cf8db305ec2c80cfdd2-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -571,15 +461,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:27:17Z",
         "_id": "e2e1bb5f-abfc-49db-ad4c-d5b06269dcee",
         "_originalId": "e2e1bb5f-abfc-49db-ad4c-d5b06269dcee",
-        "_rev": "oqzgrKGMIxFMreVMC4G78U",
+        "_rev": "TZSo9XvhWf3aAVsIk7RHIf",
         "_system": {
           "base": {
             "id": "e2e1bb5f-abfc-49db-ad4c-d5b06269dcee",
-            "rev": "TZSo9XvhWf3aAVsIk7RHIf"
+            "rev": "ZIuquwn7xL9POL93Ttiujx"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:26:41Z",
+        "_updatedAt": "2026-08-17T16:25:04Z",
         "bezirk": "03 Pankow",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg",
         "foto2": {
@@ -592,7 +482,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b60f1b32a827ed3e981a08c4d81a2eaa9bda3026-1920x2885.jpg",
         "foto_originalFilename": "DOMENIC_BAY_PORTRAIT_BERLIN2026 Kopie_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "DOMENIC_BAY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Stadtentwicklung gemeinsam gestalten. Ich möchte Pankow zusammen mit den Menschen vor Ort weiterentwickeln. Gute Ideen aus Kiezen und Initiativen sollen gehört und mit moderner digitaler Infrastruktur besser umgesetzt werden.*\n\n*Ich glaube, dass wir für Demokratie, Freiheit und gesellschaftlichen Zusammenhalt jeden Tag neu arbeiten müssen, und dazu möchte ich meinen Teil beitragen. Volt hat mich mit seinem paneuropäischen, sozialliberalen Ansatz begeistert. Mein großes Ziel: Pankow zum vernetztesten Bezirk Berlins zu machen, in dem Menschen sich ihrem Kiez zugehörig fühlen und gemeinsam an den Themen vor Ort arbeiten.*\n\n**Beruf**\n\nIch bin Gründer und arbeite gerade an einer Idee für ein digitales Netzwerk, das Menschen nicht möglichst lange am Bildschirm hält, sondern sie im echten Leben zusammenbringt. Bei Volt beschäftige ich mich damit, wie wir digitale Tools nutzen können, um unsere Bewegung stärker zu machen.\n\n**Biographie**\n\nNach meinem Master in Rotterdam habe ich einige Jahre in Amsterdam gearbeitet, bevor ich nach Berlin gezogen bin. In Amsterdam habe ich erlebt, wie selbstverständlich Menschen jeden Alters sicher mit dem Fahrrad unterwegs sind. In Berlin habe ich schnell gemerkt: Hier ist das Fahrrad oft noch Priorität B und deshalb will ich niederländische Best Practices nach Berlin bringen, damit Fahrradfahren hier wie in Amsterdam wird. \n\n**Weitere Infos auf**\n[LinkedIn](https://www.linkedin.com/in/domenic-bay/).",
         "name": "Domenic Bay",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9f23c3f35c4c1bcd659da91f857057add789666f-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -603,15 +492,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:27:39Z",
         "_id": "5581e00e-ced0-4d7e-81c9-4a7f39840d1c",
         "_originalId": "5581e00e-ced0-4d7e-81c9-4a7f39840d1c",
-        "_rev": "jITbevOCTIorBgoUCU5P70",
+        "_rev": "56Aw9PqdKBoWxRYUC03PKX",
         "_system": {
           "base": {
             "id": "5581e00e-ced0-4d7e-81c9-4a7f39840d1c",
-            "rev": "oqzgrKGMIxFMreVMC4HgH9"
+            "rev": "ZIuquwn7xL9POL93Ttixut"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:55:29Z",
+        "_updatedAt": "2026-08-17T16:24:30Z",
         "bezirk": "03 Pankow",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg",
         "foto2": {
@@ -624,7 +513,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/124f94d4b5a11cad0dd1870254ca8dbbab2f2171-3840x5770.jpg",
         "foto_originalFilename": "THERESA_SCHÜLTKEN_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "THERESA_SCHÜLTKEN_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Ich setze mich für ein lebenswertes, zukunftsfähiges Berlin ein: mit starkem Klimaschutz, Sauberkeit, innovativer Verwaltung und lebendigen Orten der Begegnung für mehr Zusammenhalt.*\n\n*Ich möchte mit Volt in die Politik, weil wir Zukunft gestalten wollen, statt die Gegenwart nur weiter zu verwalten. Ich bin überzeugt: Wenn wir einander zuhören, mutig handeln und Verantwortung teilen, entstehen tragfähige Lösungen für die Herausforderungen unserer Zeit in Berlin und ganz Europa.*\n\n**Beruf**\n\nIch helfe Organisationen dabei, Zukunft aktiv zu gestalten, statt nur auf sie zu reagieren. Als Organisationsberaterin arbeite ich mit strategischer Vorausschau daran, dass Organisationen tragfähige Entscheidungen für morgen treffen können.\n\n**Biographie**\n\nAufgewachsen auf dem Land – mit mehr Tieren als Menschen und der ständigen Suche nach jemandem mit Auto – hat es mich in die Großstadt gezogen. Für meinen Master in Internationalen Beziehungen mit Fokus auf Digitalpolitik kam ich nach Berlin. Nach Jahren politischer Problemanalyse im Studium wollte ich beruflich nicht nur verstehen, sondern gestalten. Heute entwickle ich Lösungen im Dialog: In Workshops bringe ich unterschiedliche Perspektiven zusammen, denn die besten Ideen entstehen gemeinsam.\n\n**Weitere Infos auf**\n[Instagram](https://www.linkedin.com/in/theresa-schueltken/) und [LinkedIn](https://www.instagram.com/theres.a.future/).",
         "name": "Theresa Schültken",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/56f8427b02dcbd37fc6e9f184d2e3f361aa8baf7-5467x6834.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -637,40 +525,20 @@ export const REGIONS_CMS = [
       {
         "_key": "2052d316ed27",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Pankow"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "b83701f0f6e0",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Pankow wächst zukünftig mehr als jeder andere Bezirk Berlins. Für Dich ist es einfach zu Hause, in Prenzlauer Berg, Weißensee, Buch, Karow, Blankenburg, Niederschönhausen, Rosenthal und Wilhelmsruh. Hier ist unser Plan dafür.\n\n- **Schulbaustellen:** Eine Schule, die seit Jahren nicht fertig wird, wie die Grundschule am Weißen See, ist kein Einzelfall. Wir sorgen für klare Fristen und echte Prioritäten im Schulbestand.\n- **Dein Geld, deine Idee:** Sitzbänke, Freizeitangebote, kleine Projekte im Kiez, wir reservieren einen Teil des Bezirkshaushalts, über den Du direkt mitbestimmst.\n- **Zeig uns, was passiert:** Wann kommt die Schönfließer Brücke? Was wird aus dem neuen Wohnquartier? Mit einem digitalen Stadtzwilling wie in Wiesbaden und einem öffentlichen Dashboard, das den Stand aller Vorhaben zeigt, wollen wir Stadtentwicklung transparent gestalten, statt Informationen nur in dicken Papierstapeln zu veröffentlichen.\n- **Die Schönhauser zurückgewinnen:** Die wichtigste Straße des Bezirks verdient mehr als Leerstand, hohe Mieten und endlose Baustellen. Wir bringen Eigentümer*innen, Gewerbe und Nachbarschaft an einen Tisch und gestalten sie gemeinsam.\n- **Ein Sportpark für alle:** Der Jahn-Sportpark soll nicht nur an Spieltagen leben. Wir kämpfen für einen Ort mit Vereinen, Familien, Freizeitsport und echter Anbindung an die Kieze drumherum, jeden Tag im Jahr.",
-        "photo": null
+        "md_content": "Pankow wächst zukünftig mehr als jeder andere Bezirk Berlins. Für Dich ist es einfach zu Hause, in Prenzlauer Berg, Weißensee, Buch, Karow, Blankenburg, Niederschönhausen, Rosenthal und Wilhelmsruh. Hier ist unser Plan dafür.\n\n- **Schulbaustellen:** Eine Schule, die seit Jahren nicht fertig wird, wie die Grundschule am Weißen See, ist kein Einzelfall. Wir sorgen für klare Fristen und echte Prioritäten im Schulbestand.\n- **Dein Geld, deine Idee:** Sitzbänke, Freizeitangebote, kleine Projekte im Kiez, wir reservieren einen Teil des Bezirkshaushalts, über den Du direkt mitbestimmst.\n- **Zeig uns, was passiert:** Wann kommt die Schönfließer Brücke? Was wird aus dem neuen Wohnquartier? Mit einem digitalen Stadtzwilling wie in Wiesbaden und einem öffentlichen Dashboard, das den Stand aller Vorhaben zeigt, wollen wir Stadtentwicklung transparent gestalten, statt Informationen nur in dicken Papierstapeln zu veröffentlichen.\n- **Die Schönhauser zurückgewinnen:** Die wichtigste Straße des Bezirks verdient mehr als Leerstand, hohe Mieten und endlose Baustellen. Wir bringen Eigentümer*innen, Gewerbe und Nachbarschaft an einen Tisch und gestalten sie gemeinsam.\n- **Ein Sportpark für alle:** Der Jahn-Sportpark soll nicht nur an Spieltagen leben. Wir kämpfen für einen Ort mit Vereinen, Familien, Freizeitsport und echter Anbindung an die Kieze drumherum, jeden Tag im Jahr."
       },
       {
         "_key": "0204bb006673",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_pankow.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "065f2a4cbc1c",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Pankow: Friederike Helmchen, Paul Loeper, Thereza Schültken, Domenic Bay, Udo Zadow, Cécile Richard, Aiga Senfleben",
-        "foto_originalFilename": "Pankow.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/73f5e55e3f42b09b940e32e717220f7c5ddcf603-3840x2160.png"
-      },
-      {
-        "_key": "3f4982c45b50",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Pankow: Friederike Helmchen (Pankow 4), Paul Loeper (Pankow 9), Charlene Lorenz (Pankow 1), Theresa Schültken (Pankow 7), Domenic Bay (Pankow 8), Udo Zadow (Pankow 3), Aiga Senfleben (Pankow 6)",
-        "foto_originalFilename": "AGH D Pankow.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/d490749755dcc0a85d3506b24f829eca1529e819-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -683,15 +551,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:18:09Z",
         "_id": "0f9863d1-6f2f-4717-8764-94970db1caa2",
         "_originalId": "0f9863d1-6f2f-4717-8764-94970db1caa2",
-        "_rev": "VOfSO31kbJ3qiUlVmRdVW7",
+        "_rev": "TZSo9XvhWf3aAVsIk7QQRR",
         "_system": {
           "base": {
             "id": "0f9863d1-6f2f-4717-8764-94970db1caa2",
-            "rev": "TZSo9XvhWf3aAVsIk7QQRR"
+            "rev": "U74tcxucQVTMOGRTVgmQQh"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:23:46Z",
+        "_updatedAt": "2026-08-17T16:15:27Z",
         "bezirk": "08 Neukölln",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg",
         "foto2": {
@@ -704,7 +572,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/9eeb81880827487e782a9d71ac3809722c624698-2685x4026.jpg",
         "foto_originalFilename": "NIKOLAI_SCHIRMER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "NIKOLAI_SCHIRMER_FULL_BODY_V2_BERLIN2026_©Max_Große-Wortmann.jpg",
-        "md_content": "*Ich setze mich für Nachhaltigkeit und soziale Gerechtigkeit, Diversität und das friedliche und sichtbare nebeneinander verschiedener Kulturen ein. *\n\n*Ich engagiere mich bei Volt, um Politik verständlicher und die Gesellschaft besser zu machen. In Neukölln setze ich mich dafür ein, dass der Bezirk seine diverses und multikulturelles Erscheinungsbild behält, die sozialen Unterschiede durch bessere Bildung und bessere Chancen abgebaut werden und der städtische urbane Raum in den Kiezen lebenswert wird. *\n\n**Beruf**\n\nIch bin Jurist und Prüfer beim Bundesrechnungshof. Wir prüfen die Wirtschaftlichkeit und Ordnungsmäßigkeit der Haushalts- und Wirtschaftsführung des Bundes.\n\n**Biographie**\n\nIch bin vor der Wende in Thüringen und nach dem Mauerfall in Berlin aufgewachsen. Ich habe in Berlin Architektur und Jura studiert. Danach bin ich zunächst Anwalt in Stuttgart und anschließend Landesbeamter in Baden-Württemberg geworden. Seit 2022 bin ich Beamter beim Bundesrechnungshof und nach einer kurzen Phase in Bonn seit 2025 in Berlin.seit   \n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/nikolai.d.schirmer/).",
         "name": "Nikolai Schirmer",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/8cc65a2511cd32de57944d2522f2192c09256784-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -715,15 +582,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:18:27Z",
         "_id": "203d8ffb-ebd4-41fb-83b6-42cbe2faaf94",
         "_originalId": "203d8ffb-ebd4-41fb-83b6-42cbe2faaf94",
-        "_rev": "oqzgrKGMIxFMreVMC4FphB",
+        "_rev": "TZSo9XvhWf3aAVsIk7Bih7",
         "_system": {
           "base": {
             "id": "203d8ffb-ebd4-41fb-83b6-42cbe2faaf94",
-            "rev": "TZSo9XvhWf3aAVsIk7Bih7"
+            "rev": "U74tcxucQVTMOGRTVgmRfd"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:21:56Z",
+        "_updatedAt": "2026-08-17T14:20:27Z",
         "bezirk": "08 Neukölln",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg",
         "foto2": {
@@ -736,7 +603,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/8a491cd8f16e243154a3c12a83c2ec822d600674-2693x4047.jpg",
         "foto_originalFilename": "CINDY_UNEKEN_VoltBerlin_DSC3108©EVELIN_FRERK_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "CINDY_UNEKEN_VoltBERLIN_DSC_3089©EVELIN_FRERK_x_©Evelin_Frerk.jpg",
-        "md_content": "*Cindy war Wagenleiterin des Volt-Trucks beim CSD 2026 – Ausdruck ihrer Überzeugung: Chancengleichheit unabhängig von Herkunft, Identität, Orientierung. Der Arbeitsmarkt braucht neue Impulse, Berlin soll offen, vernetzt, europäisch bleiben.*\n\n*Cindy ist es wichtig, dass Politik handlungsorientierter wird und schneller Ergebnisse liefert, um Menschen sozial voranzubringen – genau wie sie es auch in ihrer Arbeit versucht. Mit dem pragmatischen Ansatz von Volt, der erfolgreiche europäische Lösungen nach Berlin bringt, können wir den Unterschied machen.*\n\n**Beruf**\n\nCindy berät große Unternehmen dabei, operative Leistungsverbesserungen zu erzielen und messbare Ergebnisse zu erreichen. Getreu dem Motto ‚people building people building performance' (‚Mitarbeiter fördern Mitarbeiter fördern Leistung‘) coacht und bestärkt sie Mitarbeitende darin, Eigenverantwortung für ihre Aufgabenbereiche zu übernehmen – mit neuen Ideen und Arbeitsweisen –, um diese anschließend weiterzuentwickeln und ihre Ziele konsequent zu verfolgen.\n\n**Biographie**\n\nCindy ist geborene Niederländerin und fühlt sich Eurobürgerin. Sie arbeitet international und lebt seit 2002 in Berlin.",
         "name": "Cindy Uneken",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/9946b494818db4c4a8a23ec66c116c92cc2b009f-2332x2915.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -749,40 +615,20 @@ export const REGIONS_CMS = [
       {
         "_key": "0fbed37acd02",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Neukölln "
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "865cfc8a3de3",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Neukölln lebt von seiner Vielfalt, kein Kiez ist wie der andere. Für Dich ist es einfach zuhause, vom Reuterkiez über Britz bis nach Rudow. Hier ist unser Plan dafür.\n\n- **Bezahlbares Wohnen ohne Feldbebauung:** Mehr Wohnraum durch Nachverdichtung, schnellere Genehmigungen, die Aktivierung von Leerstand und weniger illegale Ferienwohnungen. Das Tempelhofer Feld bleibt als Erholungsort erhalten und wird besser vor Extremhitze geschützt.\n- **Nahverkehr:** Die M41 ist chronisch überlastet, wir bauen sie zur Straßenbahn aus. Damit ihr schnell und entspannt durch die Sonnenallee kommt, ohne im Stau zu stehen. Und wir bringen die M10-Verlängerung bis zum Hermannplatz voran.\n- **Schulen:** Schulen, die verwahrlosen, weil das Geld für die Reinigung und Instandsetzung fehlt, sind kein Randproblem, sondern Alltag. Wir sorgen für verlässliche Mittel, damit Sauberkeit an Schulen kein Luxus bleibt und Kinder Lernorte haben, zu denen sie gerne kommen.\n- **Müll:** Genug von „Neukölln bleibt dreckig!\" Das ändern wir mit mehr Mülleimern, Sperrmüllpunkten in jedem Kiez und einer Kiez-Norm, die Sauberkeit statt Wegwerfen zum Standard macht.\n- **Sicher und entspannt unterwegs:** Mit barrierefreien Fußwegen, sicheren Überwegen, geschützten Radspuren, abgeschliffenem Kopfsteinpflaster und Parkraumbewirtschaftung im Schillerkiez sowie rund um das Vivantes Klinikum Neukölln, für weniger Parkplatzsuchverkehr und weniger Stress für Anwohnende.",
-        "photo": null
+        "md_content": "Neukölln lebt von seiner Vielfalt, kein Kiez ist wie der andere. Für Dich ist es einfach zuhause, vom Reuterkiez über Britz bis nach Rudow. Hier ist unser Plan dafür.\n\n- **Bezahlbares Wohnen ohne Feldbebauung:** Mehr Wohnraum durch Nachverdichtung, schnellere Genehmigungen, die Aktivierung von Leerstand und weniger illegale Ferienwohnungen. Das Tempelhofer Feld bleibt als Erholungsort erhalten und wird besser vor Extremhitze geschützt.\n- **Nahverkehr:** Die M41 ist chronisch überlastet, wir bauen sie zur Straßenbahn aus. Damit ihr schnell und entspannt durch die Sonnenallee kommt, ohne im Stau zu stehen. Und wir bringen die M10-Verlängerung bis zum Hermannplatz voran.\n- **Schulen:** Schulen, die verwahrlosen, weil das Geld für die Reinigung und Instandsetzung fehlt, sind kein Randproblem, sondern Alltag. Wir sorgen für verlässliche Mittel, damit Sauberkeit an Schulen kein Luxus bleibt und Kinder Lernorte haben, zu denen sie gerne kommen.\n- **Müll:** Genug von „Neukölln bleibt dreckig!\" Das ändern wir mit mehr Mülleimern, Sperrmüllpunkten in jedem Kiez und einer Kiez-Norm, die Sauberkeit statt Wegwerfen zum Standard macht.\n- **Sicher und entspannt unterwegs:** Mit barrierefreien Fußwegen, sicheren Überwegen, geschützten Radspuren, abgeschliffenem Kopfsteinpflaster und Parkraumbewirtschaftung im Schillerkiez sowie rund um das Vivantes Klinikum Neukölln, für weniger Parkplatzsuchverkehr und weniger Stress für Anwohnende."
       },
       {
         "_key": "869f9e934a88",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_neukolln.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "da02abb0bfcb",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Neukölln: Karuan Asward, Max Lodel, Nikolai Schirmer, Cindy Uneken, Mathew Bristow",
-        "foto_originalFilename": "Neukölln.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/c4ac353eaad845ed4bbf93ce70e3d9f8d1c6c9f4-3840x2160.png"
-      },
-      {
-        "_key": "c00fdf8abd41",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Neukölln: Felix Golcher (Neukölln 4), Max Lodel (Neukölln 3), Nikolai Schirmer (Neukölln 6), Johanna Isensee (Neukölln 1), Mathew Bristow (Neukölln 2)",
-        "foto_originalFilename": "AGH D Neukölln.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/6400bee875669da2d01e32b4fcc290fe01c035ce-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -795,15 +641,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-10T18:01:06Z",
         "_id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
         "_originalId": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-        "_rev": "oqzgrKGMIxFMreVMC4FxLb",
+        "_rev": "6kJnO6La3HnfTs1442geXX",
         "_system": {
           "base": {
             "id": "9788bdfd-5843-4c65-bfdb-8e73eea60047",
-            "rev": "oqzgrKGMIxFMreVMC4Ee0a"
+            "rev": "OBCDQJ8hm7FfwOrWoAVBON"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:23:53Z",
+        "_updatedAt": "2026-08-25T18:01:47Z",
         "bezirk": "01 Mitte",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg",
         "foto2": {
@@ -816,7 +662,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/0003a3a8909ccfe2be01a3b18bb87a87eb341583-1920x2885.jpg",
         "foto_originalFilename": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_cropped_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "AXUMAWIT_BERHE_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Herzensthema - Die Wirtschaft: Denn sie ist der Motor für Chancen, Wohlstand und Fortschritt.*\n\n*In der BVV werde ich mich dafür einsetzen, dass Mitte lebendig bleibt und dabei sauber, sicher und lebenswert ist.*\n\n**Beruf**\n\nIch bin Finance Managerin und arbeite überwiegend in Start-ups – ich liebe dynamische, schnell wachsende Umfelder und sorge dort für finanzielle Stabilität und Struktur.\n\n**Biographie**\n\nGeboren in Düsseldorf, seit 2000 in Berlin zuhause. BWL-Studium an der Humboldt-Universität, danach berufliche Stationen bei u.a. Zalando, nebenan.de und GALAKTO.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/axumawitberhe/) und [LinkedIn](https://www.linkedin.com/in/axumawitberhe/).",
         "name": "Axumawit Berhe",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/896237c291e03e09994217660df50da8fe90269f-768x1082.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -827,15 +672,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-11T17:40:01Z",
         "_id": "e536ec64-8805-4208-90b6-53b836bfda6a",
         "_originalId": "e536ec64-8805-4208-90b6-53b836bfda6a",
-        "_rev": "VOfSO31kbJ3qiUlVmRdWHi",
+        "_rev": "0Kx6dhY4cG5xUskekVJ5PA",
         "_system": {
           "base": {
             "id": "e536ec64-8805-4208-90b6-53b836bfda6a",
-            "rev": "oqzgrKGMIxFMreVMC4Du64"
+            "rev": "gSD2EG7QiN9E3Tu6nMnqXB"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:23:59Z",
+        "_updatedAt": "2026-09-03T13:24:39Z",
         "bezirk": "01 Mitte",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg",
         "foto2": {
@@ -848,7 +693,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/6433328cbe89717fbd2c8c04c8c7e8acd8223372-2832x4256.jpg",
         "foto_originalFilename": "KALOJAN_HOFFMEISTER_FULL_BODY_V2_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "KALOJAN_HOFFMEISTER_FULL_BODY_V2_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Digitaler Euro & europäische KI-Souveränität: Ich setze mich dafür ein, dass Europa bei Geld und KI technologisch souverän bleibt – mit eigenen Lösungen, klaren Regeln und weniger Abhängigkeit von außereuropäischen Anbietern.*\n\n*Ich engagiere mich politisch, weil viele Herausforderungen längst über Bezirks- und Landesgrenzen hinausgehen und trotzdem vor Ort gelöst werden müssen. Volt verbindet für mich europäisches Denken mit pragmatischer Politik.  Für Berlin-Mitte will ich einen modernen, digitalen und lebenswerten Bezirk: eine Verwaltung, die funktioniert, bessere Bürgerdienste, saubere und sichere öffentliche Räume sowie eine Stadtentwicklung, die Wohnen, Mobilität und Lebensqualität zusammendenkt. Gleichzeitig möchte ich europäische Lösungen stärker nach Berlin bringen – besonders bei Digitalisierung, KI und wirtschaftlicher Wettbewerbsfähigkeit.*\n\n**Beruf**\n\nIch bin Rechtsreferendar am Kammergericht in Berlin.\n\n**Biographie**\n\nGeboren in Berlin, aufgewachsen teilweise in Brüssel, Studium in Berlin, Paris, London, Leuven und Bonn. Prägende Stationen waren meine Arbeit in der EU-Kommission und in einem großen Telekom-Konzern. \n\n**Weitere Infos auf**\n[Instagram](instagram.com/kalojan_hoffmeister).",
         "name": "Kalojan Hoffmeister",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/dbdb837361d1dd31ccdad2975d152b4c7e331350-2832x4256.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -861,40 +705,20 @@ export const REGIONS_CMS = [
       {
         "_key": "8d54c7d187f9",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Mitte"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "833910abccb0",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Volt, die neue Kraft der politischen Mitte, für Mitte. Pragmatisch, liberal, lösungsorientiert: Das ist unser Plan für Wedding, Moabit, Gesundbrunnen, Tiergarten, Hansaviertel und Mitte.\n\n- **Wohnen:** Steigende Mieten, Eigenbedarfskündigungen und Verdrängung sind nicht nur in Mitte und Wedding ein Problem, sondern bezirksweit. \nMit mehr Dachausbauten, zügigen Bebauungsplänen und Grundstücken für Genossenschaften sorgen wir für bezahlbaren Wohnraum.\n- **Sichere, saubere Straßen:** Kinder laufen an gefährlichen Straßen zur Schule, Müllberge bleiben liegen, offene Drogenszenen belasten die Anwohner.  Wir sorgen für mehr Tempo 30, häufigere Straßenreinigung und gezielte Hilfe für Abhängige.\n- **Smarte Mobilität:** Stau und zugeparkte Radwege bremsen Mitte aus.                Mit geschützten Radwegen und dauerhaften Lösungen, z. B. für die Friedrichstraße, sorgen wir für Verkehr, der für alle fließt.\n- **Lebendige Kieze:** Bauvorhaben ohne Rücksicht auf Anlieger, wie in der Torstraße, bedrohen die Kieze. Mit frühzeitiger Beteiligung und einfachen Genehmigungen für Gewerbe halten wie sie lebendig.\n- **Kitas und Schulen:** Manche Schulen warten seit Jahren auf dringende Sanierungen. Transparente Planung und verbindliche \nFristen sorgen für Verlässlichkeit statt Bangen.",
-        "photo": null
+        "md_content": "Volt, die neue Kraft der politischen Mitte, für Mitte. Pragmatisch, liberal, lösungsorientiert: Das ist unser Plan für Wedding, Moabit, Gesundbrunnen, Tiergarten, Hansaviertel und Mitte.\n\n- **Wohnen:** Steigende Mieten, Eigenbedarfskündigungen und Verdrängung sind nicht nur in Mitte und Wedding ein Problem, sondern bezirksweit. \nMit mehr Dachausbauten, zügigen Bebauungsplänen und Grundstücken für Genossenschaften sorgen wir für bezahlbaren Wohnraum.\n- **Sichere, saubere Straßen:** Kinder laufen an gefährlichen Straßen zur Schule, Müllberge bleiben liegen, offene Drogenszenen belasten die Anwohner.  Wir sorgen für mehr Tempo 30, häufigere Straßenreinigung und gezielte Hilfe für Abhängige.\n- **Smarte Mobilität:** Stau und zugeparkte Radwege bremsen Mitte aus.                Mit geschützten Radwegen und dauerhaften Lösungen, z. B. für die Friedrichstraße, sorgen wir für Verkehr, der für alle fließt.\n- **Lebendige Kieze:** Bauvorhaben ohne Rücksicht auf Anlieger, wie in der Torstraße, bedrohen die Kieze. Mit frühzeitiger Beteiligung und einfachen Genehmigungen für Gewerbe halten wie sie lebendig.\n- **Kitas und Schulen:** Manche Schulen warten seit Jahren auf dringende Sanierungen. Transparente Planung und verbindliche \nFristen sorgen für Verlässlichkeit statt Bangen."
       },
       {
         "_key": "6db18ecde31c",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_mitte.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "280593e31a6f",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Mitte: Martin Hergert, Andrija Šarić, Axumawit Berhe, Elisabeth Stumvoll, Tom Claessens ",
-        "foto_originalFilename": "Mitte.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/8120c34a0d1a18190bd842cd22d41c9e2f71c9ea-3840x2160.png"
-      },
-      {
-        "_key": "9aaecbb3c179",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Mitte: Anna Auerbach (Mitte 1), Andrija Šarić (Mitte 5), Martin Hergert (Mitte 7), Rainer Seider (Mitte 2)",
-        "foto_originalFilename": "AGH D Mitte.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4932a29169b18aebd686432a20bf6c90aeccd339-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -907,15 +731,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:14:32Z",
         "_id": "41336da4-edeb-4c79-9611-705cec8d916b",
         "_originalId": "41336da4-edeb-4c79-9611-705cec8d916b",
-        "_rev": "VOfSO31kbJ3qiUlVmRhXqK",
+        "_rev": "TZSo9XvhWf3aAVsIk7Qjaz",
         "_system": {
           "base": {
             "id": "41336da4-edeb-4c79-9611-705cec8d916b",
-            "rev": "VOfSO31kbJ3qiUlVmRevZ6"
+            "rev": "U74tcxucQVTMOGRTVgm9iF"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:56:31Z",
+        "_updatedAt": "2026-08-17T16:20:16Z",
         "bezirk": "10 Marzahn-Hellersdorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg",
         "foto2": {
@@ -928,7 +752,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1a17ff4c9a2f4ac8f13e07e242d5930f819966ec-1920x2885.jpg",
         "foto_originalFilename": "LARS_GAUDIAN_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "LARS_GAUDIAN_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Ich will ein Bezirk, der den Menschen mit Respekt begegnet: Durch bessere Bildung, sichere Straßen und die Freiheit, das eigene Leben zu gestalten.*\n\n*Ich habe es satt, dass Marzahn ständig wie ein Bezirk zweiter Klasse behandelt wird. Die Menschen, die hier leben, haben mehr verdient. Wenn es um Verkehr, Sicherheit oder Zukunftsperspektiven geht, dann muss Marzahn mitgedacht werden: Kaum ein anderer Bezirk hat so ein großes Potenzial.*\n\n**Beruf**\n\nFür ein Eisenbahnverkehrsunternehmen mache ich Schnittstellenintegration: Ich sorge dafür, dass verschiedene Abteilungen gut zusammenarbeiten.\n\n**Biographie**\n\nIm Westen geboren, habe ich hier im Osten meine Heimat gefunden und gelernt, über den Tellerrand zu schauen. Studium abgebrochen, stattdessen eine Ausbildung — das lag mir mehr. Mein Lebenslauf war nie gerade, aber dafür voll von lehrreichen Erfahrungen.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/larsgaudian).",
         "name": "Lars Gaudian",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/8ebdd2aef63a7f16486043a443655921aff71579-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -939,15 +762,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:14:41Z",
         "_id": "5da43925-31ce-470e-acef-7761ef92dc6c",
         "_originalId": "5da43925-31ce-470e-acef-7761ef92dc6c",
-        "_rev": "oqzgrKGMIxFMreVMC4GDay",
+        "_rev": "TZSo9XvhWf3aAVsIk7QgTJ",
         "_system": {
           "base": {
             "id": "5da43925-31ce-470e-acef-7761ef92dc6c",
-            "rev": "TZSo9XvhWf3aAVsIk7QgTJ"
+            "rev": "ZIuquwn7xL9POL93Ttn7f3"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:29:31Z",
+        "_updatedAt": "2026-08-17T16:19:57Z",
         "bezirk": "10 Marzahn-Hellersdorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg",
         "foto2": {
@@ -960,7 +783,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/cf8eb1d23943faa6460f5c3cf2d3c836784f2d2d-1920x2885.jpg",
         "foto_originalFilename": "KAMILA_OLOWIAK_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "KAMILA_OLOWIAK_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Mein Herzensthema ist echte Chancengerechtigkeit: Gute Bildung, verlässliche Betreuung und ein Bezirk, der funktioniert, dürfen nicht davon abhängen, wie viel Geld, Zeit oder Unterstützung jemand von zu Hause mitbringt.*\n\n*Mein erster Impuls, mich politisch zu engagieren, waren Rechtsruck und Klimakrise. Ein Wendepunkt war 2019 die Ermordung des CDU-Politikers Walter Lübcke nach rechtsextremer Hetze. Sie hat mir gezeigt, wohin die Verrohung politischer Debatten führen kann.  Wo Politik nicht funktioniert, wächst Misstrauen – und einfache, menschenverachtende Antworten haben leichteres Spiel. Deshalb wollte ich nicht länger nur meckern, sondern selbst Verantwortung übernehmen.  Bei Volt habe ich gefunden, was ich gesucht habe: progressiv und europäisch denken, wissenschaftliche Erkenntnisse ernst nehmen und pragmatisch handeln. Für Marzahn-Hellersdorf heißt das: konkrete Verbesserungen und eine Demokratie, die auch im Alltag funktioniert.*\n\n**Beruf**\n\nIch arbeite als Arbeitsvermittlerin bei der Agentur für Arbeit Marzahn-Hellersdorf. Dabei geht es um weit mehr als Stellenangebote und Bewerbungen: Ich begleite Menschen mit ganz unterschiedlichen Voraussetzungen auf ihrem Weg in Arbeit, bin die Schnittstelle zum Arbeitgeber-Service und betreue Menschen nach Abschluss einer geförderten Weiterbildung. So erlebe ich jeden Tag sehr unmittelbar, wo Arbeitsmarkt und Verwaltung gut funktionieren und wo es unnötig kompliziert wird. Gleichzeitig ist mir wichtig, mich fachlich weiterzuentwickeln, neue Themenfelder zu erschließen und zusätzliche Verantwortung zu übernehmen.\n\n**Biographie**\n\nGeboren in Polen und aufgewachsen in Deutschland, kenne ich unterschiedliche Lebensrealitäten zwischen Stadt und Land und aus deutscher wie polnischer Perspektive. In meiner Kindheit war meine Familie selbst auf staatliche Unterstützung angewiesen. Heute arbeite ich als Arbeitsvermittlerin in der öffentlichen Verwaltung. Aus dem Kind, das seine Mutter zu Ämtern begleitete und beim Übersetzen half, wurde die Frau auf der anderen Seite des Schreibtischs. Dadurch weiß ich, wie sich Verwaltung von außen anfühlt und auch wie sie von innen funktioniert.\n\n**Weitere Infos auf**\n[Instagram](Instagram.com/kamila.volt).",
         "name": "Kamila Olowiak",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/fbaa31193a4694835cec540527ae295cc08bbb21-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -973,40 +795,20 @@ export const REGIONS_CMS = [
       {
         "_key": "db8121f0682f",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Marzahn-Hellersdorf"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "9961e215df9d",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Marzahn-Hellersdorf wächst schneller als fast jeder andere Bezirk Berlins. Nur die Infrastruktur wächst nicht mit. Für Dich ist es einfach zuhause: in Marzahn, Biesdorf, Kaulsdorf, Mahlsdorf und Hellersdorf. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Eine Schnellstraße wie die TVO löst kein Stauproblem, sie verbaut nur die bessere Lösung. Wir sichern die Trasse für die S-Bahn, um die Anbindung im Bezirk zu verbessern.\n- **Schulplätze:** Im gesamten Bezirk fehlen Hunderte Schulplätze; Kinder werden querbeet durch den Bezirk eingeschult. Wir setzen auf modulare Schulbauten und verbindliche Schulwegkonzepte für jede neue Schule.\n- **Müll:** Illegale Müllablagerungen finden sich überall, doch nur jede sechste Meldung führt zu einem Verfahren. Wir entfristen die Waste-Watcher-Stellen und schöpfen die neuen Bußgeldrahmen konsequent aus.\n- **Kaulsdorfer Seen:** Ein Badeverbot, das niemand einhält, schützt weder Natur noch Menschen. Nach Pankower Vorbild schaffen wir geordnete Infrastruktur statt wegzuschauen.\n- **Alleinerziehende:** Fast jeder zweite Haushalt mit Kindern in Marzahn-Nord ist ein Ein-Eltern-Haushalt. Ohne flexible Betreuung bleibt Arbeit oft unmöglich. Wir schaffen über einen Sozialpakt ein Angebot mit Beratung, Jobcoaching und Notfall-Kinderbetreuung unter einem Dach.",
-        "photo": null
+        "md_content": "Marzahn-Hellersdorf wächst schneller als fast jeder andere Bezirk Berlins. Nur die Infrastruktur wächst nicht mit. Für Dich ist es einfach zuhause: in Marzahn, Biesdorf, Kaulsdorf, Mahlsdorf und Hellersdorf. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Eine Schnellstraße wie die TVO löst kein Stauproblem, sie verbaut nur die bessere Lösung. Wir sichern die Trasse für die S-Bahn, um die Anbindung im Bezirk zu verbessern.\n- **Schulplätze:** Im gesamten Bezirk fehlen Hunderte Schulplätze; Kinder werden querbeet durch den Bezirk eingeschult. Wir setzen auf modulare Schulbauten und verbindliche Schulwegkonzepte für jede neue Schule.\n- **Müll:** Illegale Müllablagerungen finden sich überall, doch nur jede sechste Meldung führt zu einem Verfahren. Wir entfristen die Waste-Watcher-Stellen und schöpfen die neuen Bußgeldrahmen konsequent aus.\n- **Kaulsdorfer Seen:** Ein Badeverbot, das niemand einhält, schützt weder Natur noch Menschen. Nach Pankower Vorbild schaffen wir geordnete Infrastruktur statt wegzuschauen.\n- **Alleinerziehende:** Fast jeder zweite Haushalt mit Kindern in Marzahn-Nord ist ein Ein-Eltern-Haushalt. Ohne flexible Betreuung bleibt Arbeit oft unmöglich. Wir schaffen über einen Sozialpakt ein Angebot mit Beratung, Jobcoaching und Notfall-Kinderbetreuung unter einem Dach."
       },
       {
         "_key": "3103e10288ad",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_ma-he.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "9887b4c8e297",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Marzahn-Hellersdorf: Judith Lange, Christopher Seedig, Kamila Olowiak, Lars Gaudian, Leonard Lange, Charlene Lorenz",
-        "foto_originalFilename": "MarHell.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/4e6d15bbf2656ee14885a1ff19a629ebed72c01e-3840x2160.png"
-      },
-      {
-        "_key": "8d7081be6244",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Marzahn-Hellersdorf: Judith Lange (Marzahn-Hellersdorf 4), Christopher Seedig (Marzahn-Hellersdorf 3), Lars Gaudian (Marzahn-Hellersdorf 1), Leonard Lange (Marzahn-Hellersdorf 4), Moritz Dormann (Marzahn-Hellersdorf 2)",
-        "foto_originalFilename": "AGH D MarHell.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/da5d7731c35f5d682f879c1b6cebef9c7e9ad454-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -1019,15 +821,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:12:29Z",
         "_id": "046b1231-8a64-4590-9928-f4eb8d0c690d",
         "_originalId": "046b1231-8a64-4590-9928-f4eb8d0c690d",
-        "_rev": "jITbevOCTIorBgoUCU5TvA",
+        "_rev": "56Aw9PqdKBoWxRYUC036gH",
         "_system": {
           "base": {
             "id": "046b1231-8a64-4590-9928-f4eb8d0c690d",
-            "rev": "VOfSO31kbJ3qiUlVmRf0EL"
+            "rev": "U74tcxucQVTMOGRTVgm3BF"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:56:45Z",
+        "_updatedAt": "2026-08-17T16:20:55Z",
         "bezirk": "11 Lichtenberg",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg",
         "foto2": {
@@ -1040,7 +842,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/d384835218be2f59f1d6127f21e129201b1e4662-1920x2885.jpg",
         "foto_originalFilename": "ACHIM_JEDELSKY_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "ACHIM_JEDELSKY_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Achim setzt sich für den Abbau von Hürden ein - sei es in der Verwaltung oder im Zugang zu Wohnraum. Hierfür muss die Politik die Verantwortung übernehmen, aber auch die BürgerInnen aktiv einbeziehen.*\n\n*Achim hat in vier europäischen Ländern gelebt und ist überzeugt Europäer. Volt ist daher für ihn eine natürliche Wahl. Das Ziel von Volt Chancengleichheit für alle zu schaffen ist die Voraussetzung dafür in eine freien Gesellschaft zu Leben – das gilt für Europa, genauso wie für Berlin!*\n\n**Beruf**\n\nAchim berät Startups zu Finanzierung und Wachstum und unterrichtet an Berliner Hochschulen zu Digitalisierung und Projektmanagement. Die Basis für sein heutiges Engagement ist seine Erfahrung aus Managementpositionen in internationalen Firmen.\n\n**Biographie**\n\nAchim hat an der Bauhaus-Universität Weimar, in Stockholm/Schweden und in Leuven/Belgien studiert, sowie in England und den USA gearbeitet. Diese Erfahrungen haben ihn geprägt und seine Vorliebe für Innovationen entwickelt.\n\n**Weitere Infos auf**\n[LinkedIn](https://www.linkedin.com/in/achim-jedelsky/) und \n[Instagram](https://www.instagram.com/achimjedelsky/).",
         "name": "Achim Jedelsky",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/3f461e8f8122b2b0b8869a03779e30337564d356-1920x2400.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -1050,16 +851,16 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:12:47Z",
         "_id": "cc5e9077-d46f-4073-b22a-b54211925120",
-        "_originalId": "drafts.cc5e9077-d46f-4073-b22a-b54211925120",
-        "_rev": "65a54ea4-c882-4ab3-93ad-b7445c9db7ce",
+        "_originalId": "cc5e9077-d46f-4073-b22a-b54211925120",
+        "_rev": "56Aw9PqdKBoWxRYUC034e1",
         "_system": {
           "base": {
             "id": "cc5e9077-d46f-4073-b22a-b54211925120",
-            "rev": "56Aw9PqdKBoWxRYUC034e1"
+            "rev": "ZIuquwn7xL9POL93TtmxaX"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:32:41Z",
+        "_updatedAt": "2026-08-17T16:20:37Z",
         "bezirk": "11 Lichtenberg",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg",
         "foto2": {
@@ -1073,7 +874,6 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "MARTA_MENDEC_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "MARTA_MENDEC_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
         "name": "Marta Mendec",
-        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/acf02e987b370f20f0f63ecefc37cf9e10b8a09a-3840x4800.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/2c8587dfcdf8695eff759b0926ddf91ad3119e72-3840x5770.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -1085,40 +885,20 @@ export const REGIONS_CMS = [
       {
         "_key": "beff9880bb35",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Lichtenberg"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "1de577543fb8",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Lichtenberg verändert sich schneller als jeder andere Bezirk im Osten Berlins. Für Dich ist es einfach zuhause in Friedrichsfelde, Karlshorst, Lichtenberg, Falkenberg, Malchow, Wartenberg, Neu-Hohenschönhausen, Alt-Hohenschönhausen, Fennpfuhl und Rummelsburg. Hier ist unser Plan dafür.\n\n- **Einbindung von jungen Menschen:** Echte Mitbestimmung junger Menschen durch ein eigenes, von ihnen selbst verwaltetes Beteiligungs Budget, ein institutionalisiertes Anhörungsrecht der Jugendgremien in der BVV und konkrete Unterstützung beim Einbringen eigener Anliegen ins Bezirksparlament.\n- **Mobilität:** Unser Maßstab ist Vision Zero: Niemand soll im Straßenverkehr sterben. Wir wollen Tempo 30 an Gefahrenstellen, sichere Straßenbahnhaltestellen, an denen nicht riskant überholt werden kann und fräsen Kopfsteinpflaster ab, wo es das Radfahren blockiert, etwa in Karlshorst.\n- **Wohnen:** Monatelanges Warten auf eine Baugenehmigung ist Verwaltungsstau, kein Naturgesetz. Wir digitalisieren das Bauamt, mit Fast-Track für gemeinnützigen Wohnungsbau und Baugruppen. Und wir organisieren freiwilligen Wohnungstausch ohne Mietsprung und ohne Kiezwechsel.\n- **Hitze:** Plattenbauquartiere ohne Schatten werden im Sommer zur Belastung, für Ältere und kleine Kinder zuerst. Wir pflanzen Straßenbäume, schaffen Trinkbrunnen und Sonnensegel auf Spielplätzen und richten kühle öffentliche Aufenthaltsorte ein.\n- **Sauberkeit:** Müll und Hundekot machen Parks, Spielplätze und Ufer ungemütlich. Wir verbessern die Abfallinfrastruktur und reinigen häufiger, wo die Belastung am größten ist.",
-        "photo": null
+        "md_content": "Lichtenberg verändert sich schneller als jeder andere Bezirk im Osten Berlins. Für Dich ist es einfach zuhause in Friedrichsfelde, Karlshorst, Lichtenberg, Falkenberg, Malchow, Wartenberg, Neu-Hohenschönhausen, Alt-Hohenschönhausen, Fennpfuhl und Rummelsburg. Hier ist unser Plan dafür.\n\n- **Einbindung von jungen Menschen:** Echte Mitbestimmung junger Menschen durch ein eigenes, von ihnen selbst verwaltetes Beteiligungs Budget, ein institutionalisiertes Anhörungsrecht der Jugendgremien in der BVV und konkrete Unterstützung beim Einbringen eigener Anliegen ins Bezirksparlament.\n- **Mobilität:** Unser Maßstab ist Vision Zero: Niemand soll im Straßenverkehr sterben. Wir wollen Tempo 30 an Gefahrenstellen, sichere Straßenbahnhaltestellen, an denen nicht riskant überholt werden kann und fräsen Kopfsteinpflaster ab, wo es das Radfahren blockiert, etwa in Karlshorst.\n- **Wohnen:** Monatelanges Warten auf eine Baugenehmigung ist Verwaltungsstau, kein Naturgesetz. Wir digitalisieren das Bauamt, mit Fast-Track für gemeinnützigen Wohnungsbau und Baugruppen. Und wir organisieren freiwilligen Wohnungstausch ohne Mietsprung und ohne Kiezwechsel.\n- **Hitze:** Plattenbauquartiere ohne Schatten werden im Sommer zur Belastung, für Ältere und kleine Kinder zuerst. Wir pflanzen Straßenbäume, schaffen Trinkbrunnen und Sonnensegel auf Spielplätzen und richten kühle öffentliche Aufenthaltsorte ein.\n- **Sauberkeit:** Müll und Hundekot machen Parks, Spielplätze und Ufer ungemütlich. Wir verbessern die Abfallinfrastruktur und reinigen häufiger, wo die Belastung am größten ist."
       },
       {
         "_key": "de6973522f3e",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_lichtenberg.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "43d7ff9b27dd",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Lichtenberg: Marta Mendec, Nicolas Künzel, Achim Jedelsky, Anke Köhler",
-        "foto_originalFilename": "Lichtenberg.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/c2942a9160114e6a0d183fed0ab39b81c5ecd738-3840x2160.png"
-      },
-      {
-        "_key": "44bcb45afbdb",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkanidierende für Lichtenberg: Marta Mendec (Lichtenberg 4), Nicolas Künzel (Lichtenberg 5), Achim Jedelsky (Lichtenberg 6)",
-        "foto_originalFilename": "AGH D Lichtenberg.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/f0910dd8d8b42be3479fdae84da5ede343163b7f-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -1131,15 +911,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T10:04:05Z",
         "_id": "ab5c5a3c-1bce-4dc0-b3ec-0dd13e15e0a1",
         "_originalId": "ab5c5a3c-1bce-4dc0-b3ec-0dd13e15e0a1",
-        "_rev": "oqzgrKGMIxFMreVMC4HtFC",
+        "_rev": "56Aw9PqdKBoWxRYUC03KBZ",
         "_system": {
           "base": {
             "id": "ab5c5a3c-1bce-4dc0-b3ec-0dd13e15e0a1",
-            "rev": "oqzgrKGMIxFMreVMC4HGO8"
+            "rev": "ZIuquwn7xL9POL93TtmHIH"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:57:55Z",
+        "_updatedAt": "2026-08-17T16:22:46Z",
         "bezirk": "02 Friedrichshain-Kreuzberg",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg",
         "foto2": {
@@ -1152,7 +932,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/b25b6baa0952da3b5847a5399f4bb76dfb4189c5-3840x5770.jpg",
         "foto_originalFilename": "SUSANNE_ZELS_PORTRAIT_4x5_BERLIN2026_©Evelin_Frerk-2.jpg",
         "foto_originalFilename_2": "SUSANNE_ZELS_FULL_BODY_BERLIN2026_©Evelin_Frerk.jpg",
-        "md_content": "*Susanne setzt sich für eine grüne Stadt ein, in der Bürger:innen ihre Stadt mitgestalten und die Bezirke genug Geld haben, um Schulen, Straßen und das Gemeinwohl zu finanzieren. *\n\n*Susanne glaubt an Freiheit - diese schaffen wir aber nicht durch den entfesselten Markt, sondern vor allem durch Bildung, soziale Sicherheit, faire Startchancen.*\n\n**Beruf**\n\nSusanne berät gemeinnützige und internationale Organisationen sowie Erneuerbare Unternehmen zu ihrer Interessensvertretung. Als politische Entrepreneurin setze ich mich für systemische Veränderung in Europa ein.   \n\n**Biographie**\n\nSusanne ist in Charlottenburg-Wilmersdorf geboren und hat in Großbritannien, Belgien und Polen gelebt. \n\n**Weitere Infos auf**\n[Instagram](http://instagram.com/susannezels).",
         "name": "Susanne Zels",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/cd4d4f92048693821691b8c70e1d00db0083f848-3400x4250.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -1162,16 +941,16 @@ export const REGIONS_CMS = [
       {
         "_createdAt": "2026-08-12T10:03:46Z",
         "_id": "e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
-        "_originalId": "drafts.e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
-        "_rev": "f0c0de1f-1c33-47f9-9e5c-9ebbf00a8902",
+        "_originalId": "e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
+        "_rev": "gSD2EG7QiN9E3Tu6nMng51",
         "_system": {
           "base": {
             "id": "e7bbf25a-4d61-4eca-ac1c-9b93fdf0abde",
-            "rev": "gSD2EG7QiN9E3Tu6nMng51"
+            "rev": "U74tcxucQVTMOGRTVglWM5"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:47:32Z",
+        "_updatedAt": "2026-08-17T16:23:13Z",
         "bezirk": "02 Friedrichshain-Kreuzberg",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg",
         "foto2": {
@@ -1185,7 +964,6 @@ export const REGIONS_CMS = [
         "foto_originalFilename": "CHRISTOPG_KÖNIG_PORTRAIT_4x5_BERLIN2026©Evelin_Frerk_©Evelin_Frerk.jpg",
         "foto_originalFilename_2": "CHRISTOPG_KÖNIG_FULL_BODY_BERLIN2026©Evelin_Frerk_©Evelin_Frerk.jpg",
         "name": "Christoph König",
-        "md_content": "",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/0fa4edc7c8568135abaf5eb12c8a262384a8cc72-5664x7080.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
         "image_2": "https://cdn.sanity.io/images/xzcgo5ky/production/89393a0cab3c99f8c13211edd0809454867b6094-2741x4119.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
@@ -1197,40 +975,20 @@ export const REGIONS_CMS = [
       {
         "_key": "419698df2ffd",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Friedrichshain-Kreuzberg"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "383ea33d161e",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "Friedrichshain-Kreuzberg ist der dichteste und lebendigste Bezirk Berlins. Mit einer Energie, die kein anderer Kiez hat. Für Dich ist es einfach zuhause, in Friedrichshain und Kreuzberg. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Die M41 ist überlastet, die Verlängerung der A100 ist unnötig. Wir verlängern die M10 über den Hermannplatz und bringen die U1 bis ans Ostkreuz. Tramnetze wie in anderen europäischen Städten zeigen, wie es geht.\n- **Görlitzer Park:** Zäune lösen keine Probleme. Wir setzen auf soziale Maßnahmen und konsequente Bekämpfung der Ursachen, nicht auf Symbolpolitik, die nur verdrängt statt löst.\n- **Kulturorte:** Ein Club oder ein Kulturort wie das RAW-Gelände ist keine Verhandlungsmasse für Investoren. Mit verbindlichen Kulturflächen und langfristigen Nutzungsverträgen sichern wir Orte wie dieses, das SEZ und weitere, nach dem Vorbild von Amsterdams Kulturquartieren.\n- **Drogenpolitik:** Wegschauen am Kottbusser Tor oder am Hermannplatz löst nichts. Nach Zürcher Vorbild bauen wir Drogenkonsumräume bedarfsgerecht aus. Das hilft Betroffenen und entlastet den öffentlichen Raum gleichermaßen.\n- **Mitentscheiden:** Ob Görlitzer Park oder Bauprojekte wie die Rudolfstraße: Entscheidungen dürfen nicht über Deinen Kopf hinweg fallen. Mit Kiezbeiräten und mehrsprachigen Dialogformaten holen wir Dich mit an den Tisch.",
-        "photo": null
+        "md_content": "Friedrichshain-Kreuzberg ist der dichteste und lebendigste Bezirk Berlins. Mit einer Energie, die kein anderer Kiez hat. Für Dich ist es einfach zuhause, in Friedrichshain und Kreuzberg. Hier ist unser Plan dafür.\n\n- **Nahverkehr:** Die M41 ist überlastet, die Verlängerung der A100 ist unnötig. Wir verlängern die M10 über den Hermannplatz und bringen die U1 bis ans Ostkreuz. Tramnetze wie in anderen europäischen Städten zeigen, wie es geht.\n- **Görlitzer Park:** Zäune lösen keine Probleme. Wir setzen auf soziale Maßnahmen und konsequente Bekämpfung der Ursachen, nicht auf Symbolpolitik, die nur verdrängt statt löst.\n- **Kulturorte:** Ein Club oder ein Kulturort wie das RAW-Gelände ist keine Verhandlungsmasse für Investoren. Mit verbindlichen Kulturflächen und langfristigen Nutzungsverträgen sichern wir Orte wie dieses, das SEZ und weitere, nach dem Vorbild von Amsterdams Kulturquartieren.\n- **Drogenpolitik:** Wegschauen am Kottbusser Tor oder am Hermannplatz löst nichts. Nach Zürcher Vorbild bauen wir Drogenkonsumräume bedarfsgerecht aus. Das hilft Betroffenen und entlastet den öffentlichen Raum gleichermaßen.\n- **Mitentscheiden:** Ob Görlitzer Park oder Bauprojekte wie die Rudolfstraße: Entscheidungen dürfen nicht über Deinen Kopf hinweg fallen. Mit Kiezbeiräten und mehrsprachigen Dialogformaten holen wir Dich mit an den Tisch."
       },
       {
         "_key": "7d7474e75da7",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_x-hain.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "467203c9cb5b",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Friedrichshain und Kreuzberg: Dennis Brüsch, Jakob Welker, Christoph König, Susanne Zels, Klaus Fudicker, Beate Bluhm",
-        "foto_originalFilename": "FHain & X-Berg.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/dc8691eea9e984b5adcf993c6480592ef5f19949-3840x2160.png"
-      },
-      {
-        "_key": "991a310c038a",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Friedrichshain und Kreuzberg: Dennis Brüsch (Friedrichshain-Kreuzberg 4), Jakob Welker (Friedrichshain-Kreuzberg 1), Christoph König (Friedrichshain-Kreuzberg 5), Susanne Zels (Friedrichshain-Kreuzberg 2), Anke Köhler (Friedrichshain-Kreuzberg 3)",
-        "foto_originalFilename": "AGH D FHain & X-Berg.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/604f3d62c5daafffcc9a47b26531528a9999857b-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   },
@@ -1243,15 +1001,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:56:30Z",
         "_id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
         "_originalId": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
-        "_rev": "oqzgrKGMIxFMreVMC4Fy5o",
+        "_rev": "5f2C3ii77GPTXHjxnUHvcW",
         "_system": {
           "base": {
             "id": "be29120d-6978-4df0-bd14-b5ef5ac08ee7",
-            "rev": "VOfSO31kbJ3qiUlVmRb1KU"
+            "rev": "56Aw9PqdKBoWxRYUC03Otx"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:24:04Z",
+        "_updatedAt": "2026-09-08T16:39:38Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg",
         "foto2": {
@@ -1264,7 +1022,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/1f2545f827b99621dca37957aa0f67d081afb297-5464x8192.jpg",
         "foto_originalFilename": "CARA_SEEBERG_PORTRAIT_V2_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "CARA_SEEBERG_FULL_BODY_V2_BERLIN2026_©Max_Große-Wortmann.jpg",
-        "md_content": "*Mein Herzensthema ist soziale Gerechtigkeit, Kultur in Berlin und Kiezleben. All diese Dinge machen Berlin zu dem was es ist und es ist an der Zeit, dass wir das Beste aus uns rausholen.*\n\n*Europa war schon immer mein Herzensthema und Berlin ist meine Herzensstadt. Es kann nur besser werden, wenn man sich auch dafür einsetzt, daher habe ich mich entschlossen bei Volt mitzumachen und auch zu kandidieren. *\n\n**Beruf**\n\nIch bin Politische Beraterin beim Tagesspiegel und habe mich auf politische Kommunikation spezialisiert.\n\n**Biographie**\n\nIch bin gebürtige Berlinern - genau genommen gebürtige Charlottenburgerin - und habe viele Jahre in Europa verteilt gelebt. Dadurch konnte ich viele Einblicke gewinnen, was woanders schon funktioniert und freue mich, das in meine Heimat bringen zu können.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/caraseeberg/) und [LinkedIn](https://www.linkedin.com/in/cara-seeberg/).",
         "name": "Cara Seeberg",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/aca9e478fe6c8ceb722a8a6e1af07a57270c0360-4973x6218.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -1275,15 +1032,15 @@ export const REGIONS_CMS = [
         "_createdAt": "2026-08-12T09:56:49Z",
         "_id": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
         "_originalId": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
-        "_rev": "VOfSO31kbJ3qiUlVmRdXdv",
+        "_rev": "56Aw9PqdKBoWxRYUC03NzT",
         "_system": {
           "base": {
             "id": "67c96fd4-1a45-4e76-b0ca-fa712a140143",
-            "rev": "VOfSO31kbJ3qiUlVmRag4Q"
+            "rev": "TZSo9XvhWf3aAVsIk7RCc9"
           }
         },
         "_type": "kandidatBvv",
-        "_updatedAt": "2026-09-12T10:24:10Z",
+        "_updatedAt": "2026-08-17T16:24:01Z",
         "bezirk": "04 Charlottenburg-Wilmersdorf",
         "foto": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg",
         "foto2": {
@@ -1296,7 +1053,6 @@ export const REGIONS_CMS = [
         "foto_2": "https://cdn.sanity.io/images/xzcgo5ky/production/c2153780eb4a3f6ca8423ad530ddd6c8fce314cb-5464x8192.jpg",
         "foto_originalFilename": "CHRISTIAN_WEIßSTEINER_PORTRAIT_4x5_BERLIN2026_©Max_Große-Wortmann.jpg",
         "foto_originalFilename_2": "CHRISTIAN_WEIßSTEINER_FULL_BODY_BERLIN2026_©Max_Große-Wortmann.jpg",
-        "md_content": "*Berlin als europäische Metropole: sozial, gerecht, innovativ, sauber, grün und wirtschaftlich attraktiv. Lebenswerte Kieze: Die Stadt als Wohnzimmer, statt Auto-Diktatur. Digitale Verwaltung: effizient und nah an den Bürger*innen.*\n\n*Freiheit bedeutet für mich soziale Sicherheit, Gerechtigkeit und eine bessere Zukunft für alle. Das hält die Menschen zusammen und schafft Freude auf morgen. Genau das möchte ich in Berlin vorantreiben. Politik braucht Mut, europäischen Willen und eine Vision für die Zukunft. Volt ist für mich die richtige politische Heimat, weil wir der progressive und europäische Gegenentwurf zu Stillstand und Spaltung sind.*\n\n**Beruf**\n\nIch bin Diplom-Kaufmann und habe über ein Jahrzehnt als IT-Sales Professional und Account Manager in internationalen IT-Unternehmen die digitale Modernisierung der öffentlichen Verwaltung vorangetrieben – Wissen, das ich nun für eine effiziente, bürgernahe Berliner Verwaltung einbringe.\n\n**Biographie**\n\nIch bin überzeugter Europäer. Geboren in Hamburg, mit doppelter EU-Staatsbürgerschaft, habe ich in Hamburg und Italien Betriebswirtschaft studiert. Mit meiner bulgarischen Frau lebten wir bereits in verschiedenen Ländern Europas und Asiens – Berlin ist heute unser Herzort und Zuhause.\n\n**Weitere Infos auf**\n[Instagram](https://www.instagram.com/christian.weisssteiner.eu/) und [LinkedIn](https://www.linkedin.com/in/christianweisssteiner/).",
         "name": "Christian Weißsteiner",
         "image": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg?w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=20",
         "imageDetail": "https://cdn.sanity.io/images/xzcgo5ky/production/6874027713c510730b1cc7fe39d0db2b2e3aa191-4452x5566.jpg?w=1200&h=1200&fit=fill&crop=entropy&auto=format&sharp=30",
@@ -1309,40 +1065,20 @@ export const REGIONS_CMS = [
       {
         "_key": "fae84ad7d068",
         "_type": "hero_linear",
-        "foto_originalFilename": null,
         "heroZeilen": [
           "Der Volt Plan für Charlottenburg-Wilmersdorf"
-        ],
-        "photo": null
+        ]
       },
       {
         "_key": "2823a19fad82",
         "_type": "md_content",
-        "foto_originalFilename": null,
-        "md_content": "- **Bezahlbar wohnen und Wohnungslosigkeit eliminieren:** Wohnen darf kein Luxus sein. Wir schaffen mehr bezahlbare Wohnungen. Durch Housing First setzen wir auf Helfen statt Verdrängen. Nicht nur am Zoo, sondern überall dort, wo es nötig ist.\n- **Sichere, leise und gerechte Mobilität für alle:** Straßen sollen Menschen verbinden, nicht nur Autos leiten. Mehr Tempo 30, sichere Querungen, gute Radwege und Vorrang für Fuß-, Rad- und Nahverkehr machen den Kiez entspannter und barriereärmer, und das nicht nur vor Schulen.\n- **Saubere Straßen und Plätze, um die sich jemand kümmert:** Öffentlicher Raum soll gepflegt, sauber und verlässlich betreut sein. Mehr Sauberkeit, klare Zuständigkeiten und schnelle Reaktion auf Müll und Schmutz stärken das Wohlgefühl im Kiez.\n- **Gastronomie und Einzelhandel fördern:** Lebendige Straßen, gute Erreichbarkeit und schnelle Genehmigungen schaffen Raum für Cafés und kleine Betriebe. Steigende Mieten dürfen Betriebe nicht verdrängen. Wir sichern kleinteiliges, lebendiges Gewerbe, statt Ketten und Leerstand.\n- **Innovative Ideen, die im Kiez wirken:** Wir bringen Start-ups, Kreative, Hochschulen, Verwaltung und Betriebe zusammen. So entstehen konkrete Projekte, neue Chancen und zukunftsfähige Arbeitsplätze direkt vor Ort.\n- **Beteiligungsformate, mitbestimmen statt nur zuschauen:** Die Menschen im Bezirk sollen mitreden können. Kiezforen, Bürgerräte und digitale Beteiligung machen Politik näher am Alltag.",
-        "photo": null
+        "md_content": "- **Bezahlbar wohnen und Wohnungslosigkeit eliminieren:** Wohnen darf kein Luxus sein. Wir schaffen mehr bezahlbare Wohnungen. Durch Housing First setzen wir auf Helfen statt Verdrängen. Nicht nur am Zoo, sondern überall dort, wo es nötig ist.\n- **Sichere, leise und gerechte Mobilität für alle:** Straßen sollen Menschen verbinden, nicht nur Autos leiten. Mehr Tempo 30, sichere Querungen, gute Radwege und Vorrang für Fuß-, Rad- und Nahverkehr machen den Kiez entspannter und barriereärmer, und das nicht nur vor Schulen.\n- **Saubere Straßen und Plätze, um die sich jemand kümmert:** Öffentlicher Raum soll gepflegt, sauber und verlässlich betreut sein. Mehr Sauberkeit, klare Zuständigkeiten und schnelle Reaktion auf Müll und Schmutz stärken das Wohlgefühl im Kiez.\n- **Gastronomie und Einzelhandel fördern:** Lebendige Straßen, gute Erreichbarkeit und schnelle Genehmigungen schaffen Raum für Cafés und kleine Betriebe. Steigende Mieten dürfen Betriebe nicht verdrängen. Wir sichern kleinteiliges, lebendiges Gewerbe, statt Ketten und Leerstand.\n- **Innovative Ideen, die im Kiez wirken:** Wir bringen Start-ups, Kreative, Hochschulen, Verwaltung und Betriebe zusammen. So entstehen konkrete Projekte, neue Chancen und zukunftsfähige Arbeitsplätze direkt vor Ort.\n- **Beteiligungsformate, mitbestimmen statt nur zuschauen:** Die Menschen im Bezirk sollen mitreden können. Kiezforen, Bürgerräte und digitale Beteiligung machen Politik näher am Alltag."
       },
       {
         "_key": "3c69de6a39e5",
         "_type": "one_cta",
         "ctaHref": "https://voltdeutschland.org/storage/assets-berlin/pdf/policy-wahlprogramm-2026/bezirke/bezirksprogramm_cha-wi.pdf",
-        "ctaLabel": "Gesamtes Bezirksprogramm lesen…",
-        "foto_originalFilename": null,
-        "photo": null
-      },
-      {
-        "_key": "1d3651f0eb09",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unser Team für Charlottenburg-Wilmersdorf: Juliane Kalbacher, Christian Weisssteiner, Ole John, Cara Seeberg, Markus Flaam",
-        "foto_originalFilename": "ChaWi.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/1a18b395faf187c9e208e34f185d2c5537a376c0-3840x2160.png"
-      },
-      {
-        "_key": "e3b1dddbd40e",
-        "_type": "photo",
-        "alt": "Volt Berlin - Unsere AGH-Direktkandidierende für Charlottenburg-Wilmersdorf: Juliane Kalbacher (Charlottenburg-Wilmersdorf 1), Christian Weisssteiner (Charlottenburg-Wilmersdorf 4), Joshua Heitzler (Charlottenburg-Wilmersdorf 5), Cara Seeberg (Charlottenburg-Wilmersdorf 6), Markus Flaam (Charlottenburg-Wilmersdorf 7)",
-        "foto_originalFilename": "AGH D ChaWi.png",
-        "photo": "https://cdn.sanity.io/images/xzcgo5ky/production/241d5a29a2ad91174f71808ee4fb4b3ee59faf92-3840x2160.png"
+        "ctaLabel": "Gesamtes Bezirksprogramm lesen…"
       }
     ]
   }
