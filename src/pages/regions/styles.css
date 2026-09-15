@@ -45,6 +45,18 @@
   margin-block-start: var(--gap-big);
 }
 
+/* Abschlussbild unter der ganzen Uebersicht (Gruppenbild aller BVV-
+   Kandidierenden). Laeuft wie die Uebersicht ueber die volle Breite. */
+.regions-overview__photo {
+  margin: var(--gap-big) 0 0;
+}
+
+.regions-overview__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* Spitzenduo: Foto, Name und Info-Text bilden auf jeder Breite einen Stapel –
    die Bloecke stehen untereinander, nie nebeneinander. */
 .region__candidates {

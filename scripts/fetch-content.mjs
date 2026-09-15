@@ -36,6 +36,7 @@ const OUT_NEWS = resolve(DATA_DIR, 'news.generated.ts')
 const OUT_PRESS = resolve(DATA_DIR, 'press.generated.ts')
 const OUT_PAGES = resolve(DATA_DIR, 'pages.generated.ts')
 const OUT_SUPPORTERS = resolve(DATA_DIR, 'supporters.generated.ts')
+const OUT_BEZIRKE_SEITE = resolve(DATA_DIR, 'bezirke-seite.generated.ts')
 
 // Staging-Preview: Auf Netlify-Preview-/Branch-Deploys (CONTEXT != 'production')
 // ziehen wir Entwuerfe statt nur veroeffentlichter Inhalte. Dafuer noetig:
@@ -80,6 +81,10 @@ const CLUSTER_IMG_PARAMS = 'w=600&h=600&fit=fill&crop=entropy&auto=format&sharp=
 // Wall of Support: Plakate unbeschnitten lassen (Quellen mischen 4:5 und 1:1),
 // nur Breite begrenzen und ins beste Format ausliefern.
 const WALL_IMG_PARAMS = 'w=800&auto=format&sharp=10'
+// Abschlussbild der Bezirks-Uebersicht: Querformat ueber die volle Breite.
+// Die Quelle ist ein sehr grosses PNG, daher begrenzen (fit=max skaliert nie
+// hoch) und ins beste Format ausliefern, statt mehrere MB auszuspielen.
+const BEZIRKE_IMG_PARAMS = 'w=1600&q=75&fit=max&auto=format'
 // Video-Poster: Seitenverhältnis der Quelle behalten, nur begrenzen und
 // komprimieren (fit=max skaliert nie hoch). Ein Poster lädt vor dem Video,
 // darf also nicht mehrere MB groß sein.
@@ -221,6 +226,17 @@ const VIDEOS_QUERY = `{
     "revealSrc": *[_type=="sanity.fileAsset" && originalFilename=="20260715_VOLT_UNFCK_REVEAL_LONG_VERSION_FINAL_XtraSmall.mp4"][0].url,
     "revealPoster": *[_type=="sanity.imageAsset" && originalFilename=="unfck_reveal_poster.jpg"][0].url
   }
+}`
+
+// Bezirks-Uebersicht (/bezirke) kommt aus dem Singleton "seiteBezirke"
+// (Studio: Menuepunkt "Bezirks-Uebersicht"). Die Seite selbst baut der Code,
+// hier liegt nur das redaktionell gepflegte Bild unter der Uebersicht.
+const BEZIRKE_SEITE_QUERY = `*[_id=="seiteBezirke"][0]{
+  "photo_url": photo_unten.photo.asset->url,
+  "photo_alt": photo_unten.alt,
+  "photo_originalFilename": photo_unten.photo.asset->originalFilename,
+  "photo_width": photo_unten.photo.asset->metadata.dimensions.width,
+  "photo_height": photo_unten.photo.asset->metadata.dimensions.height
 }`
 
 // Meet-&-Greet-Karussell der Termine-Seite: kommt aus dem bestehenden CMS-Feld
@@ -493,6 +509,22 @@ function buildVideos(d) {
   return out
 }
 
+function buildBezirkeSeite(d) {
+  const src = withParams(clean(d?.photo_url), BEZIRKE_IMG_PARAMS)
+  return {
+    photo_unten: {
+      src,
+      // Ohne Alternativ-Text bleibt das Bild fuer Screenreader stumm – besser
+      // als einen Dateinamen vorzulesen. Die Redaktion kann ihn nachtragen.
+      alt: clean(d?.photo_alt),
+      foto_originalFilename: clean(d?.photo_originalFilename),
+      // Fuer das Seitenverhaeltnis im Layout, damit beim Laden nichts springt.
+      width: Number(d?.photo_width) || 0,
+      height: Number(d?.photo_height) || 0,
+    },
+  }
+}
+
 function buildMeets(rows) {
   const list = (rows || [])
     .map((b, i) => ({
@@ -576,7 +608,7 @@ const header = `// AUTO-GENERIERT von scripts/fetch-content.mjs aus Sanity.
 // // Letzter Abruf: ${new Date().toISOString()}
 
 async function main() {
-  const [regionsRows, pressRows, newsRows, pagesRows, supporterRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows] = await Promise.all([
+  const [regionsRows, pressRows, newsRows, pagesRows, supporterRows, wpRes, kandiRows, wsRes, videosRes, meetsRes, unfckRes, spitzenduoRows, bezirkeSeiteRes] = await Promise.all([
     client.fetch(REGIONS_QUERY),
     client.fetch(PRESS_QUERY),
     client.fetch(NEWS_QUERY),
@@ -589,6 +621,7 @@ async function main() {
     client.fetch(MEETS_QUERY),
     client.fetch(UNFCK_QUERY),
     client.fetch(SPITZENDUO_QUERY),
+    client.fetch(BEZIRKE_SEITE_QUERY),
   ])
 
   const regions = buildRegions(regionsRows)
@@ -604,6 +637,7 @@ async function main() {
   const unfck = buildUnfck(unfckRes)
   const spitzenduo = buildSpitzenduo(spitzenduoRows, kandidaten)
   const cluster = buildCluster(kandiRows)
+  const bezirkeSeite = buildBezirkeSeite(bezirkeSeiteRes)
 
   writeFileSync(
     OUT_REGIONS,
@@ -675,9 +709,14 @@ async function main() {
     `${header}\n\nexport const KANDIDATEN_CLUSTER_CMS = ${JSON.stringify(cluster, null, 2)}\n`,
     'utf8',
   )
+  writeFileSync(
+    OUT_BEZIRKE_SEITE,
+    `${header}\n\nexport const BEZIRKE_SEITE_CMS = ${JSON.stringify(bezirkeSeite, null, 2)}\n`,
+    'utf8',
+  )
 
   console.info(
-    `Inhalte aktualisiert: Bezirke (${regions.length}), Press (${press.length}), News (${news.length}), Pages (${pages.length}), Supporters (${supporters.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}).`,
+    `Inhalte aktualisiert: Bezirke (${regions.length}), Press (${press.length}), News (${news.length}), Pages (${pages.length}), Supporters (${supporters.length}), Wahlprogramm (${wahlprogramm.pillars.length} Kapitel), ${kandidaten.length} Kandidierende, Wahlsystem, Videos, Meets (${meets.length}), Unfck-Collage (${unfck.length}), Spitzenduo (${spitzenduo.length}), Cluster (${cluster.length}), Bezirks-Uebersicht (${bezirkeSeite.photo_unten.src ? 'Bild' : 'kein Bild'}).`,
   )
 }
 
@@ -696,7 +735,8 @@ main().catch((err) => {
     existsSync(OUT_MEETS) &&
     existsSync(OUT_UNFCK) &&
     existsSync(OUT_SPITZENDUO) &&
-    existsSync(OUT_CLUSTER)
+    existsSync(OUT_CLUSTER) &&
+    existsSync(OUT_BEZIRKE_SEITE)
   ) {
     console.warn('Behalte bestehende generierte Dateien (letzter Stand).')
     process.exit(0)
