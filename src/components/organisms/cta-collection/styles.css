@@ -1,0 +1,143 @@
+/* Gestaltete Sammlungen anstelle der aufgereihten CTA-Buttons auf
+   /wahlprogramm. Die Seite steht auf Weiss, also lila Text auf hellem Grund.
+
+   Sprachfassungen werden zu gleich grossen Kacheln mit grosser Flagge,
+   Dokumente zu breiten Balken mit farbiger Kante. */
+
+.cta-collection {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cta-collection__item {
+  min-width: 0;
+}
+
+.cta-collection--sprachen {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: var(--space-3);
+}
+
+.cta-collection--sprachen .cta-card {
+  display: grid;
+  grid-template-areas:
+    'flag arrow'
+    'name name';
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-4);
+  border: 2px solid var(--color-purple);
+  color: var(--color-purple);
+  transition: background-color 0.12s ease-in-out, transform 0.12s ease-in-out;
+}
+
+.cta-collection--sprachen .cta-card:hover,
+.cta-collection--sprachen .cta-card:focus-visible {
+  background-color: var(--color-neon);
+  transform: rotate(-1.5deg);
+}
+
+.cta-collection--sprachen .cta-card__flag {
+  grid-area: flag;
+  font-size: 2rem;
+  line-height: 1;
+  /* Fallback-Kuerzel ("AR") statt Flagge – als Kaestchen lesbar machen. */
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.cta-collection--sprachen .cta-card__name {
+  grid-area: name;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  text-wrap: balance;
+}
+
+.cta-collection--sprachen .cta-card__arrow {
+  grid-area: arrow;
+  display: inline-flex;
+  opacity: 0.5;
+}
+
+.cta-collection--dokumente {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.cta-collection--dokumente .cta-doc {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    'index eyebrow arrow'
+    'index topic   arrow';
+  align-items: center;
+  gap: 0 var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  /* Farbiger Balken statt Rahmen – das Dokument bekommt eine Kante. */
+  border-inline-start: 6px solid var(--color-purple);
+  background-color: rgba(80, 35, 121, 0.06);
+  color: var(--color-purple);
+  transition: background-color 0.12s ease-in-out, color 0.12s ease-in-out;
+}
+
+.cta-collection--dokumente .cta-doc:hover,
+.cta-collection--dokumente .cta-doc:focus-visible {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+.cta-collection--dokumente .cta-doc__index {
+  grid-area: index;
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  opacity: 0.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.cta-collection--dokumente .cta-doc__eyebrow {
+  grid-area: eyebrow;
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+.cta-collection--dokumente .cta-doc__topic {
+  grid-area: topic;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+}
+
+.cta-collection--dokumente .cta-doc__arrow {
+  grid-area: arrow;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-collection .cta-card,
+  .cta-collection .cta-doc {
+    transition: none;
+  }
+
+  .cta-collection .cta-card:hover,
+  .cta-collection .cta-card:focus-visible,
+  .cta-collection .cta-doc:hover,
+  .cta-collection .cta-doc:focus-visible {
+    transform: none;
+  }
+}

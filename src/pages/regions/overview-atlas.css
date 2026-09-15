@@ -1,0 +1,259 @@
+/* Ideation 2 – "Atlas"
+   Karte und Liste laufen synchron: die Karte klebt, die Liste scrollt, der
+   Bezirk in der Blickmitte leuchtet. Mobil rutscht die Karte als flacher
+   Streifen unter den Header. */
+
+.atlas {
+  /* Platz fuer den klebenden Site-Header. */
+  --atlas-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* --- Karte ---------------------------------------------------------------- */
+
+.atlas__map-sticky {
+  position: sticky;
+  top: var(--atlas-top);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding-block: var(--space-3);
+  /* Verhindert, dass Listenzeilen unter der Karte durchscheinen. */
+  background-color: var(--color-purple);
+}
+
+.atlas__map {
+  width: 100%;
+  max-width: 18rem;
+  color: var(--color-white);
+}
+
+.atlas__map-caption {
+  margin: 0;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-neon);
+}
+
+/* --- Liste ---------------------------------------------------------------- */
+
+.atlas__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.atlas__row {
+  transition: transform 0.15s ease-in-out;
+}
+
+.atlas__row-link {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-white);
+  color: var(--color-purple);
+  transition: background-color 0.15s ease-in-out;
+}
+
+.atlas__row--active .atlas__row-link {
+  background-color: var(--color-neon);
+}
+
+.atlas__row-index {
+  align-self: start;
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  opacity: 0.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.atlas__row-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.atlas__row-name {
+  font-size: clamp(1.05rem, 2.6vw, 1.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-snug);
+  text-wrap: balance;
+  /* Die Doppelnamen sollen am Bindestrich umbrechen statt herauszuragen. */
+  overflow-wrap: break-word;
+}
+
+.atlas__row-label {
+  font-size: var(--text-fussnote);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+}
+
+.atlas__row-duo {
+  font-size: 0.95rem;
+  line-height: var(--line-snug);
+}
+
+.atlas__row-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-block-start: var(--space-2);
+  font-size: var(--text-cta);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --- Portraits ------------------------------------------------------------ */
+
+.atlas__row-faces {
+  display: flex;
+  align-self: start;
+  /* Nicht zusammenquetschen lassen – die Portraits geben die Breite vor. */
+  flex: none;
+  /* Die beiden Koepfe ueberlappen leicht – sie gehoeren als Duo zusammen.
+     Der Versatz waechst mit dem Portraet, sonst wirkt er bei grossen
+     Bubbles wie ein Zufall. */
+  padding-inline-start: 1.5rem;
+}
+
+.atlas__face {
+  /* Volle Groesse ab ca. 534px Viewport. Auf schmalen Telefonen etwas
+     kleiner, sonst bleiben der Textspalte keine 90px und lange Namen wie
+     "Charlottenburg-Wilmersdorf" passen nicht mehr. */
+  width: clamp(4rem, 18vw, 6rem);
+  height: clamp(4rem, 18vw, 6rem);
+  margin-inline-start: -1.5rem;
+  object-fit: cover;
+  /* Die Portraits sind 4:5, der Kreis ist quadratisch – `cover` schneidet also
+     oben und unten je ein Achtel weg und koepft die Leute. Oben buendig
+     ausrichten und stattdessen nur unten beschneiden. */
+  object-position: 50% 0;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  background-color: var(--color-purple);
+}
+
+.atlas__row--active .atlas__face {
+  border-color: var(--color-neon);
+}
+
+.atlas__face--blank {
+  display: grid;
+  place-items: center;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 900px) {
+  .atlas {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: stretch;
+    gap: var(--space-7);
+    /* Beide Spalten teilen sich eine feste Hoehe: die Karte steht still, die
+       Liste bekommt daneben ihren eigenen Scrollbereich. */
+    height: min(72vh, 46rem);
+    min-height: 28rem;
+  }
+
+  .atlas__map-pane {
+    display: flex;
+    align-items: center;
+    min-height: 0;
+  }
+
+  .atlas__map-sticky {
+    /* Die Spalte scrollt nicht mehr – sticky hat hier nichts mehr zu tun. */
+    position: static;
+    width: 100%;
+    /* Auf Desktop steht die Karte frei in ihrer Spalte, ohne Deckfarbe. */
+    background-color: transparent;
+    padding-block: var(--space-5);
+    gap: var(--space-4);
+  }
+
+  .atlas__map {
+    max-width: none;
+  }
+
+  .atlas__list {
+    height: 100%;
+    /* Ohne das setzt die Grid-Zelle die Mindesthoehe auf den Inhalt und der
+       Scrollbereich entsteht nie. */
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    /* Luft fuer die Scrollbar, damit sie nicht auf den Karten klebt. */
+    padding-inline-end: var(--space-3);
+    /* Firefox kennt nur Daumen- und Spurfarbe und zeichnet keine Pfeile. */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-white) transparent;
+  }
+
+  .atlas__list::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .atlas__list::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .atlas__list::-webkit-scrollbar-thumb {
+    background-color: var(--color-white);
+  }
+
+  /* Die Pfeilfelder oben und unten. `single-button` trifft nur die einzeln
+     stehenden Pfeile, nicht die Doppelpfeil-Variante mancher Plattformen. */
+  .atlas__list::-webkit-scrollbar-button:single-button {
+    display: block;
+    height: 10px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 8px;
+  }
+
+  .atlas__list::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath d='M4 1.5 7 6H1z' fill='%23ffffff'/%3E%3C/svg%3E");
+  }
+
+  .atlas__list::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath d='M4 6.5 1 2h6z' fill='%23ffffff'/%3E%3C/svg%3E");
+  }
+
+  .atlas__map-caption {
+    font-size: var(--text-body);
+  }
+
+  .atlas__face {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .atlas__row-link {
+    padding: var(--space-5);
+    gap: var(--space-4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atlas__row,
+  .atlas__row-link {
+    transition: none;
+  }
+}

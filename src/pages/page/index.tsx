@@ -17,6 +17,9 @@ import ProgramSection from "../../components/organisms/program-section";
 import { WAHLPROGRAMM } from "../../data/wahlprogramm";
 import { getHeadlineColors } from '../../lib/getHeadlineColors'
 import { getFullBodyText } from "../../lib/getFullBodyText";
+import { CtaCollection } from "../../components/organisms/cta-collection";
+import { classifyCtaItems } from "../../components/organisms/cta-collection/model";
+import { groupCtaRuns, type PageEntry } from "./cta-groups";
 
 function CustomCalendarPage() {
   const { items, raw, status } = useCalendar();
@@ -169,6 +172,21 @@ export function PagePage() {
 
   const isEventsPage = Boolean(pathname.endsWith('/termine'))
 
+  // Vorerst nur auf /wahlprogramm – dort stehen die beiden Button-Reihen, um
+  // die es geht. Andere CMS-Seiten rendern unveraendert weiter.
+  const usesCtaGroups = page.slug === 'wahlprogramm'
+  // Die generierten Module sind eine Union aus Array-Typen (ein Eintrag je
+  // Seite), darum das Element-Typargument explizit setzen.
+  type ContentModule = (typeof page.content_modules)[number]
+  const modules: ContentModule[] = page.content_modules
+  const entries: PageEntry<ContentModule>[] = usesCtaGroups
+    ? groupCtaRuns<ContentModule>(modules)
+    : modules.map((module, index) => ({
+        kind: 'module' as const,
+        module,
+        index,
+      }))
+
   const theme_variant = page.theme === 'purple' ? 'purple' : 'light' as const
   return (
     <PageLayout activePath={pathname} variant={theme_variant} style={
@@ -193,7 +211,39 @@ export function PagePage() {
         </section> */}
 
       {
-        page.content_modules.map((c, index) => {
+        entries.map((entry) => {
+          if (entry.kind === 'cta-group') {
+            const { bgColor, textColor } = getHeadlineColors(entry.headlineTheme)
+
+            return (
+              <section
+                key={entry.key}
+                className="pages__text_width"
+                style={{ marginBlock: 'var(--gap-big) 16px' }}
+              >
+                <HighlightText
+                  as="h2"
+                  autoBreakSize={autoBreakSize_roomy}
+                  lines={entry.headlineZeilen}
+                  variant="subtitel"
+                  color={bgColor}
+                  textColor={textColor}
+                  align="left"
+                  uppercase={false}
+                />
+
+                <div style={{ marginBlockStart: 'var(--gap-small)' }}>
+                  <CtaCollection
+                    items={entry.items}
+                    kind={classifyCtaItems(entry.items)}
+                  />
+                </div>
+              </section>
+            )
+          }
+
+          const c = entry.module
+          const index = entry.index
           const key = `${index}-${c._type}`
 
           const c_as_any = (c as any)

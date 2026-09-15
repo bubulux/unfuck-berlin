@@ -211,8 +211,10 @@ export function SupportersPage() {
             key={r}
             className={`wall__row ${r % 2 ? 'wall__row--reverse' : ''}`}
             // Bewusst langsam: pro Reihe leicht unterschiedliche Dauer, damit
-            // die Baender nicht im Gleichschritt laufen.
-            style={{ '--duration': `${68 + r * 14}s` } as CSSProperties}
+            // die Baender nicht im Gleichschritt laufen. Grundwert und Versatz
+            // sind gemeinsam um ein Viertel gestreckt, der Versatz bleibt
+            // dadurch im gleichen Verhaeltnis zur Grunddauer.
+            style={{ '--duration': `${85 + r * 17.5}s` } as CSSProperties}
           >
             <div className="wall__track">
               {Array.from({ length: COPIES }, (_, copy) => (
