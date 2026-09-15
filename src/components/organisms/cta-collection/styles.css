@@ -1,6 +1,10 @@
 /* Gestaltete Sammlungen anstelle der aufgereihten CTA-Buttons.
    Die Seite /wahlprogramm steht auf Weiss – alle Entwuerfe rechnen mit
-   lila Text auf hellem Grund. */
+   lila Text auf hellem Grund.
+
+   Gewaehlt hat das Team Entwurf 1 fuer die Sprachfassungen und Entwurf 2
+   fuer die Positionspapiere (siehe CHOSEN_CTA_VARIANT in model.ts). Die
+   uebrigen Entwuerfe bleiben stehen, damit ein Wechsel eine Zeile bleibt. */
 
 .cta-collection {
   margin: 0;
@@ -393,52 +397,6 @@
   .cta-collection--dokumente.cta-collection--v3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-}
-
-/* ======================================================================
-   Temporaerer Umschalter fuers Review
-   ====================================================================== */
-
-.cta-switcher {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-  margin-block-end: var(--space-4);
-  padding: var(--space-2);
-  border: 1px dashed rgba(80, 35, 121, 0.4);
-  color: var(--color-purple);
-}
-
-.cta-switcher__hint {
-  margin-inline-end: var(--space-1);
-  padding-inline: var(--space-2);
-  font-size: var(--text-fussnote);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  opacity: 0.6;
-}
-
-.cta-switcher__tab {
-  padding: var(--space-2) var(--space-3);
-  border: 0;
-  background-color: transparent;
-  color: inherit;
-  font-family: inherit;
-  font-size: var(--text-cta);
-  font-weight: var(--font-weight-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-}
-
-.cta-switcher__tab:hover {
-  background-color: rgba(80, 35, 121, 0.1);
-}
-
-.cta-switcher__tab--active {
-  background-color: var(--color-purple);
-  color: var(--color-white);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -27,14 +27,14 @@ export function RegionsPage() {
     .filter(a => pathname.endsWith(`/${a.slug}`))
 
   if (!region_many.length) {
-    // Drei Entwuerfe fuer die Uebersicht. Standard ist /bezirke; /bezirke/2 und
-    // /bezirke/3 zeigen die Alternativen, ohne dass irgendwo ein Umschalter
-    // sichtbar waere.
+    // Das Team hat sich fuer den Atlas entschieden – der liegt jetzt auf
+    // /bezirke. Die beiden anderen Entwuerfe bleiben vorerst unter /bezirke/2
+    // und /bezirke/3 erreichbar, falls noch jemand vergleichen will.
     const overview = pathname.endsWith("/2")
-      ? <OverviewAtlas />
+      ? <OverviewKonstellation />
       : pathname.endsWith("/3")
         ? <OverviewKacheln />
-        : <OverviewKonstellation />
+        : <OverviewAtlas />
 
     return (
       <PageLayout activePath="/bezirke" variant="purple">

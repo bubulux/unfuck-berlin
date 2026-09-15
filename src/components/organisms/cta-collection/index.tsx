@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import { Icon } from '../../atoms/icon'
 import {
-  CTA_VARIANT_LABELS,
+  ctaVariantFor,
   parseDocument,
   parseLanguage,
   type CtaCollectionKind,
@@ -46,7 +46,8 @@ function CtaLink({
 export interface CtaCollectionProps {
   items: CtaItem[]
   kind: CtaCollectionKind
-  variant: CtaVariant
+  /** Ohne Angabe gilt der Entwurf fuer diese Sorte, per Default die Liste. */
+  variant?: CtaVariant
 }
 
 /**
@@ -54,7 +55,11 @@ export interface CtaCollectionProps {
  * Sammlung. Drei Entwuerfe, jeweils getrennt fuer Sprachfassungen und
  * Dokumente – die beiden Sorten tragen sehr unterschiedlich viel Inhalt.
  */
-export function CtaCollection({ items, kind, variant }: CtaCollectionProps) {
+export function CtaCollection({
+  items,
+  kind,
+  variant = ctaVariantFor(kind),
+}: CtaCollectionProps) {
   if (!items.length) return null
 
   const classes = [
@@ -123,44 +128,6 @@ export function CtaCollection({ items, kind, variant }: CtaCollectionProps) {
         )
       })}
     </ul>
-  )
-}
-
-export interface CtaVariantSwitcherProps {
-  value: CtaVariant
-  onChange: (variant: CtaVariant) => void
-  /** Beschriftung fuer Screenreader, damit beide Umschalter unterscheidbar sind. */
-  label: string
-}
-
-/**
- * Temporaerer Umschalter fuer das Review – gehoert nicht ins fertige Design.
- */
-export function CtaVariantSwitcher({
-  value,
-  onChange,
-  label,
-}: CtaVariantSwitcherProps) {
-  return (
-    <div className="cta-switcher" role="group" aria-label={label}>
-      <span className="cta-switcher__hint">Entwurf</span>
-      {([1, 2, 3] as CtaVariant[]).map((variant) => (
-        <button
-          key={variant}
-          type="button"
-          className={[
-            'cta-switcher__tab',
-            value === variant && 'cta-switcher__tab--active',
-          ]
-            .filter(Boolean)
-            .join(' ')}
-          aria-pressed={value === variant}
-          onClick={() => onChange(variant)}
-        >
-          {variant}. {CTA_VARIANT_LABELS[variant]}
-        </button>
-      ))}
-    </div>
   )
 }
 
