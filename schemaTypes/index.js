@@ -28,6 +28,7 @@ import kandidatBvv from './kandidatBvv'
 // import questionAnswer from './questionAnswer'
 // import seiteAlleKandis from './seiteAlleKandis'
 // import seiteBezirk from './seiteBezirk'
+import seiteBezirke from './seiteBezirke'
 import seiteCountDown from './seiteCountDown'
 // import seiteImBezirk from './seiteImBezirk'
 import seiteMitmachen from './seiteMitmachen'
@@ -70,6 +71,7 @@ export const schemaTypes = [
   // questionAnswer,
   // seiteAlleKandis,
   // seiteBezirk,
+  seiteBezirke,
   seiteCountDown,
   // seiteImBezirk,
   seiteMitmachen,
