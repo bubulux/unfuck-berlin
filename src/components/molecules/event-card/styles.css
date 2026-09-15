@@ -57,6 +57,17 @@ a.event-card:hover {
   }
 }
 
+/* Deutsche Komposita wie "Bezirksverordnetenversammlungen" bieten keine
+   Trennstelle an und ragen sonst aus der Karte heraus. `break-word` bricht
+   nur, wenn ein Wort allein nicht in die Zeile passt; `hyphens` setzt dabei
+   einen Trennstrich an einer sprachlich sinnvollen Stelle (braucht das
+   korrekte lang-Attribut am <html>). */
+.event-card__title {
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
 .event-card__body {
   display: flex;
   flex-direction: column;
