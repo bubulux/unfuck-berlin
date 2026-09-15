@@ -139,6 +139,10 @@
   height: clamp(4rem, 18vw, 6rem);
   margin-inline-start: -1.5rem;
   object-fit: cover;
+  /* Die Portraits sind 4:5, der Kreis ist quadratisch – `cover` schneidet also
+     oben und unten je ein Achtel weg und koepft die Leute. Oben buendig
+     ausrichten und stattdessen nur unten beschneiden. */
+  object-position: 50% 0;
   border-radius: 50%;
   border: 2px solid var(--color-white);
   background-color: var(--color-purple);

@@ -92,6 +92,8 @@
   height: 2.75rem;
   margin-inline-start: -0.6rem;
   object-fit: cover;
+  /* Gleiche Ausrichtung wie im Atlas: oben buendig, unten beschneiden. */
+  object-position: 50% 0;
   border-radius: 50%;
   border: 2px solid var(--color-white);
   background-color: var(--color-purple);
