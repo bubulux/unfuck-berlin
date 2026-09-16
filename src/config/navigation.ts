@@ -17,6 +17,8 @@ export const NAV_LINKS: NavItem[] = [
   { label: "Kalender", to: "/termine" },
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
+  { label: "Regier du mal!", href: "https://regier-du-mal.de/" },
+  { label: "Volt AI", href: "https://voltberlin.ai/" },
 ];
 
 /**
@@ -45,7 +47,8 @@ export const WAS_MEHR_LINKS: WasMehrLink[] = [
   { label: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { label: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
   { label: "VoltBerlin.org", href: "https://voltdeutschland.org/berlin/de" },
-  { label: "voltberlin.ai", href: "https://voltberlin.ai/" },
+  { label: "Regier du mal!", href: "https://regier-du-mal.de/" },
+  { label: "Volt AI", href: "https://voltberlin.ai/" },
 ];
 
 /** Social platforms shown in the footer / social rows. */
