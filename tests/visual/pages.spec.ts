@@ -15,13 +15,13 @@ import { PAGES_CMS } from '../../src/data/pages.generated'
  * Routen-Uebersicht siehe src/main.tsx.
  */
 // `mask`: CSS-Selektoren, deren Bereiche im Screenshot uebermalt werden – fuer
-// nicht-deterministische Elemente (Video-Poster, tickender Countdown).
+// nicht-deterministische Elemente (z. B. Video-Poster).
 type Route = { name: string; path: string; mask?: string[] }
 
 // Statische Seiten mit eigener Route.
 const staticRoutes: Route[] = [
-  // Home: erster Video-Container und Countdown flackern trotz Freeze -> maskieren.
-  { name: 'home', path: '/', mask: ['.hero__media', '.countdown'] },
+  // Home: erster Video-Container flackert trotz Freeze -> maskieren.
+  { name: 'home', path: '/', mask: ['.hero__media'] },
   { name: 'kandidierende', path: '/kandidierende' },
   { name: 'news', path: '/news' },
   { name: 'bezirke', path: '/bezirke' },
@@ -48,11 +48,11 @@ const dynamicRoutes: Route[] = [
 const routes: Route[] = [...staticRoutes, ...dynamicRoutes]
 
 // Vor jedem Seitenaufruf injizieren: Uhr einfrieren und Video-Wiedergabe
-// neutralisieren. Sonst tickt der Countdown bzw. laufen Autoplay-Videos und die
+// neutralisieren. Sonst laufen Autoplay-Videos und die
 // Screenshots stabilisieren sich nie (Timeout beim Vergleich).
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
-    // Feste "Jetzt"-Zeit -> Countdown ist konstant und reproduzierbar.
+    // Feste "Jetzt"-Zeit -> zeitabhängige Inhalte sind reproduzierbar.
     const OriginalDate = Date
     const FIXED = new OriginalDate('2026-08-23T10:00:00Z').getTime()
     class FrozenDate extends OriginalDate {
