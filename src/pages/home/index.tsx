@@ -1,14 +1,10 @@
 import { useLocation } from 'react-router'
 import { PageLayout } from '../../components/templates/page-layout'
 import { HeroSection } from '../../components/organisms/hero-section'
-import { CountdownSection } from '../../components/organisms/countdown-section'
 import { CandidatesAndElectionProgamSection } from '../../components/organisms/candidates-section'
 import { VIDEOS } from '../../data/videos'
 import { CalendarSection } from '../../components/organisms/calendar-section'
 import { useCalendar } from '../../context/calendar-context'
-
-/** Election date: 20 September 2026 (month is 0-indexed). */
-const ELECTION_DATE = new Date(2026, 8, 20)
 
 export function Home() {
   const { pathname } = useLocation()
@@ -26,7 +22,6 @@ export function Home() {
         ctaLabel="Worum geht‘s?"
         ctaTo="/news/unfuck-berlin-reveal"
       />
-      <CountdownSection target={ELECTION_DATE} ctaTo="/news/wahlsystem" />
       <CandidatesAndElectionProgamSection />
       <CalendarSection
         events={calendar.items.slice(0, 3)}
