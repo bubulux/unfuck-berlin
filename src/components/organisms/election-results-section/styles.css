@@ -1,5 +1,4 @@
-/* Wahlergebnis 2026 – Startseite. Gemeinsame Bausteine oben, danach je
- * Variante ein Block (election-v1/-v2/-v3). */
+/* Wahlergebnis 2026 – Startseite. */
 
 .election {
   background-color: var(--color-purple);
@@ -10,9 +9,6 @@
   max-width: var(--content-max-wide);
   margin-inline: auto;
   padding: var(--space-7) var(--content-pad-wide);
-}
-
-.election__panel {
   display: flex;
   flex-direction: column;
   gap: var(--space-7);
@@ -40,55 +36,6 @@
   border: 0;
 }
 
-/* --- Temporaerer Varianten-Umschalter ----------------------------------- */
-
-.election-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-6);
-  padding: var(--space-3);
-  border: 2px dashed var(--color-white);
-  border-radius: var(--radius-md);
-}
-
-.election-tabs__hint {
-  font-size: var(--text-cta);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.election-tabs__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.election-tabs__tab {
-  padding: var(--space-2) var(--space-3);
-  border: 2px solid var(--color-white);
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: var(--color-white);
-  font: inherit;
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-bold);
-  cursor: pointer;
-}
-
-.election-tabs__tab[aria-selected='true'] {
-  background: var(--color-neon);
-  border-color: var(--color-neon);
-  color: var(--color-purple);
-}
-
-.election-tabs__tab:focus-visible {
-  outline: 3px solid var(--color-neon);
-  outline-offset: 2px;
-}
-
 /* --- Gemeinsame Bausteine ----------------------------------------------- */
 
 .election-source {
@@ -104,22 +51,13 @@
   margin-right: 0.3em;
   vertical-align: -0.1em;
 }
-.election-swatch--previous {
-  background: var(--color-white);
-}
 .election-swatch--current {
   background: var(--color-neon);
-}
-.election-swatch--threshold {
-  height: 0;
-  border-top: 3px dashed var(--color-pink);
-  vertical-align: 0.25em;
 }
 .election-swatch--scale {
   background: linear-gradient(90deg, rgb(255 255 255 / 0.2), rgb(255 255 255 / 0.8));
   width: 2.4em;
 }
-
 /* Balken 2023/2026 mit Huerde. Zwei Spalten: Jahr | Balkenspur. */
 .election-bars {
   --bars-h: 1.5rem;
@@ -215,21 +153,7 @@
   background: rgb(255 255 255 / 0.25);
 }
 
-.election-portraits--md .election-portraits__item {
-  flex-direction: column;
-  text-align: center;
-  font-size: 0.9375rem;
-}
-
-.election-portraits--md .election-portraits__img {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 0;
-  transform: rotate(-2deg);
-  border: 3px solid currentColor;
-}
-
-.election-portraits--sm .election-portraits__name {
+.election-portraits__name {
   font-size: 0.9375rem;
   line-height: var(--line-snug);
 }
@@ -293,309 +217,22 @@
   outline-offset: 3px;
 }
 
-/* --- V1 · Diagramm ------------------------------------------------------ */
+/* --- Karte + Gewaehlte -------------------------------------------------- */
 
-.election-v1 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-7);
-}
-
-.election-v1__charts {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-7);
-}
-
-.election-v1__agh,
-.election-v1__bvv {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.election-v1__big {
-  margin: 0;
-  color: var(--color-neon);
-  font-size: clamp(3.5rem, 14vw, 6rem);
-  font-weight: var(--font-weight-bold);
-  line-height: 1;
-}
-
-.election-v1__legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-  font-size: 0.875rem;
-}
-
-.election-v1__districts {
-  --name-w: 8.5rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-
-/* Deckt genau die Balkenspalte ab, damit die Huerde dieselbe Skala hat wie
- * die Balken. */
-.election-v1__plot {
-  position: absolute;
-  top: calc(-1 * var(--space-2));
-  bottom: calc(-1 * var(--space-2));
-  left: calc(var(--name-w) + var(--space-3));
-  right: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.election-v1__threshold {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  border-left: 3px dashed var(--color-pink);
-}
-
-.election-v1__name {
-  overflow-wrap: anywhere;
-  line-height: var(--line-snug);
-}
-
-.election-v1__district {
-  display: grid;
-  grid-template-columns: var(--name-w) 1fr;
-  align-items: center;
-  gap: var(--space-3);
-  font-size: 0.875rem;
-}
-
-.election-v1__district--elected .election-v1__name {
-  color: var(--color-neon);
-  font-weight: var(--font-weight-bold);
-}
-
-.election-v1__pair {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.election-v1__line {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  height: 0.9rem;
-}
-
-.election-v1__bar {
-  flex-shrink: 0;
-  height: 100%;
-}
-.election-v1__bar--previous {
-  background: var(--color-white);
-}
-.election-v1__bar--current {
-  background: var(--color-neon);
-}
-
-.election-v1__num {
-  font-size: 0.75rem;
-  font-weight: var(--font-weight-bold);
-  white-space: nowrap;
-}
-.election-v1__num--current {
-  color: var(--color-neon);
-}
-
-.election-v1__elected {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.election-v1__elected-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.election-v1__elected-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-4);
-  border-left: 4px solid var(--color-neon);
-  background: rgb(255 255 255 / 0.06);
-}
-
-.election-v1__elected-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
-}
-
-.election-v1__elected-name {
-  font-size: var(--text-body);
-}
-
-.election-v1__elected-item .election-seats {
-  background: var(--color-neon);
-  color: var(--color-purple);
-}
-
-.election-v1__note {
-  opacity: 0.85;
-}
-
-/* --- V2 · Bezirkskarten ------------------------------------------------- */
-
-.election-v2 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
-}
-
-.election-v2__stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-4);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.election-stat {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-  padding: var(--space-4) var(--space-5);
-  background: var(--color-white);
-  color: var(--color-purple);
-  transform: skewY(-2deg);
-}
-
-.election-stat__value,
-.election-stat__label {
-  transform: skewY(2deg);
-}
-
-.election-stat__value {
-  font-size: var(--text-titel);
-  font-weight: var(--font-weight-bold);
-  line-height: 1.1;
-}
-
-.election-stat__label {
-  font-weight: var(--font-weight-bold);
-  hyphens: manual;
-}
-
-.election-v2__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: var(--space-4);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.election-v2__grid--elected {
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
-}
-
-.election-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-4);
-  border: 2px solid rgb(255 255 255 / 0.6);
-}
-
-.election-card__head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--space-2);
-}
-
-.election-card__name {
-  hyphens: auto;
-}
-
-.election-card__value {
-  margin: 0;
-  font-size: var(--text-subtitel);
-  font-weight: var(--font-weight-bold);
-  line-height: 1;
-}
-
-.election-card__delta {
-  font-size: 0.8125rem;
-}
-
-.election-card__bars {
-  --bars-h: 0.75rem;
-  margin-top: var(--space-2);
-  font-size: 0.75rem;
-}
-
-/* Bezirke mit Einzug: volle Neon-Karte, lila Schrift. */
-.election-card--elected {
-  gap: var(--space-3);
-  padding: var(--space-5);
-  border-color: var(--color-neon);
-  background: var(--color-neon);
-  color: var(--color-purple);
-}
-
-.election-card--elected .election-card__value {
-  font-size: var(--text-titel);
-}
-
-.election-card--elected .election-bars__bar--previous {
-  background: rgb(80 35 121 / 0.45);
-}
-.election-card--elected .election-bars__bar--current {
-  background: var(--color-purple);
-}
-.election-card--elected .election-bars__value--current {
-  color: var(--color-purple);
-}
-.election-card--elected .election-bars__threshold {
-  border-left-color: var(--color-purple);
-}
-
-.election-card--elected .election-portraits {
-  margin-top: var(--space-2);
-}
-
-/* --- V3 · Karte --------------------------------------------------------- */
-
-.election-v3 {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-7);
-}
-
-.election-v3__layout {
+.election__layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-6);
 }
 
-.election-v3__map {
+.election__map {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
 }
 
-.election-v3__legend {
+.election__legend {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
@@ -621,40 +258,63 @@
   fill: var(--color-neon);
 }
 
-.election-map--focused .election-map__district {
-  opacity: 0.35;
+/* Prozentwerte stehen neben der Karte, eine Linie fuehrt zum Bezirk. */
+.election-map__callout {
+  transition: opacity 0.15s ease;
 }
 
-.election-map--focused .election-map__district--active {
-  opacity: 1;
+.election-map__leader {
+  stroke: var(--color-white);
+  stroke-width: 1;
+  stroke-opacity: 0.8;
+}
+
+.election-map__dot {
+  fill: var(--color-white);
+  stroke: var(--color-purple);
+  stroke-width: 1;
 }
 
 .election-map__label {
   fill: var(--color-white);
-  font-size: 9px;
+  font-size: 14px;
   font-weight: var(--font-weight-bold);
-  text-anchor: middle;
   dominant-baseline: middle;
-  paint-order: stroke;
-  stroke: var(--color-purple);
-  stroke-width: 2.5px;
-  stroke-linejoin: round;
-  pointer-events: none;
 }
 
-.election-map__label--elected {
+.election-map__callout--elected .election-map__leader {
+  stroke: var(--color-neon);
+  stroke-width: 1.5;
+  stroke-opacity: 1;
+}
+
+.election-map__callout--elected .election-map__dot {
   fill: var(--color-purple);
-  stroke: none;
-  font-size: 11px;
+  stroke: var(--color-neon);
 }
 
-.election-v3__side {
+.election-map__callout--elected .election-map__label {
+  fill: var(--color-neon);
+  font-size: 16px;
+}
+
+.election-map--focused .election-map__district,
+.election-map--focused .election-map__callout {
+  opacity: 0.35;
+}
+
+.election-map--focused .election-map__district--active,
+.election-map--focused .election-map__callout--active {
+  opacity: 1;
+}
+
+.election__side {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
 }
 
-.election-v3__stickers {
+.election__stickers {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-4);
@@ -703,7 +363,8 @@
   white-space: nowrap;
 }
 
-.election-v3__agh {
+
+.election__agh {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-5);
@@ -712,40 +373,22 @@
 }
 
 @media (min-width: 40rem) {
-  .election-v1__districts {
-    --name-w: 11.5rem;
-  }
-
-  .election-v1__elected-list,
-  .election-v3__stickers {
+  .election__stickers {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .election-v2__stats {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 64rem) {
-  .election-v1__charts {
-    grid-template-columns: 2fr 3fr;
-    align-items: start;
-  }
-
-  .election-v1__elected-list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .election-v3__layout {
+  .election__layout {
     grid-template-columns: 3fr 2fr;
     align-items: center;
   }
 
-  .election-v3__stickers {
+  .election__stickers {
     grid-template-columns: 1fr;
   }
 
-  .election-v3__agh {
+  .election__agh {
     grid-template-columns: 2fr 3fr;
     align-items: center;
   }
@@ -754,7 +397,8 @@
 @media (prefers-reduced-motion: reduce) {
   .election-thanks__cta,
   .election-sticker,
-  .election-map__district {
+  .election-map__district,
+  .election-map__callout {
     transition: none;
   }
 }

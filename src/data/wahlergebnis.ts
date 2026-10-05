@@ -1,4 +1,5 @@
 import { REGIONS_CMS } from './regions.generated'
+import { KANDIDATEN_CMS } from './kandidaten.generated'
 
 // Ergebnisse der Berlin-Wahl vom 20.09.2026 fuer die Startseite. Die Zahlen
 // stammen aus den beiden Diagrammen im Artikel /news/wahlergebnisse; die
@@ -43,7 +44,7 @@ export interface BvvResult {
 type RawBvvResult = Omit<BvvResult, 'elected'> & { elected: string[] }
 
 const RAW_BVV: RawBvvResult[] = [
-  { slug: 'pankow', name: 'Pankow', previous: 1.5, current: 3.5, seats: 2, elected: ['Domenic Bay', 'Theresa Schültken'] },
+  { slug: 'pankow', name: 'Pankow', previous: 1.5, current: 3.5, seats: 2, elected: ['Paul Loeper', 'Theresa Schültken'] },
   { slug: 'friedrichshain-kreuzberg', name: 'Friedrichshain-Kreuzberg', previous: 1.8, current: 3.3, seats: 2, elected: ['Christoph König', 'Susanne Zels'] },
   { slug: 'mitte', name: 'Mitte', previous: 2.0, current: 3.1, seats: 1, elected: ['Axumawit Berhe'] },
   { slug: 'charlottenburg-wilmersdorf', name: 'Charlottenburg-Wilmersdorf', previous: 1.4, current: 3.0, seats: 1, elected: ['Cara Seeberg'] },
@@ -57,14 +58,17 @@ const RAW_BVV: RawBvvResult[] = [
   { slug: 'spandau', name: 'Spandau', previous: null, current: 1.4, seats: 0, elected: [] },
 ]
 
-const PORTRAIT_BY_NAME: Record<string, string> = Object.fromEntries(
-  REGIONS_CMS.flatMap((region) =>
+// Portraits: zuerst die BVV-Kandidierenden der Bezirke, dann die AGH-Liste –
+// Nachruecker wie Paul Loeper (fuer Domenic Bay, Pankow) stehen nur dort.
+const PORTRAIT_BY_NAME: Record<string, string> = Object.fromEntries([
+  ...KANDIDATEN_CMS.map((k) => [k.name, k.image]),
+  ...REGIONS_CMS.flatMap((region) =>
     (region.candidates ?? []).map((c) => [
       c.name,
       typeof c.image === 'string' ? c.image : '',
     ]),
   ),
-)
+])
 
 /** Alle zwoelf Bezirke, absteigend nach Ergebnis 2026. */
 export const BVV_RESULTS: BvvResult[] = RAW_BVV.map((r) => ({

@@ -144,15 +144,9 @@ export function ThresholdBars({
   )
 }
 
-export function ElectedPortraits({
-  members,
-  size = 'md',
-}: {
-  members: ElectedMember[]
-  size?: 'sm' | 'md'
-}) {
+export function ElectedPortraits({ members }: { members: ElectedMember[] }) {
   return (
-    <ul className={`election-portraits election-portraits--${size}`}>
+    <ul className="election-portraits">
       {members.map((m) => (
         <li key={m.name} className="election-portraits__item">
           {m.image ? (
@@ -175,7 +169,7 @@ export function SeatsBadge({ seats }: { seats: number }) {
   )
 }
 
-/** Dank + Mitmach-Aufruf, unter jeder Variante gleich. */
+/** Dank + Mitmach-Aufruf. */
 export function ThanksBlock({ children }: { children?: ReactNode }) {
   return (
     <div className="election-thanks">
