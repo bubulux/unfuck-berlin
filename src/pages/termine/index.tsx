@@ -51,12 +51,12 @@ export function TerminePage() {
 
   const events_raw = fetchCalendarPublic()
 
-  // Show the whole run up to and including 30 September (of the soonest event's
+  // Show the whole run up to and including 31 December (of the soonest event's
   // year), then stop — no pagination, everything is on the page at once.
   const cutoffYear = events_raw[0]?.start.getFullYear() ?? new Date().getFullYear();
-  const cutoff = new Date(cutoffYear, 8, 30, 23, 59, 59, 999);
+  const cutoff = new Date(cutoffYear, 11, 31, 23, 59, 59, 999);
   const events = events_raw
-    .filter((_, i) => events_raw[i] && events_raw[i].start <= cutoff) // past events can be seen, future dates will be cut of at the end of september.
+    .filter((_, i) => events_raw[i] && events_raw[i].start <= cutoff) // past events can be seen, future dates will be cut of at the end of december.
     .filter(a => pathname.endsWith(`/${a.id}`))
 
   const event = toDisplayItem(events[0])
