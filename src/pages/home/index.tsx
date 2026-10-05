@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router'
 import { PageLayout } from '../../components/templates/page-layout'
 import { HeroSection } from '../../components/organisms/hero-section'
+import { ElectionResultsSection } from '../../components/organisms/election-results-section'
 import { CandidatesAndElectionProgamSection } from '../../components/organisms/candidates-section'
 import { VIDEOS } from '../../data/videos'
 import { CalendarSection } from '../../components/organisms/calendar-section'
@@ -22,6 +23,7 @@ export function Home() {
         ctaLabel="Worum geht‘s?"
         ctaTo="/news/unfuck-berlin-reveal"
       />
+      <ElectionResultsSection />
       <CandidatesAndElectionProgamSection />
       <CalendarSection
         events={calendar.items.slice(0, 3)}
