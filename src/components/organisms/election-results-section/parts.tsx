@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { Fragment, type ReactNode } from 'react'
 import { Text } from '../../atoms/text'
 import { Link } from '../../atoms/link'
 import { Icon } from '../../atoms/icon'
@@ -105,35 +105,34 @@ export function ThresholdBars({
   max?: number
   className?: string
 }) {
+  const rows = [
+    ...(previous !== null ? [{ year: 2023, value: previous, kind: 'previous' }] : []),
+    { year: 2026, value: current, kind: 'current' },
+  ]
   return (
     <div
       className={['election-bars', className].filter(Boolean).join(' ')}
       aria-hidden="true"
     >
-      {previous !== null && (
-        <>
-          <span className="election-bars__year">2023</span>
-          <span className="election-bars__track">
-            <span
-              className="election-bars__bar election-bars__bar--previous"
-              style={{ width: scale(previous, max) }}
-            />
-            <span className="election-bars__value">{formatPercent(previous)}</span>
+      {rows.map((row, i) => (
+        <Fragment key={row.year}>
+          <span className="election-bars__year" style={{ gridRow: i + 1 }}>
+            {row.year}
           </span>
-        </>
-      )}
-      <span className="election-bars__year">2026</span>
-      <span className="election-bars__track">
-        <span
-          className="election-bars__bar election-bars__bar--current"
-          style={{ width: scale(current, max) }}
-        />
-        <span className="election-bars__value election-bars__value--current">
-          {formatPercent(current)}
-        </span>
-      </span>
-      {/* Liegt in der Balkenspalte ueber allen Zeilen. */}
-      <span className="election-bars__overlay">
+          <span className="election-bars__track" style={{ gridRow: i + 1 }}>
+            <span
+              className={`election-bars__bar election-bars__bar--${row.kind}`}
+              style={{ width: scale(row.value, max) }}
+            />
+            <span className={`election-bars__value election-bars__value--${row.kind}`}>
+              {formatPercent(row.value)}
+            </span>
+          </span>
+        </Fragment>
+      ))}
+      {/* Liegt in der Balkenspalte ueber allen Zeilen. Die Zeilen sind explizit
+          gesetzt – sonst schiebt das Overlay den ersten Balken eine Zeile tiefer. */}
+      <span className="election-bars__overlay" style={{ gridRow: `1 / span ${rows.length}` }}>
         <span className="election-bars__threshold" style={{ left: scale(threshold, max) }}>
           <span className="election-bars__threshold-label">
             {`${threshold}\u00a0%-Hürde`}

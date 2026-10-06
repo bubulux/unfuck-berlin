@@ -44,7 +44,7 @@ export interface BvvResult {
 type RawBvvResult = Omit<BvvResult, 'elected'> & { elected: string[] }
 
 const RAW_BVV: RawBvvResult[] = [
-  { slug: 'pankow', name: 'Pankow', previous: 1.5, current: 3.5, seats: 2, elected: ['Paul Loeper', 'Theresa Schültken'] },
+  { slug: 'pankow', name: 'Pankow', previous: 1.5, current: 3.5, seats: 2, elected: ['Theresa Schültken', 'Paul Loeper'] },
   { slug: 'friedrichshain-kreuzberg', name: 'Friedrichshain-Kreuzberg', previous: 1.8, current: 3.3, seats: 2, elected: ['Christoph König', 'Susanne Zels'] },
   { slug: 'mitte', name: 'Mitte', previous: 2.0, current: 3.1, seats: 1, elected: ['Axumawit Berhe'] },
   { slug: 'charlottenburg-wilmersdorf', name: 'Charlottenburg-Wilmersdorf', previous: 1.4, current: 3.0, seats: 1, elected: ['Cara Seeberg'] },

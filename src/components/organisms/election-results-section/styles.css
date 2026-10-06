@@ -105,7 +105,6 @@
 
 .election-bars__overlay {
   grid-column: 2;
-  grid-row: 1 / -1;
   position: relative;
   align-self: stretch;
   margin-top: -1.6rem;
