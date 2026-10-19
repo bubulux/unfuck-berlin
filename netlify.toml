@@ -60,9 +60,7 @@
 #   status = 200
 #   force  = true
 
-# SPA fallback: serve the app shell for client-side routes. Wichtig fuer
-# /confirm.html?token=… – so verlinkt die Bestaetigungsmail (Edge Function
-# `sticker-submit`), die Datei gibt es aber nicht mehr als statisches HTML.
+# SPA fallback: serve the app shell for client-side routes.
 [[redirects]]
   from = "/*"
   to   = "/index.html"

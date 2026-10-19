@@ -29,7 +29,6 @@ export interface SiteFooterProps extends HTMLAttributes<HTMLElement> {
 const DEFAULT_ACTIONS: HighlightLine[] = [
   { text: "Spenden", href: "https://voltdeutschland.org/berlin/spenden" },
   { text: "Mitmachen", href: "https://voltdeutschland.org/berlin/mitmachen" },
-  { text: "Sticker abgreifen", to: "/sticker" },
 ];
 
 const DEFAULT_CONTACTS: ContactBlock[] = [

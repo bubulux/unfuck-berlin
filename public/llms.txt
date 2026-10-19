@@ -9,7 +9,6 @@ Unsere Kandidierenden kommen nicht aus der Politik. Sie sind Macher:innen aus de
 ## Sitemap
 [Sitemap.xml für Suchmaschienen und AI-Bots](https://unfuck.berlin/sitemap.xml)
 [Startseite / unf*ck berlin / Volt Berlin](https://unfuck.berlin/)
-[Sticker abgreifen](https://unfuck.berlin/sticker)
 [Wahlprogramm (with links to the program in multiple languages)](https://unfuck.berlin/wahlprogramm)
 [Das kurze Wahlprogramm auf Deutsch als Text](https://unfuck.berlin/news/mini-manifesto-de)
 [The short election program in English as Text](https://unfuck.berlin/news/mini-manifesto-en)
