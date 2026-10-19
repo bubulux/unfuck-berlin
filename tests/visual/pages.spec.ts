@@ -25,8 +25,6 @@ const staticRoutes: Route[] = [
   { name: 'kandidierende', path: '/kandidierende' },
   { name: 'news', path: '/news' },
   { name: 'bezirke', path: '/bezirke' },
-  { name: 'sticker', path: '/sticker' },
-  { name: 'confirm', path: '/confirm' },
 ]
 
 // CMS-Seiten-Slugs, die nicht als eigene Seite existieren:
