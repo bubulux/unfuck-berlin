@@ -8,7 +8,6 @@ import type { SocialLink } from "../components/molecules/social-row";
  * Bildschirmgroessen) und ist die Basis fuer die Panel-Navigation.
  */
 export const NAV_LINKS: NavItem[] = [
-  { label: "Sticker abgreifen", href: "/sticker" },
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },
@@ -34,7 +33,6 @@ export const HEADER_INLINE_LINKS: NavItem[] = [
 
 /** Recurring "WAS MEHR?" cross-navigation block. */
 export const WAS_MEHR_LINKS: WasMehrLink[] = [
-  { label: "Sticker abgreifen", to: "/sticker" },
   { label: "Wahlprogramm", to: "/wahlprogramm" },
   { label: "Bezirke", to: "/bezirke" },
   { label: "News", to: "/news" },

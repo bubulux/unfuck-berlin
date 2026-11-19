@@ -6,8 +6,6 @@ import { ScrollToTop } from './lib/scroll-to-top'
 import { AnalyticsTracker } from './lib/analytics'
 import { CalendarProvider } from './context/calendar'
 import { Home } from './pages/home'
-import { Sticker } from './pages/sticker'
-import { Confirm } from './pages/confirm'
 import { Kandidaten } from './pages/kandidaten'
 import { KandidatDetail } from './pages/kandidat-detail'
 import { NewsPage } from './pages/news'
@@ -40,10 +38,6 @@ createRoot(document.getElementById('root')!).render(
 
           <Route path="/termine/:slug" element={<TerminePage />} />
 
-          <Route path="/sticker" element={<Sticker />} />
-          <Route path="/confirm" element={<Confirm />} />
-          {/* Alias: the server sends confirmation links as /confirm.html?token=… */}
-          <Route path="/confirm.html" element={<Confirm />} />
 
           {/* Unknown routes fall back to the homepage. */}
           <Route path="/*" element={<PagePage />} />
